@@ -8,7 +8,7 @@ Paul J. Durack 11th July 2016
 This script generates all controlled vocabulary (CV) json files residing this this subdirectory
 
 PJD 11 Jul 2016     - Started
-PJD 11 Jul 2016     - TODO:
+PJD 11 Jul 2016     - TODO: Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
 
 @author: durack1
 """

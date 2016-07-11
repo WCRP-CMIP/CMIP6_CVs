@@ -1,0 +1,4 @@
+*.py~
+*.sh~
+src/*.py~
+src/*.sh~

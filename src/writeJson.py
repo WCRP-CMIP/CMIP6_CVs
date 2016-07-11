@@ -169,10 +169,10 @@ for jsonName in masterTargets:
      outFile = ''.join(['../CMIP6_',jsonName,'.json'])
      # Check file exists
      if os.path.exists(outFile):
+         print 'File existing, purging:',outFile
          os.remove(outFile)
      fH = open(outFile,'w')
      json.dump(eval(jsonName),fH,ensure_ascii=True,sort_keys=True,indent=4,separators=(',',':'),encoding="utf-8")
      fH.close()
      
-     # Validate
-     
+     # Validate - only necessary if files are not written by json module     

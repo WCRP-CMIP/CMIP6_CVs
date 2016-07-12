@@ -4,10 +4,6 @@ Controlled Vocabularies (CVs) for use in CMIP6
 UPDATE REQUESTS:
 ----------------
 
-For updates or amendments to the CVs, please submit an issue/ticket on the [CMIP6_CVs issue page](https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new?title=[<CV OF INTEREST AND BRIEF INFO>]&body=[## Description of your problem
-
-## Controlled Vocabulary of interest
-<activity_id, experiment, frequency, grid_label, grid_resolution, institution, mip_era, realm, source_type, table_id>
-]). For prompt resolution in addition to creating an issue, submit a [pull request](https://github.com/WCRP-CMIP/CMIP6_CVs/pulls)/proposed issue solution for consideration by the repo admins.
+For updates or amendments to the CVs, please submit an issue/ticket on the [CMIP6_CVs issue page](https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new?title=[<CV OF INTEREST AND BRIEF INFO>]&body=[## Description of your problem\n\n## Controlled Vocabulary of interest\n<activity_id, experiment, frequency, grid_label, grid_resolution, institution, mip_era, realm, source_type, table_id>]). For prompt resolution in addition to creating an issue, submit a [pull request](https://github.com/WCRP-CMIP/CMIP6_CVs/pulls)/proposed issue solution for consideration by the repo admins.
 
 Some support for CMIP participating modeling groups is available: pcmdi-cmip@llnl.gov

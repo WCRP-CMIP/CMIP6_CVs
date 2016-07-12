@@ -10,6 +10,8 @@ This script generates all controlled vocabulary (CV) json files residing this th
 PJD 11 Jul 2016     - Started
 PJD 12 Jul 2016     - Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
 PJD 12 Jul 2016     - Format tweaks and typo corrections
+PJD 12 Jul 2016     - Added source_id ('GFDL-CM2-1': 'GFDL CM2.1' as example)
+PJD 12 Jul 2016     - Corrected mip_era to be CMIP6-less
 
 @author: durack1
 """
@@ -27,6 +29,7 @@ masterTargets = [
  'institution',
  'mip_era',
  'realm',
+ 'source_id',
  'source_type',
  'table_id'
  ] ;
@@ -159,6 +162,12 @@ realm = [
  'seaIce'
  ] ;
 
+#%% Source identifiers
+source_id = {
+ 'GFDL-CM2-1': 'GFDL CM2.1',
+ '': ''
+ } ;
+
 #%% Source types
 source_type = [
  'AER',
@@ -209,7 +218,10 @@ for jsonName in masterTargets:
             string = string.strip(',.') ; # Remove trailing characters
             experiment[key][values[0]] = string.replace(' + ',' and ')  ; # Replace +
     # Write file
-    outFile = ''.join(['../CMIP6_',jsonName,'.json'])
+    if 'mip_era' == jsonName:
+        outFile = ''.join(['../',jsonName,'.json'])
+    else:
+        outFile = ''.join(['../CMIP6_',jsonName,'.json'])
     # Check file exists
     if os.path.exists(outFile):
         print 'File existing, purging:',outFile

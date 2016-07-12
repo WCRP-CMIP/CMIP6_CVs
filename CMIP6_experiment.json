@@ -1,1 +1,1918 @@
-[]
+{
+    "1pctCO2":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"1 percent per year increase in CO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "1pctCO2-bgc":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "1pctCO2-rad":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"radiatively-coupled version of 1 percent per year increasing CO2 experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "1pctCO2Ndep":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"1 percent per year increasing CO2 experiment with increasing N-deposition",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "1pctCO2Ndep-bgc":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment with increasing N-deposition",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "1pctCO2to4x-withism":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"simulation with interactive ice sheet forced by 1 percent per year increase in CO2 to 4xCO2 (subsequently held fixed)",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM ISM",
+        "sub_experiment_id":"none"
+    },
+    "G1":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"abrupt quadrupling of CO2 plus reduction in total solar irradiance",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "G6SST1":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"SSTs, forcings, and other prescribed conditions from year 2020 of SSP5-8.5",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "G6SST2-solar":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6solar",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "G6SST2-sulfur":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6sulfur",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "G6solar":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"total solar irradiance reduction to reduce net forcing from SSP585 to SSP245",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "G6sulfur":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"stratospheric sulfate aerosol injection to reduce net forcing from SSP585 to SSP245",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "G7SST1-cirrus":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2020 of SSP5-8.5 and cirrus thinning",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "G7SST2-cirrus":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"SSTs from year 2100 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G7cirrus",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "G7cirrus":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"G7cirrus _ increase cirrus ice crystal fall speed to reduce net forcing in SSP585 by 1 W m-2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "a4SST":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST but with SSTs from abrupt4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "a4SSTice":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "a4SSTice-4xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2, and 4xCO2 seen by radiation and vegetation",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "abrupt-0p5xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"abrupt halving of CO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "abrupt-2xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"abrupt doubling of CO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "abrupt-4xCO2":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"abrupt quadrupling of CO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "abrupt-solm4p":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"abrupt 4% decrease in solar constant",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "abrupt-solp4p":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"abrupt 4% increase in solar constant",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-4xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP SSTs with 4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-TIP":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-TIP-nosh":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-a4SST-4xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as AMIP but with warming pattern from abrupt4xCO2 added to SSTs and 4xCO2 seen by radiation and vegetation",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-future4K":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP with patterned 4K SST increase",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-hist":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-hld":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-lfmip-pObs":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"prescribed land (from pseudo-observations) and AMIP SSTs",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-lfmip-pdLC":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"prescribed land (from current climatology) and AMIP SSTs",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-lfmip-rmLC":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"prescribed land conditions (from running mean climatology) and AMIP SSTs",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-lwoff":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP experiment with longwave cloud-radiative effects off",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-m4K":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP with uniform 4K SST decrease",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-p4K":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP with uniform 4K SST increase",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-p4K-lwoff":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP experiment with uniform 4K SST increase and with longwave cloud radiative effects off",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "amip-piForcing":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"AMIP SSTs with pre-industrial anthropogenic and natural forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "aqua-4xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"aquaplanet with control SST and 4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "aqua-control":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"aquaplanet control",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "aqua-control-lwoff":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"aquaplanet control with longwave cloud radiative effects off",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "aqua-p4K":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"aquaplanet with uniform 4K SST increase",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "aqua-p4K-lwoff":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"aquaplanet with uniform 4K SST increase and with longwave cloud radiative effects off",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "control-1950":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"coupled control with fixed 1950's forcing (HighResMIP equivalent of pre-industrial control)",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "control-slab":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control with slab ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM SLAB",
+        "sub_experiment_id":"none"
+    },
+    "dcppA-assim":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"assimilation runs (if available) that are used to generate initial conditions for hindcasts and which parallel the historical simulations and use the same forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppA-hindcast":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"year 1-5 hindcast initialized based on observations and using historical forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppA-hindcast-niff":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"hindcast initialized from observations without future observed forcing after initialization",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppA-historical":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"climate simulations initialized from control with forcing prescribed from the historical period and future scenario as in A1",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppA-historical-niff":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"hindcast initialized from historical climate simulations without observed forcing after initialization",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppB-forecast":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"year 1-5 forecast initialized from observations",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-extrop-minus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized negative extratropical AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-extrop-plus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized positive extratropical AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-minus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized negative AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-plus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized positive AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-trop-minus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized impact of a positive tropical AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-amv-trop-plus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized positive tropical AMV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-atl-control":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized Atlantic control",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-atl-pacemaker":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"pacemaker atlantic experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-atl-spg":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"predictability of 1990s warming of Atlantic sub-polar gyre",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-forecast-addAgung":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"2015 forecast with added Agung forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-forecast-addElChichon":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"2015 forecast with added El Chichon forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-forecast-addPinatubo":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"2015 forecast with added Pinatubo forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-hindcast-noAgung":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-hindcast-noElChichon":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-hindcast-noPinatubo":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"hindcast but with only background volcanic forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-ipv-minus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized negative IPV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-ipv-nextrop-minus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized impact of a negative northern extratropical IPV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-ipv-nextrop-plus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized impact of a positive northern extratropical IPV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-ipv-plus":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized positive IPV anomaly pattern",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-pac":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized Pacific control",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "dcppC-pac-pacemaker":{
+        "activity_id":"DCPP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"pacemaker pacific experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year YYYY"
+    },
+    "deforest-globe":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized transient global deforestation",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "esm-hist":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"all-forcing simulation of the recent past with atmospheric CO2 concentration calculated",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "esm-hist-ext":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"post-2014 all-forcing simulation with atmospheric CO2 concentration calculated",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "esm-piControl":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"pre-industrial control simulation with CO2 concentration calculated",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "esm-piControl-spinup":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"pre-industrial control simulation with CO2 concentration calculated (spin-up)",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "esm-ssp585":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"emission-driven RCP8.5 based on SSP5",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "esm-ssp585-ssp126Lu":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"emissions-driven SSP5-8.5 with SSP1-2.6 land use",
+        "mip_era":"CMIP6",
+        "source_type":"ESM",
+        "sub_experiment_id":"none"
+    },
+    "faf-all":{
+        "activity_id":"FAFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control plus perturbative surface fluxes of momentum, heat and water into ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "faf-heat":{
+        "activity_id":"FAFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control plus perturbative surface flux of heat into ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "faf-passiveheat":{
+        "activity_id":"FAFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control plus surface flux of passive heat tracer into ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "faf-stress":{
+        "activity_id":"FAFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control plus perturbative surface flux of momentum into ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "faf-water":{
+        "activity_id":"FAFMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"control plus perturbative surface flux of water into ocean",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "futureSST-4xCO2-solar":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"year 100 SSTs from abrupt4xCO2 with quadrupled CO2 and solar reduction",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highres-future":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"coupled future 2015-2050 using a scenario as close to CMIP5 RCP8.5 as possible within CMIP6",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-4co2":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"highresSST-present SST with 4xCO2 concentrations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-LAI":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"common LAI dataset within the highresSST-present experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-future":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"forced atmosphere experiment for 2015-2050 using SST/sea-ice derived from CMIP5 RCP8.5 simulations and a scenario as close to RCP8.5 as possible within CMIP6",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-p4K":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"uniform 4K warming of highresSST-present SST",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-present":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"forced atmosphere experiment for 1950-2014",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "highresSST-smoothed":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"smoothed SST version of highresSST-present",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-1950":{
+        "activity_id":"HighResMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"coupled historical 1950-2014",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-1950HC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"BGM",
+        "experiment":"historical forcing, but with1950s halocarbon concentrations; initialized in 1950",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "hist-CO2":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical CO2-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-GHG":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical well-mixed GHG-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-aer":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical anthropogenic aerosols-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-all-aer2":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical ALL-forcing run with alternate estimates of aerosol forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-all-nat2":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical ALL-forcing run with alternate estimates of natural forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-all-spAerO3":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"historical simulations with specified anthropogenic aerosols",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-bgc":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"biogeochemically-coupled version of the simulation of the recent past with CO2 concentration prescribed",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "hist-nat":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical natural-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-noLu":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"historical with no land-use change",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-piAer":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM BGM",
+        "experiment":"historical forcing, but with pre-industrial aerosol emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "hist-piNTCF":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"BGM",
+        "experiment":"historical forcing, but with pre-industrial NTCF emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "hist-resAMO":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-resIPO":{
+        "activity_id":"GMMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-sol":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical solar-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-spAerO3":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"historical simulations with specified anthropogenic aerosols, no other forcings",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-stratO3":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical stratospheric-ozone-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "hist-volc":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"historical volcanic-only run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "histSST":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"historical prescribed SSTs and historical forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "histSST-1950HC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"historical SSTs and historical forcing, but with 1950 halocarbon concentrations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "histSST-piAer":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"historical SSTs and historical forcing, but with pre-industrial aerosol emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "histSST-piCH4":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"historical SSTs and historical forcing, but with pre-industrial methane concentrations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "histSST-piN2O":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"BGM",
+        "experiment":"historical SSTs and historical forcings, but with pre-industrial N2O concentrations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "histSST-piNTCF":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"historical SSTs and historical forcing, but with pre-industrial NTCF emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "histSST-piO3":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"historical SSTs and historical forcing, but with pre-industrial ozone precursor emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "historical":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"all-forcing simulation of the recent past",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "historical-ext":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"post-2014 all-forcing simulation",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "historical-withism":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"historical with interactive ice sheet",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-1pctCO2to4x-self":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet model forced by ISM's own AOGCM 1pctCO2to4x output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-1pctCO2to4x-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet model forced by ISMIP6-specified AOGCM 1pctCO2to4x output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-amip-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISMIP6-specified AGCM AMIP output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-historical-self":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISM's own AOGCM historical output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-historical-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM historical output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-lig127k-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISMIP6-specified AGCM last interglacial output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-pdControl-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM pdControl output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-piControl-self":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISM's own AOGCM piControl output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-ssp585-self":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "ism-ssp585-std":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"",
+        "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
+        "mip_era":"CMIP6",
+        "source_type":"ISM",
+        "sub_experiment_id":"none"
+    },
+    "land-cCO2":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only constant CO2",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-cClim":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only constant climate",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-crop-grass":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with cropland as natural grassland",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-crop-noFert":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with no fertilizer",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-crop-noIrrig":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with no irrigation",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-crop-noManage":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with crops but no crop management",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-future":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"",
+        "experiment":"future land-only",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-hist":{
+        "activity_id":"LS3MIP LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-hist-altStartYear":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only alternate start year",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-hist-cruNcep":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"",
+        "experiment":"as land-hist with CRU-NCEP forcings",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-hist-princeton":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"",
+        "experiment":"as land-hist with Princeton forcings",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-hist-wfdei":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"",
+        "experiment":"as land-hist with WFDEI forcings",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-netTrans":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with net land-use transitions",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-noFire":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with no human fire management",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-noLu":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with no land-use change",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-noPasture":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with constant pastureland",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "land-noWoodHarv":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"",
+        "experiment":"historical land-only with no wood harvest",
+        "mip_era":"CMIP6",
+        "source_type":"LND",
+        "sub_experiment_id":"none"
+    },
+    "lfmip-initLC":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"initialized from 'historical' run year 1980, but with land conditions initialized from pseudo-observations",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "lfmip-pdLC":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"prescribed land conditions (from current climate climatology) and initialized from 'historical' run year 1980",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "lfmip-rmLC":{
+        "activity_id":"LS3MIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"prescribed land conditions (from running mean climatology) and initialized from 'historical' run year 1980",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "lgm":{
+        "activity_id":"PMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"last glacial maximum",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "lig127k":{
+        "activity_id":"PMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"last interglacial (127k)",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "midHolocene":{
+        "activity_id":"PMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"mid-Holocene",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "midPliocene-eoi400":{
+        "activity_id":"PMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"mid-Pliocene warm period",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "omip1":{
+        "activity_id":"OMIP",
+        "additional_source_type":"",
+        "experiment":"OMIP experiment forced by Large & Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data",
+        "mip_era":"CMIP6",
+        "source_type":"OGCM",
+        "sub_experiment_id":"none"
+    },
+    "omip1-spunup":{
+        "activity_id":"OMIP",
+        "additional_source_type":"",
+        "experiment":"OMIP experiment forced by Large & Yeager (CORE-2, NCEP) atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
+        "mip_era":"CMIP6",
+        "source_type":"OGCM",
+        "sub_experiment_id":"none"
+    },
+    "omip2":{
+        "activity_id":"OMIP",
+        "additional_source_type":"",
+        "experiment":"OMIP experiment forced by JRA-55 atmospheric data set and initialized with observed physical and biogeochemical ocean data",
+        "mip_era":"CMIP6",
+        "source_type":"OGCM",
+        "sub_experiment_id":"none"
+    },
+    "omip2-spunup":{
+        "activity_id":"OMIP",
+        "additional_source_type":"",
+        "experiment":"OMIP experiment forced by JRA-55 atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
+        "mip_era":"CMIP6",
+        "source_type":"OGCM",
+        "sub_experiment_id":"none"
+    },
+    "past1000":{
+        "activity_id":"PMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"last millenium",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xDMS":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of DMS",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xNOX":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled production of NOX due to lightning",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xVOC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of biogenic VOCs",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xdust":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of dust",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xfire":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions from fires",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-2xss":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of sea salt",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-4xCO2":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by 4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-BC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 black carbon emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-CH4":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 methane concentrations (including chemistry)",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-GHG":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present-day greenhouse gases",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-HC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 halocarbon concentrations (including chemistry)",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-N2O":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 N2O concentrations (including chemistry)",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-NOX":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NOx emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-NTCF":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-O3":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ozone precursor emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-VOC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 VOC emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-aer":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"pre-industrial climatological SSTs and forcing, but 2014 aerosol emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "piClim-aerO3":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present-day aerosols and ozone",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-aerO3x0p1":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present-day aerosols and ozone scaled by 0.1",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-aerO3x2":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present-day aerosols and ozone scaled by 2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-anthro":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present day anthropogenic agents",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-control":{
+        "activity_id":"RFMIP AerChemMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing in present-day",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-histAll":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"transient effective radiative forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-histGHG":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"transient effective radiative forcing by greenhouse gases",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-histNat":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"transient effective radiative forcing by natural perturbations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-histaer03":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"transient effective radiative forcing by aerosols",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-lu":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"effective radiative forcing by present-day land use",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-spAerO3-aer":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-spAerO3-anthro":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-spAerO3-histaer":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piClim-spAerO3-histall":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piControl":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"pre-industrial control",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "piControl-spinup":{
+        "activity_id":"CMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"pre-industrial control (spin-up)",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "piControl-withism":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"preindustrial control with interactive ice sheet",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM ISM",
+        "sub_experiment_id":"none"
+    },
+    "piSST":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piSST-4xCO2":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST with radiation and vegetation seeing 4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piSST-4xCO2-rad":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST with radiation-only seeing 4xCO2",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piSST-4xCO2-solar":{
+        "activity_id":"GeoMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"preindustrial control SSTs with quadrupled CO2 and solar reduction",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "piSST-pxK":{
+        "activity_id":"CFMIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"as piSST with uniform SST increase with magnitude based on abrupt4xCO2 response",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM",
+        "sub_experiment_id":"none"
+    },
+    "rad-irf":{
+        "activity_id":"RFMIP",
+        "additional_source_type":"",
+        "experiment":"offline assessment of radiative transfer parameterizations in clear skies",
+        "mip_era":"CMIP6",
+        "source_type":"RAD",
+        "sub_experiment_id":"none"
+    },
+    "ssp126":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"update of RCP2.6 based on SSP1",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp126-ssp370Lu":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"SSP1-2.6 with SSP3-7.0 land use",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp245":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"update of RCP4.5 based on SSP2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp245-GHG":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"well-mixed GHG-only SSP2-4.5 run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp245-aer":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"aerosol-only SSP2-4.5 run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp245-nat":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"natural-only SSP2-4.5 run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp245-stratO3":{
+        "activity_id":"DAMIP",
+        "additional_source_type":"AER CHEM, BGM",
+        "experiment":"stratospheric-ozone-only SSP2-4.5 run",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"gap-filling scenario reaching 7.0 based on SSP3",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370-lowNTCF":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM BGM",
+        "experiment":"SSP3-7.0, with low NTCF emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "ssp370-ssp126Lu":{
+        "activity_id":"LUMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"SSP3-7.0 with SSP1-2.6 land use",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"SSP3-7.0, with  SSTs prescribed from ssp370",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-lowAer":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"SSP3-7.0, prescribed SSTs, with low aerosol emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-lowBC":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"SSP3-7.0, prescribed SSTs, with low black carbon emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-lowCH4":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"SSP3-7.0, prescribed SSTs, with low methane concentrations",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-lowNTCF":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"SSP3-7.0, prescribed SSTs, with low NTCF emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-lowO3":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"",
+        "experiment":"SSP3-7.0, prescribed SSTs, with low ozone precursor emissions",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER CHEM",
+        "sub_experiment_id":"none"
+    },
+    "ssp370SST-ssp126Lu":{
+        "activity_id":"AerChemMIP",
+        "additional_source_type":"CHEM",
+        "experiment":"SSP3-7.0, prescribed SSTs, with SSP1-2.6 land use",
+        "mip_era":"CMIP6",
+        "source_type":"AGCM AER",
+        "sub_experiment_id":"none"
+    },
+    "ssp434":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"gap-filling scenario reaching 3.4 based on SSP4",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp460":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"update of RCP6.0 based on SSP4",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp534-over":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"overshoot of 3.4 W/m**2 branching from ssp585 in 2040",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp585":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"update of RCP8.5 based on SSP5",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "ssp585-bgc":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"biogeochemically-coupled version of the RCP8.5 based on SSP5",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "ssp585-over-bgc":{
+        "activity_id":"C4MIP",
+        "additional_source_type":"AER CHEM",
+        "experiment":"biogeochemically-coupled version of the RCP3.4-overshoot based on SSP5",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM BGM",
+        "sub_experiment_id":"none"
+    },
+    "ssp585-withism":{
+        "activity_id":"ISMIP6",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"ssp585 with interactive ice sheet",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM ISM",
+        "sub_experiment_id":"none"
+    },
+    "sspxy":{
+        "activity_id":"ScenarioMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"low-end scenario informing 1.5C goal",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-cluster-21C":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"volcanic cluster experiment under 21st century SSP2-4.5 scenario",
+        "mip_era":"CMIP6",
+        "parent_activity_id ":"CMIP",
+        "parent_experiment_id":"historical",
+        "parent_mip_era ":"CMIP6",
+        "parent_sub_experiment_id":"none",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-cluster-ctrl":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"19th century volcanic cluster initialized from PiControl",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-cluster-mill":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"19th century volcanic cluster initialized from past1000",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-long-eq":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized equatorial volcanic eruption emitting 56.2 Tg SO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-long-hlN":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-long-hlS":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
+        "mip_era":"CMIP6",
+        "parent_activity_id ":"CMIP",
+        "parent_experiment_id":"piControl",
+        "parent_mip_era ":"CMIP6",
+        "parent_sub_experiment_id":"none",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-pinatubo-full":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Pinatubo experiment",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-pinatubo-ini":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Pinatubo experiment for decadal climate prediction",
+        "mip_era":"CMIP6",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"initialized near end of year 2014"
+    },
+    "volc-pinatubo-slab":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Pinatubo experiment with slab ocean",
+        "mip_era":"CMIP6",
+        "parent_activity_id ":"VolMIP",
+        "parent_experiment_id":"control-slab",
+        "parent_mip_era ":"CMIP6",
+        "parent_sub_experiment_id":"none",
+        "source_type":"AGCM SLAB",
+        "sub_experiment_id":"none"
+    },
+    "volc-pinatubo-strat":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Pinatubo experiment with partial radiative forcing, includes only stratospheric warming",
+        "mip_era":"CMIP6",
+        "parent_activity_id ":"CMIP",
+        "parent_experiment_id":"piControl",
+        "parent_mip_era ":"CMIP6",
+        "parent_sub_experiment_id":"none",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    },
+    "volc-pinatubo-surf":{
+        "activity_id":"VolMIP",
+        "additional_source_type":"AER CHEM BGM",
+        "experiment":"Pinatubo experiment with partial radiative forcing, solar radiation scattering only",
+        "mip_era":"CMIP6",
+        "parent_activity_id ":"CMIP",
+        "parent_experiment_id":"piControl",
+        "parent_mip_era ":"CMIP6",
+        "parent_sub_experiment_id":"none",
+        "source_type":"AOGCM",
+        "sub_experiment_id":"none"
+    }
+}

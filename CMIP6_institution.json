@@ -26,5 +26,6 @@
     "NOAA-GFDL":"NOAA GFDL, 201 Forrestal Rd, Princeton, NJ, USA",
     "NOAA-NCEP":"National Centers for Environmental Prediction, Camp Springs, MD, USA",
     "NSF-DOE-NCAR":"NSF/DOE NCAR (National Center for Atmospheric Research) Boulder, CO, USA",
-    "NSF-DOE-PNNL-NCAR":"PNNL (Pacific Northwest National Laboratory) Richland, WA, USA/NCAR (National Center for Atmospheric Research) Boulder, CO, USA"
+    "NSF-DOE-PNNL-NCAR":"PNNL (Pacific Northwest National Laboratory) Richland, WA, USA/NCAR (National Center for Atmospheric Research) Boulder, CO, USA",
+    "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA"
 }

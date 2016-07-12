@@ -12,6 +12,7 @@ PJD 12 Jul 2016     - Read experiments from https://github.com/PCMDI/cmip6-cmor-
 PJD 12 Jul 2016     - Format tweaks and typo corrections
 PJD 12 Jul 2016     - Added source_id ('GFDL-CM2-1': 'GFDL CM2.1' as example)
 PJD 12 Jul 2016     - Corrected mip_era to be CMIP6-less
+PJD 12 Jul 2016     - Indent/format cleanup
 
 @author: durack1
 """
@@ -83,10 +84,10 @@ experiment['esm-piControl-spinup']['experiment']    = 'pre-industrial control si
 experiment['hist-all-spAerO3']['experiment']        = 'historical simulations with specified anthropogenic aerosols'
 experiment['hist-spAerO3']['experiment']            = 'historical simulations with specified anthropogenic aerosols, no other forcings'
 experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
-experiment['omip1'] = experiment.pop('omipv1')
-experiment['omip1-spunup'] = experiment.pop('omipv1-spunup')
-experiment['omip2'] = experiment.pop('omipv2')
-experiment['omip2-spunup'] = experiment.pop('omipv2-spunup')
+experiment['omip1']                                 = experiment.pop('omipv1')
+experiment['omip1-spunup']                          = experiment.pop('omipv1-spunup')
+experiment['omip2']                                 = experiment.pop('omipv2')
+experiment['omip2-spunup']                          = experiment.pop('omipv2-spunup')
 experiment['piClim-NTCF']['experiment']             = 'pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions'
 experiment['piSST']['experiment']                   = 'experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents'
 experiment['piSST-4xCO2-solar']['experiment']       = 'preindustrial control SSTs with quadrupled CO2 and solar reduction'

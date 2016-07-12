@@ -8,13 +8,14 @@ Paul J. Durack 11th July 2016
 This script generates all controlled vocabulary (CV) json files residing this this subdirectory
 
 PJD 11 Jul 2016     - Started
-PJD 11 Jul 2016     - TODO: Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
+PJD 12 Jul 2016     - Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
+PJD 12 Jul 2016     - Format tweaks and typo corrections
 
 @author: durack1
 """
 
 #%% Import statements
-import json,os,urllib2
+import json,os,ssl,urllib2
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -53,7 +54,40 @@ activity_id = [
  ] ;
 
 #%% Experiments
-experiment = [] ;
+expSource   = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/CMIP6_CV/Tables/CMIP6_CV.json'
+outFile     = 'CMIP6_CV.json'
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+jsonOutput  = urllib2.urlopen(expSource, context=ctx)
+# Check file exists
+if os.path.exists(outFile):
+    print 'File existing, purging:',outFile
+    os.remove(outFile)
+f = open(outFile,'w')
+f.write(jsonOutput.read())
+f.close()
+jsonOutput.close()
+# Open and read data
+exps        = json.load(open(outFile,'r'))
+os.remove(outFile)
+experiment  = exps['CV']['experiment_ids'] ;
+# Fix issues
+experiment['1pctCO2Ndep']['experiment']             = '1 percent per year increasing CO2 experiment with increasing N-deposition'
+experiment['amip-piForcing']['experiment']          = 'AMIP SSTs with pre-industrial anthropogenic and natural forcing'
+experiment['dcppC-amv-extrop-minus']['experiment']  = 'idealized negative extratropical AMV anomaly pattern'
+experiment['esm-piControl-spinup']['experiment']    = 'pre-industrial control simulation with CO2 concentration calculated (spin-up)'
+experiment['hist-all-spAerO3']['experiment']        = 'historical simulations with specified anthropogenic aerosols'
+experiment['hist-spAerO3']['experiment']            = 'historical simulations with specified anthropogenic aerosols, no other forcings'
+experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
+experiment['omip1'] = experiment.pop('omipv1')
+experiment['omip1-spunup'] = experiment.pop('omipv1-spunup')
+experiment['omip2'] = experiment.pop('omipv2')
+experiment['omip2-spunup'] = experiment.pop('omipv2-spunup')
+experiment['piClim-NTCF']['experiment']             = 'pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions'
+experiment['piSST']['experiment']                   = 'experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents'
+experiment['piSST-4xCO2-solar']['experiment']       = 'preindustrial control SSTs with quadrupled CO2 and solar reduction'
+experiment['rad-irf']['experiment']                 = 'offline assessment of radiative transfer parameterizations in clear skies'
 
 #%% Frequencies
 frequency = ['3hr', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;
@@ -79,7 +113,7 @@ grid_resolution = [
 
 #%% Institutions
 institution = {
- 'BCC': 'Beijing Climate Center,China Meteorological Administration, China',
+ 'BCC': 'Beijing Climate Center, China Meteorological Administration, China',
  'BNU': 'GCESS, BNU, Beijing, China',
  'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC, Canada',
  'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna, Italy',
@@ -106,7 +140,8 @@ institution = {
  'NOAA-GFDL': 'NOAA GFDL, 201 Forrestal Rd, Princeton, NJ, USA',
  'NOAA-NCEP': 'National Centers for Environmental Prediction, Camp Springs, MD, USA',
  'NSF-DOE-NCAR': 'NSF/DOE NCAR (National Center for Atmospheric Research) Boulder, CO, USA',
- 'NSF-DOE-PNNL-NCAR': 'PNNL (Pacific Northwest National Laboratory) Richland, WA, USA/NCAR (National Center for Atmospheric Research) Boulder, CO, USA'
+ 'NSF-DOE-PNNL-NCAR': 'PNNL (Pacific Northwest National Laboratory) Richland, WA, USA/NCAR (National Center for Atmospheric Research) Boulder, CO, USA',
+ 'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA'
  } ;
 
 #%% MIP eras
@@ -166,13 +201,21 @@ table_id = [
 
 #%% Write variables to files
 for jsonName in masterTargets:
-     outFile = ''.join(['../CMIP6_',jsonName,'.json'])
-     # Check file exists
-     if os.path.exists(outFile):
-         print 'File existing, purging:',outFile
-         os.remove(outFile)
-     fH = open(outFile,'w')
-     json.dump(eval(jsonName),fH,ensure_ascii=True,sort_keys=True,indent=4,separators=(',',':'),encoding="utf-8")
-     fH.close()
-     
-     # Validate - only necessary if files are not written by json module     
+    # Clean formats
+    for key, value in experiment.iteritems():
+        for values in value.iteritems():
+            string = experiment[key][values[0]]
+            string = string.strip() ; # Remove whitespace
+            string = string.strip(',.') ; # Remove trailing characters
+            experiment[key][values[0]] = string.replace(' + ',' and ')  ; # Replace +
+    # Write file
+    outFile = ''.join(['../CMIP6_',jsonName,'.json'])
+    # Check file exists
+    if os.path.exists(outFile):
+        print 'File existing, purging:',outFile
+        os.remove(outFile)
+    fH = open(outFile,'w')
+    json.dump(eval(jsonName),fH,ensure_ascii=True,sort_keys=True,indent=4,separators=(',',':'),encoding="utf-8")
+    fH.close()
+
+     # Validate - only necessary if files are not written by json module

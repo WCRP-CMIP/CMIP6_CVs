@@ -14,7 +14,7 @@ PJD 11 Jul 2016     - TODO: Read experiments from https://github.com/PCMDI/cmip6
 """
 
 #%% Import statements
-import json,os
+import json,os,urllib2
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -164,7 +164,7 @@ table_id = [
  'fx'
  ] ;
 
- #%% Write variables to files
+#%% Write variables to files
 for jsonName in masterTargets:
      outFile = ''.join(['../CMIP6_',jsonName,'.json'])
      # Check file exists

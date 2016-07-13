@@ -18,7 +18,10 @@ PJD 12 Jul 2016     - Indent/format cleanup
 """
 
 #%% Import statements
-import json,os,ssl,urllib2
+import json,os #,ssl,urllib2
+import pyexcel_xlsx as pyx
+from string import replace
+from unidecode import unidecode
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -58,40 +61,57 @@ activity_id = [
  ] ;
 
 #%% Experiments
-expSource   = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/CMIP6_CV/Tables/CMIP6_CV.json'
-outFile     = 'CMIP6_CV.json'
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
-jsonOutput  = urllib2.urlopen(expSource, context=ctx)
-# Check file exists
-if os.path.exists(outFile):
-    print 'File existing, purging:',outFile
-    os.remove(outFile)
-f = open(outFile,'w')
-f.write(jsonOutput.read())
-f.close()
-jsonOutput.close()
-# Open and read data
-exps        = json.load(open(outFile,'r'))
-os.remove(outFile)
-experiment  = exps['CV']['experiment_ids'] ;
+# xlsx
+os.chdir('/sync/git/CMIP6_CVs/src')
+inFile = '160712_CMIP6_expt_list.xlsx'
+data = pyx.get_data(inFile)
+data = data['Sheet1']
+headers = data[11]
+experiment = {}
+for count in range(12,len(data)):
+    row = data[count]
+    if row == 'None':
+        continue
+    key = row[9]
+    experiment[key] = {}
+    for count2,entry in enumerate(headers):
+        if count2 >= len(row):
+            experiment[key][entry] = ''
+            continue
+        value = row[count2]
+        if count2 == 9:
+            continue
+        else:
+            if type(value) == int:
+                experiment[key][entry] = str(value) ; #replace(str(value),' ','')
+            elif value == None:
+                experiment[key][entry] = ''
+            else:
+                experiment[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+                try:
+                    unidecode(value)
+                except:
+                    print count,count2,key,entry,value
+                    
+
 # Fix issues
-experiment['1pctCO2Ndep']['experiment']             = '1 percent per year increasing CO2 experiment with increasing N-deposition'
-experiment['amip-piForcing']['experiment']          = 'AMIP SSTs with pre-industrial anthropogenic and natural forcing'
-experiment['dcppC-amv-extrop-minus']['experiment']  = 'idealized negative extratropical AMV anomaly pattern'
-experiment['esm-piControl-spinup']['experiment']    = 'pre-industrial control simulation with CO2 concentration calculated (spin-up)'
-experiment['hist-all-spAerO3']['experiment']        = 'historical simulations with specified anthropogenic aerosols'
-experiment['hist-spAerO3']['experiment']            = 'historical simulations with specified anthropogenic aerosols, no other forcings'
-experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
-experiment['omip1']                                 = experiment.pop('omipv1')
-experiment['omip1-spunup']                          = experiment.pop('omipv1-spunup')
-experiment['omip2']                                 = experiment.pop('omipv2')
-experiment['omip2-spunup']                          = experiment.pop('omipv2-spunup')
-experiment['piClim-NTCF']['experiment']             = 'pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions'
-experiment['piSST']['experiment']                   = 'experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents'
-experiment['piSST-4xCO2-solar']['experiment']       = 'preindustrial control SSTs with quadrupled CO2 and solar reduction'
-experiment['rad-irf']['experiment']                 = 'offline assessment of radiative transfer parameterizations in clear skies'
+#==============================================================================
+# experiment['1pctCO2Ndep']['experiment']             = '1 percent per year increasing CO2 experiment with increasing N-deposition'
+# experiment['amip-piForcing']['experiment']          = 'AMIP SSTs with pre-industrial anthropogenic and natural forcing'
+# experiment['dcppC-amv-extrop-minus']['experiment']  = 'idealized negative extratropical AMV anomaly pattern'
+# experiment['esm-piControl-spinup']['experiment']    = 'pre-industrial control simulation with CO2 concentration calculated (spin-up)'
+# experiment['hist-all-spAerO3']['experiment']        = 'historical simulations with specified anthropogenic aerosols'
+# experiment['hist-spAerO3']['experiment']            = 'historical simulations with specified anthropogenic aerosols, no other forcings'
+# experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
+# experiment['omip1']                                 = experiment.pop('omipv1')
+# experiment['omip1-spunup']                          = experiment.pop('omipv1-spunup')
+# experiment['omip2']                                 = experiment.pop('omipv2')
+# experiment['omip2-spunup']                          = experiment.pop('omipv2-spunup')
+# experiment['piClim-NTCF']['experiment']             = 'pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions'
+# experiment['piSST']['experiment']                   = 'experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents'
+# experiment['piSST-4xCO2-solar']['experiment']       = 'preindustrial control SSTs with quadrupled CO2 and solar reduction'
+# experiment['rad-irf']['experiment']                 = 'offline assessment of radiative transfer parameterizations in clear skies'
+#==============================================================================
 
 #%% Frequencies
 frequency = ['3hr', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;
@@ -215,7 +235,7 @@ for jsonName in masterTargets:
     for key, value in experiment.iteritems():
         for values in value.iteritems():
             string = experiment[key][values[0]]
-            string = string.strip() ; # Remove whitespace
+            string = string.strip() ; # Remove trailing whitespace
             string = string.strip(',.') ; # Remove trailing characters
             experiment[key][values[0]] = string.replace(' + ',' and ')  ; # Replace +
     # Write file

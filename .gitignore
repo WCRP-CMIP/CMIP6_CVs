@@ -1,4 +1,5 @@
 *.py~
 *.sh~
+*.swp
 src/*.py~
 src/*.sh~

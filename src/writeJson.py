@@ -72,7 +72,7 @@ for count in range(12,len(data)):
     row = data[count]
     if row == 'None':
         continue
-    key = row[9]
+    key = replace(row[9],'_ ','_')
     experiment[key] = {}
     for count2,entry in enumerate(headers):
         if count2 >= len(row):

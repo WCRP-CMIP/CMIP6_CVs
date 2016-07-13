@@ -68,11 +68,24 @@ inFile          = '160713_CMIP6_expt_list.xlsx'
 data            = pyx.get_data(inFile)
 data            = data['Sheet1']
 headers         = data[11]
+masterList      = ['description','original label','mip','# of sub-expts.','min ens. size',
+                   'start year','end year','min. # yrs/sim','tier','experiment_id','seg-1',
+                   'seg-2','seg-3','sub_ experiment_ id','required model components',
+                   'additional allowed model components','experiment label used in final version of GMD article',
+                   'experiment title','sub_experiment (title)','parent_ experiment_id',
+                   'parent_sub_ experiment_id','parent_activity_id','Questions/Comments/Notes',
+                   'number of char.']
 exclusionList   = ['original label','# of sub-expts.','min ens. size','seg-1','seg-2','seg-3',
                    'experiment label used in final version of GMD article','Questions/Comments/Notes',
                    'number of char.']
-exclusionIndex  = [1,3,4,10,11,12,16,22,23]
-experiment = {}
+exclusionIndex  = [1,3,4,10,11,12,16,20,22,23]
+convertToList   = [2,14,15,19,21] ; # activity_id,required_model_components,additional_allowed_model_components,parent_experiment_id,parent_activity_id
+# Update headers
+headers[2]      = 'activity_id'
+headers[7]      = 'min number yrs per sim'
+headers[17]     = 'experiment'
+headers[18]     = 'sub_experiment'
+experiment      = {}
 for count in range(12,len(data)):
     row = data[count]
     if row[9] == None:
@@ -83,6 +96,7 @@ for count in range(12,len(data)):
         if count2 in exclusionIndex:
             continue
         entry = replace(entry,'_ ','_')
+        entry = replace(entry,' ','_')
         if count2 >= len(row):
             experiment[key][entry] = ''
             continue
@@ -95,11 +109,14 @@ for count in range(12,len(data)):
             elif value == None:
                 experiment[key][entry] = ''
             else:
-                experiment[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
-                try:
-                    unidecode(value)
-                except:
-                    print count,count2,key,entry,value
+                if count2 in convertToList: # Case convertToList
+                    tmp = ''.join(unidecode(value)).split()
+                    if isinstance(tmp,list):
+                        experiment[key][entry] = tmp
+                    else:
+                        experiment[key][entry] = list(tmp)
+                else:
+                    experiment[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
 
 # Fix issues
 #==============================================================================
@@ -229,13 +246,15 @@ for jsonName in masterTargets:
     for key, value in experiment.iteritems():
         for values in value.iteritems():
             string = experiment[key][values[0]]
-            string = string.strip() ; # Remove trailing whitespace
-            string = string.strip(',.') ; # Remove trailing characters
-            string = string.replace(' + ',' and ')  ; # Replace +
-            string = string.replace(' & ',' and ')  ; # Replace +
-            string = string.replace('   ',' ') ; # Replace '  ', '   '
-            string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
-            experiment[key][values[0]] = string.replace('  ',' ') ; # Replace '  ', '   '
+            if not isinstance(string, list):              
+                string = string.strip() ; # Remove trailing whitespace
+                string = string.strip(',.') ; # Remove trailing characters
+                string = string.replace(' + ',' and ')  ; # Replace +
+                string = string.replace(' & ',' and ')  ; # Replace +
+                string = string.replace('   ',' ') ; # Replace '  ', '   '
+                string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
+                string = string.replace('  ',' ') ; # Replace '  ', '   '
+            experiment[key][values[0]] = string
     # Write file
     if 'mip_era' == jsonName:
         outFile = ''.join(['../',jsonName,'.json'])

@@ -70,11 +70,13 @@ headers = data[11]
 experiment = {}
 for count in range(12,len(data)):
     row = data[count]
-    if row == 'None':
+    if row[9] == None:
+        print 'enter'
         continue
     key = replace(row[9],'_ ','_')
     experiment[key] = {}
     for count2,entry in enumerate(headers):
+        entry = replace(entry,'_ ','_')
         if count2 >= len(row):
             experiment[key][entry] = ''
             continue
@@ -92,7 +94,7 @@ for count in range(12,len(data)):
                     unidecode(value)
                 except:
                     print count,count2,key,entry,value
-                    
+
 
 # Fix issues
 #==============================================================================
@@ -235,9 +237,14 @@ for jsonName in masterTargets:
     for key, value in experiment.iteritems():
         for values in value.iteritems():
             string = experiment[key][values[0]]
+            string = string.replace('.','. ') ; # Replace concatenated sentence
             string = string.strip() ; # Remove trailing whitespace
             string = string.strip(',.') ; # Remove trailing characters
-            experiment[key][values[0]] = string.replace(' + ',' and ')  ; # Replace +
+            string = string.replace(' + ',' and ')  ; # Replace +
+            string = string.replace(' & ',' and ')  ; # Replace +
+            string = string.replace('   ',' ') ; # Replace '  ', '   '
+            string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
+            experiment[key][values[0]] = string.replace('  ',' ') ; # Replace '  ', '   '
     # Write file
     if 'mip_era' == jsonName:
         outFile = ''.join(['../',jsonName,'.json'])

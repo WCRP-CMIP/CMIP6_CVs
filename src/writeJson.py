@@ -13,12 +13,13 @@ PJD 12 Jul 2016     - Format tweaks and typo corrections
 PJD 12 Jul 2016     - Added source_id ('GFDL-CM2-1': 'GFDL CM2.1' as example)
 PJD 12 Jul 2016     - Corrected mip_era to be CMIP6-less
 PJD 12 Jul 2016     - Indent/format cleanup
+PJD 13 Jul 2016     - Further tweaks to cleanup experiment json
 
 @author: durack1
 """
 
 #%% Import statements
-import json,os #,ssl,urllib2
+import json,os # re,ssl,urllib2
 import pyexcel_xlsx as pyx
 from string import replace
 from unidecode import unidecode
@@ -63,19 +64,24 @@ activity_id = [
 #%% Experiments
 # xlsx
 os.chdir('/sync/git/CMIP6_CVs/src')
-inFile = '160712_CMIP6_expt_list.xlsx'
-data = pyx.get_data(inFile)
-data = data['Sheet1']
-headers = data[11]
+inFile          = '160713_CMIP6_expt_list.xlsx'
+data            = pyx.get_data(inFile)
+data            = data['Sheet1']
+headers         = data[11]
+exclusionList   = ['original label','# of sub-expts.','min ens. size','seg-1','seg-2','seg-3',
+                   'experiment label used in final version of GMD article','Questions/Comments/Notes',
+                   'number of char.']
+exclusionIndex  = [1,3,4,10,11,12,16,22,23]
 experiment = {}
 for count in range(12,len(data)):
     row = data[count]
     if row[9] == None:
-        print 'enter'
         continue
     key = replace(row[9],'_ ','_')
     experiment[key] = {}
     for count2,entry in enumerate(headers):
+        if count2 in exclusionIndex:
+            continue
         entry = replace(entry,'_ ','_')
         if count2 >= len(row):
             experiment[key][entry] = ''
@@ -95,24 +101,10 @@ for count in range(12,len(data)):
                 except:
                     print count,count2,key,entry,value
 
-
 # Fix issues
 #==============================================================================
-# experiment['1pctCO2Ndep']['experiment']             = '1 percent per year increasing CO2 experiment with increasing N-deposition'
-# experiment['amip-piForcing']['experiment']          = 'AMIP SSTs with pre-industrial anthropogenic and natural forcing'
-# experiment['dcppC-amv-extrop-minus']['experiment']  = 'idealized negative extratropical AMV anomaly pattern'
-# experiment['esm-piControl-spinup']['experiment']    = 'pre-industrial control simulation with CO2 concentration calculated (spin-up)'
-# experiment['hist-all-spAerO3']['experiment']        = 'historical simulations with specified anthropogenic aerosols'
-# experiment['hist-spAerO3']['experiment']            = 'historical simulations with specified anthropogenic aerosols, no other forcings'
 # experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
 # experiment['omip1']                                 = experiment.pop('omipv1')
-# experiment['omip1-spunup']                          = experiment.pop('omipv1-spunup')
-# experiment['omip2']                                 = experiment.pop('omipv2')
-# experiment['omip2-spunup']                          = experiment.pop('omipv2-spunup')
-# experiment['piClim-NTCF']['experiment']             = 'pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions'
-# experiment['piSST']['experiment']                   = 'experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents'
-# experiment['piSST-4xCO2-solar']['experiment']       = 'preindustrial control SSTs with quadrupled CO2 and solar reduction'
-# experiment['rad-irf']['experiment']                 = 'offline assessment of radiative transfer parameterizations in clear skies'
 #==============================================================================
 
 #%% Frequencies
@@ -237,7 +229,6 @@ for jsonName in masterTargets:
     for key, value in experiment.iteritems():
         for values in value.iteritems():
             string = experiment[key][values[0]]
-            string = string.replace('.','. ') ; # Replace concatenated sentence
             string = string.strip() ; # Remove trailing whitespace
             string = string.strip(',.') ; # Remove trailing characters
             string = string.replace(' + ',' and ')  ; # Replace +
@@ -258,4 +249,4 @@ for jsonName in masterTargets:
     json.dump(eval(jsonName),fH,ensure_ascii=True,sort_keys=True,indent=4,separators=(',',':'),encoding="utf-8")
     fH.close()
 
-     # Validate - only necessary if files are not written by json module
+    # Validate - only necessary if files are not written by json module

@@ -16,12 +16,13 @@ PJD 12 Jul 2016     - Indent/format cleanup
 PJD 13 Jul 2016     - Further tweaks to cleanup experiment json
 PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
 PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
+PJD 13 Jul 2016     - Updating institutions following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
 
 @author: durack1
 """
 
 #%% Import statements
-import json,os # re,ssl,urllib2
+import json,os,sys # re,ssl,urllib2
 import pyexcel_xlsx as pyx
 from string import replace
 from unidecode import unidecode
@@ -65,8 +66,8 @@ activity_id = [
  ] ;
 
 #%% Experiments
-os.chdir('/sync/git/CMIP6_CVs/src')
-inFile          = '160713_CMIP6_expt_list.xlsx'
+homePath        = os.path.join('/','/'.join(os.path.realpath(__file__).split('/')[0:-1]))
+inFile          = os.path.join(homePath,'160713_CMIP6_expt_list.xlsx')
 data            = pyx.get_data(inFile)
 data            = data['Sheet1']
 headers         = data[11]
@@ -152,34 +153,22 @@ grid_resolution = [
 
 #%% Institutions
 institution = {
- 'BCC': 'Beijing Climate Center, China Meteorological Administration, China',
- 'BNU': 'GCESS, BNU, Beijing, China',
  'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC, Canada',
  'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna, Italy',
- 'CNRM-CERFACS': 'Centre National de Recherches Meteorologiques, Meteo-France, Toulouse, France) and CERFACS (Centre Europeen de Recherches et de Formation Avancee en Calcul Scientifique, Toulouse, France',
- 'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Calverton, MD, USA',
  'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation, Australia, and Bureau of Meteorology, Melbourne, Australia',
  'CSIRO-QCCCE': 'Australian Commonwealth Scientific and Industrial Research Organization (CSIRO) Marine and Atmospheric Research (Melbourne, Australia) in collaboration with the Queensland Climate Change Centre of Excellence (QCCCE) (Brisbane, Australia)',
  'FIO': 'The First Institution of Oceanography (SOA), Qingdao, China',
- 'ICHEC': 'European Earth System Model',
  'INM': 'Institute for Numerical Mathematics, Moscow, Russia',
  'IPSL': 'Institut Pierre Simon Laplace, Paris, France',
- 'LASG-CESS': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing, China and Tsinghua University',
- 'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing, China',
  'MIROC': 'JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba, Japan), and NIES (National Institute for Environmental Studies, Ibaraki, Japan)',
  'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',
  'MPI-M': 'Max Planck Institute for Meteorology, Germany',
  'MRI': 'Meteorological Research Institute, Tsukuba, Japan',
  'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY, USA',
- 'NASA-GMAO': 'Global Modeling and Assimilation Office, NASA Goddard Space Flight Center, Greenbelt, MD, USA',
  'NCAR': 'National Center for Atmospheric Research, Boulder, CO, USA',
  'NCC': 'Norwegian Climate Centre, Bergen, Norway',
- 'NICAM': 'Nonhydrostatic Icosahedral Atmospheric Model (NICAM) Group (RIGC-JAMSTEC/AORI-U.Tokyo/AICS-RIKEN, Japan)',
- 'NIMR-KMA': 'National Institute of Meteorological Research, Seoul, South Korea',
- 'NOAA-GFDL': 'NOAA GFDL, 201 Forrestal Rd, Princeton, NJ, USA',
+ 'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
  'NOAA-NCEP': 'National Centers for Environmental Prediction, Camp Springs, MD, USA',
- 'NSF-DOE-NCAR': 'NSF/DOE NCAR (National Center for Atmospheric Research) Boulder, CO, USA',
- 'NSF-DOE-PNNL-NCAR': 'PNNL (Pacific Northwest National Laboratory) Richland, WA, USA/NCAR (National Center for Atmospheric Research) Boulder, CO, USA',
  'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA'
  } ;
 

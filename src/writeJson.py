@@ -155,8 +155,7 @@ grid_resolution = [
 institution = {
  'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC, Canada',
  'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna, Italy',
- 'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation, Australia, and Bureau of Meteorology, Melbourne, Australia',
- 'CSIRO-QCCCE': 'Australian Commonwealth Scientific and Industrial Research Organization (CSIRO) Marine and Atmospheric Research (Melbourne, Australia) in collaboration with the Queensland Climate Change Centre of Excellence (QCCCE) (Brisbane, Australia)',
+ 'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
  'FIO': 'The First Institution of Oceanography (SOA), Qingdao, China',
  'INM': 'Institute for Numerical Mathematics, Moscow, Russia',
  'IPSL': 'Institut Pierre Simon Laplace, Paris, France',
@@ -164,11 +163,11 @@ institution = {
  'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',
  'MPI-M': 'Max Planck Institute for Meteorology, Germany',
  'MRI': 'Meteorological Research Institute, Tsukuba, Japan',
- 'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY, USA',
- 'NCAR': 'National Center for Atmospheric Research, Boulder, CO, USA',
+ 'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
+ 'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80307, USA',
  'NCC': 'Norwegian Climate Centre, Bergen, Norway',
  'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
- 'NOAA-NCEP': 'National Centers for Environmental Prediction, Camp Springs, MD, USA',
+ 'NOAA-NCEP': 'National Centers for Environmental Prediction, Camp Springs, MD 20746, USA',
  'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA'
  } ;
 

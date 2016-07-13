@@ -14,6 +14,7 @@ PJD 12 Jul 2016     - Added source_id ('GFDL-CM2-1': 'GFDL CM2.1' as example)
 PJD 12 Jul 2016     - Corrected mip_era to be CMIP6-less
 PJD 12 Jul 2016     - Indent/format cleanup
 PJD 13 Jul 2016     - Further tweaks to cleanup experiment json
+PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
 
 @author: durack1
 """
@@ -34,6 +35,7 @@ masterTargets = [
  'institution',
  'mip_era',
  'realm',
+ 'required_global_attributes',
  'source_id',
  'source_type',
  'table_id'
@@ -194,6 +196,42 @@ realm = [
  'seaIce'
  ] ;
 
+#%% Required global attributes
+required_global_attributes = [
+ 'Conventions',
+ 'activity_id',
+ 'branch_method',
+ 'creation_date',
+ 'data_specs_version',
+ 'experiment',
+ 'experiment_id',
+ 'forcing_index',
+ 'frequency',
+ 'further_info_url',
+ 'grid',
+ 'grid_label',
+ 'grid_resolution',
+ 'initialization_index',
+ 'institution',
+ 'institution_id',
+ 'license',
+ 'mip_era',
+ 'physics_index',
+ 'product',
+ 'realization_index',
+ 'realm',
+ 'source',
+ 'source_id',
+ 'source_type',
+ 'sub_experiment',
+ 'sub_experiment_id',
+ 'table_id',
+ 'tracking_id',
+ 'variable_id',
+ 'variant_label',
+ 'variant_label'
+ ] ;
+ 
 #%% Source identifiers
 source_id = {
  'GFDL-CM2-1': 'GFDL CM2.1',

@@ -15,6 +15,7 @@ PJD 12 Jul 2016     - Corrected mip_era to be CMIP6-less
 PJD 12 Jul 2016     - Indent/format cleanup
 PJD 13 Jul 2016     - Further tweaks to cleanup experiment json
 PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
+PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
 
 @author: durack1
 """
@@ -64,7 +65,6 @@ activity_id = [
  ] ;
 
 #%% Experiments
-# xlsx
 os.chdir('/sync/git/CMIP6_CVs/src')
 inFile          = '160713_CMIP6_expt_list.xlsx'
 data            = pyx.get_data(inFile)
@@ -113,7 +113,9 @@ for count in range(12,len(data)):
             else:
                 if count2 in convertToList: # Case convertToList
                     tmp = ''.join(unidecode(value)).split()
-                    if isinstance(tmp,list):
+                    if count2 == 19 and tmp == ['dcppA-assim']:
+                        experiment[key][entry] = ['dcppA-assim','']
+                    elif isinstance(tmp,list):
                         experiment[key][entry] = tmp
                     else:
                         experiment[key][entry] = list(tmp)
@@ -280,21 +282,22 @@ table_id = [
 
 #%% Write variables to files
 for jsonName in masterTargets:
-    # Clean formats
-    for key, value in experiment.iteritems():
-        for values in value.iteritems():
-            string = experiment[key][values[0]]
-            if not isinstance(string, list):              
-                string = string.strip() ; # Remove trailing whitespace
-                string = string.strip(',.') ; # Remove trailing characters
-                string = string.replace(' + ',' and ')  ; # Replace +
-                string = string.replace(' & ',' and ')  ; # Replace +
-                string = string.replace('   ',' ') ; # Replace '  ', '   '
-                string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
-                string = string.replace('  ',' ') ; # Replace '  ', '   '
-            experiment[key][values[0]] = string
+    # Clean experiment formats
+    if jsonName == 'experiment':
+        for key, value in experiment.iteritems():
+            for values in value.iteritems():
+                string = experiment[key][values[0]]
+                if not isinstance(string, list):              
+                    string = string.strip() ; # Remove trailing whitespace
+                    string = string.strip(',.') ; # Remove trailing characters
+                    string = string.replace(' + ',' and ')  ; # Replace +
+                    string = string.replace(' & ',' and ')  ; # Replace +
+                    string = string.replace('   ',' ') ; # Replace '  ', '   '
+                    string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
+                    string = string.replace('  ',' ') ; # Replace '  ', '   '
+                experiment[key][values[0]] = string
     # Write file
-    if 'mip_era' == jsonName:
+    if jsonName == 'mip_era':
         outFile = ''.join(['../',jsonName,'.json'])
     else:
         outFile = ''.join(['../CMIP6_',jsonName,'.json'])

@@ -1,4 +1,8 @@
 {
-    "":"",
-    "GFDL-CM2-1":"GFDL CM2.1"
+    "GFDL-CM2-1":{
+        "institution_id":[
+            "NOAA-GFDL"
+        ],
+        "source":"GFDL CM2.1"
+    }
 }

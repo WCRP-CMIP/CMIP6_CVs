@@ -18,6 +18,7 @@ PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
 PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
 PJD 13 Jul 2016     - Updating institution following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
 PJD 13 Jul 2016     - Further tweaks to institution
+PJD 14 Jul 2016     - Updated source_id to include institution
 
 @author: durack1
 """
@@ -227,10 +228,10 @@ required_global_attributes = [
  ] ;
  
 #%% Source identifiers
-source_id = {
- 'GFDL-CM2-1': 'GFDL CM2.1',
- '': ''
- } ;
+source_id = {}
+source_id['GFDL-CM2-1'] = {}
+source_id['GFDL-CM2-1']['source'] = 'GFDL CM2.1'
+source_id['GFDL-CM2-1']['institution_id'] = ['NOAA-GFDL'] ;
 
 #%% Source types
 source_type = [

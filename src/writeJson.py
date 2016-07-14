@@ -23,7 +23,7 @@ PJD 13 Jul 2016     - Further tweaks to institution
 """
 
 #%% Import statements
-import json,os,sys # re,ssl,urllib2
+import json,os # re,ssl,sys,urllib2
 import pyexcel_xlsx as pyx
 from string import replace
 from unidecode import unidecode

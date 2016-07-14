@@ -19,6 +19,7 @@ PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCR
 PJD 13 Jul 2016     - Updating institution following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
 PJD 13 Jul 2016     - Further tweaks to institution
 PJD 14 Jul 2016     - Updated source_id to include institution
+PJD 14 Jul 2016     - Renamed experiment to experiment_id
 
 @author: durack1
 """
@@ -32,7 +33,7 @@ from unidecode import unidecode
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
  'activity_id',
- 'experiment',
+ 'experiment_id',
  'frequency',
  'grid_label',
  'grid_resolution',
@@ -90,40 +91,40 @@ headers[2]      = 'activity_id'
 headers[7]      = 'min number yrs per sim'
 headers[17]     = 'experiment'
 headers[18]     = 'sub_experiment'
-experiment      = {}
+experiment_id   = {}
 for count in range(12,len(data)):
     row = data[count]
     if row[9] == None:
         continue
     key = replace(row[9],'_ ','_')
-    experiment[key] = {}
+    experiment_id[key] = {}
     for count2,entry in enumerate(headers):
         if count2 in exclusionIndex:
             continue
         entry = replace(entry,'_ ','_')
         entry = replace(entry,' ','_')
         if count2 >= len(row):
-            experiment[key][entry] = ''
+            experiment_id[key][entry] = ''
             continue
         value = row[count2]
         if count2 == 9:
             continue
         else:
             if type(value) == int:
-                experiment[key][entry] = str(value) ; #replace(str(value),' ','')
+                experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
             elif value == None:
-                experiment[key][entry] = ''
+                experiment_id[key][entry] = ''
             else:
                 if count2 in convertToList: # Case convertToList
                     tmp = ''.join(unidecode(value)).split()
                     if count2 == 19 and tmp == ['dcppA-assim']:
-                        experiment[key][entry] = ['dcppA-assim','']
+                        experiment_id[key][entry] = ['dcppA-assim','']
                     elif isinstance(tmp,list):
-                        experiment[key][entry] = tmp
+                        experiment_id[key][entry] = tmp
                     else:
-                        experiment[key][entry] = list(tmp)
+                        experiment_id[key][entry] = list(tmp)
                 else:
-                    experiment[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+                    experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
 
 # Fix issues
 #==============================================================================

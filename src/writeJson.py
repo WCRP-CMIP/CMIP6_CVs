@@ -20,6 +20,7 @@ PJD 13 Jul 2016     - Updating institution following https://github.com/WCRP-CMI
 PJD 13 Jul 2016     - Further tweaks to institution
 PJD 14 Jul 2016     - Updated source_id to include institution
 PJD 14 Jul 2016     - Renamed experiment to experiment_id
+PJD 14 Jul 2016     - Renamed institution to institution_id
 
 @author: durack1
 """
@@ -37,7 +38,7 @@ masterTargets = [
  'frequency',
  'grid_label',
  'grid_resolution',
- 'institution',
+ 'institution_id',
  'mip_era',
  'realm',
  'required_global_attributes',
@@ -155,7 +156,7 @@ grid_resolution = [
  ] ;
 
 #%% Institutions
-institution = {
+institution_id = {
  'BNU': 'GCESS, BNU, Beijing, China',
  'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
  'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy',
@@ -227,7 +228,7 @@ required_global_attributes = [
  'variant_label',
  'variant_label'
  ] ;
- 
+
 #%% Source identifiers
 source_id = {}
 source_id['GFDL-CM2-1'] = {}
@@ -281,7 +282,7 @@ for jsonName in masterTargets:
         for key, value in experiment.iteritems():
             for values in value.iteritems():
                 string = experiment[key][values[0]]
-                if not isinstance(string, list):              
+                if not isinstance(string, list):
                     string = string.strip() ; # Remove trailing whitespace
                     string = string.strip(',.') ; # Remove trailing characters
                     string = string.replace(' + ',' and ')  ; # Replace +

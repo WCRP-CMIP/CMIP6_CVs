@@ -16,8 +16,8 @@ PJD 12 Jul 2016     - Indent/format cleanup
 PJD 13 Jul 2016     - Further tweaks to cleanup experiment json
 PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
 PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
-PJD 13 Jul 2016     - Updating institutions following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
-PJD 13 Jul 2016     - Further tweaks to institutions
+PJD 13 Jul 2016     - Updating institution following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
+PJD 13 Jul 2016     - Further tweaks to institution
 
 @author: durack1
 """

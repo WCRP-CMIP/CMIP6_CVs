@@ -1,8 +1,6 @@
-<Please delete irrelevant information from the template below before submitting your issue>
+<Please fill out the required details below and delete irrelevant information from the template below before submitting your issue>
 
-Please fill out the required details below:
-
-## Controlled Vocabulary (CV) of interest:
+## Indicate the Controlled Vocabulary (CV) of interest:
 <activity_id, coordinate, experiment_id, formula_terms, frequency, grid, grid_label, grid_resolution, institution_id, mip_era, realm, required_global_attributes, source_id, source_type, table_id>
 
 ## If INSTITUTION_ID please provide the following information:

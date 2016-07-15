@@ -18,22 +18,30 @@ PJD 13 Jul 2016     - Added required_global_attributes (Denis Nadeau)
 PJD 13 Jul 2016     - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
 PJD 13 Jul 2016     - Updating institution following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
 PJD 13 Jul 2016     - Further tweaks to institution
-PJD 14 Jul 2016     - Updated source_id to include institution
-PJD 14 Jul 2016     - Renamed experiment to experiment_id
-PJD 14 Jul 2016     - Renamed institution to institution_id
+PJD 14 Jul 2016     - Updated source_id to include institution https://github.com/WCRP-CMIP/CMIP6_CVs/issues/8
+PJD 14 Jul 2016     - Renamed experiment to experiment_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/10
+PJD 14 Jul 2016     - Renamed institution to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/12
+PJD 14 Jul 2016     - Added coordinate
 
 @author: durack1
 """
 
 #%% Import statements
-import json,os # re,ssl,sys,urllib2
+import gc,json,os,ssl,urllib2 # re,sys
 import pyexcel_xlsx as pyx
 from string import replace
 from unidecode import unidecode
 
+#%% urllib2 config
+# Create urllib2 context to deal with lab certs
+ctx                 = ssl.create_default_context()
+ctx.check_hostname  = False
+ctx.verify_mode     = ssl.CERT_NONE
+
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
  'activity_id',
+ 'coordinate',
  'experiment_id',
  'frequency',
  'grid_label',
@@ -68,6 +76,26 @@ activity_id = [
  'ScenarioMIP',
  'VolMIP'
  ] ;
+
+#%% Coordinate
+# Read web file
+sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
+jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
+tmp = jsonOutput.read()
+jsonOutput.close()
+# Write local json
+if os.path.exists('tmp.json'):
+    os.remove('tmp.json')
+tmpFile = open('tmp.json','w')
+tmpFile.write(tmp)
+tmpFile.close()
+# Read local json
+tmp = json.load(open('tmp.json','r'))
+os.remove('tmp.json')
+del(jsonOutput) ; gc.collect()
+# Extract coordinates
+coordinate = tmp.get('axis_entry')
+del(tmp,sourceFile) ; gc.collect()
 
 #%% Experiments
 homePath        = os.path.join('/','/'.join(os.path.realpath(__file__).split('/')[0:-1]))
@@ -126,6 +154,9 @@ for count in range(12,len(data)):
                         experiment_id[key][entry] = list(tmp)
                 else:
                     experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+
+del(homePath,inFile,data,headers,masterList,exclusionList,exclusionIndex,convertToList,
+    count,row,key,count2,entry,value,tmp) ; gc.collect()
 
 # Fix issues
 #==============================================================================
@@ -279,9 +310,9 @@ table_id = [
 for jsonName in masterTargets:
     # Clean experiment formats
     if jsonName == 'experiment':
-        for key, value in experiment.iteritems():
+        for key, value in experiment_id.iteritems():
             for values in value.iteritems():
-                string = experiment[key][values[0]]
+                string = experiment_id[key][values[0]]
                 if not isinstance(string, list):
                     string = string.strip() ; # Remove trailing whitespace
                     string = string.strip(',.') ; # Remove trailing characters
@@ -290,7 +321,7 @@ for jsonName in masterTargets:
                     string = string.replace('   ',' ') ; # Replace '  ', '   '
                     string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
                     string = string.replace('  ',' ') ; # Replace '  ', '   '
-                experiment[key][values[0]] = string
+                experiment_id[key][values[0]] = string
     # Write file
     if jsonName == 'mip_era':
         outFile = ''.join(['../',jsonName,'.json'])
@@ -303,5 +334,7 @@ for jsonName in masterTargets:
     fH = open(outFile,'w')
     json.dump(eval(jsonName),fH,ensure_ascii=True,sort_keys=True,indent=4,separators=(',',':'),encoding="utf-8")
     fH.close()
+
+del(jsonName,outFile) ; gc.collect()
 
     # Validate - only necessary if files are not written by json module

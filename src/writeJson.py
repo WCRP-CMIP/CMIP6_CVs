@@ -23,6 +23,7 @@ PJD 14 Jul 2016     - Renamed experiment to experiment_id https://github.com/WCR
 PJD 14 Jul 2016     - Renamed institution to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/12
 PJD 14 Jul 2016     - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/issues/7
 PJD 14 Jul 2016     - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
+PJD 14 Jul 2016     - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/issues/5
 
 @author: durack1
 """
@@ -44,6 +45,7 @@ masterTargets = [
  'activity_id',
  'coordinate',
  'experiment_id',
+ 'formula_terms',
  'frequency',
  'grid',
  'grid_label',
@@ -165,6 +167,29 @@ del(homePath,inFile,data,headers,masterList,exclusionList,exclusionIndex,convert
 # experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
 # experiment['omip1']                                 = experiment.pop('omipv1')
 #==============================================================================
+
+#%% Formula_terms
+# Read web file
+sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
+jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
+tmp = jsonOutput.read()
+jsonOutput.close()
+# Write local json
+if os.path.exists('tmp.json'):
+    os.remove('tmp.json')
+tmpFile = open('tmp.json','w')
+tmpFile.write(tmp)
+tmpFile.close()
+# Read local json
+tmp = json.load(open('tmp.json','r'))
+os.remove('tmp.json')
+del(jsonOutput) ; gc.collect()
+# Extract coordinates
+tmp = tmp.get('variable_entry')
+formula_terms = {}
+for count,key in enumerate(['a','ps']):
+    formula_terms[key] = tmp[key]
+del(sourceFile,tmp,count,key) ; gc.collect()
 
 #%% Frequencies
 frequency = ['3hr', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;

@@ -21,7 +21,8 @@ PJD 13 Jul 2016     - Further tweaks to institution
 PJD 14 Jul 2016     - Updated source_id to include institution https://github.com/WCRP-CMIP/CMIP6_CVs/issues/8
 PJD 14 Jul 2016     - Renamed experiment to experiment_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/10
 PJD 14 Jul 2016     - Renamed institution to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/12
-PJD 14 Jul 2016     - Added coordinate
+PJD 14 Jul 2016     - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/issues/7
+PJD 14 Jul 2016     - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
 
 @author: durack1
 """
@@ -44,6 +45,7 @@ masterTargets = [
  'coordinate',
  'experiment_id',
  'frequency',
+ 'grid',
  'grid_label',
  'grid_resolution',
  'institution_id',
@@ -166,6 +168,26 @@ del(homePath,inFile,data,headers,masterList,exclusionList,exclusionIndex,convert
 
 #%% Frequencies
 frequency = ['3hr', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;
+
+#%% Grid
+# Read web file
+sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_grids.json'
+jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
+tmp = jsonOutput.read()
+jsonOutput.close()
+# Write local json
+if os.path.exists('tmp.json'):
+    os.remove('tmp.json')
+tmpFile = open('tmp.json','w')
+tmpFile.write(tmp)
+tmpFile.close()
+# Read local json
+tmp = json.load(open('tmp.json','r'))
+os.remove('tmp.json')
+del(jsonOutput) ; gc.collect()
+# Extract coordinates
+grid = tmp.get('axis_entry')
+del(tmp,sourceFile) ; gc.collect()
 
 #%% Grid labels
 grid_label = ['gn', 'gr', 'gr1', 'gr2', 'gr3', 'gr4', 'gr5', 'gr6', 'gr7', 'gr8', 'gr9'] ;

@@ -24,6 +24,7 @@ PJD 14 Jul 2016     - Renamed institution to institution_id https://github.com/W
 PJD 14 Jul 2016     - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/issues/7
 PJD 14 Jul 2016     - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
 PJD 14 Jul 2016     - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/issues/5
+PJD 15 Jul 2016     - Added further cleanup of imported dictionaries
 
 @author: durack1
 """
@@ -356,10 +357,11 @@ table_id = [
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName == 'experiment':
-        for key, value in experiment_id.iteritems():
+    if jsonName in ['coordinate','experiment_id','grid','formula_terms']:
+        dictToClean = eval(jsonName)
+        for key, value in dictToClean.iteritems():
             for values in value.iteritems():
-                string = experiment_id[key][values[0]]
+                string = dictToClean[key][values[0]]
                 if not isinstance(string, list):
                     string = string.strip() ; # Remove trailing whitespace
                     string = string.strip(',.') ; # Remove trailing characters
@@ -368,7 +370,8 @@ for jsonName in masterTargets:
                     string = string.replace('   ',' ') ; # Replace '  ', '   '
                     string = string.replace('anthro ','anthropogenic ') ; # Replace anthro
                     string = string.replace('  ',' ') ; # Replace '  ', '   '
-                experiment_id[key][values[0]] = string
+                dictToClean[key][values[0]] = string
+        vars()[jsonName] = dictToClean
     # Write file
     if jsonName == 'mip_era':
         outFile = ''.join(['../',jsonName,'.json'])

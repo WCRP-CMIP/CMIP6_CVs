@@ -1,5 +1,6 @@
 [
     "3hr",
+    "3hrClim",
     "6hr",
     "day",
     "decadal",
@@ -7,7 +8,5 @@
     "mon",
     "monClim",
     "subhr",
-    "yr",
-    "monClim",
-    "3hrClim"
+    "yr"
 ]

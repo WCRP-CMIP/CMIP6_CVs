@@ -193,7 +193,7 @@ for count,key in enumerate(['a','ps']):
 del(sourceFile,tmp,count,key) ; gc.collect()
 
 #%% Frequencies
-frequency = ['3hr', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;
+frequency = ['3hr', '3hrClim', '6hr', 'day', 'decadal', 'fx', 'mon', 'monClim', 'subhr', 'yr'] ;
 
 #%% Grid
 # Read web file

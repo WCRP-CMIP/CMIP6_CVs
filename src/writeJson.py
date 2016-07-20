@@ -25,6 +25,8 @@ PJD 14 Jul 2016    - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/iss
 PJD 14 Jul 2016    - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
 PJD 14 Jul 2016    - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/issues/5
 PJD 15 Jul 2016    - Added further cleanup of imported dictionaries
+                   - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables)
+                   - TODO: Generate function for json compositing
 
 @author: durack1
 """

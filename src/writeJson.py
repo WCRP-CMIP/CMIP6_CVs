@@ -25,6 +25,7 @@ PJD 14 Jul 2016    - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/iss
 PJD 14 Jul 2016    - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
 PJD 14 Jul 2016    - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/issues/5
 PJD 15 Jul 2016    - Added further cleanup of imported dictionaries
+PJD 20 Jul 2016    - Updated VolMIP experiment info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/19
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables)
                    - TODO: Generate function for json compositing
 
@@ -177,9 +178,15 @@ del(homePath, inFile, data, headers, masterList, exclusionList, exclusionIndex, 
 gc.collect()
 
 # Fix issues
+experiment_id['control-slab']['tier'] = '3'
+experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
+experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
+experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
+experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
+experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
 #==============================================================================
-# experiment['histSST-1950HC']['experiment']          = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
-# experiment['omip1']                                 = experiment.pop('omipv1')
+# experiment_id['histSST-1950HC']['experiment'] = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
+# experiment_id['omip1'] = experiment.pop('omipv1')
 #==============================================================================
 
 #%% Formula_terms
@@ -408,6 +415,8 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace(
                         'anthro ', 'anthropogenic ')  # Replace anthro
+                    string = string.replace(
+                        'piinatubo', 'pinatubo')  # Replace piinatubo
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean

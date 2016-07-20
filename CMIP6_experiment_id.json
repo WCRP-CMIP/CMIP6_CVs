@@ -1074,7 +1074,7 @@
             "CHEM",
             "BGM"
         ],
-        "description":"slab control run for volc-piinatubo-slab",
+        "description":"slab control run for volc-pinatubo-slab",
         "end_year":"",
         "experiment":"control with slab ocean",
         "min_number_yrs_per_sim":"30",
@@ -1087,7 +1087,7 @@
         "start_year":"",
         "sub_experiment":"none",
         "sub_experiment_id":"none",
-        "tier":"1"
+        "tier":"3"
     },
     "dcppA-assim":{
         "activity_id":[
@@ -5474,7 +5474,7 @@
             "CHEM",
             "BGM"
         ],
-        "description":"Idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
+        "description":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
         "end_year":"",
         "experiment":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
         "min_number_yrs_per_sim":"20",
@@ -5501,7 +5501,7 @@
             "CHEM",
             "BGM"
         ],
-        "description":"1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of parameterized and resolved wave forcings, radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability. Experiment initialized from PiControl",
+        "description":"1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability",
         "end_year":"",
         "experiment":"Pinatubo experiment",
         "min_number_yrs_per_sim":"3",
@@ -5537,7 +5537,7 @@
         "required_model_components":[
             "AOGCM"
         ],
-        "start_year":"2014",
+        "start_year":"2015",
         "sub_experiment":"initialized near end of year 2014",
         "sub_experiment_id":"s2014",
         "tier":"3"
@@ -5579,7 +5579,7 @@
             "CHEM",
             "BGM"
         ],
-        "description":"As volc-pinatubo-full, but with prescribed aerosol heating rates in the stratosphere. Complimentary experiment to volc-pinatubo-surf",
+        "description":"As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates",
         "end_year":"",
         "experiment":"Pinatubo experiment with partial radiative forcing, includes only stratospheric warming",
         "min_number_yrs_per_sim":"3",
@@ -5606,7 +5606,7 @@
             "CHEM",
             "BGM"
         ],
-        "description":"As volc-pinatubo-full, but with prescribed surface cooling patterns or net surface flux changes. Complimentary experiment to volc-pinatubo-strat",
+        "description":"As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols",
         "end_year":"",
         "experiment":"Pinatubo experiment with partial radiative forcing, solar radiation scattering only",
         "min_number_yrs_per_sim":"3",

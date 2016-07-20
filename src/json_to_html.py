@@ -1,17 +1,18 @@
-# This script takes the json file and turns it into a nice jquery/data-tabled html doc
+# This script takes the json file and turns it into a nice
+# jquery/data-tabled html doc
 import json
 import sys
 
-f=open(sys.argv[1])
+f = open(sys.argv[1])
 dic = json.load(f)
 
 print dic
 
-if len(sys.argv)>2:
+if len(sys.argv) > 2:
     fout = sys.argv[2]
 else:
-    fout = sys.argv[1][:-4]+"html"
-fo = open(fout,"w")
+    fout = sys.argv[1][:-4] + "html"
+fo = open(fout, "w")
 
 print >> fo, """<html><head>
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
@@ -29,20 +30,20 @@ first_row = False
 for exp in dic.keys():
     exp_dict = dic[exp]
     if not first_row:
-      ids = exp_dict.keys()
-      for hf in ["thead","tfoot"]:
-        print >> fo,"<%s><tr><th>experiment id</th>" % hf
-        for i in ids:
-            print >>fo, "<th>%s</th>" % i
-        print >>fo, "</tr></%s>" % hf
-    first_row= True
-    print >> fo,"<tr><td>%s</td>" % exp
+        ids = exp_dict.keys()
+        for hf in ["thead", "tfoot"]:
+            print >> fo, "<%s><tr><th>experiment id</th>" % hf
+            for i in ids:
+                print >>fo, "<th>%s</th>" % i
+            print >>fo, "</tr></%s>" % hf
+    first_row = True
+    print >> fo, "<tr><td>%s</td>" % exp
     for k in ids:
         st = exp_dict[k]
-        if isinstance(st,(list,tuple)):
+        if isinstance(st, (list, tuple)):
             st = " ".join(st)
-        print >>fo,"<td>%s</td>" % st
-    print >>fo,"</tr>"
+        print >>fo, "<td>%s</td>" % st
+    print >>fo, "</tr>"
 print >>fo, "</table>"
 
 print >>fo, """

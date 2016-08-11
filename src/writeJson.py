@@ -27,7 +27,8 @@ PJD 14 Jul 2016    - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/
 PJD 15 Jul 2016    - Added further cleanup of imported dictionaries
 PJD 20 Jul 2016    - Updated VolMIP experiment info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/19
 PJD 11 Aug 2016    - Added readJsonCreateDict function
-                   - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables)
+PJD 11 Aug 2016    - Converted experiment_id source from github
+                   - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
 @author: durack1
@@ -39,10 +40,7 @@ import json
 import os
 import ssl
 import sys
-import urllib2  # re,sys
-import pyexcel_xlsx as pyx
-from string import replace
-from unidecode import unidecode
+import urllib2  # re
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
@@ -168,79 +166,19 @@ del(tmp, sourceFile)
 gc.collect()
 
 #%% Experiments
-homePath = os.path.join(
-    '/', '/'.join(os.path.realpath(__file__).split('/')[0:-1]))
-inFile = os.path.join(homePath, '160713_CMIP6_expt_list.xlsx')
-data = pyx.get_data(inFile)
-data = data['Sheet1']
-headers = data[11]
-masterList = ['description', 'original label', 'mip', '# of sub-expts.', 'min ens. size',
-              'start year', 'end year', 'min. # yrs/sim', 'tier', 'experiment_id', 'seg-1',
-              'seg-2', 'seg-3', 'sub_ experiment_ id', 'required model components',
-              'additional allowed model components', 'experiment label used in final version of GMD article',
-              'experiment title', 'sub_experiment (title)', 'parent_ experiment_id',
-              'parent_sub_ experiment_id', 'parent_activity_id', 'Questions/Comments/Notes',
-              'number of char.']
-exclusionList = ['original label', '# of sub-expts.', 'min ens. size', 'seg-1', 'seg-2', 'seg-3',
-                 'experiment label used in final version of GMD article', 'Questions/Comments/Notes',
-                 'number of char.']
-exclusionIndex = [1, 3, 4, 10, 11, 12, 16, 20, 22, 23]
-# activity_id,required_model_components,additional_allowed_model_components,parent_experiment_id,parent_activity_id
-convertToList = [2, 14, 15, 19, 21]
-# Update headers
-headers[2] = 'activity_id'
-headers[7] = 'min number yrs per sim'
-headers[17] = 'experiment'
-headers[18] = 'sub_experiment'
-experiment_id = {}
-for count in range(12, len(data)):
-    row = data[count]
-    if row[9] is None:
-        continue
-    key = replace(row[9], '_ ', '_')
-    experiment_id[key] = {}
-    for count2, entry in enumerate(headers):
-        if count2 in exclusionIndex:
-            continue
-        entry = replace(entry, '_ ', '_')
-        entry = replace(entry, ' ', '_')
-        if count2 >= len(row):
-            experiment_id[key][entry] = ''
-            continue
-        value = row[count2]
-        if count2 == 9:
-            continue
-        else:
-            if isinstance(value, int):
-                experiment_id[key][entry] = str(
-                    value)  # replace(str(value),' ','')
-            elif value is None:
-                experiment_id[key][entry] = ''
-            else:
-                if count2 in convertToList:  # Case convertToList
-                    tmp = ''.join(unidecode(value)).split()
-                    if count2 == 19 and tmp == ['dcppA-assim']:
-                        experiment_id[key][entry] = ['dcppA-assim', '']
-                    elif isinstance(tmp, list):
-                        experiment_id[key][entry] = tmp
-                    else:
-                        experiment_id[key][entry] = list(tmp)
-                else:
-                    experiment_id[key][entry] = unidecode(
-                        value)  # replace(unidecode(value),' ','')
-
-del(homePath, inFile, data, headers, masterList, exclusionList, exclusionIndex, convertToList,
-    count, row, key, count2, entry, value, tmp)
-gc.collect()
+tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
+      ] ;
+experiment_id = readJsonCreateDict(tmp)
+experiment_id = experiment_id.get('experiment_id')
 
 # Fix issues
-experiment_id['control-slab']['tier'] = '3'
-experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
-experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
-experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
-experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
-experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
 #==============================================================================
+# experiment_id['control-slab']['tier'] = '3'
+# experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
+# experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
+# experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
+# experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
+# experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
 # experiment_id['histSST-1950HC']['experiment'] = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
 # experiment_id['omip1'] = experiment.pop('omipv1')
 #==============================================================================

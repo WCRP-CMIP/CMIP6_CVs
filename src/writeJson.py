@@ -210,6 +210,7 @@ gc.collect()
 
 #%% Frequencies
 frequency = [
+    '1hrClimMon',
     '3hr',
     '3hrClim',
     '6hr',

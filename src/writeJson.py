@@ -28,6 +28,7 @@ PJD 15 Jul 2016    - Added further cleanup of imported dictionaries
 PJD 20 Jul 2016    - Updated VolMIP experiment info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/19
 PJD 11 Aug 2016    - Added readJsonCreateDict function
 PJD 11 Aug 2016    - Converted experiment_id source from github
+PJD 11 Aug 2016    - Updated frequency to include 1hrClimMon https://github.com/WCRP-CMIP/CMIP6_CVs/issues/24
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 

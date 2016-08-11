@@ -60,7 +60,7 @@ def readJsonCreateDict(buildList):
     their contents to a dictionary in memory
 
     Author: Paul J. Durack : pauldurack@llnl.gov
-    
+
     The function takes a list argument with two entries. The first is the
     variable name for the assigned dictionary, and the second is the URL
     of the json file to be read and loaded into memory
@@ -119,7 +119,8 @@ masterTargets = [
     'required_global_attributes',
     'source_id',
     'source_type',
-    'table_id'
+    'table_id',
+    'variable'
 ]
 
 #%% Activities
@@ -454,10 +455,17 @@ table_id = [
     'fx'
 ]
 
+#%% Variable
+tmp = [['variable','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_variable.json']
+      ] ;
+variable = readJsonCreateDict(tmp)
+variable = variable.get('variable')
+
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['coordinate', 'experiment_id', 'grid', 'formula_terms']:
+    if jsonName in ['coordinate', 'experiment_id', 'grid', 'formula_terms'
+                    'variable']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():

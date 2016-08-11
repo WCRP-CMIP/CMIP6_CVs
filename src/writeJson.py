@@ -38,6 +38,7 @@ import gc
 import json
 import os
 import ssl
+import sys
 import urllib2  # re,sys
 import pyexcel_xlsx as pyx
 from string import replace
@@ -59,6 +60,10 @@ def readJsonCreateDict(buildList):
     their contents to a dictionary in memory
 
     Author: Paul J. Durack : pauldurack@llnl.gov
+    
+    The function takes a list argument with two entries. The first is the
+    variable name for the assigned dictionary, and the second is the URL
+    of the json file to be read and loaded into memory
 
     Usage:
     ------

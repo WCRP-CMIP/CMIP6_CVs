@@ -42,7 +42,7 @@ import json
 import os
 import ssl
 import sys
-import urllib2  # re
+import urllib2
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()

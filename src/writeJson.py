@@ -31,6 +31,7 @@ PJD 11 Aug 2016    - Converted experiment_id source from github
 PJD 11 Aug 2016    - Updated frequency to include 1hrClimMon https://github.com/WCRP-CMIP/CMIP6_CVs/issues/24
 PJD 11 Aug 2016    - Updated LUMIP experiment names https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
 PJD 15 Aug 2016    - Update experiment_id to be self-consistent (LUMIP renames complete)
+PJD 15 Aug 2016    - Converted readJsonCreateDict to source from durolib
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -42,67 +43,13 @@ import gc
 import json
 import os
 import ssl
-import sys
 import urllib2
+from durolib import readJsonCreateDict
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
 ctx.check_hostname  = False
 ctx.verify_mode     = ssl.CERT_NONE
-
-#%% Function definitions
-
-# Loop through input tables
-def readJsonCreateDict(buildList):
-    '''
-    Documentation for readJsonCreateDict(buildList):
-    -------
-    The readJsonCreateDict() function reads web-based json files and writes
-    their contents to a dictionary in memory
-
-    Author: Paul J. Durack : pauldurack@llnl.gov
-
-    The function takes a list argument with two entries. The first is the
-    variable name for the assigned dictionary, and the second is the URL
-    of the json file to be read and loaded into memory
-
-    Usage:
-    ------
-        >>> from runCMOR3 import readJsonCreateDict
-        >>> readJsonCreateDict(['Omon','https://raw.githubusercontent.com/PCMDI/obs4MIPs-cmor-tables/master/Tables/obs4MIPs_Omon.json'])
-
-    Notes:
-    -----
-        ...
-    '''
-    # Test for list input of length == 2
-    if len(buildList[0]) != 2:
-        print 'Invalid inputs, exiting..'
-        sys.exit()
-    # Create urllib2 context to deal with lab/LLNL web certificates
-    ctx                 = ssl.create_default_context()
-    ctx.check_hostname  = False
-    ctx.verify_mode     = ssl.CERT_NONE
-    # Iterate through buildList and write results to jsonDict
-    jsonDict = {}
-    for count,table in enumerate(buildList):
-        #print 'Processing:',table[0]
-        # Read web file
-        jsonOutput = urllib2.urlopen(table[1], context=ctx)
-        tmp = jsonOutput.read()
-        vars()[table[0]] = tmp
-        jsonOutput.close()
-        # Write local json
-        tmpFile = open('tmp.json','w')
-        tmpFile.write(eval(table[0]))
-        tmpFile.close()
-        # Read local json
-        vars()[table[0]] = json.load(open('tmp.json','r'))
-        os.remove('tmp.json')
-        jsonDict[table[0]] = eval(table[0]) ; # Write to dictionary
-
-    return jsonDict
-
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

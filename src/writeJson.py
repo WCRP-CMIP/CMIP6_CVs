@@ -30,6 +30,7 @@ PJD 11 Aug 2016    - Added readJsonCreateDict function
 PJD 11 Aug 2016    - Converted experiment_id source from github
 PJD 11 Aug 2016    - Updated frequency to include 1hrClimMon https://github.com/WCRP-CMIP/CMIP6_CVs/issues/24
 PJD 11 Aug 2016    - Updated LUMIP experiment names https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
+PJD 15 Aug 2016    - Update experiment_id to be self-consistent (LUMIP renames complete)
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -174,38 +175,37 @@ experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 
 # Fix issues
-experiment_id['land-crop-noIrrigFert'] = experiment_id.pop('land-crop-noManage')
-experiment_id['land-noShiftcultivate'] = experiment_id.pop('land-netTrans')
-experiment_id['land-hist-altLu1'] = {}
-experiment_id['land-hist-altLu1']['activity_id'] = 'LUMIP'
-experiment_id['land-hist-altLu1']['additional_allowed_model_components'] = ''
-experiment_id['land-hist-altLu1']['description'] = 'Land only simulations'
-experiment_id['land-hist-altLu1']['end_year'] = '2014'
-experiment_id['land-hist-altLu1']['experiment'] = 'historical land-only alternate land-use history'
-experiment_id['land-hist-altLu1']['min_number_yrs_per_sim'] = '165'
-experiment_id['land-hist-altLu1']['parent_activity_id'] = ''
-experiment_id['land-hist-altLu1']['parent_experiment_id'] = ''
-experiment_id['land-hist-altLu1']['required_model_components'] = ['LND']
-experiment_id['land-hist-altLu1']['start_year'] = '1850 or 1700'
-experiment_id['land-hist-altLu1']['sub_experiment'] = 'none'
-experiment_id['land-hist-altLu1']['sub_experiment_id'] = 'none'
-experiment_id['land-hist-altLu1']['tier'] = '2'
-experiment_id['land-hist-altLu2'] = {}
-experiment_id['land-hist-altLu2']['activity_id'] = 'LUMIP'
-experiment_id['land-hist-altLu2']['additional_allowed_model_components'] = ''
-experiment_id['land-hist-altLu2']['description'] = 'Land only simulations'
-experiment_id['land-hist-altLu2']['end_year'] = '2014'
-experiment_id['land-hist-altLu2']['experiment'] = 'historical land-only alternate land use history'
-experiment_id['land-hist-altLu2']['min_number_yrs_per_sim'] = '165'
-experiment_id['land-hist-altLu2']['parent_activity_id'] = ''
-experiment_id['land-hist-altLu2']['parent_experiment_id'] = ''
-experiment_id['land-hist-altLu2']['required_model_components'] = ['LND']
-experiment_id['land-hist-altLu2']['start_year'] = '1850 or 1700'
-experiment_id['land-hist-altLu2']['sub_experiment'] = 'none'
-experiment_id['land-hist-altLu2']['sub_experiment_id'] = 'none'
-experiment_id['land-hist-altLu2']['tier'] = '2'
 
 #==============================================================================
+#experiment_id['land-hist-altLu1'] = {}
+#experiment_id['land-hist-altLu1']['activity_id'] = 'LUMIP'
+#experiment_id['land-hist-altLu1']['additional_allowed_model_components'] = ''
+#experiment_id['land-hist-altLu1']['description'] = 'Land only simulations'
+#experiment_id['land-hist-altLu1']['end_year'] = '2014'
+#experiment_id['land-hist-altLu1']['experiment'] = 'historical land-only alternate land-use history'
+#experiment_id['land-hist-altLu1']['min_number_yrs_per_sim'] = '165'
+#experiment_id['land-hist-altLu1']['parent_activity_id'] = ''
+#experiment_id['land-hist-altLu1']['parent_experiment_id'] = ''
+#experiment_id['land-hist-altLu1']['required_model_components'] = ['LND']
+#experiment_id['land-hist-altLu1']['start_year'] = '1850 or 1700'
+#experiment_id['land-hist-altLu1']['sub_experiment'] = 'none'
+#experiment_id['land-hist-altLu1']['sub_experiment_id'] = 'none'
+#experiment_id['land-hist-altLu1']['tier'] = '2'
+#experiment_id['land-hist-altLu2'] = {}
+#experiment_id['land-hist-altLu2']['activity_id'] = 'LUMIP'
+#experiment_id['land-hist-altLu2']['additional_allowed_model_components'] = ''
+#experiment_id['land-hist-altLu2']['description'] = 'Land only simulations'
+#experiment_id['land-hist-altLu2']['end_year'] = '2014'
+#experiment_id['land-hist-altLu2']['experiment'] = 'historical land-only alternate land use history'
+#experiment_id['land-hist-altLu2']['min_number_yrs_per_sim'] = '165'
+#experiment_id['land-hist-altLu2']['parent_activity_id'] = ''
+#experiment_id['land-hist-altLu2']['parent_experiment_id'] = ''
+#experiment_id['land-hist-altLu2']['required_model_components'] = ['LND']
+#experiment_id['land-hist-altLu2']['start_year'] = '1850 or 1700'
+#experiment_id['land-hist-altLu2']['sub_experiment'] = 'none'
+#experiment_id['land-hist-altLu2']['sub_experiment_id'] = 'none'
+#experiment_id['land-hist-altLu2']['tier'] = '2'
+
 # experiment_id['control-slab']['tier'] = '3'
 # experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
 # experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'

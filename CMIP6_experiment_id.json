@@ -3322,7 +3322,7 @@
         "sub_experiment_id":"none",
         "tier":"2"
     },
-    "land-crop-noManage":{
+    "land-crop-noIrrigFert":{
         "activity_id":[
             "LUMIP"
         ],
@@ -3379,6 +3379,40 @@
         "sub_experiment":"none",
         "sub_experiment_id":"none",
         "tier":"1"
+    },
+    "land-hist-altLu1":{
+        "activity_id":"LUMIP",
+        "additional_allowed_model_components":"",
+        "description":"Land only simulations",
+        "end_year":"2014",
+        "experiment":"historical land-only alternate land-use history",
+        "min_number_yrs_per_sim":"165",
+        "parent_activity_id":"",
+        "parent_experiment_id":"",
+        "required_model_components":[
+            "LND"
+        ],
+        "start_year":"1850 or 1700",
+        "sub_experiment":"none",
+        "sub_experiment_id":"none",
+        "tier":"2"
+    },
+    "land-hist-altLu2":{
+        "activity_id":"LUMIP",
+        "additional_allowed_model_components":"",
+        "description":"Land only simulations",
+        "end_year":"2014",
+        "experiment":"historical land-only alternate land use history",
+        "min_number_yrs_per_sim":"165",
+        "parent_activity_id":"",
+        "parent_experiment_id":"",
+        "required_model_components":[
+            "LND"
+        ],
+        "start_year":"1850 or 1700",
+        "sub_experiment":"none",
+        "sub_experiment_id":"none",
+        "tier":"2"
     },
     "land-hist-altStartYear":{
         "activity_id":[
@@ -3456,25 +3490,6 @@
         "sub_experiment_id":"none",
         "tier":"2"
     },
-    "land-netTrans":{
-        "activity_id":[
-            "LUMIP"
-        ],
-        "additional_allowed_model_components":"",
-        "description":"Same as land-hist except with net LUC transitions instead of gross LUC transitions. If gross transitions exceeding net transitions have been applied in 1850, they should be maintained",
-        "end_year":"2014",
-        "experiment":"historical land-only with net land-use transitions",
-        "min_number_yrs_per_sim":"165",
-        "parent_activity_id":"",
-        "parent_experiment_id":"",
-        "required_model_components":[
-            "LND"
-        ],
-        "start_year":"1850 or 1700",
-        "sub_experiment":"none",
-        "sub_experiment_id":"none",
-        "tier":"2"
-    },
     "land-noFire":{
         "activity_id":[
             "LUMIP"
@@ -3521,6 +3536,25 @@
         "description":"Same as land-hist but with grazing and other management on pastureland held at 1850 levels/distribution, i.e. all new pastureland is treated as unmanaged grassland (as in land-crop-grass)",
         "end_year":"2014",
         "experiment":"historical land-only with constant pastureland",
+        "min_number_yrs_per_sim":"165",
+        "parent_activity_id":"",
+        "parent_experiment_id":"",
+        "required_model_components":[
+            "LND"
+        ],
+        "start_year":"1850 or 1700",
+        "sub_experiment":"none",
+        "sub_experiment_id":"none",
+        "tier":"2"
+    },
+    "land-noShiftcultivate":{
+        "activity_id":[
+            "LUMIP"
+        ],
+        "additional_allowed_model_components":"",
+        "description":"Same as land-hist except with net LUC transitions instead of gross LUC transitions. If gross transitions exceeding net transitions have been applied in 1850, they should be maintained",
+        "end_year":"2014",
+        "experiment":"historical land-only with net land-use transitions",
         "min_number_yrs_per_sim":"165",
         "parent_activity_id":"",
         "parent_experiment_id":"",

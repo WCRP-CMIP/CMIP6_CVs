@@ -123,22 +123,24 @@ experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 
 # Fix issues
-print experiment_id['deforest-globe']['min_number_yrs_per_sim']
-experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
-print experiment_id['deforest-globe']['start_year']
-experiment_id['deforest-globe']['start_year'] = ''
-print experiment_id['land-cClim']['description']
-experiment_id['land-cClim']['description'] = 'Same as land-hist except with climate held constant'
-print experiment_id['land-crop-noIrrigFert']['description']
-experiment_id['land-crop-noIrrigFert']['description'] = 'Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant'
-print experiment_id['land-crop-noIrrigFert']['experiment']
-experiment_id['land-crop-noIrrigFert']['experiment'] = 'historical land-only with managed crops but with irrigation and fertilization held constant'
-print experiment_id['land-noShiftcultivate']['description']
-experiment_id['land-noShiftcultivate']['description'] = 'Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated'
-print experiment_id['land-noShiftcultivate']['experiment']
-experiment_id['land-noShiftcultivate']['experiment'] = 'historical land-only with shifting cultivation turned off'
+experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 
 #==============================================================================
+#print experiment_id['deforest-globe']['min_number_yrs_per_sim']
+#experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
+#print experiment_id['deforest-globe']['start_year']
+#experiment_id['deforest-globe']['start_year'] = ''
+#print experiment_id['land-cClim']['description']
+#experiment_id['land-cClim']['description'] = 'Same as land-hist except with climate held constant'
+#print experiment_id['land-crop-noIrrigFert']['description']
+#experiment_id['land-crop-noIrrigFert']['description'] = 'Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant'
+#print experiment_id['land-crop-noIrrigFert']['experiment']
+#experiment_id['land-crop-noIrrigFert']['experiment'] = 'historical land-only with managed crops but with irrigation and fertilization held constant'
+#print experiment_id['land-noShiftcultivate']['description']
+#experiment_id['land-noShiftcultivate']['description'] = 'Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated'
+#print experiment_id['land-noShiftcultivate']['experiment']
+#experiment_id['land-noShiftcultivate']['experiment'] = 'historical land-only with shifting cultivation turned off'
+
 #experiment_id['land-hist-altLu1'] = {}
 #experiment_id['land-hist-altLu1']['activity_id'] = 'LUMIP'
 #experiment_id['land-hist-altLu1']['additional_allowed_model_components'] = ''

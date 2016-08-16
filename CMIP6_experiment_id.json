@@ -3547,7 +3547,7 @@
         "sub_experiment_id":"none",
         "tier":"2"
     },
-    "land-noShiftcultivate":{
+    "land-noShiftCultivate":{
         "activity_id":[
             "LUMIP"
         ],

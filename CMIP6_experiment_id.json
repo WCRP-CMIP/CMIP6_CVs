@@ -1772,7 +1772,7 @@
         "description":"Idealized deforestation experiment, 20 million km2 forest removed linearly over a period of 50 years, with an additional 30 years with no specified change in forest cover; all other forcings held constant",
         "end_year":"1920",
         "experiment":"idealized transient global deforestation",
-        "min_number_yrs_per_sim":"71",
+        "min_number_yrs_per_sim":"81",
         "parent_activity_id":[
             "CMIP"
         ],
@@ -1782,7 +1782,7 @@
         "required_model_components":[
             "AOGCM"
         ],
-        "start_year":"1850",
+        "start_year":"",
         "sub_experiment":"none",
         "sub_experiment_id":"none",
         "tier":"1"
@@ -3251,7 +3251,7 @@
             "LUMIP"
         ],
         "additional_allowed_model_components":"",
-        "description":"Same as land-hist except with CO2 held constant",
+        "description":"Same as land-hist except with climate held constant",
         "end_year":"2014",
         "experiment":"historical land-only constant climate",
         "min_number_yrs_per_sim":"165",
@@ -3327,9 +3327,9 @@
             "LUMIP"
         ],
         "additional_allowed_model_components":"",
-        "description":"Same as land-hist except with crop area utilizing prognostic crop model",
+        "description":"Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant",
         "end_year":"2014",
-        "experiment":"historical land-only with crops but no crop management",
+        "experiment":"historical land-only with managed crops but with irrigation and fertilization held constant",
         "min_number_yrs_per_sim":"165",
         "parent_activity_id":"",
         "parent_experiment_id":"",
@@ -3552,9 +3552,9 @@
             "LUMIP"
         ],
         "additional_allowed_model_components":"",
-        "description":"Same as land-hist except with net LUC transitions instead of gross LUC transitions. If gross transitions exceeding net transitions have been applied in 1850, they should be maintained",
+        "description":"Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated",
         "end_year":"2014",
-        "experiment":"historical land-only with net land-use transitions",
+        "experiment":"historical land-only with shifting cultivation turned off",
         "min_number_yrs_per_sim":"165",
         "parent_activity_id":"",
         "parent_experiment_id":"",

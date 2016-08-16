@@ -32,6 +32,7 @@ PJD 11 Aug 2016    - Updated frequency to include 1hrClimMon https://github.com/
 PJD 11 Aug 2016    - Updated LUMIP experiment names https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
 PJD 15 Aug 2016    - Update experiment_id to be self-consistent (LUMIP renames complete)
 PJD 15 Aug 2016    - Converted readJsonCreateDict to source from durolib
+PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -122,6 +123,20 @@ experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 
 # Fix issues
+print experiment_id['deforest-globe']['min_number_yrs_per_sim']
+experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
+print experiment_id['deforest-globe']['start_year']
+experiment_id['deforest-globe']['start_year'] = ''
+print experiment_id['land-cClim']['description']
+experiment_id['land-cClim']['description'] = 'Same as land-hist except with climate held constant'
+print experiment_id['land-crop-noIrrigFert']['description']
+experiment_id['land-crop-noIrrigFert']['description'] = 'Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant'
+print experiment_id['land-crop-noIrrigFert']['experiment']
+experiment_id['land-crop-noIrrigFert']['experiment'] = 'historical land-only with managed crops but with irrigation and fertilization held constant'
+print experiment_id['land-noShiftcultivate']['description']
+experiment_id['land-noShiftcultivate']['description'] = 'Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated'
+print experiment_id['land-noShiftcultivate']['experiment']
+experiment_id['land-noShiftcultivate']['experiment'] = 'historical land-only with shifting cultivation turned off'
 
 #==============================================================================
 #experiment_id['land-hist-altLu1'] = {}
@@ -153,14 +168,14 @@ experiment_id = experiment_id.get('experiment_id')
 #experiment_id['land-hist-altLu2']['sub_experiment_id'] = 'none'
 #experiment_id['land-hist-altLu2']['tier'] = '2'
 
-# experiment_id['control-slab']['tier'] = '3'
-# experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
-# experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
-# experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
-# experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
-# experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
-# experiment_id['histSST-1950HC']['experiment'] = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
-# experiment_id['omip1'] = experiment.pop('omipv1')
+#experiment_id['control-slab']['tier'] = '3'
+#experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
+#experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
+#experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
+#experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
+#experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
+#experiment_id['histSST-1950HC']['experiment'] = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
+#experiment_id['omip1'] = experiment.pop('omipv1')
 #==============================================================================
 
 #%% Formula_terms

@@ -44,7 +44,6 @@ dictOrderK = [
 
 first_row = False
 for exp in dict.keys():
-#for exp in dictOrderK:
     exp_dict = dict[exp]
     if not first_row:
         #ids = exp_dict.keys()

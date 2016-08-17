@@ -14,7 +14,8 @@ else:
     fout = sys.argv[1][:-4] + "html"
 fo = open(fout, "w")
 
-print >> fo, """<html><head>
+print >> fo, """<html>
+<head>
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
@@ -23,7 +24,8 @@ $(document).ready( function () {
     $('#table_id').DataTable();
     } );
 </script>
-</head><body>
+</head>
+<body>
 <table id="table_id" class="display">"""
 
 first_row = False
@@ -47,5 +49,6 @@ for exp in dic.keys():
 print >>fo, "</table>"
 
 print >>fo, """
-</body></html>
+</body>
+</html>
 """

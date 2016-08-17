@@ -22,7 +22,7 @@ print >> fo, """<html><head>
 $(document).ready( function () {
     $('#table_id').DataTable();
     } );
-    </script>
+</script>
 </head><body>
 <table id="table_id" class="display">"""
 

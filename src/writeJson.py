@@ -33,6 +33,7 @@ PJD 11 Aug 2016    - Updated LUMIP experiment names https://github.com/WCRP-CMIP
 PJD 15 Aug 2016    - Update experiment_id to be self-consistent (LUMIP renames complete)
 PJD 15 Aug 2016    - Converted readJsonCreateDict to source from durolib
 PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
+PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/35
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -63,6 +64,7 @@ masterTargets = [
     'grid_label',
     'grid_resolution',
     'institution_id',
+    'license',
     'mip_era',
     'realm',
     'required_global_attributes',
@@ -123,9 +125,9 @@ experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 
 # Fix issues
-experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 
 #==============================================================================
+#experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 #print experiment_id['deforest-globe']['min_number_yrs_per_sim']
 #experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
 #print experiment_id['deforest-globe']['start_year']
@@ -293,6 +295,11 @@ institution_id = {
     'NOAA-NCEP': 'National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA'
 }
+
+#%% CMIP6 License
+license = [
+    'CMIP6 model data produced by <YourCentreName> is licensed under a Creative Commons Attribution "[*] Share Alike" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data should be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/citation.html. [Permissions beyond the scope of this license may be available at <some URL maintained by modeling group>.] Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in data files)[and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
+]
 
 #%% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']

@@ -36,6 +36,7 @@ PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://
 PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/35
 PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/34
 PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
+PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -429,17 +430,18 @@ version['creation_date'] = versionInfo[3].replace('date: ','')
 version['institution_id'] = 'PCMDI'
 version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
 version['note'] = versionInfo[1].replace('note: ','')
+del(versionInfo)
 
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['coordinate', 'experiment_id', 'grid', 'formula_terms'
+    if jsonName in ['coordinate', 'experiment_id', 'formula_terms', 'grid',
                     'variable']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
                 string = dictToClean[key][values[0]]
-                if not isinstance(string, list):
+                if isinstance(string, str):
                     string = string.strip()  # Remove trailing whitespace
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +
@@ -464,7 +466,7 @@ for jsonName in masterTargets:
     # Create host dictionary
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
-    jsonDict['version'] = eval(version)
+    jsonDict['version'] = version ; # Append repo version/metadata
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

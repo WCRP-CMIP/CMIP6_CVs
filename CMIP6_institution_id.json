@@ -22,10 +22,10 @@
     },
     "version":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "commit":"55f55ed34f3329e572faade29e7764b02b345514",
-        "creation_date":"Fri Aug 26 16:20:46 2016 -0700",
+        "commit":"eda5677d574488e135c999b2deb951978d18201d",
+        "creation_date":"Fri Aug 26 16:50:17 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None (non numeric: x.x.x)",
-        "note":"Fix #28 - Include version/status in json output"
+        "note":"Fix #28 - Exclude variable from clean loop"
     }
 }

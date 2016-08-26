@@ -38,6 +38,7 @@ PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WC
 PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
 PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
+                   - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
 
 @author: durack1
@@ -47,11 +48,11 @@ PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP
 import gc
 import json
 import os
-import pdb
 import ssl
 import urllib2
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
+#import pdb
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
@@ -422,6 +423,7 @@ tmp = [['variable','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master
       ] ;
 variable = readJsonCreateDict(tmp)
 variable = variable.get('variable')
+variable = variable.get('variable') ; # Fudge to extract duplicate level
 
 #%% Get repo metadata
 versionInfo = getGitInfo('./')
@@ -470,7 +472,9 @@ for jsonName in masterTargets:
     # Create host dictionary
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
-    jsonDict['version'] = version ; # Append repo version/metadata
+    # Exclude variable from versioning
+    if jsonName != 'variable':
+        jsonDict['version'] = version ; # Append repo version/metadata
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

@@ -47,6 +47,7 @@ PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP
 import gc
 import json
 import os
+import pdb
 import ssl
 import urllib2
 from durolib import readJsonCreateDict
@@ -127,6 +128,7 @@ tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/m
       ] ;
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
+experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 
@@ -435,22 +437,24 @@ del(versionInfo)
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['coordinate', 'experiment_id', 'formula_terms', 'grid',
-                    'variable']:
+    if jsonName in ['coordinate', 'experiment_id', 'formula_terms', 'grid']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
                 string = dictToClean[key][values[0]]
-                if isinstance(string, str):
+                #pdb.set_trace()
+                #if key == 'alt16':
+                #    print key,values,string,type(string)
+                if not isinstance(string, list):
                     string = string.strip()  # Remove trailing whitespace
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +
                     string = string.replace(' & ', ' and ')  # Replace +
-                    string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace(
                         'anthro ', 'anthropogenic ')  # Replace anthro
                     string = string.replace(
                         'piinatubo', 'pinatubo')  # Replace piinatubo
+                    string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean

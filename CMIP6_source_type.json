@@ -1,16 +1,18 @@
-[
-    "AER",
-    "AGCM",
-    "AOGCM",
-    "BGM",
-    "CHEM",
-    "EMIC",
-    "ESD",
-    "ESM",
-    "ISM",
-    "LAND",
-    "OGCM",
-    "RAD",
-    "RCM",
-    "SLAB"
-]
+{
+    "source_type":[
+        "AER",
+        "AGCM",
+        "AOGCM",
+        "BGM",
+        "CHEM",
+        "EMIC",
+        "ESD",
+        "ESM",
+        "ISM",
+        "LAND",
+        "OGCM",
+        "RAD",
+        "RCM",
+        "SLAB"
+    ]
+}

@@ -35,6 +35,7 @@ PJD 15 Aug 2016    - Converted readJsonCreateDict to source from durolib
 PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
 PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/35
 PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/34
+PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -449,9 +450,12 @@ for jsonName in masterTargets:
     if os.path.exists(outFile):
         print 'File existing, purging:', outFile
         os.remove(outFile)
+    # Create host dictionary
+    jsonDict = {}
+    jsonDict[jsonName] = eval(jsonName)
     fH = open(outFile, 'w')
     json.dump(
-        eval(jsonName),
+        jsonDict,
         fH,
         ensure_ascii=True,
         sort_keys=True,
@@ -462,7 +466,7 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
-del(jsonName, outFile)
+del(jsonName, jsonDict, outFile)
 gc.collect()
 
 # Validate - only necessary if files are not written by json module

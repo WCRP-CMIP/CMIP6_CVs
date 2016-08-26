@@ -1,20 +1,22 @@
-[
-    "AerChemMIP",
-    "C4MIP",
-    "CFMIP",
-    "DAMIP",
-    "DCPP",
-    "FAFMIP",
-    "GMMIP",
-    "GeoMIP",
-    "HighResMIP",
-    "ISMIP6",
-    "LS3MIP",
-    "LUMIP",
-    "MIP",
-    "OMIP",
-    "PMIP",
-    "RFMIP",
-    "ScenarioMIP",
-    "VolMIP"
-]
+{
+    "activity_id":[
+        "AerChemMIP",
+        "C4MIP",
+        "CFMIP",
+        "DAMIP",
+        "DCPP",
+        "FAFMIP",
+        "GMMIP",
+        "GeoMIP",
+        "HighResMIP",
+        "ISMIP6",
+        "LS3MIP",
+        "LUMIP",
+        "MIP",
+        "OMIP",
+        "PMIP",
+        "RFMIP",
+        "ScenarioMIP",
+        "VolMIP"
+    ]
+}

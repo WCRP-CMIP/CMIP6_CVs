@@ -1,17 +1,19 @@
 {
-    "ACCESS-1-0":{
-        "aerosol":"CLASSIC",
-        "atmosphere":"HadGAM2 (r1.1); 192 x 145 N96; 38 levels; top level 39255m",
-        "atmospheric_chemistry":"None",
-        "glacier":"None",
-        "institution_id":[
-            "CSIRO-BOM"
-        ],
-        "land_surface":"MOSES2.2",
-        "ocean":"ACCESS-OM (MOM4p1); tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m",
-        "ocean_biogeochemistry":"None",
-        "release_year":"2011",
-        "sea_ice":"CICE4.1",
-        "source":"ACCESS 1.0"
+    "source_id":{
+        "ACCESS-1-0":{
+            "aerosol":"CLASSIC",
+            "atmosphere":"HadGAM2 (r1.1); 192 x 145 N96; 38 levels; top level 39255m",
+            "atmospheric_chemistry":"None",
+            "glacier":"None",
+            "institution_id":[
+                "CSIRO-BOM"
+            ],
+            "land_surface":"MOSES2.2",
+            "ocean":"ACCESS-OM (MOM4p1); tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2011",
+            "sea_ice":"CICE4.1",
+            "source":"ACCESS 1.0"
+        }
     }
 }

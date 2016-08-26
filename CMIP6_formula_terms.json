@@ -1,25 +1,27 @@
 {
-    "a":{
-        "dimensions":"alevel",
-        "long_name":"vertical coordinate formula term: a(k)",
-        "type":"double",
-        "units":""
-    },
-    "ps":{
-        "cell_measures":"time: mean",
-        "cell_methods":"area: areacella",
-        "comment":"surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
-        "dimensions":"longitude latitude time",
-        "long_name":"Surface Air Pressure",
-        "modeling_realm":"atmos",
-        "ok_max_mean_abs":"1.019e+05",
-        "ok_min_mean_abs":"9.165e+04",
-        "out_name":"ps",
-        "positive":"",
-        "standard_name":"surface_air_pressure",
-        "type":"real",
-        "units":"Pa",
-        "valid_max":"1.119e+05",
-        "valid_min":"4.791e+04"
+    "formula_terms":{
+        "a":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: a(k)",
+            "type":"double",
+            "units":""
+        },
+        "ps":{
+            "cell_measures":"time: mean",
+            "cell_methods":"area: areacella",
+            "comment":"surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
+            "dimensions":"longitude latitude time",
+            "long_name":"Surface Air Pressure",
+            "modeling_realm":"atmos",
+            "ok_max_mean_abs":"1.019e+05",
+            "ok_min_mean_abs":"9.165e+04",
+            "out_name":"ps",
+            "positive":"",
+            "standard_name":"surface_air_pressure",
+            "type":"real",
+            "units":"Pa",
+            "valid_max":"1.119e+05",
+            "valid_min":"4.791e+04"
+        }
     }
 }

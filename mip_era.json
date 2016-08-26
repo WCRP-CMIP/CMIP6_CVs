@@ -1,7 +1,9 @@
-[
-    "CMIP1",
-    "CMIP2",
-    "CMIP3",
-    "CMIP5",
-    "CMIP6"
-]
+{
+    "mip_era":[
+        "CMIP1",
+        "CMIP2",
+        "CMIP3",
+        "CMIP5",
+        "CMIP6"
+    ]
+}

@@ -49,6 +49,7 @@ import os
 import ssl
 import urllib2
 from durolib import readJsonCreateDict
+from durolib import getGitInfo
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
@@ -419,6 +420,16 @@ tmp = [['variable','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master
 variable = readJsonCreateDict(tmp)
 variable = variable.get('variable')
 
+#%% Get repo metadata
+versionInfo = getGitInfo('./')
+version = {}
+version['author'] = versionInfo[4].replace('author: ','')
+version['commit'] = versionInfo[0].replace('commit: ','')
+version['creation_date'] = versionInfo[3].replace('date: ','')
+version['institution_id'] = 'PCMDI'
+version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+version['note'] = versionInfo[1].replace('note: ','')
+
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
@@ -453,6 +464,7 @@ for jsonName in masterTargets:
     # Create host dictionary
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
+    jsonDict['version'] = eval(version)
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

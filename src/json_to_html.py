@@ -1,5 +1,10 @@
 #!/bin/env python
 
+'''
+To run conversion:
+$ (uvcdat-nightly) bash-3.2$ python /sync/git/CMIP6_CVs/src/json_to_html.py /sync/git/CMIP6_CVs/CMIP6_experiment_id.json experiment_id experiment_id.html
+'''
+
 # This script takes the json file and turns it into a nice
 # jquery/data-tabled html doc
 import json
@@ -7,11 +12,13 @@ import sys
 
 f = open(sys.argv[1])
 dict = json.load(f)
+dict1 = dict.get(sys.argv[2]) ; # Fudge to extract duplicate level
+dict2 = dict.get('version')
+print dict2
 #print dict.keys()
-#print dict
 
 if len(sys.argv) > 2:
-    fout = sys.argv[2]
+    fout = sys.argv[3]
 else:
     fout = sys.argv[1][:-4] + "html"
     fout = fout.split('/')[-1] ; # Write to local directory
@@ -44,14 +51,15 @@ dictOrderK = [
 ]
 
 first_row = False
-for exp in dict.keys():
-    exp_dict = dict[exp]
+for exp in dict1.keys():
+    exp_dict = dict1[exp]
     if not first_row:
         #ids = exp_dict.keys()
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             print >> fo, "<%s><tr><th>experiment_id</th>" % hf
             for i in ids:
+                i = i.replace('_',' ') ; # Remove '_' from table titles
                 print >>fo, "<th>%s</th>" % i
             print >> fo, "</tr></%s>" % hf
     first_row = True

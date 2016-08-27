@@ -132,9 +132,9 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-
 #==============================================================================
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
+
 #print experiment_id['deforest-globe']['min_number_yrs_per_sim']
 #experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
 #print experiment_id['deforest-globe']['start_year']

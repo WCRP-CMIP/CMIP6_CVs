@@ -36,7 +36,9 @@ PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://
 PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/35
 PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/34
 PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
+PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
+                   - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
 
 @author: durack1
@@ -49,6 +51,8 @@ import os
 import ssl
 import urllib2
 from durolib import readJsonCreateDict
+from durolib import getGitInfo
+#import pdb
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
@@ -125,11 +129,12 @@ tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/m
       ] ;
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
+experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-
 #==============================================================================
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
+
 #print experiment_id['deforest-globe']['min_number_yrs_per_sim']
 #experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
 #print experiment_id['deforest-globe']['start_year']
@@ -418,26 +423,40 @@ tmp = [['variable','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master
       ] ;
 variable = readJsonCreateDict(tmp)
 variable = variable.get('variable')
+variable = variable.get('variable') ; # Fudge to extract duplicate level
+
+#%% Get repo metadata
+versionInfo = getGitInfo('./')
+version = {}
+version['author'] = versionInfo[4].replace('author: ','')
+version['commit'] = versionInfo[0].replace('commit: ','')
+version['creation_date'] = versionInfo[3].replace('date: ','')
+version['institution_id'] = 'PCMDI'
+version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+version['note'] = versionInfo[1].replace('note: ','')
+del(versionInfo)
 
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['coordinate', 'experiment_id', 'grid', 'formula_terms'
-                    'variable']:
+    if jsonName in ['coordinate', 'experiment_id', 'formula_terms', 'grid']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
                 string = dictToClean[key][values[0]]
+                #pdb.set_trace()
+                #if key == 'alt16':
+                #    print key,values,string,type(string)
                 if not isinstance(string, list):
                     string = string.strip()  # Remove trailing whitespace
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +
                     string = string.replace(' & ', ' and ')  # Replace +
-                    string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace(
                         'anthro ', 'anthropogenic ')  # Replace anthro
                     string = string.replace(
                         'piinatubo', 'pinatubo')  # Replace piinatubo
+                    string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
@@ -453,6 +472,9 @@ for jsonName in masterTargets:
     # Create host dictionary
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
+    # Exclude variable from versioning
+    if jsonName != 'variable':
+        jsonDict['version'] = version ; # Append repo version/metadata
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

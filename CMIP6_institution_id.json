@@ -19,5 +19,13 @@
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NOAA-NCEP":"National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA"
+    },
+    "version":{
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "commit":"91c2d9ffc8228e23a612991272ad156c1f05db45",
+        "creation_date":"Fri Aug 26 17:19:11 2016 -0700",
+        "institution_id":"PCMDI",
+        "latest_tag_point":"None (non numeric: x.x.x)",
+        "note":"#28 - Working to correct invalid merge"
     }
 }

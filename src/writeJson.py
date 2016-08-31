@@ -429,7 +429,9 @@ variable = variable.get('variable')
 variable = variable.get('variable') ; # Fudge to extract duplicate level
 
 #%% Get repo metadata
-versionInfo = getGitInfo('./')
+path = os.path.realpath(__file__)
+print path.replace('/src/writeJson.py','').replace('/export_temp','/export')
+versionInfo = getGitInfo(path.replace('/src/writeJson.py','').replace('/export_temp','/export'))
 version = {}
 version['author'] = versionInfo[4].replace('author: ','')
 version['commit'] = versionInfo[0].replace('commit: ','')

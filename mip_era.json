@@ -11,7 +11,7 @@
         "commit":"b51e2b5f517100000813522228ea6ba21adbd3d4",
         "creation_date":"Wed Aug 31 13:43:46 2016 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"None (non numeric: x.x.x)",
+        "latest_tag_point":"None",
         "note":"Add mip_era to source_id"
     }
 }

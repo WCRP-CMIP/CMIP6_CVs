@@ -37,6 +37,7 @@ PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues
 PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/34
 PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
 PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD 31 Aug 2016    - Added mip_era to source_id
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -368,6 +369,7 @@ source_id['ACCESS-1-0']['atmospheric_chemistry'] = 'None'
 source_id['ACCESS-1-0']['glacier'] = 'None'
 source_id['ACCESS-1-0']['institution_id'] = ['CSIRO-BOM']
 source_id['ACCESS-1-0']['land_surface'] = 'MOSES2.2'
+source_id['ACCESS-1-0']['mip_era'] = 'CMIP5'
 source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1); tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m'
 source_id['ACCESS-1-0']['ocean_biogeochemistry'] = 'None'
 source_id['ACCESS-1-0']['release_year'] = '2011' ; # When this model version was first used in a scientific application

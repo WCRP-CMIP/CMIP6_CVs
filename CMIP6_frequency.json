@@ -14,10 +14,10 @@
     ],
     "version":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "commit":"91c2d9ffc8228e23a612991272ad156c1f05db45",
-        "creation_date":"Fri Aug 26 17:19:11 2016 -0700",
+        "commit":"0fc2c2aaaf89294d801faa7417c1a0a534165b3c",
+        "creation_date":"Fri Aug 26 17:51:53 2016 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"None (non numeric: x.x.x)",
-        "note":"#28 - Working to correct invalid merge"
+        "latest_tag_point":"None",
+        "note":"Fix #25 - Remove _ characters from table headings - @taylor13"
     }
 }

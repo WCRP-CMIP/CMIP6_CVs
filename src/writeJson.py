@@ -38,6 +38,7 @@ PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WC
 PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
 PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 31 Aug 2016    - Added mip_era to source_id
+PJD 31 Aug 2016    - Correct repo user info
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing

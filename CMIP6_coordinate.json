@@ -2234,10 +2234,10 @@
     },
     "version":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "commit":"7d88f489f9a415dc2356e4f80bfc3c6dabf955aa",
-        "creation_date":"Wed Aug 31 15:21:24 2016 -0700",
+        "commit":"43c311fab67ef26acadbe81f22868691c1357f12",
+        "creation_date":"Wed Aug 31 16:36:15 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Correct repo user info"
+        "note":"Correct getGitInfo call"
     }
 }

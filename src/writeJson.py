@@ -39,6 +39,7 @@ PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/
 PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 31 Aug 2016    - Added mip_era to source_id
 PJD 31 Aug 2016    - Correct repo user info
+PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/45
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -78,8 +79,7 @@ masterTargets = [
     'required_global_attributes',
     'source_id',
     'source_type',
-    'table_id',
-    'variable'
+    'table_id'
 ]
 
 #%% Activities
@@ -421,13 +421,6 @@ table_id = [
     'fx'
 ]
 
-#%% Variable
-tmp = [['variable','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_variable.json']
-      ] ;
-variable = readJsonCreateDict(tmp)
-variable = variable.get('variable')
-variable = variable.get('variable') ; # Fudge to extract duplicate level
-
 #%% Get repo metadata
 path = os.path.realpath(__file__)
 print path.replace('/src/writeJson.py','').replace('/export_temp','/export')
@@ -477,9 +470,8 @@ for jsonName in masterTargets:
     # Create host dictionary
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
-    # Exclude variable from versioning
-    if jsonName != 'variable':
-        jsonDict['version'] = version ; # Append repo version/metadata
+    # Append repo version/metadata
+    jsonDict['version'] = version
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

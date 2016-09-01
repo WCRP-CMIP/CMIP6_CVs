@@ -40,6 +40,7 @@ PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP
 PJD 31 Aug 2016    - Added mip_era to source_id
 PJD 31 Aug 2016    - Correct repo user info
 PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/45
+PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -422,17 +423,18 @@ table_id = [
 ]
 
 #%% Get repo metadata
-path = os.path.realpath(__file__)
-print path.replace('/src/writeJson.py','').replace('/export_temp','/export')
-versionInfo = getGitInfo(path.replace('/src/writeJson.py','').replace('/export_temp','/export'))
-version = {}
-version['author'] = versionInfo[4].replace('author: ','')
-version['commit'] = versionInfo[0].replace('commit: ','')
-version['creation_date'] = versionInfo[3].replace('date: ','')
-version['institution_id'] = 'PCMDI'
-version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-version['note'] = versionInfo[1].replace('note: ','')
-del(versionInfo)
+def getFileHistory(filePath):
+    # Call getGitInfo
+    versionInfo = getGitInfo(filePath)
+    version = {}
+    version['author'] = versionInfo[4].replace('author: ','')
+    version['commit'] = versionInfo[0].replace('commit: ','')
+    version['creation_date'] = versionInfo[3].replace('date: ','')
+    version['institution_id'] = 'PCMDI'
+    version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+    version['note'] = versionInfo[1].replace('note: ','')
+
+    return version
 
 #%% Write variables to files
 for jsonName in masterTargets:
@@ -463,6 +465,10 @@ for jsonName in masterTargets:
         outFile = ''.join(['../', jsonName, '.json'])
     else:
         outFile = ''.join(['../CMIP6_', jsonName, '.json'])
+    # Get repo version/metadata
+    path = os.path.realpath(__file__)
+    outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
+    versionInfo = getFileHistory(outFileTest)
     # Check file exists
     if os.path.exists(outFile):
         print 'File existing, purging:', outFile
@@ -471,7 +477,7 @@ for jsonName in masterTargets:
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
     # Append repo version/metadata
-    jsonDict['version'] = version
+    jsonDict['version'] = versionInfo
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

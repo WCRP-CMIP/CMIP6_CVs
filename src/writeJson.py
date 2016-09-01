@@ -60,6 +60,21 @@ from durolib import readJsonCreateDict
 from durolib import getGitInfo
 #import pdb
 
+#%% Define functions
+# Get repo metadata
+def getFileHistory(filePath):
+    # Call getGitInfo
+    versionInfo = getGitInfo(filePath)
+    version = {}
+    version['author'] = versionInfo[4].replace('author: ','')
+    version['commit'] = versionInfo[0].replace('commit: ','')
+    version['creation_date'] = versionInfo[3].replace('date: ','')
+    version['institution_id'] = 'PCMDI'
+    version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+    version['note'] = versionInfo[1].replace('note: ','')
+
+    return version
+
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
 ctx.check_hostname  = False
@@ -423,20 +438,6 @@ table_id = [
     'cfSites',
     'fx'
 ]
-
-#%% Get repo metadata
-def getFileHistory(filePath):
-    # Call getGitInfo
-    versionInfo = getGitInfo(filePath)
-    version = {}
-    version['author'] = versionInfo[4].replace('author: ','')
-    version['commit'] = versionInfo[0].replace('commit: ','')
-    version['creation_date'] = versionInfo[3].replace('date: ','')
-    version['institution_id'] = 'PCMDI'
-    version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-    version['note'] = versionInfo[1].replace('note: ','')
-
-    return version
 
 #%% Write variables to files
 for jsonName in masterTargets:

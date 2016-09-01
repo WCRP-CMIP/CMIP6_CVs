@@ -41,6 +41,7 @@ PJD 31 Aug 2016    - Added mip_era to source_id
 PJD 31 Aug 2016    - Correct repo user info
 PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/45
 PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD  1 Sep 2016    - Automated update of html
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -53,6 +54,7 @@ import gc
 import json
 import os
 import ssl
+import subprocess
 import urllib2
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
@@ -495,3 +497,10 @@ del(jsonName, jsonDict, outFile)
 gc.collect()
 
 # Validate - only necessary if files are not written by json module
+
+# Generate html
+#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+p = subprocess.Popen(['./json_to_html.py','../CMIP6_experiment_id.json',
+                      'experiment_id','CMIP6_experiment_id.html'],
+                      stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                      cwd='./')

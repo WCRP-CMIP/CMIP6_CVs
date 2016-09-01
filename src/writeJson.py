@@ -436,18 +436,6 @@ def getFileHistory(filePath):
 
     return version
 
-#path = os.path.realpath(__file__)
-#print path.replace('/src/writeJson.py','').replace('/export_temp','/export')
-#versionInfo = getGitInfo(path.replace('/src/writeJson.py','').replace('/export_temp','/export'))
-#version = {}
-#version['author'] = versionInfo[4].replace('author: ','')
-#version['commit'] = versionInfo[0].replace('commit: ','')
-#version['creation_date'] = versionInfo[3].replace('date: ','')
-#version['institution_id'] = 'PCMDI'
-#version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-#version['note'] = versionInfo[1].replace('note: ','')
-#del(versionInfo)
-
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats

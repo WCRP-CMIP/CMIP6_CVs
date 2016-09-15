@@ -2,12 +2,12 @@
     "license":[
         "CMIP6 model data produced by <YourCentreName> is licensed under a Creative Commons Attribution \"[*] Share Alike\" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data should be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/citation.html. [Permissions beyond the scope of this license may be available at <some URL maintained by modeling group>.] Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in data files)[and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
-    "version":{
+    "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "commit":"003273faecf49e4124dac9655ca1b25f8a706e9b",
-        "creation_date":"Thu Sep 1 10:29:58 2016 -0700",
+        "creation_date":"Thu Sep 1 11:06:50 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Update versioning info"
+        "note":"#25 - Update html to force http",
+        "previous_commit":"87780a0ce2673566878f71a77516680909f5f523"
     }
 }

@@ -42,6 +42,7 @@ PJD 31 Aug 2016    - Correct repo user info
 PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/45
 PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD  1 Sep 2016    - Automated update of html
+PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -65,15 +66,15 @@ from durolib import getGitInfo
 def getFileHistory(filePath):
     # Call getGitInfo
     versionInfo = getGitInfo(filePath)
-    version = {}
-    version['author'] = versionInfo[4].replace('author: ','')
-    version['commit'] = versionInfo[0].replace('commit: ','')
-    version['creation_date'] = versionInfo[3].replace('date: ','')
-    version['institution_id'] = 'PCMDI'
-    version['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-    version['note'] = versionInfo[1].replace('note: ','')
+    version_metadata = {}
+    version_metadata['author'] = versionInfo[4].replace('author: ','')
+    version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
+    version_metadata['institution_id'] = 'PCMDI'
+    version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+    version_metadata['note'] = versionInfo[1].replace('note: ','')
+    version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
 
-    return version
+    return version_metadata
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()
@@ -480,7 +481,7 @@ for jsonName in masterTargets:
     jsonDict = {}
     jsonDict[jsonName] = eval(jsonName)
     # Append repo version/metadata
-    jsonDict['version'] = versionInfo
+    jsonDict['version_metadata'] = versionInfo
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

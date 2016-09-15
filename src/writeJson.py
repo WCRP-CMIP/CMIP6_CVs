@@ -43,6 +43,7 @@ PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCR
 PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD  1 Sep 2016    - Automated update of html
 PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/53
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -384,17 +385,16 @@ required_global_attributes = [
 source_id = {}
 source_id['ACCESS-1-0'] = {}
 source_id['ACCESS-1-0']['aerosol'] = 'CLASSIC'
-source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1); 192 x 145 N96; 38 levels; top level 39255m'
+source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)'
 source_id['ACCESS-1-0']['atmospheric_chemistry'] = 'None'
-source_id['ACCESS-1-0']['glacier'] = 'None'
 source_id['ACCESS-1-0']['institution_id'] = ['CSIRO-BOM']
+source_id['ACCESS-1-0']['label'] = 'ACCESS 1.0'
+source_id['ACCESS-1-0']['land_ice'] = 'None'
 source_id['ACCESS-1-0']['land_surface'] = 'MOSES2.2'
-source_id['ACCESS-1-0']['mip_era'] = 'CMIP5'
-source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1); tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m'
+source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1; tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m)'
 source_id['ACCESS-1-0']['ocean_biogeochemistry'] = 'None'
 source_id['ACCESS-1-0']['release_year'] = '2011' ; # When this model version was first used in a scientific application
 source_id['ACCESS-1-0']['sea_ice'] = 'CICE4.1'
-source_id['ACCESS-1-0']['source'] = 'ACCESS 1.0'
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

@@ -1,4 +1,4 @@
-To register (or edit) information about your model, please title your issue "source_id registration of <acronym for your model >" and  provide the following information:
+To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
 
@@ -13,7 +13,7 @@ Next you should provide further information about any named component models com
 "aerosol", "atmosphere", "atmospheric_chemistry", "land_ice", "land_surface", "ocean", "ocean_biogeochemistry", and "sea_ice".
 
 Example:
-[title your issue: "source_id registration of HadGAM2"]
+[title your issue: "source_id registration of ACCESS-1-0"]
 
     label = ACCESS 1.0
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")

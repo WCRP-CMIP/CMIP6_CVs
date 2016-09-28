@@ -1,6 +1,9 @@
 <Here you may register your institution, register your model, or raise other issues concerning CMIP6 controlled vocabularies.  Please follow the appropriate template below, and then delete any irrelevant text before submitting.>
 
+*********************************************
 ## Registering your institution
+*********************************************
+
 To register (or edit) information about your institution, please title your issue "institution_id registration of [acronym for your institution]" and  provide the following information:
 
 'institution_id'  -- a short acronym suitable for search interfaces and sub-directory names (should limit the characters used to the following set: a-z, A-Z, 0-9, and "-")
@@ -18,7 +21,11 @@ Example 2:
     institution_id = NASA-GISS
     institution = NASA Goddard Institute for Space Studies, New York, NY 10025, USA 
 
-##Registering your model
+
+*********************************************
+## Registering your model
+*********************************************
+
 To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
@@ -53,5 +60,9 @@ Example:
     
 The first 4 entries above are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
 
-##Raising other issues
+
+*********************************************
+## Raising other issues
+*********************************************
+
 Your issue "title" should begin with the name of the Controlled Vocabulary of interest and also include a terse indication of the issue (e.g., "activity_id -- add 'PMIP'"). 

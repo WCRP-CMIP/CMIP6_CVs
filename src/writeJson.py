@@ -44,6 +44,7 @@ PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.
 PJD  1 Sep 2016    - Automated update of html
 PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/53
+PJD 28 Sep 2016    - Correct activity_id to MIP -> CMIP typo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/57
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -55,6 +56,7 @@ PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs http
 import gc
 import json
 import os
+import shlex
 import ssl
 import subprocess
 import urllib2
@@ -107,6 +109,7 @@ activity_id = [
     'AerChemMIP',
     'C4MIP',
     'CFMIP',
+    'CMIP',
     'DAMIP',
     'DCPP',
     'FAFMIP',
@@ -116,7 +119,6 @@ activity_id = [
     'ISMIP6',
     'LS3MIP',
     'LUMIP',
-    'MIP',
     'OMIP',
     'PMIP',
     'RFMIP',
@@ -502,7 +504,5 @@ gc.collect()
 
 # Generate html
 #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-p = subprocess.Popen(['./json_to_html.py','../CMIP6_experiment_id.json',
-                      'experiment_id','CMIP6_experiment_id.html'],
-                      stdout=subprocess.PIPE,stderr=subprocess.PIPE,
-                      cwd='./')
+args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html stdout=subprocess.PIPE stderr=subprocess.PIPE cwd=\'./\'')
+p = subprocess.Popen(args)

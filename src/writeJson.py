@@ -45,6 +45,7 @@ PJD  1 Sep 2016    - Automated update of html
 PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/53
 PJD 28 Sep 2016    - Correct activity_id to MIP -> CMIP typo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/57
+PJD 28 Sep 2016    - Add new grid_label entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/49
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -276,17 +277,30 @@ gc.collect()
 
 #%% Grid labels
 grid_label = [
+    'gm',
     'gn',
+    'gnz',
     'gr',
     'gr1',
+    'gr1z',
     'gr2',
+    'gr2z',
     'gr3',
+    'gr3z',
     'gr4',
+    'gr4z',
     'gr5',
+    'gr5z',
     'gr6',
+    'gr6z',
     'gr7',
+    'gr7z',
     'gr8',
-    'gr9']
+    'gr8z',
+    'gr9',
+    'gr9z',
+    'grz'
+]
 
 #%% Grid resolutions
 grid_resolution = [

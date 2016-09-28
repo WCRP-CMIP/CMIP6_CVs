@@ -21,7 +21,6 @@ Example 2:
     institution_id = NASA-GISS
     institution = NASA Goddard Institute for Space Studies, New York, NY 10025, USA 
 
-
 *********************************************
 ## Registering your model
 *********************************************
@@ -45,7 +44,7 @@ Example:
 
     label = ACCESS 1.0
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
-    institution_id = UKMO
+    institution_id = CSIRO-BOM
     release_year = 2010
 
     full_coupled_model_id = “ACCESS 1.0 (r105557)
@@ -59,7 +58,6 @@ Example:
     sea_ice = CICE4.1 
     
 The first 4 entries above are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
-
 
 *********************************************
 ## Raising other issues

@@ -36,13 +36,11 @@ Although the additional information is not required, we encourage you to also pr
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]
 
-required information:
     label = ACCESS 1.0
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = UKMO
     release_year = 2010
 
-additional information (free text form)
     full_coupled_model_id = “ACCESS 1.0 (r105557)
     aerosol = unnamed
     atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)
@@ -52,6 +50,8 @@ additional information (free text form)
     ocean = ACCESS-OM (MOM4p1; tripolar primarily 1 deg latitude/longitude; 50 levels; top grid cell 0-10m)",
     ocean_biogeochemistry = None
     sea_ice = CICE4.1 
+    
+The first 4 entries above are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
 
 ##Raising other issues
-Your issue "title" should begin with the name of the Controlled Vocabulary of interest and also include a terse indication of the issue (e.g., "source_id -- remove reference to 'mip_era'"). 
+Your issue "title" should begin with the name of the Controlled Vocabulary of interest and also include a terse indication of the issue (e.g., "activity_id -- add 'PMIP'"). 

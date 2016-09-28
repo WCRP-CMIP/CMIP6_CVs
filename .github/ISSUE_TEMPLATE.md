@@ -47,13 +47,13 @@ Example:
     institution_id = CSIRO-BOM
     release_year = 2010
 
-    full_coupled_model_id = “ACCESS 1.0 (r105557)
+    full_coupled_model_id = ACCESS 1.0 (r105557)
     aerosol = unnamed
     atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)
     atmospheric_chemistry = None
     land_ice = None
     land_surface = MOSES2.2
-    ocean = ACCESS-OM (MOM4p1; tripolar primarily 1 deg latitude/longitude; 50 levels; top grid cell 0-10m)",
+    ocean = ACCESS-OM (MOM4p1; tripolar primarily 1 deg latitude/longitude; 50 levels; top grid cell 0-10m),
     ocean_biogeochemistry = None
     sea_ice = CICE4.1 
     

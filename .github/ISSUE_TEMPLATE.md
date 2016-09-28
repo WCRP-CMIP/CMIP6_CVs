@@ -29,18 +29,20 @@ To register (or edit) information about your model, please title your issue "sou
 
 'release_year' -- this should be the year your model was first used in a scientific study.  This year should reflect the "generation" of models rather than distinguishing between closely-related versions.
 
-Next you should provide further information about any named component models comprising your coupled model.  If a component is missing from your model, indicate this with "None".  If a component is included but unnamed in your model (i.e., without an identifying name), indicate this with "unnamed".  For a "named" component model specify first the name (presumably an acronym) then provide whatever additional information you think is appropriate, identifying the version and perhaps resolution of the component model (see examples below).  Here are the components that should be defined (and if necessary and appropriate, you may add others):
+Although the additional information is not required, we encourage you to also provide the identifying descriptions of the component models comprising your coupled model.  If a component is missing from your model, indicate this with "None".  If a component is included but unnamed in your model (i.e., without an identifying name), indicate this with "unnamed".  For a "named" component model specify first the name (presumably an acronym) then provide whatever additional information you think is appropriate, identifying the version and perhaps resolution of the component model (see examples below).  Here are the components that should be defined (and if necessary and appropriate, you may add others):
 
 "aerosol", "atmosphere", "atmospheric_chemistry", "land_ice", "land_surface", "ocean", "ocean_biogeochemistry", and "sea_ice".
 
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]
 
+required information:
     label = ACCESS 1.0
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = UKMO
     release_year = 2010
 
+additional information (free text form)
     full_coupled_model_id = “ACCESS 1.0 (r105557)
     aerosol = unnamed
     atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)

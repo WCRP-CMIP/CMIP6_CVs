@@ -11,10 +11,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 15 12:08:09 2016 -0700",
+        "creation_date":"Thu Sep 15 12:17:28 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #28 - Revise versioning information",
-        "previous_commit":"fa7f31bb3cbb0a12cdf840246738e82be76a3cf4"
+        "note":"Fix #53 - Update source_id template to maintain consistency with ES-DOC",
+        "previous_commit":"7eaa79b8c1dba543887be7136cee8c9a67b67934"
     }
 }

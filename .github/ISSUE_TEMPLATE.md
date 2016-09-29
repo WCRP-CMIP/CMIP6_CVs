@@ -3,7 +3,6 @@
 *********************************************
 ## Registering your institution
 *********************************************
-
 To register (or edit) information about your institution, please title your issue "institution_id registration of [acronym for your institution]" and  provide the following information:
 
 'institution_id'  -- a short acronym suitable for search interfaces and sub-directory names (should limit the characters used to the following set: a-z, A-Z, 0-9, and "-")
@@ -24,7 +23,6 @@ Example 2:
 *********************************************
 ## Registering your model
 *********************************************
-
 To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
@@ -62,5 +60,4 @@ The first 4 entries above are required; the additional entries are "free text". 
 *********************************************
 ## Raising other issues
 *********************************************
-
 Your issue "title" should begin with the name of the Controlled Vocabulary of interest and also include a terse indication of the issue (e.g., "activity_id -- add 'PMIP'"). 

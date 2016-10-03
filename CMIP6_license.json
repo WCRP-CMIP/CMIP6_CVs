@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Sep 28 16:33:20 2016 -0700",
+        "creation_date":"Mon Oct 3 15:50:32 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #57 - Correct activity_id typo MIP -> CMIP",
-        "previous_commit":"306372663e37094f1fdcad569d65201a8e4609c3"
+        "note":"Fix #64 - Add cohort list to source_id",
+        "previous_commit":"c3e4214cdeb5511516de2a490151626d380e1f85"
     }
 }

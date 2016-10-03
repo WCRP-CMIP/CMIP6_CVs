@@ -46,6 +46,7 @@ PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP
 PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/53
 PJD 28 Sep 2016    - Correct activity_id to MIP -> CMIP typo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/57
 PJD 28 Sep 2016    - Add new grid_label entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/49
+PJD  3 Oct 2016    - Added "cohort" to source_id ACCESS-1-0 example https://github.com/WCRP-CMIP/CMIP6_CVs/issues/64
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -403,6 +404,7 @@ source_id['ACCESS-1-0'] = {}
 source_id['ACCESS-1-0']['aerosol'] = 'CLASSIC'
 source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)'
 source_id['ACCESS-1-0']['atmospheric_chemistry'] = 'None'
+source_id['ACCESS-1-0']['cohort'] = ['CMIP5'] ; # Will be 'none' for all contributing CMIP6 models
 source_id['ACCESS-1-0']['institution_id'] = ['CSIRO-BOM']
 source_id['ACCESS-1-0']['label'] = 'ACCESS 1.0'
 source_id['ACCESS-1-0']['land_ice'] = 'None'

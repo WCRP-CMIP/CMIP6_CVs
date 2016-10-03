@@ -35,10 +35,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Sep 28 16:33:20 2016 -0700",
+        "creation_date":"Wed Sep 28 16:40:02 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #57 - Correct activity_id typo MIP -> CMIP",
-        "previous_commit":"306372663e37094f1fdcad569d65201a8e4609c3"
+        "note":"Fix #49 - Add new grid_label entries",
+        "previous_commit":"a5faca092bac9d69d7df0d3f944381090895ec95"
     }
 }

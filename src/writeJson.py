@@ -493,6 +493,8 @@ for jsonName in masterTargets:
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     versionInfo = getFileHistory(outFileTest)
+    # Test for update
+    
     # Check file exists
     if os.path.exists(outFile):
         print 'File existing, purging:', outFile

@@ -18,14 +18,15 @@
         "NCC":"UNI Bjerknes Centre for Climate Research, Norwegian Climate Centre, Bergen 5007, Norway",
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NOAA-NCEP":"National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA",
+        "NUIST":"Nanjing University of Information Science & Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Oct 3 15:50:32 2016 -0700",
+        "creation_date":"Mon Oct 3 15:52:49 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #64 - Add cohort list to source_id",
-        "previous_commit":"c3e4214cdeb5511516de2a490151626d380e1f85"
+        "note":"Revise ACCESS-1-0 from none to CMIP5",
+        "previous_commit":"cd843a1c81a82e549146353da848f8b6a72c3dc1"
     }
 }

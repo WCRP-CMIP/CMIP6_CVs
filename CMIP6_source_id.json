@@ -4,6 +4,9 @@
             "aerosol":"CLASSIC",
             "atmosphere":"HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)",
             "atmospheric_chemistry":"None",
+            "cohort":[
+                "CMIP5"
+            ],
             "institution_id":[
                 "CSIRO-BOM"
             ],

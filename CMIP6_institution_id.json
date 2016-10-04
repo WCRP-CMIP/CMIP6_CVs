@@ -24,10 +24,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Oct 4 11:53:29 2016 -0700",
+        "creation_date":"Tue Oct 4 12:26:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #69 - Update tier info for AerChemMIP experiments",
-        "previous_commit":"ce37dfe7eae23c8d142147387111ad739ce776e5"
+        "note":"Fix #68 - Add AerChemMIP experiments, piClim-SO2, piClim-OC, piClim-NH3",
+        "previous_commit":"4a74bdad7fb72791f68fccd83b0e9b991bdb0793"
     }
 }

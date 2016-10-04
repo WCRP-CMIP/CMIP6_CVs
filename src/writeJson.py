@@ -50,6 +50,7 @@ PJD  3 Oct 2016    - Added "cohort" to source_id ACCESS-1-0 example https://gith
 PJD  3 Oct 2016    - Added institution_id NUIST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/63
 PJD  4 Oct 2016    - Added institution_id NIMS-KMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/67
 PJD  4 Oct 2016    - Revised tiers for AerChemMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/69
+PJD  4 Oct 2016    - Added AerChemMIP experiments piClim-SO2 piClim-OC piClim-NH3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/68
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -161,13 +162,58 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['piClim-CH4']['tier'] = '1'
-experiment_id['piClim-HC']['tier'] = '1'
-experiment_id['ssp370SST-lowAer']['tier'] = '2'
-experiment_id['ssp370SST-lowBC']['tier'] = '2'
-experiment_id['ssp370SST-lowO3']['tier'] = '2'
+experiment_id['piClim-SO2'] = {}
+experiment_id['piClim-SO2']['activity_id'] = 'AerChemMIP'
+experiment_id['piClim-SO2']['additional_allowed_model_components'] = ['AGCM','CHEM']
+experiment_id['piClim-SO2']['description'] = 'Perturbation from 1850 control using 2014 SO2 emissions'
+experiment_id['piClim-SO2']['end_year'] = ''
+experiment_id['piClim-SO2']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions'
+experiment_id['piClim-SO2']['min_number_yrs_per_sim'] = '30'
+experiment_id['piClim-SO2']['parent_activity_id'] = ''
+experiment_id['piClim-SO2']['parent_experiment_id'] = ''
+experiment_id['piClim-SO2']['required_model_components'] = ['AGCM','AER']
+experiment_id['piClim-SO2']['start_year'] = ''
+experiment_id['piClim-SO2']['sub_experiment'] = 'none'
+experiment_id['piClim-SO2']['sub_experiment_id'] = 'none'
+experiment_id['piClim-SO2']['tier'] = '3'
+
+experiment_id['piClim-OC'] = {}
+experiment_id['piClim-OC']['activity_id'] = 'AerChemMIP'
+experiment_id['piClim-OC']['additional_allowed_model_components'] = ['AGCM','CHEM']
+experiment_id['piClim-OC']['description'] = 'Perturbation from 1850 control using 2014 OC emissions'
+experiment_id['piClim-OC']['end_year'] = ''
+experiment_id['piClim-OC']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions'
+experiment_id['piClim-OC']['min_number_yrs_per_sim'] = '30'
+experiment_id['piClim-OC']['parent_activity_id'] = ''
+experiment_id['piClim-OC']['parent_experiment_id'] = ''
+experiment_id['piClim-OC']['required_model_components'] = ['AGCM','AER']
+experiment_id['piClim-OC']['start_year'] = ''
+experiment_id['piClim-OC']['sub_experiment'] = 'none'
+experiment_id['piClim-OC']['sub_experiment_id'] = 'none'
+experiment_id['piClim-OC']['tier'] = '3'
+
+experiment_id['piClim-NH3'] = {}
+experiment_id['piClim-NH3']['activity_id'] = 'AerChemMIP'
+experiment_id['piClim-NH3']['additional_allowed_model_components'] = ['AGCM','CHEM']
+experiment_id['piClim-NH3']['description'] = 'Perturbation from 1850 control using 2014 NH3 emissions'
+experiment_id['piClim-NH3']['end_year'] = ''
+experiment_id['piClim-NH3']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions'
+experiment_id['piClim-NH3']['min_number_yrs_per_sim'] = '30'
+experiment_id['piClim-NH3']['parent_activity_id'] = ''
+experiment_id['piClim-NH3']['parent_experiment_id'] = ''
+experiment_id['piClim-NH3']['required_model_components'] = ['AGCM','AER']
+experiment_id['piClim-NH3']['start_year'] = ''
+experiment_id['piClim-NH3']['sub_experiment'] = 'none'
+experiment_id['piClim-NH3']['sub_experiment_id'] = 'none'
+experiment_id['piClim-NH3']['tier'] = '3'
 
 #==============================================================================
+#experiment_id['piClim-CH4']['tier'] = '1'
+#experiment_id['piClim-HC']['tier'] = '1'
+#experiment_id['ssp370SST-lowAer']['tier'] = '2'
+#experiment_id['ssp370SST-lowBC']['tier'] = '2'
+#experiment_id['ssp370SST-lowO3']['tier'] = '2'
+
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 
 #print experiment_id['deforest-globe']['min_number_yrs_per_sim']
@@ -503,7 +549,7 @@ for jsonName in masterTargets:
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     versionInfo = getFileHistory(outFileTest)
     # Test for update
-    
+
     # Check file exists
     if os.path.exists(outFile):
         print 'File existing, purging:', outFile

@@ -4055,7 +4055,7 @@
             "start_year":"",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
-            "tier":"2"
+            "tier":"1"
         },
         "piClim-GHG":{
             "activity_id":[
@@ -4098,7 +4098,7 @@
             "start_year":"",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
-            "tier":"2"
+            "tier":"1"
         },
         "piClim-N2O":{
             "activity_id":[
@@ -5039,7 +5039,7 @@
             "start_year":"2015",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
-            "tier":"1"
+            "tier":"2"
         },
         "ssp370SST-lowBC":{
             "activity_id":[
@@ -5061,7 +5061,7 @@
             "start_year":"2015",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
-            "tier":"1"
+            "tier":"2"
         },
         "ssp370SST-lowCH4":{
             "activity_id":[
@@ -5124,7 +5124,7 @@
             "start_year":"2015",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
-            "tier":"1"
+            "tier":"2"
         },
         "ssp370SST-ssp126Lu":{
             "activity_id":[
@@ -5662,10 +5662,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Oct 3 15:57:59 2016 -0700",
+        "creation_date":"Tue Oct 4 11:43:22 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #63 - Add institution_id NUIST",
-        "previous_commit":"643f792e3d38661b8aaf93b1ced3d52f3354ffae"
+        "note":"Fix #67 - NIMS-KMA added",
+        "previous_commit":"84bac4d85d713a417d8bd604761907ba8bd89011"
     }
 }

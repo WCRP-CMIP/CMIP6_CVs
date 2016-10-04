@@ -11,10 +11,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Oct 3 15:52:49 2016 -0700",
+        "creation_date":"Mon Oct 3 15:57:59 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise ACCESS-1-0 from none to CMIP5",
-        "previous_commit":"cd843a1c81a82e549146353da848f8b6a72c3dc1"
+        "note":"Fix #63 - Add institution_id NUIST",
+        "previous_commit":"643f792e3d38661b8aaf93b1ced3d52f3354ffae"
     }
 }

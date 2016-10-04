@@ -24,10 +24,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Oct 4 11:43:22 2016 -0700",
+        "creation_date":"Tue Oct 4 12:26:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #67 - NIMS-KMA added",
-        "previous_commit":"84bac4d85d713a417d8bd604761907ba8bd89011"
+        "note":"Fix #68 - Add AerChemMIP experiments, piClim-SO2, piClim-OC, piClim-NH3",
+        "previous_commit":"4a74bdad7fb72791f68fccd83b0e9b991bdb0793"
     }
 }

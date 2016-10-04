@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Oct 4 11:43:22 2016 -0700",
+        "creation_date":"Tue Oct 4 11:53:29 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #67 - NIMS-KMA added",
-        "previous_commit":"84bac4d85d713a417d8bd604761907ba8bd89011"
+        "note":"Fix #69 - Update tier info for AerChemMIP experiments",
+        "previous_commit":"ce37dfe7eae23c8d142147387111ad739ce776e5"
     }
 }

@@ -49,6 +49,7 @@ PJD 28 Sep 2016    - Add new grid_label entries https://github.com/WCRP-CMIP/CMI
 PJD  3 Oct 2016    - Added "cohort" to source_id ACCESS-1-0 example https://github.com/WCRP-CMIP/CMIP6_CVs/issues/64
 PJD  3 Oct 2016    - Added institution_id NUIST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/63
 PJD  4 Oct 2016    - Added institution_id NIMS-KMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/67
+PJD  4 Oct 2016    - Revised tiers for AerChemMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/69
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -160,6 +161,12 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+experiment_id['piClim-CH4']['tier'] = '1'
+experiment_id['piClim-HC']['tier'] = '1'
+experiment_id['ssp370SST-lowAer']['tier'] = '2'
+experiment_id['ssp370SST-lowBC']['tier'] = '2'
+experiment_id['ssp370SST-lowO3']['tier'] = '2'
+
 #==============================================================================
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 

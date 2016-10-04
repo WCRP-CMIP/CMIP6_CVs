@@ -16,6 +16,7 @@
         "NASA-GISS":"Goddard Institute for Space Studies, New York, NY 10025, USA",
         "NCAR":"National Center for Atmospheric Research, Boulder, CO 80307, USA",
         "NCC":"UNI Bjerknes Centre for Climate Research, Norwegian Climate Centre, Bergen 5007, Norway",
+        "NIMS-KMA":"National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea",
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NOAA-NCEP":"National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA",
         "NUIST":"Nanjing University of Information Science & Technology, Nanjing, 210044, China",
@@ -23,10 +24,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Oct 3 15:52:49 2016 -0700",
+        "creation_date":"Mon Oct 3 15:57:59 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise ACCESS-1-0 from none to CMIP5",
-        "previous_commit":"cd843a1c81a82e549146353da848f8b6a72c3dc1"
+        "note":"Fix #63 - Add institution_id NUIST",
+        "previous_commit":"643f792e3d38661b8aaf93b1ced3d52f3354ffae"
     }
 }

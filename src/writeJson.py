@@ -48,6 +48,7 @@ PJD 28 Sep 2016    - Correct activity_id to MIP -> CMIP typo https://github.com/
 PJD 28 Sep 2016    - Add new grid_label entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/49
 PJD  3 Oct 2016    - Added "cohort" to source_id ACCESS-1-0 example https://github.com/WCRP-CMIP/CMIP6_CVs/issues/64
 PJD  3 Oct 2016    - Added institution_id NUIST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/63
+PJD  4 Oct 2016    - Added institution_id NIMS-KMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/67
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -338,6 +339,7 @@ institution_id = {
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
     'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80307, USA',
     'NCC': 'UNI Bjerknes Centre for Climate Research, Norwegian Climate Centre, Bergen 5007, Norway',
+    'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NOAA-NCEP': 'National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA',
     'NUIST': 'Nanjing University of Information Science & Technology, Nanjing, 210044, China',
@@ -493,6 +495,8 @@ for jsonName in masterTargets:
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     versionInfo = getFileHistory(outFileTest)
+    # Test for update
+    
     # Check file exists
     if os.path.exists(outFile):
         print 'File existing, purging:', outFile

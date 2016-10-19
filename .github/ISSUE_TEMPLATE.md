@@ -45,7 +45,7 @@ Example:
     institution_id = CSIRO-BOM
     release_year = 2010
 
-    label_extended = ACCESS 1.0 (r105557) [You can use this identifier to extend upon the limited 16 characters for "label" to describe your model]
+    label_extended = ACCESS 1.0 (r105557) [Use this identifier to extend the 16 character limit for "label" to describe your model]
     aerosol = unnamed
     atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)
     atmospheric_chemistry = None

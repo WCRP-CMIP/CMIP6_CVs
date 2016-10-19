@@ -25,7 +25,7 @@ Example 2:
 *********************************************
 To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
 
-'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
+'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6). This label is limited to 16 characters in length.
 
 'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-").  The source_id will appear in the ESGF search interface and in filenames a subdirectory names.  Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-".
 
@@ -40,12 +40,12 @@ Although the additional information is not required, we encourage you to also pr
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]
 
-    label = ACCESS 1.0
+    label = ACCESS 1.0 (limited to 16 characters)
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = CSIRO-BOM
     release_year = 2010
 
-    full_coupled_model_id = ACCESS 1.0 (r105557)
+    label_extended = ACCESS 1.0 (r105557) [You can use this identifier to extend upon the limited 16 characters for "label" to describe your model]
     aerosol = unnamed
     atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)
     atmospheric_chemistry = None

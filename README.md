@@ -9,3 +9,5 @@ To register your institution or model or to request changes to a CV, please subm
 For prompt resolution in addition to creating an issue, submit a [pull request](https://github.com/WCRP-CMIP/CMIP6_CVs/pulls)/proposed issue solution for consideration by the repo admins.
 
 Some support for CMIP participating modeling groups is available: pcmdi-cmip@llnl.gov
+
+To view the current `experiment_id` entries point your browser to [CMIP6_experiment_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_experiment_id.html)

@@ -162,52 +162,53 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['piClim-SO2'] = {}
-experiment_id['piClim-SO2']['activity_id'] = 'AerChemMIP'
-experiment_id['piClim-SO2']['additional_allowed_model_components'] = ['AGCM','CHEM']
-experiment_id['piClim-SO2']['description'] = 'Perturbation from 1850 control using 2014 SO2 emissions'
-experiment_id['piClim-SO2']['end_year'] = ''
-experiment_id['piClim-SO2']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions'
-experiment_id['piClim-SO2']['min_number_yrs_per_sim'] = '30'
-experiment_id['piClim-SO2']['parent_activity_id'] = ''
-experiment_id['piClim-SO2']['parent_experiment_id'] = ''
-experiment_id['piClim-SO2']['required_model_components'] = ['AGCM','AER']
-experiment_id['piClim-SO2']['start_year'] = ''
-experiment_id['piClim-SO2']['sub_experiment'] = 'none'
-experiment_id['piClim-SO2']['sub_experiment_id'] = 'none'
-experiment_id['piClim-SO2']['tier'] = '3'
-
-experiment_id['piClim-OC'] = {}
-experiment_id['piClim-OC']['activity_id'] = 'AerChemMIP'
-experiment_id['piClim-OC']['additional_allowed_model_components'] = ['AGCM','CHEM']
-experiment_id['piClim-OC']['description'] = 'Perturbation from 1850 control using 2014 OC emissions'
-experiment_id['piClim-OC']['end_year'] = ''
-experiment_id['piClim-OC']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions'
-experiment_id['piClim-OC']['min_number_yrs_per_sim'] = '30'
-experiment_id['piClim-OC']['parent_activity_id'] = ''
-experiment_id['piClim-OC']['parent_experiment_id'] = ''
-experiment_id['piClim-OC']['required_model_components'] = ['AGCM','AER']
-experiment_id['piClim-OC']['start_year'] = ''
-experiment_id['piClim-OC']['sub_experiment'] = 'none'
-experiment_id['piClim-OC']['sub_experiment_id'] = 'none'
-experiment_id['piClim-OC']['tier'] = '3'
-
-experiment_id['piClim-NH3'] = {}
-experiment_id['piClim-NH3']['activity_id'] = 'AerChemMIP'
-experiment_id['piClim-NH3']['additional_allowed_model_components'] = ['AGCM','CHEM']
-experiment_id['piClim-NH3']['description'] = 'Perturbation from 1850 control using 2014 NH3 emissions'
-experiment_id['piClim-NH3']['end_year'] = ''
-experiment_id['piClim-NH3']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions'
-experiment_id['piClim-NH3']['min_number_yrs_per_sim'] = '30'
-experiment_id['piClim-NH3']['parent_activity_id'] = ''
-experiment_id['piClim-NH3']['parent_experiment_id'] = ''
-experiment_id['piClim-NH3']['required_model_components'] = ['AGCM','AER']
-experiment_id['piClim-NH3']['start_year'] = ''
-experiment_id['piClim-NH3']['sub_experiment'] = 'none'
-experiment_id['piClim-NH3']['sub_experiment_id'] = 'none'
-experiment_id['piClim-NH3']['tier'] = '3'
 
 #==============================================================================
+#experiment_id['piClim-SO2'] = {}
+#experiment_id['piClim-SO2']['activity_id'] = 'AerChemMIP'
+#experiment_id['piClim-SO2']['additional_allowed_model_components'] = ['AGCM','CHEM']
+#experiment_id['piClim-SO2']['description'] = 'Perturbation from 1850 control using 2014 SO2 emissions'
+#experiment_id['piClim-SO2']['end_year'] = ''
+#experiment_id['piClim-SO2']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions'
+#experiment_id['piClim-SO2']['min_number_yrs_per_sim'] = '30'
+#experiment_id['piClim-SO2']['parent_activity_id'] = ''
+#experiment_id['piClim-SO2']['parent_experiment_id'] = ''
+#experiment_id['piClim-SO2']['required_model_components'] = ['AGCM','AER']
+#experiment_id['piClim-SO2']['start_year'] = ''
+#experiment_id['piClim-SO2']['sub_experiment'] = 'none'
+#experiment_id['piClim-SO2']['sub_experiment_id'] = 'none'
+#experiment_id['piClim-SO2']['tier'] = '3'
+#
+#experiment_id['piClim-OC'] = {}
+#experiment_id['piClim-OC']['activity_id'] = 'AerChemMIP'
+#experiment_id['piClim-OC']['additional_allowed_model_components'] = ['AGCM','CHEM']
+#experiment_id['piClim-OC']['description'] = 'Perturbation from 1850 control using 2014 OC emissions'
+#experiment_id['piClim-OC']['end_year'] = ''
+#experiment_id['piClim-OC']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions'
+#experiment_id['piClim-OC']['min_number_yrs_per_sim'] = '30'
+#experiment_id['piClim-OC']['parent_activity_id'] = ''
+#experiment_id['piClim-OC']['parent_experiment_id'] = ''
+#experiment_id['piClim-OC']['required_model_components'] = ['AGCM','AER']
+#experiment_id['piClim-OC']['start_year'] = ''
+#experiment_id['piClim-OC']['sub_experiment'] = 'none'
+#experiment_id['piClim-OC']['sub_experiment_id'] = 'none'
+#experiment_id['piClim-OC']['tier'] = '3'
+#
+#experiment_id['piClim-NH3'] = {}
+#experiment_id['piClim-NH3']['activity_id'] = 'AerChemMIP'
+#experiment_id['piClim-NH3']['additional_allowed_model_components'] = ['AGCM','CHEM']
+#experiment_id['piClim-NH3']['description'] = 'Perturbation from 1850 control using 2014 NH3 emissions'
+#experiment_id['piClim-NH3']['end_year'] = ''
+#experiment_id['piClim-NH3']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions'
+#experiment_id['piClim-NH3']['min_number_yrs_per_sim'] = '30'
+#experiment_id['piClim-NH3']['parent_activity_id'] = ''
+#experiment_id['piClim-NH3']['parent_experiment_id'] = ''
+#experiment_id['piClim-NH3']['required_model_components'] = ['AGCM','AER']
+#experiment_id['piClim-NH3']['start_year'] = ''
+#experiment_id['piClim-NH3']['sub_experiment'] = 'none'
+#experiment_id['piClim-NH3']['sub_experiment_id'] = 'none'
+#experiment_id['piClim-NH3']['tier'] = '3'
+
 #experiment_id['piClim-CH4']['tier'] = '1'
 #experiment_id['piClim-HC']['tier'] = '1'
 #experiment_id['ssp370SST-lowAer']['tier'] = '2'

@@ -51,6 +51,7 @@ PJD  3 Oct 2016    - Added institution_id NUIST https://github.com/WCRP-CMIP/CMI
 PJD  4 Oct 2016    - Added institution_id NIMS-KMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/67
 PJD  4 Oct 2016    - Revised tiers for AerChemMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/69
 PJD  4 Oct 2016    - Added AerChemMIP experiments piClim-SO2 piClim-OC piClim-NH3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/68
+PJD  1 Nov 2016    - Update to upstream sources; Convert to per-file commits
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -69,6 +70,9 @@ import urllib2
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
 #import pdb
+
+#%% Set commit message
+commitMessage = '\"Convert to per-file commits\"'
 
 #%% Define functions
 # Get repo metadata
@@ -571,15 +575,14 @@ for jsonName in masterTargets:
     fH.close()
 
     # Convert to a per file commit
-    commit_message = '\"Convert to per-file commits\"'
-    args = shlex.split(''.join(['git commit -am ',commit_message]))
+    args = shlex.split(''.join(['git commit -am ',commitMessage]))
     p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
     # If experiment_id generate revised html
     if jsonName == 'experiment_id':
         #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-        args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html stdout=subprocess.PIPE stderr=subprocess.PIPE cwd=\'./\'')
-        p = subprocess.Popen(args)
+        args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html')
+        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 del(jsonName, jsonDict, outFile)
 gc.collect()

@@ -482,14 +482,11 @@ source_type = [
     'AOGCM',
     'BGCM',
     'CHEM',
-    'EMIC',
-    'ESD',
     'ESM',
     'ISM',
     'LAND',
     'OGCM',
     'RAD',
-    'RCM',
     'SLAB'
 ]
 

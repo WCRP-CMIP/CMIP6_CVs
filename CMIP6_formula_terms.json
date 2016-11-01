@@ -7,29 +7,29 @@
             "units":""
         },
         "ps":{
-            "cell_measures":"time: mean",
-            "cell_methods":"area: areacella",
+            "cell_measures":"area: areacella",
+            "cell_methods":"time: mean",
             "comment":"surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
             "dimensions":"longitude latitude time",
             "long_name":"Surface Air Pressure",
             "modeling_realm":"atmos",
-            "ok_max_mean_abs":"1.019e+05",
-            "ok_min_mean_abs":"9.165e+04",
+            "ok_max_mean_abs":"",
+            "ok_min_mean_abs":"",
             "out_name":"ps",
             "positive":"",
             "standard_name":"surface_air_pressure",
             "type":"real",
             "units":"Pa",
-            "valid_max":"1.119e+05",
-            "valid_min":"4.791e+04"
+            "valid_max":"",
+            "valid_min":""
         }
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Oct 4 12:26:34 2016 -0700",
+        "creation_date":"Tue Oct 4 12:31:11 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #68 - Add AerChemMIP experiments, piClim-SO2, piClim-OC, piClim-NH3",
-        "previous_commit":"4a74bdad7fb72791f68fccd83b0e9b991bdb0793"
+        "note":"Fix #68 - Update writeJson.py",
+        "previous_commit":"52af19b1860c940820cb377bfc06cd27bce03a7c"
     }
 }

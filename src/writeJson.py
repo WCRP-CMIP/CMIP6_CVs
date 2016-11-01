@@ -570,12 +570,18 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
+    # Convert to a per file commit
+    commit_message = '\"Convert to per-file commits\"'
+    args = shlex.split(''.join(['git commit -am ',commit_message]))
+    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+
+    # If experiment_id generate revised html
+    if jsonName == 'experiment_id':
+        #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+        args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html stdout=subprocess.PIPE stderr=subprocess.PIPE cwd=\'./\'')
+        p = subprocess.Popen(args)
+
 del(jsonName, jsonDict, outFile)
 gc.collect()
 
 # Validate - only necessary if files are not written by json module
-
-# Generate html
-#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html stdout=subprocess.PIPE stderr=subprocess.PIPE cwd=\'./\'')
-p = subprocess.Popen(args)

@@ -4124,6 +4124,7 @@
         "piClim-NH3":{
             "activity_id":"AerChemMIP",
             "additional_allowed_model_components":[
+                "AGCM",
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 NH3 emissions",
@@ -4207,6 +4208,7 @@
         "piClim-OC":{
             "activity_id":"AerChemMIP",
             "additional_allowed_model_components":[
+                "AGCM",
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 OC emissions",
@@ -4227,6 +4229,7 @@
         "piClim-SO2":{
             "activity_id":"AerChemMIP",
             "additional_allowed_model_components":[
+                "AGCM",
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 SO2 emissions",
@@ -5722,10 +5725,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Oct 4 12:26:34 2016 -0700",
+        "creation_date":"Tue Nov 1 16:13:30 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix #68 - Add AerChemMIP experiments, piClim-SO2, piClim-OC, piClim-NH3",
-        "previous_commit":"4a74bdad7fb72791f68fccd83b0e9b991bdb0793"
+        "note":"Update source_type following @taylor13",
+        "previous_commit":"90b06b5d6ad6c8a60858691f99adbe37d5e846f5"
     }
 }

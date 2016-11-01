@@ -5724,11 +5724,11 @@
         }
     },
     "version_metadata":{
-        "author":"taylor13 <taylor13@llnl.gov>",
-        "creation_date":"Tue Oct 4 17:41:50 2016 -0700",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Tue Nov 1 15:55:23 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"corrected a few entries for \"components\"",
-        "previous_commit":"b6bdf3348c7f0b040e3e8723901de0826ebeea75"
+        "note":"Update to latest downstream sources",
+        "previous_commit":"9a6f12b21ee850cecb874a53fe462c50c4a6fa33"
     }
 }

@@ -480,7 +480,7 @@ source_type = [
     'AER',
     'AGCM',
     'AOGCM',
-    'BGM',
+    'BGCM',
     'CHEM',
     'EMIC',
     'ESD',

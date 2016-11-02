@@ -2465,29 +2465,6 @@
             "sub_experiment_id":"none",
             "tier":"3"
         },
-        "hist-all-spAerO3":{
-            "activity_id":[
-                "RFMIP"
-            ],
-            "additional_allowed_model_components":"",
-            "description":"Prescribed anthropogenic aerosol optical properties. All forcings",
-            "end_year":"2014",
-            "experiment":"historical simulation with specified anthropogenic aerosols",
-            "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "CMIP"
-            ],
-            "parent_experiment_id":[
-                "piControl"
-            ],
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
-            "tier":"1"
-        },
         "hist-bgc":{
             "activity_id":[
                 "C4MIP"
@@ -2704,7 +2681,7 @@
             "sub_experiment_id":"none",
             "tier":"3"
         },
-        "hist-spAerO3":{
+        "hist-spAerO3-aer":{
             "activity_id":[
                 "RFMIP"
             ],
@@ -2726,6 +2703,29 @@
             "sub_experiment":"none",
             "sub_experiment_id":"none",
             "tier":"2"
+        },
+        "hist-spAerO3-all":{
+            "activity_id":[
+                "RFMIP"
+            ],
+            "additional_allowed_model_components":"",
+            "description":"Prescribed anthropogenic aerosol optical properties. All forcings",
+            "end_year":"2014",
+            "experiment":"historical simulation with specified anthropogenic aerosols",
+            "min_number_yrs_per_sim":"165",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "piControl"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1850",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"1"
         },
         "hist-stratO3":{
             "activity_id":[
@@ -5681,10 +5681,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:04:13 2016 -0700",
+        "creation_date":"Wed Nov 2 11:06:43 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Remove RFMIP experiments piClim-aerO3x0p1 and piClim-aerO3x2",
-        "previous_commit":"41d36745171bc59f3e31e62e6ada9807fdc83fd9"
+        "previous_commit":"0e6925de8f28105dd55f45e64759a66c3c3a8b60"
     }
 }

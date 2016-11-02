@@ -57,6 +57,7 @@ PJD  2 Nov 2016    - Add CSIR to institution_id https://github.com/WCRP-CMIP/CMI
 PJD  2 Nov 2016    - Update BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/98
 PJD  2 Nov 2016    - Add EC-Earth-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/90
 PJD  2 Nov 2016    - Update MIROC institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/89
+PJD  2 Nov 2016    - Add CCCR-IITM to institution_id and IITM-ESM to source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -77,7 +78,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update institution_id MIROC\"'
+commitMessage = '\"Add institution_id CCCR-IITM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -387,6 +388,7 @@ grid_resolution = [
 #%% Institutions
 institution_id = {
     'BNU': 'Beijing Normal University, Beijing 100875, China',
+    'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy',
     'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA',
@@ -468,38 +470,30 @@ required_global_attributes = [
 ]
 
 #%% Source identifiers
-source_id = {}
-source_id['ACCESS-1-0'] = {}
-source_id['ACCESS-1-0']['aerosol'] = 'CLASSIC'
-source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)'
-source_id['ACCESS-1-0']['atmospheric_chemistry'] = 'None'
-source_id['ACCESS-1-0']['cohort'] = ['CMIP5'] ; # Will be 'none' for all contributing CMIP6 models - this field is updated by the WIP
-source_id['ACCESS-1-0']['institution_id'] = ['CSIRO-BOM']
-source_id['ACCESS-1-0']['label'] = 'ACCESS 1.0'
-source_id['ACCESS-1-0']['label_extended'] = 'ACCESS 1.0 (This entry is free text for users to contribute verbose information)'
-source_id['ACCESS-1-0']['land_ice'] = 'None'
-source_id['ACCESS-1-0']['land_surface'] = 'MOSES2.2'
-source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1; tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m)'
-source_id['ACCESS-1-0']['ocean_biogeochemistry'] = 'None'
-source_id['ACCESS-1-0']['release_year'] = '2011' ; # When this model version was first used in a scientific application
-source_id['ACCESS-1-0']['sea_ice'] = 'CICE4.1'
-source_id['ACCESS-1-0']['source_id'] = 'ACCESS-1-0'
+tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_source_id.json']
+      ] ;
+source_id = readJsonCreateDict(tmp)
+source_id = source_id.get('source_id')
+source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
-source_id['PCMDI-test-1-0'] = {}
-source_id['PCMDI-test-1-0']['aerosol'] = 'None'
-source_id['PCMDI-test-1-0']['atmosphere'] = 'Earth1.0-gettingHotter'
-source_id['PCMDI-test-1-0']['atmospheric_chemistry'] = 'None'
-source_id['PCMDI-test-1-0']['cohort'] = ['CMIP6'] ; # Will be 'none' for all contributing CMIP6 models - this field is updated by the WIP
-source_id['PCMDI-test-1-0']['institution_id'] = ['PCMDI']
-source_id['PCMDI-test-1-0']['label'] = 'PCMDI-test 1.0'
-source_id['PCMDI-test-1-0']['label_extended'] = 'PCMDI-test 1.0 (This entry is free text for users to contribute verbose information)'
-source_id['PCMDI-test-1-0']['land_ice'] = 'None'
-source_id['PCMDI-test-1-0']['land_surface'] = 'Earth1.0'
-source_id['PCMDI-test-1-0']['ocean'] = 'BlueMarble1.0-warming'
-source_id['PCMDI-test-1-0']['ocean_biogeochemistry'] = 'None'
-source_id['PCMDI-test-1-0']['release_year'] = '1989' ; # When this model version was first used in a scientific application
-source_id['PCMDI-test-1-0']['sea_ice'] = 'Declining'
-source_id['PCMDI-test-1-0']['source_id'] = 'PCMDI-test-1-0'
+# Fix issues
+source_id['IITM-ESM'] = {}
+source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
+source_id['IITM-ESM']['atmosphere'] = 'GFS (192 x 94 T62; 64 levels; top level 0.2 mb)'
+source_id['IITM-ESM']['atmospheric_chemistry'] = ''
+source_id['IITM-ESM']['cohort'] = ['CMIP6']
+source_id['IITM-ESM']['institution_id'] = ['CCCR-IITM']
+source_id['IITM-ESM']['label'] = 'IITM-ESM'
+source_id['IITM-ESM']['label_extended'] = 'IITM-ESM'
+source_id['IITM-ESM']['land_ice'] = 'Noah LSM'
+source_id['IITM-ESM']['land_surface'] = 'Earth1.0'
+source_id['IITM-ESM']['ocean'] = 'MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)'
+source_id['IITM-ESM']['ocean_biogeochemistry'] = 'TOPAZ'
+source_id['IITM-ESM']['release_year'] = '2015'
+source_id['IITM-ESM']['sea_ice'] = 'SIS'
+source_id['IITM-ESM']['source_id'] = 'IITM-ESM'
+
+#==============================================================================
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

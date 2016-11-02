@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:13:33 2016 -0700",
+        "creation_date":"Wed Nov 2 11:18:59 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise RFMIP experiment_ids hist-all-spAerO3 and hist-spAerO3",
-        "previous_commit":"7ac69b560afa6413e75c91c7157bfcc5deaff71c"
+        "note":"Revise RFMIP experiment_id capitalization",
+        "previous_commit":"e654a8d0e436780d0551c3be52eeb4ce7dc9d5b0"
     }
 }

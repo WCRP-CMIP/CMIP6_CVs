@@ -35,10 +35,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:42:04 2016 -0700",
+        "creation_date":"Wed Nov 2 13:20:01 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise experiment_id ssp370 to include activity_id AerChemMIP",
-        "previous_commit":"e5b37376d32ce11b12318fb7dc8a6103b630e1f4"
+        "note":"Correct experiment_id instances of LND -> LAND",
+        "previous_commit":"2d2838b57b253ff674bb905035b48d9b333ad0c9"
     }
 }

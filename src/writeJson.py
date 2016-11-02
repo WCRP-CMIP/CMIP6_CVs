@@ -65,6 +65,7 @@ PJD  2 Nov 2016    - Revise RFMIP experiment_ids capitalization https://github.c
 PJD  2 Nov 2016    - Revise RFMIP experiment_ids spAerO3 -> spAer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/82
 PJD  2 Nov 2016    - Revise experiment_id ssp370 to include activity_id AerChemMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/77
 PJD  2 Nov 2016    - Revise experiment_id volc-cluster-mill https://github.com/WCRP-CMIP/CMIP6_CVs/issues/75
+PJD  2 Nov 2016    - Revise experiment_id instances of LND -> LAND https://github.com/WCRP-CMIP/CMIP6_CVs/issues/74
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -85,7 +86,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id volc-cluster-mill\"'
+commitMessage = '\"Correct experiment_id instances of LND -> LAND\"'
 
 #%% Define functions
 # Get repo metadata
@@ -482,6 +483,9 @@ for jsonName in masterTargets:
                         'piinatubo', 'pinatubo')  # Replace piinatubo
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
+                if isinstance(string, list):
+                    if string == ['LND']:
+                        string = ['LAND']  # Replace LND -> LAND
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

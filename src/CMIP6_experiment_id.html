@@ -431,21 +431,6 @@ $(document).ready( function () {
 <td></td>
 <td>Prescribed land conditions 1980-2014 climate; AMIP SSTs</td>
 </tr>
-<tr><td>piClim-spAerO3-aer</td>
-<td>RFMIP</td>
-<td>effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
-</tr>
 <tr><td>dcppC-amv-extrop-plus</td>
 <td>DCPP</td>
 <td>idealized positive extratropical AMV anomaly pattern</td>
@@ -866,20 +851,35 @@ $(document).ready( function () {
 <td></td>
 <td>Perturbation from 1850 control using 2014 aerosol emissions</td>
 </tr>
-<tr><td>piClim-spAerO3-anthro</td>
+<tr><td>volc-pinatubo-ini</td>
+<td>VolMIP</td>
+<td>Pinatubo experiment for decadal climate prediction</td>
+<td>3</td>
+<td>s2014</td>
+<td>initialized near end of year 2014</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGCM</td>
+<td>2015</td>
+<td>2019</td>
+<td>5</td>
+<td></td>
+<td>As volc-pinatubo-full, but as decadal prediction runs. Joint experiment with DCPP, forcing input and implementation of the forcing fully comply with the VolMIP protocol</td>
+</tr>
+<tr><td>piClim-ghg</td>
 <td>RFMIP</td>
-<td>effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings</td>
-<td>2</td>
+<td>effective radiative forcing by present-day greenhouse gases</td>
+<td>1</td>
 <td>none</td>
 <td>none</td>
 <td></td>
 <td>AGCM</td>
+<td>AER CHEM</td>
 <td></td>
 <td></td>
+<td>30</td>
 <td></td>
-<td></td>
-<td></td>
-<td>Prescribed anthropogenic aerosol optical properties. Anthropogenic forcings</td>
+<td>As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases</td>
 </tr>
 <tr><td>omip1-spunup</td>
 <td>OMIP</td>
@@ -1076,21 +1076,6 @@ $(document).ready( function () {
 <td></td>
 <td>As amip-p4K experiment, but with cloud-radiative effects switched off in the LW radiation code</td>
 </tr>
-<tr><td>volc-pinatubo-ini</td>
-<td>VolMIP</td>
-<td>Pinatubo experiment for decadal climate prediction</td>
-<td>3</td>
-<td>s2014</td>
-<td>initialized near end of year 2014</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGCM</td>
-<td>2015</td>
-<td>2019</td>
-<td>5</td>
-<td></td>
-<td>As volc-pinatubo-full, but as decadal prediction runs. Joint experiment with DCPP, forcing input and implementation of the forcing fully comply with the VolMIP protocol</td>
-</tr>
 <tr><td>abrupt-0p5xCO2</td>
 <td>CFMIP</td>
 <td>abrupt halving of CO2</td>
@@ -1150,21 +1135,6 @@ $(document).ready( function () {
 <td>171</td>
 <td>CMIP</td>
 <td>Historical CO2-only run</td>
-</tr>
-<tr><td>piClim-spAerO3-histall</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td></td>
-<td>1850</td>
-<td>2014</td>
-<td>165</td>
-<td></td>
-<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
 </tr>
 <tr><td>dcppC-amv-trop-plus</td>
 <td>DCPP</td>
@@ -1360,6 +1330,21 @@ $(document).ready( function () {
 <td>150</td>
 <td>CMIP</td>
 <td>DECK: 1pctCO2</td>
+</tr>
+<tr><td>piClim-spAer-aer</td>
+<td>RFMIP</td>
+<td>effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
 </tr>
 <tr><td>piClim-SO2</td>
 <td>AerChemMIP</td>
@@ -2246,6 +2231,21 @@ $(document).ready( function () {
 <td>DAMIP</td>
 <td>Extension of aerosol-only run under SSP2-4.5</td>
 </tr>
+<tr><td>piClim-spAer-histall</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
+</tr>
 <tr><td>abrupt-solm4p</td>
 <td>CFMIP</td>
 <td>abrupt 4% decrease in solar constant</td>
@@ -2291,20 +2291,20 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Ongoing decadal forecasts</td>
 </tr>
-<tr><td>histSST</td>
-<td>AerChemMIP</td>
-<td>historical prescribed SSTs and historical forcing</td>
-<td>1</td>
+<tr><td>hist-spAer-aer</td>
+<td>RFMIP</td>
+<td>historical simulation with specified anthropogenic aerosols, no other forcings</td>
+<td>2</td>
 <td>none</td>
 <td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
 <td></td>
-<td>AGCM AER</td>
-<td>CHEM</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
-<td></td>
-<td>Historical transient with SSTs prescribed from historical</td>
+<td>CMIP</td>
+<td>Prescribed anthropogenic aerosol optical properties. Changes in aerosols only</td>
 </tr>
 <tr><td>ssp245</td>
 <td>ScenarioMIP</td>
@@ -2321,20 +2321,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Future scenario with medium radiative forcing by the end of century. Following approximately RCP4.5 global forcing pathway but with new forcing based on SSP2. Concentration-driven</td>
 </tr>
-<tr><td>hist-spAerO3-all</td>
+<tr><td>piClim-spAer-anthro</td>
 <td>RFMIP</td>
-<td>historical simulation with specified anthropogenic aerosols</td>
-<td>1</td>
+<td>effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings</td>
+<td>2</td>
 <td>none</td>
 <td>none</td>
-<td>piControl</td>
-<td>AOGCM</td>
 <td></td>
-<td>1850</td>
-<td>2014</td>
-<td>165</td>
-<td>CMIP</td>
-<td>Prescribed anthropogenic aerosol optical properties. All forcings</td>
+<td>AGCM</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Prescribed anthropogenic aerosol optical properties. Anthropogenic forcings</td>
 </tr>
 <tr><td>dcppC-atl-pacemaker</td>
 <td>DCPP</td>
@@ -2396,20 +2396,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Future scenario with medium radiative forcing by the end of century. Following approximately RCP6.0 global forcing pathway but with new forcing based on SSP4. Concentration-driven</td>
 </tr>
-<tr><td>piClim-ghg</td>
-<td>RFMIP</td>
-<td>effective radiative forcing by present-day greenhouse gases</td>
+<tr><td>histSST</td>
+<td>AerChemMIP</td>
+<td>historical prescribed SSTs and historical forcing</td>
 <td>1</td>
 <td>none</td>
 <td>none</td>
 <td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
+<td>AGCM AER</td>
+<td>CHEM</td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
 <td></td>
-<td></td>
-<td>30</td>
-<td></td>
-<td>As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases</td>
+<td>Historical transient with SSTs prescribed from historical</td>
 </tr>
 <tr><td>land-crop-noIrrigFert</td>
 <td>LUMIP</td>
@@ -2530,6 +2530,21 @@ $(document).ready( function () {
 <td>100</td>
 <td></td>
 <td>main forcings : ice-sheet; trace gases, orbital parameters dust (forcing, or feedback if dust cycle represented in model)</td>
+</tr>
+<tr><td>hist-spAer-all</td>
+<td>RFMIP</td>
+<td>historical simulation with specified anthropogenic aerosols</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td>CMIP</td>
+<td>Prescribed anthropogenic aerosol optical properties. All forcings</td>
 </tr>
 <tr><td>esm-ssp585</td>
 <td>C4MIP</td>
@@ -2815,21 +2830,6 @@ $(document).ready( function () {
 <td>286</td>
 <td>ISMIP6</td>
 <td>Future climate ScenarioMIP SSP5-8.5 simulation using "offline" ice sheet models. Forcing for ice sheet model is from its own AOGCM</td>
-</tr>
-<tr><td>piClim-spAerO3-histaer</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td></td>
-<td>1850</td>
-<td>2014</td>
-<td>165</td>
-<td></td>
-<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
 </tr>
 <tr><td>aqua-control</td>
 <td>CFMIP</td>
@@ -3296,21 +3296,6 @@ $(document).ready( function () {
 <td></td>
 <td>As piSST, but with monthly-varying SSTs and sea-ice taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl</td>
 </tr>
-<tr><td>hist-spAerO3-aer</td>
-<td>RFMIP</td>
-<td>historical simulation with specified anthropogenic aerosols, no other forcings</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td>piControl</td>
-<td>AOGCM</td>
-<td></td>
-<td>1850</td>
-<td>2014</td>
-<td>165</td>
-<td>CMIP</td>
-<td>Prescribed anthropogenic aerosol optical properties. Changes in aerosols only</td>
-</tr>
 <tr><td>land-hist-cruNcep</td>
 <td>LS3MIP</td>
 <td>as land-hist with CRU-NCEP forcings</td>
@@ -3445,6 +3430,21 @@ $(document).ready( function () {
 <td>30</td>
 <td></td>
 <td>1850 control with doubled emissions of lightning NOx</td>
+</tr>
+<tr><td>piClim-spAer-histaer</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
 </tr>
 <tr><td>dcppC-ipv-plus</td>
 <td>DCPP</td>

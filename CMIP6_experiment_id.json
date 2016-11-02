@@ -4057,28 +4057,6 @@
             "sub_experiment_id":"none",
             "tier":"1"
         },
-        "piClim-GHG":{
-            "activity_id":[
-                "RFMIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM"
-            ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases",
-            "end_year":"",
-            "experiment":"effective radiative forcing by present-day greenhouse gases",
-            "min_number_yrs_per_sim":"30",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AGCM"
-            ],
-            "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
-            "tier":"1"
-        },
         "piClim-HC":{
             "activity_id":[
                 "AerChemMIP"
@@ -4357,7 +4335,51 @@
             "sub_experiment_id":"none",
             "tier":"1"
         },
-        "piClim-histAll":{
+        "piClim-ghg":{
+            "activity_id":[
+                "RFMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases",
+            "end_year":"",
+            "experiment":"effective radiative forcing by present-day greenhouse gases",
+            "min_number_yrs_per_sim":"30",
+            "parent_activity_id":"",
+            "parent_experiment_id":"",
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"1"
+        },
+        "piClim-histaer03":{
+            "activity_id":[
+                "RFMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation",
+            "end_year":"2100",
+            "experiment":"transient effective radiative forcing by aerosols",
+            "min_number_yrs_per_sim":"251",
+            "parent_activity_id":"",
+            "parent_experiment_id":"",
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"1850",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"2"
+        },
+        "piClim-histall":{
             "activity_id":[
                 "RFMIP"
             ],
@@ -4379,7 +4401,7 @@
             "sub_experiment_id":"none",
             "tier":"2"
         },
-        "piClim-histGHG":{
+        "piClim-histghg":{
             "activity_id":[
                 "RFMIP"
             ],
@@ -4401,7 +4423,7 @@
             "sub_experiment_id":"none",
             "tier":"2"
         },
-        "piClim-histNat":{
+        "piClim-histnat":{
             "activity_id":[
                 "RFMIP"
             ],
@@ -4412,28 +4434,6 @@
             "description":"Time-varying forcing from volcanos, solar variability, etc. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
             "experiment":"transient effective radiative forcing by natural perturbations",
-            "min_number_yrs_per_sim":"251",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AGCM"
-            ],
-            "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
-            "tier":"2"
-        },
-        "piClim-histaer03":{
-            "activity_id":[
-                "RFMIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM"
-            ],
-            "description":"Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation",
-            "end_year":"2100",
-            "experiment":"transient effective radiative forcing by aerosols",
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":"",
             "parent_experiment_id":"",
@@ -5681,10 +5681,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:06:43 2016 -0700",
+        "creation_date":"Wed Nov 2 11:13:33 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Remove RFMIP experiments piClim-aerO3x0p1 and piClim-aerO3x2",
-        "previous_commit":"0e6925de8f28105dd55f45e64759a66c3c3a8b60"
+        "note":"Revise RFMIP experiment_ids hist-all-spAerO3 and hist-spAerO3",
+        "previous_commit":"e52b061fbeb1b38b018ead1b0ab31e3e3c940b0d"
     }
 }

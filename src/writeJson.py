@@ -62,6 +62,7 @@ PJD  2 Nov 2016    - Update deforest-globe experiment_id https://github.com/WCRP
 PJD  2 Nov 2016    - Remove RFMIP experiment_ids piClim-aerO3x0p1 and piClim-aerO3x2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/79
 PJD  2 Nov 2016    - Revise RFMIP experiment_ids hist-all-spAerO3 and hist-spAerO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/80
 PJD  2 Nov 2016    - Revise RFMIP experiment_ids capitalization https://github.com/WCRP-CMIP/CMIP6_CVs/issues/81
+PJD  2 Nov 2016    - Revise RFMIP experiment_ids spAerO3 -> spAer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/82
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -82,7 +83,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise RFMIP experiment_id capitalization\"'
+commitMessage = '\"Revise RFMIP experiment_ids spAerO3 -> spAer\"'
 
 #%% Define functions
 # Get repo metadata
@@ -176,10 +177,12 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['piClim-ghg'] = experiment_id.pop('piClim-GHG')
-experiment_id['piClim-histall'] = experiment_id.pop('piClim-histAll')
-experiment_id['piClim-histnat'] = experiment_id.pop('piClim-histNat')
-experiment_id['piClim-histghg'] = experiment_id.pop('piClim-histGHG')
+experiment_id['piClim-spAer-histall'] = experiment_id.pop('piClim-spAerO3-histall')
+experiment_id['piClim-spAer-histaer'] = experiment_id.pop('piClim-spAerO3-histaer')
+experiment_id['piClim-spAer-anthro'] = experiment_id.pop('piClim-spAerO3-anthro')
+experiment_id['piClim-spAer-aer'] = experiment_id.pop('piClim-spAerO3-aer')
+experiment_id['hist-spAer-all'] = experiment_id.pop('hist-spAerO3-all')
+experiment_id['hist-spAer-aer'] = experiment_id.pop('hist-spAerO3-aer')
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['piClim-SO2'] = {}

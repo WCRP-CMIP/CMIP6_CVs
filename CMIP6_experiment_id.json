@@ -5448,10 +5448,10 @@
                 "CHEM",
                 "BGCM"
             ],
-            "description":"Early 19th century cluster of strong tropical volcanic eruptions, including the 1809 event of unknown location, the 1815 Tambora and 1835 Cosigueina eruptions. Experiment initialized from past1000 (all forcings except volcanic kept constant from year AD 1790 on)",
-            "end_year":"",
+            "description":"Parallel experiment to volc-cluster-ctrl but with initial conditions taken from last millennium simulation to account for the effects of a more realistic history of past natural forcing. All forcings except volcanic kept constant from year AD 1790 on",
+            "end_year":"1858",
             "experiment":"19th century volcanic cluster initialized from past1000",
-            "min_number_yrs_per_sim":"50",
+            "min_number_yrs_per_sim":"69",
             "parent_activity_id":[
                 "PMIP"
             ],
@@ -5461,7 +5461,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"1790",
             "sub_experiment":"none",
             "sub_experiment_id":"none",
             "tier":"3"
@@ -5682,10 +5682,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:28:31 2016 -0700",
+        "creation_date":"Wed Nov 2 11:42:04 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise RFMIP experiment_ids spAerO3 -> spAer",
-        "previous_commit":"b04611378bb1c49940891c6b28220a0723a2a5f4"
+        "note":"Revise experiment_id ssp370 to include activity_id AerChemMIP",
+        "previous_commit":"9fae91a8ec97d1d619f3f519e1abe32bf8331ce7"
     }
 }

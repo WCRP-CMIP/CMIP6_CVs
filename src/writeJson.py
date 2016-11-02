@@ -64,6 +64,7 @@ PJD  2 Nov 2016    - Revise RFMIP experiment_ids hist-all-spAerO3 and hist-spAer
 PJD  2 Nov 2016    - Revise RFMIP experiment_ids capitalization https://github.com/WCRP-CMIP/CMIP6_CVs/issues/81
 PJD  2 Nov 2016    - Revise RFMIP experiment_ids spAerO3 -> spAer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/82
 PJD  2 Nov 2016    - Revise experiment_id ssp370 to include activity_id AerChemMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/77
+PJD  2 Nov 2016    - Revise experiment_id volc-cluster-mill https://github.com/WCRP-CMIP/CMIP6_CVs/issues/75
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -84,7 +85,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id ssp370 to include activity_id AerChemMIP\"'
+commitMessage = '\"Revise experiment_id volc-cluster-mill\"'
 
 #%% Define functions
 # Get repo metadata
@@ -178,7 +179,10 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['ssp370']['activity_id'] = ['AerChemMIP','ScenarioMIP']
+experiment_id['volc-cluster-mill']['description'] = 'Parallel experiment to volc-cluster-ctrl but with initial conditions taken from last millennium simulation to account for the effects of a more realistic history of past natural forcing. All forcings except volcanic kept constant from year AD 1790 on'
+experiment_id['volc-cluster-mill']['start_year'] = '1790'
+experiment_id['volc-cluster-mill']['end_year'] = '1858'
+experiment_id['volc-cluster-mill']['min_number_yrs_per_sim'] = '69'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['piClim-SO2'] = {}

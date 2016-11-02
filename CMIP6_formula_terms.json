@@ -26,10 +26,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:28:31 2016 -0700",
+        "creation_date":"Wed Nov 2 11:42:04 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise RFMIP experiment_ids spAerO3 -> spAer",
-        "previous_commit":"1d07fc60e6bef70bab811ade8286e7aef18b2f2d"
+        "note":"Revise experiment_id ssp370 to include activity_id AerChemMIP",
+        "previous_commit":"85bb402b3bb246681c61173474cba419ac552017"
     }
 }

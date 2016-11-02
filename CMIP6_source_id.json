@@ -20,6 +20,26 @@
             "sea_ice":"CICE4.1",
             "source_id":"ACCESS-1-0"
         },
+        "IITM-ESM":{
+            "aerosol":"unnamed (prescribed MAC-v2)",
+            "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
+            "atmospheric_chemistry":"",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CCCR-IITM"
+            ],
+            "label":"IITM-ESM",
+            "label_extended":"IITM-ESM",
+            "land_ice":"Noah LSM",
+            "land_surface":"Earth1.0",
+            "ocean":"MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)",
+            "ocean_biogeochemistry":"TOPAZ",
+            "release_year":"2015",
+            "sea_ice":"SIS",
+            "source_id":"IITM-ESM"
+        },
         "PCMDI-test-1-0":{
             "aerosol":"None",
             "atmosphere":"Earth1.0-gettingHotter",
@@ -43,10 +63,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 07:36:06 2016 -0700",
+        "creation_date":"Wed Nov 2 10:00:10 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add institution_id EC-Earth-Consortium",
-        "previous_commit":"7a4cef53f30580fe60872efdb429a7ce4a2f1cf4"
+        "note":"Add institution_id CCCR-IITM",
+        "previous_commit":"f0fb3130f1ebe9ed96ab98c264ff6d2129303939"
     }
 }

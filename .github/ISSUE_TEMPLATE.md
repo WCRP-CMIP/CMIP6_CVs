@@ -40,20 +40,19 @@ Although the additional information is not required, we encourage you to also pr
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]
 
-    label = ACCESS 1.0 (limited to 16 characters)
-    source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
-    institution_id = CSIRO-BOM
-    release_year = 2010
-
-    label_extended = ACCESS 1.0 (r105557) [Use this identifier to extend the 16 character limit for "label" to describe your model]
-    aerosol = unnamed
-    atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)
+    aerosol = CLASSIC (v1.0)
+    atmosphere = HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)    
     atmospheric_chemistry = None
+    institution_id = CSIRO-BOM
+    label = ACCESS 1.0 (limited to 16 characters)
+    label_extended = ACCESS 1.0 (r105557) [Use this identifier to extend the 16 character limit for "label" to describe your model]
     land_ice = None
-    land_surface = MOSES2.2
-    ocean = ACCESS-OM (MOM4p1; tripolar primarily 1 deg latitude/longitude; 50 levels; top grid cell 0-10m),
+    land_surface = MOSES2.2    
+    ocean = ACCESS-OM (MOM4p1; tripolar primarily 1 deg latitude/longitude; 50 levels; top grid cell 0-10m)    
     ocean_biogeochemistry = None
-    sea_ice = CICE4.1 
+    release_year = 2011
+    sea_ice = CICE4.1
+    source_id = ACCESS-1-0
     
 The first 4 entries above are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
 

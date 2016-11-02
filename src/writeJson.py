@@ -481,10 +481,11 @@ for jsonName in masterTargets:
                         'anthro ', 'anthropogenic ')  # Replace anthro
                     string = string.replace(
                         'piinatubo', 'pinatubo')  # Replace piinatubo
-                    string = string.replace(
-                        'LND', 'LAND')  # Replace LND -> LAND
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
+                if isinstance(string, list):
+                    if string == 'LND':
+                        string = ['LAND']  # Replace LND -> LAND
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

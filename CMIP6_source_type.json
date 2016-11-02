@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 13:20:01 2016 -0700",
+        "creation_date":"Wed Nov 2 13:24:23 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Correct experiment_id instances of LND -> LAND",
-        "previous_commit":"72544bc9f7a14fc418bbcfa4e440f3f124713c1b"
+        "previous_commit":"9640d6fe1ce07405d74160501e34fe3ada79a783"
     }
 }

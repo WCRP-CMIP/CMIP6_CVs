@@ -311,6 +311,21 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
 </tr>
+<tr><td>piClim-histall</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td></td>
+<td>Time-varying forcing. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
+</tr>
 <tr><td>G1</td>
 <td>GeoMIP</td>
 <td>abrupt quadrupling of CO2 plus reduction in total solar irradiance</td>
@@ -490,6 +505,21 @@ $(document).ready( function () {
 <td>70</td>
 <td>CMIP</td>
 <td>1xCO2 experiment, parallel to piControl, with a flux of passive tracer added at the ocean surface at the same rate as the surface net heat flux anomaly applied in the FAFMIP heat experiment</td>
+</tr>
+<tr><td>piClim-histghg</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing by greenhouse gases</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td></td>
+<td>Time-varying forcing by GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
 </tr>
 <tr><td>hist-1950</td>
 <td>HighResMIP</td>
@@ -971,20 +1001,20 @@ $(document).ready( function () {
 <td></td>
 <td>Offline ice sheet evolution for the last few decades forced by amip</td>
 </tr>
-<tr><td>ssp585-withism</td>
-<td>ISMIP6</td>
-<td>ssp585 with interactive ice sheet</td>
+<tr><td>piClim-histnat</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing by natural perturbations</td>
 <td>2</td>
 <td>none</td>
 <td>none</td>
-<td>historical-withism</td>
-<td>AOGCM ISM</td>
-<td>AER CHEM BGCM</td>
-<td>2015</td>
-<td>2300</td>
-<td>286</td>
-<td>ISMIP6</td>
-<td>Future climate from ScenarioMIP SSP5-8.5 simulation that includes interactive ice sheets. Set up follows the standard SSP5-8.5 experiment</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td></td>
+<td>Time-varying forcing from volcanos, solar variability, etc. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
 </tr>
 <tr><td>volc-long-eq</td>
 <td>VolMIP</td>
@@ -1330,21 +1360,6 @@ $(document).ready( function () {
 <td>150</td>
 <td>CMIP</td>
 <td>DECK: 1pctCO2</td>
-</tr>
-<tr><td>piClim-histNat</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing by natural perturbations</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td>1850</td>
-<td>2100</td>
-<td>251</td>
-<td></td>
-<td>Time-varying forcing from volcanos, solar variability, etc. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
 </tr>
 <tr><td>piClim-SO2</td>
 <td>AerChemMIP</td>
@@ -1916,21 +1931,6 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Additional land use policy sensitivity simulation for high radiative forcing scenario, keep all forcings the same as ScenarioMIP SSP3-7 (deforestation scenario), but replace land use from SSP1-2.6 (afforestation) scenario; concentration-driven</td>
 </tr>
-<tr><td>piClim-histAll</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td>1850</td>
-<td>2100</td>
-<td>251</td>
-<td></td>
-<td>Time-varying forcing. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
-</tr>
 <tr><td>dcppC-hindcast-noAgung</td>
 <td>DCPP</td>
 <td></td>
@@ -2396,6 +2396,21 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Future scenario with medium radiative forcing by the end of century. Following approximately RCP6.0 global forcing pathway but with new forcing based on SSP4. Concentration-driven</td>
 </tr>
+<tr><td>piClim-ghg</td>
+<td>RFMIP</td>
+<td>effective radiative forcing by present-day greenhouse gases</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases</td>
+</tr>
 <tr><td>land-crop-noIrrigFert</td>
 <td>LUMIP</td>
 <td>historical land-only with managed crops but with irrigation and fertilization held constant</td>
@@ -2590,21 +2605,6 @@ $(document).ready( function () {
 <td>41</td>
 <td></td>
 <td>Future SSP3-7.0 with reduced NTCF emissions, prescribed SSTs</td>
-</tr>
-<tr><td>piClim-GHG</td>
-<td>RFMIP</td>
-<td>effective radiative forcing by present-day greenhouse gases</td>
-<td>1</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td></td>
-<td></td>
-<td>30</td>
-<td></td>
-<td>As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases</td>
 </tr>
 <tr><td>historical-withism</td>
 <td>ISMIP6</td>
@@ -2996,6 +2996,21 @@ $(document).ready( function () {
 <td></td>
 <td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
+<tr><td>ssp585-withism</td>
+<td>ISMIP6</td>
+<td>ssp585 with interactive ice sheet</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td>historical-withism</td>
+<td>AOGCM ISM</td>
+<td>AER CHEM BGCM</td>
+<td>2015</td>
+<td>2300</td>
+<td>286</td>
+<td>ISMIP6</td>
+<td>Future climate from ScenarioMIP SSP5-8.5 simulation that includes interactive ice sheets. Set up follows the standard SSP5-8.5 experiment</td>
+</tr>
 <tr><td>highresSST-p4K</td>
 <td>HighResMIP</td>
 <td>uniform 4K warming of highresSST-present SST</td>
@@ -3100,21 +3115,6 @@ $(document).ready( function () {
 <td>66</td>
 <td></td>
 <td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
-</tr>
-<tr><td>piClim-histGHG</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing by greenhouse gases</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td>1850</td>
-<td>2100</td>
-<td>251</td>
-<td></td>
-<td>Time-varying forcing by GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
 </tr>
 <tr><td>highresSST-present</td>
 <td>HighResMIP</td>

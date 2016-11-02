@@ -58,6 +58,7 @@ PJD  2 Nov 2016    - Update BNU institution_id https://github.com/WCRP-CMIP/CMIP
 PJD  2 Nov 2016    - Add EC-Earth-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/90
 PJD  2 Nov 2016    - Update MIROC institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/89
 PJD  2 Nov 2016    - Add CCCR-IITM to institution_id and IITM-ESM to source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
+PJD  2 Nov 2016    - Update deforest-globe experiment_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/97
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -172,8 +173,10 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-
+experiment_id['deforest-globe']['start_year'] = '1850'
+experiment_id['deforest-globe']['end_year'] = ''
 #==============================================================================
+# Example new experiment_id entry
 #experiment_id['piClim-SO2'] = {}
 #experiment_id['piClim-SO2']['activity_id'] = 'AerChemMIP'
 #experiment_id['piClim-SO2']['additional_allowed_model_components'] = ['AGCM','CHEM']
@@ -188,97 +191,10 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 #experiment_id['piClim-SO2']['sub_experiment'] = 'none'
 #experiment_id['piClim-SO2']['sub_experiment_id'] = 'none'
 #experiment_id['piClim-SO2']['tier'] = '3'
-#
-#experiment_id['piClim-OC'] = {}
-#experiment_id['piClim-OC']['activity_id'] = 'AerChemMIP'
-#experiment_id['piClim-OC']['additional_allowed_model_components'] = ['AGCM','CHEM']
-#experiment_id['piClim-OC']['description'] = 'Perturbation from 1850 control using 2014 OC emissions'
-#experiment_id['piClim-OC']['end_year'] = ''
-#experiment_id['piClim-OC']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions'
-#experiment_id['piClim-OC']['min_number_yrs_per_sim'] = '30'
-#experiment_id['piClim-OC']['parent_activity_id'] = ''
-#experiment_id['piClim-OC']['parent_experiment_id'] = ''
-#experiment_id['piClim-OC']['required_model_components'] = ['AGCM','AER']
-#experiment_id['piClim-OC']['start_year'] = ''
-#experiment_id['piClim-OC']['sub_experiment'] = 'none'
-#experiment_id['piClim-OC']['sub_experiment_id'] = 'none'
-#experiment_id['piClim-OC']['tier'] = '3'
-#
-#experiment_id['piClim-NH3'] = {}
-#experiment_id['piClim-NH3']['activity_id'] = 'AerChemMIP'
-#experiment_id['piClim-NH3']['additional_allowed_model_components'] = ['AGCM','CHEM']
-#experiment_id['piClim-NH3']['description'] = 'Perturbation from 1850 control using 2014 NH3 emissions'
-#experiment_id['piClim-NH3']['end_year'] = ''
-#experiment_id['piClim-NH3']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions'
-#experiment_id['piClim-NH3']['min_number_yrs_per_sim'] = '30'
-#experiment_id['piClim-NH3']['parent_activity_id'] = ''
-#experiment_id['piClim-NH3']['parent_experiment_id'] = ''
-#experiment_id['piClim-NH3']['required_model_components'] = ['AGCM','AER']
-#experiment_id['piClim-NH3']['start_year'] = ''
-#experiment_id['piClim-NH3']['sub_experiment'] = 'none'
-#experiment_id['piClim-NH3']['sub_experiment_id'] = 'none'
-#experiment_id['piClim-NH3']['tier'] = '3'
-
-#experiment_id['piClim-CH4']['tier'] = '1'
-#experiment_id['piClim-HC']['tier'] = '1'
-#experiment_id['ssp370SST-lowAer']['tier'] = '2'
-#experiment_id['ssp370SST-lowBC']['tier'] = '2'
-#experiment_id['ssp370SST-lowO3']['tier'] = '2'
-
+# Rename
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
-
-#print experiment_id['deforest-globe']['min_number_yrs_per_sim']
-#experiment_id['deforest-globe']['min_number_yrs_per_sim'] = '81'
-#print experiment_id['deforest-globe']['start_year']
-#experiment_id['deforest-globe']['start_year'] = ''
-#print experiment_id['land-cClim']['description']
-#experiment_id['land-cClim']['description'] = 'Same as land-hist except with climate held constant'
-#print experiment_id['land-crop-noIrrigFert']['description']
-#experiment_id['land-crop-noIrrigFert']['description'] = 'Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant'
-#print experiment_id['land-crop-noIrrigFert']['experiment']
-#experiment_id['land-crop-noIrrigFert']['experiment'] = 'historical land-only with managed crops but with irrigation and fertilization held constant'
-#print experiment_id['land-noShiftcultivate']['description']
-#experiment_id['land-noShiftcultivate']['description'] = 'Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated'
-#print experiment_id['land-noShiftcultivate']['experiment']
-#experiment_id['land-noShiftcultivate']['experiment'] = 'historical land-only with shifting cultivation turned off'
-
-#experiment_id['land-hist-altLu1'] = {}
-#experiment_id['land-hist-altLu1']['activity_id'] = 'LUMIP'
-#experiment_id['land-hist-altLu1']['additional_allowed_model_components'] = ''
-#experiment_id['land-hist-altLu1']['description'] = 'Land only simulations'
-#experiment_id['land-hist-altLu1']['end_year'] = '2014'
-#experiment_id['land-hist-altLu1']['experiment'] = 'historical land-only alternate land-use history'
-#experiment_id['land-hist-altLu1']['min_number_yrs_per_sim'] = '165'
-#experiment_id['land-hist-altLu1']['parent_activity_id'] = ''
-#experiment_id['land-hist-altLu1']['parent_experiment_id'] = ''
-#experiment_id['land-hist-altLu1']['required_model_components'] = ['LND']
-#experiment_id['land-hist-altLu1']['start_year'] = '1850 or 1700'
-#experiment_id['land-hist-altLu1']['sub_experiment'] = 'none'
-#experiment_id['land-hist-altLu1']['sub_experiment_id'] = 'none'
-#experiment_id['land-hist-altLu1']['tier'] = '2'
-#experiment_id['land-hist-altLu2'] = {}
-#experiment_id['land-hist-altLu2']['activity_id'] = 'LUMIP'
-#experiment_id['land-hist-altLu2']['additional_allowed_model_components'] = ''
-#experiment_id['land-hist-altLu2']['description'] = 'Land only simulations'
-#experiment_id['land-hist-altLu2']['end_year'] = '2014'
-#experiment_id['land-hist-altLu2']['experiment'] = 'historical land-only alternate land use history'
-#experiment_id['land-hist-altLu2']['min_number_yrs_per_sim'] = '165'
-#experiment_id['land-hist-altLu2']['parent_activity_id'] = ''
-#experiment_id['land-hist-altLu2']['parent_experiment_id'] = ''
-#experiment_id['land-hist-altLu2']['required_model_components'] = ['LND']
-#experiment_id['land-hist-altLu2']['start_year'] = '1850 or 1700'
-#experiment_id['land-hist-altLu2']['sub_experiment'] = 'none'
-#experiment_id['land-hist-altLu2']['sub_experiment_id'] = 'none'
-#experiment_id['land-hist-altLu2']['tier'] = '2'
-
-#experiment_id['control-slab']['tier'] = '3'
-#experiment_id['volc-long-hlS']['description'] = 'Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl'
-#experiment_id['volc-pinatubo-full']['description'] = '1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability'
-#experiment_id['volc-pinatubo-ini']['start_year'] = '2015'
-#experiment_id['volc-pinatubo-strat']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates'
-#experiment_id['volc-pinatubo-surf']['description'] = 'As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols'
-#experiment_id['histSST-1950HC']['experiment'] = 'historical SSTs and historical forcing, but with 1950 halocarbon concentrations'
-#experiment_id['omip1'] = experiment.pop('omipv1')
+# Remove
+#experiment_id.pop('land-noShiftcultivate')
 #==============================================================================
 
 #%% Formula_terms

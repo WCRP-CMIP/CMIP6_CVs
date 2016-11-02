@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 10:57:59 2016 -0700",
+        "creation_date":"Wed Nov 2 11:04:14 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add institution_id CCCR-IITM",
-        "previous_commit":"7935fb1361ab40fe37845a00c70fa05dfb9a8c0a"
+        "note":"Remove RFMIP experiments piClim-aerO3x0p1 and piClim-aerO3x2",
+        "previous_commit":"ef4e3859887e2b7f5576461057f3e82a167cf32e"
     }
 }

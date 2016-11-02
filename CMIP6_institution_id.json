@@ -4,6 +4,7 @@
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
         "CMCC":"Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy",
         "COLA-CFS":"Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA",
+        "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
         "CSIRO-BOM":"Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia",
         "FIO":"The First Institution of Oceanography (SOA), Qingdao, China",
         "INM":"Institute for Numerical Mathematics, Moscow 119991, Russia",
@@ -24,10 +25,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 1 16:27:26 2016 -0700",
+        "creation_date":"Tue Nov 1 16:53:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Convert to per-file commits",
-        "previous_commit":"d6cb0a5fd27179cd0126df240bab88bf10e2370f"
+        "previous_commit":"4417b67df5ba2fcfd2ade31783c721be6d2995bc"
     }
 }

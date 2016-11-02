@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 13:24:23 2016 -0700",
+        "creation_date":"Wed Nov 2 15:45:07 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Correct experiment_id instances of LND -> LAND",
-        "previous_commit":"9640d6fe1ce07405d74160501e34fe3ada79a783"
+        "note":"Add experiment_id ism-ctrl-std",
+        "previous_commit":"b015695a1c042bf05820504be161f4f34109e0cd"
     }
 }

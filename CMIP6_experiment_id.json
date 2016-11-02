@@ -5682,10 +5682,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:42:04 2016 -0700",
+        "creation_date":"Wed Nov 2 13:09:36 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise experiment_id ssp370 to include activity_id AerChemMIP",
-        "previous_commit":"9fae91a8ec97d1d619f3f519e1abe32bf8331ce7"
+        "note":"Revise experiment_id volc-cluster-mill",
+        "previous_commit":"85dafee0409adfaaca070daff1e4f4c222bd3c04"
     }
 }

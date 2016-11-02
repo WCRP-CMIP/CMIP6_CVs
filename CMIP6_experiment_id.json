@@ -3104,6 +3104,31 @@
             "sub_experiment_id":"none",
             "tier":"1"
         },
+        "ism-bsmb-std":{
+            "activity_id":[
+                "ISMIP6"
+            ],
+            "additional_allowed_model_components":[
+                ""
+            ],
+            "description":"Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization",
+            "end_year":"",
+            "experiment":"offline ice sheet forced by initMIP synthetic oceanic experiment",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "ISMIP"
+            ],
+            "parent_experiment_id":[
+                ""
+            ],
+            "required_model_components":[
+                "ISM"
+            ],
+            "start_year":"",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"1"
+        },
         "ism-ctrl-std":{
             "activity_id":[
                 "ISMIP6"
@@ -5732,10 +5757,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 15:45:07 2016 -0700",
+        "creation_date":"Wed Nov 2 15:50:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add experiment_id ism-ctrl-std",
-        "previous_commit":"10d16250fd06784f9f56788f9eddf45b93728bbd"
+        "note":"Add experiment_id ism-asmb-std",
+        "previous_commit":"58d78fd0bf7e403678447c11f42be0b248273e71"
     }
 }

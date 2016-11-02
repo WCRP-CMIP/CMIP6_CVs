@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 07:22:53 2016 -0700",
+        "creation_date":"Wed Nov 2 07:28:42 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add institution_id CSIR",
-        "previous_commit":"9250c6a740a6b62a8d35dfea57eaa76916ef0bae"
+        "note":"Update institution_id BNU",
+        "previous_commit":"435828e7d162c4d2066b6225e711166501375af7"
     }
 }

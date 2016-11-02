@@ -3079,6 +3079,31 @@
             "sub_experiment_id":"none",
             "tier":"3"
         },
+        "ism-asmb-std":{
+            "activity_id":[
+                "ISMIP6"
+            ],
+            "additional_allowed_model_components":[
+                ""
+            ],
+            "description":"Offline ice sheet simulation with synthetic atmospheric dataset to explore the uncertainty in sea level due to ice sheet initialization",
+            "end_year":"",
+            "experiment":"offline ice sheet forced by initMIP synthetic atmospheric experiment",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "ISMIP"
+            ],
+            "parent_experiment_id":[
+                ""
+            ],
+            "required_model_components":[
+                "ISM"
+            ],
+            "start_year":"",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"1"
+        },
         "ism-ctrl-std":{
             "activity_id":[
                 "ISMIP6"
@@ -5707,10 +5732,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 13:24:23 2016 -0700",
+        "creation_date":"Wed Nov 2 15:45:07 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Correct experiment_id instances of LND -> LAND",
-        "previous_commit":"47c8bff0cdc0e1a0656149cd77de4f7384285679"
+        "note":"Add experiment_id ism-ctrl-std",
+        "previous_commit":"10d16250fd06784f9f56788f9eddf45b93728bbd"
     }
 }

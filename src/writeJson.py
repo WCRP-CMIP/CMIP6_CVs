@@ -477,23 +477,23 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['IITM-ESM'] = {}
-source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
-source_id['IITM-ESM']['atmosphere'] = 'GFS (192 x 94 T62; 64 levels; top level 0.2 mb)'
-source_id['IITM-ESM']['atmospheric_chemistry'] = ''
-source_id['IITM-ESM']['cohort'] = ['']
-source_id['IITM-ESM']['institution_id'] = ['CCCR-IITM']
-source_id['IITM-ESM']['label'] = 'IITM-ESM'
-source_id['IITM-ESM']['label_extended'] = 'IITM-ESM'
-source_id['IITM-ESM']['land_ice'] = 'Noah LSM'
-source_id['IITM-ESM']['land_surface'] = 'Earth1.0'
-source_id['IITM-ESM']['ocean'] = 'MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)'
-source_id['IITM-ESM']['ocean_biogeochemistry'] = 'TOPAZ'
-source_id['IITM-ESM']['release_year'] = '2015'
-source_id['IITM-ESM']['sea_ice'] = 'SIS'
-source_id['IITM-ESM']['source_id'] = 'IITM-ESM'
-
+source_id['ACCESS-1-0']['aerosol'] = 'CLASSIC (v1.0)'
 #==============================================================================
+#source_id['IITM-ESM'] = {}
+#source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
+#source_id['IITM-ESM']['atmosphere'] = 'GFS (192 x 94 T62; 64 levels; top level 0.2 mb)'
+#source_id['IITM-ESM']['atmospheric_chemistry'] = ''
+#source_id['IITM-ESM']['cohort'] = ['']
+#source_id['IITM-ESM']['institution_id'] = ['CCCR-IITM']
+#source_id['IITM-ESM']['label'] = 'IITM-ESM'
+#source_id['IITM-ESM']['label_extended'] = 'IITM-ESM'
+#source_id['IITM-ESM']['land_ice'] = 'Noah LSM'
+#source_id['IITM-ESM']['land_surface'] = 'Earth1.0'
+#source_id['IITM-ESM']['ocean'] = 'MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)'
+#source_id['IITM-ESM']['ocean_biogeochemistry'] = 'TOPAZ'
+#source_id['IITM-ESM']['release_year'] = '2015'
+#source_id['IITM-ESM']['sea_ice'] = 'SIS'
+#source_id['IITM-ESM']['source_id'] = 'IITM-ESM'
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

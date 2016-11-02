@@ -4312,50 +4312,6 @@
             "sub_experiment_id":"none",
             "tier":"1"
         },
-        "piClim-aerO3x0p1":{
-            "activity_id":[
-                "RFMIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM"
-            ],
-            "description":"As in RFMIP-ERF-AER but with present-day changes scaled by 0.1",
-            "end_year":"",
-            "experiment":"effective radiative forcing by present-day aerosols and ozone scaled by 0.1",
-            "min_number_yrs_per_sim":"30",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AGCM"
-            ],
-            "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
-            "tier":"2"
-        },
-        "piClim-aerO3x2":{
-            "activity_id":[
-                "RFMIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM"
-            ],
-            "description":"As in RFMIP-ERF-AER but with present-day changes scaled by 2",
-            "end_year":"",
-            "experiment":"effective radiative forcing by present-day aerosols and ozone scaled by 2",
-            "min_number_yrs_per_sim":"30",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AGCM"
-            ],
-            "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
-            "tier":"2"
-        },
         "piClim-anthro":{
             "activity_id":[
                 "RFMIP"
@@ -5725,10 +5681,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 10:21:00 2016 -0700",
+        "creation_date":"Wed Nov 2 11:04:13 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add institution_id CCCR-IITM",
-        "previous_commit":"33b9cb87e2eded6db5a6165ba2a449dac0f5048a"
+        "note":"Remove RFMIP experiments piClim-aerO3x0p1 and piClim-aerO3x2",
+        "previous_commit":"41d36745171bc59f3e31e62e6ada9807fdc83fd9"
     }
 }

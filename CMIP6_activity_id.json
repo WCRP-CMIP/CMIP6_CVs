@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:04:13 2016 -0700",
+        "creation_date":"Wed Nov 2 11:06:43 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Remove RFMIP experiments piClim-aerO3x0p1 and piClim-aerO3x2",
-        "previous_commit":"161ecdfe884437b5f54d7d5f9f4bb37ca8638d22"
+        "previous_commit":"39b96f28f92e48fc9006eb5f2098c6b4b860839b"
     }
 }

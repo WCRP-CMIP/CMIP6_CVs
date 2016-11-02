@@ -4937,6 +4937,7 @@
         },
         "ssp370":{
             "activity_id":[
+                "AerChemMIP",
                 "ScenarioMIP"
             ],
             "additional_allowed_model_components":[
@@ -5681,10 +5682,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 11:18:59 2016 -0700",
+        "creation_date":"Wed Nov 2 11:28:31 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise RFMIP experiment_id capitalization",
-        "previous_commit":"cb087d9b9730947d8bdb744048ef602a9a9f4b3d"
+        "note":"Revise RFMIP experiment_ids spAerO3 -> spAer",
+        "previous_commit":"b04611378bb1c49940891c6b28220a0723a2a5f4"
     }
 }

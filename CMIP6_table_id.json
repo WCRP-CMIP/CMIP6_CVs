@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 13:09:36 2016 -0700",
+        "creation_date":"Wed Nov 2 13:16:56 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise experiment_id volc-cluster-mill",
-        "previous_commit":"34c805a228e68a43bc85da50e8d8a4bb438776ee"
+        "note":"Correct experiment_id instances of LND -> LAND",
+        "previous_commit":"7674be0879983f1ef79e2ea64dc4fe172ffa3345"
     }
 }

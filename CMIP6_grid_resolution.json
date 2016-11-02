@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 09:13:26 2016 -0700",
+        "creation_date":"Wed Nov 2 10:00:10 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Update institution_id MIROC",
-        "previous_commit":"d25c007ad89dd164a0b65488adb4592ac966dd72"
+        "note":"Add institution_id CCCR-IITM",
+        "previous_commit":"6f6b2e0d52760113ddcdfdfe50655c9de5408342"
     }
 }

@@ -1,6 +1,6 @@
 {
     "institution_id":{
-        "BNU":"GCESS, BNU, Beijing, China",
+        "BNU":"Beijing Normal University, Beijing 100875, China",
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
         "CMCC":"Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy",
         "COLA-CFS":"Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA",
@@ -25,10 +25,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 1 16:53:34 2016 -0700",
+        "creation_date":"Wed Nov 2 07:22:53 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Convert to per-file commits",
-        "previous_commit":"4417b67df5ba2fcfd2ade31783c721be6d2995bc"
+        "note":"Add institution_id CSIR",
+        "previous_commit":"8ffe7772127e17bfec53cc45ddd3e5b9eea02f5d"
     }
 }

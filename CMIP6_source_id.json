@@ -1,7 +1,7 @@
 {
     "source_id":{
         "ACCESS-1-0":{
-            "aerosol":"CLASSIC",
+            "aerosol":"CLASSIC (v1.0)",
             "atmosphere":"HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)",
             "atmospheric_chemistry":"None",
             "cohort":[
@@ -63,10 +63,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 10:00:10 2016 -0700",
+        "creation_date":"Wed Nov 2 10:02:57 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Add institution_id CCCR-IITM",
-        "previous_commit":"f0fb3130f1ebe9ed96ab98c264ff6d2129303939"
+        "previous_commit":"1122e4102eee36fd36290a89e321898e9f937372"
     }
 }

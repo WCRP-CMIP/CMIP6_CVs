@@ -484,7 +484,7 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 if isinstance(string, list):
-                    if string == 'LND':
+                    if string == ['LND']:
                         string = ['LAND']  # Replace LND -> LAND
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean

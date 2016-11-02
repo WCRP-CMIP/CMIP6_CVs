@@ -67,6 +67,7 @@ PJD  2 Nov 2016    - Revise experiment_id ssp370 to include activity_id AerChemM
 PJD  2 Nov 2016    - Revise experiment_id volc-cluster-mill https://github.com/WCRP-CMIP/CMIP6_CVs/issues/75
 PJD  2 Nov 2016    - Revise experiment_id instances of LND -> LAND https://github.com/WCRP-CMIP/CMIP6_CVs/issues/74
 PJD  2 Nov 2016    - Add experiment_id ism-ctrl-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/103
+PJD  2 Nov 2016    - Add experiment_id ism-asmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/104
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -87,7 +88,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add experiment_id ism-ctrl-std\"'
+commitMessage = '\"Add experiment_id ism-asmb-std\"'
 
 #%% Define functions
 # Get repo metadata
@@ -181,20 +182,20 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['ism-ctrl-std'] = {}
-experiment_id['ism-ctrl-std']['activity_id'] = ['ISMIP6']
-experiment_id['ism-ctrl-std']['additional_allowed_model_components'] = ['']
-experiment_id['ism-ctrl-std']['description'] = 'Offline ice sheet control run for the initMIP experiment that explores the uncertainty in sea level due to ice sheet initialization'
-experiment_id['ism-ctrl-std']['end_year'] = ''
-experiment_id['ism-ctrl-std']['experiment'] = 'offline ice sheet model initMIP control'
-experiment_id['ism-ctrl-std']['min_number_yrs_per_sim'] = '100'
-experiment_id['ism-ctrl-std']['parent_activity_id'] = ['ISMIP']
-experiment_id['ism-ctrl-std']['parent_experiment_id'] = ['']
-experiment_id['ism-ctrl-std']['required_model_components'] = ['ISM']
-experiment_id['ism-ctrl-std']['start_year'] = ''
-experiment_id['ism-ctrl-std']['sub_experiment'] = 'none'
-experiment_id['ism-ctrl-std']['sub_experiment_id'] = 'none'
-experiment_id['ism-ctrl-std']['tier'] = '1'
+experiment_id['ism-asmb-std'] = {}
+experiment_id['ism-asmb-std']['activity_id'] = ['ISMIP6']
+experiment_id['ism-asmb-std']['additional_allowed_model_components'] = ['']
+experiment_id['ism-asmb-std']['description'] = 'Offline ice sheet simulation with synthetic atmospheric dataset to explore the uncertainty in sea level due to ice sheet initialization'
+experiment_id['ism-asmb-std']['end_year'] = ''
+experiment_id['ism-asmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic atmospheric experiment'
+experiment_id['ism-asmb-std']['min_number_yrs_per_sim'] = '100'
+experiment_id['ism-asmb-std']['parent_activity_id'] = ['ISMIP']
+experiment_id['ism-asmb-std']['parent_experiment_id'] = ['']
+experiment_id['ism-asmb-std']['required_model_components'] = ['ISM']
+experiment_id['ism-asmb-std']['start_year'] = ''
+experiment_id['ism-asmb-std']['sub_experiment'] = 'none'
+experiment_id['ism-asmb-std']['sub_experiment_id'] = 'none'
+experiment_id['ism-asmb-std']['tier'] = '1'
 
 #==============================================================================
 # Example new experiment_id entry

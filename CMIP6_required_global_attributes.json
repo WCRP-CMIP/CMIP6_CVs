@@ -35,10 +35,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 07:28:42 2016 -0700",
+        "creation_date":"Wed Nov 2 07:36:06 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Update institution_id BNU",
-        "previous_commit":"c706212c5c9d8cedf8fb04ec34a8e89e1be3d3e7"
+        "note":"Add institution_id EC-Earth-Consortium",
+        "previous_commit":"9d2730987d6028f841e3a7a6d9ace9e8fb2ebdd5"
     }
 }

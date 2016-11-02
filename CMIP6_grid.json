@@ -99,10 +99,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 1 16:53:34 2016 -0700",
+        "creation_date":"Wed Nov 2 07:22:52 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Convert to per-file commits",
-        "previous_commit":"12ad7421a16b2d385523bcfccfd73306a0e6d21a"
+        "note":"Add institution_id CSIR",
+        "previous_commit":"7454e15e17083f65a8f8e48a0657c89004aa2ec6"
     }
 }

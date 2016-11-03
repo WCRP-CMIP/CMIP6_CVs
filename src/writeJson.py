@@ -69,6 +69,7 @@ PJD  2 Nov 2016    - Revise experiment_id instances of LND -> LAND https://githu
 PJD  2 Nov 2016    - Add experiment_id ism-ctrl-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/103
 PJD  2 Nov 2016    - Add experiment_id ism-asmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/104
 PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/105
+PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -499,6 +500,8 @@ for jsonName in masterTargets:
                 if isinstance(string, list):
                     if string == ['LND']:
                         string = ['LAND']  # Replace LND -> LAND
+                    if string == ['AER', 'CHEM,', 'BGCM']:
+                        string = ['AER', 'CHEM', 'BGCM']
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

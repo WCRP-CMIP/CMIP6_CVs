@@ -184,37 +184,22 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['ism-bsmb-std'] = {}
-experiment_id['ism-bsmb-std']['activity_id'] = ['ISMIP6']
-experiment_id['ism-bsmb-std']['additional_allowed_model_components'] = ['']
-experiment_id['ism-bsmb-std']['description'] = 'Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization'
-experiment_id['ism-bsmb-std']['end_year'] = ''
-experiment_id['ism-bsmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic oceanic experiment'
-experiment_id['ism-bsmb-std']['min_number_yrs_per_sim'] = '100'
-experiment_id['ism-bsmb-std']['parent_activity_id'] = ['ISMIP']
-experiment_id['ism-bsmb-std']['parent_experiment_id'] = ['']
-experiment_id['ism-bsmb-std']['required_model_components'] = ['ISM']
-experiment_id['ism-bsmb-std']['start_year'] = ''
-experiment_id['ism-bsmb-std']['sub_experiment'] = 'none'
-experiment_id['ism-bsmb-std']['sub_experiment_id'] = 'none'
-experiment_id['ism-bsmb-std']['tier'] = '1'
-
 #==============================================================================
 # Example new experiment_id entry
-#experiment_id['piClim-SO2'] = {}
-#experiment_id['piClim-SO2']['activity_id'] = 'AerChemMIP'
-#experiment_id['piClim-SO2']['additional_allowed_model_components'] = ['AGCM','CHEM']
-#experiment_id['piClim-SO2']['description'] = 'Perturbation from 1850 control using 2014 SO2 emissions'
-#experiment_id['piClim-SO2']['end_year'] = ''
-#experiment_id['piClim-SO2']['experiment'] = 'pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions'
-#experiment_id['piClim-SO2']['min_number_yrs_per_sim'] = '30'
-#experiment_id['piClim-SO2']['parent_activity_id'] = ''
-#experiment_id['piClim-SO2']['parent_experiment_id'] = ''
-#experiment_id['piClim-SO2']['required_model_components'] = ['AGCM','AER']
-#experiment_id['piClim-SO2']['start_year'] = ''
-#experiment_id['piClim-SO2']['sub_experiment'] = 'none'
-#experiment_id['piClim-SO2']['sub_experiment_id'] = 'none'
-#experiment_id['piClim-SO2']['tier'] = '3'
+#experiment_id['ism-bsmb-std'] = {}
+#experiment_id['ism-bsmb-std']['activity_id'] = ['ISMIP6']
+#experiment_id['ism-bsmb-std']['additional_allowed_model_components'] = ['']
+#experiment_id['ism-bsmb-std']['description'] = 'Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization'
+#experiment_id['ism-bsmb-std']['end_year'] = ''
+#experiment_id['ism-bsmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic oceanic experiment'
+#experiment_id['ism-bsmb-std']['min_number_yrs_per_sim'] = '100'
+#experiment_id['ism-bsmb-std']['parent_activity_id'] = ['ISMIP']
+#experiment_id['ism-bsmb-std']['parent_experiment_id'] = ['']
+#experiment_id['ism-bsmb-std']['required_model_components'] = ['ISM']
+#experiment_id['ism-bsmb-std']['start_year'] = ''
+#experiment_id['ism-bsmb-std']['sub_experiment'] = 'none'
+#experiment_id['ism-bsmb-std']['sub_experiment_id'] = 'none'
+#experiment_id['ism-bsmb-std']['tier'] = '1'
 # Rename
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 # Remove

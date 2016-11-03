@@ -90,7 +90,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add experiment_id ism-bsmb-std\"'
+commitMessage = '\"Fix invalid source_type syntax - rogue ","\"'
 
 #%% Define functions
 # Get repo metadata

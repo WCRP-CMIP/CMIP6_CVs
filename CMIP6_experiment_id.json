@@ -2336,7 +2336,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical CO2-only run",
@@ -2363,7 +2363,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical well-mixed GHG-only run. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes. This will ensure that ozone is fixed in all these simulations, and simulated responses in models with and without coupled chemistry are comparable",
@@ -2390,7 +2390,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical anthropogenic-Aerosols-only run",
@@ -2417,7 +2417,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical ALL forcing run with alternate estimates of aerosol concentrations/emissions",
@@ -2444,7 +2444,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical ALL forcing run with alternates estimate of solar and volcanic forcing",
@@ -2498,7 +2498,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical natural-only run",
@@ -2660,7 +2660,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical solar-only transient simulation using settings from CMIP6 historical simulation but fixed GHG&ODS (1850 level)",
@@ -2733,7 +2733,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical stratospheric-ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the histALL simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in histALL should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
@@ -2760,7 +2760,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Historical volcanic-only run",
@@ -4908,7 +4908,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Extension of well-mixed GHG-only run under SSP2-4.5. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes",
@@ -4935,7 +4935,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Extension of aerosol-only run under SSP2-4.5",
@@ -4962,7 +4962,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Extension of natural-only run under SSP2-4.5",
@@ -4989,7 +4989,7 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM,",
+                "CHEM",
                 "BGCM"
             ],
             "description":"Extension of stratospheric-ozone-only run under SSP2-4.5. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
@@ -5757,10 +5757,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 15:50:34 2016 -0700",
+        "creation_date":"Thu Nov 3 07:19:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add experiment_id ism-asmb-std",
-        "previous_commit":"58d78fd0bf7e403678447c11f42be0b248273e71"
+        "note":"Fix invalid source_type syntax - rogue ,",
+        "previous_commit":"bfa08761c90b97caa5f8a64ee2548b7a49e2f4ee"
     }
 }

@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 2 15:50:34 2016 -0700",
+        "creation_date":"Thu Nov 3 07:19:34 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add experiment_id ism-asmb-std",
-        "previous_commit":"eb3b91bf3790bb82e5797eba72a178703e521045"
+        "note":"Fix invalid source_type syntax - rogue ,",
+        "previous_commit":"73941a76d098b5da4839dbff092d31393e09c239"
     }
 }

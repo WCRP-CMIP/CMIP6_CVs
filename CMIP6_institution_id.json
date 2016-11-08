@@ -4,6 +4,7 @@
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
         "CMCC":"Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy",
+        "CNRM":"CNRM (Centre National de Recherches Meteorologiques, Meteo-France, Toulouse 31057, France), CERFACS (Centre Europeen de Recherches et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
         "COLA-CFS":"Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA",
         "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
         "CSIRO-BOM":"Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia",
@@ -27,10 +28,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 3 07:19:34 2016 -0700",
+        "creation_date":"Thu Nov 3 07:20:31 2016 -0700",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Fix invalid source_type syntax - rogue ,",
-        "previous_commit":"8d4a39f16b9bd97a0a499ce4770b1f49b2201349"
+        "previous_commit":"d85d54b62bea5b9c99d468cce1b6d87d265d52ef"
     }
 }

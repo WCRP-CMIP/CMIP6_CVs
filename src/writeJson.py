@@ -70,6 +70,7 @@ PJD  2 Nov 2016    - Add experiment_id ism-ctrl-std https://github.com/WCRP-CMIP
 PJD  2 Nov 2016    - Add experiment_id ism-asmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/104
 PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/105
 PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
+PJD  2 Nov 2016    - Add CNRM to instituion_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -90,7 +91,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Fix invalid source_type syntax - rogue ","\"'
+commitMessage = '\"Add CNRM to institution_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -316,6 +317,7 @@ institution_id = {
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy',
+    'CNRM': 'CNRM (Centre National de Recherches Meteorologiques, Meteo-France, Toulouse 31057, France), CERFACS (Centre Europeen de Recherches et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
@@ -483,10 +485,11 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 if isinstance(string, list):
-                    if string == ['LND']:
-                        string = ['LAND']  # Replace LND -> LAND
-                    if string == ['AER', 'CHEM,', 'BGCM']:
-                        string = ['AER', 'CHEM', 'BGCM']
+                    pass
+                #    if string == ['LND']:
+                #        string = ['LAND']  # Replace LND -> LAND
+                #    if string == ['AER', 'CHEM,', 'BGCM']:
+                #        string = ['AER', 'CHEM', 'BGCM']
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

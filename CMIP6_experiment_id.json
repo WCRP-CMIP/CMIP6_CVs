@@ -7,7 +7,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"DECK: 1pctCO2",
             "end_year":"",
@@ -47,7 +47,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -74,7 +74,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -88,7 +88,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Fully-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling, plus an additional scenario of anthropogenic nitrogen deposition",
             "end_year":"",
@@ -102,7 +102,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -129,7 +129,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -143,7 +143,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation that includes interactive ice sheets",
             "end_year":"",
@@ -171,7 +171,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Beginning from a preindustrial control run, simultaneously quadruple the CO2 concentration and reduce the solar constant such that the TOA radiative flux remains within +/m0.1 W/m2",
             "end_year":"",
@@ -264,7 +264,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Using solar irradiance reduction, return the radiative forcing from a background of the ScenarioMIP high forcing to the ScenarioMIP middle forcing",
             "end_year":"2100",
@@ -291,7 +291,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Using equatorial SO2 injection, return the radiative forcing from a background of the ScenarioMIP high forcing to the ScenarioMIP middle forcing",
             "end_year":"2100",
@@ -362,7 +362,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Against a background of the ScenarioMIP high forcing, reduce cirrus cloud optical depth by a constant amount",
             "end_year":"2100",
@@ -455,7 +455,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Identical to the DECK abrupt-4xCO2, but at 0.5xCO2",
             "end_year":"",
@@ -482,7 +482,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Identical to the DECK abrupt-4xCO2, but at 2xCO2",
             "end_year":"",
@@ -509,7 +509,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"DECK: abrupt4xCO2",
             "end_year":"",
@@ -1050,7 +1050,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Coupled integrations, at least one with constant 1950\"s forcing (CTL) and one or more with historic and then RCP4.5 (as in Forced_Atmos_Land, EXP)",
             "end_year":"",
@@ -1073,7 +1073,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"slab control run for volc-pinatubo-slab",
             "end_year":"",
@@ -1097,7 +1097,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Assimilation runs used to generate initial conditions for hindcasts if used",
             "end_year":"",
@@ -1120,7 +1120,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Decadal hindcasts begun each year from 1960 to present, or every other year at minimum",
             "end_year":"present (to 2019)",
@@ -1148,7 +1148,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Decadal hindcasts begun each year from 1960 to present, or every other year at minimum, but with no information from the future",
             "end_year":"present (to 2019)",
@@ -1176,7 +1176,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical and future uninitialized simulations to assess the impact of initialization",
             "end_year":"2030",
@@ -1199,7 +1199,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Uninitialized climate simulations as in DCPP-A2.2, but with no information from the future",
             "end_year":"present (to 2019)",
@@ -1227,7 +1227,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Ongoing decadal forecasts",
             "end_year":"ongoing each year",
@@ -1255,7 +1255,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"1996",
@@ -1278,7 +1278,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1301,7 +1301,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"1949",
@@ -1324,7 +1324,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"2015",
@@ -1347,7 +1347,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"1999",
@@ -1370,7 +1370,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"1999",
@@ -1393,7 +1393,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"2015",
@@ -1416,7 +1416,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1439,7 +1439,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1462,7 +1462,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"2015",
@@ -1490,7 +1490,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"2015",
@@ -1518,7 +1518,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"2015",
@@ -1546,7 +1546,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"1963",
@@ -1574,7 +1574,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"1982",
@@ -1602,7 +1602,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Effects of volcanoes on decadal prediction and predictability of forced and internal variability components",
             "end_year":"1991",
@@ -1630,7 +1630,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1653,7 +1653,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1676,7 +1676,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1699,7 +1699,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1722,7 +1722,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"1949",
@@ -1745,7 +1745,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
             "end_year":"",
@@ -1768,7 +1768,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Idealized deforestation experiment, 20 million km2 forest removed linearly over a period of 50 years, with an additional 30 years with no specified change in forest cover; all other forcings held constant",
             "end_year":"",
@@ -1947,7 +1947,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean simultaneously by surface windstress (as in the wind experiment), net heat flux (as in the heat experiment) and net freshwater flux (as in the water experiment) anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2, using a passive tracer to prevent negative climate feedback on the heat flux applied",
             "end_year":"",
@@ -1974,7 +1974,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface net heat flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2, using a passive tracer to prevent negative climate feedback on the heat flux applied",
             "end_year":"",
@@ -2001,7 +2001,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, with a flux of passive tracer added at the ocean surface at the same rate as the surface net heat flux anomaly applied in the FAFMIP heat experiment",
             "end_year":"",
@@ -2028,7 +2028,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface windstress anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2",
             "end_year":"",
@@ -2055,7 +2055,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface net freshwater flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2",
             "end_year":"",
@@ -2104,7 +2104,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Coupled integrations, at least one with constant 1950\"s forcing (CTL) and one or more with historic and then RCP4.5 (as in Forced_Atmos_Land, EXP)",
             "end_year":"2050",
@@ -2283,7 +2283,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Coupled integrations, at least one with constant 1950\"s forcing (CTL) and one or more with historic and then RCP4.5 (as in Forced_Atmos_Land, EXP)",
             "end_year":"2014",
@@ -2308,7 +2308,7 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations, start 1950",
             "end_year":"2014",
@@ -2337,7 +2337,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical CO2-only run",
             "end_year":"2020",
@@ -2364,7 +2364,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical well-mixed GHG-only run. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes. This will ensure that ozone is fixed in all these simulations, and simulated responses in models with and without coupled chemistry are comparable",
             "end_year":"2020",
@@ -2391,7 +2391,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical anthropogenic-Aerosols-only run",
             "end_year":"2020",
@@ -2418,7 +2418,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical ALL forcing run with alternate estimates of aerosol concentrations/emissions",
             "end_year":"2020",
@@ -2445,7 +2445,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical ALL forcing run with alternates estimate of solar and volcanic forcing",
             "end_year":"2020",
@@ -2485,7 +2485,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"1850",
             "sub_experiment":"none",
@@ -2499,7 +2499,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical natural-only run",
             "end_year":"2020",
@@ -2526,7 +2526,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Same as CMIP6 historical but with land cover held at 1850, no human activity; concentration driven",
             "end_year":"2014",
@@ -2552,7 +2552,7 @@
             ],
             "additional_allowed_model_components":[
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical WMGHG, halocarbon concentrations and O3 precursor emissions, 1850 aerosol precursor emissions",
             "end_year":"2014",
@@ -2578,7 +2578,7 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical WMGHG and halocarbons concentrations, 1850 NTCF emissions",
             "end_year":"2014",
@@ -2607,7 +2607,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Pacemaker 20th century historical run that includes all forcing as used in CMIP6 Historical Simulation, and the observational historical SST is restored in the AMO domain (0deg-70degN, 70degW-0deg)",
             "end_year":"2014",
@@ -2634,7 +2634,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Pacemaker 20th century historical run that includes all forcing as used in CMIP6 Historical Simulation, and the observational historical SST is restored in the tropical lobe of the IPO domain (20degS-20degN, 175degE-75degW). The HadISST data will be used",
             "end_year":"2014",
@@ -2661,7 +2661,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical solar-only transient simulation using settings from CMIP6 historical simulation but fixed GHG&ODS (1850 level)",
             "end_year":"2020",
@@ -2734,7 +2734,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical stratospheric-ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the histALL simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in histALL should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2020",
@@ -2761,7 +2761,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical volcanic-only run",
             "end_year":"2020",
@@ -2872,7 +2872,7 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical (non-N2O) WMGHG concentrations and NTCF emissions, 1850 N2O concentrations",
             "end_year":"2014",
@@ -2939,7 +2939,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"CMIP6 historical",
             "end_year":"2014",
@@ -2966,7 +2966,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Extension beyond 2014 of the CMIP6 historical",
             "end_year":"",
@@ -2993,7 +2993,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Historical simulation that includes interactive ice sheets. Set up follows the historical experiment",
             "end_year":"2014",
@@ -3668,7 +3668,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Initialized pseudo-observations land",
             "end_year":"2014",
@@ -3695,7 +3695,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Prescribed land conditions 1980-2014 climate",
             "end_year":"2100",
@@ -3722,7 +3722,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Prescribed land conditions 30yr running mean",
             "end_year":"2100",
@@ -3749,7 +3749,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"main forcings : ice-sheet; trace gases, orbital parameters dust (forcing, or feedback if dust cycle represented in model)",
             "end_year":"",
@@ -3772,7 +3772,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"main forcings : orbital parameters, ice-sheet, trace gases",
             "end_year":"",
@@ -3795,7 +3795,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"main forcings : trace gases, orbital parameters, dust",
             "end_year":"",
@@ -3818,7 +3818,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"main forcings : trace gases, orography, ice-sheet",
             "end_year":"",
@@ -3917,7 +3917,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"main forcings : trace gases, volcanoes, solar variability, land use",
             "end_year":"1849",
@@ -4625,7 +4625,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"DECK: control",
             "end_year":"",
@@ -4652,7 +4652,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"DECK: spin-up portion of the control",
             "end_year":"",
@@ -4675,7 +4675,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Pre-industrial control simulation that includes interactive ice sheets",
             "end_year":"",
@@ -4828,7 +4828,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with low radiative forcing by the end of century. Following approximately RCP2.6 global forcing pathway but with new forcing based on SSP1. Concentration-driven",
             "end_year":"2100",
@@ -4855,7 +4855,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Additional land use policy sensitivity simulation for low radiative forcing scenario, keep all forcings the same as ScenarioMIP SSP1-2.6 (afforestation scenario), but replace land use from SSP3-7 (afforestation) scenario; concentration-driven",
             "end_year":"2100",
@@ -4882,7 +4882,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with medium radiative forcing by the end of century. Following approximately RCP4.5 global forcing pathway but with new forcing based on SSP2. Concentration-driven",
             "end_year":"2100",
@@ -4909,7 +4909,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Extension of well-mixed GHG-only run under SSP2-4.5. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes",
             "end_year":"2100",
@@ -4936,7 +4936,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Extension of aerosol-only run under SSP2-4.5",
             "end_year":"2100",
@@ -4963,7 +4963,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Extension of natural-only run under SSP2-4.5",
             "end_year":"2100",
@@ -4990,7 +4990,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Extension of stratospheric-ozone-only run under SSP2-4.5. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2100",
@@ -5018,7 +5018,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with high radiative forcing by the end of century. Reaches about 7.0 W/m2 by 2100; fills gap in RCP forcing pathways between 6.0 and 8.5 W/m2. Concentration-driven",
             "end_year":"2100",
@@ -5044,7 +5044,7 @@
             ],
             "additional_allowed_model_components":[
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced NTCF emissions",
             "end_year":"2055",
@@ -5072,7 +5072,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Additional land use policy sensitivity simulation for high radiative forcing scenario, keep all forcings the same as ScenarioMIP SSP3-7 (deforestation scenario), but replace land use from SSP1-2.6 (afforestation) scenario; concentration-driven",
             "end_year":"2100",
@@ -5250,7 +5250,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with low radiative forcing by the end of century. Reaches about 3.4 W/m2 by 2100; fills gap in RCP forcing pathways between 4.5 and 2.6 W/m2. Concentration-driven",
             "end_year":"2100",
@@ -5277,7 +5277,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with medium radiative forcing by the end of century. Following approximately RCP6.0 global forcing pathway but with new forcing based on SSP4. Concentration-driven",
             "end_year":"2100",
@@ -5304,7 +5304,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"21st century overshoot scenario relative to SSP5_34. Branches from SS5_85 at 2040 with emissions reduced to zero by 2070 and negative thereafter",
             "end_year":"2100",
@@ -5331,7 +5331,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with high radiative forcing by the end of century. Following approximately RCP8.5 global forcing pathway but with new forcing based on SSP5. Concentration-driven",
             "end_year":"2100",
@@ -5371,7 +5371,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -5398,7 +5398,7 @@
             ],
             "required_model_components":[
                 "AOGCM",
-                "BGCM"
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -5412,7 +5412,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future climate from ScenarioMIP SSP5-8.5 simulation that includes interactive ice sheets. Set up follows the standard SSP5-8.5 experiment",
             "end_year":"2300",
@@ -5440,7 +5440,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Future scenario with low radiative forcing by the end of century. Following a forcing pathway below RCP2.6. Specific SSP and 2100 forcing level to be finalized with IAM groups within next few months. Concentration-driven",
             "end_year":"2100",
@@ -5467,7 +5467,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Parallel experiment to volc-cluster-ctrl, using restart files from the end of the historical simulation instead of from piControl, and boundary conditions from the 21st century SSP2-4.5 scenario experiment of ScenarioMIP",
             "end_year":"2100",
@@ -5494,7 +5494,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Early 19th century cluster of strong tropical volcanic eruptions, including the 1809 event of unknown location, the 1815 Tambora and 1835 Cosigueina eruptions. Experiment initialized from PiControl",
             "end_year":"",
@@ -5521,7 +5521,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Parallel experiment to volc-cluster-ctrl but with initial conditions taken from last millennium simulation to account for the effects of a more realistic history of past natural forcing. All forcings except volcanic kept constant from year AD 1790 on",
             "end_year":"1858",
@@ -5548,7 +5548,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Idealized equatorial eruption corresponding to an initial emission of 56.2 Tg of SO2. The eruption magnitude corresponds to recent estimates for the 1815 Tambora eruption (Sigl et al., 2015), the largest historical tropical eruption, which was linked to the so-called \"year without a summer\" in 1816. Experiment initialized from PiControl",
             "end_year":"",
@@ -5575,7 +5575,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
             "end_year":"",
@@ -5602,7 +5602,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
             "end_year":"",
@@ -5629,7 +5629,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability",
             "end_year":"",
@@ -5656,7 +5656,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"As volc-pinatubo-full, but as decadal prediction runs. Joint experiment with DCPP, forcing input and implementation of the forcing fully comply with the VolMIP protocol",
             "end_year":"2019",
@@ -5679,7 +5679,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"As volc-pinatubo-full, but with a slab ocean",
             "end_year":"",
@@ -5707,7 +5707,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates",
             "end_year":"",
@@ -5734,7 +5734,7 @@
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM",
-                "BGCM"
+                "BGC"
             ],
             "description":"As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols",
             "end_year":"",
@@ -5757,10 +5757,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 3 07:20:31 2016 -0700",
+        "creation_date":"Tue Nov 8 15:44:56 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix invalid source_type syntax - rogue ,",
-        "previous_commit":"fab7abfd41a66703a9f43543cf3ecb7bce5e006d"
+        "note":"Add CNRM to institution_id",
+        "previous_commit":"981ac60ea4a40ecd0b60b5a5da9b45f292ca7385"
     }
 }

@@ -486,7 +486,7 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 if isinstance(string, list):
-                    if value == 'ESM' and len(string) == 1:
+                    if value == ['ESM']:
                         string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
                     else:
                         for count, value in enumerate(string):

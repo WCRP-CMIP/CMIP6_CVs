@@ -1807,7 +1807,8 @@
                 "esm-piControl"
             ],
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"1850",
             "sub_experiment":"none",
@@ -1833,7 +1834,8 @@
                 "esm-hist"
             ],
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -1859,7 +1861,8 @@
                 "esm-piControl-spinup"
             ],
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -1881,7 +1884,8 @@
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -1907,7 +1911,8 @@
                 "esm-hist"
             ],
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -1933,7 +1938,8 @@
                 "esm-hist"
             ],
             "required_model_components":[
-                "ESM"
+                "AOGCM",
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -5757,10 +5763,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 8 18:05:01 2016 -0800",
+        "creation_date":"Tue Nov 8 18:12:43 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Revise source_type entries",
-        "previous_commit":"21b322a09cdb1f3666329c88cc695201aeb690d9"
+        "previous_commit":"780f60b82ba72e198eaec711552c0e0e34eff29e"
     }
 }

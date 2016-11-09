@@ -70,7 +70,8 @@ PJD  2 Nov 2016    - Add experiment_id ism-ctrl-std https://github.com/WCRP-CMIP
 PJD  2 Nov 2016    - Add experiment_id ism-asmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/104
 PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/105
 PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
-PJD  2 Nov 2016    - Add CNRM to instituion_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
+PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
+PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -91,7 +92,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add CNRM to institution_id\"'
+commitMessage = '\"Revise source_type entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -485,7 +486,12 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                 if isinstance(string, list):
-                    pass
+                    if string == ['ESM']:
+                        string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
+                    else:
+                        for count, value in enumerate(string):
+                            if value == 'BGCM':
+                                string[count] = 'BGC' # Replace BGCM -> BGC
                 #    if string == ['LND']:
                 #        string = ['LAND']  # Replace LND -> LAND
                 #    if string == ['AER', 'CHEM,', 'BGCM']:

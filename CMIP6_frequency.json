@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 3 07:20:31 2016 -0700",
+        "creation_date":"Tue Nov 8 18:12:43 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Fix invalid source_type syntax - rogue ,",
-        "previous_commit":"107ea8c5106d497fe6b79c157c557fcce5ef1dd4"
+        "note":"Revise source_type entries",
+        "previous_commit":"51524b60b1d8db1aa2005422558c2fbc691ea2eb"
     }
 }

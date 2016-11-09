@@ -28,10 +28,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 8 15:44:56 2016 -0800",
+        "creation_date":"Tue Nov 8 18:03:13 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Add CNRM to institution_id",
-        "previous_commit":"c8beabd7f64f8ff5fd900a6cdaa96e5cd23d8fb8"
+        "previous_commit":"8b2b860edf0b5b65f2c4e7ca235cce0eb3b7dc56"
     }
 }

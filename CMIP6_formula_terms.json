@@ -6,30 +6,145 @@
             "type":"double",
             "units":""
         },
+        "a_bnds":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: a(k+1/2)",
+            "type":"double",
+            "units":""
+        },
+        "ap":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: ap(k)",
+            "type":"double",
+            "units":"Pa"
+        },
+        "ap_bnds":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: ap(k+1/2)",
+            "type":"double",
+            "units":"Pa"
+        },
+        "b":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: b(k)",
+            "type":"double",
+            "units":""
+        },
+        "b_bnds":{
+            "dimensions":"alevel",
+            "long_name":"vertical coordinate formula term: b(k+1/2)",
+            "type":"double",
+            "units":""
+        },
+        "depth":{
+            "dimensions":"longitude latitude",
+            "long_name":"Sea Floor Depth: formula term: thetao",
+            "type":"real",
+            "units":"m"
+        },
+        "depth_c":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: depth_c",
+            "type":"double",
+            "units":""
+        },
+        "eta":{
+            "dimensions":"longitude latitude time",
+            "long_name":"Sea Surface Height formula term: thetao",
+            "type":"real",
+            "units":"m"
+        },
+        "href":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: href",
+            "type":"double",
+            "units":""
+        },
+        "k_c":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: k_c",
+            "type":"integer",
+            "units":""
+        },
+        "nsigma":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: nsigma",
+            "type":"integer",
+            "units":""
+        },
+        "orog":{
+            "dimensions":"longitude latitude",
+            "long_name":"Surface Altitude",
+            "type":"real",
+            "units":"m"
+        },
+        "p0":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: reference pressure",
+            "type":"",
+            "units":"Pa"
+        },
         "ps":{
-            "cell_measures":"area: areacella",
-            "cell_methods":"time: mean",
-            "comment":"surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
             "dimensions":"longitude latitude time",
             "long_name":"Surface Air Pressure",
-            "modeling_realm":"atmos",
-            "ok_max_mean_abs":"",
-            "ok_min_mean_abs":"",
-            "out_name":"ps",
-            "positive":"",
-            "standard_name":"surface_air_pressure",
             "type":"real",
-            "units":"Pa",
-            "valid_max":"",
-            "valid_min":""
+            "units":"Pa"
+        },
+        "ptop":{
+            "dimensions":"",
+            "long_name":"pressure at top of model",
+            "type":"",
+            "units":"Pa"
+        },
+        "sigma":{
+            "dimensions":"olevel",
+            "long_name":"vertical coordinate formula term: sigma(k)",
+            "type":"double",
+            "units":""
+        },
+        "sigma_bnds":{
+            "dimensions":"olevel",
+            "long_name":"vertical coordinate formula term: sigma(k+1/2)",
+            "type":"double",
+            "units":""
+        },
+        "z1":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: z1",
+            "type":"double",
+            "units":""
+        },
+        "z2":{
+            "dimensions":"",
+            "long_name":"vertical coordinate formula term: z2",
+            "type":"double",
+            "units":""
+        },
+        "zlev":{
+            "dimensions":"olevel",
+            "long_name":"vertical coordinate formula term: zlev(k)",
+            "type":"double",
+            "units":""
+        },
+        "zlev_bnds":{
+            "dimensions":"olevel",
+            "long_name":"vertical coordinate formula term: zlev(k+1/2)",
+            "type":"double",
+            "units":""
+        },
+        "ztop":{
+            "dimensions":"",
+            "long_name":"height of top of model",
+            "type":"",
+            "units":"m"
         }
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 8 18:12:43 2016 -0800",
+        "creation_date":"Tue Nov 8 18:14:23 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Revise source_type entries",
-        "previous_commit":"9593d871bf0d86f54d77d8c7209cdbf4e8c7678f"
+        "previous_commit":"bd12bdd380063decd068ab625aff71545b497e8d"
     }
 }

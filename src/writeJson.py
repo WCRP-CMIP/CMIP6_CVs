@@ -72,6 +72,7 @@ PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP
 PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
 PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
 PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
+PJD 14 Nov 2016    - Convert coordinate, formula_terms and grids to internal source https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -86,13 +87,12 @@ import os
 import shlex
 import ssl
 import subprocess
-import urllib2
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_type entries\"'
+commitMessage = '\"Convert coordinate, formula_terms and grids to internal source\"'
 
 #%% Define functions
 # Get repo metadata
@@ -158,25 +158,11 @@ activity_id = [
 
 #%% Coordinate
 # Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-coordinate = tmp.get('axis_entry')
-del(tmp, sourceFile)
-gc.collect()
+tmp = [['coordinate','https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/createalltables/Tables/CMIP6_coordinate.json']
+      ] ;
+coordinate = readJsonCreateDict(tmp)
+coordinate = coordinate.get('coordinate')
+coordinate = coordinate.get('axis_entry')
 
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
@@ -210,28 +196,11 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 
 #%% Formula_terms
 # Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-tmp = tmp.get('variable_entry')
-formula_terms = {}
-for count, key in enumerate(['a', 'ps']):
-    formula_terms[key] = tmp[key]
-del(sourceFile, tmp, count, key)
-gc.collect()
+tmp = [['formula_terms','https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/createalltables/Tables/CMIP6_formula_terms.json']
+      ] ;
+formula_terms = readJsonCreateDict(tmp)
+formula_terms = formula_terms.get('formula_terms')
+formula_terms = formula_terms.get('variable_entry')
 
 #%% Frequencies
 frequency = [
@@ -249,25 +218,11 @@ frequency = [
 
 #%% Grid
 # Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_grids.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-grid = tmp.get('axis_entry')
-del(tmp, sourceFile)
-gc.collect()
+tmp = [['grid','https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/createalltables/Tables/CMIP6_grids.json']
+      ] ;
+grid = readJsonCreateDict(tmp)
+grid = grid.get('grid')
+grid.pop('Header') ; # Drop single entry
 
 #%% Grid labels
 grid_label = [
@@ -474,7 +429,7 @@ for jsonName in masterTargets:
                 #pdb.set_trace()
                 #if key == 'alt16':
                 #    print key,values,string,type(string)
-                if not isinstance(string, list):
+                if not isinstance(string, list) and not isinstance(string, dict):
                     string = string.strip()  # Remove trailing whitespace
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +

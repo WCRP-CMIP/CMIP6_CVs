@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 8 18:14:23 2016 -0800",
+        "creation_date":"Tue Nov 15 15:03:17 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise source_type entries",
-        "previous_commit":"a29d203619eaf9f8fd2b6b0d5acafb9307acc6e9"
+        "note":"Remove coordinate, formula_terms and grids from repo",
+        "previous_commit":"ebd48dd5e13b6b81a0118a7e9de6a2223b020d42"
     }
 }

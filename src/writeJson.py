@@ -101,15 +101,18 @@ commitMessage = '\"Rename grid_resolution to nominal_resolution and add new entr
 def getFileHistory(filePath):
     # Call getGitInfo
     versionInfo = getGitInfo(filePath)
-    version_metadata = {}
-    version_metadata['author'] = versionInfo[4].replace('author: ','')
-    version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
-    version_metadata['institution_id'] = 'PCMDI'
-    version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-    version_metadata['note'] = versionInfo[1].replace('note: ','')
-    version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
-
-    return version_metadata
+    if versionInfo == 'filePath not a valid git-tracked file':
+        return ''
+    else:  
+        version_metadata = {}
+        version_metadata['author'] = versionInfo[4].replace('author: ','')
+        version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
+        version_metadata['institution_id'] = 'PCMDI'
+        version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+        version_metadata['note'] = versionInfo[1].replace('note: ','')
+        version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
+    
+        return version_metadata
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
 ctx                 = ssl.create_default_context()

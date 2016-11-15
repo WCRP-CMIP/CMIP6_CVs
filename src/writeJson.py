@@ -101,6 +101,7 @@ commitMessage = '\"Rename grid_resolution to nominal_resolution and add new entr
 def getFileHistory(filePath):
     # Call getGitInfo
     versionInfo = getGitInfo(filePath)
+    print 'versionInfoReturn',versionInfo
     if versionInfo == 'filePath not a valid git-tracked file':
         return ''
     else:  

@@ -73,6 +73,7 @@ PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
 PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
 PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
 PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
+PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/141
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -87,13 +88,12 @@ import os
 import shlex
 import ssl
 import subprocess
-import urllib2
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Remove coordinate, formula_terms and grids from repo\"'
+commitMessage = '\"Rename grid_resolution to nominal_resolution and add new entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -121,10 +121,10 @@ masterTargets = [
     'experiment_id',
     'frequency',
     'grid_label',
-    'grid_resolution',
     'institution_id',
     'license',
     'mip_era',
+    'nominal_resolution',
     'realm',
     'required_global_attributes',
     'source_id',
@@ -225,22 +225,6 @@ grid_label = [
     'grz'
 ]
 
-#%% Grid resolutions
-grid_resolution = [
-    '10 km',
-    '100 km',
-    '1000 km',
-    '10000 km',
-    '1x1 degree',
-    '25 km',
-    '250 km',
-    '2500 km',
-    '5 km',
-    '50 km',
-    '500 km',
-    '5000 km'
-]
-
 #%% Institutions
 institution_id = {
     'BNU': 'Beijing Normal University, Beijing 100875, China',
@@ -277,6 +261,25 @@ license = [
 
 #%% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']
+
+#%% Nominal resolutions
+nominal_resolution = [
+    '0.5 km',
+    '1 km',
+    '10 km',
+    '100 km',
+    '1000 km',
+    '10000 km',
+    '1x1 degree',
+    '2.5 km',
+    '25 km',
+    '250 km',
+    '2500 km',
+    '5 km',
+    '50 km',
+    '500 km',
+    '5000 km'
+]
 
 #%% Realms
 realm = [

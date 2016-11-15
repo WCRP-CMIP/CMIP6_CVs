@@ -439,10 +439,11 @@ for jsonName in masterTargets:
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     print outFileTest
-    if os.path.exists(outFileTest):
-        versionInfo = getFileHistory(outFileTest)
-    else:
-        versionInfo = getFileHistory(os.path.join(os.getcwd(),'writeJson.py'))
+    versionInfo = getFileHistory(outFileTest)
+    #if os.path.exists(outFileTest):
+    #    versionInfo = getFileHistory(outFileTest)
+    #else:
+    #    versionInfo = getFileHistory(os.path.join(os.getcwd(),'writeJson.py'))
 
     # Check file exists
     if os.path.exists(outFile):

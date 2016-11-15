@@ -442,7 +442,7 @@ for jsonName in masterTargets:
         versionInfo = getFileHistory(outFileTest)
     else:
         print os.getcwd()
-        versionInfo = getFileHistory('writeJson.py')
+        versionInfo = getFileHistory(os.path.join(os.getcwd(),'writeJson.py'))
         print versionInfo
 
     # Test for update

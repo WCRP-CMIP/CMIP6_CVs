@@ -72,6 +72,7 @@ PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP
 PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
 PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
 PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
+PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -92,7 +93,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_type entries\"'
+commitMessage = '\"Remove coordinate, formula_terms and grids from repo\"'
 
 #%% Define functions
 # Get repo metadata
@@ -117,11 +118,8 @@ ctx.verify_mode     = ssl.CERT_NONE
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
     'activity_id',
-    'coordinate',
     'experiment_id',
-    'formula_terms',
     'frequency',
-    'grid',
     'grid_label',
     'grid_resolution',
     'institution_id',
@@ -156,28 +154,6 @@ activity_id = [
     'VolMIP'
 ]
 
-#%% Coordinate
-# Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-coordinate = tmp.get('axis_entry')
-del(tmp, sourceFile)
-gc.collect()
-
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
       ] ;
@@ -208,31 +184,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 #experiment_id.pop('land-noShiftcultivate')
 #==============================================================================
 
-#%% Formula_terms
-# Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_Amon.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-tmp = tmp.get('variable_entry')
-formula_terms = {}
-for count, key in enumerate(['a', 'ps']):
-    formula_terms[key] = tmp[key]
-del(sourceFile, tmp, count, key)
-gc.collect()
-
 #%% Frequencies
 frequency = [
     '1hrClimMon',
@@ -246,28 +197,6 @@ frequency = [
     'monClim',
     'subhr',
     'yr']
-
-#%% Grid
-# Read web file
-sourceFile = 'https://raw.githubusercontent.com/PCMDI/cmip6-cmor-tables/master/Tables/CMIP6_grids.json'
-jsonOutput = urllib2.urlopen(sourceFile, context=ctx)
-tmp = jsonOutput.read()
-jsonOutput.close()
-# Write local json
-if os.path.exists('tmp.json'):
-    os.remove('tmp.json')
-tmpFile = open('tmp.json', 'w')
-tmpFile.write(tmp)
-tmpFile.close()
-# Read local json
-tmp = json.load(open('tmp.json', 'r'))
-os.remove('tmp.json')
-del(jsonOutput)
-gc.collect()
-# Extract coordinates
-grid = tmp.get('axis_entry')
-del(tmp, sourceFile)
-gc.collect()
 
 #%% Grid labels
 grid_label = [
@@ -466,7 +395,7 @@ table_id = [
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['coordinate', 'experiment_id', 'formula_terms', 'grid']:
+    if jsonName in ['experiment_id']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():

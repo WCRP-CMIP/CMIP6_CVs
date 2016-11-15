@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 15 15:42:33 2016 -0800",
+        "creation_date":"Tue Nov 15 15:43:57 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"Rename grid_resolution to nominal_resolution and add new entries",
-        "previous_commit":"c477b1112b8c14a870310103d2cff82fd3fae9d9"
+        "previous_commit":"19f5316800e8289b38d2dd199fe4f997d83df3d7"
     }
 }

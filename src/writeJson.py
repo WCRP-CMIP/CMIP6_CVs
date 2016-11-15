@@ -101,9 +101,8 @@ commitMessage = '\"Rename grid_resolution to nominal_resolution and add new entr
 def getFileHistory(filePath):
     # Call getGitInfo
     versionInfo = getGitInfo(filePath)
-    print 'versionInfoReturn',versionInfo
-    if versionInfo == 'filePath not a valid git-tracked file':
-        return ''
+    if versionInfo == None:
+        return None
     else:  
         version_metadata = {}
         version_metadata['author'] = versionInfo[4].replace('author: ','')
@@ -443,10 +442,8 @@ for jsonName in masterTargets:
     # Get repo version/metadata
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
-    print outFileTest
     versionInfo = getFileHistory(outFileTest)
-    print 'versionInfo',versionInfo
-    if versionInfo == '':
+    if versionInfo == None:
         versionInfo = {}
         versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
         versionInfo['creation_date'] = ''.join([datetime.datetime.now().strftime('%c'),' -0800'])

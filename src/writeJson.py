@@ -440,10 +440,14 @@ for jsonName in masterTargets:
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     print outFileTest
     versionInfo = getFileHistory(outFileTest)
-    #if os.path.exists(outFileTest):
-    #    versionInfo = getFileHistory(outFileTest)
-    #else:
-    #    versionInfo = getFileHistory(os.path.join(os.getcwd(),'writeJson.py'))
+    if versionInfo == '':
+        versionInfo = {}
+        versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
+        versionInfo['creation_date'] = ''.join([datetime.datetime.now().strftime('%c'),' -0800'])
+        versionInfo['institution_id'] = 'PCMDI'
+        versionInfo['latest_tag_point'] = 'None'
+        versionInfo['note'] = 'None'
+        versionInfo['previous_commit'] = 'None'
 
     # Check file exists
     if os.path.exists(outFile):

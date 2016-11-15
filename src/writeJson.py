@@ -441,11 +441,7 @@ for jsonName in masterTargets:
     if os.path.exists(outFileTest):
         versionInfo = getFileHistory(outFileTest)
     else:
-        print os.getcwd()
         versionInfo = getFileHistory(os.path.join(os.getcwd(),'writeJson.py'))
-        print versionInfo
-
-    # Test for update
 
     # Check file exists
     if os.path.exists(outFile):

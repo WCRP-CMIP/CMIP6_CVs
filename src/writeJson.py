@@ -438,11 +438,14 @@ for jsonName in masterTargets:
     # Get repo version/metadata
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
+    print outFileTest
     if os.path.exists(outFileTest):
+        print 'true'
         versionInfo = getFileHistory(outFileTest)
     else:
+        print 'false'
         versionInfo = getFileHistory('src/writeJson.py')
-    
+
     # Test for update
 
     # Check file exists

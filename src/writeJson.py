@@ -82,6 +82,7 @@ PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new en
 """
 
 #%% Import statements
+import datetime
 import gc
 import json
 import os
@@ -440,6 +441,7 @@ for jsonName in masterTargets:
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     print outFileTest
     versionInfo = getFileHistory(outFileTest)
+    print 'versionInfo',versionInfo
     if versionInfo == '':
         versionInfo = {}
         versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'

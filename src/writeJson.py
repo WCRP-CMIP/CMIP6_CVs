@@ -445,6 +445,7 @@ for jsonName in masterTargets:
     else:
         print 'false'
         versionInfo = getFileHistory('src/writeJson.py')
+        print versionInfo
 
     # Test for update
 

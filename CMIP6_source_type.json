@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 15 16:14:37 2016 -0800",
+        "creation_date":"Wed Nov 16 10:14:11 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Rename grid_resolution to nominal_resolution and add new entries",
-        "previous_commit":"161514785895aec07ba84c0a166c6e7f987e1544"
+        "note":"Revise AerChemMIP experiment model configurations",
+        "previous_commit":"ce02a3f1087eb260b5b381cec5570c436b22c94b"
     }
 }

@@ -74,6 +74,7 @@ PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMI
 PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
 PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
 PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/141
+PJD 15 Nov 2016    - Add MESSy-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/138
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -94,7 +95,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Rename grid_resolution to nominal_resolution and add new entries\"'
+commitMessage = '\"Add MESSy-Consortium to institution_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -103,7 +104,7 @@ def getFileHistory(filePath):
     versionInfo = getGitInfo(filePath)
     if versionInfo == None:
         return None
-    else:  
+    else:
         version_metadata = {}
         version_metadata['author'] = versionInfo[4].replace('author: ','')
         version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
@@ -111,7 +112,7 @@ def getFileHistory(filePath):
         version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
         version_metadata['note'] = versionInfo[1].replace('note: ','')
         version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
-    
+
         return version_metadata
 
 #%% Create urllib2 context to deal with lab/LLNL web certificates
@@ -244,6 +245,7 @@ institution_id = {
     'INM': 'Institute for Numerical Mathematics, Moscow 119991, Russia',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China',
+    'MESSy-Consortium': 'The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum für Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany',
     'MIROC': 'JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)',
     'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',

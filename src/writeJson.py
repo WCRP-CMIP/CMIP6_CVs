@@ -75,6 +75,7 @@ PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/i
 PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
 PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/141
 PJD 15 Nov 2016    - Add MESSy-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/138
+PJD 16 Nov 2016    - Revise AerChemMIP experiment model configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/78
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -95,7 +96,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add MESSy-Consortium to institution_id\"'
+commitMessage = '\"Revise AerChemMIP experiment model configurations\"'
 
 #%% Define functions
 # Get repo metadata
@@ -167,6 +168,14 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+experiment_id['hist-piNTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
+experiment_id['hist-piNTCF']['required_model_components'] = ['CHEM', 'BGC']
+experiment_id['histSST-piNTCF']['additional_allowed_model_components'] = ['AGCM', 'AER']
+experiment_id['histSST-piNTCF']['required_model_components'] = ['CHEM', 'BGC']
+experiment_id['piClim-NTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
+experiment_id['piClim-NTCF']['required_model_components'] = ['CHEM', 'BGC']
+experiment_id['ssp370SST-lowNTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
+experiment_id['ssp370SST-lowNTCF']['required_model_components'] = ['CHEM', 'BGC']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

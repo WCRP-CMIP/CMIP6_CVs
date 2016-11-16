@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 16 10:14:11 2016 -0800",
+        "creation_date":"Wed Nov 16 10:18:54 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise AerChemMIP experiment model configurations",
-        "previous_commit":"76231e9c7dab735663419f30f9c3347aec8aac7c"
+        "note":"Issue78 durack1 revise AerChemMIP experiment info (#145)",
+        "previous_commit":"8dce108dde0bdd53416699bf9298d1cda0c64de3"
     }
 }

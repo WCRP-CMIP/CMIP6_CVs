@@ -59,14 +59,34 @@
             "release_year":"1989",
             "sea_ice":"Declining",
             "source_id":"PCMDI-test-1-0"
+        },
+        "VRESM-1-0":{
+            "aerosol":"Rotstayn-1.0",
+            "atmosphere":"VCAM-1.0 (192 x 192 x 6 C192; 35 levels; top level 35km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CSIR-CSIRO"
+            ],
+            "label":"VRESM 1.0",
+            "label_extended":"VRESM 1.0 (Variable-resolution Earth System Model 1.0)",
+            "land_ice":"None",
+            "land_surface":"CABLE v2.2.3",
+            "ocean":"VCOM-1.0 (192 x 192 x 6 C192; 35 levels, z coordinate)",
+            "ocean_biogeochemistry":"PISCES v3.4socco",
+            "release_year":"2016",
+            "sea_ice":"CSIR-ICE (visco-plastic)",
+            "source_id":"VRESM-1-0"
         }
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 16 10:14:11 2016 -0800",
+        "creation_date":"Wed Nov 16 10:18:54 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Revise AerChemMIP experiment model configurations",
-        "previous_commit":"2fe0de1b13aa53331c5da4b67cbf8e66aa33daab"
+        "note":"Issue78 durack1 revise AerChemMIP experiment info (#145)",
+        "previous_commit":"8dce108dde0bdd53416699bf9298d1cda0c64de3"
     }
 }

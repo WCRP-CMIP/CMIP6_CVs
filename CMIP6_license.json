@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 15 16:14:37 2016 -0800",
+        "creation_date":"Tue Nov 15 16:16:33 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Rename grid_resolution to nominal_resolution and add new entries",
-        "previous_commit":"e3de4a3c10aa5925bb8d490811c230f25da4b3e3"
+        "note":"Issue138 durack1 register institution_id MESSy-Consortium (#144)",
+        "previous_commit":"4adf8e2ae8bab53c2b0fd10170dd6978a590d03c"
     }
 }

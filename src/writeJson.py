@@ -168,14 +168,14 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['hist-piNTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
-experiment_id['hist-piNTCF']['required_model_components'] = ['CHEM', 'BGC']
-experiment_id['histSST-piNTCF']['additional_allowed_model_components'] = ['AGCM', 'AER']
-experiment_id['histSST-piNTCF']['required_model_components'] = ['CHEM', 'BGC']
-experiment_id['piClim-NTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
-experiment_id['piClim-NTCF']['required_model_components'] = ['CHEM', 'BGC']
-experiment_id['ssp370SST-lowNTCF']['additional_allowed_model_components'] = ['AOGCM', 'AER']
-experiment_id['ssp370SST-lowNTCF']['required_model_components'] = ['CHEM', 'BGC']
+experiment_id['hist-piNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
+experiment_id['hist-piNTCF']['required_model_components'] = ['AOGCM', 'AER']
+experiment_id['histSST-piNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
+experiment_id['histSST-piNTCF']['required_model_components'] = ['AGCM', 'AER']
+experiment_id['piClim-NTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
+experiment_id['piClim-NTCF']['required_model_components'] = ['AGCM', 'AER']
+experiment_id['ssp370SST-lowNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
+experiment_id['ssp370SST-lowNTCF']['required_model_components'] = ['AGCM', 'AER']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

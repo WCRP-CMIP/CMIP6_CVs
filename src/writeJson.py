@@ -76,6 +76,7 @@ PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https:
 PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/141
 PJD 15 Nov 2016    - Add MESSy-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/138
 PJD 16 Nov 2016    - Revise AerChemMIP experiment model configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/78
+PJD 16 Nov 2016    - Add source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -96,7 +97,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise AerChemMIP experiment model configurations\"'
+commitMessage = '\"Add source_id VRESM-1-0\"'
 
 #%% Define functions
 # Get repo metadata
@@ -168,14 +169,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['hist-piNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
-experiment_id['hist-piNTCF']['required_model_components'] = ['AOGCM', 'AER']
-experiment_id['histSST-piNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
-experiment_id['histSST-piNTCF']['required_model_components'] = ['AGCM', 'AER']
-experiment_id['piClim-NTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
-experiment_id['piClim-NTCF']['required_model_components'] = ['AGCM', 'AER']
-experiment_id['ssp370SST-lowNTCF']['additional_allowed_model_components'] = ['CHEM', 'BGC']
-experiment_id['ssp370SST-lowNTCF']['required_model_components'] = ['AGCM', 'AER']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -352,6 +345,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['VRESM-1-0'] = {}
+source_id['VRESM-1-0']['aerosol'] = 'Rotstayn-1.0'
+source_id['VRESM-1-0']['atmosphere'] = 'VCAM-1.0 (192 x 192 x 6 C192; 35 levels; top level 35km)'
+source_id['VRESM-1-0']['atmospheric_chemistry'] = 'None'
+source_id['VRESM-1-0']['cohort'] = ['']
+source_id['VRESM-1-0']['institution_id'] = ['CSIR-CSIRO']
+source_id['VRESM-1-0']['label'] = 'VRESM 1.0'
+source_id['VRESM-1-0']['label_extended'] = 'VRESM 1.0 (Variable-resolution Earth System Model 1.0)'
+source_id['VRESM-1-0']['land_ice'] = 'None'
+source_id['VRESM-1-0']['land_surface'] = 'CABLE v2.2.3'
+source_id['VRESM-1-0']['ocean'] = 'VCOM-1.0 (192 x 192 x 6 C192; 35 levels, z coordinate)'
+source_id['VRESM-1-0']['ocean_biogeochemistry'] = 'PISCES v3.4socco'
+source_id['VRESM-1-0']['release_year'] = '2016'
+source_id['VRESM-1-0']['sea_ice'] = 'CSIR-ICE (visco-plastic)'
+source_id['VRESM-1-0']['source_id'] = 'VRESM-1-0'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

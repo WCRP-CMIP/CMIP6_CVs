@@ -2584,7 +2584,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "BGC"
+                "AOGCM",
+                "AER"
             ],
             "description":"Historical WMGHG and halocarbons concentrations, 1850 NTCF emissions",
             "end_year":"2014",
@@ -2597,9 +2598,8 @@
                 "piControl"
             ],
             "required_model_components":[
-                "AOGCM",
-                "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "start_year":"1850",
             "sub_experiment":"none",
@@ -2900,7 +2900,10 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "AGCM",
+                "AER"
+            ],
             "description":"Historical WMGHG concentrations and halocarbons emissions, 1850 NTCF emissions, prescribed SSTs",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with pre-industrial NTCF emissions",
@@ -2908,9 +2911,8 @@
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
-                "AGCM",
-                "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "start_year":"1850",
             "sub_experiment":"none",
@@ -4226,7 +4228,10 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "AOGCM",
+                "AER"
+            ],
             "description":"Perturbation from 1850 control using 2014 aerosol and ozone precursor emissions",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions",
@@ -4234,9 +4239,8 @@
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
-                "AGCM",
-                "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment":"none",
@@ -5189,7 +5193,10 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "AOGCM",
+                "AER"
+            ],
             "description":"Future SSP3-7.0 with reduced NTCF emissions, prescribed SSTs",
             "end_year":"2055",
             "experiment":"SSP3-7.0, prescribed SSTs, with low NTCF emissions",
@@ -5197,9 +5204,8 @@
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
-                "AGCM",
-                "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "start_year":"2015",
             "sub_experiment":"none",
@@ -5763,10 +5769,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 15 16:14:37 2016 -0800",
+        "creation_date":"Tue Nov 15 16:16:33 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Rename grid_resolution to nominal_resolution and add new entries",
-        "previous_commit":"c4f43d585d17cbffdd315c420acfb311ad2d2877"
+        "note":"Issue138 durack1 register institution_id MESSy-Consortium (#144)",
+        "previous_commit":"4adf8e2ae8bab53c2b0fd10170dd6978a590d03c"
     }
 }

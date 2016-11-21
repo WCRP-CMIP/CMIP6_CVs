@@ -50,7 +50,7 @@
             "institution_id":[
                 "EC-Earth-Consortium"
             ],
-            "label":"EC-Earth-3",
+            "label":"EC-Earth 3",
             "label_extended":"EC-Earth v3.2.x",
             "land_ice":"None",
             "land_surface":"H-TESSEL (same version as atmosphere)",
@@ -70,7 +70,7 @@
             "institution_id":[
                 "EC-Earth-Consortium"
             ],
-            "label":"EC-Earth-3-HR",
+            "label":"EC-Earth 3-HR",
             "label_extended":"EC-Earth v3.2.x at high resolution",
             "land_ice":"None",
             "land_surface":"H-TESSEL (same version as atmosphere)",
@@ -90,7 +90,7 @@
             "institution_id":[
                 "EC-Earth-Consortium"
             ],
-            "label":"EC-Earth-3-LR",
+            "label":"EC-Earth 3-LR",
             "label_extended":"EC-Earth v3.2.x at low resolution",
             "land_ice":"None",
             "land_surface":"H-TESSEL (same version as atmosphere)",
@@ -103,7 +103,7 @@
         "IITM-ESM":{
             "aerosol":"unnamed (prescribed MAC-v2)",
             "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
-            "atmospheric_chemistry":"",
+            "atmospheric_chemistry":"None",
             "cohort":[
                 ""
             ],
@@ -112,8 +112,8 @@
             ],
             "label":"IITM-ESM",
             "label_extended":"IITM-ESM",
-            "land_ice":"Noah LSM",
-            "land_surface":"Earth1.0",
+            "land_ice":"None",
+            "land_surface":"NOAH LSM",
             "ocean":"MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)",
             "ocean_biogeochemistry":"TOPAZ",
             "release_year":"2015",
@@ -122,7 +122,7 @@
         },
         "PCMDI-test-1-0":{
             "aerosol":"None",
-            "atmosphere":"Earth1.0-gettingHotter",
+            "atmosphere":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "CMIP6"
@@ -134,10 +134,10 @@
             "label_extended":"PCMDI-test 1.0 (This entry is free text for users to contribute verbose information)",
             "land_ice":"None",
             "land_surface":"Earth1.0",
-            "ocean":"BlueMarble1.0-warming",
+            "ocean":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
             "ocean_biogeochemistry":"None",
             "release_year":"1989",
-            "sea_ice":"Declining",
+            "sea_ice":"Declining1.0-warming",
             "source_id":"PCMDI-test-1-0"
         },
         "VRESM-1-0":{
@@ -163,10 +163,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 13:40:31 2016 -0800",
+        "creation_date":"Mon Nov 21 13:46:42 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Issue92 durack1 register source_id EC-EARTH-3-HR (#152)",
-        "previous_commit":"b4131993b00b8d64658e6f32321880cc3a0d1338"
+        "note":"Issue93 durack1 register source_id EC-Earth-3-LR (#153)",
+        "previous_commit":"d0edc8169ec970128f90d25a6f8539e868c9aabd"
     }
 }

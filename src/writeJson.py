@@ -85,6 +85,7 @@ PJD 21 Nov 2016    - Register source_id EC-Earth-3 https://github.com/WCRP-CMIP/
 PJD 21 Nov 2016    - Register source_id EC-Earth-3-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/92
 PJD 21 Nov 2016    - Register source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
 PJD 21 Nov 2016    - source_id cleanup, particularly for IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
+PJD 21 Nov 2016    - Register institution_id CNRM-CERFACS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -105,7 +106,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"source_id cleanup, particularly for IITM-ESM\"'
+commitMessage = '\"Register institution_id CNRM-CERFACS\"'
 
 #%% Define functions
 # Get repo metadata
@@ -268,7 +269,7 @@ institution_id = {
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy',
-    'CNRM': 'CNRM (Centre National de Recherches Meteorologiques, Meteo-France, Toulouse 31057, France), CERFACS (Centre Europeen de Recherches et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
+    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31100, France)',
     'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
@@ -375,15 +376,15 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['IITM-ESM']['atmospheric_chemistry'] = 'None'
-source_id['IITM-ESM']['land_ice'] = 'None'
-source_id['IITM-ESM']['land_surface'] = 'NOAH LSM'
-source_id['EC-Earth-3']['label'] = 'EC-Earth 3'
-source_id['EC-Earth-3-HR']['label'] = 'EC-Earth 3-HR'
-source_id['EC-Earth-3-LR']['label'] = 'EC-Earth 3-LR'
-source_id['PCMDI-test-1-0']['atmosphere'] = 'Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)'
-source_id['PCMDI-test-1-0']['ocean'] = 'BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)'
-source_id['PCMDI-test-1-0']['sea_ice'] = 'Declining1.0-warming'
+#source_id['IITM-ESM']['atmospheric_chemistry'] = 'None'
+#source_id['IITM-ESM']['land_ice'] = 'None'
+#source_id['IITM-ESM']['land_surface'] = 'NOAH LSM'
+#source_id['EC-Earth-3']['label'] = 'EC-Earth 3'
+#source_id['EC-Earth-3-HR']['label'] = 'EC-Earth 3-HR'
+#source_id['EC-Earth-3-LR']['label'] = 'EC-Earth 3-LR'
+#source_id['PCMDI-test-1-0']['atmosphere'] = 'Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)'
+#source_id['PCMDI-test-1-0']['ocean'] = 'BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)'
+#source_id['PCMDI-test-1-0']['sea_ice'] = 'Declining1.0-warming'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

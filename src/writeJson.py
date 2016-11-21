@@ -539,7 +539,7 @@ for jsonName in masterTargets:
     # If experiment_id generate revised html
     if jsonName == 'experiment_id':
         #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-        args = shlex.split('python ./json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html')
+        args = shlex.split('python ./json_to_html.py')
         p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 del(jsonName, jsonDict, outFile)

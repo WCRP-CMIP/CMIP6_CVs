@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 15:15:12 2016 -0800",
+        "creation_date":"Mon Nov 21 15:18:39 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
         "note":"source_id cleanup, particularly for IITM-ESM",
-        "previous_commit":"7429461789938be6b1bc52a572499f22e4bfccff"
+        "previous_commit":"84d4999fb2d751be0b2d5e4a3ef77bcdc5c8f3eb"
     }
 }

@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 16 15:48:29 2016 -0800",
+        "creation_date":"Thu Nov 17 11:52:53 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Add source_id VRESM-1-0",
-        "previous_commit":"b7b731d27e4bb7beaa4b5c445446196d6e1fcca7"
+        "note":"Issue130 durack1 revise grid_label (#147)",
+        "previous_commit":"ba7b9418e432008312ed4ccf54f2d30233ad952d"
     }
 }

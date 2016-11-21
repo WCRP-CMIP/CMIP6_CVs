@@ -60,6 +60,26 @@
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3"
         },
+        "EC-Earth-3-HR":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512; 91 levels; top level 1 Pa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth-3-HR",
+            "label_extended":"EC-Earth v3.2.x at high resolution",
+            "land_ice":"None",
+            "land_surface":"H-TESSEL (same version as atmosphere)",
+            "ocean":"NEMO3.6 (tripolar, 1442x1921; 75 levels; top grid cell 5m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-HR"
+        },
         "IITM-ESM":{
             "aerosol":"unnamed (prescribed MAC-v2)",
             "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
@@ -123,10 +143,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 13:12:22 2016 -0800",
+        "creation_date":"Mon Nov 21 13:33:26 2016 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"None",
-        "note":"Issue99 durack1 register source_id BNU-ESM-1-1 (#150)",
-        "previous_commit":"ba45c9e3d5f1cdcc6e76ed898db4248f014f2844"
+        "note":"Issue91 durack1 register source_id EC-EARTH-3 (#151)",
+        "previous_commit":"0963b97834d6a234994b3bbc8880b5a6087bfecc"
     }
 }

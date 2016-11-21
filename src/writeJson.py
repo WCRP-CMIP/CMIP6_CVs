@@ -84,6 +84,7 @@ PJD 21 Nov 2016    - Register source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP
 PJD 21 Nov 2016    - Register source_id EC-Earth-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/91
 PJD 21 Nov 2016    - Register source_id EC-Earth-3-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/92
 PJD 21 Nov 2016    - Register source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
+PJD 21 Nov 2016    - source_id cleanup, particularly for IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -104,7 +105,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id EC-Earth-3-LR\"'
+commitMessage = '\"source_id cleanup, particularly for IITM-ESM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -374,21 +375,15 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['EC-Earth-3-LR'] = {}
-source_id['EC-Earth-3-LR']['aerosol'] = 'None'
-source_id['EC-Earth-3-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 Pa)'
-source_id['EC-Earth-3-LR']['atmospheric_chemistry'] = 'None'
-source_id['EC-Earth-3-LR']['cohort'] = ['']
-source_id['EC-Earth-3-LR']['institution_id'] = ['EC-Earth-Consortium']
-source_id['EC-Earth-3-LR']['label'] = 'EC-Earth-3-LR'
-source_id['EC-Earth-3-LR']['label_extended'] = 'EC-Earth v3.2.x at low resolution'
-source_id['EC-Earth-3-LR']['land_ice'] = 'None'
-source_id['EC-Earth-3-LR']['land_surface'] = 'H-TESSEL (same version as atmosphere)'
-source_id['EC-Earth-3-LR']['ocean'] = 'NEMO3.6 (ORCA1: tripolar, 360x200; 75 levels; top grid cell 5m)'
-source_id['EC-Earth-3-LR']['ocean_biogeochemistry'] = 'None'
-source_id['EC-Earth-3-LR']['release_year'] = '2017'
-source_id['EC-Earth-3-LR']['sea_ice'] = 'LIM3 (same version as ocean)'
-source_id['EC-Earth-3-LR']['source_id'] = 'EC-Earth-3-LR'
+source_id['IITM-ESM']['atmospheric_chemistry'] = 'None'
+source_id['IITM-ESM']['land_ice'] = 'None'
+source_id['IITM-ESM']['land_surface'] = 'NOAH LSM'
+source_id['EC-Earth-3']['label'] = 'EC-Earth 3'
+source_id['EC-Earth-3-HR']['label'] = 'EC-Earth 3-HR'
+source_id['EC-Earth-3-LR']['label'] = 'EC-Earth 3-LR'
+source_id['PCMDI-test-1-0']['atmosphere'] = 'Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)'
+source_id['PCMDI-test-1-0']['ocean'] = 'BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)'
+source_id['PCMDI-test-1-0']['sea_ice'] = 'Declining1.0-warming'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
@@ -405,6 +400,21 @@ source_id['EC-Earth-3-LR']['source_id'] = 'EC-Earth-3-LR'
 #source_id['IITM-ESM']['release_year'] = '2015'
 #source_id['IITM-ESM']['sea_ice'] = 'SIS'
 #source_id['IITM-ESM']['source_id'] = 'IITM-ESM'
+#source_id['EC-Earth-3-LR'] = {}
+#source_id['EC-Earth-3-LR']['aerosol'] = 'None'
+#source_id['EC-Earth-3-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 Pa)'
+#source_id['EC-Earth-3-LR']['atmospheric_chemistry'] = 'None'
+#source_id['EC-Earth-3-LR']['cohort'] = ['']
+#source_id['EC-Earth-3-LR']['institution_id'] = ['EC-Earth-Consortium']
+#source_id['EC-Earth-3-LR']['label'] = 'EC-Earth-3-LR'
+#source_id['EC-Earth-3-LR']['label_extended'] = 'EC-Earth v3.2.x at low resolution'
+#source_id['EC-Earth-3-LR']['land_ice'] = 'None'
+#source_id['EC-Earth-3-LR']['land_surface'] = 'H-TESSEL (same version as atmosphere)'
+#source_id['EC-Earth-3-LR']['ocean'] = 'NEMO3.6 (ORCA1: tripolar, 360x200; 75 levels; top grid cell 5m)'
+#source_id['EC-Earth-3-LR']['ocean_biogeochemistry'] = 'None'
+#source_id['EC-Earth-3-LR']['release_year'] = '2017'
+#source_id['EC-Earth-3-LR']['sea_ice'] = 'LIM3 (same version as ocean)'
+#source_id['EC-Earth-3-LR']['source_id'] = 'EC-Earth-3-LR'
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

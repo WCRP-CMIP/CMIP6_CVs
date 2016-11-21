@@ -11,21 +11,18 @@ http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-gi
 # This script takes the json file and turns it into a nice
 # jquery/data-tabled html doc
 import json
-import sys
 
-f = open(sys.argv[1])
+# Process experiment_id
+infile = '../CMIP6_experiment_id.json'
+f = open(infile)
 dict = json.load(f)
-dict1 = dict.get(sys.argv[2]) ; # Fudge to extract duplicate level
+dict1 = dict.get('experiment_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print dict2
 #print dict.keys()
-
-if len(sys.argv) > 2:
-    fout = sys.argv[3]
-else:
-    fout = sys.argv[1][:-4] + "html"
-    fout = fout.split('/')[-1] ; # Write to local directory
-fo = open(fout, "w")
+fout = infile[:-4] + 'html'
+fout = fout.split('/')[-1] ; # Write to local directory
+fo = open(fout, 'w')
 
 print >> fo, """<html>
 <head>
@@ -60,6 +57,68 @@ for exp in dict1.keys():
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             print >> fo, "<%s><tr><th>experiment_id</th>" % hf
+            for i in ids:
+                i = i.replace('_',' ') ; # Remove '_' from table titles
+                print >>fo, "<th>%s</th>" % i
+            print >> fo, "</tr></%s>" % hf
+    first_row = True
+    print >> fo, "<tr><td>%s</td>" % exp
+    for k in ids:
+        st = exp_dict[k]
+        if isinstance(st, (list, tuple)):
+            st = " ".join(st)
+        print >> fo, "<td>%s</td>" % st
+    print >> fo, "</tr>"
+print >> fo, "</table>"
+
+print >> fo, """
+</body>
+</html>
+"""
+
+# Process source_id
+infile = '../CMIP6_source_id.json'
+f = open(infile)
+dict = json.load(f)
+dict1 = dict.get('source_id') ; # Fudge to extract duplicate level
+dict2 = dict.get('version')
+print dict2
+#print dict.keys()
+fout = infile[:-4] + 'html'
+fout = fout.split('/')[-1] ; # Write to local directory
+fo = open(fout, 'w')
+
+print >> fo, """<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable();
+    } );
+</script>
+</head>
+<body>
+<table id="table_id" class="display">"""
+
+dictOrder = [
+'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
+'release_year','cohort','sea_ice','label','institution_id','land_surface',
+'aerosol','source_id','ocean','land_ice']
+dictOrderK = [
+'institution_id','release_year','atmosphere','ocean','aerosol',
+'atmospheric_chemistry','cohort','label','label_extended','land_ice',
+'land_surface','ocean_biogeochemistry','sea_ice']
+
+first_row = False
+for exp in dict1.keys():
+    exp_dict = dict1[exp]
+    if not first_row:
+        #ids = exp_dict.keys()
+        ids = dictOrderK ; # Overwrite ordering
+        for hf in ["thead", "tfoot"]:
+            print >> fo, "<%s><tr><th>source_id</th>" % hf
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
                 print >>fo, "<th>%s</th>" % i

@@ -80,6 +80,7 @@ PJD 16 Nov 2016    - Add source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_
 PJD 17 Nov 2016    - Revise grid_label to include Antarctica and Greenland https://github.com/WCRP-CMIP/CMIP6_CVs/issues/130
 PJD 21 Nov 2016    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
 PJD 21 Nov 2016    - Revise experiment_id 1pctCO2Ndep https://github.com/WCRP-CMIP/CMIP6_CVs/issues/73
+PJD 21 Nov 2016    - Register source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -100,7 +101,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id 1pctCO2Ndep\"'
+commitMessage = '\"Register source_id BNU-ESM-1-1\"'
 
 #%% Define functions
 # Get repo metadata
@@ -172,7 +173,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['1pctCO2Ndep']['additional_allowed_model_components'] = ['AER', 'CHEM']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -371,6 +371,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['BNU-ESM-1-1'] = {}
+source_id['BNU-ESM-1-1']['aerosol'] = 'CAM-chem; semi-interactive'
+source_id['BNU-ESM-1-1']['atmosphere'] = 'CAM4 (FV, 144 x 96; 26 levels; top level 2.194 mb)'
+source_id['BNU-ESM-1-1']['atmospheric_chemistry'] = 'None'
+source_id['BNU-ESM-1-1']['cohort'] = ['']
+source_id['BNU-ESM-1-1']['institution_id'] = ['BNU']
+source_id['BNU-ESM-1-1']['label'] = 'BNU-ESM 1.1'
+source_id['BNU-ESM-1-1']['label_extended'] = 'BNU-ESM 1.1'
+source_id['BNU-ESM-1-1']['land_ice'] = 'None'
+source_id['BNU-ESM-1-1']['land_surface'] = 'CoLM version 2014 with carbon-nitrogen interactions'
+source_id['BNU-ESM-1-1']['ocean'] = 'MOM4p1 (tripolar, 360x200, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10m)'
+source_id['BNU-ESM-1-1']['ocean_biogeochemistry'] = 'Dynamic ecosystem-carbon model version 1'
+source_id['BNU-ESM-1-1']['release_year'] = '2016'
+source_id['BNU-ESM-1-1']['sea_ice'] = 'CICE4.1'
+source_id['BNU-ESM-1-1']['source_id'] = 'BNU-ESM-1-1'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

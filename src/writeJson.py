@@ -86,6 +86,7 @@ PJD 21 Nov 2016    - Register source_id EC-Earth-3-HR https://github.com/WCRP-CM
 PJD 21 Nov 2016    - Register source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
 PJD 21 Nov 2016    - source_id cleanup, particularly for IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
 PJD 21 Nov 2016    - Register institution_id CNRM-CERFACS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 28 Nov 2016    - Register source_id NorESM2-LME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/84
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -106,7 +107,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id CNRM-CERFACS\"'
+commitMessage = '\"Register source_id NorESM2-LME\"'
 
 #%% Define functions
 # Get repo metadata
@@ -376,15 +377,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-#source_id['IITM-ESM']['atmospheric_chemistry'] = 'None'
-#source_id['IITM-ESM']['land_ice'] = 'None'
-#source_id['IITM-ESM']['land_surface'] = 'NOAH LSM'
-#source_id['EC-Earth-3']['label'] = 'EC-Earth 3'
-#source_id['EC-Earth-3-HR']['label'] = 'EC-Earth 3-HR'
-#source_id['EC-Earth-3-LR']['label'] = 'EC-Earth 3-LR'
-#source_id['PCMDI-test-1-0']['atmosphere'] = 'Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)'
-#source_id['PCMDI-test-1-0']['ocean'] = 'BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)'
-#source_id['PCMDI-test-1-0']['sea_ice'] = 'Declining1.0-warming'
+source_id['NorESM2-LME'] = {}
+source_id['NorESM2-LME']['aerosol'] = 'OsloAero'
+source_id['NorESM2-LME']['atmosphere'] = 'CAM-OSLO (2 degree resolution; XX x XX; ? levels; top level ?)'
+source_id['NorESM2-LME']['atmospheric_chemistry'] = 'OsloChemSimp'
+source_id['NorESM2-LME']['cohort'] = ['']
+source_id['NorESM2-LME']['institution_id'] = ['NCC']
+source_id['NorESM2-LME']['label'] = 'NorESM2-LME'
+source_id['NorESM2-LME']['label_extended'] = 'NorESM2-LME (low atmosphere-medium ocean resolution, GHG emission driven)'
+source_id['NorESM2-LME']['land_ice'] = 'CISM'
+source_id['NorESM2-LME']['land_surface'] = 'CLM'
+source_id['NorESM2-LME']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
+source_id['NorESM2-LME']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['NorESM2-LME']['release_year'] = '2017'
+source_id['NorESM2-LME']['sea_ice'] = 'CICE'
+source_id['NorESM2-LME']['source_id'] = 'NorESM2-LME'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 15:18:39 2016 -0800",
+        "creation_date":"Mon Nov 28 13:16:32 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"None",
-        "note":"source_id cleanup, particularly for IITM-ESM",
-        "previous_commit":"b4b2967e299f4e94b7d4fa52cbe930f04f596962"
+        "latest_tag_point":"3.2.0 (21; g00fe942)",
+        "note":"Register source_id NorESM2-LME",
+        "previous_commit":"fb1cf1410a8f9a353bdb337796022af378432e8c"
     }
 }

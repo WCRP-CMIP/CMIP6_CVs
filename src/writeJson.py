@@ -546,8 +546,8 @@ for jsonName in masterTargets:
     args = shlex.split(''.join(['git commit -am ',commitMessage]))
     p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-    # If experiment_id generate revised html
-    if jsonName == 'experiment_id':
+    # If source_id generate revised html - process both experiment_id and source_id (alpha order)
+    if jsonName == 'source_id':
         #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
         args = shlex.split('python ./json_to_html.py')
         p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')

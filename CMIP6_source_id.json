@@ -140,6 +140,26 @@
             "sea_ice":"CICE",
             "source_id":"NorESM2-LME"
         },
+        "NorESM2-LMEC":{
+            "aerosol":"OsloAero",
+            "atmosphere":"CAM-OSLO (2 degree resolution; XX x XX; ? levels; top level ?)",
+            "atmospheric_chemistry":"OsloChemComp",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "NCC"
+            ],
+            "label":"NorESM2-LMEC",
+            "label_extended":"NorESM2-LMEC (low atmosphere-medium ocean resolution, GHG emission driven, complex atmospheric chemistry)",
+            "land_ice":"CISM",
+            "land_surface":"CLM",
+            "ocean":"MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)",
+            "ocean_biogeochemistry":"HAMOCC",
+            "release_year":"2017",
+            "sea_ice":"CICE",
+            "source_id":"NorESM2-LMEC"
+        },
         "NorESM2-MH":{
             "aerosol":"OsloAero",
             "atmosphere":"CAM-OSLO (XX x XX; ? levels; top level ?)",
@@ -203,10 +223,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 28 13:19:07 2016 -0800",
+        "creation_date":"Mon Nov 28 13:46:24 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue84 durack1 register source_id NorEMS2-LME (#159)",
-        "previous_commit":"38a4b57d904b5ce3ae996d365ba0f0ad4effeb34"
+        "latest_tag_point":"3.2.0 (43; ga546efb)",
+        "note":"Register source_id NorESM2-LMEC",
+        "previous_commit":"7496b8797dbe678ee748e1bb921ba31a4478ed0f"
     }
 }

@@ -551,6 +551,9 @@ for jsonName in masterTargets:
         args = shlex.split('python ./json_to_html.py')
         p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
+        args = shlex.split(''.join(['git commit -am ',commitMessage]))
+        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+        
 del(jsonName, jsonDict, outFile)
 gc.collect()
 

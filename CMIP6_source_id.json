@@ -140,6 +140,26 @@
             "sea_ice":"CICE",
             "source_id":"NorESM2-LME"
         },
+        "NorESM2-MH":{
+            "aerosol":"OsloAero",
+            "atmosphere":"CAM-OSLO (XX x XX; ? levels; top level ?)",
+            "atmospheric_chemistry":"OsloChemSimp",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "NCC"
+            ],
+            "label":"NorESM2-MH",
+            "label_extended":"NorESM2-MH",
+            "land_ice":"CISM",
+            "land_surface":"CLM",
+            "ocean":"MICOM (XX x XX; ? levels; top grid cell ?)",
+            "ocean_biogeochemistry":"HAMOCC",
+            "release_year":"2017",
+            "sea_ice":"CICE",
+            "source_id":"NorESM2-MH"
+        },
         "PCMDI-test-1-0":{
             "aerosol":"None",
             "atmosphere":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
@@ -183,10 +203,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 28 13:16:32 2016 -0800",
+        "creation_date":"Mon Nov 28 13:19:07 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (26; g0f8a3ab)",
-        "note":"Register source_id NorESM2-LME",
-        "previous_commit":"fb1cf1410a8f9a353bdb337796022af378432e8c"
+        "latest_tag_point":"note: ",
+        "note":"Issue84 durack1 register source_id NorEMS2-LME (#159)",
+        "previous_commit":"38a4b57d904b5ce3ae996d365ba0f0ad4effeb34"
     }
 }

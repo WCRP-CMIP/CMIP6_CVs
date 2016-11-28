@@ -12,7 +12,7 @@
         "further_info_url",
         "grid",
         "grid_label",
-        "grid_resolution",
+        "nominal_resolution",
         "initialization_index",
         "institution",
         "institution_id",

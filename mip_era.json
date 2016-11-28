@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 15:18:39 2016 -0800",
+        "creation_date":"Mon Nov 21 15:33:10 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"None",
-        "note":"source_id cleanup, particularly for IITM-ESM",
-        "previous_commit":"8cd2c109a58199df7bbc14385995d7a9e3f68753"
+        "latest_tag_point":"3.2.0 (16; gb4dfc75)",
+        "note":"Register institution_id CNRM-CERFACS",
+        "previous_commit":"8c0cac98287adacf44e5e575cb0d12f04bbe6363"
     }
 }

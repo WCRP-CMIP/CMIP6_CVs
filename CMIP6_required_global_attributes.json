@@ -12,7 +12,7 @@
         "further_info_url",
         "grid",
         "grid_label",
-        "nominal_resolution",
+        "grid_resolution",
         "initialization_index",
         "institution",
         "institution_id",
@@ -34,11 +34,11 @@
         "variant_label"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 21 15:18:39 2016 -0800",
+        "author":"Denis Nadeau <dnadeau4@users.noreply.github.com>",
+        "creation_date":"Mon Nov 28 10:47:14 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"None",
-        "note":"source_id cleanup, particularly for IITM-ESM",
-        "previous_commit":"11746935e85287a667338a2b0bc442adec94e4ed"
+        "latest_tag_point":"3.2.0 (16; gb4dfc75)",
+        "note":"change grid_resolution to nominal_resolution (#158)",
+        "previous_commit":"81cd6580b6aaf7a536074ee72e045a0c155b7d93"
     }
 }

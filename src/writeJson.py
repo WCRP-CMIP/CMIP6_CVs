@@ -87,6 +87,7 @@ PJD 21 Nov 2016    - Register source_id EC-Earth-3-LR https://github.com/WCRP-CM
 PJD 21 Nov 2016    - source_id cleanup, particularly for IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
 PJD 21 Nov 2016    - Register institution_id CNRM-CERFACS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
 PJD 28 Nov 2016    - Register source_id NorESM2-LME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/84
+PJD 28 Nov 2016    - Register source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/85
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -107,7 +108,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id NorESM2-LME\"'
+commitMessage = '\"Register source_id NorESM2-MH\"'
 
 #%% Define functions
 # Get repo metadata
@@ -377,21 +378,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-LME'] = {}
-source_id['NorESM2-LME']['aerosol'] = 'OsloAero'
-source_id['NorESM2-LME']['atmosphere'] = 'CAM-OSLO (2 degree resolution; XX x XX; ? levels; top level ?)'
-source_id['NorESM2-LME']['atmospheric_chemistry'] = 'OsloChemSimp'
-source_id['NorESM2-LME']['cohort'] = ['']
-source_id['NorESM2-LME']['institution_id'] = ['NCC']
-source_id['NorESM2-LME']['label'] = 'NorESM2-LME'
-source_id['NorESM2-LME']['label_extended'] = 'NorESM2-LME (low atmosphere-medium ocean resolution, GHG emission driven)'
-source_id['NorESM2-LME']['land_ice'] = 'CISM'
-source_id['NorESM2-LME']['land_surface'] = 'CLM'
-source_id['NorESM2-LME']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
-source_id['NorESM2-LME']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['NorESM2-LME']['release_year'] = '2017'
-source_id['NorESM2-LME']['sea_ice'] = 'CICE'
-source_id['NorESM2-LME']['source_id'] = 'NorESM2-LME'
+source_id['NorESM2-MH'] = {}
+source_id['NorESM2-MH']['aerosol'] = 'OsloAero'
+source_id['NorESM2-MH']['atmosphere'] = 'CAM-OSLO (XX x XX; ? levels; top level ?)'
+source_id['NorESM2-MH']['atmospheric_chemistry'] = 'OsloChemSimp'
+source_id['NorESM2-MH']['cohort'] = ['']
+source_id['NorESM2-MH']['institution_id'] = ['NCC']
+source_id['NorESM2-MH']['label'] = 'NorESM2-MH'
+source_id['NorESM2-MH']['label_extended'] = 'NorESM2-MH'
+source_id['NorESM2-MH']['land_ice'] = 'CISM'
+source_id['NorESM2-MH']['land_surface'] = 'CLM'
+source_id['NorESM2-MH']['ocean'] = 'MICOM (XX x XX; ? levels; top grid cell ?)'
+source_id['NorESM2-MH']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['NorESM2-MH']['release_year'] = '2017'
+source_id['NorESM2-MH']['sea_ice'] = 'CICE'
+source_id['NorESM2-MH']['source_id'] = 'NorESM2-MH'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
@@ -550,6 +551,9 @@ for jsonName in masterTargets:
         args = shlex.split('python ./json_to_html.py')
         p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
+        args = shlex.split(''.join(['git commit -am ',commitMessage]))
+        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+        
 del(jsonName, jsonDict, outFile)
 gc.collect()
 

@@ -5770,7 +5770,7 @@
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "creation_date":"Mon Nov 28 16:23:22 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (36; g35ef766)",
+        "latest_tag_point":"3.2.0 (37; gfe96d50)",
         "note":"Register source_id NorESM2-LM",
         "previous_commit":"11ab8ef898820a820afd1fee6d7bf7d9e0e501df"
     }

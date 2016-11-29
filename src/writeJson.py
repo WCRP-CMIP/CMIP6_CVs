@@ -122,6 +122,10 @@ def getFileHistory(filePath):
     if versionInfo == None:
         return None
     else:
+        # print results
+        #for count in range(0,len(versionInfo)):
+        #    print count,versionInfo[count]
+
         version_metadata = {}
         version_metadata['author'] = versionInfo[4].replace('author: ','')
         version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
@@ -129,6 +133,8 @@ def getFileHistory(filePath):
         version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
         version_metadata['note'] = versionInfo[1].replace('note: ','')
         version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
+
+        #print version_metadata
 
         return version_metadata
 

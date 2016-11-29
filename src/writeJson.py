@@ -91,6 +91,7 @@ PJD 28 Nov 2016    - Register source_id NorESM2-MH https://github.com/WCRP-CMIP/
 PJD 28 Nov 2016    - Register source_id NorESM2-LMEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/86
 PJD 28 Nov 2016    - Register source_id NorESM2-HH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/87
 PJD 28 Nov 2016    - Register source_id NorESM2-MM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/88
+PJD 28 Nov 2016    - Register source_id NorESM2-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -111,7 +112,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id NorESM2-MM\"'
+commitMessage = '\"Register source_id NorESM2-LM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -121,6 +122,10 @@ def getFileHistory(filePath):
     if versionInfo == None:
         return None
     else:
+        # print results
+        #for count in range(0,len(versionInfo)):
+        #    print count,versionInfo[count]
+
         version_metadata = {}
         version_metadata['author'] = versionInfo[4].replace('author: ','')
         version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
@@ -128,6 +133,8 @@ def getFileHistory(filePath):
         version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
         version_metadata['note'] = versionInfo[1].replace('note: ','')
         version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
+
+        #print version_metadata
 
         return version_metadata
 
@@ -381,21 +388,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-MM'] = {}
-source_id['NorESM2-MM']['aerosol'] = 'OsloAero'
-source_id['NorESM2-MM']['atmosphere'] = 'CAM-OSLO (1 degree resolution; XX x XX; ? levels; top level ?)'
-source_id['NorESM2-MM']['atmospheric_chemistry'] = 'OsloChemSimp'
-source_id['NorESM2-MM']['cohort'] = ['']
-source_id['NorESM2-MM']['institution_id'] = ['NCC']
-source_id['NorESM2-MM']['label'] = 'NorESM2-MM'
-source_id['NorESM2-MM']['label_extended'] = 'NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)'
-source_id['NorESM2-MM']['land_ice'] = 'CISM'
-source_id['NorESM2-MM']['land_surface'] = 'CLM'
-source_id['NorESM2-MM']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
-source_id['NorESM2-MM']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['NorESM2-MM']['release_year'] = '2017'
-source_id['NorESM2-MM']['sea_ice'] = 'CICE'
-source_id['NorESM2-MM']['source_id'] = 'NorESM2-MM'
+source_id['NorESM2-LM'] = {}
+source_id['NorESM2-LM']['aerosol'] = 'OsloAero'
+source_id['NorESM2-LM']['atmosphere'] = 'CAM-OSLO (2 degree resolution; XX x XX; ? levels; top level ?)'
+source_id['NorESM2-LM']['atmospheric_chemistry'] = 'OsloChemSimp'
+source_id['NorESM2-LM']['cohort'] = ['']
+source_id['NorESM2-LM']['institution_id'] = ['NCC']
+source_id['NorESM2-LM']['label'] = 'NorESM2-LM'
+source_id['NorESM2-LM']['label_extended'] = 'NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)'
+source_id['NorESM2-LM']['land_ice'] = 'CISM'
+source_id['NorESM2-LM']['land_surface'] = 'CLM'
+source_id['NorESM2-LM']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
+source_id['NorESM2-LM']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['NorESM2-LM']['release_year'] = '2018'
+source_id['NorESM2-LM']['sea_ice'] = 'CICE'
+source_id['NorESM2-LM']['source_id'] = 'NorESM2-LM'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

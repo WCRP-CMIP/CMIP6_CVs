@@ -381,21 +381,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-HH'] = {}
-source_id['NorESM2-HH']['aerosol'] = 'OsloAero'
-source_id['NorESM2-HH']['atmosphere'] = 'CAM-OSLO (0.25 degree resolution; XX x XX; ? levels; top level ?)'
-source_id['NorESM2-HH']['atmospheric_chemistry'] = 'OsloChemSimp'
-source_id['NorESM2-HH']['cohort'] = ['']
-source_id['NorESM2-HH']['institution_id'] = ['NCC']
-source_id['NorESM2-HH']['label'] = 'NorESM2-HH'
-source_id['NorESM2-HH']['label_extended'] = 'NorESM2-HH (high atmosphere-high ocean resolution, GHG concentration driven)'
-source_id['NorESM2-HH']['land_ice'] = 'CISM'
-source_id['NorESM2-HH']['land_surface'] = 'CLM'
-source_id['NorESM2-HH']['ocean'] = 'MICOM (0.25 degree resolution; XX x XX; ? levels; top grid cell ?)'
-source_id['NorESM2-HH']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['NorESM2-HH']['release_year'] = '2018'
-source_id['NorESM2-HH']['sea_ice'] = 'CICE'
-source_id['NorESM2-HH']['source_id'] = 'NorESM2-HH'
+source_id['NorESM2-MM'] = {}
+source_id['NorESM2-MM']['aerosol'] = 'OsloAero'
+source_id['NorESM2-MM']['atmosphere'] = 'CAM-OSLO (1 degree resolution; XX x XX; ? levels; top level ?)'
+source_id['NorESM2-MM']['atmospheric_chemistry'] = 'OsloChemSimp'
+source_id['NorESM2-MM']['cohort'] = ['']
+source_id['NorESM2-MM']['institution_id'] = ['NCC']
+source_id['NorESM2-MM']['label'] = 'NorESM2-MM'
+source_id['NorESM2-MM']['label_extended'] = 'NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)'
+source_id['NorESM2-MM']['land_ice'] = 'CISM'
+source_id['NorESM2-MM']['land_surface'] = 'CLM'
+source_id['NorESM2-MM']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
+source_id['NorESM2-MM']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['NorESM2-MM']['release_year'] = '2017'
+source_id['NorESM2-MM']['sea_ice'] = 'CICE'
+source_id['NorESM2-MM']['source_id'] = 'NorESM2-MM'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

@@ -92,6 +92,7 @@ PJD 28 Nov 2016    - Register source_id NorESM2-LMEC https://github.com/WCRP-CMI
 PJD 28 Nov 2016    - Register source_id NorESM2-HH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/87
 PJD 28 Nov 2016    - Register source_id NorESM2-MM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/88
 PJD 28 Nov 2016    - Register source_id NorESM2-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
+PJD 28 Nov 2016    - Revise multiple source_id NorESM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -112,7 +113,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id NorESM2-LM\"'
+commitMessage = '\"Revise numerous NorESM source_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -358,12 +359,12 @@ required_global_attributes = [
     'further_info_url',
     'grid',
     'grid_label',
-    'grid_resolution',
     'initialization_index',
     'institution',
     'institution_id',
     'license',
     'mip_era',
+    'nominal_resolution',
     'physics_index',
     'product',
     'realization_index',
@@ -388,21 +389,20 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-LM'] = {}
-source_id['NorESM2-LM']['aerosol'] = 'OsloAero'
-source_id['NorESM2-LM']['atmosphere'] = 'CAM-OSLO (2 degree resolution; XX x XX; ? levels; top level ?)'
-source_id['NorESM2-LM']['atmospheric_chemistry'] = 'OsloChemSimp'
-source_id['NorESM2-LM']['cohort'] = ['']
-source_id['NorESM2-LM']['institution_id'] = ['NCC']
-source_id['NorESM2-LM']['label'] = 'NorESM2-LM'
-source_id['NorESM2-LM']['label_extended'] = 'NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)'
-source_id['NorESM2-LM']['land_ice'] = 'CISM'
-source_id['NorESM2-LM']['land_surface'] = 'CLM'
-source_id['NorESM2-LM']['ocean'] = 'MICOM (1 degree resolution; XX x XX; ? levels; top grid cell ?)'
-source_id['NorESM2-LM']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['NorESM2-LM']['release_year'] = '2018'
-source_id['NorESM2-LM']['sea_ice'] = 'CICE'
-source_id['NorESM2-LM']['source_id'] = 'NorESM2-LM'
+source_id['NorESM2-LM']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
+source_id['NorESM2-LME']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
+source_id['NorESM2-LMEC']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
+source_id['NorESM2-MM']['atmosphere'] = 'CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)'
+source_id['NorESM2-MH']['atmosphere'] = 'CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)'
+source_id['NorESM2-HH']['atmosphere'] = 'CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)'
+source_id['NorESM2-LM']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-LME']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-LMEC']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-MM']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-MH']['ocean'] = 'MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-HH']['ocean'] = 'MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+source_id['NorESM2-LM']['release_year'] = '2017'
+
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

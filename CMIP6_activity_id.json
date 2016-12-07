@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 30 10:27:43 2016 -0800",
+        "creation_date":"Wed Dec 7 14:15:08 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (37; g45f9608)",
-        "note":"Revise numerous NorESM source_ids",
-        "previous_commit":"cf8bb0011998e4d6b9c404cf24665eb7945d0432"
+        "latest_tag_point":"3.2.0 (38; g86b27ea)",
+        "note":"Update activity_id for experiment_id ssp370",
+        "previous_commit":"7bbef3c3ffed734a7638d9fc443cd2aafe3878cf"
     }
 }

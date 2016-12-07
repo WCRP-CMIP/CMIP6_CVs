@@ -12,6 +12,8 @@ Some support for CMIP participating modeling groups is available: pcmdi-cmip@lln
 
 To view the current `experiment_id` entries point your browser to [CMIP6_experiment_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_experiment_id.html)
 
+To view the current `institution_id` entries point your browser to [CMIP6_institution_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_institution_id.html)
+
 To view the current `source_id` entries point your browser to [CMIP6_source_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_source_id.html)
 
 The CVs build on logic that is described in the [CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV’s](https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit) working document.

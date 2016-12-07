@@ -5021,8 +5021,8 @@
         },
         "ssp370":{
             "activity_id":[
-                "AerChemMIP",
-                "ScenarioMIP"
+                "ScenarioMIP",
+                "AerChemMIP"
             ],
             "additional_allowed_model_components":[
                 "AER",
@@ -5768,10 +5768,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 30 10:27:43 2016 -0800",
+        "creation_date":"Wed Nov 30 10:31:29 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (38; gd2e08a0)",
-        "note":"Revise numerous NorESM source_ids",
-        "previous_commit":"ca78327949157ae912c0bfaaf5df5c832ce4c39a"
+        "latest_tag_point":"note: ",
+        "note":"Issue156 durack1 revise source_id NorESM various (#167)",
+        "previous_commit":"b6f52dd9ab868fdf3281fc46355d5fab1bd158b9"
     }
 }

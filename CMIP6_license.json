@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 7 14:23:42 2016 -0800",
+        "creation_date":"Wed Dec 7 14:25:14 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (44; g15a0290)",
-        "note":"Add experiment_id 1pctCO2-4xext",
-        "previous_commit":"d22161693b86abf1a7ae6cfced8aeddb1bc7d984"
+        "latest_tag_point":"note: ",
+        "note":"Issue170 durack1 add experiment_id 1pctCO2-4xext (#174)",
+        "previous_commit":"83ab9aab881e40dbd8c3a744de468e58bad578c1"
     }
 }

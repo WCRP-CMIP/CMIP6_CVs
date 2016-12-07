@@ -76,6 +76,57 @@ print >> fo, """
 </html>
 """
 
+# Process institution_id
+infile = '../CMIP6_institution_id.json'
+f = open(infile)
+dict = json.load(f)
+dict1 = dict.get('institution_id') ; # Fudge to extract duplicate level
+dict2 = dict.get('version')
+print dict2
+#print dict.keys()
+fout = infile[:-4] + 'html'
+fout = fout.split('/')[-1] ; # Write to local directory
+fo = open(fout, 'w')
+
+print >> fo, """<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable();
+    } );
+</script>
+</head>
+<body>
+<table id="table_id" class="display">"""
+
+dictOrder = [
+'institution_id'
+]
+
+first_row = False
+for exp in dict1.keys():
+    exp_dict = dict1[exp]
+    if not first_row:
+        ids = dictOrder ; # Overwrite ordering
+        for hf in ["thead", "tfoot"]:
+            print >> fo, "<%s><tr><th>institution_id</th>" % hf
+            for i in ids:
+                print >>fo, "<th>Description</th>"
+            print >> fo, "</tr></%s>" % hf
+    first_row = True
+    print >> fo, "<tr><td>%s</td>" % exp
+    print >> fo, "<td>%s</td>" % exp_dict
+    print >> fo, "</tr>"
+print >> fo, "</table>"
+
+print >> fo, """
+</body>
+</html>
+"""
+
 # Process source_id
 infile = '../CMIP6_source_id.json'
 f = open(infile)

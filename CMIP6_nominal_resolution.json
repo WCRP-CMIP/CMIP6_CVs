@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 7 14:15:09 2016 -0800",
+        "creation_date":"Wed Dec 7 14:23:42 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (45; ge6f2b45)",
-        "note":"Update activity_id for experiment_id ssp370",
-        "previous_commit":"ab5671f69e5b02bf470d344227095fe892b8422a"
+        "latest_tag_point":"3.2.0 (46; g8311161)",
+        "note":"Add experiment_id 1pctCO2-4xext",
+        "previous_commit":"5a40b56356c8df3d0cd3a7e0c43d0a7c81717341"
     }
 }

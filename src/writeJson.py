@@ -94,6 +94,7 @@ PJD 28 Nov 2016    - Register source_id NorESM2-MM https://github.com/WCRP-CMIP/
 PJD 28 Nov 2016    - Register source_id NorESM2-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
 PJD 28 Nov 2016    - Revise multiple source_id NorESM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
 PJD  7 Dec 2016    - Update activity_id for experiment_id ssp370 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/169#issuecomment-264726036
+PJD  7 Dec 2016    - Add experiment_id 1pctCO2-4xext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/170
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -114,7 +115,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update activity_id for experiment_id ssp370\"'
+commitMessage = '\"Add experiment_id 1pctCO2-4xext\"'
 
 #%% Define functions
 # Get repo metadata
@@ -192,7 +193,20 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['ssp370']['activity_id'] = ['ScenarioMIP', 'AerChemMIP']
+experiment_id['1pctCO2-4xext'] = {}
+experiment_id['1pctCO2-4xext']['activity_id'] = ['ISMIP6']
+experiment_id['1pctCO2-4xext']['additional_allowed_model_components'] = ['AER', 'CHEM', 'BGC']
+experiment_id['1pctCO2-4xext']['description'] = 'branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration'
+experiment_id['1pctCO2-4xext']['end_year'] = ''
+experiment_id['1pctCO2-4xext']['experiment'] = 'extension from year 140 of 1pctCO2 with 4xCO2'
+experiment_id['1pctCO2-4xext']['min_number_yrs_per_sim'] = '210'
+experiment_id['1pctCO2-4xext']['parent_activity_id'] = ['CMIP']
+experiment_id['1pctCO2-4xext']['parent_experiment_id'] = ['1pctCO2']
+experiment_id['1pctCO2-4xext']['required_model_components'] = ['AOGCM']
+experiment_id['1pctCO2-4xext']['start_year'] = ''
+experiment_id['1pctCO2-4xext']['sub_experiment'] = 'none'
+experiment_id['1pctCO2-4xext']['sub_experiment_id'] = 'none'
+experiment_id['1pctCO2-4xext']['tier'] = '1'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

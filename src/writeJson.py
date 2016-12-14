@@ -96,6 +96,7 @@ PJD 28 Nov 2016    - Revise multiple source_id NorESM* https://github.com/WCRP-C
 PJD  7 Dec 2016    - Update activity_id for experiment_id ssp370 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/169#issuecomment-264726036
 PJD  7 Dec 2016    - Add experiment_id 1pctCO2-4xext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/170
 PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_CVs/issues/172
+PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -116,7 +117,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add institution_id html output\"'
+commitMessage = '\"Add frequency_id 1hr\"'
 
 #%% Define functions
 # Get repo metadata
@@ -194,20 +195,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['1pctCO2-4xext'] = {}
-experiment_id['1pctCO2-4xext']['activity_id'] = ['ISMIP6']
-experiment_id['1pctCO2-4xext']['additional_allowed_model_components'] = ['AER', 'CHEM', 'BGC']
-experiment_id['1pctCO2-4xext']['description'] = 'branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration'
-experiment_id['1pctCO2-4xext']['end_year'] = ''
-experiment_id['1pctCO2-4xext']['experiment'] = 'extension from year 140 of 1pctCO2 with 4xCO2'
-experiment_id['1pctCO2-4xext']['min_number_yrs_per_sim'] = '210'
-experiment_id['1pctCO2-4xext']['parent_activity_id'] = ['CMIP']
-experiment_id['1pctCO2-4xext']['parent_experiment_id'] = ['1pctCO2']
-experiment_id['1pctCO2-4xext']['required_model_components'] = ['AOGCM']
-experiment_id['1pctCO2-4xext']['start_year'] = ''
-experiment_id['1pctCO2-4xext']['sub_experiment'] = 'none'
-experiment_id['1pctCO2-4xext']['sub_experiment_id'] = 'none'
-experiment_id['1pctCO2-4xext']['tier'] = '1'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -232,6 +219,7 @@ experiment_id['1pctCO2-4xext']['tier'] = '1'
 
 #%% Frequencies
 frequency = [
+    '1hr',
     '1hrClimMon',
     '3hr',
     '3hrClim',
@@ -406,20 +394,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-LM']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
-source_id['NorESM2-LME']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
-source_id['NorESM2-LMEC']['atmosphere'] = 'CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
-source_id['NorESM2-MM']['atmosphere'] = 'CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)'
-source_id['NorESM2-MH']['atmosphere'] = 'CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)'
-source_id['NorESM2-HH']['atmosphere'] = 'CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)'
-source_id['NorESM2-LM']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-LME']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-LMEC']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-MM']['ocean'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-MH']['ocean'] = 'MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-HH']['ocean'] = 'MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id['NorESM2-LM']['release_year'] = '2017'
-
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

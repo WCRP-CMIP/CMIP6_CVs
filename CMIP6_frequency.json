@@ -1,5 +1,6 @@
 {
     "frequency":[
+        "1hr",
         "1hrClimMon",
         "3hr",
         "3hrClim",
@@ -14,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 7 14:43:08 2016 -0800",
+        "creation_date":"Wed Dec 14 11:10:47 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (42; gbc13341)",
-        "note":"Add institution_id html output",
-        "previous_commit":"6613452930b0907dd0e00ba2d0bc511a4743204c"
+        "latest_tag_point":"3.2.0 (44; g0319393)",
+        "note":"Add frequency_id 1hr",
+        "previous_commit":"08d48a3089e217f55b9b48f8b7d50a1481a41a51"
     }
 }

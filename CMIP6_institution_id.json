@@ -29,10 +29,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 14 11:10:47 2016 -0800",
+        "creation_date":"Wed Dec 14 15:49:55 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (46; g580f263)",
-        "note":"Add frequency_id 1hr",
-        "previous_commit":"05b9d5e504713ec72988e6e6858a6cbadf336ec8"
+        "latest_tag_point":"3.2.0 (47; g117717c)",
+        "note":"Add GISS-E2-1 variants",
+        "previous_commit":"009c1a1ac38b34816a63a930474a9967bd2f253b"
     }
 }

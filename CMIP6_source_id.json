@@ -100,6 +100,46 @@
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3-LR"
         },
+        "GISS-E2-1G":{
+            "aerosol":"varies with physics-version (p==1 None, p==3 OMA, p==4 TOMAS, p==5 MATRIX) ",
+            "atmosphere":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
+            "atmospheric_chemistry":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "NASA-GISS"
+            ],
+            "label":"GISS-E2.1G",
+            "label_extended":"GISS-E2.1G",
+            "land_ice":"Fixed",
+            "land_surface":"GISS LSM",
+            "ocean":"GISS Ocean (1 deg latitude/longitude; 32 levels; top grid cell 0-10m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"GISS SI",
+            "source_id":"GISS-E2-1G"
+        },
+        "GISS-E2-1H":{
+            "aerosol":"varies with physics-version (p==1 None, p==3 OMA, p==4 TOMAS, p==5 MATRIX) ",
+            "atmosphere":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
+            "atmospheric_chemistry":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "NASA-GISS"
+            ],
+            "label":"GISS-E2.1H",
+            "label_extended":"GISS-E2.1H",
+            "land_ice":"Fixed",
+            "land_surface":"GISS LSM",
+            "ocean":"HYCOM Ocean (tripolar grid; ~1 deg latitude/longitude; 26 levels; top grid cell 0-10m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"GISS SI",
+            "source_id":"GISS-E2-1H"
+        },
         "IITM-ESM":{
             "aerosol":"unnamed (prescribed MAC-v2)",
             "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
@@ -283,10 +323,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 14 11:10:47 2016 -0800",
+        "creation_date":"Wed Dec 14 11:12:31 2016 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (52; g5eacd94)",
-        "note":"Add frequency_id 1hr",
-        "previous_commit":"5cb48342bc2d78d4fe6bbfb3284eb805dcf3ccc7"
+        "latest_tag_point":"note: ",
+        "note":"Issue178 durack1 frequency_id add 1hr (#180)",
+        "previous_commit":"37141aa636305871c68c5537527b4908c683f6fe"
     }
 }

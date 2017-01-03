@@ -102,6 +102,7 @@ PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_
 PJD  3 Jan 2017    - Update source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
 PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/94
 PJD  3 Jan 2017    - Register source_ids HadGEM3*4 and UKESM1*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
+PJD  3 Jan 2017    - Revise CMIP6 license text https://github.com/WCRP-CMIP/CMIP6_CVs/issues/133
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -122,7 +123,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_ids HadGEM3 and UKESM1\"'
+commitMessage = '\"Revise CMIP6 license text\"'
 
 #%% Define functions
 # Get repo metadata
@@ -319,7 +320,7 @@ institution_id = {
 
 #%% CMIP6 License
 license = [
-    'CMIP6 model data produced by <YourCentreName> is licensed under a Creative Commons Attribution "[*] Share Alike" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data should be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/citation.html. [Permissions beyond the scope of this license may be available at <some URL maintained by modeling group>.] Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in data files)[and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
+    'CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution “[NonCommercial] Share Alike” 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data has to be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
 ]
 
 #%% MIP eras
@@ -400,96 +401,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['HadGEM3-GC31-HH'] = {}
-source_id['HadGEM3-GC31-HH']['aerosol'] = 'UKCA-GLOMAP-mode'
-source_id['HadGEM3-GC31-HH']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)'
-source_id['HadGEM3-GC31-HH']['atmospheric_chemistry'] = 'None'
-source_id['HadGEM3-GC31-HH']['cohort'] = ['']
-source_id['HadGEM3-GC31-HH']['institution_id'] = ['MOHC']
-source_id['HadGEM3-GC31-HH']['label'] = 'HadGEM3-GC31-HH'
-source_id['HadGEM3-GC31-HH']['label_extended'] = 'HadGEM3-GC3.1-N512ORCA12'
-source_id['HadGEM3-GC31-HH']['land_ice'] = 'None'
-source_id['HadGEM3-GC31-HH']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['HadGEM3-GC31-HH']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg latitude/longitude; 75 levels; top grid cell 0-1m)'
-source_id['HadGEM3-GC31-HH']['ocean_biogeochemistry'] = 'None'
-source_id['HadGEM3-GC31-HH']['release_year'] = '2016'
-source_id['HadGEM3-GC31-HH']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg latitude/longitude)'
-source_id['HadGEM3-GC31-HH']['source_id'] = 'HadGEM3-GC31-HH'
-source_id['HadGEM3-GC31-HM'] = {}
-source_id['HadGEM3-GC31-HM']['aerosol'] = 'UKCA-GLOMAP-mode'
-source_id['HadGEM3-GC31-HM']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)'
-source_id['HadGEM3-GC31-HM']['atmospheric_chemistry'] = 'None'
-source_id['HadGEM3-GC31-HM']['cohort'] = ['']
-source_id['HadGEM3-GC31-HM']['institution_id'] = ['MOHC']
-source_id['HadGEM3-GC31-HM']['label'] = 'HadGEM3-GC31-HM'
-source_id['HadGEM3-GC31-HM']['label_extended'] = 'HadGEM3-GC3.1-N512ORCA025'
-source_id['HadGEM3-GC31-HM']['land_ice'] = 'None'
-source_id['HadGEM3-GC31-HM']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['HadGEM3-GC31-HM']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)'
-source_id['HadGEM3-GC31-HM']['ocean_biogeochemistry'] = 'None'
-source_id['HadGEM3-GC31-HM']['release_year'] = '2016'
-source_id['HadGEM3-GC31-HM']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)'
-source_id['HadGEM3-GC31-HM']['source_id'] = 'HadGEM3-GC31-HM'
-source_id['HadGEM3-GC31-LL'] = {}
-source_id['HadGEM3-GC31-LL']['aerosol'] = 'UKCA-GLOMAP-mode'
-source_id['HadGEM3-GC31-LL']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)'
-source_id['HadGEM3-GC31-LL']['atmospheric_chemistry'] = 'None'
-source_id['HadGEM3-GC31-LL']['cohort'] = ['']
-source_id['HadGEM3-GC31-LL']['institution_id'] = ['MOHC']
-source_id['HadGEM3-GC31-LL']['label'] = 'HadGEM3-GC31-LL'
-source_id['HadGEM3-GC31-LL']['label_extended'] = 'HadGEM3-GC3.1-N96ORCA1'
-source_id['HadGEM3-GC31-LL']['land_ice'] = 'None'
-source_id['HadGEM3-GC31-LL']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['HadGEM3-GC31-LL']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 0-1m)'
-source_id['HadGEM3-GC31-LL']['ocean_biogeochemistry'] = 'None'
-source_id['HadGEM3-GC31-LL']['release_year'] = '2016'
-source_id['HadGEM3-GC31-LL']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg latitude/longitude)'
-source_id['HadGEM3-GC31-LL']['source_id'] = 'HadGEM3-GC31-LL'
-source_id['HadGEM3-GC31-MM'] = {}
-source_id['HadGEM3-GC31-MM']['aerosol'] = 'UKCA-GLOMAP-mode'
-source_id['HadGEM3-GC31-MM']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)'
-source_id['HadGEM3-GC31-MM']['atmospheric_chemistry'] = 'None'
-source_id['HadGEM3-GC31-MM']['cohort'] = ['']
-source_id['HadGEM3-GC31-MM']['institution_id'] = ['MOHC']
-source_id['HadGEM3-GC31-MM']['label'] = 'HadGEM3-GC31-MM'
-source_id['HadGEM3-GC31-MM']['label_extended'] = 'HadGEM3-GC3.1-N216ORCA025'
-source_id['HadGEM3-GC31-MM']['land_ice'] = 'None'
-source_id['HadGEM3-GC31-MM']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['HadGEM3-GC31-MM']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)'
-source_id['HadGEM3-GC31-MM']['ocean_biogeochemistry'] = 'None'
-source_id['HadGEM3-GC31-MM']['release_year'] = '2016'
-source_id['HadGEM3-GC31-MM']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)'
-source_id['HadGEM3-GC31-MM']['source_id'] = 'HadGEM3-GC31-MM'
-source_id['UKESM1-0-LL'] = {}
-source_id['UKESM1-0-LL']['aerosol'] = 'UKCA-GLOMAP-mode'
-source_id['UKESM1-0-LL']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)'
-source_id['UKESM1-0-LL']['atmospheric_chemistry'] = 'UKCA-StratTrop'
-source_id['UKESM1-0-LL']['cohort'] = ['']
-source_id['UKESM1-0-LL']['institution_id'] = ['MOHC', 'NERC']
-source_id['UKESM1-0-LL']['label'] = 'UKESM1.0-LL'
-source_id['UKESM1-0-LL']['label_extended'] = 'UKESM1.0-N96ORCA1'
-source_id['UKESM1-0-LL']['land_ice'] = 'BISICLES (only active in ISMIP experiments)'
-source_id['UKESM1-0-LL']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['UKESM1-0-LL']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 0-1m)'
-source_id['UKESM1-0-LL']['ocean_biogeochemistry'] = 'MEDUSA2'
-source_id['UKESM1-0-LL']['release_year'] = '2017'
-source_id['UKESM1-0-LL']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg latitude/longitude)'
-source_id['UKESM1-0-LL']['source_id'] = 'UKESM1-0-LL'
-source_id['UKESM1-0-MMh'] = {}
-source_id['UKESM1-0-MMh']['aerosol'] = 'UKCA-GLOMAP-mode (horizontal resolution degraded relative to that used for atmosphere physics)'
-source_id['UKESM1-0-MMh']['atmosphere'] = 'MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)'
-source_id['UKESM1-0-MMh']['atmospheric_chemistry'] = 'UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)'
-source_id['UKESM1-0-MMh']['cohort'] = ['']
-source_id['UKESM1-0-MMh']['institution_id'] = ['MOHC', 'NERC']
-source_id['UKESM1-0-MMh']['label'] = 'UKESM1.0-MMh'
-source_id['UKESM1-0-MMh']['label_extended'] = 'UKESM1.0-N216ORCA025hybrid'
-source_id['UKESM1-0-MMh']['land_ice'] = 'BISICLES (only active in ISMIP experiments)'
-source_id['UKESM1-0-MMh']['land_surface'] = 'JULES-HadGEM3-GL7.1'
-source_id['UKESM1-0-MMh']['ocean'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)'
-source_id['UKESM1-0-MMh']['ocean_biogeochemistry'] = 'MEDUSA2 (horizontal resolution degraded relative to that used for ocean physics)'
-source_id['UKESM1-0-MMh']['release_year'] = '2018'
-source_id['UKESM1-0-MMh']['sea_ice'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)'
-source_id['UKESM1-0-MMh']['source_id'] = 'UKESM1-0-MMh'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

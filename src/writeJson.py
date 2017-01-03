@@ -98,6 +98,7 @@ PJD  7 Dec 2016    - Add experiment_id 1pctCO2-4xext https://github.com/WCRP-CMI
 PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_CVs/issues/172
 PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
 PJD 14 Dec 2016    - Add source_id GISS-E2-1 variants https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/183
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -118,7 +119,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add GISS-E2-1 variants\"'
+commitMessage = '\"Register institution_id NERC\"'
 
 #%% Define functions
 # Get repo metadata
@@ -305,6 +306,7 @@ institution_id = {
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
     'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80307, USA',
     'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349),MET-Norway (Norwegian Meteorological Institute, Oslo 0313),NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006),NILU (Norwegian Institute for Air Research, Kjeller 2027),UiB (University of Bergen, Bergen 5007),UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
+    'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NOAA-NCEP': 'National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA',
@@ -395,36 +397,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['GISS-E2-1G'] = {}
-source_id['GISS-E2-1G']['aerosol'] = 'varies with physics-version (p==1 None, p==3 OMA, p==4 TOMAS, p==5 MATRIX) '
-source_id['GISS-E2-1G']['atmosphere'] = 'GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)'
-source_id['GISS-E2-1G']['atmospheric_chemistry'] = 'varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id['GISS-E2-1G']['cohort'] = ['']
-source_id['GISS-E2-1G']['institution_id'] = ['NASA-GISS']
-source_id['GISS-E2-1G']['label'] = 'GISS-E2.1G'
-source_id['GISS-E2-1G']['label_extended'] = 'GISS-E2.1G'
-source_id['GISS-E2-1G']['land_ice'] = 'Fixed'
-source_id['GISS-E2-1G']['land_surface'] = 'GISS LSM'
-source_id['GISS-E2-1G']['ocean'] = 'GISS Ocean (1 deg latitude/longitude; 32 levels; top grid cell 0-10m)'
-source_id['GISS-E2-1G']['ocean_biogeochemistry'] = 'None'
-source_id['GISS-E2-1G']['release_year'] = '2016'
-source_id['GISS-E2-1G']['sea_ice'] = 'GISS SI'
-source_id['GISS-E2-1G']['source_id'] = 'GISS-E2-1G'
-source_id['GISS-E2-1H'] = {}
-source_id['GISS-E2-1H']['aerosol'] = 'varies with physics-version (p==1 None, p==3 OMA, p==4 TOMAS, p==5 MATRIX) '
-source_id['GISS-E2-1H']['atmosphere'] = 'GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)'
-source_id['GISS-E2-1H']['atmospheric_chemistry'] = 'varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id['GISS-E2-1H']['cohort'] = ['']
-source_id['GISS-E2-1H']['institution_id'] = ['NASA-GISS']
-source_id['GISS-E2-1H']['label'] = 'GISS-E2.1H'
-source_id['GISS-E2-1H']['label_extended'] = 'GISS-E2.1H'
-source_id['GISS-E2-1H']['land_ice'] = 'Fixed'
-source_id['GISS-E2-1H']['land_surface'] = 'GISS LSM'
-source_id['GISS-E2-1H']['ocean'] = 'HYCOM Ocean (tripolar grid; ~1 deg latitude/longitude; 26 levels; top grid cell 0-10m)'
-source_id['GISS-E2-1H']['ocean_biogeochemistry'] = 'None'
-source_id['GISS-E2-1H']['release_year'] = '2016'
-source_id['GISS-E2-1H']['sea_ice'] = 'GISS SI'
-source_id['GISS-E2-1H']['source_id'] = 'GISS-E2-1H'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

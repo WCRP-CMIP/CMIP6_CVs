@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Dec 14 15:49:55 2016 -0800",
+        "creation_date":"Tue Jan 3 11:38:01 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.0 (55; ge1f4d03)",
-        "note":"Add GISS-E2-1 variants",
-        "previous_commit":"7f4a6fac47c650fb47b520ad4a0a16f60e72cad6"
+        "latest_tag_point":"3.2.1 (25; g91db165)",
+        "note":"Register institution_id NERC",
+        "previous_commit":"6ec3d0ccb6501ca0cc7844352249d98bb3426a9d"
     }
 }

@@ -160,6 +160,86 @@
             "sea_ice":"GISS SI",
             "source_id":"GISS-E2-1H"
         },
+        "HadGEM3-GC31-HH":{
+            "aerosol":"UKCA-GLOMAP-mode",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC"
+            ],
+            "label":"HadGEM3-GC31-HH",
+            "label_extended":"HadGEM3-GC3.1-N512ORCA12",
+            "land_ice":"None",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg latitude/longitude; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg latitude/longitude)",
+            "source_id":"HadGEM3-GC31-HH"
+        },
+        "HadGEM3-GC31-HM":{
+            "aerosol":"UKCA-GLOMAP-mode",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC"
+            ],
+            "label":"HadGEM3-GC31-HM",
+            "label_extended":"HadGEM3-GC3.1-N512ORCA025",
+            "land_ice":"None",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)",
+            "source_id":"HadGEM3-GC31-HM"
+        },
+        "HadGEM3-GC31-LL":{
+            "aerosol":"UKCA-GLOMAP-mode",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC"
+            ],
+            "label":"HadGEM3-GC31-LL",
+            "label_extended":"HadGEM3-GC3.1-N96ORCA1",
+            "land_ice":"None",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg latitude/longitude)",
+            "source_id":"HadGEM3-GC31-LL"
+        },
+        "HadGEM3-GC31-MM":{
+            "aerosol":"UKCA-GLOMAP-mode",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC"
+            ],
+            "label":"HadGEM3-GC31-MM",
+            "label_extended":"HadGEM3-GC3.1-N216ORCA025",
+            "land_ice":"None",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)",
+            "source_id":"HadGEM3-GC31-MM"
+        },
         "IITM-ESM":{
             "aerosol":"unnamed (prescribed MAC-v2)",
             "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
@@ -320,6 +400,48 @@
             "sea_ice":"Declining1.0-warming",
             "source_id":"PCMDI-test-1-0"
         },
+        "UKESM1-0-LL":{
+            "aerosol":"UKCA-GLOMAP-mode",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"UKCA-StratTrop",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC",
+                "NERC"
+            ],
+            "label":"UKESM1.0-LL",
+            "label_extended":"UKESM1.0-N96ORCA1",
+            "land_ice":"BISICLES (only active in ISMIP experiments)",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"MEDUSA2",
+            "release_year":"2017",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg latitude/longitude)",
+            "source_id":"UKESM1-0-LL"
+        },
+        "UKESM1-0-MMh":{
+            "aerosol":"UKCA-GLOMAP-mode (horizontal resolution degraded relative to that used for atmosphere physics)",
+            "atmosphere":"MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)",
+            "atmospheric_chemistry":"UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MOHC",
+                "NERC"
+            ],
+            "label":"UKESM1.0-MMh",
+            "label_extended":"UKESM1.0-N216ORCA025hybrid",
+            "land_ice":"BISICLES (only active in ISMIP experiments)",
+            "land_surface":"JULES-HadGEM3-GL7.1",
+            "ocean":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg latitude/longitude; 75 levels; top grid cell 0-1m)",
+            "ocean_biogeochemistry":"MEDUSA2 (horizontal resolution degraded relative to that used for ocean physics)",
+            "release_year":"2018",
+            "sea_ice":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg latitude/longitude)",
+            "source_id":"UKESM1-0-MMh"
+        },
         "VRESM-1-0":{
             "aerosol":"Rotstayn-1.0",
             "atmosphere":"VCAM-1.0 (192 x 192 x 6 C192; 35 levels; top level 35km)",
@@ -343,10 +465,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 11:56:44 2017 -0800",
+        "creation_date":"Tue Jan 3 12:28:24 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (25; gb608b85)",
-        "note":"Register source_id EC-Earth-3-CC",
-        "previous_commit":"4d1baa4d5e9ffa9e458836cd1356d6d9861ea34c"
+        "latest_tag_point":"3.2.1 (26; g3d6c2bb)",
+        "note":"Register source_ids HadGEM3 and UKESM1",
+        "previous_commit":"43d5493afe7ac9571b25fb5d6233b5444eff413c"
     }
 }

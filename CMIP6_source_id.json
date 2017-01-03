@@ -60,6 +60,26 @@
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3"
         },
+        "EC-Earth-3-CC":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL255 (N128); 91 levels; top level 1 Pa)",
+            "atmospheric_chemistry":"TM5",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth-3-CC",
+            "label_extended":"EC-Earth-3-CC",
+            "land_ice":"None",
+            "land_surface":"LPJ-Guess",
+            "ocean":"NEMO3.6 (ORCA1: tripolar, 360x200; 75 levels; top grid cell 5m)",
+            "ocean_biogeochemistry":"PISCES",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-CC"
+        },
         "EC-Earth-3-HR":{
             "aerosol":"None",
             "atmosphere":"IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512; 91 levels; top level 1 Pa)",
@@ -323,10 +343,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 11:46:55 2017 -0800",
+        "creation_date":"Tue Jan 3 11:48:45 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (24; ga9706ca)",
-        "note":"Update source_id EC-Earth3-LR",
-        "previous_commit":"e120e4b50b8e6c6e572c1ba49939c67df6fc8a83"
+        "latest_tag_point":"note: ",
+        "note":"Issue93 durack1 update source_id EC-Earth3-LR (#186)",
+        "previous_commit":"89fee11d7f7dab3dca66c0a1c52142b4aa60e2fe"
     }
 }

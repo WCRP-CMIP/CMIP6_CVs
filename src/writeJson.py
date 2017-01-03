@@ -99,7 +99,8 @@ PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_
 PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
 PJD 14 Dec 2016    - Add source_id GISS-E2-1 variants https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
 PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/183
-PJD  3 Jan 2017    - Update source_id EC-Earth3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
+PJD  3 Jan 2017    - Update source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
+PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/94
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -120,7 +121,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update source_id EC-Earth3-LR\"'
+commitMessage = '\"Register source_id EC-Earth-3-CC\"'
 
 #%% Define functions
 # Get repo metadata
@@ -398,7 +399,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['EC-Earth-3-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)'
+source_id['EC-Earth-3-CC'] = {}
+source_id['EC-Earth-3-CC']['aerosol'] = 'None'
+source_id['EC-Earth-3-CC']['atmosphere'] = 'IFS cy36r4 (TL255 (N128); 91 levels; top level 1 Pa)'
+source_id['EC-Earth-3-CC']['atmospheric_chemistry'] = 'TM5'
+source_id['EC-Earth-3-CC']['cohort'] = ['']
+source_id['EC-Earth-3-CC']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth-3-CC']['label'] = 'EC-Earth-3-CC'
+source_id['EC-Earth-3-CC']['label_extended'] = 'EC-Earth-3-CC'
+source_id['EC-Earth-3-CC']['land_ice'] = 'None'
+source_id['EC-Earth-3-CC']['land_surface'] = 'LPJ-Guess'
+source_id['EC-Earth-3-CC']['ocean'] = 'NEMO3.6 (ORCA1: tripolar, 360x200; 75 levels; top grid cell 5m)'
+source_id['EC-Earth-3-CC']['ocean_biogeochemistry'] = 'PISCES'
+source_id['EC-Earth-3-CC']['release_year'] = '2017'
+source_id['EC-Earth-3-CC']['sea_ice'] = 'LIM3 (same version as ocean)'
+source_id['EC-Earth-3-CC']['source_id'] = 'EC-Earth-3-CC'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

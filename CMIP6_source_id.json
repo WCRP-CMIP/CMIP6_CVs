@@ -465,10 +465,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 12:28:24 2017 -0800",
+        "creation_date":"Tue Jan 3 12:39:46 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (26; g3d6c2bb)",
-        "note":"Register source_ids HadGEM3 and UKESM1",
-        "previous_commit":"43d5493afe7ac9571b25fb5d6233b5444eff413c"
+        "latest_tag_point":"3.2.1 (40; g0fc6bdd)",
+        "note":"Revise CMIP6 license text",
+        "previous_commit":"0e2ee09290b14c9ab0301da099494846b736da27"
     }
 }

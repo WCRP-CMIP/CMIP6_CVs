@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 11:38:00 2017 -0800",
+        "creation_date":"Tue Jan 3 11:46:55 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (13; g6ec3d0c)",
-        "note":"Register institution_id NERC",
-        "previous_commit":"f3133ceaa27b9d7e60a66808cd6abae70285dd58"
+        "latest_tag_point":"3.2.1 (14; g9fd9cb2)",
+        "note":"Update source_id EC-Earth3-LR",
+        "previous_commit":"4beaa8929a527a940c78488ff9fef203c29c245e"
     }
 }

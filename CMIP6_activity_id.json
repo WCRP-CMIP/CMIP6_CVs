@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 12:39:46 2017 -0800",
+        "creation_date":"Tue Jan 3 13:11:08 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (30; g713b8c7)",
-        "note":"Revise CMIP6 license text",
-        "previous_commit":"bca4ed295016863c775e1602830afd6ea15d41e7"
+        "latest_tag_point":"3.2.1 (18; g959bf67)",
+        "note":"Register multiple CNRM source_ids",
+        "previous_commit":"a86a9c42e20acd250e868c0ae67c606c9835a3b0"
     }
 }

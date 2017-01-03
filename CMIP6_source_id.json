@@ -40,6 +40,86 @@
             "sea_ice":"CICE4.1",
             "source_id":"BNU-ESM-1-1"
         },
+        "CNRM-CM6-1":{
+            "aerosol":"climatological fields computed by TACTIC (v2.0)",
+            "atmosphere":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CNRM-CERFACS"
+            ],
+            "label":"CNRM-CM6-1",
+            "label_extended":"CNRM-CM6-1",
+            "land_ice":"None (except for some FAFMIP experiments)",
+            "land_surface":"Surfex 8.0c",
+            "ocean":"Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"Gelato 6.1",
+            "source_id":"CNRM-CM6-1"
+        },
+        "CNRM-CM6-1-HR":{
+            "aerosol":"climatological fields computed by TACTIC (v2.0)",
+            "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CNRM-CERFACS"
+            ],
+            "label":"CNRM-CM6-1-HR",
+            "label_extended":"CNRM-CM6-1-HR",
+            "land_ice":"None",
+            "land_surface":"Surfex 8.0c",
+            "ocean":"Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2016",
+            "sea_ice":"Gelato 6.1",
+            "source_id":"CNRM-CM6-1-HR"
+        },
+        "CNRM-ESM2-1":{
+            "aerosol":"TACTIC (v2.0)",
+            "atmosphere":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
+            "atmospheric_chemistry":"REPROBUS-C (v2.0)",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CNRM-CERFACS"
+            ],
+            "label":"CNRM-ESM2-1",
+            "label_extended":"CNRM-ESM2-1",
+            "land_ice":"None",
+            "land_surface":"Surfex 8.0c",
+            "ocean":"Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
+            "ocean_biogeochemistry":"Pisces 2.s",
+            "release_year":"2016",
+            "sea_ice":"Gelato 6.1",
+            "source_id":"CNRM-ESM2-1"
+        },
+        "CNRM-ESM2-1-HR":{
+            "aerosol":"TACTIC (v2.0)",
+            "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "CNRM-CERFACS"
+            ],
+            "label":"CNRM-ESM2-1-HR",
+            "label_extended":"CNRM-ESM2-1-HR",
+            "land_ice":"None",
+            "land_surface":"Surfex 8.0c",
+            "ocean":"Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
+            "ocean_biogeochemistry":"Pisces 2.s",
+            "release_year":"2016",
+            "sea_ice":"Gelato 6.1",
+            "source_id":"CNRM-ESM2-1-HR"
+        },
         "EC-Earth-3":{
             "aerosol":"None",
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)",
@@ -465,10 +545,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 12:39:46 2017 -0800",
+        "creation_date":"Tue Jan 3 13:11:09 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (40; g0fc6bdd)",
-        "note":"Revise CMIP6 license text",
-        "previous_commit":"0e2ee09290b14c9ab0301da099494846b736da27"
+        "latest_tag_point":"3.2.1 (28; g52af41d)",
+        "note":"Register multiple CNRM source_ids",
+        "previous_commit":"515d65ddb4da7b1e04c3d3613e4054994f263d95"
     }
 }

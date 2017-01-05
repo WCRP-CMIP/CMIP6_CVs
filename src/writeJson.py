@@ -104,6 +104,7 @@ PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CM
 PJD  3 Jan 2017    - Register source_ids HadGEM3*4 and UKESM1*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
 PJD  3 Jan 2017    - Revise CMIP6 license text https://github.com/WCRP-CMIP/CMIP6_CVs/issues/133
 PJD  3 Jan 2017    - Register source_ids CNRM-ESM2*2 and CNRM-CM6*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD  5 Jan 2017    - Revise multiple CNRM source_ids atmospheric chemistry entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -124,7 +125,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register multiple CNRM source_ids\"'
+commitMessage = '\"Revise multiple CNRM source_ids atmospheric chemistry entry\"'
 
 #%% Define functions
 # Get repo metadata
@@ -402,66 +403,9 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['CNRM-CM6-1'] = {}
-source_id['CNRM-CM6-1']['aerosol'] = 'climatological fields computed by TACTIC (v2.0)'
-source_id['CNRM-CM6-1']['atmosphere'] = 'Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)'
-source_id['CNRM-CM6-1']['atmospheric_chemistry'] = 'None'
-source_id['CNRM-CM6-1']['cohort'] = ['']
-source_id['CNRM-CM6-1']['institution_id'] = ['CNRM-CERFACS']
-source_id['CNRM-CM6-1']['label'] = 'CNRM-CM6-1'
-source_id['CNRM-CM6-1']['label_extended'] = 'CNRM-CM6-1'
-source_id['CNRM-CM6-1']['land_ice'] = 'None (except for some FAFMIP experiments)'
-source_id['CNRM-CM6-1']['land_surface'] = 'Surfex 8.0c'
-source_id['CNRM-CM6-1']['ocean'] = 'Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)'
-source_id['CNRM-CM6-1']['ocean_biogeochemistry'] = 'None'
-source_id['CNRM-CM6-1']['release_year'] = '2016'
-source_id['CNRM-CM6-1']['sea_ice'] = 'Gelato 6.1'
-source_id['CNRM-CM6-1']['source_id'] = 'CNRM-CM6-1'
-source_id['CNRM-CM6-1-HR'] = {}
-source_id['CNRM-CM6-1-HR']['aerosol'] = 'climatological fields computed by TACTIC (v2.0)'
-source_id['CNRM-CM6-1-HR']['atmosphere'] = 'Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)'
-source_id['CNRM-CM6-1-HR']['atmospheric_chemistry'] = 'None'
-source_id['CNRM-CM6-1-HR']['cohort'] = ['']
-source_id['CNRM-CM6-1-HR']['institution_id'] = ['CNRM-CERFACS']
-source_id['CNRM-CM6-1-HR']['label'] = 'CNRM-CM6-1-HR'
-source_id['CNRM-CM6-1-HR']['label_extended'] = 'CNRM-CM6-1-HR'
-source_id['CNRM-CM6-1-HR']['land_ice'] = 'None'
-source_id['CNRM-CM6-1-HR']['land_surface'] = 'Surfex 8.0c'
-source_id['CNRM-CM6-1-HR']['ocean'] = 'Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)'
-source_id['CNRM-CM6-1-HR']['ocean_biogeochemistry'] = 'None'
-source_id['CNRM-CM6-1-HR']['release_year'] = '2016'
-source_id['CNRM-CM6-1-HR']['sea_ice'] = 'Gelato 6.1'
-source_id['CNRM-CM6-1-HR']['source_id'] = 'CNRM-CM6-1-HR'
-source_id['CNRM-ESM2-1'] = {}
-source_id['CNRM-ESM2-1']['aerosol'] = 'TACTIC (v2.0)'
-source_id['CNRM-ESM2-1']['atmosphere'] = 'Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)'
-source_id['CNRM-ESM2-1']['atmospheric_chemistry'] = 'REPROBUS-C (v2.0)'
-source_id['CNRM-ESM2-1']['cohort'] = ['']
-source_id['CNRM-ESM2-1']['institution_id'] = ['CNRM-CERFACS']
-source_id['CNRM-ESM2-1']['label'] = 'CNRM-ESM2-1'
-source_id['CNRM-ESM2-1']['label_extended'] = 'CNRM-ESM2-1'
-source_id['CNRM-ESM2-1']['land_ice'] = 'None'
-source_id['CNRM-ESM2-1']['land_surface'] = 'Surfex 8.0c'
-source_id['CNRM-ESM2-1']['ocean'] = 'Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)'
-source_id['CNRM-ESM2-1']['ocean_biogeochemistry'] = 'Pisces 2.s'
-source_id['CNRM-ESM2-1']['release_year'] = '2016'
-source_id['CNRM-ESM2-1']['sea_ice'] = 'Gelato 6.1'
-source_id['CNRM-ESM2-1']['source_id'] = 'CNRM-ESM2-1'
-source_id['CNRM-ESM2-1-HR'] = {}
-source_id['CNRM-ESM2-1-HR']['aerosol'] = 'TACTIC (v2.0)'
-source_id['CNRM-ESM2-1-HR']['atmosphere'] = 'Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)'
-source_id['CNRM-ESM2-1-HR']['atmospheric_chemistry'] = 'None'
-source_id['CNRM-ESM2-1-HR']['cohort'] = ['']
-source_id['CNRM-ESM2-1-HR']['institution_id'] = ['CNRM-CERFACS']
-source_id['CNRM-ESM2-1-HR']['label'] = 'CNRM-ESM2-1-HR'
-source_id['CNRM-ESM2-1-HR']['label_extended'] = 'CNRM-ESM2-1-HR'
-source_id['CNRM-ESM2-1-HR']['land_ice'] = 'None'
-source_id['CNRM-ESM2-1-HR']['land_surface'] = 'Surfex 8.0c'
-source_id['CNRM-ESM2-1-HR']['ocean'] = 'Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)'
-source_id['CNRM-ESM2-1-HR']['ocean_biogeochemistry'] = 'Pisces 2.s'
-source_id['CNRM-ESM2-1-HR']['release_year'] = '2016'
-source_id['CNRM-ESM2-1-HR']['sea_ice'] = 'Gelato 6.1'
-source_id['CNRM-ESM2-1-HR']['source_id'] = 'CNRM-ESM2-1-HR'
+source_id['CNRM-CM6-1']['atmospheric_chemistry'] = 'OZL_v2'
+source_id['CNRM-CM6-1-HR']['atmospheric_chemistry'] = 'OZL_v2'
+source_id['CNRM-ESM2-1-HR']['atmospheric_chemistry'] = 'OZL_v2'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

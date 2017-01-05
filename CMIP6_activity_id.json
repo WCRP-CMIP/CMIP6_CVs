@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 15:29:43 2017 -0800",
+        "creation_date":"Thu Jan 5 15:53:28 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (19; g9ce1429)",
-        "note":"Revise multiple CNRM source_ids atmospheric chemistry entry",
-        "previous_commit":"44a30b5b75095fd3ef5648c5d127e09eef51a4d0"
+        "latest_tag_point":"3.2.1 (20; g3fbe32e)",
+        "note":"Register multiple EC-Earth3 source_ids",
+        "previous_commit":"0b78077125cc267f70232fb085f2498456ed8a89"
     }
 }

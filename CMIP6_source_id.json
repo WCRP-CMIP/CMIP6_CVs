@@ -140,6 +140,26 @@
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3"
         },
+        "EC-Earth-3-AerChem":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)",
+            "atmospheric_chemistry":"TM5",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth 3.2 - AerChem",
+            "label_extended":"EC-Earth 3.2 - AerChem",
+            "land_ice":"None",
+            "land_surface":"LPJ-GUESS (same version as atmosphere)",
+            "ocean":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
+            "ocean_biogeochemistry":"PISCES (#which version#)",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-AerChem"
+        },
         "EC-Earth-3-CC":{
             "aerosol":"None",
             "atmosphere":"IFS cy36r4 (TL255 (N128); 91 levels; top level 1 Pa)",
@@ -159,6 +179,26 @@
             "release_year":"2017",
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3-CC"
+        },
+        "EC-Earth-3-GrIS":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth 3.2 - GrIS",
+            "label_extended":"EC-Earth 3.2 - PISM",
+            "land_ice":"PISM 0.7 (5 km x 5 km, L442)",
+            "land_surface":"H-TESSEL (same version as atmosphere)",
+            "ocean":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-GrIS"
         },
         "EC-Earth-3-HR":{
             "aerosol":"None",
@@ -199,6 +239,46 @@
             "release_year":"2017",
             "sea_ice":"LIM3 (same version as ocean)",
             "source_id":"EC-Earth-3-LR"
+        },
+        "EC-Earth-3-Veg":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth 3.2 - Veg",
+            "label_extended":"EC-Earth 3.2 - LPJ-GUESS",
+            "land_ice":"None",
+            "land_surface":"LPJ-GUESS (same version as atmosphere)",
+            "ocean":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-Veg"
+        },
+        "EC-Earth-3-Veg-LR":{
+            "aerosol":"None",
+            "atmosphere":"IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "EC-Earth-Consortium"
+            ],
+            "label":"EC-Earth 3.2 Veg LR",
+            "label_extended":"EC-Earth 3.2 - LPJ-GUESS at low resolution",
+            "land_ice":"None",
+            "land_surface":"LPJ-GUESS (same version as atmosphere)",
+            "ocean":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"LIM3 (same version as ocean)",
+            "source_id":"EC-Earth-3-Veg-LR"
         },
         "GISS-E2-1G":{
             "aerosol":"varies with physics-version (p==1 None, p==3 OMA, p==4 TOMAS, p==5 MATRIX) ",
@@ -545,10 +625,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 15:29:43 2017 -0800",
+        "creation_date":"Thu Jan 5 15:53:29 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (29; g6fc7a1a)",
-        "note":"Revise multiple CNRM source_ids atmospheric chemistry entry",
-        "previous_commit":"d7d06a90f7db328dd509c582778aa76477c2098e"
+        "latest_tag_point":"3.2.1 (30; g43da79b)",
+        "note":"Register multiple EC-Earth3 source_ids",
+        "previous_commit":"fcf89e15da9491a19f51340931ba6c0e819dab47"
     }
 }

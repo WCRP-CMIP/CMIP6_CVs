@@ -43,7 +43,7 @@
         "CNRM-CM6-1":{
             "aerosol":"climatological fields computed by TACTIC (v2.0)",
             "atmosphere":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
-            "atmospheric_chemistry":"None",
+            "atmospheric_chemistry":"OZL_v2",
             "cohort":[
                 ""
             ],
@@ -63,7 +63,7 @@
         "CNRM-CM6-1-HR":{
             "aerosol":"climatological fields computed by TACTIC (v2.0)",
             "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
-            "atmospheric_chemistry":"None",
+            "atmospheric_chemistry":"OZL_v2",
             "cohort":[
                 ""
             ],
@@ -103,7 +103,7 @@
         "CNRM-ESM2-1-HR":{
             "aerosol":"TACTIC (v2.0)",
             "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
-            "atmospheric_chemistry":"None",
+            "atmospheric_chemistry":"OZL_v2",
             "cohort":[
                 ""
             ],
@@ -545,10 +545,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 3 13:11:09 2017 -0800",
+        "creation_date":"Tue Jan 3 13:13:05 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (28; g52af41d)",
-        "note":"Register multiple CNRM source_ids",
-        "previous_commit":"515d65ddb4da7b1e04c3d3613e4054994f263d95"
+        "latest_tag_point":"note: ",
+        "note":"Issue115 durack1 register multiple CNRM source_ids (#190)",
+        "previous_commit":"44da4a8fe53a365d88730a5e1f608e051b8652b8"
     }
 }

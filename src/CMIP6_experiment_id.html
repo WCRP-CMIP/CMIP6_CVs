@@ -71,21 +71,6 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Uninitialized climate simulations as in DCPP-A2.2, but with no information from the future</td>
 </tr>
-<tr><td>ssp370-lowNTCF</td>
-<td>AerChemMIP</td>
-<td>SSP3-7.0, with low NTCF emissions</td>
-<td>1</td>
-<td>none</td>
-<td>none</td>
-<td>historical</td>
-<td>AOGCM AER</td>
-<td>CHEM BGC</td>
-<td>2015</td>
-<td>2055</td>
-<td>41</td>
-<td>CMIP</td>
-<td>Future SSP3-7.0 with reduced NTCF emissions</td>
-</tr>
 <tr><td>piClim-NH3</td>
 <td>AerChemMIP</td>
 <td>pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions</td>
@@ -146,20 +131,35 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Future scenario with low radiative forcing by the end of century. Reaches about 3.4 W/m2 by 2100; fills gap in RCP forcing pathways between 4.5 and 2.6 W/m2. Concentration-driven</td>
 </tr>
-<tr><td>land-cCO2</td>
-<td>LUMIP</td>
-<td>historical land-only constant CO2</td>
+<tr><td>dcppC-ipv-pos</td>
+<td>DCPP</td>
+<td>idealized positive IPV anomaly pattern</td>
+<td>1</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>control</td>
+<td></td>
+<td>25</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
+<tr><td>dcppC-ipv-NexTrop-pos</td>
+<td>DCPP</td>
+<td>idealized positive northern extratropical IPV anomaly pattern</td>
 <td>2</td>
-<td>none</td>
-<td>none</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
 <td></td>
-<td>LAND</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
 <td></td>
-<td>1850 or 1700</td>
-<td>2014</td>
-<td>165</td>
 <td></td>
-<td>Same as land-hist except with CO2 held constant</td>
+<td></td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>piClim-2xDMS</td>
 <td>AerChemMIP</td>
@@ -205,21 +205,6 @@ $(document).ready( function () {
 <td>10</td>
 <td></td>
 <td>Time slice at 1850 (picontrol) for G1ext to examine radiative forcing of abrupt4xCO2</td>
-</tr>
-<tr><td>piSST-4xCO2</td>
-<td>CFMIP</td>
-<td>as piSST with radiation and vegetation seeing 4xCO2</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td></td>
-<td></td>
-<td>30</td>
-<td></td>
-<td>Same as piSST but CO2 is quadrupled. The increase in CO2 is seen by both the radiation scheme and vegetation</td>
 </tr>
 <tr><td>faf-all</td>
 <td>FAFMIP</td>
@@ -296,20 +281,20 @@ $(document).ready( function () {
 <td></td>
 <td>Offline radiation calculations</td>
 </tr>
-<tr><td>volc-pinatubo-surf</td>
-<td>VolMIP</td>
-<td>Pinatubo experiment with partial radiative forcing, solar radiation scattering only</td>
+<tr><td>dcppC-pac-control</td>
+<td>DCPP</td>
+<td>idealized Pacific control</td>
 <td>1</td>
-<td>none</td>
-<td>none</td>
-<td>piControl</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
+<td>1950</td>
+<td>1949</td>
+<td>30</td>
 <td></td>
-<td></td>
-<td>3</td>
-<td>CMIP</td>
-<td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>piClim-histall</td>
 <td>RFMIP</td>
@@ -401,7 +386,7 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>1xCO2 experiment, parallel to piControl, forced over the ocean by surface net heat flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2, using a passive tracer to prevent negative climate feedback on the heat flux applied</td>
 </tr>
-<tr><td>dcppC-amv-plus</td>
+<tr><td>dcppC-amv-pos</td>
 <td>DCPP</td>
 <td>idealized positive AMV anomaly pattern</td>
 <td>1</td>
@@ -430,21 +415,6 @@ $(document).ready( function () {
 <td>121</td>
 <td></td>
 <td>Prescribed land conditions 1980-2014 climate; AMIP SSTs</td>
-</tr>
-<tr><td>dcppC-amv-extrop-plus</td>
-<td>DCPP</td>
-<td>idealized positive extratropical AMV anomaly pattern</td>
-<td>2</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>control</td>
-<td></td>
-<td>25</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>land-crop-grass</td>
 <td>LUMIP</td>
@@ -566,21 +536,6 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Pacemaker 20th century historical run that includes all forcing as used in CMIP6 Historical Simulation, and the observational historical SST is restored in the AMO domain (0deg-70degN, 70degW-0deg)</td>
 </tr>
-<tr><td>dcppC-amv-trop-minus</td>
-<td>DCPP</td>
-<td>idealized negative tropical AMV anomaly pattern</td>
-<td>2</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1992</td>
-<td>1999</td>
-<td>5</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
-</tr>
 <tr><td>hist-all-aer2</td>
 <td>DAMIP</td>
 <td>historical ALL-forcing run with alternate estimates of aerosol forcing</td>
@@ -596,20 +551,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Historical ALL forcing run with alternate estimates of aerosol concentrations/emissions</td>
 </tr>
-<tr><td>dcppC-amv-extrop-minus</td>
-<td>DCPP</td>
-<td>idealized negative extratropical AMV anomaly pattern</td>
+<tr><td>piSST-4xCO2</td>
+<td>CFMIP</td>
+<td>as piSST with radiation and vegetation seeing 4xCO2</td>
 <td>2</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
+<td>none</td>
+<td>none</td>
 <td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1993</td>
-<td>1996</td>
-<td>5</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
 <td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>Same as piSST but CO2 is quadrupled. The increase in CO2 is seen by both the radiation scheme and vegetation</td>
 </tr>
 <tr><td>lfmip-pdLC</td>
 <td>LS3MIP</td>
@@ -701,20 +656,20 @@ $(document).ready( function () {
 <td></td>
 <td>Coupled integrations, at least one with constant 1950"s forcing (CTL) and one or more with historic and then RCP4.5 (as in Forced_Atmos_Land, EXP)</td>
 </tr>
-<tr><td>dcppC-ipv-nextrop-plus</td>
-<td>DCPP</td>
-<td>idealized positive northern extratropical IPV anomaly pattern</td>
-<td>2</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+<tr><td>ssp370-lowNTCF</td>
+<td>AerChemMIP</td>
+<td>SSP3-7.0, with low NTCF emissions</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM AER</td>
+<td>CHEM BGC</td>
+<td>2015</td>
+<td>2055</td>
+<td>41</td>
+<td>CMIP</td>
+<td>Future SSP3-7.0 with reduced NTCF emissions</td>
 </tr>
 <tr><td>piSST-4xCO2-rad</td>
 <td>CFMIP</td>
@@ -1136,32 +1091,17 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
 </tr>
-<tr><td>hist-CO2</td>
-<td>DAMIP</td>
-<td>historical CO2-only run</td>
-<td>3</td>
-<td>none</td>
-<td>none</td>
-<td>piControl</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1850</td>
-<td>2020</td>
-<td>171</td>
-<td>CMIP</td>
-<td>Historical CO2-only run</td>
-</tr>
-<tr><td>dcppC-amv-trop-plus</td>
+<tr><td>dcppC-amv-ExTrop-neg</td>
 <td>DCPP</td>
-<td>idealized positive tropical AMV anomaly pattern</td>
+<td>idealized negative extratropical AMV anomaly pattern</td>
 <td>2</td>
 <td>of form: "sYYYY"</td>
 <td>initialized near end of year YYYY</td>
 <td></td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
-<td>1992</td>
-<td>1999</td>
+<td>1993</td>
+<td>1996</td>
 <td>5</td>
 <td></td>
 <td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
@@ -1286,20 +1226,20 @@ $(document).ready( function () {
 <td></td>
 <td>Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs</td>
 </tr>
-<tr><td>dcppC-ipv-minus</td>
-<td>DCPP</td>
-<td>idealized negative IPV anomaly pattern</td>
-<td>1</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
+<tr><td>amip-lwoff</td>
+<td>CFMIP</td>
+<td>AMIP experiment with longwave cloud-radiative effects off</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
 <td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>control</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1979</td>
+<td>2014</td>
+<td>36</td>
 <td></td>
-<td>25</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+<td>As amip experiment, but with cloud-radiative effects switched off in the LW radiation code</td>
 </tr>
 <tr><td>ssp245-nat</td>
 <td>DAMIP</td>
@@ -1345,6 +1285,21 @@ $(document).ready( function () {
 <td>150</td>
 <td>CMIP</td>
 <td>DECK: 1pctCO2</td>
+</tr>
+<tr><td>dcppC-amv-Trop-neg</td>
+<td>DCPP</td>
+<td>idealized negative tropical AMV anomaly pattern</td>
+<td>2</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1992</td>
+<td>1999</td>
+<td>5</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>piClim-spAer-aer</td>
 <td>RFMIP</td>
@@ -1481,21 +1436,6 @@ $(document).ready( function () {
 <td></td>
 <td>main forcings : orbital parameters, ice-sheet, trace gases</td>
 </tr>
-<tr><td>dcppC-amv-minus</td>
-<td>DCPP</td>
-<td>idealized negative AMV anomaly pattern</td>
-<td>1</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1950</td>
-<td>1949</td>
-<td>30</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
-</tr>
 <tr><td>land-noShiftCultivate</td>
 <td>LUMIP</td>
 <td>historical land-only with shifting cultivation turned off</td>
@@ -1555,6 +1495,21 @@ $(document).ready( function () {
 <td>85</td>
 <td>C4MIP</td>
 <td></td>
+</tr>
+<tr><td>sspxy</td>
+<td>ScenarioMIP</td>
+<td>low-end scenario informing 1.5C goal</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Future scenario with low radiative forcing by the end of century. Following a forcing pathway below RCP2.6. Specific SSP and 2100 forcing level to be finalized with IAM groups within next few months. Concentration-driven</td>
 </tr>
 <tr><td>faf-stress</td>
 <td>FAFMIP</td>
@@ -1616,21 +1571,6 @@ $(document).ready( function () {
 <td></td>
 <td>Future SSP3-7.0 with low land use change (from ssp126), prescribed SSTs</td>
 </tr>
-<tr><td>piClim-control</td>
-<td>RFMIP AerChemMIP</td>
-<td>effective radiative forcing in present-day</td>
-<td>1</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td></td>
-<td></td>
-<td>30</td>
-<td></td>
-<td>30-year atmosphere only integration using preindustrial sea-surface temperature and sea-ice climatology. Interactive vegetation</td>
-</tr>
 <tr><td>historical</td>
 <td>CMIP</td>
 <td>all-forcing simulation of the recent past</td>
@@ -1661,21 +1601,6 @@ $(document).ready( function () {
 <td></td>
 <td>main forcings : trace gases, orbital parameters, dust</td>
 </tr>
-<tr><td>dcppC-pac</td>
-<td>DCPP</td>
-<td>idealized Pacific control</td>
-<td>1</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1950</td>
-<td>1949</td>
-<td>30</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
-</tr>
 <tr><td>amip-TIP</td>
 <td>GMMIP</td>
 <td>same as "amip" run, but surface elevations of the Tibetan-Iranian Plateau and Himalayas reduced to 500m</td>
@@ -1691,20 +1616,20 @@ $(document).ready( function () {
 <td></td>
 <td>The topography of the TIP is modified by setting surface elevations to 500m; to understand the combined thermal and mechanical forcing of the TIP. Same model as DECK</td>
 </tr>
-<tr><td>sspxy</td>
-<td>ScenarioMIP</td>
-<td>low-end scenario informing 1.5C goal</td>
+<tr><td>land-cCO2</td>
+<td>LUMIP</td>
+<td>historical land-only constant CO2</td>
 <td>2</td>
 <td>none</td>
 <td>none</td>
-<td>historical</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
-<td>CMIP</td>
-<td>Future scenario with low radiative forcing by the end of century. Following a forcing pathway below RCP2.6. Specific SSP and 2100 forcing level to be finalized with IAM groups within next few months. Concentration-driven</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850 or 1700</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Same as land-hist except with CO2 held constant</td>
 </tr>
 <tr><td>highresSST-LAI</td>
 <td>HighResMIP</td>
@@ -1826,6 +1751,21 @@ $(document).ready( function () {
 <td></td>
 <td>Land only simulations</td>
 </tr>
+<tr><td>ssp245</td>
+<td>ScenarioMIP</td>
+<td>update of RCP4.5 based on SSP2</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Future scenario with medium radiative forcing by the end of century. Following approximately RCP4.5 global forcing pathway but with new forcing based on SSP2. Concentration-driven</td>
+</tr>
 <tr><td>dcppA-hindcast-niff</td>
 <td>DCPP</td>
 <td>hindcast initialized from observations without future observed forcing after initialization</td>
@@ -1871,20 +1811,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>DECK: control (emission-driven)</td>
 </tr>
-<tr><td>piClim-NTCF</td>
-<td>AerChemMIP</td>
-<td>pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions</td>
+<tr><td>piClim-control</td>
+<td>RFMIP AerChemMIP</td>
+<td>effective radiative forcing in present-day</td>
 <td>1</td>
 <td>none</td>
 <td>none</td>
 <td></td>
-<td>AGCM AER</td>
-<td>CHEM BGC</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
 <td></td>
 <td></td>
 <td>30</td>
 <td></td>
-<td>Perturbation from 1850 control using 2014 aerosol and ozone precursor emissions</td>
+<td>30-year atmosphere only integration using preindustrial sea-surface temperature and sea-ice climatology. Interactive vegetation</td>
 </tr>
 <tr><td>land-cClim</td>
 <td>LUMIP</td>
@@ -1975,6 +1915,21 @@ $(document).ready( function () {
 <td>20</td>
 <td></td>
 <td>Same as piSST, but with a spatially and temporally uniform SST anomaly applied on top of the monthly-varying piSST SSTs. The magnitude of the uniform increase is taken from each model's global, climatological annual mean SST change between abrupt4xCO2 minus piControl (using the mean of years 111-140 of abrupt4xCO2, and the parallel 30-year section of piControl)</td>
+</tr>
+<tr><td>dcppC-ipv-neg</td>
+<td>DCPP</td>
+<td>idealized negative IPV anomaly pattern</td>
+<td>1</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>control</td>
+<td></td>
+<td>25</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>amip-4xCO2</td>
 <td>CFMIP</td>
@@ -2276,6 +2231,21 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Conceptually similar to abrupt 4xCO2 DECK experiment, except that the solar constant rather than CO2 is abruptly reduced by 4%</td>
 </tr>
+<tr><td>dcppC-atl-pacemaker</td>
+<td>DCPP</td>
+<td>pacemaker atlantic experiment</td>
+<td>3</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
 <tr><td>highresSST-smoothed</td>
 <td>HighResMIP</td>
 <td>smoothed SST version of highresSST-present</td>
@@ -2321,20 +2291,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Prescribed anthropogenic aerosol optical properties. Changes in aerosols only</td>
 </tr>
-<tr><td>ssp245</td>
-<td>ScenarioMIP</td>
-<td>update of RCP4.5 based on SSP2</td>
-<td>1</td>
+<tr><td>hist-CO2</td>
+<td>DAMIP</td>
+<td>historical CO2-only run</td>
+<td>3</td>
 <td>none</td>
 <td>none</td>
-<td>historical</td>
+<td>piControl</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
+<td>1850</td>
+<td>2020</td>
+<td>171</td>
 <td>CMIP</td>
-<td>Future scenario with medium radiative forcing by the end of century. Following approximately RCP4.5 global forcing pathway but with new forcing based on SSP2. Concentration-driven</td>
+<td>Historical CO2-only run</td>
 </tr>
 <tr><td>piClim-spAer-anthro</td>
 <td>RFMIP</td>
@@ -2351,10 +2321,10 @@ $(document).ready( function () {
 <td></td>
 <td>Prescribed anthropogenic aerosol optical properties. Anthropogenic forcings</td>
 </tr>
-<tr><td>dcppC-atl-pacemaker</td>
+<tr><td>dcppC-ipv-NexTrop-neg</td>
 <td>DCPP</td>
-<td>pacemaker atlantic experiment</td>
-<td>3</td>
+<td>idealized negative northern extratropical IPV anomaly pattern</td>
+<td>2</td>
 <td>of form: "sYYYY"</td>
 <td>initialized near end of year YYYY</td>
 <td></td>
@@ -2681,6 +2651,21 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
 </tr>
+<tr><td>dcppC-amv-ExTrop-pos</td>
+<td>DCPP</td>
+<td>idealized positive extratropical AMV anomaly pattern</td>
+<td>2</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>control</td>
+<td></td>
+<td>25</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
 <tr><td>1pctCO2Ndep</td>
 <td>C4MIP</td>
 <td>1 percent per year increasing CO2 experiment with increasing N-deposition</td>
@@ -2891,21 +2876,6 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Early 19th century cluster of strong tropical volcanic eruptions, including the 1809 event of unknown location, the 1815 Tambora and 1835 Cosigueina eruptions. Experiment initialized from PiControl</td>
 </tr>
-<tr><td>amip-lwoff</td>
-<td>CFMIP</td>
-<td>AMIP experiment with longwave cloud-radiative effects off</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
-<td></td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td>1979</td>
-<td>2014</td>
-<td>36</td>
-<td></td>
-<td>As amip experiment, but with cloud-radiative effects switched off in the LW radiation code</td>
-</tr>
 <tr><td>land-future</td>
 <td>LS3MIP</td>
 <td>future land-only</td>
@@ -2996,20 +2966,20 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
 </tr>
-<tr><td>piClim-BC</td>
-<td>AerChemMIP</td>
-<td>pre-industrial climatological SSTs and forcing, but with 2014 black carbon emissions</td>
-<td>2</td>
-<td>none</td>
-<td>none</td>
+<tr><td>dcppC-amv-neg</td>
+<td>DCPP</td>
+<td>idealized negative AMV anomaly pattern</td>
+<td>1</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
 <td></td>
-<td>AGCM AER</td>
-<td>CHEM</td>
-<td></td>
-<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1950</td>
+<td>1949</td>
 <td>30</td>
 <td></td>
-<td>Perturbation from 1850 control using 2014 BC emissions</td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>dcppC-pac-pacemaker</td>
 <td>DCPP</td>
@@ -3071,20 +3041,35 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
 </tr>
-<tr><td>dcppC-ipv-nextrop-minus</td>
-<td>DCPP</td>
-<td>idealized negative northern extratropical IPV anomaly pattern</td>
+<tr><td>piClim-BC</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with 2014 black carbon emissions</td>
 <td>2</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
+<td>none</td>
+<td>none</td>
 <td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td></td>
-<td></td>
+<td>AGCM AER</td>
+<td>CHEM</td>
 <td></td>
 <td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+<td>30</td>
+<td></td>
+<td>Perturbation from 1850 control using 2014 BC emissions</td>
+</tr>
+<tr><td>piClim-NTCF</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td></td>
+<td>AGCM AER</td>
+<td>CHEM BGC</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>Perturbation from 1850 control using 2014 aerosol and ozone precursor emissions</td>
 </tr>
 <tr><td>lfmip-initLC</td>
 <td>LS3MIP</td>
@@ -3296,6 +3281,21 @@ $(document).ready( function () {
 <td></td>
 <td>Same as land-hist but with wood harvest maintained at 1850 amounts/areas</td>
 </tr>
+<tr><td>volc-pinatubo-surf</td>
+<td>VolMIP</td>
+<td>Pinatubo experiment with partial radiative forcing, solar radiation scattering only</td>
+<td>1</td>
+<td>none</td>
+<td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>CMIP</td>
+<td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
+</tr>
 <tr><td>ssp370SST-lowO3</td>
 <td>AerChemMIP</td>
 <td>SSP3-7.0, prescribed SSTs, with low ozone precursor emissions</td>
@@ -3401,6 +3401,21 @@ $(document).ready( function () {
 <td>DCPP</td>
 <td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
 </tr>
+<tr><td>dcppC-amv-Trop-pos</td>
+<td>DCPP</td>
+<td>idealized positive tropical AMV anomaly pattern</td>
+<td>2</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1992</td>
+<td>1999</td>
+<td>5</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
 <tr><td>ssp534-over</td>
 <td>ScenarioMIP</td>
 <td>overshoot of 3.4 W/m**2 branching from ssp585 in 2040</td>
@@ -3475,21 +3490,6 @@ $(document).ready( function () {
 <td>165</td>
 <td></td>
 <td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
-</tr>
-<tr><td>dcppC-ipv-plus</td>
-<td>DCPP</td>
-<td>idealized positive IPV anomaly pattern</td>
-<td>1</td>
-<td>of form: "sYYYY"</td>
-<td>initialized near end of year YYYY</td>
-<td></td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>control</td>
-<td></td>
-<td>25</td>
-<td></td>
-<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
 </tr>
 <tr><td>piClim-O3</td>
 <td>AerChemMIP</td>

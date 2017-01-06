@@ -1274,7 +1274,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"1"
         },
-        "dcppC-amv-extrop-minus":{
+        "dcppC-amv-ExTrop-neg":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1297,7 +1297,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
         },
-        "dcppC-amv-extrop-plus":{
+        "dcppC-amv-ExTrop-pos":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1320,53 +1320,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
         },
-        "dcppC-amv-minus":{
-            "activity_id":[
-                "DCPP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM",
-                "BGC"
-            ],
-            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"1949",
-            "experiment":"idealized negative AMV anomaly pattern",
-            "min_number_yrs_per_sim":"30",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"1950",
-            "sub_experiment":"initialized near end of year YYYY",
-            "sub_experiment_id":"of form: \"sYYYY\"",
-            "tier":"1"
-        },
-        "dcppC-amv-plus":{
-            "activity_id":[
-                "DCPP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM",
-                "BGC"
-            ],
-            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"2015",
-            "experiment":"idealized positive AMV anomaly pattern",
-            "min_number_yrs_per_sim":"66",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"1950 (from 1920 if possible)",
-            "sub_experiment":"initialized near end of year YYYY",
-            "sub_experiment_id":"of form: \"sYYYY\"",
-            "tier":"1"
-        },
-        "dcppC-amv-trop-minus":{
+        "dcppC-amv-Trop-neg":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1389,7 +1343,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
         },
-        "dcppC-amv-trop-plus":{
+        "dcppC-amv-Trop-pos":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1411,6 +1365,52 @@
             "sub_experiment":"initialized near end of year YYYY",
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
+        },
+        "dcppC-amv-neg":{
+            "activity_id":[
+                "DCPP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
+            "end_year":"1949",
+            "experiment":"idealized negative AMV anomaly pattern",
+            "min_number_yrs_per_sim":"30",
+            "parent_activity_id":"",
+            "parent_experiment_id":"",
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1950",
+            "sub_experiment":"initialized near end of year YYYY",
+            "sub_experiment_id":"of form: \"sYYYY\"",
+            "tier":"1"
+        },
+        "dcppC-amv-pos":{
+            "activity_id":[
+                "DCPP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
+            "end_year":"2015",
+            "experiment":"idealized positive AMV anomaly pattern",
+            "min_number_yrs_per_sim":"66",
+            "parent_activity_id":"",
+            "parent_experiment_id":"",
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1950 (from 1920 if possible)",
+            "sub_experiment":"initialized near end of year YYYY",
+            "sub_experiment_id":"of form: \"sYYYY\"",
+            "tier":"1"
         },
         "dcppC-atl-control":{
             "activity_id":[
@@ -1649,30 +1649,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"1"
         },
-        "dcppC-ipv-minus":{
-            "activity_id":[
-                "DCPP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM",
-                "BGC"
-            ],
-            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
-            "experiment":"idealized negative IPV anomaly pattern",
-            "min_number_yrs_per_sim":"25",
-            "parent_activity_id":"",
-            "parent_experiment_id":"",
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"control",
-            "sub_experiment":"initialized near end of year YYYY",
-            "sub_experiment_id":"of form: \"sYYYY\"",
-            "tier":"1"
-        },
-        "dcppC-ipv-nextrop-minus":{
+        "dcppC-ipv-NexTrop-neg":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1695,7 +1672,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
         },
-        "dcppC-ipv-nextrop-plus":{
+        "dcppC-ipv-NexTrop-pos":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1718,7 +1695,30 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"2"
         },
-        "dcppC-ipv-plus":{
+        "dcppC-ipv-neg":{
+            "activity_id":[
+                "DCPP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
+            "end_year":"",
+            "experiment":"idealized negative IPV anomaly pattern",
+            "min_number_yrs_per_sim":"25",
+            "parent_activity_id":"",
+            "parent_experiment_id":"",
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"control",
+            "sub_experiment":"initialized near end of year YYYY",
+            "sub_experiment_id":"of form: \"sYYYY\"",
+            "tier":"1"
+        },
+        "dcppC-ipv-pos":{
             "activity_id":[
                 "DCPP"
             ],
@@ -1741,7 +1741,7 @@
             "sub_experiment_id":"of form: \"sYYYY\"",
             "tier":"1"
         },
-        "dcppC-pac":{
+        "dcppC-pac-control":{
             "activity_id":[
                 "DCPP"
             ],
@@ -5795,10 +5795,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 15:53:28 2017 -0800",
+        "creation_date":"Thu Jan 5 15:55:32 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (21; gaaa1b79)",
-        "note":"Register multiple EC-Earth3 source_ids",
-        "previous_commit":"e5b6d3c4b375dc46cbc81f7b06993a54a083c861"
+        "latest_tag_point":"note: ",
+        "note":"Issue191 durack1 register multiple EC-Earth-3 source_ids (#193)",
+        "previous_commit":"f0a3148491d672aef64d52bb12fd84d07ef4f6c7"
     }
 }

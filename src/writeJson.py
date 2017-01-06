@@ -106,6 +106,7 @@ PJD  3 Jan 2017    - Revise CMIP6 license text https://github.com/WCRP-CMIP/CMIP
 PJD  3 Jan 2017    - Register source_ids CNRM-ESM2*2 and CNRM-CM6*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
 PJD  5 Jan 2017    - Revise multiple CNRM source_ids atmospheric chemistry entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
 PJD  5 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
+PJD  5 Jan 2017    - Update DCPP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1#issuecomment-268357110
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -126,7 +127,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register multiple EC-Earth3 source_ids\"'
+commitMessage = '\"Update DCPP experiment_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -204,6 +205,17 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+experiment_id['dcppC-amv-ExTrop-neg'] = experiment_id.pop('dcppC-amv-extrop-minus')
+experiment_id['dcppC-amv-ExTrop-pos'] = experiment_id.pop('dcppC-amv-extrop-plus')
+experiment_id['dcppC-amv-neg'] = experiment_id.pop('dcppC-amv-minus')
+experiment_id['dcppC-amv-pos'] = experiment_id.pop('dcppC-amv-plus')
+experiment_id['dcppC-amv-Trop-neg'] = experiment_id.pop('dcppC-amv-trop-minus')
+experiment_id['dcppC-amv-Trop-pos'] = experiment_id.pop('dcppC-amv-trop-plus')
+experiment_id['dcppC-ipv-NexTrop-neg'] = experiment_id.pop('dcppC-ipv-nextrop-minus')
+experiment_id['dcppC-ipv-NexTrop-pos'] = experiment_id.pop('dcppC-ipv-nextrop-plus')
+experiment_id['dcppC-ipv-neg'] = experiment_id.pop('dcppC-ipv-minus')
+experiment_id['dcppC-ipv-pos'] = experiment_id.pop('dcppC-ipv-plus')
+experiment_id['dcppC-pac-control'] = experiment_id.pop('dcppC-pac')
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

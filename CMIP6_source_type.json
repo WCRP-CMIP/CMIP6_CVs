@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 15:53:29 2017 -0800",
+        "creation_date":"Thu Jan 5 16:50:16 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (31; g8f4ec42)",
-        "note":"Register multiple EC-Earth3 source_ids",
-        "previous_commit":"90b27f42b0fa374c9ae433bd029db68a36448121"
+        "latest_tag_point":"3.2.1 (32; gfbf7b56)",
+        "note":"Update DCPP experiment_ids",
+        "previous_commit":"96d3b9e515f3eda8f81a14d5fe2c76dc2f94d072"
     }
 }

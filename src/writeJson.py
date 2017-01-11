@@ -107,6 +107,7 @@ PJD  3 Jan 2017    - Register source_ids CNRM-ESM2*2 and CNRM-CM6*2 https://gith
 PJD  5 Jan 2017    - Revise multiple CNRM source_ids atmospheric chemistry entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
 PJD  5 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
 PJD  5 Jan 2017    - Update DCPP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1#issuecomment-268357110
+PJD 10 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -127,7 +128,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update DCPP experiment_ids\"'
+commitMessage = '\"Register multiple MPI source_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -205,17 +206,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['dcppC-amv-ExTrop-neg'] = experiment_id.pop('dcppC-amv-extrop-minus')
-experiment_id['dcppC-amv-ExTrop-pos'] = experiment_id.pop('dcppC-amv-extrop-plus')
-experiment_id['dcppC-amv-neg'] = experiment_id.pop('dcppC-amv-minus')
-experiment_id['dcppC-amv-pos'] = experiment_id.pop('dcppC-amv-plus')
-experiment_id['dcppC-amv-Trop-neg'] = experiment_id.pop('dcppC-amv-trop-minus')
-experiment_id['dcppC-amv-Trop-pos'] = experiment_id.pop('dcppC-amv-trop-plus')
-experiment_id['dcppC-ipv-NexTrop-neg'] = experiment_id.pop('dcppC-ipv-nextrop-minus')
-experiment_id['dcppC-ipv-NexTrop-pos'] = experiment_id.pop('dcppC-ipv-nextrop-plus')
-experiment_id['dcppC-ipv-neg'] = experiment_id.pop('dcppC-ipv-minus')
-experiment_id['dcppC-ipv-pos'] = experiment_id.pop('dcppC-ipv-plus')
-experiment_id['dcppC-pac-control'] = experiment_id.pop('dcppC-pac')
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -416,66 +406,51 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['EC-Earth-3-AerChem'] = {}
-source_id['EC-Earth-3-AerChem']['aerosol'] = 'None'
-source_id['EC-Earth-3-AerChem']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)'
-source_id['EC-Earth-3-AerChem']['atmospheric_chemistry'] = 'TM5'
-source_id['EC-Earth-3-AerChem']['cohort'] = ['']
-source_id['EC-Earth-3-AerChem']['institution_id'] = ['EC-Earth-Consortium']
-source_id['EC-Earth-3-AerChem']['label'] = 'EC-Earth 3.2 - AerChem'
-source_id['EC-Earth-3-AerChem']['label_extended'] = 'EC-Earth 3.2 - AerChem'
-source_id['EC-Earth-3-AerChem']['land_ice'] = 'None'
-source_id['EC-Earth-3-AerChem']['land_surface'] = 'LPJ-GUESS (same version as atmosphere)'
-source_id['EC-Earth-3-AerChem']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
-source_id['EC-Earth-3-AerChem']['ocean_biogeochemistry'] = 'PISCES (#which version#)'
-source_id['EC-Earth-3-AerChem']['release_year'] = '2017'
-source_id['EC-Earth-3-AerChem']['sea_ice'] = 'LIM3 (same version as ocean)'
-source_id['EC-Earth-3-AerChem']['source_id'] = 'EC-Earth-3-AerChem'
-source_id['EC-Earth-3-GrIS'] = {}
-source_id['EC-Earth-3-GrIS']['aerosol'] = 'None'
-source_id['EC-Earth-3-GrIS']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)'
-source_id['EC-Earth-3-GrIS']['atmospheric_chemistry'] = 'None'
-source_id['EC-Earth-3-GrIS']['cohort'] = ['']
-source_id['EC-Earth-3-GrIS']['institution_id'] = ['EC-Earth-Consortium']
-source_id['EC-Earth-3-GrIS']['label'] = 'EC-Earth 3.2 - GrIS'
-source_id['EC-Earth-3-GrIS']['label_extended'] = 'EC-Earth 3.2 - PISM'
-source_id['EC-Earth-3-GrIS']['land_ice'] = 'PISM 0.7 (5 km x 5 km, L442)'
-source_id['EC-Earth-3-GrIS']['land_surface'] = 'H-TESSEL (same version as atmosphere)'
-source_id['EC-Earth-3-GrIS']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
-source_id['EC-Earth-3-GrIS']['ocean_biogeochemistry'] = 'None'
-source_id['EC-Earth-3-GrIS']['release_year'] = '2017'
-source_id['EC-Earth-3-GrIS']['sea_ice'] = 'LIM3 (same version as ocean)'
-source_id['EC-Earth-3-GrIS']['source_id'] = 'EC-Earth-3-GrIS'
-source_id['EC-Earth-3-Veg'] = {}
-source_id['EC-Earth-3-Veg']['aerosol'] = 'None'
-source_id['EC-Earth-3-Veg']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256; 91 levels; top level 1 Pa)'
-source_id['EC-Earth-3-Veg']['atmospheric_chemistry'] = 'None'
-source_id['EC-Earth-3-Veg']['cohort'] = ['']
-source_id['EC-Earth-3-Veg']['institution_id'] = ['EC-Earth-Consortium']
-source_id['EC-Earth-3-Veg']['label'] = 'EC-Earth 3.2 - Veg'
-source_id['EC-Earth-3-Veg']['label_extended'] = 'EC-Earth 3.2 - LPJ-GUESS'
-source_id['EC-Earth-3-Veg']['land_ice'] = 'None'
-source_id['EC-Earth-3-Veg']['land_surface'] = 'LPJ-GUESS (same version as atmosphere)'
-source_id['EC-Earth-3-Veg']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
-source_id['EC-Earth-3-Veg']['ocean_biogeochemistry'] = 'None'
-source_id['EC-Earth-3-Veg']['release_year'] = '2017'
-source_id['EC-Earth-3-Veg']['sea_ice'] = 'LIM3 (same version as ocean)'
-source_id['EC-Earth-3-Veg']['source_id'] = 'EC-Earth-3-Veg'
-source_id['EC-Earth-3-Veg-LR'] = {}
-source_id['EC-Earth-3-Veg-LR']['aerosol'] = 'None'
-source_id['EC-Earth-3-Veg-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)'
-source_id['EC-Earth-3-Veg-LR']['atmospheric_chemistry'] = 'None'
-source_id['EC-Earth-3-Veg-LR']['cohort'] = ['']
-source_id['EC-Earth-3-Veg-LR']['institution_id'] = ['EC-Earth-Consortium']
-source_id['EC-Earth-3-Veg-LR']['label'] = 'EC-Earth 3.2 Veg LR'
-source_id['EC-Earth-3-Veg-LR']['label_extended'] = 'EC-Earth 3.2 - LPJ-GUESS at low resolution'
-source_id['EC-Earth-3-Veg-LR']['land_ice'] = 'None'
-source_id['EC-Earth-3-Veg-LR']['land_surface'] = 'LPJ-GUESS (same version as atmosphere)'
-source_id['EC-Earth-3-Veg-LR']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
-source_id['EC-Earth-3-Veg-LR']['ocean_biogeochemistry'] = 'None'
-source_id['EC-Earth-3-Veg-LR']['release_year'] = '2017'
-source_id['EC-Earth-3-Veg-LR']['sea_ice'] = 'LIM3 (same version as ocean)'
-source_id['EC-Earth-3-Veg-LR']['source_id'] = 'EC-Earth-3-Veg-LR'
+source_id['MPIESM-1-2-LR'] = {}
+source_id['MPIESM-1-2-LR']['aerosol'] = 'None, prescribed MACv2-SP'
+source_id['MPIESM-1-2-LR']['atmosphere'] = 'ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)'
+source_id['MPIESM-1-2-LR']['atmospheric_chemistry'] = 'None'
+source_id['MPIESM-1-2-LR']['cohort'] = ['']
+source_id['MPIESM-1-2-LR']['institution_id'] = ['MPI-M']
+source_id['MPIESM-1-2-LR']['label'] = 'MPIESM1.2-LR'
+source_id['MPIESM-1-2-LR']['label_extended'] = 'MPIESM1.2-LR'
+source_id['MPIESM-1-2-LR']['land_ice'] = 'None/prescribed'
+source_id['MPIESM-1-2-LR']['land_surface'] = 'JSBACH3.2'
+source_id['MPIESM-1-2-LR']['ocean'] = 'MPIOM1.63 (bipolar GR1.5; approximately 1.5deg latitude/longitude; 40 levels; top grid cell 0-12 m)'
+source_id['MPIESM-1-2-LR']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['MPIESM-1-2-LR']['release_year'] = '2017'
+source_id['MPIESM-1-2-LR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id['MPIESM-1-2-LR']['source_id'] = 'MPIESM-1-2-LR'
+source_id['MPIESM-1-2-HR'] = {}
+source_id['MPIESM-1-2-HR']['aerosol'] = 'None, prescribed MACv2-SP'
+source_id['MPIESM-1-2-HR']['atmosphere'] = 'ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)'
+source_id['MPIESM-1-2-HR']['atmospheric_chemistry'] = 'None'
+source_id['MPIESM-1-2-HR']['cohort'] = ['']
+source_id['MPIESM-1-2-HR']['institution_id'] = ['MPI-M']
+source_id['MPIESM-1-2-HR']['label'] = 'MPIESM1.2-HR'
+source_id['MPIESM-1-2-HR']['label_extended'] = 'dynamic vegetation and nitrogen cycle switched off'
+source_id['MPIESM-1-2-HR']['land_ice'] = 'None/prescribed'
+source_id['MPIESM-1-2-HR']['land_surface'] = 'JSBACH3.2'
+source_id['MPIESM-1-2-HR']['ocean'] = 'MPIOM1.63 (tripolar TP04; approximately 0.4deg latitude/longitude; 40 levels; top grid cell 0-12 m)'
+source_id['MPIESM-1-2-HR']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['MPIESM-1-2-HR']['release_year'] = '2017'
+source_id['MPIESM-1-2-HR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id['MPIESM-1-2-HR']['source_id'] = 'MPIESM-1-2-HR'
+source_id['MPIESM-2-LR'] = {}
+source_id['MPIESM-2-LR']['aerosol'] = 'None, prescribed MACv2-SP'
+source_id['MPIESM-2-LR']['atmosphere'] = 'ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)'
+source_id['MPIESM-2-LR']['atmospheric_chemistry'] = 'None'
+source_id['MPIESM-2-LR']['cohort'] = ['']
+source_id['MPIESM-2-LR']['institution_id'] = ['MPI-M']
+source_id['MPIESM-2-LR']['label'] = 'MPIESM2'
+source_id['MPIESM-2-LR']['label_extended'] = 'MPIESM2'
+source_id['MPIESM-2-LR']['land_ice'] = 'None/prescribed'
+source_id['MPIESM-2-LR']['land_surface'] = 'JSBACH4.2'
+source_id['MPIESM-2-LR']['ocean'] = 'ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)'
+source_id['MPIESM-2-LR']['ocean_biogeochemistry'] = 'HAMOCC'
+source_id['MPIESM-2-LR']['release_year'] = '2017'
+source_id['MPIESM-2-LR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id['MPIESM-2-LR']['source_id'] = 'MPIESM-2-LR'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

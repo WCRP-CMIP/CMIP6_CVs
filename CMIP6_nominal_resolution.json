@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 16:50:16 2017 -0800",
+        "creation_date":"Tue Jan 10 21:13:26 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (28; g0183647)",
-        "note":"Update DCPP experiment_ids",
-        "previous_commit":"f5ac55fe7b932a90fd388d42f0baa055b58fca38"
+        "latest_tag_point":"3.2.1 (29; gd4834a7)",
+        "note":"Register multiple MPI source_ids",
+        "previous_commit":"82cd3a60b7440cb43b0d82b231e3d178bd7f9dc0"
     }
 }

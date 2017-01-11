@@ -420,6 +420,66 @@
             "sea_ice":"SIS",
             "source_id":"IITM-ESM"
         },
+        "MPIESM-1-2-HR":{
+            "aerosol":"None, prescribed MACv2-SP",
+            "atmosphere":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MPI-M"
+            ],
+            "label":"MPIESM1.2-HR",
+            "label_extended":"dynamic vegetation and nitrogen cycle switched off",
+            "land_ice":"None/prescribed",
+            "land_surface":"JSBACH3.2",
+            "ocean":"MPIOM1.63 (tripolar TP04; approximately 0.4deg latitude/longitude; 40 levels; top grid cell 0-12 m)",
+            "ocean_biogeochemistry":"HAMOCC",
+            "release_year":"2017",
+            "sea_ice":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
+            "source_id":"MPIESM-1-2-HR"
+        },
+        "MPIESM-1-2-LR":{
+            "aerosol":"None, prescribed MACv2-SP",
+            "atmosphere":"ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MPI-M"
+            ],
+            "label":"MPIESM1.2-LR",
+            "label_extended":"MPIESM1.2-LR",
+            "land_ice":"None/prescribed",
+            "land_surface":"JSBACH3.2",
+            "ocean":"MPIOM1.63 (bipolar GR1.5; approximately 1.5deg latitude/longitude; 40 levels; top grid cell 0-12 m)",
+            "ocean_biogeochemistry":"HAMOCC",
+            "release_year":"2017",
+            "sea_ice":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
+            "source_id":"MPIESM-1-2-LR"
+        },
+        "MPIESM-2-LR":{
+            "aerosol":"None, prescribed MACv2-SP",
+            "atmosphere":"ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MPI-M"
+            ],
+            "label":"MPIESM2",
+            "label_extended":"MPIESM2",
+            "land_ice":"None/prescribed",
+            "land_surface":"JSBACH4.2",
+            "ocean":"ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)",
+            "ocean_biogeochemistry":"HAMOCC",
+            "release_year":"2017",
+            "sea_ice":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
+            "source_id":"MPIESM-2-LR"
+        },
         "NorESM2-HH":{
             "aerosol":"OsloAero",
             "atmosphere":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
@@ -625,10 +685,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 5 16:50:16 2017 -0800",
+        "creation_date":"Tue Jan 10 21:13:26 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (31; gf742e37)",
-        "note":"Update DCPP experiment_ids",
-        "previous_commit":"41beb647a8d3190bdbf2ef7b1e195acfe248f539"
+        "latest_tag_point":"3.2.1 (32; g1760630)",
+        "note":"Register multiple MPI source_ids",
+        "previous_commit":"4e22c495ff2f4a1aeddebd73a5f11ae696538040"
     }
 }

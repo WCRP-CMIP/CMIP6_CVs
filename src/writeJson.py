@@ -108,6 +108,7 @@ PJD  5 Jan 2017    - Revise multiple CNRM source_ids atmospheric chemistry entry
 PJD  5 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
 PJD  5 Jan 2017    - Update DCPP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1#issuecomment-268357110
 PJD 10 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
+PJD 13 Jan 2017    - Update table_id to reflect Data Request V1.0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/199,
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -128,7 +129,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register multiple MPI source_ids\"'
+commitMessage = '\"Update table_id to reflect Data Request V1.0\"'
 
 #%% Define functions
 # Get repo metadata
@@ -406,51 +407,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['MPIESM-1-2-LR'] = {}
-source_id['MPIESM-1-2-LR']['aerosol'] = 'None, prescribed MACv2-SP'
-source_id['MPIESM-1-2-LR']['atmosphere'] = 'ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)'
-source_id['MPIESM-1-2-LR']['atmospheric_chemistry'] = 'None'
-source_id['MPIESM-1-2-LR']['cohort'] = ['']
-source_id['MPIESM-1-2-LR']['institution_id'] = ['MPI-M']
-source_id['MPIESM-1-2-LR']['label'] = 'MPIESM1.2-LR'
-source_id['MPIESM-1-2-LR']['label_extended'] = 'MPIESM1.2-LR'
-source_id['MPIESM-1-2-LR']['land_ice'] = 'None/prescribed'
-source_id['MPIESM-1-2-LR']['land_surface'] = 'JSBACH3.2'
-source_id['MPIESM-1-2-LR']['ocean'] = 'MPIOM1.63 (bipolar GR1.5; approximately 1.5deg latitude/longitude; 40 levels; top grid cell 0-12 m)'
-source_id['MPIESM-1-2-LR']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['MPIESM-1-2-LR']['release_year'] = '2017'
-source_id['MPIESM-1-2-LR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
-source_id['MPIESM-1-2-LR']['source_id'] = 'MPIESM-1-2-LR'
-source_id['MPIESM-1-2-HR'] = {}
-source_id['MPIESM-1-2-HR']['aerosol'] = 'None, prescribed MACv2-SP'
-source_id['MPIESM-1-2-HR']['atmosphere'] = 'ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)'
-source_id['MPIESM-1-2-HR']['atmospheric_chemistry'] = 'None'
-source_id['MPIESM-1-2-HR']['cohort'] = ['']
-source_id['MPIESM-1-2-HR']['institution_id'] = ['MPI-M']
-source_id['MPIESM-1-2-HR']['label'] = 'MPIESM1.2-HR'
-source_id['MPIESM-1-2-HR']['label_extended'] = 'dynamic vegetation and nitrogen cycle switched off'
-source_id['MPIESM-1-2-HR']['land_ice'] = 'None/prescribed'
-source_id['MPIESM-1-2-HR']['land_surface'] = 'JSBACH3.2'
-source_id['MPIESM-1-2-HR']['ocean'] = 'MPIOM1.63 (tripolar TP04; approximately 0.4deg latitude/longitude; 40 levels; top grid cell 0-12 m)'
-source_id['MPIESM-1-2-HR']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['MPIESM-1-2-HR']['release_year'] = '2017'
-source_id['MPIESM-1-2-HR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
-source_id['MPIESM-1-2-HR']['source_id'] = 'MPIESM-1-2-HR'
-source_id['MPIESM-2-LR'] = {}
-source_id['MPIESM-2-LR']['aerosol'] = 'None, prescribed MACv2-SP'
-source_id['MPIESM-2-LR']['atmosphere'] = 'ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)'
-source_id['MPIESM-2-LR']['atmospheric_chemistry'] = 'None'
-source_id['MPIESM-2-LR']['cohort'] = ['']
-source_id['MPIESM-2-LR']['institution_id'] = ['MPI-M']
-source_id['MPIESM-2-LR']['label'] = 'MPIESM2'
-source_id['MPIESM-2-LR']['label_extended'] = 'MPIESM2'
-source_id['MPIESM-2-LR']['land_ice'] = 'None/prescribed'
-source_id['MPIESM-2-LR']['land_surface'] = 'JSBACH4.2'
-source_id['MPIESM-2-LR']['ocean'] = 'ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)'
-source_id['MPIESM-2-LR']['ocean_biogeochemistry'] = 'HAMOCC'
-source_id['MPIESM-2-LR']['release_year'] = '2017'
-source_id['MPIESM-2-LR']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
-source_id['MPIESM-2-LR']['source_id'] = 'MPIESM-2-LR'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
@@ -505,23 +461,51 @@ source_type = [
 #%% Table ids
 table_id = [
     '3hr',
-    '3hrpt',
-    '6hr',
-    '6hrpt',
-    'Aday',
+    '6hrLev',
+    '6hrPlev',
+    '6hrPlevPt',
+    'AERday',
+    'AERfx',
+    'AERhr',
+    'AERmon',
+    'AERmonZ',
     'Amon',
+    'CF3hr',
+    'CFday',
+    'CFmon',
+    'CFsubhr',
+    'CFsubhrOff',
+    'E1hr',
+    'E1hrClimMon',
+    'E3hr',
+    'E3hrPt',
+    'E6hrZ',
+    'Eday',
+    'EdayZ',
+    'Efx',
+    'Emon',
+    'EmonZ',
+    'Esubhr',
+    'Eyr',
+    'IfxAnt',
+    'IfxGre',
+    'ImonAnt',
+    'ImonGre',
+    'IyrAnt',
+    'IyrGre',
     'LImon',
     'Lmon',
-    'OImon',
     'Oclim',
     'Oday',
     'Odec',
+    'Ofx',
     'Omon',
     'Oyr',
-    'aero',
-    'cfOff',
-    'cfSites',
-    'fx'
+    'SIday',
+    'SImon',
+    'day',
+    'fx',
+    'grids'
 ]
 
 #%% Write variables to files

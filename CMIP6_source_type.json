@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 10 21:13:26 2017 -0800",
+        "creation_date":"Fri Jan 13 21:25:10 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (33; g08df9ba)",
-        "note":"Register multiple MPI source_ids",
-        "previous_commit":"91927644ffc6bcda97a689038b746971fefebb6d"
+        "latest_tag_point":"3.2.1 (35; gad937ba)",
+        "note":"Update table_id to reflect Data Request V1.0",
+        "previous_commit":"ea593237cc085dca6a727a3421a1b92f9c468a2d"
     }
 }

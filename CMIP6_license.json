@@ -1,13 +1,13 @@
 {
     "license":[
-        "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution \"[NonCommercial] Share Alike\" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data should be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+        "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution \"[NonCommercial] Share Alike\" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data has to be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 10 21:13:26 2017 -0800",
+        "author":"taylor13 <taylor13@llnl.gov>",
+        "creation_date":"Thu Jan 12 16:47:18 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (27; gbc670c6)",
-        "note":"Register multiple MPI source_ids",
-        "previous_commit":"3dddc573c0b189f437caa9b45a0c3d3595254774"
+        "latest_tag_point":"3.2.1 (16; g00a7963)",
+        "note":"Update CMIP6_license.json",
+        "previous_commit":"39ca1a6ea7806c401184f2806bd1cb8ab053a855"
     }
 }

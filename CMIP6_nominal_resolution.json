@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jan 18 09:46:56 2017 -0800",
+        "creation_date":"Wed Jan 18 14:12:39 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue201 durack1 update activity_id highres-future start_year (#203)",
-        "previous_commit":"a92f351bb5067d5d7a1cd8706ed3d7ae5e05203f"
+        "latest_tag_point":"3.2.1 (33; gf720dbb)",
+        "note":"Add experiment_id spinup-1950",
+        "previous_commit":"69cbf5a6b999f25b162ec66c5373c27a00c3bb3c"
     }
 }

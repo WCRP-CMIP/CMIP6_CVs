@@ -1083,7 +1083,9 @@
             "experiment":"coupled control with fixed 1950's forcing (HighResMIP equivalent of pre-industrial control)",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":"",
-            "parent_experiment_id":"",
+            "parent_experiment_id":[
+                "spinup-1950"
+            ],
             "required_model_components":[
                 "AOGCM"
             ],
@@ -2325,7 +2327,7 @@
                 "HighResMIP"
             ],
             "parent_experiment_id":[
-                "control-1950"
+                "spinup-1950"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -4857,6 +4859,33 @@
             "sub_experiment_id":"none",
             "tier":"1"
         },
+        "spinup-1950":{
+            "activity_id":[
+                "HighResMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Coupled integration from ocean rest state using recommended HighResMIP protocol spinup with 1950 ocean temperature and salinity, using constant 1950s forcing",
+            "end_year":"",
+            "experiment":"coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950",
+            "min_number_yrs_per_sim":"30",
+            "parent_activity_id":[
+                "HighResMIP"
+            ],
+            "parent_experiment_id":[
+                "None"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"",
+            "sub_experiment":"none",
+            "sub_experiment_id":"none",
+            "tier":"2"
+        },
         "ssp126":{
             "activity_id":[
                 "ScenarioMIP"
@@ -5795,10 +5824,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jan 18 09:45:15 2017 -0800",
+        "creation_date":"Wed Jan 18 14:12:38 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (26; g1a99e5c)",
-        "note":"Update activity_id highres-future start_year",
-        "previous_commit":"8aff7025a611b68bc209480f1375d7e9871479c8"
+        "latest_tag_point":"3.2.1 (27; g5409ce8)",
+        "note":"Add experiment_id spinup-1950",
+        "previous_commit":"1df84694079ab072805c4bd74e43733851101d4b"
     }
 }

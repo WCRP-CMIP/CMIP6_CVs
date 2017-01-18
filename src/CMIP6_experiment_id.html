@@ -191,6 +191,21 @@ $(document).ready( function () {
 <td></td>
 <td>Extended AMIP run that covers 1870-2014. All natural and anthropogenic historical forcings as used in CMIP6 Historical Simulation will be included. AGCM resolution as CMIP6 Historical Simulation. The HadISST data will be used</td>
 </tr>
+<tr><td>spinup-1950</td>
+<td>HighResMIP</td>
+<td>coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950</td>
+<td>2</td>
+<td>none</td>
+<td>none</td>
+<td>None</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td>HighResMIP</td>
+<td>Coupled integration from ocean rest state using recommended HighResMIP protocol spinup with 1950 ocean temperature and salinity, using constant 1950s forcing</td>
+</tr>
 <tr><td>piSST-4xCO2-solar</td>
 <td>GeoMIP</td>
 <td>preindustrial control SSTs with quadrupled CO2 and solar reduction</td>
@@ -482,7 +497,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>none</td>
-<td>control-1950</td>
+<td>spinup-1950</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
 <td>1951</td>
@@ -647,7 +662,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>none</td>
-<td></td>
+<td>spinup-1950</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
 <td></td>

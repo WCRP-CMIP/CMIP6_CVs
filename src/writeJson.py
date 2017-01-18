@@ -109,7 +109,8 @@ PJD  5 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/W
 PJD  5 Jan 2017    - Update DCPP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1#issuecomment-268357110
 PJD 10 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
 PJD 13 Jan 2017    - Update table_id to reflect Data Request V1.0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/199
-PJD 18 Jan 2017    - Update activity_id highres-future start_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/201
+PJD 18 Jan 2017    - Update experiment_id highres-future start_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/201
+PJD 18 Jan 2017    - Add experiment_id spinup-1950 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/202
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -130,7 +131,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update activity_id highres-future start_year\"'
+commitMessage = '\"Add experiment_id spinup-1950\"'
 
 #%% Define functions
 # Get repo metadata
@@ -208,7 +209,22 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['highres-future']['start_year'] = '2015'
+experiment_id['spinup-1950'] = {}
+experiment_id['spinup-1950']['activity_id'] = ['HighResMIP']
+experiment_id['spinup-1950']['additional_allowed_model_components'] = ['AER', 'CHEM', 'BGC']
+experiment_id['spinup-1950']['description'] = 'Coupled integration from ocean rest state using recommended HighResMIP protocol spinup with 1950 ocean temperature and salinity, using constant 1950s forcing'
+experiment_id['spinup-1950']['end_year'] = ''
+experiment_id['spinup-1950']['experiment'] = 'coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950'
+experiment_id['spinup-1950']['min_number_yrs_per_sim'] = '30'
+experiment_id['spinup-1950']['parent_activity_id'] = ['HighResMIP']
+experiment_id['spinup-1950']['parent_experiment_id'] = ['None']
+experiment_id['spinup-1950']['required_model_components'] = ['AOGCM']
+experiment_id['spinup-1950']['start_year'] = ''
+experiment_id['spinup-1950']['sub_experiment'] = 'none'
+experiment_id['spinup-1950']['sub_experiment_id'] = 'none'
+experiment_id['spinup-1950']['tier'] = '2'
+experiment_id['hist-1950']['parent_experiment_id'] = ['spinup-1950']
+experiment_id['control-1950']['parent_experiment_id'] = ['spinup-1950']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

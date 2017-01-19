@@ -9,7 +9,7 @@
         "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
         "CSIRO-BOM":"Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia",
         "EC-Earth-Consortium":"KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands",
-        "FIO":"The First Institution of Oceanography (SOA), Qingdao, China",
+        "FIO-SOA":"First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China",
         "INM":"Institute for Numerical Mathematics, Moscow 119991, Russia",
         "IPSL":"Institut Pierre Simon Laplace, Paris 75252, France",
         "LASG-IAP":"Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China",
@@ -30,10 +30,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jan 18 14:12:39 2017 -0800",
+        "creation_date":"Thu Jan 19 09:44:17 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (30; gc3e2d18)",
-        "note":"Add experiment_id spinup-1950",
-        "previous_commit":"8f2f024b4a6c128940364bdc18cfa7c89bb85e49"
+        "latest_tag_point":"3.2.1 (31; g10ec03a)",
+        "note":"Update institution_id FIO -> FIO-SOA",
+        "previous_commit":"d948c9e4e00d9f3bd3f71c46f462e397fd6bf9b1"
     }
 }

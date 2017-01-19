@@ -111,6 +111,7 @@ PJD 10 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/W
 PJD 13 Jan 2017    - Update table_id to reflect Data Request V1.0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/199
 PJD 18 Jan 2017    - Update experiment_id highres-future start_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/201
 PJD 18 Jan 2017    - Add experiment_id spinup-1950 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/202
+PJD 19 Jan 2017    - Update institution_id FIO -> FIO-SOA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/205
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -131,7 +132,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Add experiment_id spinup-1950\"'
+commitMessage = '\"Update institution_id FIO -> FIO-SOA\"'
 
 #%% Define functions
 # Get repo metadata
@@ -209,22 +210,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['spinup-1950'] = {}
-experiment_id['spinup-1950']['activity_id'] = ['HighResMIP']
-experiment_id['spinup-1950']['additional_allowed_model_components'] = ['AER', 'CHEM', 'BGC']
-experiment_id['spinup-1950']['description'] = 'Coupled integration from ocean rest state using recommended HighResMIP protocol spinup with 1950 ocean temperature and salinity, using constant 1950s forcing'
-experiment_id['spinup-1950']['end_year'] = ''
-experiment_id['spinup-1950']['experiment'] = 'coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950'
-experiment_id['spinup-1950']['min_number_yrs_per_sim'] = '30'
-experiment_id['spinup-1950']['parent_activity_id'] = ['HighResMIP']
-experiment_id['spinup-1950']['parent_experiment_id'] = ['None']
-experiment_id['spinup-1950']['required_model_components'] = ['AOGCM']
-experiment_id['spinup-1950']['start_year'] = ''
-experiment_id['spinup-1950']['sub_experiment'] = 'none'
-experiment_id['spinup-1950']['sub_experiment_id'] = 'none'
-experiment_id['spinup-1950']['tier'] = '2'
-experiment_id['hist-1950']['parent_experiment_id'] = ['spinup-1950']
-experiment_id['control-1950']['parent_experiment_id'] = ['spinup-1950']
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -322,7 +307,7 @@ institution_id = {
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
-    'FIO': 'The First Institution of Oceanography (SOA), Qingdao, China',
+    'FIO-SOA': 'First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China',
     'INM': 'Institute for Numerical Mathematics, Moscow 119991, Russia',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China',

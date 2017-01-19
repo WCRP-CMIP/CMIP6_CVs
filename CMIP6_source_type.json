@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jan 18 14:12:39 2017 -0800",
+        "creation_date":"Thu Jan 19 09:44:17 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (37; gf252485)",
-        "note":"Add experiment_id spinup-1950",
-        "previous_commit":"a21700d71172c2d67d9c9779281cc3f653dc706a"
+        "latest_tag_point":"3.2.1 (38; g114a4aa)",
+        "note":"Update institution_id FIO -> FIO-SOA",
+        "previous_commit":"6f1ac14b56edaa4b4a55803b632e6a04974cfef9"
     }
 }

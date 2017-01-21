@@ -1,5 +1,6 @@
 {
     "institution_id":{
+        "AWI":"Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany",
         "BNU":"Beijing Normal University, Beijing 100875, China",
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
@@ -30,10 +31,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jan 19 09:44:17 2017 -0800",
+        "creation_date":"Sat Jan 21 11:12:14 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (31; g10ec03a)",
-        "note":"Update institution_id FIO -> FIO-SOA",
-        "previous_commit":"d948c9e4e00d9f3bd3f71c46f462e397fd6bf9b1"
+        "latest_tag_point":"3.2.1 (32; gc64a5da)",
+        "note":"Register institution_id AWI",
+        "previous_commit":"261213bfe30320c15fe488cbc29ec7dc5c14cd66"
     }
 }

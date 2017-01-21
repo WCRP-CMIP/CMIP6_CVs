@@ -20,6 +20,26 @@
             "sea_ice":"CICE4.1",
             "source_id":"ACCESS-1-0"
         },
+        "AWI-CM-1-0":{
+            "aerosol":"None",
+            "atmosphere":"ECHAM6.3.02p4 (#XXX x XXX# T127L95; #XX# levels; top level 80000 m)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-CM 1.0",
+            "label_extended":"AWI-CM 1.0",
+            "land_ice":"None",
+            "land_surface":"JSBACH (#WHICH VERSION#)",
+            "ocean":"FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell #X-X# m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"FESOM 1.4",
+            "source_id":"AWI-CM-1-0"
+        },
         "BNU-ESM-1-1":{
             "aerosol":"CAM-chem; semi-interactive",
             "atmosphere":"CAM4 (FV, 144 x 96; 26 levels; top level 2.194 mb)",
@@ -685,10 +705,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Jan 21 11:12:15 2017 -0800",
+        "creation_date":"Sat Jan 21 11:30:46 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (38; gb9c02f4)",
-        "note":"Register institution_id AWI",
-        "previous_commit":"473f03be3d0d24483ce50090e0cd8da1e64a8a61"
+        "latest_tag_point":"3.2.1 (39; g0c4a1b9)",
+        "note":"Register source_id AWI-CM",
+        "previous_commit":"8cf9435246c5b7405b88ccd93c23d886f810933d"
     }
 }

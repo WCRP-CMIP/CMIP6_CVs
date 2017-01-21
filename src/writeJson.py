@@ -113,6 +113,7 @@ PJD 18 Jan 2017    - Update experiment_id highres-future start_year https://gith
 PJD 18 Jan 2017    - Add experiment_id spinup-1950 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/202
 PJD 19 Jan 2017    - Update institution_id FIO -> FIO-SOA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/205
 PJD 21 Jan 2017    - Register institution_id AWI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/207
+PJD 21 Jan 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -133,7 +134,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id AWI\"'
+commitMessage = '\"Register source_id AWI-CM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -412,6 +413,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['AWI-CM-1-0'] = {}
+source_id['AWI-CM-1-0']['aerosol'] = 'None'
+source_id['AWI-CM-1-0']['atmosphere'] = 'ECHAM6.3.02p4 (#XXX x XXX# T127L95; #XX# levels; top level 80000 m)'
+source_id['AWI-CM-1-0']['atmospheric_chemistry'] = 'None'
+source_id['AWI-CM-1-0']['cohort'] = ['']
+source_id['AWI-CM-1-0']['institution_id'] = ['AWI']
+source_id['AWI-CM-1-0']['label'] = 'AWI-CM 1.0'
+source_id['AWI-CM-1-0']['label_extended'] = 'AWI-CM 1.0'
+source_id['AWI-CM-1-0']['land_ice'] = 'None'
+source_id['AWI-CM-1-0']['land_surface'] = 'JSBACH (#WHICH VERSION#)'
+source_id['AWI-CM-1-0']['ocean'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell #X-X# m)'
+source_id['AWI-CM-1-0']['ocean_biogeochemistry'] = 'None'
+source_id['AWI-CM-1-0']['release_year'] = '2017'
+source_id['AWI-CM-1-0']['sea_ice'] = 'FESOM 1.4'
+source_id['AWI-CM-1-0']['source_id'] = 'AWI-CM-1-0'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

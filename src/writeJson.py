@@ -114,6 +114,7 @@ PJD 18 Jan 2017    - Add experiment_id spinup-1950 https://github.com/WCRP-CMIP/
 PJD 19 Jan 2017    - Update institution_id FIO -> FIO-SOA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/205
 PJD 21 Jan 2017    - Register institution_id AWI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/207
 PJD 21 Jan 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
+PJD 23 Jan 2017    - Update institution_id FIO-SOA -> FIO-RONM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/209
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -134,7 +135,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id AWI-CM\"'
+commitMessage = '\"Update institution_id FIO-SOA -> FIO-RONM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -310,7 +311,7 @@ institution_id = {
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
-    'FIO-SOA': 'First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China',
+    'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'INM': 'Institute for Numerical Mathematics, Moscow 119991, Russia',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China',
@@ -413,21 +414,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['AWI-CM-1-0'] = {}
-source_id['AWI-CM-1-0']['aerosol'] = 'None'
-source_id['AWI-CM-1-0']['atmosphere'] = 'ECHAM6.3.02p4 (#XXX x XXX# T127L95; #XX# levels; top level 80000 m)'
-source_id['AWI-CM-1-0']['atmospheric_chemistry'] = 'None'
-source_id['AWI-CM-1-0']['cohort'] = ['']
-source_id['AWI-CM-1-0']['institution_id'] = ['AWI']
-source_id['AWI-CM-1-0']['label'] = 'AWI-CM 1.0'
-source_id['AWI-CM-1-0']['label_extended'] = 'AWI-CM 1.0'
-source_id['AWI-CM-1-0']['land_ice'] = 'None'
-source_id['AWI-CM-1-0']['land_surface'] = 'JSBACH (#WHICH VERSION#)'
-source_id['AWI-CM-1-0']['ocean'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell #X-X# m)'
-source_id['AWI-CM-1-0']['ocean_biogeochemistry'] = 'None'
-source_id['AWI-CM-1-0']['release_year'] = '2017'
-source_id['AWI-CM-1-0']['sea_ice'] = 'FESOM 1.4'
-source_id['AWI-CM-1-0']['source_id'] = 'AWI-CM-1-0'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

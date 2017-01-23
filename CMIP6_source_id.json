@@ -500,6 +500,26 @@
             "sea_ice":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
             "source_id":"MPIESM-2-LR"
         },
+        "MRI-ESM2-0":{
+            "aerosol":"MASINGAR mk2r4",
+            "atmosphere":"MRI-AGCM3.5 (320 x 160 TL159; 80 levels; top level 0.01 hPa)",
+            "atmospheric_chemistry":"MRI-CCM2.1",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MRI"
+            ],
+            "label":"MRI-ESM2.0",
+            "label_extended":"MRI-ESM2.0",
+            "land_ice":"None",
+            "land_surface":"HAL (#VERSION INFO#)",
+            "ocean":"MRI.COM4.2 (tripolar primarily 0.5 deg latitude/1 deg longitude; 61 levels; top grid cell #X-X# m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"MRI.COM4.2",
+            "source_id":"MRI-ESM2-0"
+        },
         "NorESM2-HH":{
             "aerosol":"OsloAero",
             "atmosphere":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
@@ -705,10 +725,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 11:44:48 2017 -0800",
+        "creation_date":"Mon Jan 23 11:53:32 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (40; g31a9233)",
-        "note":"Update institution_id FIO-SOA -> FIO-RONM",
-        "previous_commit":"3d3a9d999b2931b23821c289e92224fa98d1e107"
+        "latest_tag_point":"3.2.1 (41; g1c8c190)",
+        "note":"Register source_id MRI-ESM2-0",
+        "previous_commit":"e397313cf62819e27150363d0a9fef6cfb887786"
     }
 }

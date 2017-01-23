@@ -35,10 +35,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 11:46:14 2017 -0800",
+        "creation_date":"Mon Jan 23 11:53:32 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue209 register institution_id FIO-RONM (#213)",
-        "previous_commit":"8cb448472d2b70bd8cbc632395bad2ad18579088"
+        "latest_tag_point":"3.2.1 (40; ga227722)",
+        "note":"Register source_id MRI-ESM2-0",
+        "previous_commit":"5ec3031ad1a4755b0ac48c51de3fa4585b33083d"
     }
 }

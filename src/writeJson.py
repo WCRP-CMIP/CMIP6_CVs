@@ -115,6 +115,7 @@ PJD 19 Jan 2017    - Update institution_id FIO -> FIO-SOA https://github.com/WCR
 PJD 21 Jan 2017    - Register institution_id AWI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/207
 PJD 21 Jan 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
 PJD 23 Jan 2017    - Update institution_id FIO-SOA -> FIO-RONM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/209
+PJD 23 Jan 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -135,7 +136,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update institution_id FIO-SOA -> FIO-RONM\"'
+commitMessage = '\"Register source_id MRI-ESM2-0\"'
 
 #%% Define functions
 # Get repo metadata
@@ -414,6 +415,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['MRI-ESM2-0'] = {}
+source_id['MRI-ESM2-0']['aerosol'] = 'MASINGAR mk2r4'
+source_id['MRI-ESM2-0']['atmosphere'] = 'MRI-AGCM3.5 (320 x 160 TL159; 80 levels; top level 0.01 hPa)'
+source_id['MRI-ESM2-0']['atmospheric_chemistry'] = 'MRI-CCM2.1'
+source_id['MRI-ESM2-0']['cohort'] = ['']
+source_id['MRI-ESM2-0']['institution_id'] = ['MRI']
+source_id['MRI-ESM2-0']['label'] = 'MRI-ESM2.0'
+source_id['MRI-ESM2-0']['label_extended'] = 'MRI-ESM2.0'
+source_id['MRI-ESM2-0']['land_ice'] = 'None'
+source_id['MRI-ESM2-0']['land_surface'] = 'HAL (#VERSION INFO#)'
+source_id['MRI-ESM2-0']['ocean'] = 'MRI.COM4.2 (tripolar primarily 0.5 deg latitude/1 deg longitude; 61 levels; top grid cell #X-X# m)'
+source_id['MRI-ESM2-0']['ocean_biogeochemistry'] = 'None'
+source_id['MRI-ESM2-0']['release_year'] = '2017'
+source_id['MRI-ESM2-0']['sea_ice'] = 'MRI.COM4.2'
+source_id['MRI-ESM2-0']['source_id'] = 'MRI-ESM2-0'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

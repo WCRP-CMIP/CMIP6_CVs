@@ -10,7 +10,7 @@
         "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
         "CSIRO-BOM":"Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia",
         "EC-Earth-Consortium":"KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands",
-        "FIO-SOA":"First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China",
+        "FIO-RONM":"FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)",
         "INM":"Institute for Numerical Mathematics, Moscow 119991, Russia",
         "IPSL":"Institut Pierre Simon Laplace, Paris 75252, France",
         "LASG-IAP":"Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China",
@@ -31,10 +31,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Jan 21 11:30:45 2017 -0800",
+        "creation_date":"Mon Jan 23 11:44:48 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (33; g0e36824)",
-        "note":"Register source_id AWI-CM",
-        "previous_commit":"f0bdce91fee341248a48e28ff7082cc070bd9e01"
+        "latest_tag_point":"3.2.1 (34; g6de7305)",
+        "note":"Update institution_id FIO-SOA -> FIO-RONM",
+        "previous_commit":"5b960f3e340406abca8bc90763a7f6f4f1270637"
     }
 }

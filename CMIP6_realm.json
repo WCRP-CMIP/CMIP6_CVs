@@ -11,10 +11,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Jan 21 11:30:46 2017 -0800",
+        "creation_date":"Mon Jan 23 11:44:48 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (37; g71a124a)",
-        "note":"Register source_id AWI-CM",
-        "previous_commit":"fd34f5470483801ebe2080db5b1dfbd2bed6d86a"
+        "latest_tag_point":"3.2.1 (38; g7575689)",
+        "note":"Update institution_id FIO-SOA -> FIO-RONM",
+        "previous_commit":"24be84096e9a53795bdc3f0b0719981a9bc8ae3a"
     }
 }

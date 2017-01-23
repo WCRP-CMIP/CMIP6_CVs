@@ -3244,7 +3244,7 @@
             "description":"Last interglacial simulation of ice sheet evolution driven by PMIP lig127k",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM last interglacial output",
-            "min_number_yrs_per_sim":"",
+            "min_number_yrs_per_sim":"20000",
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
@@ -3263,7 +3263,7 @@
             "description":"Present-day control simulation for \"offline\" ice sheets",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM pdControl output",
-            "min_number_yrs_per_sim":"451",
+            "min_number_yrs_per_sim":"100",
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
@@ -3282,7 +3282,7 @@
             "description":"Pre-industrial control simulation for \"offline\" ice sheets",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISM's own AOGCM piControl output",
-            "min_number_yrs_per_sim":"451",
+            "min_number_yrs_per_sim":"500",
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
@@ -3301,7 +3301,7 @@
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
-            "min_number_yrs_per_sim":"286",
+            "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -3324,7 +3324,7 @@
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on ScenarioMIP ssp585",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
-            "min_number_yrs_per_sim":"286",
+            "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -4718,7 +4718,7 @@
             "description":"Pre-industrial control simulation that includes interactive ice sheets",
             "end_year":"",
             "experiment":"preindustrial control with interactive ice sheet",
-            "min_number_yrs_per_sim":"451",
+            "min_number_yrs_per_sim":"500",
             "parent_activity_id":"",
             "parent_experiment_id":"",
             "required_model_components":[
@@ -5484,7 +5484,7 @@
             "description":"Future climate from ScenarioMIP SSP5-8.5 simulation that includes interactive ice sheets. Set up follows the standard SSP5-8.5 experiment",
             "end_year":"2300",
             "experiment":"ssp585 with interactive ice sheet",
-            "min_number_yrs_per_sim":"286",
+            "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -5824,10 +5824,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 11:53:31 2017 -0800",
+        "creation_date":"Mon Jan 23 12:15:25 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (32; g2f4d421)",
-        "note":"Register source_id MRI-ESM2-0",
-        "previous_commit":"6d68858a233f3e03e622eca741a1c584e45e196d"
+        "latest_tag_point":"3.2.1 (33; g18c8801)",
+        "note":"Revise experiment_id values for ISMIP",
+        "previous_commit":"ee659cc4c69f3c2af167da9e4603831409edadcf"
     }
 }

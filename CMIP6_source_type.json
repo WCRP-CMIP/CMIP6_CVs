@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 11:44:49 2017 -0800",
+        "creation_date":"Mon Jan 23 11:46:14 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (41; gddb2653)",
-        "note":"Update institution_id FIO-SOA -> FIO-RONM",
-        "previous_commit":"cd8c1ff14d961d5680b736407b781b7d7ee03c9e"
+        "latest_tag_point":"note: ",
+        "note":"Issue209 register institution_id FIO-RONM (#213)",
+        "previous_commit":"8cb448472d2b70bd8cbc632395bad2ad18579088"
     }
 }

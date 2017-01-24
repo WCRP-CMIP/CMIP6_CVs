@@ -11,10 +11,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 12:15:26 2017 -0800",
+        "creation_date":"Mon Jan 23 12:17:50 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (40; gd327984)",
-        "note":"Revise experiment_id values for ISMIP",
-        "previous_commit":"681d5692fb22a0e3f98c947c37175e45c1e15647"
+        "latest_tag_point":"note: ",
+        "note":"Issue168 durack1 revise experiment id values for ismip (#215)",
+        "previous_commit":"e1846e6754cd312190834fe6c4181d4655387127"
     }
 }

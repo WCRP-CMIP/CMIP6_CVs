@@ -49,10 +49,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 20:45:41 2017 -0800",
+        "creation_date":"Mon Jan 23 20:47:03 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (45; gc4757d6)",
-        "note":"Revise source_id MRI-ESM2-0",
-        "previous_commit":"5cce2226c967a86908d1fd888a9816cd122eddef"
+        "latest_tag_point":"note: ",
+        "note":"Issue208 durack1 revise source_id MRI-ESM2-0 (#216)",
+        "previous_commit":"9bda4942ae318ef914961141fcb1b7ead7f3eca7"
     }
 }

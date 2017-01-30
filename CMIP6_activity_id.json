@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 23 20:47:03 2017 -0800",
+        "creation_date":"Mon Jan 30 10:01:03 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue208 durack1 revise source_id MRI-ESM2-0 (#216)",
-        "previous_commit":"9bda4942ae318ef914961141fcb1b7ead7f3eca7"
+        "latest_tag_point":"3.2.1 (34; g7b72c3d)",
+        "note":"Register source_id EMAC-2-53-AerChem",
+        "previous_commit":"c9d5f109f70c0a7edfc226ed1c198fd9b943c07f"
     }
 }

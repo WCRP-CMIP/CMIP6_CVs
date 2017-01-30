@@ -118,6 +118,7 @@ PJD 23 Jan 2017    - Update institution_id FIO-SOA -> FIO-RONM https://github.co
 PJD 23 Jan 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
 PJD 23 Jan 2017    - Revise experiment_id values for ISMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/168
 PJD 23 Jan 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
+PJD 30 Jan 2017    - Register source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -138,7 +139,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MRI-ESM2-0\"'
+commitMessage = '\"Register source_id EMAC-2-53-AerChem\"'
 
 #%% Define functions
 # Get repo metadata
@@ -216,16 +217,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['ssp585-withism']['min_number_yrs_per_sim'] = '85'
-experiment_id['ssp585-withism']['end_year'] = '2300'
-experiment_id['ism-ssp585-self']['min_number_yrs_per_sim'] = '85'
-experiment_id['ism-ssp585-self']['end_year'] = '2300'
-experiment_id['ism-ssp585-std']['min_number_yrs_per_sim'] = '85'
-experiment_id['ism-ssp585-std']['end_year'] = '2300'
-experiment_id['piControl-withism']['min_number_yrs_per_sim'] = '500'
-experiment_id['ism-piControl-self']['min_number_yrs_per_sim'] = '500'
-experiment_id['ism-pdControl-std']['min_number_yrs_per_sim'] = '100'
-experiment_id['ism-lig127k-std']['min_number_yrs_per_sim'] = '20000'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -427,8 +418,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['MRI-ESM2-0']['land_surface'] = 'HAL 1.0'
-source_id['MRI-ESM2-0']['ocean'] = 'MRI.COM4.2 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 61 levels; top grid cell 0-2 m)'
+source_id['EMAC-2-53-AerChem'] = {}
+source_id['EMAC-2-53-AerChem']['aerosol'] = 'gmxe 2.2.x'
+source_id['EMAC-2-53-AerChem']['atmosphere'] = 'ECHAM5.30.2 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)'
+source_id['EMAC-2-53-AerChem']['atmospheric_chemistry'] = 'MECCA 3.8.x'
+source_id['EMAC-2-53-AerChem']['cohort'] = ['']
+source_id['EMAC-2-53-AerChem']['institution_id'] = ['MESSy-Consortium']
+source_id['EMAC-2-53-AerChem']['label'] = 'EMAC-2-53-AerChem'
+source_id['EMAC-2-53-AerChem']['label_extended'] = 'EMAC-2-53-x-AerChem'
+source_id['EMAC-2-53-AerChem']['land_ice'] = 'None'
+source_id['EMAC-2-53-AerChem']['land_surface'] = 'same as Atmosphere'
+source_id['EMAC-2-53-AerChem']['ocean'] = 'MPIOM 1.3.0-beta (bipolar GR1.5; approximately 1.5deg latitude/longitude; 40 levels; top grid cell 0-12 m)'
+source_id['EMAC-2-53-AerChem']['ocean_biogeochemistry'] = 'None'
+source_id['EMAC-2-53-AerChem']['release_year'] = '2017'
+source_id['EMAC-2-53-AerChem']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id['EMAC-2-53-AerChem']['source_id'] = 'EMAC-2-53-AerChem'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

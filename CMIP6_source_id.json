@@ -302,7 +302,7 @@
         },
         "EMAC-2-53-AerChem":{
             "aerosol":"gmxe 2.2.x",
-            "atmosphere":"ECHAM5.30.2 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)",
+            "atmosphere":"ECHAM5.3.02 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)",
             "atmospheric_chemistry":"MECCA 3.8.x",
             "cohort":[
                 ""
@@ -745,10 +745,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 30 10:01:04 2017 -0800",
+        "creation_date":"Tue Jan 31 14:46:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (44; gc1e53e1)",
-        "note":"Register source_id EMAC-2-53-AerChem",
-        "previous_commit":"17c7a0a693de8c855ce9bf04df615bee2eaf1658"
+        "latest_tag_point":"3.2.1 (45; ga6934d8)",
+        "note":"Revise source_id EMAC-2-53-AerChem",
+        "previous_commit":"36cff5e3c0a661c31c71f98878eebc5ffc629991"
     }
 }

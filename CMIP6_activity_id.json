@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 6 19:31:12 2017 +1100",
+        "creation_date":"Mon Feb 6 20:06:51 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (39; gf10f23c)",
-        "note":"Revise license details",
-        "previous_commit":"caff9d9a0542ac8c1f46b58599ad89a7434f3fc3"
+        "latest_tag_point":"3.2.1 (40; gad3d16d)",
+        "note":"Register source_id AWI-CM",
+        "previous_commit":"1a4db3427337666930e489a8c80cb61b50e1ac54"
     }
 }

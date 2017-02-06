@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 31 14:49:20 2017 -0800",
+        "creation_date":"Mon Feb 6 19:31:12 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue217 durack1 revise source id emac 2 53 aer chem (#220)",
-        "previous_commit":"ec78e397339573f5aae68a15ac7ed6a37c2b2ad2"
+        "latest_tag_point":"3.2.1 (41; gd9845ac)",
+        "note":"Revise license details",
+        "previous_commit":"8846d81fe2b954e8e9e891c6006c6f5d5737ee0a"
     }
 }

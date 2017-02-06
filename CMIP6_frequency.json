@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 6 19:31:12 2017 +1100",
+        "creation_date":"Mon Feb 6 19:54:27 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (41; gd9845ac)",
-        "note":"Revise license details",
-        "previous_commit":"8846d81fe2b954e8e9e891c6006c6f5d5737ee0a"
+        "latest_tag_point":"note: ",
+        "note":"Issue221 durack1 update license info (#222)",
+        "previous_commit":"f83d293447710a2695f4215a2a9b02329afdeb2d"
     }
 }

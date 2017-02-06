@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 31 14:46:57 2017 -0800",
+        "creation_date":"Mon Feb 6 19:31:12 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (40; gccacbaa)",
-        "note":"Revise source_id EMAC-2-53-AerChem",
-        "previous_commit":"3770460fb455610a8121b2bc4b13823fe94b2a5b"
+        "latest_tag_point":"3.2.1 (44; g883d339)",
+        "note":"Revise license details",
+        "previous_commit":"59f8ce3937159015b7980efbd1f40e6ab0f5df0d"
     }
 }

@@ -120,6 +120,7 @@ PJD 23 Jan 2017    - Revise experiment_id values for ISMIP https://github.com/WC
 PJD 23 Jan 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
 PJD 30 Jan 2017    - Register source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
 PJD 31 Jan 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
+PJD  6 Feb 2017    - Revise license details
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -140,7 +141,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id EMAC-2-53-AerChem\"'
+commitMessage = '\"Revise license details\"'
 
 #%% Define functions
 # Get repo metadata
@@ -338,7 +339,7 @@ institution_id = {
 
 #%% CMIP6 License
 license = [
-    'CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution "[NonCommercial] Share Alike" 4.0 International License (http://creativecommons.org/licenses/by/4.0/). Use of the data has to be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
+    'CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Use of the data must be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
 ]
 
 #%% MIP eras

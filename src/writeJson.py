@@ -121,6 +121,7 @@ PJD 23 Jan 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CM
 PJD 30 Jan 2017    - Register source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
 PJD 31 Jan 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
 PJD  6 Feb 2017    - Revise license details
+PJD  6 Feb 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -141,7 +142,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise license details\"'
+commitMessage = '\"Register source_id AWI-CM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -420,7 +421,9 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['EMAC-2-53-AerChem']['atmosphere'] = 'ECHAM5.3.02 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)'
+source_id['AWI-CM-1-0']['atmosphere'] = 'ECHAM6.3.02p4 (384 x 192 T127L95; 95 levels; top level 80000 m)'
+source_id['AWI-CM-1-0']['land_surface'] = 'JSBACH 3.10'
+source_id['AWI-CM-1-0']['ocean'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

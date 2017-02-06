@@ -22,7 +22,7 @@
         },
         "AWI-CM-1-0":{
             "aerosol":"None",
-            "atmosphere":"ECHAM6.3.02p4 (#XXX x XXX# T127L95; #XX# levels; top level 80000 m)",
+            "atmosphere":"ECHAM6.3.02p4 (384 x 192 T127L95; 95 levels; top level 80000 m)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 ""
@@ -33,8 +33,8 @@
             "label":"AWI-CM 1.0",
             "label_extended":"AWI-CM 1.0",
             "land_ice":"None",
-            "land_surface":"JSBACH (#WHICH VERSION#)",
-            "ocean":"FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell #X-X# m)",
+            "land_surface":"JSBACH 3.10",
+            "ocean":"FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)",
             "ocean_biogeochemistry":"None",
             "release_year":"2017",
             "sea_ice":"FESOM 1.4",
@@ -745,10 +745,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 6 19:31:12 2017 +1100",
+        "creation_date":"Mon Feb 6 19:54:27 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (49; g4623957)",
-        "note":"Revise license details",
-        "previous_commit":"ab3109979e91607083e8ae9f537268ee4063ba17"
+        "latest_tag_point":"note: ",
+        "note":"Issue221 durack1 update license info (#222)",
+        "previous_commit":"f83d293447710a2695f4215a2a9b02329afdeb2d"
     }
 }

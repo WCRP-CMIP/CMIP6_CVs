@@ -122,6 +122,7 @@ PJD 30 Jan 2017    - Register source_id EMAC-2-53-AerChem https://github.com/WCR
 PJD 31 Jan 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
 PJD  6 Feb 2017    - Revise license details
 PJD  6 Feb 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
+PJD  6 Feb 2017    - Revise multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -142,7 +143,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id AWI-CM\"'
+commitMessage = '\"Revise multiple EC-Earth3 source_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -421,9 +422,135 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['AWI-CM-1-0']['atmosphere'] = 'ECHAM6.3.02p4 (384 x 192 T127L95; 95 levels; top level 80000 m)'
-source_id['AWI-CM-1-0']['land_surface'] = 'JSBACH 3.10'
-source_id['AWI-CM-1-0']['ocean'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
+source_id.pop('EC-Earth-3')
+source_id['EC-Earth3'] = {}
+source_id['EC-Earth3']['aerosol'] = 'None'
+source_id['EC-Earth3']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0,01 hPa)'
+source_id['EC-Earth3']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3']['cohort'] = ['']
+source_id['EC-Earth3']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3']['label'] = 'EC-Earth3'
+source_id['EC-Earth3']['label_extended'] = 'EC-Earth 3.3'
+source_id['EC-Earth3']['land_ice'] = 'None'
+source_id['EC-Earth3']['land_surface'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id['EC-Earth3']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3']['release_year'] = '2017'
+source_id['EC-Earth3']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3']['source_id'] = 'EC-Earth3'
+source_id.pop('EC-Earth-3-AerChem')
+source_id['EC-Earth3-AerChem'] = {}
+source_id['EC-Earth3-AerChem']['aerosol'] = 'TM5'
+source_id['EC-Earth3-AerChem']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)'
+source_id['EC-Earth3-AerChem']['atmospheric_chemistry'] = 'TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa'
+source_id['EC-Earth3-AerChem']['cohort'] = ['']
+source_id['EC-Earth3-AerChem']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-AerChem']['label'] = 'EC-Earth3-AerChem'
+source_id['EC-Earth3-AerChem']['label_extended'] = 'EC-Earth 3.3 - AerChem (with atmospheric aerosol and chemistry)'
+source_id['EC-Earth3-AerChem']['land_ice'] = 'None'
+source_id['EC-Earth3-AerChem']['land_surface'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id['EC-Earth3-AerChem']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-AerChem']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-AerChem']['release_year'] = '2017'
+source_id['EC-Earth3-AerChem']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-AerChem']['source_id'] = 'EC-Earth3-AerChem'
+source_id.pop('EC-Earth-3-CC')
+source_id['EC-Earth3-CC'] = {}
+source_id['EC-Earth3-CC']['aerosol'] = 'None'
+source_id['EC-Earth3-CC']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)'
+source_id['EC-Earth3-CC']['atmospheric_chemistry'] = 'TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa'
+source_id['EC-Earth3-CC']['cohort'] = ['']
+source_id['EC-Earth3-CC']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-CC']['label'] = 'EC-Earth3-CC'
+source_id['EC-Earth3-CC']['label_extended'] = 'EC-Earth 3.3 - CC (with carbon cycle)'
+source_id['EC-Earth3-CC']['land_ice'] = 'None'
+source_id['EC-Earth3-CC']['land_surface'] = 'LPJ-GUESS v4'
+source_id['EC-Earth3-CC']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-CC']['ocean_biogeochemistry'] = 'PISCES v2'
+source_id['EC-Earth3-CC']['release_year'] = '2017'
+source_id['EC-Earth3-CC']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-CC']['source_id'] = 'EC-Earth3-CC'
+source_id.pop('EC-Earth-3-GrIS')
+source_id['EC-Earth3-GrIS'] = {}
+source_id['EC-Earth3-GrIS']['aerosol'] = 'None'
+source_id['EC-Earth3-GrIS']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)'
+source_id['EC-Earth3-GrIS']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3-GrIS']['cohort'] = ['']
+source_id['EC-Earth3-GrIS']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-GrIS']['label'] = 'EC-Earth3-GrIS'
+source_id['EC-Earth3-GrIS']['label_extended'] = 'EC-Earth 3.3 Coupled with PISM for Greenland ice sheet'
+source_id['EC-Earth3-GrIS']['land_ice'] = 'PISM 0.7 (5 km x 5 km, L442)'
+source_id['EC-Earth3-GrIS']['land_surface'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id['EC-Earth3-GrIS']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-GrIS']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-GrIS']['release_year'] = '2017'
+source_id['EC-Earth3-GrIS']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-GrIS']['source_id'] = 'EC-Earth3-GrIS'
+source_id.pop('EC-Earth-3-HR')
+source_id['EC-Earth3-HR'] = {}
+source_id['EC-Earth3-HR']['aerosol'] = 'None'
+source_id['EC-Earth3-HR']['atmosphere'] = 'IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512; 91 levels; top level 0.01 hPa)'
+source_id['EC-Earth3-HR']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3-HR']['cohort'] = ['']
+source_id['EC-Earth3-HR']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-HR']['label'] = 'EC-Earth3-HR'
+source_id['EC-Earth3-HR']['label_extended'] = 'EC-Earth 3.3 at high resolution'
+source_id['EC-Earth3-HR']['land_ice'] = 'None'
+source_id['EC-Earth3-HR']['land_surface'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id['EC-Earth3-HR']['ocean'] = 'NEMO3.6 (tripolar, 1442x1921; 75 levels; top grid cell 5m)'
+source_id['EC-Earth3-HR']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-HR']['release_year'] = '2017'
+source_id['EC-Earth3-HR']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-HR']['source_id'] = 'EC-Earth3-HR'
+source_id.pop('EC-Earth-3-LR')
+source_id['EC-Earth3-LR'] = {}
+source_id['EC-Earth3-LR']['aerosol'] = 'None'
+source_id['EC-Earth3-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)'
+source_id['EC-Earth3-LR']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3-LR']['cohort'] = ['']
+source_id['EC-Earth3-LR']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-LR']['label'] = 'EC-Earth3-LR'
+source_id['EC-Earth3-LR']['label_extended'] = 'EC-Earth 3.3 at low resolution'
+source_id['EC-Earth3-LR']['land_ice'] = 'None'
+source_id['EC-Earth3-LR']['land_surface'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id['EC-Earth3-LR']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-LR']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-LR']['release_year'] = '2017'
+source_id['EC-Earth3-LR']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-LR']['source_id'] = 'EC-Earth3-LR'
+source_id.pop('EC-Earth-3-Veg')
+source_id['EC-Earth3-Veg'] = {}
+source_id['EC-Earth3-Veg']['aerosol'] = 'None'
+source_id['EC-Earth3-Veg']['atmosphere'] = 'IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)'
+source_id['EC-Earth3-Veg']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3-Veg']['cohort'] = ['']
+source_id['EC-Earth3-Veg']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-Veg']['label'] = 'EC-Earth3-Veg'
+source_id['EC-Earth3-Veg']['label_extended'] = 'EC-Earth 3.3 - LPJ-GUESS'
+source_id['EC-Earth3-Veg']['land_ice'] = 'None'
+source_id['EC-Earth3-Veg']['land_surface'] = 'LPJ-GUESS v4'
+source_id['EC-Earth3-Veg']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-Veg']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-Veg']['release_year'] = '2017'
+source_id['EC-Earth3-Veg']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-Veg']['source_id'] = 'EC-Earth3-Veg'
+source_id.pop('EC-Earth-3-Veg-LR')
+source_id['EC-Earth3-Veg-LR'] = {}
+source_id['EC-Earth3-Veg-LR']['aerosol'] = 'None'
+source_id['EC-Earth3-Veg-LR']['atmosphere'] = 'IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)'
+source_id['EC-Earth3-Veg-LR']['atmospheric_chemistry'] = 'None'
+source_id['EC-Earth3-Veg-LR']['cohort'] = ['']
+source_id['EC-Earth3-Veg-LR']['institution_id'] = ['EC-Earth-Consortium']
+source_id['EC-Earth3-Veg-LR']['label'] = 'EC-Earth3-Veg-LR'
+source_id['EC-Earth3-Veg-LR']['label_extended'] = 'EC-Earth 3.3 - LPJ-GUESS at low resolution'
+source_id['EC-Earth3-Veg-LR']['land_ice'] = 'None'
+source_id['EC-Earth3-Veg-LR']['land_surface'] = 'LPJ-GUESS v4'
+source_id['EC-Earth3-Veg-LR']['ocean'] = 'NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)'
+source_id['EC-Earth3-Veg-LR']['ocean_biogeochemistry'] = 'None'
+source_id['EC-Earth3-Veg-LR']['release_year'] = '2017'
+source_id['EC-Earth3-Veg-LR']['sea_ice'] = 'LIM3'
+source_id['EC-Earth3-Veg-LR']['source_id'] = 'EC-Earth3-Veg-LR'
+
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
@@ -547,6 +674,7 @@ for jsonName in masterTargets:
                         'piinatubo', 'pinatubo')  # Replace piinatubo
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
+                    string = string.replace('none','None')  # Replace none, None
                 if isinstance(string, list):
                     if string == ['ESM']:
                         string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC

@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 6 20:06:51 2017 +1100",
+        "creation_date":"Thu Feb 9 17:08:57 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (45; g3f13533)",
-        "note":"Register source_id AWI-CM",
-        "previous_commit":"c852233570584d9a774fedc99f7fb86b930723bc"
+        "latest_tag_point":"3.2.1 (46; gb38bd4d)",
+        "note":"Revise multiple EC-Earth3 source_ids",
+        "previous_commit":"b5444fbb0d91e518ac57423eed801898fdf6c11c"
     }
 }

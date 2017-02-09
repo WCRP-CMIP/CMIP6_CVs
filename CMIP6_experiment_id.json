@@ -23,8 +23,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "1pctCO2-4xext":{
@@ -50,8 +50,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "1pctCO2-bgc":{
@@ -77,8 +77,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "1pctCO2-rad":{
@@ -104,8 +104,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "1pctCO2Ndep":{
@@ -131,8 +131,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "1pctCO2Ndep-bgc":{
@@ -158,8 +158,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "1pctCO2to4x-withism":{
@@ -186,8 +186,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "G1":{
@@ -213,8 +213,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "G6SST1":{
@@ -235,8 +235,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "G6SST2-solar":{
@@ -257,8 +257,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "G6SST2-sulfur":{
@@ -279,8 +279,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "G6solar":{
@@ -306,8 +306,8 @@
                 "AOGCM"
             ],
             "start_year":"2020",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "G6sulfur":{
@@ -333,8 +333,8 @@
                 "AOGCM"
             ],
             "start_year":"2020",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "G7SST1-cirrus":{
@@ -355,8 +355,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "G7SST2-cirrus":{
@@ -377,8 +377,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "G7cirrus":{
@@ -404,8 +404,8 @@
                 "AOGCM"
             ],
             "start_year":"2020",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "a4SST":{
@@ -426,8 +426,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "a4SSTice":{
@@ -448,8 +448,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "a4SSTice-4xCO2":{
@@ -470,8 +470,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "abrupt-0p5xCO2":{
@@ -497,8 +497,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "abrupt-2xCO2":{
@@ -524,8 +524,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "abrupt-4xCO2":{
@@ -551,8 +551,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "abrupt-solm4p":{
@@ -577,8 +577,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "abrupt-solp4p":{
@@ -603,8 +603,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip":{
@@ -625,8 +625,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "amip-4xCO2":{
@@ -647,8 +647,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "amip-TIP":{
@@ -669,8 +669,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "amip-TIP-nosh":{
@@ -691,8 +691,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "amip-a4SST-4xCO2":{
@@ -713,8 +713,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-future4K":{
@@ -735,8 +735,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "amip-hist":{
@@ -757,8 +757,8 @@
                 "AGCM"
             ],
             "start_year":"1870",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "amip-hld":{
@@ -779,8 +779,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "amip-lfmip-pObs":{
@@ -801,8 +801,8 @@
                 "AGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-lfmip-pdLC":{
@@ -823,8 +823,8 @@
                 "AGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-lfmip-rmLC":{
@@ -845,8 +845,8 @@
                 "AGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-lwoff":{
@@ -867,8 +867,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-m4K":{
@@ -889,8 +889,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-p4K":{
@@ -911,8 +911,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "amip-p4K-lwoff":{
@@ -933,8 +933,8 @@
                 "AGCM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "amip-piForcing":{
@@ -955,8 +955,8 @@
                 "AGCM"
             ],
             "start_year":"1870",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "aqua-4xCO2":{
@@ -977,8 +977,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "aqua-control":{
@@ -999,8 +999,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "aqua-control-lwoff":{
@@ -1021,8 +1021,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "aqua-p4K":{
@@ -1043,8 +1043,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "aqua-p4K-lwoff":{
@@ -1065,8 +1065,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "control-1950":{
@@ -1090,8 +1090,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "control-slab":{
@@ -1114,8 +1114,8 @@
                 "SLAB"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "dcppA-assim":{
@@ -1812,8 +1812,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "esm-hist":{
@@ -1839,8 +1839,8 @@
                 "BGC"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "esm-hist-ext":{
@@ -1866,8 +1866,8 @@
                 "BGC"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "esm-piControl":{
@@ -1893,8 +1893,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "esm-piControl-spinup":{
@@ -1916,8 +1916,8 @@
                 "BGC"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "esm-ssp585":{
@@ -1943,8 +1943,8 @@
                 "BGC"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "esm-ssp585-ssp126Lu":{
@@ -1970,8 +1970,8 @@
                 "BGC"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "faf-all":{
@@ -1997,8 +1997,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "faf-heat":{
@@ -2024,8 +2024,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "faf-passiveheat":{
@@ -2051,8 +2051,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "faf-stress":{
@@ -2078,8 +2078,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "faf-water":{
@@ -2105,8 +2105,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "futureSST-4xCO2-solar":{
@@ -2127,8 +2127,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "highres-future":{
@@ -2154,8 +2154,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "highresSST-4co2":{
@@ -2180,8 +2180,8 @@
                 "AGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "highresSST-LAI":{
@@ -2206,8 +2206,8 @@
                 "AGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "highresSST-future":{
@@ -2232,8 +2232,8 @@
                 "AGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "highresSST-p4K":{
@@ -2258,8 +2258,8 @@
                 "AGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "highresSST-present":{
@@ -2280,8 +2280,8 @@
                 "AGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "highresSST-smoothed":{
@@ -2306,8 +2306,8 @@
                 "AGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-1950":{
@@ -2333,8 +2333,8 @@
                 "AOGCM"
             ],
             "start_year":"1951",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-1950HC":{
@@ -2360,8 +2360,8 @@
                 "CHEM"
             ],
             "start_year":"1950",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-CO2":{
@@ -2387,8 +2387,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "hist-GHG":{
@@ -2414,8 +2414,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-aer":{
@@ -2441,8 +2441,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-all-aer2":{
@@ -2468,8 +2468,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "hist-all-nat2":{
@@ -2495,8 +2495,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "hist-bgc":{
@@ -2522,8 +2522,8 @@
                 "BGC"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-nat":{
@@ -2549,8 +2549,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-noLu":{
@@ -2576,8 +2576,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-piAer":{
@@ -2603,8 +2603,8 @@
                 "AER"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-piNTCF":{
@@ -2630,8 +2630,8 @@
                 "AER"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-resAMO":{
@@ -2657,8 +2657,8 @@
                 "AOGCM"
             ],
             "start_year":"1870",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-resIPO":{
@@ -2684,8 +2684,8 @@
                 "AOGCM"
             ],
             "start_year":"1870",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-sol":{
@@ -2711,8 +2711,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "hist-spAer-aer":{
@@ -2734,8 +2734,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-spAer-all":{
@@ -2757,8 +2757,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "hist-stratO3":{
@@ -2784,8 +2784,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "hist-volc":{
@@ -2811,8 +2811,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "histSST":{
@@ -2833,8 +2833,8 @@
                 "AER"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "histSST-1950HC":{
@@ -2854,8 +2854,8 @@
                 "CHEM"
             ],
             "start_year":"1950",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "histSST-piAer":{
@@ -2876,8 +2876,8 @@
                 "AER"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "histSST-piCH4":{
@@ -2897,8 +2897,8 @@
                 "CHEM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "histSST-piN2O":{
@@ -2920,8 +2920,8 @@
                 "CHEM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "histSST-piNTCF":{
@@ -2943,8 +2943,8 @@
                 "AER"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "histSST-piO3":{
@@ -2964,8 +2964,8 @@
                 "CHEM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "historical":{
@@ -2991,8 +2991,8 @@
                 "AOGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "historical-ext":{
@@ -3018,8 +3018,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "historical-withism":{
@@ -3046,8 +3046,8 @@
                 "ISM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ism-1pctCO2to4x-self":{
@@ -3069,8 +3069,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-1pctCO2to4x-std":{
@@ -3092,8 +3092,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-amip-std":{
@@ -3111,8 +3111,8 @@
                 "ISM"
             ],
             "start_year":"1979",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "ism-asmb-std":{
@@ -3136,8 +3136,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-bsmb-std":{
@@ -3161,8 +3161,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-ctrl-std":{
@@ -3186,8 +3186,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-historical-self":{
@@ -3209,8 +3209,8 @@
                 "ISM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ism-historical-std":{
@@ -3232,8 +3232,8 @@
                 "ISM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ism-lig127k-std":{
@@ -3251,8 +3251,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "ism-pdControl-std":{
@@ -3270,8 +3270,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-piControl-self":{
@@ -3289,8 +3289,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ism-ssp585-self":{
@@ -3312,8 +3312,8 @@
                 "ISM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ism-ssp585-std":{
@@ -3335,8 +3335,8 @@
                 "ISM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-cCO2":{
@@ -3354,8 +3354,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-cClim":{
@@ -3373,8 +3373,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-crop-grass":{
@@ -3392,8 +3392,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-crop-noFert":{
@@ -3411,8 +3411,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-crop-noIrrig":{
@@ -3430,8 +3430,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-crop-noIrrigFert":{
@@ -3449,8 +3449,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-future":{
@@ -3468,8 +3468,8 @@
                 "LAND"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-hist":{
@@ -3488,8 +3488,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "land-hist-altLu1":{
@@ -3505,8 +3505,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-hist-altLu2":{
@@ -3522,8 +3522,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-hist-altStartYear":{
@@ -3541,8 +3541,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "land-hist-cruNcep":{
@@ -3560,8 +3560,8 @@
                 "LAND"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-hist-princeton":{
@@ -3579,8 +3579,8 @@
                 "LAND"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-hist-wfdei":{
@@ -3598,8 +3598,8 @@
                 "LAND"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-noFire":{
@@ -3617,8 +3617,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-noLu":{
@@ -3636,8 +3636,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "land-noPasture":{
@@ -3655,8 +3655,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-noShiftCultivate":{
@@ -3674,8 +3674,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "land-noWoodHarv":{
@@ -3693,8 +3693,8 @@
                 "LAND"
             ],
             "start_year":"1850 or 1700",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "lfmip-initLC":{
@@ -3720,8 +3720,8 @@
                 "AOGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "lfmip-pdLC":{
@@ -3747,8 +3747,8 @@
                 "AOGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "lfmip-rmLC":{
@@ -3774,8 +3774,8 @@
                 "AOGCM"
             ],
             "start_year":"1980",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "lgm":{
@@ -3797,8 +3797,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "lig127k":{
@@ -3820,8 +3820,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "midHolocene":{
@@ -3843,8 +3843,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "midPliocene-eoi400":{
@@ -3866,8 +3866,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "omip1":{
@@ -3885,8 +3885,8 @@
                 "OGCM"
             ],
             "start_year":"1",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "omip1-spunup":{
@@ -3904,8 +3904,8 @@
                 "OGCM"
             ],
             "start_year":"1",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "omip2":{
@@ -3923,8 +3923,8 @@
                 "OGCM"
             ],
             "start_year":"1",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "omip2-spunup":{
@@ -3942,8 +3942,8 @@
                 "OGCM"
             ],
             "start_year":"1",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "past1000":{
@@ -3969,8 +3969,8 @@
                 "AOGCM"
             ],
             "start_year":"850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-2xDMS":{
@@ -3991,8 +3991,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-2xNOx":{
@@ -4012,8 +4012,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-2xVOC":{
@@ -4033,8 +4033,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-2xdust":{
@@ -4055,8 +4055,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-2xfire":{
@@ -4077,8 +4077,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-2xss":{
@@ -4099,8 +4099,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-4xCO2":{
@@ -4121,8 +4121,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-BC":{
@@ -4143,8 +4143,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-CH4":{
@@ -4164,8 +4164,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-HC":{
@@ -4185,8 +4185,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-N2O":{
@@ -4206,8 +4206,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-NH3":{
@@ -4227,8 +4227,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-NOx":{
@@ -4248,8 +4248,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-NTCF":{
@@ -4271,8 +4271,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-O3":{
@@ -4292,8 +4292,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-OC":{
@@ -4313,8 +4313,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-SO2":{
@@ -4334,8 +4334,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-VOC":{
@@ -4355,8 +4355,8 @@
                 "CHEM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "piClim-aer":{
@@ -4377,8 +4377,8 @@
                 "AER"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-aerO3":{
@@ -4399,8 +4399,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-anthro":{
@@ -4421,8 +4421,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-control":{
@@ -4444,8 +4444,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-ghg":{
@@ -4466,8 +4466,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-histaer03":{
@@ -4488,8 +4488,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-histall":{
@@ -4510,8 +4510,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-histghg":{
@@ -4532,8 +4532,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-histnat":{
@@ -4554,8 +4554,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-lu":{
@@ -4576,8 +4576,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piClim-spAer-aer":{
@@ -4595,8 +4595,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-spAer-anthro":{
@@ -4614,8 +4614,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-spAer-histaer":{
@@ -4633,8 +4633,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piClim-spAer-histall":{
@@ -4652,8 +4652,8 @@
                 "AGCM"
             ],
             "start_year":"1850",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piControl":{
@@ -4679,8 +4679,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piControl-spinup":{
@@ -4702,8 +4702,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piControl-withism":{
@@ -4726,8 +4726,8 @@
                 "ISM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "piSST":{
@@ -4748,8 +4748,8 @@
                 "AGCM"
             ],
             "start_year":"Year 111-140 of piControl",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piSST-4xCO2":{
@@ -4770,8 +4770,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piSST-4xCO2-rad":{
@@ -4792,8 +4792,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piSST-4xCO2-solar":{
@@ -4814,8 +4814,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "piSST-pxK":{
@@ -4836,8 +4836,8 @@
                 "AGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "rad-irf":{
@@ -4855,8 +4855,8 @@
                 "RAD"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "spinup-1950":{
@@ -4882,8 +4882,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp126":{
@@ -4909,8 +4909,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp126-ssp370Lu":{
@@ -4936,8 +4936,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp245":{
@@ -4963,8 +4963,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp245-GHG":{
@@ -4990,8 +4990,8 @@
                 "AOGCM"
             ],
             "start_year":"2021",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp245-aer":{
@@ -5017,8 +5017,8 @@
                 "AOGCM"
             ],
             "start_year":"2021",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "ssp245-nat":{
@@ -5044,8 +5044,8 @@
                 "AOGCM"
             ],
             "start_year":"2021",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "ssp245-stratO3":{
@@ -5071,8 +5071,8 @@
                 "AOGCM"
             ],
             "start_year":"2021",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp370":{
@@ -5099,8 +5099,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370-lowNTCF":{
@@ -5126,8 +5126,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370-ssp126Lu":{
@@ -5153,8 +5153,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370SST":{
@@ -5175,8 +5175,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370SST-lowAer":{
@@ -5197,8 +5197,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp370SST-lowBC":{
@@ -5219,8 +5219,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp370SST-lowCH4":{
@@ -5240,8 +5240,8 @@
                 "CHEM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370SST-lowNTCF":{
@@ -5263,8 +5263,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp370SST-lowO3":{
@@ -5284,8 +5284,8 @@
                 "CHEM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp370SST-ssp126Lu":{
@@ -5306,8 +5306,8 @@
                 "AER"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp434":{
@@ -5333,8 +5333,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp460":{
@@ -5360,8 +5360,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp534-over":{
@@ -5387,8 +5387,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp585":{
@@ -5414,8 +5414,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "ssp585-bgc":{
@@ -5441,8 +5441,8 @@
                 "BGC"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp585-over-bgc":{
@@ -5468,8 +5468,8 @@
                 "BGC"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "ssp585-withism":{
@@ -5496,8 +5496,8 @@
                 "ISM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "sspxy":{
@@ -5523,8 +5523,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "volc-cluster-21C":{
@@ -5550,8 +5550,8 @@
                 "AOGCM"
             ],
             "start_year":"2015",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "volc-cluster-ctrl":{
@@ -5577,8 +5577,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "volc-cluster-mill":{
@@ -5604,8 +5604,8 @@
                 "AOGCM"
             ],
             "start_year":"1790",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "volc-long-eq":{
@@ -5631,8 +5631,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "volc-long-hlN":{
@@ -5658,8 +5658,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"2"
         },
         "volc-long-hlS":{
@@ -5685,8 +5685,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "volc-pinatubo-full":{
@@ -5712,8 +5712,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "volc-pinatubo-ini":{
@@ -5763,8 +5763,8 @@
                 "SLAB"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"3"
         },
         "volc-pinatubo-strat":{
@@ -5790,8 +5790,8 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         },
         "volc-pinatubo-surf":{
@@ -5817,17 +5817,17 @@
                 "AOGCM"
             ],
             "start_year":"",
-            "sub_experiment":"none",
-            "sub_experiment_id":"none",
+            "sub_experiment":"None",
+            "sub_experiment_id":"None",
             "tier":"1"
         }
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 6 20:06:51 2017 +1100",
+        "creation_date":"Mon Feb 6 20:09:02 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (41; g7e87708)",
-        "note":"Register source_id AWI-CM",
-        "previous_commit":"aa4059c406dbc6247a400adf94bcb941bb586f52"
+        "latest_tag_point":"note: ",
+        "note":"Issue210 durack1 revise source_id AWI-CM (#223)",
+        "previous_commit":"ed898a9c1debf20e023323ffe05d479250f38009"
     }
 }

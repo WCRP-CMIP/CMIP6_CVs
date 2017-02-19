@@ -460,6 +460,26 @@
             "sea_ice":"SIS",
             "source_id":"IITM-ESM"
         },
+        "MIROC6":{
+            "aerosol":"SPRINTARS",
+            "atmosphere":"CCSR AGCM (T85; 81 levels; top level 0.004 hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"MIROC6",
+            "label_extended":"MIROC6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO",
+            "ocean":"COCO4.9 (360x256x63; tripolar primarily 1deg; top grid cell 0-2m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"COCO4.9",
+            "source_id":"MIROC6"
+        },
         "MPIESM-1-2-HR":{
             "aerosol":"None, prescribed MACv2-SP",
             "atmosphere":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",

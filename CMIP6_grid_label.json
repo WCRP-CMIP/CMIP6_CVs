@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 9 17:08:57 2017 +1100",
+        "creation_date":"Mon Feb 27 10:28:58 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (44; g05324f2)",
-        "note":"Revise multiple EC-Earth3 source_ids",
-        "previous_commit":"a7710cfb355ccdae5b6f2fc3a15eb98a34965388"
+        "latest_tag_point":"3.2.1 (73; gbbd5d23)",
+        "note":"Register institution_id THU",
+        "previous_commit":"a1c363aaae21731eb961ded8b909017f3b626e13"
     }
 }

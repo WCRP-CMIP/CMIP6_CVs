@@ -125,6 +125,7 @@ PJD  6 Feb 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP
 PJD  6 Feb 2017    - Revise multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
 PJD 27 Feb 2017    - Update license info
 PJD 27 Feb 2017    - Register institution_id THU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/225
+PJD 27 Feb 2017    - Register source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -145,7 +146,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id THU\"'
+commitMessage = '\"Register source_id CIESM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -425,6 +426,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['CIESM'] = {}
+source_id['CIESM']['aerosol'] = 'MAM4'
+source_id['CIESM']['atmosphere'] = 'CIESM-AM (FV/FD, 288 x 192; 30 levels; top level 2.255 hPa)'
+source_id['CIESM']['atmospheric_chemistry'] = 'trop_mam4'
+source_id['CIESM']['cohort'] = ['']
+source_id['CIESM']['institution_id'] = ['THU']
+source_id['CIESM']['label'] = 'CIESM'
+source_id['CIESM']['label_extended'] = 'Community Integrated Earth System Model'
+source_id['CIESM']['land_ice'] = 'None'
+source_id['CIESM']['land_surface'] = 'CIESM-LM (modified CLM4.5)'
+source_id['CIESM']['ocean'] = 'CIESM-OM (FD, SCCGrid Displaced Pole, 720x560; 46 levels; top grid cell 0-6 m)'
+source_id['CIESM']['ocean_biogeochemistry'] = 'None'
+source_id['CIESM']['release_year'] = '2017'
+source_id['CIESM']['sea_ice'] = 'CICE4'
+source_id['CIESM']['source_id'] = 'CIESM'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

@@ -27,14 +27,15 @@
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NOAA-NCEP":"National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA",
         "NUIST":"Nanjing University of Information Science & Technology, Nanjing, 210044, China",
-        "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA"
+        "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
+        "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 9 17:08:57 2017 +1100",
+        "creation_date":"Thu Feb 9 17:15:44 2017 +1100",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (45; gccf5398)",
-        "note":"Revise multiple EC-Earth3 source_ids",
-        "previous_commit":"b5ae068113f7d679a299a8c6ef6bf513ab20595a"
+        "latest_tag_point":"note: ",
+        "note":"Issue191 durack1 revise several EC-Earth3 configurations (#224)",
+        "previous_commit":"82acb619a407436c8d7716431d33a53f4fb2779d"
     }
 }

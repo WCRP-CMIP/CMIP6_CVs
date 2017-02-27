@@ -1,13 +1,13 @@
 {
     "license":[
-        "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses/).  Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment.  Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+        "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Use of the data must be acknowledged following guidelines found at https://pcmdi.llnl.gov/home/CMIP6/CitationRequirements6-0.html. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 9 17:08:57 2017 +1100",
+        "author":"taylor13 <taylor13@llnl.gov>",
+        "creation_date":"Thu Feb 23 17:12:28 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (46; gb38bd4d)",
-        "note":"Revise multiple EC-Earth3 source_ids",
-        "previous_commit":"b5444fbb0d91e518ac57423eed801898fdf6c11c"
+        "latest_tag_point":"note: ",
+        "note":"corrected link to terms of use",
+        "previous_commit":"3473c50610da9f42548c7cfd891705544975b294"
     }
 }

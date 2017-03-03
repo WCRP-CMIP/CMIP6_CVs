@@ -480,6 +480,26 @@
             "sea_ice":"SIS",
             "source_id":"IITM-ESM"
         },
+        "MIROC6":{
+            "aerosol":"SPRINTARS6.0",
+            "atmosphere":"CCSR AGCM (T85; 256x128; 81 levels; top level 0.004 hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"MIROC6",
+            "label_extended":"MIROC6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6.0",
+            "ocean":"COCO4.9 (360x256x63; tripolar primarily 1deg; 63 levels; top grid cell 0-2 m)",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"COCO4.9",
+            "source_id":"MIROC6"
+        },
         "MPIESM-1-2-HR":{
             "aerosol":"None, prescribed MACv2-SP",
             "atmosphere":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",
@@ -765,10 +785,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 13:54:00 2017 -0800",
+        "creation_date":"Fri Mar 3 14:02:00 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue234 durack1 register source_id MRI-ESM2-0 (#235)",
-        "previous_commit":"f38ab485694733d3dbc33416cb3c40bfc3bff769"
+        "latest_tag_point":"3.2.2 (25; g5bf63ad)",
+        "note":"Register source_id MRI-ESM2-0",
+        "previous_commit":"43b938c623e767691dc8daffe86c92933ed36fd3"
     }
 }

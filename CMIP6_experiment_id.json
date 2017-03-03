@@ -5824,10 +5824,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 14:02:10 2017 -0800",
+        "creation_date":"Fri Mar 3 14:02:16 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (29; g1beb712)",
+        "latest_tag_point":"3.2.2 (42; gbcab3d4)",
         "note":"Register source_id MIROC6",
-        "previous_commit":"01a948de8978b6fa2e118d0674f3cc61b335f267"
+        "previous_commit":"ccd54cc98c6de5c8637b080c52a6bce3d8cd380b"
     }
 }

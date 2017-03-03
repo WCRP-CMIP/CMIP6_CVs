@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Feb 27 10:36:43 2017 -0800",
+        "creation_date":"Fri Mar 3 13:51:40 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.1 (45; gdbcd5ce)",
-        "note":"Register source_id CIESM",
-        "previous_commit":"bd8ada5a5dc42d55db4a812c6e5a146b1f78b9d0"
+        "latest_tag_point":"3.2.2 (13; gc6b36a8)",
+        "note":"Register source_id MRI-ESM2-0",
+        "previous_commit":"983fa80ffd7fb7f07474ec006d29999f59fbd673"
     }
 }

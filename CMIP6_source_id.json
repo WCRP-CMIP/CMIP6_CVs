@@ -5,7 +5,7 @@
             "atmosphere":"HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                "Registered"
+                "CMIP5"
             ],
             "institution_id":[
                 "CSIRO-BOM"
@@ -785,10 +785,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 14:11:05 2017 -0800",
+        "creation_date":"Fri Mar 3 14:11:10 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (25; gc1ea5d8)",
+        "latest_tag_point":"3.2.2 (38; ga9bc46b)",
         "note":"Update all source_id cohort entries",
-        "previous_commit":"9377a8c95e53b3e5bee3dc70611fb4665ac05fff"
+        "previous_commit":"e666644ce496ed0c034f13612d9f777443ad5c1e"
     }
 }

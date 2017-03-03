@@ -430,7 +430,10 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 for count,keyVal in enumerate(source_id.keys()):
-    source_id[keyVal]['cohort'] = ['Registered']
+    if keyVal == 'ACCESS-1-0':
+        continue ; # Skip example entry
+    else:
+        source_id[keyVal]['cohort'] = ['Registered']
 
 #==============================================================================
 #source_id['IITM-ESM'] = {}

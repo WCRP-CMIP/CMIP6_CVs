@@ -25,7 +25,7 @@
             "atmosphere":"ECHAM6.3.02p4 (384 x 192 T127L95; 95 levels; top level 80000 m)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "AWI"
@@ -45,7 +45,7 @@
             "atmosphere":"CAM4 (FV, 144 x 96; 26 levels; top level 2.194 mb)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "BNU"
@@ -65,7 +65,7 @@
             "atmosphere":"CIESM-AM (FV/FD, 288 x 192; 30 levels; top level 2.255 hPa)",
             "atmospheric_chemistry":"trop_mam4",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "THU"
@@ -85,7 +85,7 @@
             "atmosphere":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
             "atmospheric_chemistry":"OZL_v2",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -105,7 +105,7 @@
             "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
             "atmospheric_chemistry":"OZL_v2",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -125,7 +125,7 @@
             "atmosphere":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
             "atmospheric_chemistry":"REPROBUS-C (v2.0)",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -145,7 +145,7 @@
             "atmosphere":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
             "atmospheric_chemistry":"OZL_v2",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -165,7 +165,7 @@
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0,01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -185,7 +185,7 @@
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
             "atmospheric_chemistry":"TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -205,7 +205,7 @@
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
             "atmospheric_chemistry":"TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -225,7 +225,7 @@
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -245,7 +245,7 @@
             "atmosphere":"IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512; 91 levels; top level 0.01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -265,7 +265,7 @@
             "atmosphere":"IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -285,7 +285,7 @@
             "atmosphere":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -305,7 +305,7 @@
             "atmosphere":"IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -325,7 +325,7 @@
             "atmosphere":"ECHAM5.3.02 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)",
             "atmospheric_chemistry":"MECCA 3.8.x",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MESSy-Consortium"
@@ -345,7 +345,7 @@
             "atmosphere":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
             "atmospheric_chemistry":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -365,7 +365,7 @@
             "atmosphere":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
             "atmospheric_chemistry":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -385,7 +385,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC"
@@ -405,7 +405,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (1024 x 768 N512; 85 levels; top level 85km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC"
@@ -425,7 +425,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC"
@@ -445,7 +445,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC"
@@ -465,7 +465,7 @@
             "atmosphere":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CCCR-IITM"
@@ -485,7 +485,7 @@
             "atmosphere":"CCSR AGCM (T85; 256x128; 81 levels; top level 0.004 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MIROC"
@@ -505,7 +505,7 @@
             "atmosphere":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MPI-M"
@@ -525,7 +525,7 @@
             "atmosphere":"ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MPI-M"
@@ -545,7 +545,7 @@
             "atmosphere":"ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MPI-M"
@@ -565,7 +565,7 @@
             "atmosphere":"MRI-AGCM3.5 (320 x 160 TL159; 80 levels; top level 0.01 hPa)",
             "atmospheric_chemistry":"MRI-CCM2.1",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MRI"
@@ -585,7 +585,7 @@
             "atmosphere":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemSimp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -605,7 +605,7 @@
             "atmosphere":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemSimp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -625,7 +625,7 @@
             "atmosphere":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemSimp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -645,7 +645,7 @@
             "atmosphere":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemComp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -665,7 +665,7 @@
             "atmosphere":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemSimp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -685,7 +685,7 @@
             "atmosphere":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
             "atmospheric_chemistry":"OsloChemSimp",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "NCC"
@@ -705,7 +705,7 @@
             "atmosphere":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                "CMIP6"
+                "Registered"
             ],
             "institution_id":[
                 "PCMDI"
@@ -725,7 +725,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (192 x 144 N96; 85 levels; top level 85km)",
             "atmospheric_chemistry":"UKCA-StratTrop",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC",
@@ -746,7 +746,7 @@
             "atmosphere":"MetUM-HadGEM3-GA7.1 (432 x 324 N216; 85 levels; top level 85km)",
             "atmospheric_chemistry":"UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "MOHC",
@@ -767,7 +767,7 @@
             "atmosphere":"VCAM-1.0 (192 x 192 x 6 C192; 35 levels; top level 35km)",
             "atmospheric_chemistry":"None",
             "cohort":[
-                ""
+                "Registered"
             ],
             "institution_id":[
                 "CSIR-CSIRO"
@@ -785,10 +785,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 14:02:16 2017 -0800",
+        "creation_date":"Fri Mar 3 14:13:47 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (51; g9933814)",
-        "note":"Register source_id MIROC6",
-        "previous_commit":"030160bc092602ea1606314f2e825eeafa12947a"
+        "latest_tag_point":"3.2.2 (51; g5f56cf2)",
+        "note":"Update all source_id cohort entries",
+        "previous_commit":"009441434c9754e7a2c80c208f96a9623794b725"
     }
 }

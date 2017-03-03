@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 14:02:16 2017 -0800",
+        "creation_date":"Fri Mar 3 14:13:47 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (52; g92133c8)",
-        "note":"Register source_id MIROC6",
-        "previous_commit":"1258124f8dd9d6f9b499cc0f3264c98a16795cbb"
+        "latest_tag_point":"3.2.2 (52; g8556a97)",
+        "note":"Update all source_id cohort entries",
+        "previous_commit":"0a453ccd1d7157e7e98f7f1ad20dac3fef3c9f6d"
     }
 }

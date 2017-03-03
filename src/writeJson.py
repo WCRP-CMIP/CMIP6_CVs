@@ -127,6 +127,7 @@ PJD 27 Feb 2017    - Update license info
 PJD 27 Feb 2017    - Register institution_id THU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/225
 PJD 27 Feb 2017    - Register source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
 PJD  3 Mar 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/234
+PJD  3 Mar 2017    - Register source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229#issuecomment-283310686
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -147,7 +148,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id MRI-ESM2-0\"'
+commitMessage = '\"Register source_id MIROC6\"'
 
 #%% Define functions
 # Get repo metadata
@@ -427,21 +428,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['MRI-ESM2-0'] = {}
-source_id['MRI-ESM2-0']['aerosol'] = 'MASINGAR mk2r4'
-source_id['MRI-ESM2-0']['atmosphere'] = 'MRI-AGCM3.5 (320 x 160 TL159; 80 levels; top level 0.01 hPa)'
-source_id['MRI-ESM2-0']['atmospheric_chemistry'] = 'MRI-CCM2.1'
-source_id['MRI-ESM2-0']['cohort'] = ['']
-source_id['MRI-ESM2-0']['institution_id'] = ['MRI']
-source_id['MRI-ESM2-0']['label'] = 'MRI-ESM2.0'
-source_id['MRI-ESM2-0']['label_extended'] = 'MRI-ESM2.0'
-source_id['MRI-ESM2-0']['land_ice'] = 'None'
-source_id['MRI-ESM2-0']['land_surface'] = 'HAL 1.0'
-source_id['MRI-ESM2-0']['ocean'] = 'MRI.COM4.4 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 360 x 364 longitude/latitude; 61 levels; top grid cell 0-2 m)'
-source_id['MRI-ESM2-0']['ocean_biogeochemistry'] = 'MRI.COM4.4'
-source_id['MRI-ESM2-0']['release_year'] = '2017'
-source_id['MRI-ESM2-0']['sea_ice'] = 'MRI.COM4.4'
-source_id['MRI-ESM2-0']['source_id'] = 'MRI-ESM2-0'
+source_id['MIROC6'] = {}
+source_id['MIROC6']['aerosol'] = 'SPRINTARS6.0'
+source_id['MIROC6']['atmosphere'] = 'CCSR AGCM (T85; 256x128; 81 levels; top level 0.004 hPa)'
+source_id['MIROC6']['atmospheric_chemistry'] = 'None'
+source_id['MIROC6']['cohort'] = ['']
+source_id['MIROC6']['institution_id'] = ['MIROC']
+source_id['MIROC6']['label'] = 'MIROC6'
+source_id['MIROC6']['label_extended'] = 'MIROC6'
+source_id['MIROC6']['land_ice'] = 'None'
+source_id['MIROC6']['land_surface'] = 'MATSIRO6.0'
+source_id['MIROC6']['ocean'] = 'COCO4.9 (360x256x63; tripolar primarily 1deg; 63 levels; top grid cell 0-2 m)'
+source_id['MIROC6']['ocean_biogeochemistry'] = 'None'
+source_id['MIROC6']['release_year'] = '2017'
+source_id['MIROC6']['sea_ice'] = 'COCO4.9'
+source_id['MIROC6']['source_id'] = 'MIROC6'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

@@ -500,6 +500,46 @@
             "sea_ice":"COCO4.9",
             "source_id":"MIROC6"
         },
+        "MIROC-ES2H":{
+            "aerosol":"SPRINTARS6.0",
+            "atmosphere":"CCSR AGCM (T85; 256x128; 81 levels; top level 0.004 hPa)",
+            "atmospheric_chemistry":"CHASER4.0",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC",
+            ],
+            "label":"MIROC-ES2H",
+            "label_extended":"MIROC-ES2H",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6.0+VISIT-e ver.1.0",
+            "ocean":"COCO4.9 (360x256x63; tripolar primarily 1deg; top grid cell 0-2m)",
+            "ocean_biogeochemistry":"NPZD-type with C/N/P/Fe/O cycles",
+            "release_year":"2017",
+            "sea_ice":"COCO4.9",
+            "source_id":"MIROC-ES2H"
+        },
+        "MIROC-ES2L":{
+            "aerosol":"SPRINTARS6.0",
+            "atmosphere":"CCSR AGCM (T42; 128x64; 40 levels; top level 3hPa)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC",
+            ],
+            "label":"MIROC-ES2L",
+            "label_extended":"MIROC-ES2L",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6.0+VISIT-e ver.1.0",
+            "ocean":"COCO4.9 (360x256x63; tripolar primarily 1deg; top grid cell 0-2m)",
+            "ocean_biogeochemistry":"OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles",
+            "release_year":"2017",
+            "sea_ice":"COCO4.9",
+            "source_id":"MIROC-ES2L"
+        },
         "MPIESM-1-2-HR":{
             "aerosol":"None, prescribed MACv2-SP",
             "atmosphere":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",
@@ -580,6 +620,86 @@
             "sea_ice":"MRI.COM4.4",
             "source_id":"MRI-ESM2-0"
         },
+        "NICAM16-7S":{
+            "aerosol":"Prescribed MACv2-SP",
+            "atmosphere":"NICAM.16 (56km; 163,842 (=10*4^7+2); 38 levels; top level 40km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"NICAM16-7S",
+            "label_extended":"NICAM.16 gl07-L38 with NSW6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6 (w/o MOSAIC)",
+            "ocean":"None",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"Fixed",
+            "source_id":"NICAM16-7S"
+        },
+        "NICAM16-8S":{
+            "aerosol":"Prescribed MACv2-SP",
+            "atmosphere":"NICAM.16 (28km; 655,362 (=10*4^8+2); 38 levels; top level 40km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"NICAM16-8S",
+            "label_extended":"NICAM.16 gl08-L38 with NSW6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6 (w/o MOSAIC)",
+            "ocean":"None",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"Fixed",
+            "source_id":"NICAM16-8S"
+        },
+        "NICAM16-9S":{
+            "aerosol":"Prescribed MACv2-SP",
+            "atmosphere":"NICAM.16 (14km; 2,621,442 (=10*4^9+2); 38 levels; top level 40km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"NICAM16-9S",
+            "label_extended":"NICAM.16 gl09-L38 with NSW6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6 (w/o MOSAIC)",
+            "ocean":"None",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"Fixed",
+            "source_id":"NICAM16-9S"
+        },
+        "NICAM16-9D-L78":{
+            "aerosol":"Prescribed MACv2-SP",
+            "atmosphere":"NICAM.16 (14km; 2,621,442 (=10*4^9+2); 78 levels; top level 40km)",
+            "atmospheric_chemistry":"None",
+            "cohort":[
+                ""
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"NICAM16-9D-L78",
+            "label_extended":"NICAM.16 gl09-L78 with NDW6",
+            "land_ice":"None",
+            "land_surface":"MATSIRO6 (w/o MOSAIC)",
+            "ocean":"None",
+            "ocean_biogeochemistry":"None",
+            "release_year":"2017",
+            "sea_ice":"Fixed",
+            "source_id":"NICAM16-9D-L78"
+        },  
         "NorESM2-HH":{
             "aerosol":"OsloAero",
             "atmosphere":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",

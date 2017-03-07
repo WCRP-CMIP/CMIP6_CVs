@@ -129,6 +129,7 @@ PJD 27 Feb 2017    - Register source_id CIESM https://github.com/WCRP-CMIP/CMIP6
 PJD  3 Mar 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/234
 PJD  3 Mar 2017    - Register source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
 PJD  3 Mar 2017    - Update all source_id cohort entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/230
+PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -149,7 +150,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update all source_id cohort entries\"'
+commitMessage = '\"Register source_id EMAC-2-53-Vol\"'
 
 #%% Define functions
 # Get repo metadata
@@ -429,12 +430,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-for count,keyVal in enumerate(source_id.keys()):
-    if keyVal == 'ACCESS-1-0':
-        continue ; # Skip example entry
-    else:
-        source_id[keyVal]['cohort'] = ['Registered']
-
+source_id['EMAC-2-53-Vol'] = {}
+source_id['EMAC-2-53-Vol']['aerosol'] = 'gmxe 2.2.x'
+source_id['EMAC-2-53-Vol']['atmosphere'] = 'ECHAM5.3.2 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)'
+source_id['EMAC-2-53-Vol']['atmospheric_chemistry'] = 'MECCA 3.8.x'
+source_id['EMAC-2-53-Vol']['cohort'] = ['Registered']
+source_id['EMAC-2-53-Vol']['institution_id'] = ['MESSy-Consortium']
+source_id['EMAC-2-53-Vol']['label'] = 'EMAC-2-53-Vol'
+source_id['EMAC-2-53-Vol']['label_extended'] = 'EMAC-2-53-x-Vol'
+source_id['EMAC-2-53-Vol']['land_ice'] = 'None'
+source_id['EMAC-2-53-Vol']['land_surface'] = 'same as Atmosphere'
+source_id['EMAC-2-53-Vol']['ocean'] = 'MPIOM 1.3.0-beta (bipolar GR1.5; approximately 1.5deg reducing toward the poles, 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id['EMAC-2-53-Vol']['ocean_biogeochemistry'] = 'None'
+source_id['EMAC-2-53-Vol']['release_year'] = '2017'
+source_id['EMAC-2-53-Vol']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id['EMAC-2-53-Vol']['source_id'] = 'EMAC-2-53-Vol'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

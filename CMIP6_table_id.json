@@ -49,10 +49,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 3 14:13:47 2017 -0800",
+        "creation_date":"Tue Mar 7 09:59:12 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (53; gc29f546)",
-        "note":"Update all source_id cohort entries",
-        "previous_commit":"394065e3832f5a135119890e0676ddc24022d026"
+        "latest_tag_point":"3.2.2 (28; g65d137e)",
+        "note":"Register source_id EMAC-2-53-Vol",
+        "previous_commit":"dd41aff85c690ac4c1a39001f1b45f9473a2204a"
     }
 }

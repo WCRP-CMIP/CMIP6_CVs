@@ -259,7 +259,7 @@ headers = data[3]
 experiment_id = {}
 for count in range(4,len(data)):
     if data[count] == []:
-        print count,'blank field'
+        #print count,'blank field'
         continue
     row = data[count]
     key = row[0] ; #replace(row[0],'_ ','_')

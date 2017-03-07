@@ -3174,4 +3174,550 @@ $(document).ready( function () {
 <td></td>
 <td>1</td>
 <td>CMIP</td>
-<td>Exten
+<td>Extension beyond 2014 of the CMIP6 historical</td>
+</tr>
+<tr><td>piSST</td>
+<td>CFMIP</td>
+<td>experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>Year 111-140 of piControl</td>
+<td>Year 111-140 of piControl</td>
+<td>30</td>
+<td></td>
+<td>An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments</td>
+</tr>
+<tr><td>omip1</td>
+<td>OMIP</td>
+<td>OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>OGCM</td>
+<td></td>
+<td>1</td>
+<td>310</td>
+<td>310</td>
+<td></td>
+<td>Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean - ice Reference Experiments inter-annually varying atmospheric and river data sets for years 1948-2009. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 62-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle</td>
+</tr>
+<tr><td>omip2</td>
+<td>OMIP</td>
+<td>OMIP experiment forced by JRA-55 atmospheric data set and initialized with observed physical and biogeochemical ocean data</td>
+<td>3</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>OGCM</td>
+<td></td>
+<td>1</td>
+<td>310</td>
+<td>310</td>
+<td></td>
+<td>Global ocean - sea-ice coupled experiment forced with the JRA-55 inter-annually varying atmospheric and river data sets for years 1958-2016. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle</td>
+</tr>
+<tr><td>ssp585-bgc</td>
+<td>C4MIP</td>
+<td>biogeochemically-coupled version of the RCP8.5 based on SSP5</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td>hist-bgc</td>
+<td>AOGCM BGC</td>
+<td>AER CHEM</td>
+<td>2015</td>
+<td>2100</td>
+<td>85</td>
+<td>C4MIP</td>
+<td>Concentration-driven future scenario simulation, biogeochemically-coupled</td>
+</tr>
+<tr><td>amip-a4SST-4xCO2</td>
+<td>CFMIP</td>
+<td>as AMIP but with warming pattern from abrupt4xCO2 added to SSTs and 4xCO2 seen by radiation and vegetation</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>36</td>
+<td></td>
+<td>Same as amip, but a patterned SST anomaly is applied on top of the monthly-varying amip SSTs. This anomaly is a monthly climatology, taken from each model's own abrupt4xCO2 run minus piControl (using the mean of years 111-140 of abrupt4xCO2, and the parallel 30-year section of piControl). CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation</td>
+</tr>
+<tr><td>hist-nat</td>
+<td>DAMIP</td>
+<td>historical natural-only run</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2020</td>
+<td>171</td>
+<td>CMIP</td>
+<td>Historical natural-only run</td>
+</tr>
+<tr><td>1pctCO2-rad</td>
+<td>C4MIP</td>
+<td>radiatively-coupled version of 1 percent per year increasing CO2 experiment</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td>piControl</td>
+<td>AOGCM BGC</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>150</td>
+<td>CMIP</td>
+<td>Radiatively-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling</td>
+</tr>
+<tr><td>land-noWoodHarv</td>
+<td>LUMIP</td>
+<td>historical land-only with no wood harvest</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850 or 1700</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Same as land-hist but with wood harvest maintained at 1850 amounts/areas</td>
+</tr>
+<tr><td>volc-pinatubo-surf</td>
+<td>VolMIP</td>
+<td>Pinatubo experiment with partial radiative forcing, solar radiation scattering only</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>CMIP</td>
+<td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
+</tr>
+<tr><td>ssp370SST-lowO3</td>
+<td>AerChemMIP</td>
+<td>SSP3-7.0, prescribed SSTs, with low ozone precursor emissions</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER CHEM</td>
+<td></td>
+<td>2015</td>
+<td>2055</td>
+<td>41</td>
+<td></td>
+<td>Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs</td>
+</tr>
+<tr><td>a4SSTice</td>
+<td>CFMIP</td>
+<td>as piSST but with SSTs and sea ice from abrupt4xCO2</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>As piSST, but with monthly-varying SSTs and sea-ice taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl</td>
+</tr>
+<tr><td>land-hist-cruNcep</td>
+<td>LS3MIP</td>
+<td>as land-hist with CRU-NCEP forcings</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Land only simulations</td>
+</tr>
+<tr><td>amip-piForcing</td>
+<td>CFMIP</td>
+<td>AMIP SSTs with pre-industrial anthropogenic and natural forcing</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1870</td>
+<td>2014</td>
+<td>145</td>
+<td></td>
+<td>Identical to standard AMIP experiment but from 1870-present with constant pre-industrial forcing levels (anthropogenic and natural)</td>
+</tr>
+<tr><td>esm-piControl-spinup</td>
+<td>CMIP</td>
+<td>pre-industrial control simulation with CO2 concentration calculated (spin-up)</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AOGCM BGC</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>100</td>
+<td></td>
+<td>DECK: spin-up portion of the control (emission-driven)</td>
+</tr>
+<tr><td>piClim-2xdust</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with doubled emissions of dust</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER</td>
+<td>CHEM</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>1850 control with doubled dust emissions</td>
+</tr>
+<tr><td>dcppC-forecast-addAgung</td>
+<td>DCPP</td>
+<td>2015 forecast with added Agung forcing</td>
+<td>3</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td>dcppA-assim </td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2015</td>
+<td>2015</td>
+<td>5</td>
+<td>DCPP</td>
+<td>Effects of volcanoes on decadal prediction and predictability of forced and internal variability components</td>
+</tr>
+<tr><td>dcppC-amv-Trop-pos</td>
+<td>DCPP</td>
+<td>idealized positive tropical AMV anomaly pattern</td>
+<td>2</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1992</td>
+<td>1999</td>
+<td>5</td>
+<td></td>
+<td>Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
+<tr><td>ssp534-over</td>
+<td>ScenarioMIP</td>
+<td>overshoot of 3.4 W/m**2 branching from ssp585 in 2040</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td>ssp585</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>ScenarioMIP</td>
+<td>21st century overshoot scenario relative to SSP5_34. Branches from SS5_85 at 2040 with emissions reduced to zero by 2070 and negative thereafter</td>
+</tr>
+<tr><td>land-noFire</td>
+<td>LUMIP</td>
+<td>historical land-only with no human fire management</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850 or 1700</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Same as land-hist but with anthropogenic ignition and suppression held to 1850 levels</td>
+</tr>
+<tr><td>omip2-spunup</td>
+<td>OMIP</td>
+<td>OMIP experiment forced by JRA-55 atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model</td>
+<td>3</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>OGCM</td>
+<td></td>
+<td>1</td>
+<td>310</td>
+<td>310</td>
+<td></td>
+<td>Same as the omipv2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. Also it includes radiocarbon to evaluate deep-ocean circulation</td>
+</tr>
+<tr><td>piClim-2xNOx</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with doubled production of NOx due to lightning</td>
+<td>3</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER CHEM</td>
+<td></td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>1850 control with doubled emissions of lightning NOx</td>
+</tr>
+<tr><td>piClim-spAer-histaer</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings</td>
+</tr>
+<tr><td>piClim-O3</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with 2014 ozone precursor emissions</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER CHEM</td>
+<td></td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>Perturbation from 1850 control using 2014 ozone precursor emissions</td>
+</tr>
+<tr><td>histSST-piNTCF</td>
+<td>AerChemMIP</td>
+<td>historical SSTs and historical forcing, but with pre-industrial NTCF emissions</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER</td>
+<td>CHEM BGC</td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Historical WMGHG concentrations and halocarbons emissions, 1850 NTCF emissions, prescribed SSTs</td>
+</tr>
+<tr><td>land-crop-noFert</td>
+<td>LUMIP</td>
+<td>historical land-only with no fertilizer</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850 or 1700</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Same as land-hist but with fertilization rates and area held at 1850 levels/distribution</td>
+</tr>
+<tr><td>histSST-piCH4</td>
+<td>AerChemMIP</td>
+<td>historical SSTs and historical forcing, but with pre-industrial methane concentrations</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM AER CHEM</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Historical (non-CH4) WMGHG concentrations and NTCF emissions, 1850 CH4 concentrations</td>
+</tr>
+<tr><td>aqua-p4K-lwoff</td>
+<td>CFMIP</td>
+<td>aquaplanet with uniform 4K SST increase and with longwave cloud radiative effects off</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>As aqua-p4K experiment, but with cloud-radiative effects switched off in the LW radiation code</td>
+</tr>
+<tr><td>dcppA-historical</td>
+<td>DCPP</td>
+<td>climate simulation initialized from control with forcing prescribed from the historical period and future scenario as in A1</td>
+<td>2</td>
+<td>of form: "sYYYY"</td>
+<td>initialized near end of year YYYY</td>
+<td></td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2030</td>
+<td>170</td>
+<td></td>
+<td>Historical and future uninitialized simulations to assess the impact of initialization</td>
+</tr>
+<tr><td>land-hist-wfdei</td>
+<td>LS3MIP</td>
+<td>as land-hist with WFDEI forcings</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>LAND</td>
+<td></td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
+<td></td>
+<td>Land only simulations</td>
+</tr>
+<tr><td>G7SST1-cirrus</td>
+<td>GeoMIP</td>
+<td>SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2020 of SSP5-8.5 and cirrus thinning</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>10</td>
+<td></td>
+<td>Time slice at 2020 (ScenarioMIP Tier 1 high forcing scenario and cirrus thinning according to G7cirrus)</td>
+</tr>
+<tr><td>piClim-histaer03</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing by aerosols</td>
+<td>2</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td></td>
+<td>Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
+</tr>
+<tr><td>piClim-4xCO2</td>
+<td>RFMIP</td>
+<td>effective radiative forcing by 4xCO2</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>As in RFMIP-ERF-PI-Cntrl but with 4xCO2</td>
+</tr>
+<tr><td>hist-1950HC</td>
+<td>AerChemMIP</td>
+<td>historical forcing, but with1950s halocarbon concentrations; initialized in 1950</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td>historical</td>
+<td>AOGCM AER CHEM</td>
+<td>BGC</td>
+<td>1950</td>
+<td>2014</td>
+<td>65</td>
+<td>CMIP</td>
+<td>Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations, start 1950</td>
+</tr>
+<tr><td>1pctCO2-4xext</td>
+<td>ISMIP6</td>
+<td>extension from year 140 of 1pctCO2 with 4xCO2</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td>1pctCO2</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>210</td>
+<td>CMIP</td>
+<td>branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration</td>
+</tr>
+<tr><td>piClim-aerO3</td>
+<td>RFMIP</td>
+<td>effective radiative forcing by present-day aerosols and ozone</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols and ozone</td>
+</tr>
+<tr><td>amip</td>
+<td>CMIP</td>
+<td>AMIP</td>
+<td>1</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1979</td>
+<td>2014</td>
+<td>36</td>
+<td></td>
+<td>DECK: AMIP</td>
+</tr>
+</table>
+
+</body>
+</html>
+

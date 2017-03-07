@@ -282,7 +282,7 @@ for count in range(4,len(data)):
             else:
                 value = replace(value,',','') ; # remove ','
                 value = value.split() ; # Change type to list
-                print value
+                #print value
         if type(value) == long:
             experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
         elif type(value) == list:

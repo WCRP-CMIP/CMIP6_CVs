@@ -3,11 +3,11 @@
         "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "author":"merge: a1d1265 415a991",
-        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Wed Mar 8 08:04:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: Update experiment_id from external xlsx",
-        "note":"Date: Wed Mar 8 08:04:56 2017 -0800",
-        "previous_commit":"597f000a54ce57bcd1973eb1a296144039b47872"
+        "latest_tag_point":"3.2.2 (225; g3eb6889)",
+        "note":"Update experiment_id from external xlsx",
+        "previous_commit":"62ad8618e7c6a2160835f599c4bf26141dbe7c76"
     }
 }

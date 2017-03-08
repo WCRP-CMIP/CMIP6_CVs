@@ -32,10 +32,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 17:46:46 2017 -0800",
+        "creation_date":"Tue Mar 7 17:46:52 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (139; g8a10b8b)",
+        "latest_tag_point":"3.2.2 (153; g24db641)",
         "note":"Update experiment_id from external xlsx",
-        "previous_commit":"8f15369804da3987af911e8549d01b74d3345db7"
+        "previous_commit":"e92065798d0e9063f62d99c4cb7d2593067c2457"
     }
 }

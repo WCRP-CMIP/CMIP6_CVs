@@ -10,7 +10,7 @@
                 "BGC"
             ],
             "description":"DECK: 1pctCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"1 percent per year increase in CO2",
             "experiment_id":"1pctCO2",
             "min_number_yrs_per_sim":"150",
@@ -23,7 +23,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -38,7 +38,7 @@
                 "BGC"
             ],
             "description":"branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"extension from year 140 of 1pctCO2 with 4xCO2",
             "experiment_id":"1pctCO2-4xext",
             "min_number_yrs_per_sim":"210",
@@ -51,7 +51,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -65,7 +65,7 @@
                 "CHEM"
             ],
             "description":"Biogeochemically-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment",
             "experiment_id":"1pctCO2-bgc",
             "min_number_yrs_per_sim":"150",
@@ -79,7 +79,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -93,7 +93,7 @@
                 "CHEM"
             ],
             "description":"Radiatively-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"radiatively-coupled version of 1 percent per year increasing CO2 experiment",
             "experiment_id":"1pctCO2-rad",
             "min_number_yrs_per_sim":"150",
@@ -107,7 +107,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -121,7 +121,7 @@
                 "CHEM"
             ],
             "description":"Fully-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling, plus an additional scenario of anthropogenic nitrogen deposition",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"1 percent per year increasing CO2 experiment with increasing N-deposition",
             "experiment_id":"1pctCO2Ndep",
             "min_number_yrs_per_sim":"150",
@@ -135,7 +135,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -149,7 +149,7 @@
                 "CHEM"
             ],
             "description":"Biogeochemically-coupled specified concentration simulation in which CO2 increases at a rate of 1% per year until quadrupling, plus an additional scenario of anthropogenic nitrogen deposition",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment with increasing N-deposition",
             "experiment_id":"1pctCO2Ndep-bgc",
             "min_number_yrs_per_sim":"150",
@@ -163,7 +163,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -178,7 +178,7 @@
                 "BGC"
             ],
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation that includes interactive ice sheets",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"simulation with interactive ice sheet forced by 1 percent per year increase in CO2 to 4xCO2 (subsequently held fixed)",
             "experiment_id":"1pctCO2to4x-withism",
             "min_number_yrs_per_sim":"350",
@@ -192,7 +192,7 @@
                 "AOGCM",
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -207,7 +207,7 @@
                 "BGC"
             ],
             "description":"Beginning from a preindustrial control run, simultaneously quadruple the CO2 concentration and reduce the solar constant such that the TOA radiative flux remains within +/m0.1 W/m2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt quadrupling of CO2 plus reduction in total solar irradiance",
             "experiment_id":"G1",
             "min_number_yrs_per_sim":"100",
@@ -220,7 +220,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -234,7 +234,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 2020 (ScenarioMIP Tier 1 high forcing scenario)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"SSTs, forcings, and other prescribed conditions from year 2020 of SSP5-8.5",
             "experiment_id":"G6SST1",
             "min_number_yrs_per_sim":"10",
@@ -247,7 +247,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -261,7 +261,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 2100 (G6solar)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6solar",
             "experiment_id":"G6SST2-solar",
             "min_number_yrs_per_sim":"10",
@@ -274,7 +274,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -288,7 +288,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 2100 (G6sulfur)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6sulfur",
             "experiment_id":"G6SST2-sulfur",
             "min_number_yrs_per_sim":"10",
@@ -301,7 +301,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -371,7 +371,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 2020 (ScenarioMIP Tier 1 high forcing scenario and cirrus thinning according to G7cirrus)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2020 of SSP5-8.5 and cirrus thinning",
             "experiment_id":"G7SST1-cirrus",
             "min_number_yrs_per_sim":"10",
@@ -384,7 +384,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -398,7 +398,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 2100 (ScenarioMIP Tier 1 high forcing scenario and cirrus thinning according to G7cirrus)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"SSTs from year 2100 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G7cirrus",
             "experiment_id":"G7SST2-cirrus",
             "min_number_yrs_per_sim":"10",
@@ -411,7 +411,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -453,7 +453,7 @@
                 "CHEM"
             ],
             "description":"As piSST, but with monthly-varying SSTs taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl. Sea-ice is unchanged from piSST",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST but with SSTs from abrupt4xCO2",
             "experiment_id":"a4SST",
             "min_number_yrs_per_sim":"30",
@@ -466,7 +466,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -480,7 +480,7 @@
                 "CHEM"
             ],
             "description":"As piSST, but with monthly-varying SSTs and sea-ice taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2",
             "experiment_id":"a4SSTice",
             "min_number_yrs_per_sim":"30",
@@ -493,7 +493,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -507,7 +507,7 @@
                 "CHEM"
             ],
             "description":"As a4SSTice, but CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2, and 4xCO2 seen by radiation and vegetation",
             "experiment_id":"a4SSTice-4xCO2",
             "min_number_yrs_per_sim":"30",
@@ -520,7 +520,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -535,7 +535,7 @@
                 "BGC"
             ],
             "description":"Identical to the DECK abrupt-4xCO2, but at 0.5xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt halving of CO2",
             "experiment_id":"abrupt-0p5xCO2",
             "min_number_yrs_per_sim":"150",
@@ -548,7 +548,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -563,7 +563,7 @@
                 "BGC"
             ],
             "description":"Identical to the DECK abrupt-4xCO2, but at 2xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt doubling of CO2",
             "experiment_id":"abrupt-2xCO2",
             "min_number_yrs_per_sim":"150",
@@ -576,7 +576,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -591,7 +591,7 @@
                 "BGC"
             ],
             "description":"DECK: abrupt4xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt quadrupling of CO2",
             "experiment_id":"abrupt-4xCO2",
             "min_number_yrs_per_sim":"150",
@@ -604,7 +604,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -619,7 +619,7 @@
                 "BGC"
             ],
             "description":"Conceptually similar to abrupt 4xCO2 DECK experiment, except that the solar constant rather than CO2 is abruptly reduced by 4%",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt 4% decrease in solar constant",
             "experiment_id":"abrupt-solm4p",
             "min_number_yrs_per_sim":"150",
@@ -632,7 +632,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -647,7 +647,7 @@
                 "BGC"
             ],
             "description":"Conceptually similar to abrupt 4xCO2 DECK experiment, except that the solar constant rather than CO2 is abruptly increased by 4%",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"abrupt 4% increase in solar constant",
             "experiment_id":"abrupt-solp4p",
             "min_number_yrs_per_sim":"150",
@@ -660,7 +660,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1045,7 +1045,7 @@
                 "CHEM"
             ],
             "description":"Extended version of CMIP5/CFMIP-2 aqua4xCO2 experiment. Aquaplanet experiment where SSTs are held at control values and the CO2 seen by the radiation scheme is quadrupled",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"aquaplanet with control SST and 4xCO2",
             "experiment_id":"aqua-4xCO2",
             "min_number_yrs_per_sim":"10",
@@ -1054,7 +1054,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1068,7 +1068,7 @@
                 "CHEM"
             ],
             "description":"Extended version of CMIP5/CFMIP-2 aquaControl experiment. Aquaplanet (no land) experiment with no seasonal cycle forced with specified zonally symmetric SSTs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"aquaplanet control",
             "experiment_id":"aqua-control",
             "min_number_yrs_per_sim":"10",
@@ -1077,7 +1077,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1091,7 +1091,7 @@
                 "CHEM"
             ],
             "description":"As aqua-control experiment, but with cloud-radiative effects switched off in the LW radiation code",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"aquaplanet control with longwave cloud radiative effects off",
             "experiment_id":"aqua-control-lwoff",
             "min_number_yrs_per_sim":"10",
@@ -1100,7 +1100,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1114,7 +1114,7 @@
                 "CHEM"
             ],
             "description":"Extended version of CMIP5/CFMIP-2 aqua4K experiment. Aquaplanet experiment where SSTs are subject to a uniform warming of 4K",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"aquaplanet with uniform 4K SST increase",
             "experiment_id":"aqua-p4K",
             "min_number_yrs_per_sim":"10",
@@ -1123,7 +1123,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1137,7 +1137,7 @@
                 "CHEM"
             ],
             "description":"As aqua-p4K experiment, but with cloud-radiative effects switched off in the LW radiation code",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"aquaplanet with uniform 4K SST increase and with longwave cloud radiative effects off",
             "experiment_id":"aqua-p4K-lwoff",
             "min_number_yrs_per_sim":"10",
@@ -1146,7 +1146,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1159,7 +1159,7 @@
                 "AER"
             ],
             "description":"Coupled integrations with constant 1950\"s forcing",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"coupled control with fixed 1950's forcing (HighResMIP equivalent of pre-industrial control)",
             "experiment_id":"control-1950",
             "min_number_yrs_per_sim":"100",
@@ -1172,7 +1172,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1187,7 +1187,7 @@
                 "BGC"
             ],
             "description":"slab control run for volc-pinatubo-slab",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control with slab ocean",
             "experiment_id":"control-slab",
             "min_number_yrs_per_sim":"30",
@@ -1197,7 +1197,7 @@
                 "AGCM",
                 "SLAB"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -1354,7 +1354,7 @@
                 "BGC"
             ],
             "description":"C1.7 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized climate impact of negative extratropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-ExTrop-neg",
             "min_number_yrs_per_sim":"10",
@@ -1367,7 +1367,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1382,7 +1382,7 @@
                 "BGC"
             ],
             "description":"C1.7Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized climate impact of positive extratropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-ExTrop-pos",
             "min_number_yrs_per_sim":"10",
@@ -1395,7 +1395,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1410,7 +1410,7 @@
                 "BGC"
             ],
             "description":"C1.8 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized climate impact of negative tropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-Trop-neg",
             "min_number_yrs_per_sim":"10",
@@ -1423,7 +1423,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1438,7 +1438,7 @@
                 "BGC"
             ],
             "description":"C1.8 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized positive tropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-Trop-pos",
             "min_number_yrs_per_sim":"10",
@@ -1451,7 +1451,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1466,7 +1466,7 @@
                 "BGC"
             ],
             "description":"C1.3 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized climate impact of negative AMV anomaly pattern",
             "experiment_id":"dcppC-amv-neg",
             "min_number_yrs_per_sim":"10",
@@ -1479,7 +1479,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1494,7 +1494,7 @@
                 "BGC"
             ],
             "description":"C1.2 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized climate impact of positive AMV anomaly pattern",
             "experiment_id":"dcppC-amv-pos",
             "min_number_yrs_per_sim":"10",
@@ -1507,7 +1507,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1522,7 +1522,7 @@
                 "BGC"
             ],
             "description":"C1.1 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized Atlantic control",
             "experiment_id":"dcppC-atl-control",
             "min_number_yrs_per_sim":"10",
@@ -1535,7 +1535,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1783,7 +1783,7 @@
                 "BGC"
             ],
             "description":"C1.9 and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized negative northern extratropical IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-NexTrop-neg",
             "min_number_yrs_per_sim":"10",
@@ -1796,7 +1796,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1811,7 +1811,7 @@
                 "BGC"
             ],
             "description":"C1.9 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized positive northern extratropical IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-NexTrop-pos",
             "min_number_yrs_per_sim":"10",
@@ -1824,7 +1824,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -1839,7 +1839,7 @@
                 "BGC"
             ],
             "description":"C1.6 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized negative IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-neg",
             "min_number_yrs_per_sim":"10",
@@ -1852,7 +1852,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1867,7 +1867,7 @@
                 "BGC"
             ],
             "description":"C1.5 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized positive IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-pos",
             "min_number_yrs_per_sim":"10",
@@ -1880,7 +1880,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1895,7 +1895,7 @@
                 "BGC"
             ],
             "description":"C1.4 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized Pacific control",
             "experiment_id":"dcppC-pac-control",
             "min_number_yrs_per_sim":"10",
@@ -1908,7 +1908,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -1951,7 +1951,7 @@
                 "BGC"
             ],
             "description":"Idealized deforestation experiment, 20 million km2 forest removed linearly over a period of 50 years, with an additional 30 years with no specified change in forest cover; all other forcings held constant",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized transient global deforestation",
             "experiment_id":"deforest-globe",
             "min_number_yrs_per_sim":"81",
@@ -2006,7 +2006,7 @@
                 "CHEM"
             ],
             "description":"Extension beyond 2014 of the CMIP6 historical (CO2 emission-driven)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"post-2014 all-forcing simulation with atmospheric CO2 concentration calculated",
             "experiment_id":"esm-hist-ext",
             "min_number_yrs_per_sim":"1",
@@ -2034,7 +2034,7 @@
                 "CHEM"
             ],
             "description":"DECK: control (emission-driven)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial control simulation with CO2 concentration calculated",
             "experiment_id":"esm-piControl",
             "min_number_yrs_per_sim":"500",
@@ -2048,7 +2048,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -2062,7 +2062,7 @@
                 "CHEM"
             ],
             "description":"DECK: spin-up portion of the control (emission-driven)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial control simulation with CO2 concentration calculated (spin-up)",
             "experiment_id":"esm-piControl-spinup",
             "min_number_yrs_per_sim":"100",
@@ -2072,7 +2072,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -2143,7 +2143,7 @@
                 "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean simultaneously by surface windstress (as in the wind experiment), net heat flux (as in the heat experiment) and net freshwater flux (as in the water experiment) anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2, using a passive tracer to prevent negative climate feedback on the heat flux applied",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control plus perturbative surface fluxes of momentum, heat and water into ocean",
             "experiment_id":"faf-all",
             "min_number_yrs_per_sim":"70",
@@ -2156,7 +2156,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -2171,7 +2171,7 @@
                 "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface net heat flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2, using a passive tracer to prevent negative climate feedback on the heat flux applied",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control plus perturbative surface flux of heat into ocean",
             "experiment_id":"faf-heat",
             "min_number_yrs_per_sim":"70",
@@ -2184,7 +2184,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -2199,7 +2199,7 @@
                 "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, with a flux of passive tracer added at the ocean surface at the same rate as the surface net heat flux anomaly applied in the FAFMIP heat experiment",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control plus surface flux of passive heat tracer into ocean",
             "experiment_id":"faf-passiveheat",
             "min_number_yrs_per_sim":"70",
@@ -2212,7 +2212,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -2227,7 +2227,7 @@
                 "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface windstress anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control plus perturbative surface flux of momentum into ocean",
             "experiment_id":"faf-stress",
             "min_number_yrs_per_sim":"70",
@@ -2240,7 +2240,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -2255,7 +2255,7 @@
                 "BGC"
             ],
             "description":"1xCO2 experiment, parallel to piControl, forced over the ocean by surface net freshwater flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"control plus perturbative surface flux of water into ocean",
             "experiment_id":"faf-water",
             "min_number_yrs_per_sim":"70",
@@ -2268,7 +2268,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -2282,7 +2282,7 @@
                 "CHEM"
             ],
             "description":"Time slice at year 100 of G1ext to examine radiative forcing of abrupt4xCO2 and G1",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"year 100 SSTs from abrupt4xCO2 with quadrupled CO2 and solar reduction",
             "experiment_id":"futureSST-4xCO2-solar",
             "min_number_yrs_per_sim":"10",
@@ -2295,7 +2295,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -2900,7 +2900,7 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. Changes in aerosols only",
             "end_year":"2014",
             "experiment":"historical simulation with specified anthropogenic aerosols, no other forcings",
@@ -2924,7 +2924,7 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. All forcings",
             "end_year":"2014",
             "experiment":"historical simulation with specified anthropogenic aerosols",
@@ -3026,7 +3026,7 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with1950 halocarbon concentrations",
@@ -3071,7 +3071,7 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Historical (non-CH4) WMGHG concentrations and NTCF emissions, 1850 CH4 concentrations",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with pre-industrial methane concentrations",
@@ -3141,7 +3141,7 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Historical WMGHG, halocarbon concentrations and aerosol precursor emissions, 1850 tropospheric ozone precursors emissions, prescribed SSTs",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with pre-industrial ozone precursor emissions",
@@ -3248,9 +3248,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation with ice sheets forced \"offline\" with DECK 1pctCO2 using forcing from its own AOGCM",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet model forced by ISM's own AOGCM 1pctCO2to4x output",
             "experiment_id":"ism-1pctCO2to4x-self",
             "min_number_yrs_per_sim":"350",
@@ -3263,7 +3263,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3272,9 +3272,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation with ice sheets forced \"offline\" with DECK 1pctCO2 using a standard forcing",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet model forced by ISMIP6-specified AOGCM 1pctCO2to4x output",
             "experiment_id":"ism-1pctCO2to4x-std",
             "min_number_yrs_per_sim":"350",
@@ -3287,7 +3287,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3296,7 +3296,7 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Offline ice sheet evolution for the last few decades forced by amip",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM AMIP output",
@@ -3320,9 +3320,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Offline ice sheet simulation with synthetic atmospheric dataset to explore the uncertainty in sea level due to ice sheet initialization",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet forced by initMIP synthetic atmospheric experiment",
             "experiment_id":"ism-asmb-std",
             "min_number_yrs_per_sim":"100",
@@ -3335,7 +3335,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3344,9 +3344,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet forced by initMIP synthetic oceanic experiment",
             "experiment_id":"ism-bsmb-std",
             "min_number_yrs_per_sim":"100",
@@ -3359,7 +3359,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3368,9 +3368,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Offline ice sheet control run for the initMIP experiment that explores the uncertainty in sea level due to ice sheet initialization",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet model initMIP control",
             "experiment_id":"ism-ctrl-std",
             "min_number_yrs_per_sim":"100",
@@ -3379,7 +3379,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3388,7 +3388,7 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Historical simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISM's own AOGCM historical output",
@@ -3412,7 +3412,7 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Historical simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on CMIP6 AOGCM historical",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM historical output",
@@ -3436,9 +3436,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Last interglacial simulation of ice sheet evolution driven by PMIP lig127k",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM last interglacial output",
             "experiment_id":"ism-lig127k-std",
             "min_number_yrs_per_sim":"20000",
@@ -3447,7 +3447,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -3456,9 +3456,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Present-day control simulation for \"offline\" ice sheets",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM pdControl output",
             "experiment_id":"ism-pdControl-std",
             "min_number_yrs_per_sim":"100",
@@ -3467,7 +3467,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3476,9 +3476,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Pre-industrial control simulation for \"offline\" ice sheets",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline ice sheet forced by ISM's own AOGCM piControl output",
             "experiment_id":"ism-piControl-self",
             "min_number_yrs_per_sim":"500",
@@ -3487,7 +3487,7 @@
             "required_model_components":[
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -3496,7 +3496,7 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
@@ -3520,7 +3520,7 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on ScenarioMIP ssp585",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
@@ -3544,7 +3544,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except with CO2 held constant",
             "end_year":"2014",
             "experiment":"historical land-only constant CO2",
@@ -3564,7 +3564,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except with climate held constant",
             "end_year":"2014",
             "experiment":"historical land-only constant climate",
@@ -3584,7 +3584,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with all new crop and pastureland treated as unmanaged grassland",
             "end_year":"2014",
             "experiment":"historical land-only with cropland as natural grassland",
@@ -3604,7 +3604,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with fertilization rates and area held at 1850 levels/distribution",
             "end_year":"2014",
             "experiment":"historical land-only with no fertilizer",
@@ -3624,7 +3624,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with irrigated area held at 1850 levels",
             "end_year":"2014",
             "experiment":"historical land-only with no irrigation",
@@ -3644,7 +3644,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant",
             "end_year":"2014",
             "experiment":"historical land-only with managed crops but with irrigation and fertilization held constant",
@@ -3664,7 +3664,7 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2100",
             "experiment":"future land-only",
@@ -3685,7 +3685,7 @@
                 "LS3MIP",
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only",
@@ -3705,7 +3705,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only alternate land-use history",
@@ -3725,7 +3725,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only alternate land use history",
@@ -3745,7 +3745,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except starting from either 1700 (for models that typically start in 1850) or 1850 (for models that typically start in 1700)",
             "end_year":"2014",
             "experiment":"historical land-only alternate start year",
@@ -3765,7 +3765,7 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with CRU-NCEP forcings",
@@ -3785,7 +3785,7 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with Princeton forcings",
@@ -3805,7 +3805,7 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with WFDEI forcings",
@@ -3825,7 +3825,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with anthropogenic ignition and suppression held to 1850 levels",
             "end_year":"2014",
             "experiment":"historical land-only with no human fire management",
@@ -3845,7 +3845,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except no land-use change",
             "end_year":"2014",
             "experiment":"historical land-only with no land-use change",
@@ -3865,7 +3865,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with grazing and other management on pastureland held at 1850 levels/distribution, i.e. all new pastureland is treated as unmanaged grassland (as in land-crop-grass)",
             "end_year":"2014",
             "experiment":"historical land-only with constant pastureland",
@@ -3885,7 +3885,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated",
             "end_year":"2014",
             "experiment":"historical land-only with shifting cultivation turned off",
@@ -3905,7 +3905,7 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as land-hist but with wood harvest maintained at 1850 amounts/areas",
             "end_year":"2014",
             "experiment":"historical land-only with no wood harvest",
@@ -4183,7 +4183,7 @@
                 "BGC"
             ],
             "description":"main forcings: ice-sheet; trace gases, astronomical parameters, dust (forcing, or feedback if dust cycle represented in model)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"last glacial maximum",
             "experiment_id":"lgm",
             "min_number_yrs_per_sim":"100",
@@ -4192,7 +4192,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4207,7 +4207,7 @@
                 "BGC"
             ],
             "description":"main forcings: astronomical parameters, trace gases, dust (forcing, or feedback if dust cycle represented in model)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"last interglacial (127k)",
             "experiment_id":"lig127k",
             "min_number_yrs_per_sim":"100",
@@ -4216,7 +4216,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4231,7 +4231,7 @@
                 "BGC"
             ],
             "description":"main forcings: trace gases, orbital parameters, dust (forcing, or feedback if dust cycle represented in model)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"mid-Holocene",
             "experiment_id":"midHolocene",
             "min_number_yrs_per_sim":"200",
@@ -4240,7 +4240,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4255,7 +4255,7 @@
                 "BGC"
             ],
             "description":"main forcings: trace gases, orography, ice-sheet",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"mid-Pliocene warm period",
             "experiment_id":"midPliocene-eoi400",
             "min_number_yrs_per_sim":"100",
@@ -4264,7 +4264,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4273,7 +4273,7 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean - ice Reference Experiments inter-annually varying atmospheric and river data sets for years 1948-2009. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 62-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"310",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data",
@@ -4293,9 +4293,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as the omip1 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle of CORE-II forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip1 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip1-spunup",
             "min_number_yrs_per_sim":"310",
@@ -4304,7 +4304,7 @@
             "required_model_components":[
                 "OGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4313,9 +4313,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Global ocean - sea-ice coupled experiment forced with the JRA-55do inter-annually varying atmospheric and river data sets for years 1958-2016. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip2",
             "min_number_yrs_per_sim":"295",
@@ -4324,7 +4324,7 @@
             "required_model_components":[
                 "OGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4333,9 +4333,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA-55do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip2-spunup",
             "min_number_yrs_per_sim":"295",
@@ -4344,7 +4344,7 @@
             "required_model_components":[
                 "OGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4381,7 +4381,7 @@
                 "CHEM"
             ],
             "description":"1850 control with doubled emissions of DMS",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of DMS",
             "experiment_id":"piClim-2xDMS",
             "min_number_yrs_per_sim":"30",
@@ -4395,7 +4395,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4404,9 +4404,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"1850 control with doubled emissions of lightning NOx",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled production of NOx due to lightning",
             "experiment_id":"piClim-2xNOx",
             "min_number_yrs_per_sim":"30",
@@ -4421,7 +4421,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4430,9 +4430,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"1850 control with doubled emissions of biogenic VOCs",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of biogenic VOCs",
             "experiment_id":"piClim-2xVOC",
             "min_number_yrs_per_sim":"30",
@@ -4447,7 +4447,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4460,7 +4460,7 @@
                 "CHEM"
             ],
             "description":"1850 control with doubled dust emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of dust",
             "experiment_id":"piClim-2xdust",
             "min_number_yrs_per_sim":"30",
@@ -4474,7 +4474,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4487,7 +4487,7 @@
                 "CHEM"
             ],
             "description":"1850 control with doubled emissions of fires",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions from fires",
             "experiment_id":"piClim-2xfire",
             "min_number_yrs_per_sim":"30",
@@ -4501,7 +4501,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4514,7 +4514,7 @@
                 "CHEM"
             ],
             "description":"1850 control with doubled sea salt emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of sea salt",
             "experiment_id":"piClim-2xss",
             "min_number_yrs_per_sim":"30",
@@ -4528,7 +4528,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4542,7 +4542,7 @@
                 "CHEM"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with 4xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing by 4xCO2",
             "experiment_id":"piClim-4xCO2",
             "min_number_yrs_per_sim":"30",
@@ -4555,7 +4555,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4568,7 +4568,7 @@
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 BC emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 black carbon emissions",
             "experiment_id":"piClim-BC",
             "min_number_yrs_per_sim":"30",
@@ -4582,7 +4582,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4591,9 +4591,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 CH4 concentrations",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 methane concentrations (including chemistry)",
             "experiment_id":"piClim-CH4",
             "min_number_yrs_per_sim":"30",
@@ -4608,7 +4608,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4617,9 +4617,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 halocarbon concentrations",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 halocarbon concentrations (including chemistry)",
             "experiment_id":"piClim-HC",
             "min_number_yrs_per_sim":"30",
@@ -4634,7 +4634,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4643,9 +4643,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 N2O concentrations",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 N2O concentrations (including chemistry)",
             "experiment_id":"piClim-N2O",
             "min_number_yrs_per_sim":"30",
@@ -4660,7 +4660,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4673,7 +4673,7 @@
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 NH3 emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions",
             "experiment_id":"piClim-NH3",
             "min_number_yrs_per_sim":"30",
@@ -4687,7 +4687,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4696,9 +4696,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 NOx emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NOx emissions",
             "experiment_id":"piClim-NOx",
             "min_number_yrs_per_sim":"30",
@@ -4713,7 +4713,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4727,7 +4727,7 @@
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 aerosol and ozone precursor emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions",
             "experiment_id":"piClim-NTCF",
             "min_number_yrs_per_sim":"30",
@@ -4741,7 +4741,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4750,9 +4750,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 ozone precursor emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ozone precursor emissions",
             "experiment_id":"piClim-O3",
             "min_number_yrs_per_sim":"30",
@@ -4767,7 +4767,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4780,7 +4780,7 @@
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 OC emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions",
             "experiment_id":"piClim-OC",
             "min_number_yrs_per_sim":"30",
@@ -4794,7 +4794,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4807,7 +4807,7 @@
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 SO2 emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions",
             "experiment_id":"piClim-SO2",
             "min_number_yrs_per_sim":"30",
@@ -4821,7 +4821,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4830,9 +4830,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Perturbation from 1850 control using 2014 CO/VOC emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 VOC emissions",
             "experiment_id":"piClim-VOC",
             "min_number_yrs_per_sim":"30",
@@ -4847,7 +4847,7 @@
                 "AER",
                 "CHEM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -4860,7 +4860,7 @@
                 "CHEM"
             ],
             "description":"Perturbation from 1850 control using 2014 aerosol emissions",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial climatological SSTs and forcing, but 2014 aerosol emissions",
             "experiment_id":"piClim-aer",
             "min_number_yrs_per_sim":"30",
@@ -4874,7 +4874,7 @@
                 "AGCM",
                 "AER"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -4888,7 +4888,7 @@
                 "CHEM"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols and ozone",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing by present-day aerosols and ozone",
             "experiment_id":"piClim-aerO3",
             "min_number_yrs_per_sim":"30",
@@ -4901,7 +4901,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4915,7 +4915,7 @@
                 "CHEM"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with present-day anthropogenic forcing (greenhouse gases, aerosols and land-use)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing by present day anthropogenic agents",
             "experiment_id":"piClim-anthro",
             "min_number_yrs_per_sim":"30",
@@ -4928,7 +4928,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4943,7 +4943,7 @@
                 "CHEM"
             ],
             "description":"30-year atmosphere only integration using preindustrial sea-surface temperature and sea-ice climatology. Interactive vegetation",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing in present-day",
             "experiment_id":"piClim-control",
             "min_number_yrs_per_sim":"30",
@@ -4956,7 +4956,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -4970,7 +4970,7 @@
                 "CHEM"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing by present-day greenhouse gases",
             "experiment_id":"piClim-ghg",
             "min_number_yrs_per_sim":"30",
@@ -4983,7 +4983,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -5105,7 +5105,7 @@
                 "CHEM"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with present-day land use",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing by present-day land use",
             "experiment_id":"piClim-lu",
             "min_number_yrs_per_sim":"30",
@@ -5118,7 +5118,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -5127,12 +5127,12 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings",
             "experiment_id":"piClim-spAer-aer",
-            "min_number_yrs_per_sim":"",
+            "min_number_yrs_per_sim":"None",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -5142,7 +5142,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5151,12 +5151,12 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. Anthropogenic forcings",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings",
             "experiment_id":"piClim-spAer-anthro",
-            "min_number_yrs_per_sim":"",
+            "min_number_yrs_per_sim":"None",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -5166,7 +5166,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5175,7 +5175,7 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing",
@@ -5199,7 +5199,7 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings",
@@ -5229,7 +5229,7 @@
                 "BGC"
             ],
             "description":"DECK: control",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial control",
             "experiment_id":"piControl",
             "min_number_yrs_per_sim":"500",
@@ -5242,7 +5242,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -5257,7 +5257,7 @@
                 "BGC"
             ],
             "description":"DECK: spin-up portion of the control",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"pre-industrial control (spin-up)",
             "experiment_id":"piControl-spinup",
             "min_number_yrs_per_sim":"100",
@@ -5266,7 +5266,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5281,7 +5281,7 @@
                 "BGC"
             ],
             "description":"Pre-industrial control simulation that includes interactive ice sheets",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"preindustrial control with interactive ice sheet",
             "experiment_id":"piControl-withism",
             "min_number_yrs_per_sim":"500",
@@ -5291,7 +5291,7 @@
                 "AOGCM",
                 "ISM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -5305,7 +5305,7 @@
                 "CHEM"
             ],
             "description":"An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents",
             "experiment_id":"piSST",
             "min_number_yrs_per_sim":"30",
@@ -5318,7 +5318,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5332,7 +5332,7 @@
                 "CHEM"
             ],
             "description":"Same as piSST but CO2 is quadrupled. The increase in CO2 is seen by both the radiation scheme and vegetation",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST with radiation and vegetation seeing 4xCO2",
             "experiment_id":"piSST-4xCO2",
             "min_number_yrs_per_sim":"30",
@@ -5345,7 +5345,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5359,7 +5359,7 @@
                 "CHEM"
             ],
             "description":"Same as piSST but CO2 as seen by the radiation scheme is quadrupled",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST with radiation-only seeing 4xCO2",
             "experiment_id":"piSST-4xCO2-rad",
             "min_number_yrs_per_sim":"30",
@@ -5372,7 +5372,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5386,7 +5386,7 @@
                 "CHEM"
             ],
             "description":"Time slice at 1850 (picontrol) for G1ext to examine radiative forcing of abrupt4xCO2",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"preindustrial control SSTs with quadrupled CO2 and solar reduction",
             "experiment_id":"piSST-4xCO2-solar",
             "min_number_yrs_per_sim":"10",
@@ -5399,7 +5399,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5413,7 +5413,7 @@
                 "CHEM"
             ],
             "description":"Same as piSST, but with a spatially and temporally uniform SST anomaly applied on top of the monthly-varying piSST SSTs. The magnitude of the uniform increase is taken from each model's global, climatological annual mean SST change between abrupt4xCO2 minus piControl (using the mean of years 111-140 of abrupt4xCO2, and the parallel 30-year section of piControl)",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"as piSST with uniform SST increase with magnitude based on abrupt4xCO2 response",
             "experiment_id":"piSST-pxK",
             "min_number_yrs_per_sim":"20",
@@ -5426,7 +5426,7 @@
             "required_model_components":[
                 "AGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5435,18 +5435,18 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Offline radiation calculations",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"offline assessment of radiative transfer parmeterizations in clear skies",
             "experiment_id":"rad-irf",
-            "min_number_yrs_per_sim":"",
+            "min_number_yrs_per_sim":"None",
             "parent_activity_id":"no parent",
             "parent_experiment_id":"no parent",
             "required_model_components":[
                 "RAD"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -5459,7 +5459,7 @@
                 "AER"
             ],
             "description":"Coupled integration from ocean rest state using recommended HighResMIP protocol spinup, starting from 1950 ocean temperature and salinity analysis EN4, using constant 1950s forcing. At least 30 years to satisfy near surface quasi-equilibrium",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950",
             "experiment_id":"spinup-1950",
             "min_number_yrs_per_sim":"30",
@@ -5468,7 +5468,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -5838,7 +5838,7 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs",
             "end_year":"2055",
             "experiment":"SSP3-7.0, prescribed SSTs, with low methane concentrations",
@@ -5892,7 +5892,7 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":"None",
             "description":"Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs",
             "end_year":"2055",
             "experiment":"SSP3-7.0, prescribed SSTs, with low ozone precursor emissions",
@@ -6204,7 +6204,7 @@
                 "BGC"
             ],
             "description":"Early 19th century cluster of strong tropical volcanic eruptions, including the 1809 event of unknown location, the 1815 Tambora and 1835 Cosigueina eruptions. Experiment initialized from PiControl",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"19th century volcanic cluster initialized from PiControl",
             "experiment_id":"volc-cluster-ctrl",
             "min_number_yrs_per_sim":"50",
@@ -6217,7 +6217,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -6260,7 +6260,7 @@
                 "BGC"
             ],
             "description":"Idealized equatorial eruption corresponding to an initial emission of 56.2 Tg of SO2. The eruption magnitude corresponds to recent estimates for the 1815 Tambora eruption (Sigl et al., 2015), the largest historical tropical eruption, which was linked to the so-called \"year without a summer\" in 1816. Experiment initialized from PiControl",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized equatorial volcanic eruption emitting 56.2 Tg SO2",
             "experiment_id":"volc-long-eq",
             "min_number_yrs_per_sim":"20",
@@ -6273,7 +6273,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -6288,7 +6288,7 @@
                 "BGC"
             ],
             "description":"Idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
             "experiment_id":"volc-long-hlN",
             "min_number_yrs_per_sim":"20",
@@ -6301,7 +6301,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"2"
@@ -6316,7 +6316,7 @@
                 "BGC"
             ],
             "description":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2. Experiment initialized from PiControl",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
             "experiment_id":"volc-long-hlS",
             "min_number_yrs_per_sim":"20",
@@ -6329,7 +6329,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -6344,7 +6344,7 @@
                 "BGC"
             ],
             "description":"1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Pinatubo experiment",
             "experiment_id":"volc-pinatubo-full",
             "min_number_yrs_per_sim":"3",
@@ -6357,7 +6357,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -6372,7 +6372,7 @@
                 "BGC"
             ],
             "description":"As volc-pinatubo-full, but with a slab ocean",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Pinatubo experiment with slab ocean",
             "experiment_id":"volc-pinatubo-slab",
             "min_number_yrs_per_sim":"3",
@@ -6386,7 +6386,7 @@
                 "AGCM",
                 "SLAB"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"3"
@@ -6401,7 +6401,7 @@
                 "BGC"
             ],
             "description":"As volc-pinatubo-full, but with prescribed perturbation to the total (LW+SW) radiative heating rates",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Pinatubo experiment with partial radiative forcing, includes only stratospheric warming",
             "experiment_id":"volc-pinatubo-strat",
             "min_number_yrs_per_sim":"3",
@@ -6414,7 +6414,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -6429,7 +6429,7 @@
                 "BGC"
             ],
             "description":"As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols",
-            "end_year":"",
+            "end_year":"None",
             "experiment":"Pinatubo experiment with partial radiative forcing, solar radiation scattering only",
             "experiment_id":"volc-pinatubo-surf",
             "min_number_yrs_per_sim":"3",
@@ -6442,7 +6442,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"",
+            "start_year":"None",
             "sub_experiment":"None",
             "sub_experiment_id":"None",
             "tier":"1"
@@ -6450,10 +6450,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 17:40:03 2017 -0800",
+        "creation_date":"Tue Mar 7 17:46:34 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (108; g740b06c)",
+        "latest_tag_point":"3.2.2 (122; ga7504c3)",
         "note":"Update experiment_id from external xlsx",
-        "previous_commit":"b2b444a6f28c0f4f31ec0ab4bae04bb26db8fa20"
+        "previous_commit":"16e0e9ad9b26680e1b65d6f1944c10af39eec746"
     }
 }

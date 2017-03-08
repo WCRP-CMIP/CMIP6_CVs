@@ -292,7 +292,7 @@ for count in range(4,len(data)):
         elif type(value) == list:
             experiment_id[key][entry] = value
         elif value == None:
-            experiment_id[key][entry] = ''
+            experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
         else:
             value = replace(value,'    ',' ') ; # replace whitespace
             value = replace(value,'   ',' ') ; # replace whitespace

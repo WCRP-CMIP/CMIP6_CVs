@@ -1190,7 +1190,7 @@
                 "BGC"
             ],
             "description":"A1 (& A2.1, A3.1, and A3.2) Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
-            "end_year":"5 - 10 years after start year)",
+            "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized based on observations and using historical forcing",
             "experiment_id":"dcppA-hindcast",
             "min_number_yrs_per_sim":"5",
@@ -1212,7 +1212,7 @@
                 "BGC"
             ],
             "description":"A4.1 Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum, but with no information from the future. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
-            "end_year":"5 - 10 years after start year)",
+            "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized based on observations but without using knowledge of subsequent historical forcing",
             "experiment_id":"dcppA-hindcast-niff",
             "min_number_yrs_per_sim":"5",
@@ -1234,7 +1234,7 @@
                 "BGC"
             ],
             "description":"A4.2 Hindcasts initialized from historical climate simulations as in DCPP-A2.2, but with no information from the future. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
-            "end_year":"5 - 10 years after start year)",
+            "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized from historical climate simulation but without using knowledge of subsequent historical forcing",
             "experiment_id":"dcppA-historical-niff",
             "min_number_yrs_per_sim":"5",
@@ -6184,10 +6184,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 14:56:46 2017 -0800",
+        "creation_date":"Tue Mar 7 14:56:58 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (31; g5765920)",
+        "latest_tag_point":"3.2.2 (45; g73ce674)",
         "note":"Update experiment_id from external xlsx",
-        "previous_commit":"26122d9d4ea928136ef1d8025e5a1921cee157db"
+        "previous_commit":"5895c3f4cd9e3cfef70f3e059d688615463a597d"
     }
 }

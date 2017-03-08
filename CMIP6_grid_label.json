@@ -47,19 +47,11 @@
         "grz"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Wed Mar 8 08:01:32 2017 -0800",
+        "author":"merge: a1d1265 415a991",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (194; gc3553ed)",
-        "note":"Update experiment_id from external xlsx",
-        "previous_commit":"d14ebeefdc3e5f33b7d0eb1d19f3572a72ec17d9"
-=======
-        "creation_date":"Tue Mar 7 20:45:18 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (46; g5a92b98)",
-        "note":"Register source_ids MIROC-ES and NICAM variants",
-        "previous_commit":"c6bad8285b279bac697248d0a1fdbc384f91d8d6"
->>>>>>> master
+        "latest_tag_point":"note: Update experiment_id from external xlsx",
+        "note":"Date: Wed Mar 8 08:04:56 2017 -0800",
+        "previous_commit":"597f000a54ce57bcd1973eb1a296144039b47872"
     }
 }

@@ -642,7 +642,7 @@
         },
         "NICAM16-7S":{
             "aerosol":"Prescribed MACv2-SP",
-            "atmosphere":"NICAM.16 (56km @@Add some grid info: cubic conformal/unstructured grid?@@; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)",
+            "atmosphere":"NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "Registered"
@@ -662,7 +662,7 @@
         },
         "NICAM16-8S":{
             "aerosol":"Prescribed MACv2-SP",
-            "atmosphere":"NICAM.16 (28km @@Add some grid info: cubic conformal/unstructured grid?@@; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)",
+            "atmosphere":"NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "Registered"
@@ -682,7 +682,7 @@
         },
         "NICAM16-9D-L78":{
             "aerosol":"Prescribed MACv2-SP",
-            "atmosphere":"NICAM.16 (14km @@Add some grid info: cubic conformal/unstructured grid?@@; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)",
+            "atmosphere":"NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "Registered"
@@ -702,7 +702,7 @@
         },
         "NICAM16-9S":{
             "aerosol":"Prescribed MACv2-SP",
-            "atmosphere":"NICAM.16 (14km @@Add some grid info: cubic conformal/unstructured grid?@@; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)",
+            "atmosphere":"NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "Registered"
@@ -925,10 +925,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 10:28:58 2017 -0800",
+        "creation_date":"Tue Mar 7 10:29:04 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (27; g5b61e9f)",
+        "latest_tag_point":"3.2.2 (40; g6e12f86)",
         "note":"Register source_ids MIROC-ES and NICAM variants",
-        "previous_commit":"3d485bdfd8806cb40123d6453aac6e7af1665492"
+        "previous_commit":"0ad6e91579b0471e270d68cd53c18132fe8c026d"
     }
 }

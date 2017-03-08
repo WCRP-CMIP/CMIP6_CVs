@@ -48,11 +48,11 @@
         "grids"
     ],
     "version_metadata":{
-        "author":"merge: a1d1265 415a991",
-        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Wed Mar 8 08:04:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: Update experiment_id from external xlsx",
-        "note":"Date: Wed Mar 8 08:04:56 2017 -0800",
-        "previous_commit":"597f000a54ce57bcd1973eb1a296144039b47872"
+        "latest_tag_point":"3.2.2 (233; ga4a04dd)",
+        "note":"Update experiment_id from external xlsx",
+        "previous_commit":"1992e559af72fb5bd8a90265e0d2d61d47e23562"
     }
 }

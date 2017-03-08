@@ -277,7 +277,7 @@ for count in range(4,len(data)):
                 pass
             elif value == 'no parent':
                 pass
-            elif 'no parent' in value:
+            elif 'no parent,' in value:
                 value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
                 pass
             else:

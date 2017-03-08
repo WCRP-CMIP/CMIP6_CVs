@@ -200,6 +200,7 @@ masterTargets = [
     'required_global_attributes',
     'source_id',
     'source_type',
+    'sub_experiment_id',
     'table_id'
 ]
 
@@ -551,6 +552,14 @@ source_type = [
     'RAD',
     'SLAB'
 ]
+
+#%% Sub experiment ids
+sub_experiment_id = {}
+sub_experiment_id['None'] = 'None'
+sub_experiment_id['s1910'] = 'initialized near end of year 1910'
+sub_experiment_id['s1950'] = 'initialized near end of year 1950'
+for yr in range(1960,2030):
+    sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])
 
 #%% Table ids
 table_id = [

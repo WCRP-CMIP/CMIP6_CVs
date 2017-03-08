@@ -21,10 +21,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 09:59:12 2017 -0800",
+        "creation_date":"Tue Mar 7 20:45:18 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (16; gdd41aff)",
-        "note":"Register source_id EMAC-2-53-Vol",
-        "previous_commit":"a57be5272ae5a5b73a86edf876a92de80a492dcf"
+        "latest_tag_point":"3.2.2 (43; gf840493)",
+        "note":"Register source_ids MIROC-ES and NICAM variants",
+        "previous_commit":"835e69f25267f44391feb7eb4ed7941b3b607f65"
     }
 }

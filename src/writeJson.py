@@ -130,6 +130,7 @@ PJD  3 Mar 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/
 PJD  3 Mar 2017    - Register source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
 PJD  3 Mar 2017    - Update all source_id cohort entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/230
 PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
+PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://github.com/WCRP-CMIP/CMIP6_CVs/pull/238
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -150,7 +151,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id EMAC-2-53-Vol\"'
+commitMessage = '\"Register source_ids MIROC-ES and NICAM variants\"'
 
 #%% Define functions
 # Get repo metadata
@@ -430,21 +431,97 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['EMAC-2-53-Vol'] = {}
-source_id['EMAC-2-53-Vol']['aerosol'] = 'gmxe 2.2.x'
-source_id['EMAC-2-53-Vol']['atmosphere'] = 'ECHAM5.3.2 (modified; spectral T42; 128 x 64 longitude/latitude; 90 levels; top level 0.001 hPa)'
-source_id['EMAC-2-53-Vol']['atmospheric_chemistry'] = 'MECCA 3.8.x'
-source_id['EMAC-2-53-Vol']['cohort'] = ['Registered']
-source_id['EMAC-2-53-Vol']['institution_id'] = ['MESSy-Consortium']
-source_id['EMAC-2-53-Vol']['label'] = 'EMAC-2-53-Vol'
-source_id['EMAC-2-53-Vol']['label_extended'] = 'EMAC-2-53-x-Vol'
-source_id['EMAC-2-53-Vol']['land_ice'] = 'None'
-source_id['EMAC-2-53-Vol']['land_surface'] = 'same as Atmosphere'
-source_id['EMAC-2-53-Vol']['ocean'] = 'MPIOM 1.3.0-beta (bipolar GR1.5; approximately 1.5deg reducing toward the poles, 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)'
-source_id['EMAC-2-53-Vol']['ocean_biogeochemistry'] = 'None'
-source_id['EMAC-2-53-Vol']['release_year'] = '2017'
-source_id['EMAC-2-53-Vol']['sea_ice'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
-source_id['EMAC-2-53-Vol']['source_id'] = 'EMAC-2-53-Vol'
+source_id['MIROC-ES2H'] = {}
+source_id['MIROC-ES2H']['aerosol'] = 'SPRINTARS6.0'
+source_id['MIROC-ES2H']['atmosphere'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
+source_id['MIROC-ES2H']['atmospheric_chemistry'] = 'CHASER4.0'
+source_id['MIROC-ES2H']['cohort'] = ['Registered']
+source_id['MIROC-ES2H']['institution_id'] = ['MIROC']
+source_id['MIROC-ES2H']['label'] = 'MIROC-ES2H'
+source_id['MIROC-ES2H']['label_extended'] = 'MIROC-ES2H'
+source_id['MIROC-ES2H']['land_ice'] = 'None'
+source_id['MIROC-ES2H']['land_surface'] = 'MATSIRO6.0+VISIT-e ver.1.0'
+source_id['MIROC-ES2H']['ocean'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
+source_id['MIROC-ES2H']['ocean_biogeochemistry'] = 'OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles'
+source_id['MIROC-ES2H']['release_year'] = '2017'
+source_id['MIROC-ES2H']['sea_ice'] = 'COCO4.9'
+source_id['MIROC-ES2H']['source_id'] = 'MIROC-ES2H'
+source_id['MIROC-ES2L'] = {}
+source_id['MIROC-ES2L']['aerosol'] = 'SPRINTARS6.0'
+source_id['MIROC-ES2L']['atmosphere'] = 'CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)'
+source_id['MIROC-ES2L']['atmospheric_chemistry'] = 'None'
+source_id['MIROC-ES2L']['cohort'] = ['Registered']
+source_id['MIROC-ES2L']['institution_id'] = ['MIROC']
+source_id['MIROC-ES2L']['label'] = 'MIROC-ES2L'
+source_id['MIROC-ES2L']['label_extended'] = 'MIROC-ES2L'
+source_id['MIROC-ES2L']['land_ice'] = 'None'
+source_id['MIROC-ES2L']['land_surface'] = 'MATSIRO6.0+VISIT-e ver.1.0'
+source_id['MIROC-ES2L']['ocean'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
+source_id['MIROC-ES2L']['ocean_biogeochemistry'] = 'OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles'
+source_id['MIROC-ES2L']['release_year'] = '2017'
+source_id['MIROC-ES2L']['sea_ice'] = 'COCO4.9'
+source_id['MIROC-ES2L']['source_id'] = 'MIROC-ES2L'
+source_id['NICAM16-7S'] = {}
+source_id['NICAM16-7S']['aerosol'] = 'Prescribed MACv2-SP'
+source_id['NICAM16-7S']['atmosphere'] = 'NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)'
+source_id['NICAM16-7S']['atmospheric_chemistry'] = 'None'
+source_id['NICAM16-7S']['cohort'] = ['Registered']
+source_id['NICAM16-7S']['institution_id'] = ['MIROC']
+source_id['NICAM16-7S']['label'] = 'NICAM16-7S'
+source_id['NICAM16-7S']['label_extended'] = 'NICAM.16 gl07-L38 with NSW6'
+source_id['NICAM16-7S']['land_ice'] = 'None'
+source_id['NICAM16-7S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
+source_id['NICAM16-7S']['ocean'] = 'None'
+source_id['NICAM16-7S']['ocean_biogeochemistry'] = 'None'
+source_id['NICAM16-7S']['release_year'] = '2017'
+source_id['NICAM16-7S']['sea_ice'] = 'Fixed'
+source_id['NICAM16-7S']['source_id'] = 'NICAM16-7S'
+source_id['NICAM16-8S'] = {}
+source_id['NICAM16-8S']['aerosol'] = 'Prescribed MACv2-SP'
+source_id['NICAM16-8S']['atmosphere'] = 'NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)'
+source_id['NICAM16-8S']['atmospheric_chemistry'] = 'None'
+source_id['NICAM16-8S']['cohort'] = ['Registered']
+source_id['NICAM16-8S']['institution_id'] = ['MIROC']
+source_id['NICAM16-8S']['label'] = 'NICAM16-8S'
+source_id['NICAM16-8S']['label_extended'] = 'NICAM.16 gl08-L38 with NSW6'
+source_id['NICAM16-8S']['land_ice'] = 'None'
+source_id['NICAM16-8S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
+source_id['NICAM16-8S']['ocean'] = 'None'
+source_id['NICAM16-8S']['ocean_biogeochemistry'] = 'None'
+source_id['NICAM16-8S']['release_year'] = '2017'
+source_id['NICAM16-8S']['sea_ice'] = 'Fixed'
+source_id['NICAM16-8S']['source_id'] = 'NICAM16-8S'
+source_id['NICAM16-9S'] = {}
+source_id['NICAM16-9S']['aerosol'] = 'Prescribed MACv2-SP'
+source_id['NICAM16-9S']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)'
+source_id['NICAM16-9S']['atmospheric_chemistry'] = 'None'
+source_id['NICAM16-9S']['cohort'] = ['Registered']
+source_id['NICAM16-9S']['institution_id'] = ['MIROC']
+source_id['NICAM16-9S']['label'] = 'NICAM16-9S'
+source_id['NICAM16-9S']['label_extended'] = 'NICAM.16 gl09-L38 with NSW6'
+source_id['NICAM16-9S']['land_ice'] = 'None'
+source_id['NICAM16-9S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
+source_id['NICAM16-9S']['ocean'] = 'None'
+source_id['NICAM16-9S']['ocean_biogeochemistry'] = 'None'
+source_id['NICAM16-9S']['release_year'] = '2017'
+source_id['NICAM16-9S']['sea_ice'] = 'Fixed'
+source_id['NICAM16-9S']['source_id'] = 'NICAM16-9S'
+source_id['NICAM16-9D-L78'] = {}
+source_id['NICAM16-9D-L78']['aerosol'] = 'Prescribed MACv2-SP'
+source_id['NICAM16-9D-L78']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)'
+source_id['NICAM16-9D-L78']['atmospheric_chemistry'] = 'None'
+source_id['NICAM16-9D-L78']['cohort'] = ['Registered']
+source_id['NICAM16-9D-L78']['institution_id'] = ['MIROC']
+source_id['NICAM16-9D-L78']['label'] = 'NICAM16-9D-L78'
+source_id['NICAM16-9D-L78']['label_extended'] = 'NICAM.16 gl09-L78 with NDW6'
+source_id['NICAM16-9D-L78']['land_ice'] = 'None'
+source_id['NICAM16-9D-L78']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
+source_id['NICAM16-9D-L78']['ocean'] = 'None'
+source_id['NICAM16-9D-L78']['ocean_biogeochemistry'] = 'None'
+source_id['NICAM16-9D-L78']['release_year'] = '2017'
+source_id['NICAM16-9D-L78']['sea_ice'] = 'Fixed'
+source_id['NICAM16-9D-L78']['source_id'] = 'NICAM16-9D-L78'
+
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

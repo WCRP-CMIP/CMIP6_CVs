@@ -221,20 +221,20 @@ $(document).ready( function () {
 <td>HAMOCC</td>
 <td>thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model</td>
 </tr>
-<tr><td>NorESM2-LM</td>
-<td>NCC</td>
+<tr><td>NICAM16-7S</td>
+<td>MIROC</td>
 <td>2017</td>
-<td>CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)</td>
-<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
-<td>OsloAero</td>
-<td>OsloChemSimp</td>
+<td>NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)</td>
+<td>None</td>
+<td>Prescribed MACv2-SP</td>
+<td>None</td>
 <td>Registered</td>
-<td>NorESM2-LM</td>
-<td>NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)</td>
-<td>CISM</td>
-<td>CLM</td>
-<td>HAMOCC</td>
-<td>CICE</td>
+<td>NICAM16-7S</td>
+<td>NICAM.16 gl07-L38 with NSW6</td>
+<td>None</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>None</td>
+<td>Fixed</td>
 </tr>
 <tr><td>CIESM</td>
 <td>THU</td>
@@ -250,6 +250,36 @@ $(document).ready( function () {
 <td>CIESM-LM (modified CLM4.5)</td>
 <td>None</td>
 <td>CICE4</td>
+</tr>
+<tr><td>NorESM2-LM</td>
+<td>NCC</td>
+<td>2017</td>
+<td>CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>Registered</td>
+<td>NorESM2-LM</td>
+<td>NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)</td>
+<td>CISM</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>NICAM16-9D-L78</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)</td>
+<td>None</td>
+<td>Prescribed MACv2-SP</td>
+<td>None</td>
+<td>Registered</td>
+<td>NICAM16-9D-L78</td>
+<td>NICAM.16 gl09-L78 with NDW6</td>
+<td>None</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>None</td>
+<td>Fixed</td>
 </tr>
 <tr><td>EC-Earth3-AerChem</td>
 <td>EC-Earth-Consortium</td>
@@ -295,6 +325,21 @@ $(document).ready( function () {
 <td>HTESSEL (land surface scheme built in IFS)</td>
 <td>None</td>
 <td>LIM3</td>
+</tr>
+<tr><td>NICAM16-9S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)</td>
+<td>None</td>
+<td>Prescribed MACv2-SP</td>
+<td>None</td>
+<td>Registered</td>
+<td>NICAM16-9S</td>
+<td>NICAM.16 gl09-L38 with NSW6</td>
+<td>None</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>None</td>
+<td>Fixed</td>
 </tr>
 <tr><td>EC-Earth3-LR</td>
 <td>EC-Earth-Consortium</td>
@@ -581,6 +626,21 @@ $(document).ready( function () {
 <td>None</td>
 <td>COCO4.9</td>
 </tr>
+<tr><td>NICAM16-8S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)</td>
+<td>None</td>
+<td>Prescribed MACv2-SP</td>
+<td>None</td>
+<td>Registered</td>
+<td>NICAM16-8S</td>
+<td>NICAM.16 gl08-L38 with NSW6</td>
+<td>None</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>None</td>
+<td>Fixed</td>
+</tr>
 <tr><td>IITM-ESM</td>
 <td>CCCR-IITM</td>
 <td>2015</td>
@@ -626,6 +686,21 @@ $(document).ready( function () {
 <td>None</td>
 <td>thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model</td>
 </tr>
+<tr><td>MIROC-ES2H</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)</td>
+<td>COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)</td>
+<td>SPRINTARS6.0</td>
+<td>CHASER4.0</td>
+<td>Registered</td>
+<td>MIROC-ES2H</td>
+<td>MIROC-ES2H</td>
+<td>None</td>
+<td>MATSIRO6.0+VISIT-e ver.1.0</td>
+<td>OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles</td>
+<td>COCO4.9</td>
+</tr>
 <tr><td>NorESM2-LME</td>
 <td>NCC</td>
 <td>2017</td>
@@ -640,6 +715,21 @@ $(document).ready( function () {
 <td>CLM</td>
 <td>HAMOCC</td>
 <td>CICE</td>
+</tr>
+<tr><td>MIROC-ES2L</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)</td>
+<td>COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)</td>
+<td>SPRINTARS6.0</td>
+<td>None</td>
+<td>Registered</td>
+<td>MIROC-ES2L</td>
+<td>MIROC-ES2L</td>
+<td>None</td>
+<td>MATSIRO6.0+VISIT-e ver.1.0</td>
+<td>OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles</td>
+<td>COCO4.9</td>
 </tr>
 </table>
 

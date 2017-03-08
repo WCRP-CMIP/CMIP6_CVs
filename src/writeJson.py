@@ -131,6 +131,7 @@ PJD  3 Mar 2017    - Register source_id MIROC6 https://github.com/WCRP-CMIP/CMIP
 PJD  3 Mar 2017    - Update all source_id cohort entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/230
 PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
 PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://github.com/WCRP-CMIP/CMIP6_CVs/pull/238
+PJD  7 Mar 2017    - Update experiment_id from external xlsx https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1, 61, 136, 137
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -148,10 +149,14 @@ import ssl
 import subprocess
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
+import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
+# pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and unidecode ('conda install unidecode')
+from string import replace
+from unidecode import unidecode
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_ids MIROC-ES and NICAM variants\"'
+commitMessage = '\"Update experiment_id from external xlsx\"'
 
 #%% Define functions
 # Get repo metadata
@@ -196,6 +201,7 @@ masterTargets = [
     'required_global_attributes',
     'source_id',
     'source_type',
+    'sub_experiment_id',
     'table_id'
 ]
 
@@ -224,11 +230,79 @@ activity_id = [
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
       ] ;
-experiment_id = readJsonCreateDict(tmp)
-experiment_id = experiment_id.get('experiment_id')
-experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
+#experiment_id = readJsonCreateDict(tmp)
+#experiment_id = experiment_id.get('experiment_id')
+#experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+# xlsx import
+# Fields
+# Alpha/json order, xlsx column, value
+# 1  0  experiment_id string
+# 2  1  activity_id list
+# 3  8  additional_allowed_model_components list
+# 4  13 description string
+# 5  10 end_year string
+# 6  2  experiment string
+# 7  11 min_number_yrs_per_sim string
+# 8  12 parent_activity_id list
+# 9  6  parent_experiment_id list
+# 10 7  required_model_components list
+# 11 9  start_year string
+# 12 5  sub_experiment string
+# 13 4  sub_experiment_id string
+# 14 3  tier string
+
+os.chdir('/sync/git/CMIP6_CVs/src')
+inFile = '170307_CMIP6_expt_list.xlsx'
+data = pyx.get_data(inFile)
+data = data['Sheet1']
+headers = data[3]
+experiment_id = {}
+for count in range(4,len(data)):
+    if data[count] == []:
+        #print count,'blank field'
+        continue
+    row = data[count]
+    key = row[0] ; #replace(row[0],'_ ','_')
+    experiment_id[key] = {}
+    for count2,entry in enumerate(headers):
+        if count2 == 5:
+            continue ; # Skip sub_experiment
+        entry = replace(entry,'_ ','_') ; # clean up spaces
+        entry = replace(entry,' ', '_') ; # replace spaces with underscores
+        if count2 >= len(row):
+            experiment_id[key][entry] = ''
+            continue
+        value = row[count2]
+        if count2 in [1,4,6,7,8,12]:
+            if value == None:
+                pass
+            elif value == 'no parent':
+                pass
+            elif 'no parent,' in value:
+                value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
+                pass
+            else:
+                value = replace(value,',','') ; # remove ','
+                value = value.split() ; # Change type to list
+                #print value
+        if type(value) == long:
+            experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
+        elif type(value) == list:
+            experiment_id[key][entry] = value
+        elif value == None:
+            experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
+        else:
+            value = replace(value,'    ',' ') ; # replace whitespace
+            value = replace(value,'   ',' ') ; # replace whitespace
+            value = replace(value,'  ',' ') ; # replace whitespace
+            experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+            try:
+                unidecode(value)
+            except:
+                print count,count2,key,entry,value
+del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -431,97 +505,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['MIROC-ES2H'] = {}
-source_id['MIROC-ES2H']['aerosol'] = 'SPRINTARS6.0'
-source_id['MIROC-ES2H']['atmosphere'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
-source_id['MIROC-ES2H']['atmospheric_chemistry'] = 'CHASER4.0'
-source_id['MIROC-ES2H']['cohort'] = ['Registered']
-source_id['MIROC-ES2H']['institution_id'] = ['MIROC']
-source_id['MIROC-ES2H']['label'] = 'MIROC-ES2H'
-source_id['MIROC-ES2H']['label_extended'] = 'MIROC-ES2H'
-source_id['MIROC-ES2H']['land_ice'] = 'None'
-source_id['MIROC-ES2H']['land_surface'] = 'MATSIRO6.0+VISIT-e ver.1.0'
-source_id['MIROC-ES2H']['ocean'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
-source_id['MIROC-ES2H']['ocean_biogeochemistry'] = 'OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles'
-source_id['MIROC-ES2H']['release_year'] = '2017'
-source_id['MIROC-ES2H']['sea_ice'] = 'COCO4.9'
-source_id['MIROC-ES2H']['source_id'] = 'MIROC-ES2H'
-source_id['MIROC-ES2L'] = {}
-source_id['MIROC-ES2L']['aerosol'] = 'SPRINTARS6.0'
-source_id['MIROC-ES2L']['atmosphere'] = 'CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)'
-source_id['MIROC-ES2L']['atmospheric_chemistry'] = 'None'
-source_id['MIROC-ES2L']['cohort'] = ['Registered']
-source_id['MIROC-ES2L']['institution_id'] = ['MIROC']
-source_id['MIROC-ES2L']['label'] = 'MIROC-ES2L'
-source_id['MIROC-ES2L']['label_extended'] = 'MIROC-ES2L'
-source_id['MIROC-ES2L']['land_ice'] = 'None'
-source_id['MIROC-ES2L']['land_surface'] = 'MATSIRO6.0+VISIT-e ver.1.0'
-source_id['MIROC-ES2L']['ocean'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
-source_id['MIROC-ES2L']['ocean_biogeochemistry'] = 'OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles'
-source_id['MIROC-ES2L']['release_year'] = '2017'
-source_id['MIROC-ES2L']['sea_ice'] = 'COCO4.9'
-source_id['MIROC-ES2L']['source_id'] = 'MIROC-ES2L'
-source_id['NICAM16-7S'] = {}
-source_id['NICAM16-7S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-7S']['atmosphere'] = 'NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)'
-source_id['NICAM16-7S']['atmospheric_chemistry'] = 'None'
-source_id['NICAM16-7S']['cohort'] = ['Registered']
-source_id['NICAM16-7S']['institution_id'] = ['MIROC']
-source_id['NICAM16-7S']['label'] = 'NICAM16-7S'
-source_id['NICAM16-7S']['label_extended'] = 'NICAM.16 gl07-L38 with NSW6'
-source_id['NICAM16-7S']['land_ice'] = 'None'
-source_id['NICAM16-7S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
-source_id['NICAM16-7S']['ocean'] = 'None'
-source_id['NICAM16-7S']['ocean_biogeochemistry'] = 'None'
-source_id['NICAM16-7S']['release_year'] = '2017'
-source_id['NICAM16-7S']['sea_ice'] = 'Fixed'
-source_id['NICAM16-7S']['source_id'] = 'NICAM16-7S'
-source_id['NICAM16-8S'] = {}
-source_id['NICAM16-8S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-8S']['atmosphere'] = 'NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)'
-source_id['NICAM16-8S']['atmospheric_chemistry'] = 'None'
-source_id['NICAM16-8S']['cohort'] = ['Registered']
-source_id['NICAM16-8S']['institution_id'] = ['MIROC']
-source_id['NICAM16-8S']['label'] = 'NICAM16-8S'
-source_id['NICAM16-8S']['label_extended'] = 'NICAM.16 gl08-L38 with NSW6'
-source_id['NICAM16-8S']['land_ice'] = 'None'
-source_id['NICAM16-8S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
-source_id['NICAM16-8S']['ocean'] = 'None'
-source_id['NICAM16-8S']['ocean_biogeochemistry'] = 'None'
-source_id['NICAM16-8S']['release_year'] = '2017'
-source_id['NICAM16-8S']['sea_ice'] = 'Fixed'
-source_id['NICAM16-8S']['source_id'] = 'NICAM16-8S'
-source_id['NICAM16-9S'] = {}
-source_id['NICAM16-9S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-9S']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)'
-source_id['NICAM16-9S']['atmospheric_chemistry'] = 'None'
-source_id['NICAM16-9S']['cohort'] = ['Registered']
-source_id['NICAM16-9S']['institution_id'] = ['MIROC']
-source_id['NICAM16-9S']['label'] = 'NICAM16-9S'
-source_id['NICAM16-9S']['label_extended'] = 'NICAM.16 gl09-L38 with NSW6'
-source_id['NICAM16-9S']['land_ice'] = 'None'
-source_id['NICAM16-9S']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
-source_id['NICAM16-9S']['ocean'] = 'None'
-source_id['NICAM16-9S']['ocean_biogeochemistry'] = 'None'
-source_id['NICAM16-9S']['release_year'] = '2017'
-source_id['NICAM16-9S']['sea_ice'] = 'Fixed'
-source_id['NICAM16-9S']['source_id'] = 'NICAM16-9S'
-source_id['NICAM16-9D-L78'] = {}
-source_id['NICAM16-9D-L78']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-9D-L78']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)'
-source_id['NICAM16-9D-L78']['atmospheric_chemistry'] = 'None'
-source_id['NICAM16-9D-L78']['cohort'] = ['Registered']
-source_id['NICAM16-9D-L78']['institution_id'] = ['MIROC']
-source_id['NICAM16-9D-L78']['label'] = 'NICAM16-9D-L78'
-source_id['NICAM16-9D-L78']['label_extended'] = 'NICAM.16 gl09-L78 with NDW6'
-source_id['NICAM16-9D-L78']['land_ice'] = 'None'
-source_id['NICAM16-9D-L78']['land_surface'] = 'MATSIRO6 (w/o MOSAIC)'
-source_id['NICAM16-9D-L78']['ocean'] = 'None'
-source_id['NICAM16-9D-L78']['ocean_biogeochemistry'] = 'None'
-source_id['NICAM16-9D-L78']['release_year'] = '2017'
-source_id['NICAM16-9D-L78']['sea_ice'] = 'Fixed'
-source_id['NICAM16-9D-L78']['source_id'] = 'NICAM16-9D-L78'
-
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'
@@ -572,6 +555,14 @@ source_type = [
     'RAD',
     'SLAB'
 ]
+
+#%% Sub experiment ids
+sub_experiment_id = {}
+sub_experiment_id['none'] = 'none'
+sub_experiment_id['s1910'] = 'initialized near end of year 1910'
+sub_experiment_id['s1950'] = 'initialized near end of year 1950'
+for yr in range(1960,2030):
+    sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])
 
 #%% Table ids
 table_id = [
@@ -668,6 +659,7 @@ for jsonName in masterTargets:
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     versionInfo = getFileHistory(outFileTest)
+    #versionInfo = None ; # Used to add a new file
     if versionInfo == None:
         versionInfo = {}
         versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'

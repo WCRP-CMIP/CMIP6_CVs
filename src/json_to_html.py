@@ -39,12 +39,12 @@ $(document).ready( function () {
 <table id="table_id" class="display">"""
 
 dictOrder = [
-'experiment_id','activity_id','description','start_year','end_year','sub_experiment','parent_experiment_id',
+'experiment_id','activity_id','description','start_year','end_year','parent_experiment_id',
 'parent_activity_id','experiment','additional_allowed_model_components','required_model_components','tier',
 'min_number_yrs_per_sim','sub_experiment_id'
 ]
 dictOrderK = [
-'activity_id','experiment','tier','sub_experiment_id','sub_experiment','parent_experiment_id',
+'activity_id','experiment','tier','sub_experiment_id','parent_experiment_id',
 'required_model_components','additional_allowed_model_components','start_year','end_year',
 'min_number_yrs_per_sim','parent_activity_id','description'
 ]

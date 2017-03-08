@@ -49,10 +49,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 20:45:19 2017 -0800",
+        "creation_date":"Wed Mar 8 11:22:49 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (55; ge3d9c15)",
-        "note":"Register source_ids MIROC-ES and NICAM variants",
-        "previous_commit":"f840493b3dd8ab2cf1cba33ebb490dcbebdf1f16"
+        "latest_tag_point":"3.2.2 (373; gc6de83e)",
+        "note":"Update experiment_id from external xlsx",
+        "previous_commit":"378f9c1c5ebee00b736d735a1678f083ddd38de5"
     }
 }

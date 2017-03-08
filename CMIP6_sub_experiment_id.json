@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Mar 7 17:39:52 2017 -0800",
+        "creation_date":"Tue Mar 7 17:39:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (91; g490ff61)",
-        "note":"Adding sub_experiment_id.json to repo",
-        "previous_commit":"560b071a6490a134b40ab3123106e152d725b6ad"
+        "latest_tag_point":"3.2.2 (105; g82620e1)",
+        "note":"Update experiment_id from external xlsx",
+        "previous_commit":"8d661ae15b3c106c69cdf9235a5321a71b0805a8"
     }
 }

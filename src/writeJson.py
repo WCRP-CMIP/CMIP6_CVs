@@ -274,12 +274,12 @@ for count in range(4,len(data)):
         value = row[count2]
         if count2 in [1,6,7,8,12]:
             if value == None:
-                continue
-            if value == 'no parent':
-                continue
+                pass
+            elif value == 'no parent':
+                pass
             elif 'no parent' in value:
                 value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
-                continue
+                pass
             else:
                 value = replace(value,',','') ; # remove ','
                 value = value.split() ; # Change type to list

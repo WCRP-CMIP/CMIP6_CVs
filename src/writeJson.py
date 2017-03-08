@@ -655,8 +655,8 @@ for jsonName in masterTargets:
     # Get repo version/metadata
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
-    #versionInfo = getFileHistory(outFileTest)
-    versionInfo = None
+    versionInfo = getFileHistory(outFileTest)
+    #versionInfo = None ; # Used to add a new file
     if versionInfo == None:
         versionInfo = {}
         versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'

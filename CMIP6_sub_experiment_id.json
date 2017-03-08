@@ -1,6 +1,6 @@
 {
     "sub_experiment_id":{
-        "None":"None",
+        "none":"none",
         "s1910":"initialized near end of year 1910",
         "s1950":"initialized near end of year 1950",
         "s1960":"initialized near end of year 1960",
@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 8 08:06:17 2017 -0800",
+        "creation_date":"Wed Mar 8 08:06:22 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (260; g6399e99)",
+        "latest_tag_point":"3.2.2 (274; g71dcd25)",
         "note":"Update experiment_id from external xlsx",
-        "previous_commit":"2c0b56b92045a772ae0b7423a156a7743f8d99b2"
+        "previous_commit":"cef8dbc1a37c255363e9bb6e78c3ab48f193aa86"
     }
 }

@@ -463,7 +463,7 @@ source_id['MIROC-ES2L']['sea_ice'] = 'COCO4.9'
 source_id['MIROC-ES2L']['source_id'] = 'MIROC-ES2L'
 source_id['NICAM16-7S'] = {}
 source_id['NICAM16-7S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-7S']['atmosphere'] = 'NICAM.16 (56km @@Add some grid info: cubic conformal/unstructured grid?@@; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)'
+source_id['NICAM16-7S']['atmosphere'] = 'NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)'
 source_id['NICAM16-7S']['atmospheric_chemistry'] = 'None'
 source_id['NICAM16-7S']['cohort'] = ['Registered']
 source_id['NICAM16-7S']['institution_id'] = ['MIROC']
@@ -478,7 +478,7 @@ source_id['NICAM16-7S']['sea_ice'] = 'Fixed'
 source_id['NICAM16-7S']['source_id'] = 'NICAM16-7S'
 source_id['NICAM16-8S'] = {}
 source_id['NICAM16-8S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-8S']['atmosphere'] = 'NICAM.16 (28km @@Add some grid info: cubic conformal/unstructured grid?@@; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)'
+source_id['NICAM16-8S']['atmosphere'] = 'NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)'
 source_id['NICAM16-8S']['atmospheric_chemistry'] = 'None'
 source_id['NICAM16-8S']['cohort'] = ['Registered']
 source_id['NICAM16-8S']['institution_id'] = ['MIROC']
@@ -493,7 +493,7 @@ source_id['NICAM16-8S']['sea_ice'] = 'Fixed'
 source_id['NICAM16-8S']['source_id'] = 'NICAM16-8S'
 source_id['NICAM16-9S'] = {}
 source_id['NICAM16-9S']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-9S']['atmosphere'] = 'NICAM.16 (14km @@Add some grid info: cubic conformal/unstructured grid?@@; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)'
+source_id['NICAM16-9S']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)'
 source_id['NICAM16-9S']['atmospheric_chemistry'] = 'None'
 source_id['NICAM16-9S']['cohort'] = ['Registered']
 source_id['NICAM16-9S']['institution_id'] = ['MIROC']
@@ -508,7 +508,7 @@ source_id['NICAM16-9S']['sea_ice'] = 'Fixed'
 source_id['NICAM16-9S']['source_id'] = 'NICAM16-9S'
 source_id['NICAM16-9D-L78'] = {}
 source_id['NICAM16-9D-L78']['aerosol'] = 'Prescribed MACv2-SP'
-source_id['NICAM16-9D-L78']['atmosphere'] = 'NICAM.16 (14km @@Add some grid info: cubic conformal/unstructured grid?@@; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)'
+source_id['NICAM16-9D-L78']['atmosphere'] = 'NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)'
 source_id['NICAM16-9D-L78']['atmospheric_chemistry'] = 'None'
 source_id['NICAM16-9D-L78']['cohort'] = ['Registered']
 source_id['NICAM16-9D-L78']['institution_id'] = ['MIROC']

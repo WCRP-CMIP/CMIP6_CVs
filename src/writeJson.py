@@ -267,13 +267,15 @@ for count in range(4,len(data)):
     key = row[0] ; #replace(row[0],'_ ','_')
     experiment_id[key] = {}
     for count2,entry in enumerate(headers):
+        if count2 == 5:
+            continue ; # Skip sub_experiment
         entry = replace(entry,'_ ','_') ; # clean up spaces
         entry = replace(entry,' ', '_') ; # replace spaces with underscores
         if count2 >= len(row):
             experiment_id[key][entry] = ''
             continue
         value = row[count2]
-        if count2 in [1,6,7,8,12]:
+        if count2 in [1,4,6,7,8,12]:
             if value == None:
                 pass
             elif value == 'no parent':
@@ -290,7 +292,7 @@ for count in range(4,len(data)):
         elif type(value) == list:
             experiment_id[key][entry] = value
         elif value == None:
-            experiment_id[key][entry] = 'None'
+            experiment_id[key][entry] = 'none'
         else:
             value = replace(value,'    ',' ') ; # replace whitespace
             value = replace(value,'   ',' ') ; # replace whitespace
@@ -556,7 +558,7 @@ source_type = [
 
 #%% Sub experiment ids
 sub_experiment_id = {}
-sub_experiment_id['None'] = 'None'
+sub_experiment_id['none'] = 'none'
 sub_experiment_id['s1910'] = 'initialized near end of year 1910'
 sub_experiment_id['s1950'] = 'initialized near end of year 1950'
 for yr in range(1960,2030):

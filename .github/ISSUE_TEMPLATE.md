@@ -54,7 +54,7 @@ Example:
     sea_ice = CICE4.1
     source_id = ACCESS-1-0
     
-The entries atmosphere, institution_id, label, label_extended and source_id are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
+The entries institution_id, label, label_extended and source_id are required; the additional entries are "free text".  Please provide as much information as you think would be useful in identifying your model, but avoid details you are not certain are correct.
 
 *********************************************
 ## Raising other issues

@@ -21,7 +21,7 @@
         "MRI":"Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan",
         "NASA-GISS":"Goddard Institute for Space Studies, New York, NY 10025, USA",
         "NCAR":"National Center for Atmospheric Research, Boulder, CO 80307, USA",
-        "NCC":"NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349),MET-Norway (Norwegian Meteorological Institute, Oslo 0313),NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006),NILU (Norwegian Institute for Air Research, Kjeller 2027),UiB (University of Bergen, Bergen 5007),UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway",
+        "NCC":"NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway",
         "NERC":"Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK",
         "NIMS-KMA":"National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea",
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
@@ -32,10 +32,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 8 11:22:49 2017 -0800",
+        "creation_date":"Tue Mar 14 10:08:00 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (364; g96d7666)",
-        "note":"Update experiment_id from external xlsx",
-        "previous_commit":"f04a3a33c06853531b7728ef6d5f00373b9038be"
+        "latest_tag_point":"3.2.2 (24; g5133883)",
+        "note":"Update source_id ACCESS-1-0 template; format tweaks",
+        "previous_commit":"e8ebb91198caae99106463ff81ed5871d148fc6a"
     }
 }

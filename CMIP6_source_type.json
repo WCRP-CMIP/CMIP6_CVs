@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 8 11:22:49 2017 -0800",
+        "creation_date":"Wed Mar 8 11:27:19 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (371; gbb727a7)",
-        "note":"Update experiment_id from external xlsx",
-        "previous_commit":"145547bde8ad72706a072a1252ee03a9f844851b"
+        "latest_tag_point":"note: ",
+        "note":"Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)",
+        "previous_commit":"af9202b7e26d357aa988c1741b7a25f90fdedbfd"
     }
 }

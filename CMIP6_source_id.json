@@ -2,7 +2,7 @@
     "source_id":{
         "ACCESS-1-0":{
             "aerosol":"CLASSIC (v1.0)",
-            "atmosphere":"HadGAM2 (r1.1; 192 x 145 N96; 38 levels; top level 39255m)",
+            "atmosphere":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
             "atmospheric_chemistry":"None",
             "cohort":[
                 "CMIP5"
@@ -14,7 +14,7 @@
             "label_extended":"ACCESS 1.0 (This entry is free text for users to contribute verbose information)",
             "land_ice":"None",
             "land_surface":"MOSES2.2",
-            "ocean":"ACCESS-OM (MOM4p1; tripolar primarily 1deg latitude/longitude; 50 levels; top grid cell 0-10m)",
+            "ocean":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
             "ocean_biogeochemistry":"None",
             "release_year":"2011",
             "sea_ice":"CICE4.1",
@@ -925,10 +925,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 8 11:22:49 2017 -0800",
+        "creation_date":"Wed Mar 8 11:27:19 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (370; g4d799f9)",
-        "note":"Update experiment_id from external xlsx",
-        "previous_commit":"73749930fe990558cbdaeaef5d87f6b150764dc7"
+        "latest_tag_point":"note: ",
+        "note":"Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)",
+        "previous_commit":"af9202b7e26d357aa988c1741b7a25f90fdedbfd"
     }
 }

@@ -132,6 +132,7 @@ PJD  3 Mar 2017    - Update all source_id cohort entries https://github.com/WCRP
 PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
 PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://github.com/WCRP-CMIP/CMIP6_CVs/pull/238
 PJD  7 Mar 2017    - Update experiment_id from external xlsx https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1, 61, 136, 137
+PJD 14 Mar 2017    - Update source_id ACCESS-1-0 template
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -149,14 +150,14 @@ import ssl
 import subprocess
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
-import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
+#import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
 # pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and unidecode ('conda install unidecode')
-from string import replace
-from unidecode import unidecode
+#from string import replace
+#from unidecode import unidecode
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update experiment_id from external xlsx\"'
+commitMessage = '\"Update source_id ACCESS-1-0 template; format tweaks\"'
 
 #%% Define functions
 # Get repo metadata
@@ -230,11 +231,33 @@ activity_id = [
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
       ] ;
-#experiment_id = readJsonCreateDict(tmp)
-#experiment_id = experiment_id.get('experiment_id')
-#experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
+experiment_id = readJsonCreateDict(tmp)
+experiment_id = experiment_id.get('experiment_id')
+experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+#==============================================================================
+# Example new experiment_id entry
+#experiment_id['ism-bsmb-std'] = {}
+#experiment_id['ism-bsmb-std']['activity_id'] = ['ISMIP6']
+#experiment_id['ism-bsmb-std']['additional_allowed_model_components'] = ['']
+#experiment_id['ism-bsmb-std']['description'] = 'Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization'
+#experiment_id['ism-bsmb-std']['end_year'] = ''
+#experiment_id['ism-bsmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic oceanic experiment'
+#experiment_id['ism-bsmb-std']['min_number_yrs_per_sim'] = '100'
+#experiment_id['ism-bsmb-std']['parent_activity_id'] = ['ISMIP']
+#experiment_id['ism-bsmb-std']['parent_experiment_id'] = ['']
+#experiment_id['ism-bsmb-std']['required_model_components'] = ['ISM']
+#experiment_id['ism-bsmb-std']['start_year'] = ''
+#experiment_id['ism-bsmb-std']['sub_experiment'] = 'none'
+#experiment_id['ism-bsmb-std']['sub_experiment_id'] = 'none'
+#experiment_id['ism-bsmb-std']['tier'] = '1'
+# Rename
+#experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
+# Remove
+#experiment_id.pop('land-noShiftcultivate')
+#==============================================================================
+'''
 # xlsx import
 # Fields
 # Alpha/json order, xlsx column, value
@@ -303,27 +326,7 @@ for count in range(4,len(data)):
             except:
                 print count,count2,key,entry,value
 del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
-#==============================================================================
-# Example new experiment_id entry
-#experiment_id['ism-bsmb-std'] = {}
-#experiment_id['ism-bsmb-std']['activity_id'] = ['ISMIP6']
-#experiment_id['ism-bsmb-std']['additional_allowed_model_components'] = ['']
-#experiment_id['ism-bsmb-std']['description'] = 'Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization'
-#experiment_id['ism-bsmb-std']['end_year'] = ''
-#experiment_id['ism-bsmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic oceanic experiment'
-#experiment_id['ism-bsmb-std']['min_number_yrs_per_sim'] = '100'
-#experiment_id['ism-bsmb-std']['parent_activity_id'] = ['ISMIP']
-#experiment_id['ism-bsmb-std']['parent_experiment_id'] = ['']
-#experiment_id['ism-bsmb-std']['required_model_components'] = ['ISM']
-#experiment_id['ism-bsmb-std']['start_year'] = ''
-#experiment_id['ism-bsmb-std']['sub_experiment'] = 'none'
-#experiment_id['ism-bsmb-std']['sub_experiment_id'] = 'none'
-#experiment_id['ism-bsmb-std']['tier'] = '1'
-# Rename
-#experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
-# Remove
-#experiment_id.pop('land-noShiftcultivate')
-#==============================================================================
+'''
 
 #%% Frequencies
 frequency = [
@@ -412,7 +415,7 @@ institution_id = {
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
     'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80307, USA',
-    'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349),MET-Norway (Norwegian Meteorological Institute, Oslo 0313),NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006),NILU (Norwegian Institute for Air Research, Kjeller 2027),UiB (University of Bergen, Bergen 5007),UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
+    'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
@@ -505,6 +508,8 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)'
+source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

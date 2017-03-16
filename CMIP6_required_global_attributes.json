@@ -29,7 +29,7 @@
         "table_id",
         "tracking_id",
         "variable_id",
-        "variant_label",
+        "variant_label"
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",

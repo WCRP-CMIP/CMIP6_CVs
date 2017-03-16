@@ -2,7 +2,6 @@
     "required_global_attributes":[
         "Conventions",
         "activity_id",
-        "branch_method",
         "creation_date",
         "data_specs_version",
         "experiment",
@@ -31,7 +30,6 @@
         "tracking_id",
         "variable_id",
         "variant_label",
-        "variant_label"
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",

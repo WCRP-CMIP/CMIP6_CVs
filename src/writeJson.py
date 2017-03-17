@@ -133,6 +133,7 @@ PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CM
 PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://github.com/WCRP-CMIP/CMIP6_CVs/pull/238
 PJD  7 Mar 2017    - Update experiment_id from external xlsx https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1, 61, 136, 137
 PJD 14 Mar 2017    - Update source_id ACCESS-1-0 template
+PJD 17 Mar 2017    - Cleanup required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/250
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -157,7 +158,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update source_id ACCESS-1-0 template; format tweaks\"'
+commitMessage = '\"Cleanup required_global_attributes\"'
 
 #%% Define functions
 # Get repo metadata
@@ -468,7 +469,6 @@ realm = [
 required_global_attributes = [
     'Conventions',
     'activity_id',
-    'branch_method',
     'creation_date',
     'data_specs_version',
     'experiment',
@@ -496,7 +496,6 @@ required_global_attributes = [
     'table_id',
     'tracking_id',
     'variable_id',
-    'variant_label',
     'variant_label'
 ]
 
@@ -508,8 +507,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['ACCESS-1-0']['atmosphere'] = 'HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)'
-source_id['ACCESS-1-0']['ocean'] = 'ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)'
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

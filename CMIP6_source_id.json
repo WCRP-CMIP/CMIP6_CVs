@@ -23,7 +23,9 @@
             "nominal_resolution_landIce":[
                 "None"
             ],
-            "nominal_resolution_ocean":"",
+            "nominal_resolution_ocean":[
+                "100 km"
+            ],
             "ocean":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
             "ocean_biogeochemistry":"None",
             "release_year":"2011",
@@ -1119,7 +1121,9 @@
             "nominal_resolution_landIce":[
                 "None"
             ],
-            "nominal_resolution_ocean":"",
+            "nominal_resolution_ocean":[
+                "1x1 degree"
+            ],
             "ocean":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
             "ocean_biogeochemistry":"None",
             "release_year":"1989",
@@ -1209,10 +1213,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Mar 20 13:34:59 2017 -0700",
+        "creation_date":"Mon Mar 20 13:38:48 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (149; g8ac5f62)",
+        "latest_tag_point":"3.2.2 (37; g2d04402)",
         "note":"Augment source_id info request",
-        "previous_commit":"3c254bf0e398b1ac88e66079835b52d080e12cd9"
+        "previous_commit":"db624f9dedee135421b05bcb3f7a4f38be44e472"
     }
 }

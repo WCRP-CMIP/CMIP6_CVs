@@ -2,7 +2,7 @@
     "source_id":{
         "ACCESS-1-0":{
             "activity_participation":[
-                "CMIP5"
+                "CMIP"
             ],
             "aerosol":"CLASSIC (v1.0)",
             "atmosphere":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
@@ -1209,10 +1209,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Mar 20 13:28:54 2017 -0700",
+        "creation_date":"Mon Mar 20 13:29:00 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (90; g07479de)",
+        "latest_tag_point":"3.2.2 (104; g47bca38)",
         "note":"Augment source_id info request",
-        "previous_commit":"513f67e227cbc777fe96b729c753b4652af53fed"
+        "previous_commit":"2dc80795d1777da421dbf92035b1daacb50510cb"
     }
 }

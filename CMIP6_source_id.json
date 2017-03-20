@@ -2,7 +2,7 @@
     "source_id":{
         "ACCESS-1-0":{
             "activity_participation":[
-                ""
+                "CMIP5"
             ],
             "aerosol":"CLASSIC (v1.0)",
             "atmosphere":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
@@ -17,8 +17,12 @@
             "label_extended":"ACCESS 1.0 (This entry is free text for users to contribute verbose information)",
             "land_ice":"None",
             "land_surface":"MOSES2.2",
-            "nominal_resolution_atmos":"",
-            "nominal_resolution_landIce":"",
+            "nominal_resolution_atmos":[
+                "100 km"
+            ],
+            "nominal_resolution_landIce":[
+                "None"
+            ],
             "nominal_resolution_ocean":"",
             "ocean":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
             "ocean_biogeochemistry":"None",
@@ -1094,7 +1098,7 @@
         },
         "PCMDI-test-1-0":{
             "activity_participation":[
-                ""
+                "CMIP"
             ],
             "aerosol":"None",
             "atmosphere":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
@@ -1109,8 +1113,12 @@
             "label_extended":"PCMDI-test 1.0 (This entry is free text for users to contribute verbose information)",
             "land_ice":"None",
             "land_surface":"Earth1.0",
-            "nominal_resolution_atmos":"",
-            "nominal_resolution_landIce":"",
+            "nominal_resolution_atmos":[
+                "1x1 degree"
+            ],
+            "nominal_resolution_landIce":[
+                "None"
+            ],
             "nominal_resolution_ocean":"",
             "ocean":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
             "ocean_biogeochemistry":"None",
@@ -1201,10 +1209,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Mar 17 14:21:16 2017 -0700",
+        "creation_date":"Fri Mar 17 14:21:21 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (62; ga03cbae)",
+        "latest_tag_point":"3.2.2 (76; g7b5ad72)",
         "note":"Augment source_id info request",
-        "previous_commit":"133a2faa6d4869ea6e9ab6f6ec054c1b257ad424"
+        "previous_commit":"4ddfb809df64e9e4f85a7911d2ba52681249230b"
     }
 }

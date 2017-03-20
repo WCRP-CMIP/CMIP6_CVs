@@ -156,14 +156,11 @@ $(document).ready( function () {
 dictOrder = [
 'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
 'release_year','cohort','sea_ice','label','institution_id','land_surface',
-'aerosol','source_id','ocean','land_ice','activity_participation',
-'nominal_resolution_atmos','nominal_resolution_landIce',
-'nominal_resolution_ocean']
+'aerosol','source_id','ocean','land_ice']
 dictOrderK = [
-'institution_id','release_year','activity_participation','atmosphere',
-'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
+'institution_id','release_year','atmosphere','ocean','aerosol',
 'atmospheric_chemistry','cohort','label','label_extended','land_ice',
-'nominal_resolution_landIce','land_surface','ocean_biogeochemistry','sea_ice']
+'land_surface','ocean_biogeochemistry','sea_ice']
 
 first_row = False
 for exp in dict1.keys():

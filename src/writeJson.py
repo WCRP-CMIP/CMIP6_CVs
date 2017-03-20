@@ -134,7 +134,6 @@ PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://git
 PJD  7 Mar 2017    - Update experiment_id from external xlsx https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1, 61, 136, 137
 PJD 14 Mar 2017    - Update source_id ACCESS-1-0 template
 PJD 17 Mar 2017    - Cleanup required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/250
-PJD 17 Mar 2017    - Augment source_id info request https://github.com/WCRP-CMIP/CMIP6_CVs/issues/249
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -159,7 +158,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Augment source_id info request\"'
+commitMessage = '\"Cleanup required_global_attributes\"'
 
 #%% Define functions
 # Get repo metadata
@@ -508,23 +507,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-# Add in new dictionary entries
-keyList = source_id.keys()
-for count,key in enumerate(keyList):
-    source_id[key]['activity_participation'] = ['']
-    source_id[key]['nominal_resolution_atmos'] = ''
-    source_id[key]['nominal_resolution_landIce'] = ''
-    source_id[key]['nominal_resolution_ocean'] = ''
-# Add in ACCESS1-0 example
-source_id['ACCESS-1-0']['activity_participation'] = ['CMIP5']
-source_id['ACCESS-1-0']['nominal_resolution_atmos'] = ['100 km']
-source_id['ACCESS-1-0']['nominal_resolution_landIce'] = ['None']
-source_id['ACCESS-1-0']['nominal_resolution_atmos'] = ['100 km']
-# Add in PCMDI-test-1-0 (1x1 degree grid)
-source_id['PCMDI-test-1-0']['activity_participation'] = ['CMIP']
-source_id['PCMDI-test-1-0']['nominal_resolution_atmos'] = ['1x1 degree']
-source_id['PCMDI-test-1-0']['nominal_resolution_landIce'] = ['None']
-source_id['PCMDI-test-1-0']['nominal_resolution_atmos'] = ['1x1 degree']
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

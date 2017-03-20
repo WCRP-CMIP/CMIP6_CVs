@@ -519,12 +519,12 @@ for count,key in enumerate(keyList):
 source_id['ACCESS-1-0']['activity_participation'] = ['CMIP']
 source_id['ACCESS-1-0']['nominal_resolution_atmos'] = ['100 km']
 source_id['ACCESS-1-0']['nominal_resolution_landIce'] = ['None']
-source_id['ACCESS-1-0']['nominal_resolution_atmos'] = ['100 km']
+source_id['ACCESS-1-0']['nominal_resolution_ocean'] = ['100 km']
 # Add in PCMDI-test-1-0 (1x1 degree grid)
 source_id['PCMDI-test-1-0']['activity_participation'] = ['CMIP']
 source_id['PCMDI-test-1-0']['nominal_resolution_atmos'] = ['1x1 degree']
 source_id['PCMDI-test-1-0']['nominal_resolution_landIce'] = ['None']
-source_id['PCMDI-test-1-0']['nominal_resolution_atmos'] = ['1x1 degree']
+source_id['PCMDI-test-1-0']['nominal_resolution_ocean'] = ['1x1 degree']
 #==============================================================================
 #source_id['IITM-ESM'] = {}
 #source_id['IITM-ESM']['aerosol'] = 'unnamed (prescribed MAC-v2)'

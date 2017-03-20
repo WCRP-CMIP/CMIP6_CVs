@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Mar 20 13:39:56 2017 -0700",
+        "creation_date":"Mon Mar 20 14:00:07 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue249 durack1 source_id augment info request (#255)",
-        "previous_commit":"e66f4c396c9c24f64c661821f4f8b64936abe59d"
+        "latest_tag_point":"3.2.2 (39; g6fd60ff)",
+        "note":"Register institution_id CAMS",
+        "previous_commit":"b8853fda680482fff16929ac78a718ba8cc54de9"
     }
 }

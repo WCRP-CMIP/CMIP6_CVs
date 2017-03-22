@@ -5239,10 +5239,10 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols and ozone",
+            "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols",
             "end_year":"",
             "experiment":"effective radiative forcing by present-day aerosols",
-            "experiment_id":"piClim-aerO3",
+            "experiment_id":"piClim-aer",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 "CMIP"
@@ -5355,7 +5355,7 @@
             "description":"Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
             "experiment":"transient effective radiative forcing by aerosols",
-            "experiment_id":"piClim-histaer03",
+            "experiment_id":"piClim-histaer",
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":[
                 "CMIP"
@@ -6860,10 +6860,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 22 10:25:17 2017 -0700",
+        "creation_date":"Wed Mar 22 10:25:28 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (89; g99f1d5f)",
+        "latest_tag_point":"3.2.2 (103; gbb226b4)",
         "note":"Revise experiment_id names and details for 2 RFMIP experiments",
-        "previous_commit":"6df697186f83a429663532a253eeb82b4b33d191"
+        "previous_commit":"b500b58c20517781a5958952d8d69571e126cb77"
     }
 }

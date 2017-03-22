@@ -47,13 +47,13 @@ Here are the components that should be defined (and if necessary and appropriate
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]
 
-    activity_participation = CMIP, PMIP, CFMIP
+    activity_participation = [CMIP, PMIP, CFMIP]
     aerosol = CLASSIC (v1.0)
     atmosphere = HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)    
     atmospheric_chemistry = None
     institution_id = CSIRO-BOM
-    label = ACCESS 1.0    ![limited to 16 characters]
-    label_extended = ACCESS 1.0 (r105557) ![Use this identifier to extend the 16 character limit for "label" to describe your model]
+    label = ACCESS 1.0   ![limited to 16 characters]
+    label_extended = ACCESS 1.0 (r105557)   ![Use this identifier to extend the 16 character limit for "label" to describe your model]
     land_ice = None
     land_surface = MOSES2.2
     nominal_resolution_atmos = 100 km
@@ -63,6 +63,6 @@ Example:
     ocean_biogeochemistry = None
     release_year = 2011
     sea_ice = CICE4.1
-    source_id = ACCESS-1-0 (limited to 16 characters)
+    source_id = ACCESS-1-0   ![limited to 16 characters]
     
 The entries institution_id, label, label_extended, source_id, activity_participation, and nominal_resolution (of atmosphere, ocean and land ice) are all required and must strictly adhere to the guidance above; the additional entries should follow the above example.

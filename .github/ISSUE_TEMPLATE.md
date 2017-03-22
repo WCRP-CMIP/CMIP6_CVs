@@ -1,6 +1,6 @@
 Here are instructions both for registering your institution and model for CMIP6 and for raising other issues concerning CMIP6 controlled vocabularies. We can update details iteratively, until you begin writing CMIP6 data.
 
-Please delete these instructions before submitting your registration/issue. 
+PLEASE DELETE THESE INSTRUCTIONS BEFORE SUBMITTING YOUR REGISTRATION/ISSUE
 
 *********************************************
 ## Registering your institution and model

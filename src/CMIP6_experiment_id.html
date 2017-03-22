@@ -768,18 +768,18 @@ $(document).ready( function () {
 <td>Time slice at 2100 (G6sulfur)</td>
 </tr>
 <tr><td>piClim-aer</td>
-<td>AerChemMIP</td>
-<td>pre-industrial climatological SSTs and forcing, but 2014 aerosol emissions</td>
-<td>2</td>
+<td>RFMIP</td>
+<td>effective radiative forcing by present-day aerosols</td>
+<td>1</td>
 <td>none</td>
 <td>piControl</td>
-<td>AGCM AER</td>
-<td>CHEM</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
 <td></td>
 <td></td>
 <td>30</td>
 <td>CMIP</td>
-<td>Perturbation from 1850 control using 2014 aerosol emissions</td>
+<td>As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols</td>
 </tr>
 <tr><td>piClim-ghg</td>
 <td>RFMIP</td>
@@ -1565,9 +1565,9 @@ $(document).ready( function () {
 <td>ISMIP6</td>
 <td>Historical simulation using "offline" ice sheet models. Forcing for ice sheet model is from its own AOGCM</td>
 </tr>
-<tr><td>volc-pinatubo-full</td>
+<tr><td>volc-pinatubo-surf</td>
 <td>VolMIP</td>
-<td>Pinatubo experiment</td>
+<td>Pinatubo experiment with partial radiative forcing, solar radiation scattering only</td>
 <td>1</td>
 <td>none</td>
 <td>piControl</td>
@@ -1577,7 +1577,7 @@ $(document).ready( function () {
 <td></td>
 <td>3</td>
 <td>CMIP</td>
-<td>1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability</td>
+<td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
 </tr>
 <tr><td>land-hist-altLu1</td>
 <td>LUMIP</td>
@@ -3007,6 +3007,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments</td>
 </tr>
+<tr><td>piClim-histaer</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing by aerosols</td>
+<td>2</td>
+<td>none</td>
+<td>piControl</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td>CMIP</td>
+<td>Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
+</tr>
 <tr><td>omip1</td>
 <td>OMIP</td>
 <td>OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data</td>
@@ -3104,34 +3118,6 @@ $(document).ready( function () {
 <td>165</td>
 <td>no parent</td>
 <td>Same as land-hist but with wood harvest maintained at 1850 amounts/areas</td>
-</tr>
-<tr><td>volc-pinatubo-surf</td>
-<td>VolMIP</td>
-<td>Pinatubo experiment with partial radiative forcing, solar radiation scattering only</td>
-<td>1</td>
-<td>none</td>
-<td>piControl</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td></td>
-<td></td>
-<td>3</td>
-<td>CMIP</td>
-<td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
-</tr>
-<tr><td>ssp370SST-lowO3</td>
-<td>AerChemMIP</td>
-<td>SSP3-7.0, prescribed SSTs, with low ozone precursor emissions</td>
-<td>2</td>
-<td>none</td>
-<td>ssp370</td>
-<td>AGCM AER CHEM</td>
-<td></td>
-<td>2015</td>
-<td>2055</td>
-<td>41</td>
-<td>ScenarioMIP</td>
-<td>Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs</td>
 </tr>
 <tr><td>a4SSTice</td>
 <td>CFMIP</td>
@@ -3441,19 +3427,19 @@ $(document).ready( function () {
 <td>ScenarioMIP</td>
 <td>Time slice at 2020 (ScenarioMIP Tier 1 high forcing scenario and cirrus thinning according to G7cirrus)</td>
 </tr>
-<tr><td>piClim-histaer03</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing by aerosols</td>
+<tr><td>ssp370SST-lowO3</td>
+<td>AerChemMIP</td>
+<td>SSP3-7.0, prescribed SSTs, with low ozone precursor emissions</td>
 <td>2</td>
 <td>none</td>
-<td>piControl</td>
-<td>AGCM</td>
-<td>AER CHEM</td>
-<td>1850</td>
-<td>2100</td>
-<td>251</td>
-<td>CMIP</td>
-<td>Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
+<td>ssp370</td>
+<td>AGCM AER CHEM</td>
+<td></td>
+<td>2015</td>
+<td>2055</td>
+<td>41</td>
+<td>ScenarioMIP</td>
+<td>Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs</td>
 </tr>
 <tr><td>piClim-4xCO2</td>
 <td>RFMIP</td>
@@ -3497,19 +3483,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration</td>
 </tr>
-<tr><td>piClim-aerO3</td>
-<td>RFMIP</td>
-<td>effective radiative forcing by present-day aerosols and ozone</td>
+<tr><td>volc-pinatubo-full</td>
+<td>VolMIP</td>
+<td>Pinatubo experiment</td>
 <td>1</td>
 <td>none</td>
 <td>piControl</td>
-<td>AGCM</td>
-<td>AER CHEM</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
 <td></td>
 <td></td>
-<td>30</td>
+<td>3</td>
 <td>CMIP</td>
-<td>As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols and ozone</td>
+<td>1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability</td>
 </tr>
 <tr><td>amip</td>
 <td>CMIP</td>

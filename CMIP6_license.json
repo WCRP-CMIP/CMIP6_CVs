@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 22 09:42:23 2017 -0700",
+        "creation_date":"Wed Mar 22 10:25:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (79; g573be2e)",
+        "latest_tag_point":"3.2.2 (93; geddee2a)",
         "note":"Revise experiment_id names and details for 2 RFMIP experiments",
-        "previous_commit":"e8fb620c995d6566a8584ed350593717b1a50e95"
+        "previous_commit":"f0adab9edcab9fec677237073dd763fa61e2fcc6"
     }
 }

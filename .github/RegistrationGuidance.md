@@ -29,13 +29,13 @@ To register (or edit) information about your model, please title your issue "sou
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6). This label is limited to 16 characters in length.
 
-'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-").  The source_id will appear in the ESGF search interface and in file names and directory trees.  Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-".
+'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-"). The source_id will appear in the ESGF search interface and in file names and directory trees. Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-".
 
-'institution_id' -- list all institutions (using their "institution_id" acronyms) responsible for running CMIP6 simulations with this model version.  Additional institutions can be added to the list as needed, but only institutions registered (see above) may be included.
+'institution_id' -- list all institutions (using their "institution_id" acronyms) responsible for running CMIP6 simulations with this model version. Additional institutions can be added to the list as needed, but only institutions registered (see above) may be included.
 
-'release_year' -- this should be the year your model was first used in a scientific study.  This year should reflect the "generation" of models rather than distinguishing between closely-related versions.
+'release_year' -- this should be the year your model was first used in a scientific study. This year should reflect the "generation" of models rather than distinguishing between closely-related versions.
 
-'activity_participation' -- A comma-separted list of the MIPs to which you intend to contribute.  Include those that are currently in your plans; you can add additional MIPs later.  Please select from the official activity_id's recorded in the [activity_id CV](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_activity_id.json).  Note that if you plan to run the "DECK" simulations, indicate this by including "CMIP" in your list.
+'activity_participation' -- A comma-separated list of the MIPs to which you expect to contribute. Include those that are currently in your plans; you can add or remove MIPs later to maintain consistency. Please select from the official activity_id's recorded in the [activity_id CV](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_activity_id.json). Note that if you plan to run the "DECK" simulations, indicate this by including "CMIP" in your list.
 
 'nominal_resolution' -- For the atmosphere, ocean, and land_ice models, please also record the nominal_resolution.  The definition and algorithm for calculating nominal resolution can be found in Appendix 2 of the [CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV’s document](https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit).
 

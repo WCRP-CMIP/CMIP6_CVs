@@ -5233,34 +5233,6 @@
         },
         "piClim-aer":{
             "activity_id":[
-                "AerChemMIP"
-            ],
-            "additional_allowed_model_components":[
-                "CHEM"
-            ],
-            "description":"Perturbation from 1850 control using 2014 aerosol emissions",
-            "end_year":"",
-            "experiment":"pre-industrial climatological SSTs and forcing, but 2014 aerosol emissions",
-            "experiment_id":"piClim-aer",
-            "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "CMIP"
-            ],
-            "parent_experiment_id":[
-                "piControl"
-            ],
-            "required_model_components":[
-                "AGCM",
-                "AER"
-            ],
-            "start_year":"",
-            "sub_experiment_id":[
-                "none"
-            ],
-            "tier":"2"
-        },
-        "piClim-aerO3":{
-            "activity_id":[
                 "RFMIP"
             ],
             "additional_allowed_model_components":[
@@ -5269,7 +5241,7 @@
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols and ozone",
             "end_year":"",
-            "experiment":"effective radiative forcing by present-day aerosols and ozone",
+            "experiment":"effective radiative forcing by present-day aerosols",
             "experiment_id":"piClim-aerO3",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
@@ -5372,7 +5344,7 @@
             ],
             "tier":"1"
         },
-        "piClim-histaer03":{
+        "piClim-histaer":{
             "activity_id":[
                 "RFMIP"
             ],
@@ -6888,10 +6860,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Mar 20 14:01:35 2017 -0700",
+        "creation_date":"Wed Mar 22 09:41:52 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue245 durack1 register institution id cams (#256)",
-        "previous_commit":"184ed7d3353d11bc0a4728274de86990aca9a427"
+        "latest_tag_point":"3.2.2 (33; g300b1a2)",
+        "note":"Register institution_id CAMS",
+        "previous_commit":"9adcfd797e6a3e2a3f35f3787ea4edcfc2e1a877"
     }
 }

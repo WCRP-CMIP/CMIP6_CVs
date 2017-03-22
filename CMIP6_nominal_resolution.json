@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 22 09:41:52 2017 -0700",
+        "creation_date":"Wed Mar 22 09:42:08 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (39; gbb9b449)",
-        "note":"Register institution_id CAMS",
-        "previous_commit":"dab60f30dd3a05d59adab363ac97523e2d2dfc1b"
+        "latest_tag_point":"3.2.2 (53; ge76eef9)",
+        "note":"Revise experiment_id names and details for 2 RFMIP experiments",
+        "previous_commit":"4d5c79a68430c7687492cb54006e5358a9406abf"
     }
 }

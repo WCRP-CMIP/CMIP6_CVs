@@ -1,4 +1,4 @@
-<Here are instructions both for registering your institution and model for CMIP6 and for raising other issues concerning CMIP6 controlled vocabularies.  Please delete the instruction text before submitting your registration/issue.>
+<Here are instructions both for registering your institution and model for CMIP6 and for raising other issues concerning CMIP6 controlled vocabularies.  Please delete these instructions before submitting your registration/issue.>
 
 *********************************************
 ## Registering your institution and model

@@ -241,9 +241,11 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 
 # Fix issues
 experiment_id['piClim-aer'] = experiment_id.pop('piClim-aerO3')
-experiment_id['piClim-aer']['experiment'] = 'As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols'
+experiment_id['piClim-aer']['description'] = 'As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols'
 experiment_id['piClim-aer']['experiment'] = 'effective radiative forcing by present-day aerosols'
+experiment_id['piClim-aer']['experiment_id'] = 'piClim-aer'
 experiment_id['piClim-histaer'] = experiment_id.pop('piClim-histaer03')
+experiment_id['piClim-histaer']['experiment_id'] = 'piClim-histaer'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

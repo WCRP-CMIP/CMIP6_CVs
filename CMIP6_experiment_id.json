@@ -5233,13 +5233,14 @@
         },
         "piClim-aer":{
             "activity_id":[
-                "RFMIP"
+                "RFMIP",
+                "AerChemMIP"
             ],
             "additional_allowed_model_components":[
                 "AER",
                 "CHEM"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols",
+            "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP",
             "end_year":"",
             "experiment":"effective radiative forcing by present-day aerosols",
             "experiment_id":"piClim-aer",
@@ -6860,10 +6861,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 22 10:26:19 2017 -0700",
+        "creation_date":"Wed Mar 22 10:28:36 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (117; g14944c8)",
-        "note":"Revise experiment_id names and details for 2 RFMIP experiments",
-        "previous_commit":"21726959aeafab0af5a3f33a047240831025d946"
+        "latest_tag_point":"note: ",
+        "note":"Issue258 durack1 revise experiment_ids for RFMIP (#260)",
+        "previous_commit":"01e4fa31bba404a4281afd9966c4af31551bb288"
     }
 }

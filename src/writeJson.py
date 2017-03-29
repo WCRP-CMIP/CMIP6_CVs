@@ -137,6 +137,7 @@ PJD 17 Mar 2017    - Cleanup required_global_attributes https://github.com/WCRP-
 PJD 17 Mar 2017    - Augment source_id info request https://github.com/WCRP-CMIP/CMIP6_CVs/issues/249
 PJD 20 Mar 2017    - Register institution_id CAMS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/245
 PJD 22 Mar 2017    - Revise experiment_id names and details for 2 RFMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/258
+PJD 29 Mar 2017    - Revise experiment_id piClim-aer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/261
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -161,7 +162,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id names and details for 2 RFMIP experiments\"'
+commitMessage = '\"Revise experiment_id piClim-aer\"'
 
 #%% Define functions
 # Get repo metadata
@@ -240,12 +241,8 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['piClim-aer'] = experiment_id.pop('piClim-aerO3')
-experiment_id['piClim-aer']['description'] = 'As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols'
-experiment_id['piClim-aer']['experiment'] = 'effective radiative forcing by present-day aerosols'
-experiment_id['piClim-aer']['experiment_id'] = 'piClim-aer'
-experiment_id['piClim-histaer'] = experiment_id.pop('piClim-histaer03')
-experiment_id['piClim-histaer']['experiment_id'] = 'piClim-histaer'
+experiment_id['piClim-aer']['activity_id'] = ['RFMIP', 'AerChemMIP']
+experiment_id['piClim-aer']['description'] = 'As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP'
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

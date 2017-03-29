@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 22 10:26:19 2017 -0700",
+        "creation_date":"Wed Mar 29 16:09:01 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (121; ge1357cb)",
-        "note":"Revise experiment_id names and details for 2 RFMIP experiments",
-        "previous_commit":"40c030471083c0b77259af7079b814c9c7afba17"
+        "latest_tag_point":"3.2.2 (47; gfecd2a5)",
+        "note":"Revise experiment_id piClim-aer",
+        "previous_commit":"d0294ab80471227a616b578fffd031cec9981b1e"
     }
 }

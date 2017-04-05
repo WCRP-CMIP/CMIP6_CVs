@@ -70,7 +70,6 @@ for exp in dict1.keys():
     print >> fo, "<tr><td>%s</td>" % exp
     for k in ids:
         st = exp_dict[k]
-        print st
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         print >> fo, "<td>%s</td>" % st
@@ -170,6 +169,11 @@ dictOrderK = [
 'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
 'atmospheric_chemistry','cohort','label','label_extended','land_ice',
 'nominal_resolution_landIce','land_surface','ocean_biogeochemistry','sea_ice']
+dictOrderK = [
+'institution_id','release_year','activity_participation','atmos',
+'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
+'atmosChem','cohort','label','label_extended','landIce',
+'nominal_resolution_landIce','land','ocnBgchem','seaIce']
 
 first_row = False
 for exp in dict1.keys():

@@ -21,7 +21,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -53,7 +61,13 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'1pctCO2']"
+                "1",
+                "p",
+                "c",
+                "t",
+                "C",
+                "O",
+                "2"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -84,7 +98,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -116,7 +138,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -148,7 +178,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -180,7 +218,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -215,7 +261,23 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'piControl-withism']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "w",
+                "i",
+                "t",
+                "h",
+                "i",
+                "s",
+                "m"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -248,7 +310,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -286,7 +356,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AGCM"
@@ -324,7 +399,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AGCM"
@@ -362,7 +442,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AGCM"
@@ -394,7 +479,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -426,7 +520,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -464,7 +567,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AGCM"
@@ -502,7 +610,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AGCM"
@@ -534,7 +647,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -565,7 +687,17 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'abrupt4xCO2']"
+                "a",
+                "b",
+                "r",
+                "u",
+                "p",
+                "t",
+                "4",
+                "x",
+                "C",
+                "O",
+                "2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -596,7 +728,17 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'abrupt4xCO2']"
+                "a",
+                "b",
+                "r",
+                "u",
+                "p",
+                "t",
+                "4",
+                "x",
+                "C",
+                "O",
+                "2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -627,7 +769,17 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'abrupt4xCO2']"
+                "a",
+                "b",
+                "r",
+                "u",
+                "p",
+                "t",
+                "4",
+                "x",
+                "C",
+                "O",
+                "2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -659,7 +811,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -691,7 +851,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -723,7 +891,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -755,7 +931,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -787,7 +971,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -823,7 +1015,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -859,7 +1059,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -895,7 +1103,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -931,7 +1147,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -967,7 +1191,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1003,7 +1235,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1039,7 +1279,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1075,7 +1323,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1112,7 +1368,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1149,7 +1413,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1186,7 +1458,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1222,7 +1502,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1258,7 +1546,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1294,7 +1590,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1330,7 +1634,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1366,7 +1678,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1402,7 +1722,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1438,7 +1766,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1474,7 +1810,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1510,7 +1854,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1546,7 +1898,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1582,7 +1942,17 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'spinup-1950']"
+                "s",
+                "p",
+                "i",
+                "n",
+                "u",
+                "p",
+                "-",
+                "1",
+                "9",
+                "5",
+                "0"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1619,7 +1989,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -1657,7 +2035,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1694,7 +2080,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1787,7 +2181,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1875,7 +2277,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1968,7 +2379,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2012,7 +2431,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2044,7 +2471,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2076,7 +2511,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2108,7 +2551,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2140,7 +2591,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2172,7 +2631,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2204,7 +2671,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2236,7 +2711,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2274,7 +2758,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2318,7 +2810,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2355,7 +2855,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2393,7 +2901,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2430,7 +2946,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2467,7 +2991,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2504,7 +3036,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "[u'no parent', u'dcppA-assim']"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2536,7 +3076,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2568,7 +3116,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2600,7 +3156,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2632,7 +3196,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2664,7 +3236,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2696,7 +3276,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2729,7 +3318,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2760,7 +3357,19 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'esm-piControl']"
+                "e",
+                "s",
+                "m",
+                "-",
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2792,7 +3401,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'esm-hist']"
+                "e",
+                "s",
+                "m",
+                "-",
+                "h",
+                "i",
+                "s",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2824,7 +3440,26 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'esm-piControl-spinup']"
+                "e",
+                "s",
+                "m",
+                "-",
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "p",
+                "i",
+                "n",
+                "u",
+                "p"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2861,7 +3496,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2893,7 +3536,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'esm-hist']"
+                "e",
+                "s",
+                "m",
+                "-",
+                "h",
+                "i",
+                "s",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2925,7 +3575,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'esm-hist']"
+                "e",
+                "s",
+                "m",
+                "-",
+                "h",
+                "i",
+                "s",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2958,7 +3615,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2990,7 +3655,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3022,7 +3695,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3054,7 +3735,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3086,7 +3775,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3119,7 +3816,8 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'G1']"
+                "G",
+                "1"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3155,7 +3853,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-1950']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "1",
+                "9",
+                "5",
+                "0"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3191,7 +3897,24 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'highresSST-present']"
+                "h",
+                "i",
+                "g",
+                "h",
+                "r",
+                "e",
+                "s",
+                "S",
+                "S",
+                "T",
+                "-",
+                "p",
+                "r",
+                "e",
+                "s",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3227,7 +3950,24 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'highresSST-present']"
+                "h",
+                "i",
+                "g",
+                "h",
+                "r",
+                "e",
+                "s",
+                "S",
+                "S",
+                "T",
+                "-",
+                "p",
+                "r",
+                "e",
+                "s",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3263,7 +4003,24 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'highresSST-present']"
+                "h",
+                "i",
+                "g",
+                "h",
+                "r",
+                "e",
+                "s",
+                "S",
+                "S",
+                "T",
+                "-",
+                "p",
+                "r",
+                "e",
+                "s",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3299,7 +4056,24 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'highresSST-present']"
+                "h",
+                "i",
+                "g",
+                "h",
+                "r",
+                "e",
+                "s",
+                "S",
+                "S",
+                "T",
+                "-",
+                "p",
+                "r",
+                "e",
+                "s",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3334,7 +4108,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3370,7 +4152,24 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'highresSST-present']"
+                "h",
+                "i",
+                "g",
+                "h",
+                "r",
+                "e",
+                "s",
+                "S",
+                "S",
+                "T",
+                "-",
+                "p",
+                "r",
+                "e",
+                "s",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3406,7 +4205,17 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'spinup-1950']"
+                "s",
+                "p",
+                "i",
+                "n",
+                "u",
+                "p",
+                "-",
+                "1",
+                "9",
+                "5",
+                "0"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3436,7 +4245,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -3470,7 +4288,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3502,7 +4328,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3534,7 +4368,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3566,7 +4408,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3598,7 +4448,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3629,7 +4487,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -3662,7 +4528,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3694,7 +4568,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3725,7 +4607,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -3757,7 +4647,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -3790,7 +4688,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3822,7 +4729,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3854,7 +4770,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3882,7 +4806,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3910,7 +4842,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3941,7 +4881,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -3973,7 +4921,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -4008,7 +4964,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4042,7 +5006,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4079,7 +5051,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4113,7 +5093,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4150,7 +5138,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4188,7 +5184,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4222,7 +5226,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4256,7 +5268,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -4288,7 +5308,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -4322,7 +5351,23 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'piControl-withism']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "w",
+                "i",
+                "t",
+                "h",
+                "i",
+                "s",
+                "m"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -4353,7 +5398,24 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-piControl-self']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "e",
+                "l",
+                "f"
             ],
             "required_model_components":[
                 "ISM"
@@ -4383,7 +5445,23 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-pdControl-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "p",
+                "d",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4413,7 +5491,18 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-ctrl-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "c",
+                "t",
+                "r",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4443,7 +5532,18 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-ctrl-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "c",
+                "t",
+                "r",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4473,7 +5573,18 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-ctrl-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "c",
+                "t",
+                "r",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4506,7 +5617,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "ISM"
@@ -4536,7 +5655,24 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-piControl-self']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "e",
+                "l",
+                "f"
             ],
             "required_model_components":[
                 "ISM"
@@ -4566,7 +5702,23 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-pdControl-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "p",
+                "d",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4599,7 +5751,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "ISM"
@@ -4632,7 +5792,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "ISM"
@@ -4665,7 +5833,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "ISM"
@@ -4695,7 +5871,25 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-historical-self']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l",
+                "-",
+                "s",
+                "e",
+                "l",
+                "f"
             ],
             "required_model_components":[
                 "ISM"
@@ -4725,7 +5919,24 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'ism-historical-std']"
+                "i",
+                "s",
+                "m",
+                "-",
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l",
+                "-",
+                "s",
+                "t",
+                "d"
             ],
             "required_model_components":[
                 "ISM"
@@ -4758,7 +5969,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4791,7 +6010,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4824,7 +6051,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4857,7 +6092,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4890,7 +6133,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4923,7 +6174,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4956,7 +6215,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -4990,7 +6257,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5023,7 +6298,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5056,7 +6339,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5089,7 +6380,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5122,7 +6421,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5155,7 +6462,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5188,7 +6503,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5221,7 +6544,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5254,7 +6585,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5287,7 +6626,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5320,7 +6667,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5353,7 +6708,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "LAND"
@@ -5385,7 +6748,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5417,7 +6789,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5449,7 +6830,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5481,7 +6871,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5513,7 +6912,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5545,7 +6953,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5577,7 +6994,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5609,7 +7035,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5641,7 +7076,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5678,7 +7122,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5715,7 +7167,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5752,7 +7212,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5789,7 +7257,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5822,7 +7298,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "OGCM"
@@ -5855,7 +7339,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "OGCM"
@@ -5888,7 +7380,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "OGCM"
@@ -5921,7 +7421,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "OGCM"
@@ -5958,7 +7466,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5988,7 +7504,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6017,7 +7541,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6047,7 +7579,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6079,7 +7619,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6110,7 +7658,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6141,7 +7697,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6173,7 +7737,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6203,7 +7775,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6232,7 +7812,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6262,7 +7850,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6292,7 +7888,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6324,7 +7928,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6353,7 +7965,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6386,7 +8006,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6415,7 +8043,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6447,7 +8083,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6478,7 +8122,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6507,7 +8159,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM",
@@ -6541,7 +8201,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6572,7 +8240,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6604,7 +8280,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6635,7 +8319,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6666,7 +8358,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6697,7 +8397,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6728,7 +8436,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6759,7 +8475,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6790,7 +8514,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6818,7 +8550,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6846,7 +8586,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6874,7 +8622,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6902,7 +8658,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -6934,7 +8698,22 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl-spinup']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "p",
+                "i",
+                "n",
+                "u",
+                "p"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -6971,7 +8750,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7008,7 +8795,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -7040,7 +8835,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7071,7 +8874,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7102,7 +8913,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7133,7 +8952,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7164,7 +8991,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7197,7 +9032,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "RAD"
@@ -7232,7 +9075,15 @@
                 "t"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "n",
+                "o",
+                " ",
+                "p",
+                "a",
+                "r",
+                "e",
+                "n",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7264,7 +9115,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7296,7 +9156,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7328,7 +9197,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7361,7 +9239,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-GHG']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "G",
+                "H",
+                "G"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7394,7 +9279,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-aer']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "a",
+                "e",
+                "r"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7427,7 +9319,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-nat']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "n",
+                "a",
+                "t"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7459,7 +9358,18 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-stratO3']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "s",
+                "t",
+                "r",
+                "a",
+                "t",
+                "O",
+                "3"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7492,7 +9402,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7523,7 +9442,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -7556,7 +9484,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7593,7 +9530,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7631,7 +9573,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7669,7 +9616,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7705,7 +9657,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7745,7 +9702,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7781,7 +9743,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7820,7 +9787,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp370']"
+                "s",
+                "s",
+                "p",
+                "3",
+                "7",
+                "0"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7853,7 +9825,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7885,7 +9866,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7924,7 +9914,12 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'ssp585']"
+                "s",
+                "s",
+                "p",
+                "5",
+                "8",
+                "5"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7956,7 +9951,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-bgc']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "b",
+                "g",
+                "c"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -7989,7 +9991,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8021,7 +10032,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'hist-bgc']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "-",
+                "b",
+                "g",
+                "c"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -8056,7 +10074,24 @@
                 "6"
             ],
             "parent_experiment_id":[
-                "[u'historical-withism']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l",
+                "-",
+                "w",
+                "i",
+                "t",
+                "h",
+                "i",
+                "s",
+                "m"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -8089,7 +10124,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8121,7 +10165,16 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'historical']"
+                "h",
+                "i",
+                "s",
+                "t",
+                "o",
+                "r",
+                "i",
+                "c",
+                "a",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8153,7 +10206,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8185,7 +10246,14 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'past1000']"
+                "p",
+                "a",
+                "s",
+                "t",
+                "1",
+                "0",
+                "0",
+                "0"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8217,7 +10285,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8249,7 +10325,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8281,7 +10365,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8313,7 +10405,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8347,7 +10447,18 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'control-slab']"
+                "c",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l",
+                "-",
+                "s",
+                "l",
+                "a",
+                "b"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8380,7 +10491,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8412,7 +10531,15 @@
                 "P"
             ],
             "parent_experiment_id":[
-                "[u'piControl']"
+                "p",
+                "i",
+                "C",
+                "o",
+                "n",
+                "t",
+                "r",
+                "o",
+                "l"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -8426,10 +10553,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 11:22:54 2017 -0700",
+        "creation_date":"Wed Apr 5 11:23:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (322; gf60fb02)",
+        "latest_tag_point":"3.2.2 (336; g1632f46)",
         "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"7286edbe875fd312b5565d7d3cc06b74d6a95dec"
+        "previous_commit":"39bc4dad40a44545047f702c8ec238700bf2eccb"
     }
 }

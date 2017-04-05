@@ -245,8 +245,8 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 # Fix issues
 keyList = experiment_id.keys()
 for count,key in enumerate(keyList):
-    experiment_id[key]['parent_activity_id'] = list([experiment_id[key]['parent_activity_id']])
-    experiment_id[key]['parent_experiment_id'] = list([experiment_id[key]['parent_experiment_id']])
+    experiment_id[key]['parent_activity_id'] = list(experiment_id[key]['parent_activity_id'])
+    experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

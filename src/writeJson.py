@@ -140,6 +140,7 @@ PJD 22 Mar 2017    - Revise experiment_id names and details for 2 RFMIP experime
 PJD 29 Mar 2017    - Revise experiment_id piClim-aer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/261
 PJD  5 Apr 2017    - Remove deprecated table_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/266
 PJD  5 Apr 2017    - Convert experiment_id parent* entries to list https://github.com/WCRP-CMIP/CMIP6_CVs/issues/267
+PJD  5 Apr 2017    - Correct source_id nominal_resolution entries to realm list https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -164,7 +165,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Convert experiment_id parent* entries to list\"'
+commitMessage = '\"Correct source_id nominal_resolution entries to realm list\"'
 
 #%% Define functions
 # Get repo metadata
@@ -243,34 +244,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-keyList = experiment_id.keys()
-for count,key in enumerate(keyList):
-    entry = experiment_id[key]['parent_activity_id']
-    print entry
-    #entry = str(entry).replace('[','').replace(']','')
-    entry = entry[0]
-    print entry
-    if isinstance(entry,list) and len(entry) < 2:
-        entry = entry[0]
-        print entry
-    if isinstance(entry,list):
-        experiment_id[key]['parent_activity_id'] = entry
-    else:
-        experiment_id[key]['parent_activity_id'] = [entry]
-    
-    entry = experiment_id[key]['parent_experiment_id']
-    print entry
-    #entry = str(entry).replace('[','').replace(']','')
-    entry = entry[0]
-    print entry
-    if isinstance(entry,list) and len(entry) < 2:
-        entry = entry[0]
-        print entry
-    if isinstance(entry,list):
-        experiment_id[key]['parent_experiment_id'] = entry
-    else:
-        experiment_id[key]['parent_experiment_id'] = [entry]
-    #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}
@@ -542,6 +515,21 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+keyList = source_id.keys()
+for count,key in enumerate(keyList):
+    source_id[key]['atmos'] = source_id[key]['atmosphere']
+    source_id[key].pop('atmosphere')
+    source_id[key]['atmosChem'] = source_id[key]['atmospheric_chemistry']
+    source_id[key].pop('atmospheric_chemistry')
+    source_id[key]['land'] = source_id[key]['land_surface']
+    source_id[key].pop('land_surface')
+    source_id[key]['landIce'] = source_id[key]['land_ice']
+    source_id[key].pop('land_ice')
+    source_id[key]['ocnBgchem'] = source_id[key]['ocean_biogeochemistry']
+    source_id[key].pop('ocean_biogeochemistry')
+    source_id[key]['seaIce'] = source_id[key]['sea_ice']
+    source_id[key].pop('sea_ice')
+
 # Add in new dictionary entries
 #==============================================================================
 #source_id['IITM-ESM'] = {}

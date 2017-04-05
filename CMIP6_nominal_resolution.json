@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 09:31:06 2017 -0700",
+        "creation_date":"Wed Apr 5 09:32:53 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (59; gdd97a49)",
-        "note":"Remove deprecated table_id entries",
-        "previous_commit":"2bb61319f3015bfdc006658c67a4da9aa702adb0"
+        "latest_tag_point":"note: ",
+        "note":"Issue266 table id delete items (#269)",
+        "previous_commit":"c82cde8a897fa43f8c4d9fddffb15ebb63ceac8e"
     }
 }

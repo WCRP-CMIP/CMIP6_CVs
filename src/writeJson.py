@@ -250,7 +250,12 @@ for count,key in enumerate(keyList):
         experiment_id[key]['parent_activity_id'] = entry
     else:
         experiment_id[key]['parent_activity_id'] = list(entry)
-    experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])
+    entry = experiment_id[key]['parent_experiment_id']
+    if isinstance(entry,list):
+        experiment_id[key]['parent_experiment_id'] = entry
+    else:
+        experiment_id[key]['parent_experiment_id'] = list(entry)
+    #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])
 #==============================================================================
 # Example new experiment_id entry
 #experiment_id['ism-bsmb-std'] = {}

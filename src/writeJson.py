@@ -247,6 +247,7 @@ keyList = experiment_id.keys()
 for count,key in enumerate(keyList):
     entry = experiment_id[key]['parent_activity_id']
     print entry
+    entry = str(entry).replace('[','').replace(']','')
     if isinstance(entry,list):
         experiment_id[key]['parent_activity_id'] = [', '.join(map(str,entry))]
     else:

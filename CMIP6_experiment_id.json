@@ -16,16 +16,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -53,16 +49,12 @@
             "min_number_yrs_per_sim":"210",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "1pctCO2"
-                    ]
+                    "1pctCO2"
                 ]
             ],
             "required_model_components":[
@@ -89,16 +81,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -126,16 +114,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -163,16 +147,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -200,16 +180,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -238,16 +214,12 @@
             "min_number_yrs_per_sim":"350",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl-withism"
-                    ]
+                    "piControl-withism"
                 ]
             ],
             "required_model_components":[
@@ -276,16 +248,12 @@
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -312,16 +280,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -348,16 +312,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -384,16 +344,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -421,16 +377,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -458,16 +410,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -494,16 +442,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -530,16 +474,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -567,16 +507,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -603,16 +539,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "abrupt4xCO2"
-                    ]
+                    "abrupt4xCO2"
                 ]
             ],
             "required_model_components":[
@@ -639,16 +571,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "abrupt4xCO2"
-                    ]
+                    "abrupt4xCO2"
                 ]
             ],
             "required_model_components":[
@@ -675,16 +603,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "abrupt4xCO2"
-                    ]
+                    "abrupt4xCO2"
                 ]
             ],
             "required_model_components":[
@@ -712,16 +636,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -749,16 +669,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -786,16 +702,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -823,16 +735,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -860,16 +768,12 @@
             "min_number_yrs_per_sim":"150",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -895,14 +799,10 @@
             "experiment_id":"amip",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -927,14 +827,10 @@
             "experiment_id":"amip-4xCO2",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -959,14 +855,10 @@
             "experiment_id":"amip-TIP",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -991,14 +883,10 @@
             "experiment_id":"amip-TIP-nosh",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1023,14 +911,10 @@
             "experiment_id":"amip-a4SST-4xCO2",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1055,14 +939,10 @@
             "experiment_id":"amip-future4K",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1087,14 +967,10 @@
             "experiment_id":"amip-hist",
             "min_number_yrs_per_sim":"144",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1119,14 +995,10 @@
             "experiment_id":"amip-hld",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1152,14 +1024,10 @@
             "experiment_id":"amip-lfmip-pObs",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1185,14 +1053,10 @@
             "experiment_id":"amip-lfmip-pdLC",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1218,14 +1082,10 @@
             "experiment_id":"amip-lfmip-rmLC",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1250,14 +1110,10 @@
             "experiment_id":"amip-lwoff",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1282,14 +1138,10 @@
             "experiment_id":"amip-m4K",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1314,14 +1166,10 @@
             "experiment_id":"amip-p4K",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1346,14 +1194,10 @@
             "experiment_id":"amip-p4K-lwoff",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1378,14 +1222,10 @@
             "experiment_id":"amip-piForcing",
             "min_number_yrs_per_sim":"145",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1410,14 +1250,10 @@
             "experiment_id":"aqua-4xCO2",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1442,14 +1278,10 @@
             "experiment_id":"aqua-control",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1474,14 +1306,10 @@
             "experiment_id":"aqua-control-lwoff",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1506,14 +1334,10 @@
             "experiment_id":"aqua-p4K",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1538,14 +1362,10 @@
             "experiment_id":"aqua-p4K-lwoff",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -1570,16 +1390,12 @@
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "spinup-1950"
-                    ]
+                    "spinup-1950"
                 ]
             ],
             "required_model_components":[
@@ -1606,14 +1422,10 @@
             "experiment_id":"control-slab",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -1640,14 +1452,10 @@
             "experiment_id":"dcppA-assim",
             "min_number_yrs_per_sim":"56",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1674,18 +1482,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -1769,18 +1573,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -1864,16 +1664,12 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -1957,18 +1753,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2008,16 +1800,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2045,16 +1833,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2082,16 +1866,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2119,16 +1899,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2156,16 +1932,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2193,16 +1965,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2230,16 +1998,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2267,16 +2031,12 @@
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -2304,14 +2064,10 @@
             "experiment_id":"dcppC-atl-spg",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2345,18 +2101,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2384,18 +2136,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2424,18 +2172,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2463,18 +2207,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2502,18 +2242,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2541,18 +2277,14 @@
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 [
-                    [
-                        "no parent",
-                        "DCPP"
-                    ]
+                    "no parent",
+                    "DCPP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "no parent",
-                        "dcppA-assim"
-                    ]
+                    "no parent",
+                    "dcppA-assim"
                 ]
             ],
             "required_model_components":[
@@ -2580,16 +2312,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2617,16 +2345,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2654,16 +2378,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2691,16 +2411,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2728,16 +2444,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2765,16 +2477,12 @@
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -2803,16 +2511,12 @@
             "min_number_yrs_per_sim":"81",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -2839,16 +2543,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "esm-piControl"
-                    ]
+                    "esm-piControl"
                 ]
             ],
             "required_model_components":[
@@ -2876,16 +2576,12 @@
             "min_number_yrs_per_sim":"1",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "esm-hist"
-                    ]
+                    "esm-hist"
                 ]
             ],
             "required_model_components":[
@@ -2913,16 +2609,12 @@
             "min_number_yrs_per_sim":"500",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "esm-piControl-spinup"
-                    ]
+                    "esm-piControl-spinup"
                 ]
             ],
             "required_model_components":[
@@ -2949,14 +2641,10 @@
             "experiment_id":"esm-piControl-spinup",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -2983,16 +2671,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "esm-hist"
-                    ]
+                    "esm-hist"
                 ]
             ],
             "required_model_components":[
@@ -3020,16 +2704,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "esm-hist"
-                    ]
+                    "esm-hist"
                 ]
             ],
             "required_model_components":[
@@ -3058,16 +2738,12 @@
             "min_number_yrs_per_sim":"70",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3095,16 +2771,12 @@
             "min_number_yrs_per_sim":"70",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3132,16 +2804,12 @@
             "min_number_yrs_per_sim":"70",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3169,16 +2837,12 @@
             "min_number_yrs_per_sim":"70",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3206,16 +2870,12 @@
             "min_number_yrs_per_sim":"70",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3242,16 +2902,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "GeoMIP"
-                    ]
+                    "GeoMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "G1"
-                    ]
+                    "G1"
                 ]
             ],
             "required_model_components":[
@@ -3277,16 +2933,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-1950"
-                    ]
+                    "hist-1950"
                 ]
             ],
             "required_model_components":[
@@ -3312,16 +2964,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "highresSST-present"
-                    ]
+                    "highresSST-present"
                 ]
             ],
             "required_model_components":[
@@ -3347,16 +2995,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "highresSST-present"
-                    ]
+                    "highresSST-present"
                 ]
             ],
             "required_model_components":[
@@ -3382,16 +3026,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "highresSST-present"
-                    ]
+                    "highresSST-present"
                 ]
             ],
             "required_model_components":[
@@ -3417,16 +3057,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "highresSST-present"
-                    ]
+                    "highresSST-present"
                 ]
             ],
             "required_model_components":[
@@ -3451,14 +3087,10 @@
             "experiment_id":"highresSST-present",
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -3483,16 +3115,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "highresSST-present"
-                    ]
+                    "highresSST-present"
                 ]
             ],
             "required_model_components":[
@@ -3518,16 +3146,12 @@
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
                 [
-                    [
-                        "HighResMIP"
-                    ]
+                    "HighResMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "spinup-1950"
-                    ]
+                    "spinup-1950"
                 ]
             ],
             "required_model_components":[
@@ -3553,16 +3177,12 @@
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -3592,16 +3212,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3629,16 +3245,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3666,16 +3278,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3703,16 +3311,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3740,16 +3344,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3776,16 +3376,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3814,16 +3410,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3851,16 +3443,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3887,16 +3475,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3924,16 +3508,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -3962,16 +3542,12 @@
             "min_number_yrs_per_sim":"145",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -3999,16 +3575,12 @@
             "min_number_yrs_per_sim":"145",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -4036,16 +3608,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4069,16 +3637,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4102,16 +3666,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4138,16 +3698,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4175,16 +3731,12 @@
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4209,14 +3761,10 @@
             "experiment_id":"histSST",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4239,14 +3787,10 @@
             "experiment_id":"histSST-1950HC",
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4272,14 +3816,10 @@
             "experiment_id":"histSST-piAer",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4302,14 +3842,10 @@
             "experiment_id":"histSST-piCH4",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4335,14 +3871,10 @@
             "experiment_id":"histSST-piN2O",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4369,14 +3901,10 @@
             "experiment_id":"histSST-piNTCF",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4399,14 +3927,10 @@
             "experiment_id":"histSST-piO3",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4435,16 +3959,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -4472,16 +3992,12 @@
             "min_number_yrs_per_sim":"1",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -4509,16 +4025,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl-withism"
-                    ]
+                    "piControl-withism"
                 ]
             ],
             "required_model_components":[
@@ -4543,16 +4055,12 @@
             "min_number_yrs_per_sim":"350",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-piControl-self"
-                    ]
+                    "ism-piControl-self"
                 ]
             ],
             "required_model_components":[
@@ -4576,16 +4084,12 @@
             "min_number_yrs_per_sim":"350",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-pdControl-std"
-                    ]
+                    "ism-pdControl-std"
                 ]
             ],
             "required_model_components":[
@@ -4609,16 +4113,12 @@
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-ctrl-std"
-                    ]
+                    "ism-ctrl-std"
                 ]
             ],
             "required_model_components":[
@@ -4642,16 +4142,12 @@
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-ctrl-std"
-                    ]
+                    "ism-ctrl-std"
                 ]
             ],
             "required_model_components":[
@@ -4675,16 +4171,12 @@
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-ctrl-std"
-                    ]
+                    "ism-ctrl-std"
                 ]
             ],
             "required_model_components":[
@@ -4707,14 +4199,10 @@
             "experiment_id":"ism-ctrl-std",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "ISM"
@@ -4737,16 +4225,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-piControl-self"
-                    ]
+                    "ism-piControl-self"
                 ]
             ],
             "required_model_components":[
@@ -4770,16 +4254,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-pdControl-std"
-                    ]
+                    "ism-pdControl-std"
                 ]
             ],
             "required_model_components":[
@@ -4802,14 +4282,10 @@
             "experiment_id":"ism-lig127k-std",
             "min_number_yrs_per_sim":"20000",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "ISM"
@@ -4831,14 +4307,10 @@
             "experiment_id":"ism-pdControl-std",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "ISM"
@@ -4860,14 +4332,10 @@
             "experiment_id":"ism-piControl-self",
             "min_number_yrs_per_sim":"500",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "ISM"
@@ -4890,16 +4358,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-historical-self"
-                    ]
+                    "ism-historical-self"
                 ]
             ],
             "required_model_components":[
@@ -4923,16 +4387,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ism-historical-std"
-                    ]
+                    "ism-historical-std"
                 ]
             ],
             "required_model_components":[
@@ -4955,14 +4415,10 @@
             "experiment_id":"land-cCO2",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -4984,14 +4440,10 @@
             "experiment_id":"land-cClim",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5013,14 +4465,10 @@
             "experiment_id":"land-crop-grass",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5042,14 +4490,10 @@
             "experiment_id":"land-crop-noFert",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5071,14 +4515,10 @@
             "experiment_id":"land-crop-noIrrig",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5100,14 +4540,10 @@
             "experiment_id":"land-crop-noIrrigFert",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5129,14 +4565,10 @@
             "experiment_id":"land-future",
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5159,14 +4591,10 @@
             "experiment_id":"land-hist",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5188,14 +4616,10 @@
             "experiment_id":"land-hist-altLu1",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5217,14 +4641,10 @@
             "experiment_id":"land-hist-altLu2",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5246,14 +4666,10 @@
             "experiment_id":"land-hist-altStartYear",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5275,14 +4691,10 @@
             "experiment_id":"land-hist-cruNcep",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5304,14 +4716,10 @@
             "experiment_id":"land-hist-princeton",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5333,14 +4741,10 @@
             "experiment_id":"land-hist-wfdei",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5362,14 +4766,10 @@
             "experiment_id":"land-noFire",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5391,14 +4791,10 @@
             "experiment_id":"land-noLu",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5420,14 +4816,10 @@
             "experiment_id":"land-noPasture",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5449,14 +4841,10 @@
             "experiment_id":"land-noShiftCultivate",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5478,14 +4866,10 @@
             "experiment_id":"land-noWoodHarv",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "LAND"
@@ -5512,16 +4896,12 @@
             "min_number_yrs_per_sim":"35",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5549,16 +4929,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5586,16 +4962,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5623,16 +4995,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5660,16 +5028,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5697,16 +5061,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5734,16 +5094,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5771,16 +5127,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5808,16 +5160,12 @@
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -5844,14 +5192,10 @@
             "experiment_id":"lgm",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5877,14 +5221,10 @@
             "experiment_id":"lig127k",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5910,14 +5250,10 @@
             "experiment_id":"midHolocene",
             "min_number_yrs_per_sim":"200",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5943,14 +5279,10 @@
             "experiment_id":"midPliocene-eoi400",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -5972,14 +5304,10 @@
             "experiment_id":"omip1",
             "min_number_yrs_per_sim":"310",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "OGCM"
@@ -6001,14 +5329,10 @@
             "experiment_id":"omip1-spunup",
             "min_number_yrs_per_sim":"310",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "OGCM"
@@ -6030,14 +5354,10 @@
             "experiment_id":"omip2",
             "min_number_yrs_per_sim":"295",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "OGCM"
@@ -6059,14 +5379,10 @@
             "experiment_id":"omip2-spunup",
             "min_number_yrs_per_sim":"295",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "OGCM"
@@ -6092,14 +5408,10 @@
             "experiment_id":"past1000",
             "min_number_yrs_per_sim":"1000",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -6124,16 +5436,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6158,16 +5466,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6193,16 +5497,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6230,16 +5530,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6266,16 +5562,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6302,16 +5594,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6339,16 +5627,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6374,16 +5658,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6408,16 +5688,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6443,16 +5719,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6478,16 +5750,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6515,16 +5783,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6549,16 +5813,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6587,16 +5847,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6621,16 +5877,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6658,16 +5910,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6694,16 +5942,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6728,16 +5972,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6767,16 +6007,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6803,16 +6039,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6840,16 +6072,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6876,16 +6104,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6912,16 +6136,12 @@
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6948,16 +6168,12 @@
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -6984,16 +6200,12 @@
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7020,16 +6232,12 @@
             "min_number_yrs_per_sim":"251",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7056,16 +6264,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7089,16 +6293,12 @@
             "min_number_yrs_per_sim":"",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7122,16 +6322,12 @@
             "min_number_yrs_per_sim":"",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7155,16 +6351,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7188,16 +6380,12 @@
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7225,16 +6413,12 @@
             "min_number_yrs_per_sim":"500",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl-spinup"
-                    ]
+                    "piControl-spinup"
                 ]
             ],
             "required_model_components":[
@@ -7261,14 +6445,10 @@
             "experiment_id":"piControl-spinup",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7294,14 +6474,10 @@
             "experiment_id":"piControl-withism",
             "min_number_yrs_per_sim":"500",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM",
@@ -7328,16 +6504,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7364,16 +6536,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7400,16 +6568,12 @@
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7436,16 +6600,12 @@
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7472,16 +6632,12 @@
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -7504,14 +6660,10 @@
             "experiment_id":"rad-irf",
             "min_number_yrs_per_sim":"",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "RAD"
@@ -7535,14 +6687,10 @@
             "experiment_id":"spinup-1950",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "parent_experiment_id":[
-                [
-                    "no parent"
-                ]
+                "no parent"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7569,16 +6717,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7606,16 +6750,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7643,16 +6783,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7680,16 +6816,12 @@
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
                 [
-                    [
-                        "DAMIP"
-                    ]
+                    "DAMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-GHG"
-                    ]
+                    "hist-GHG"
                 ]
             ],
             "required_model_components":[
@@ -7717,16 +6849,12 @@
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
                 [
-                    [
-                        "DAMIP"
-                    ]
+                    "DAMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-aer"
-                    ]
+                    "hist-aer"
                 ]
             ],
             "required_model_components":[
@@ -7754,16 +6882,12 @@
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
                 [
-                    [
-                        "DAMIP"
-                    ]
+                    "DAMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-nat"
-                    ]
+                    "hist-nat"
                 ]
             ],
             "required_model_components":[
@@ -7790,16 +6914,12 @@
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
                 [
-                    [
-                        "DAMIP"
-                    ]
+                    "DAMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-stratO3"
-                    ]
+                    "hist-stratO3"
                 ]
             ],
             "required_model_components":[
@@ -7828,16 +6948,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7864,16 +6980,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7902,16 +7014,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -7937,16 +7045,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -7973,16 +7077,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8009,16 +7109,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8043,16 +7139,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8081,16 +7173,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8115,16 +7203,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8152,16 +7236,12 @@
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp370"
-                    ]
+                    "ssp370"
                 ]
             ],
             "required_model_components":[
@@ -8190,16 +7270,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -8227,16 +7303,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -8264,16 +7336,12 @@
             "min_number_yrs_per_sim":"61",
             "parent_activity_id":[
                 [
-                    [
-                        "ScenarioMIP"
-                    ]
+                    "ScenarioMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "ssp585"
-                    ]
+                    "ssp585"
                 ]
             ],
             "required_model_components":[
@@ -8300,16 +7368,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "C4MIP"
-                    ]
+                    "C4MIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-bgc"
-                    ]
+                    "hist-bgc"
                 ]
             ],
             "required_model_components":[
@@ -8338,16 +7402,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -8374,16 +7434,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "C4MIP"
-                    ]
+                    "C4MIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "hist-bgc"
-                    ]
+                    "hist-bgc"
                 ]
             ],
             "required_model_components":[
@@ -8412,16 +7468,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "ISMIP6"
-                    ]
+                    "ISMIP6"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical-withism"
-                    ]
+                    "historical-withism"
                 ]
             ],
             "required_model_components":[
@@ -8450,16 +7502,12 @@
             "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -8487,16 +7535,12 @@
             "min_number_yrs_per_sim":"85",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "historical"
-                    ]
+                    "historical"
                 ]
             ],
             "required_model_components":[
@@ -8524,16 +7568,12 @@
             "min_number_yrs_per_sim":"50",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8561,16 +7601,12 @@
             "min_number_yrs_per_sim":"69",
             "parent_activity_id":[
                 [
-                    [
-                        "PMIP"
-                    ]
+                    "PMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "past1000"
-                    ]
+                    "past1000"
                 ]
             ],
             "required_model_components":[
@@ -8598,16 +7634,12 @@
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8635,16 +7667,12 @@
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8672,16 +7700,12 @@
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8709,16 +7733,12 @@
             "min_number_yrs_per_sim":"3",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8746,16 +7766,12 @@
             "min_number_yrs_per_sim":"3",
             "parent_activity_id":[
                 [
-                    [
-                        "VolMIP"
-                    ]
+                    "VolMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "control-slab"
-                    ]
+                    "control-slab"
                 ]
             ],
             "required_model_components":[
@@ -8784,16 +7800,12 @@
             "min_number_yrs_per_sim":"3",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8821,16 +7833,12 @@
             "min_number_yrs_per_sim":"3",
             "parent_activity_id":[
                 [
-                    [
-                        "CMIP"
-                    ]
+                    "CMIP"
                 ]
             ],
             "parent_experiment_id":[
                 [
-                    [
-                        "piControl"
-                    ]
+                    "piControl"
                 ]
             ],
             "required_model_components":[
@@ -8845,10 +7853,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 10:43:07 2017 -0700",
+        "creation_date":"Wed Apr 5 10:43:13 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (56; ge789991)",
+        "latest_tag_point":"3.2.2 (70; gcdf6bbe)",
         "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"9de7f3a980fddce98cc38e15118af33e4fa097df"
+        "previous_commit":"42702c37a0a92376951f0a3be9b25bd08b93e6ee"
     }
 }

@@ -1213,10 +1213,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 11:40:10 2017 -0700",
+        "creation_date":"Wed Apr 5 11:40:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (66; gad47db5)",
+        "latest_tag_point":"3.2.2 (80; ge0e663c)",
         "note":"Correct source_id nominal_resolution entries to realm list",
-        "previous_commit":"4fb9c67cb488d8d2ea6dcf59b5df12724b233c7f"
+        "previous_commit":"564f3dbae35bba07c6b0a5cd658c588cebde3453"
     }
 }

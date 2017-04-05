@@ -254,7 +254,7 @@ for count,key in enumerate(keyList):
         entry = entry[0]
         print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_activity_id'] = entry
+        experiment_id[key]['parent_activity_id'] = list(entry)
     else:
         experiment_id[key]['parent_activity_id'] = list(entry)
     
@@ -267,7 +267,7 @@ for count,key in enumerate(keyList):
         entry = entry[0]
         print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_experiment_id'] = entry
+        experiment_id[key]['parent_experiment_id'] = list(entry)
     else:
         experiment_id[key]['parent_experiment_id'] = list(entry)
     #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])

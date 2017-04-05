@@ -26,7 +26,7 @@ If you suspect your institution may have already been registered, first check [C
 *********************************************
 ## Register your model
 *********************************************
-To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
+To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information (You can see currently registered models at [CMIP6_source_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_source_id.html)):
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6). This label is limited to 16 characters in length.
 

@@ -246,11 +246,13 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 keyList = experiment_id.keys()
 for count,key in enumerate(keyList):
     entry = experiment_id[key]['parent_activity_id']
+    print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_activity_id'] = [', '.join(map(str,str(entry)))]
+        experiment_id[key]['parent_activity_id'] = [', '.join(map(str,entry))]
     else:
         experiment_id[key]['parent_activity_id'] = list(entry)
     entry = experiment_id[key]['parent_experiment_id']
+    print entry
     if isinstance(entry,list):
         experiment_id[key]['parent_experiment_id'] = [', '.join(map(str, entry))]
     else:

@@ -24,11 +24,17 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
+#%% Start
+#<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+#<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+#<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+
+#%% Working
 print >> fo, """<html>
 <head>
-<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
+<script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script>
 $(document).ready( function () {
     $('#table_id').DataTable();

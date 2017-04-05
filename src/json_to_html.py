@@ -12,7 +12,7 @@ http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-gi
 # jquery/data-tabled html doc
 import json
 
-# Process experiment_id
+#%% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
 f = open(infile)
 dict = json.load(f)
@@ -24,12 +24,11 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-#%% Start
+# Old remote references
 #<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-#%% Working
 print >> fo, """<html>
 <head>
 <link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
@@ -82,7 +81,7 @@ print >> fo, """
 </html>
 """
 
-# Process institution_id
+#%% Process institution_id
 infile = '../CMIP6_institution_id.json'
 f = open(infile)
 dict = json.load(f)
@@ -96,9 +95,9 @@ fo = open(fout, 'w')
 
 print >> fo, """<html>
 <head>
-<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
+<script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script>
 $(document).ready( function () {
     $('#table_id').DataTable();
@@ -133,7 +132,7 @@ print >> fo, """
 </html>
 """
 
-# Process source_id
+#%% Process source_id
 infile = '../CMIP6_source_id.json'
 f = open(infile)
 dict = json.load(f)
@@ -147,9 +146,9 @@ fo = open(fout, 'w')
 
 print >> fo, """<html>
 <head>
-<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
+<script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script>
 $(document).ready( function () {
     $('#table_id').DataTable();

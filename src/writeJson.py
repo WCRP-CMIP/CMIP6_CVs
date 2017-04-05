@@ -250,7 +250,7 @@ for count,key in enumerate(keyList):
     #entry = str(entry).replace('[','').replace(']','')
     entry = entry[0]
     print entry
-    if isinstance(entry,list) and len(entry) < 2:
+    if isinstance(entry,list): # and len(entry) < 2:
         entry = entry[0]
         print entry
     if isinstance(entry,list):
@@ -263,7 +263,7 @@ for count,key in enumerate(keyList):
     #entry = str(entry).replace('[','').replace(']','')
     entry = entry[0]
     print entry
-    if isinstance(entry,list) and len(entry) < 2:
+    if isinstance(entry,list): # and len(entry) < 2:
         entry = entry[0]
         print entry
     if isinstance(entry,list):

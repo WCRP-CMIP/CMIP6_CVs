@@ -247,12 +247,12 @@ keyList = experiment_id.keys()
 for count,key in enumerate(keyList):
     entry = experiment_id[key]['parent_activity_id']
     if isinstance(entry,list):
-        experiment_id[key]['parent_activity_id'] = entry
+        experiment_id[key]['parent_activity_id'] = [', '.join(map(str, entry))]
     else:
         experiment_id[key]['parent_activity_id'] = list(entry)
     entry = experiment_id[key]['parent_experiment_id']
     if isinstance(entry,list):
-        experiment_id[key]['parent_experiment_id'] = entry
+        experiment_id[key]['parent_experiment_id'] = [', '.join(map(str, entry))]
     else:
         experiment_id[key]['parent_experiment_id'] = list(entry)
     #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])

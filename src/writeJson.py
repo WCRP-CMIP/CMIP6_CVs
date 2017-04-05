@@ -250,11 +250,11 @@ for count,key in enumerate(keyList):
     #entry = str(entry).replace('[','').replace(']','')
     entry = entry[0]
     print entry
-    if isinstance(entry,list): # and len(entry) < 2:
+    if isinstance(entry,list) and len(entry) < 2:
         entry = entry[0]
         print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_activity_id'] = [entry]
+        experiment_id[key]['parent_activity_id'] = entry
     else:
         experiment_id[key]['parent_activity_id'] = [entry]
     
@@ -263,11 +263,11 @@ for count,key in enumerate(keyList):
     #entry = str(entry).replace('[','').replace(']','')
     entry = entry[0]
     print entry
-    if isinstance(entry,list): # and len(entry) < 2:
+    if isinstance(entry,list) and len(entry) < 2:
         entry = entry[0]
         print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_experiment_id'] = [entry]
+        experiment_id[key]['parent_experiment_id'] = entry
     else:
         experiment_id[key]['parent_experiment_id'] = [entry]
     #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])

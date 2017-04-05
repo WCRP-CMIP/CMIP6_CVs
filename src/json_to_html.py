@@ -70,6 +70,7 @@ for exp in dict1.keys():
     print >> fo, "<tr><td>%s</td>" % exp
     for k in ids:
         st = exp_dict[k]
+        print st
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         print >> fo, "<td>%s</td>" % st

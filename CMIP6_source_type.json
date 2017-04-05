@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 10:46:45 2017 -0700",
+        "creation_date":"Wed Apr 5 10:53:32 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (164; g3c45479)",
+        "latest_tag_point":"3.2.2 (178; g11ed75f)",
         "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"ead4965473c47123ec283b92c66f0cef832ae31f"
+        "previous_commit":"31ec515adc484c87c1133d864fe6fa0ed3dddde1"
     }
 }

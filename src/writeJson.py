@@ -138,6 +138,7 @@ PJD 17 Mar 2017    - Augment source_id info request https://github.com/WCRP-CMIP
 PJD 20 Mar 2017    - Register institution_id CAMS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/245
 PJD 22 Mar 2017    - Revise experiment_id names and details for 2 RFMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/258
 PJD 29 Mar 2017    - Revise experiment_id piClim-aer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/261
+PJD  5 Apr 2017    - Remove deprecated table_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/266
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -162,7 +163,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id piClim-aer\"'
+commitMessage = '\"Remove deprecated table_id entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -581,7 +582,6 @@ table_id = [
     '6hrPlev',
     '6hrPlevPt',
     'AERday',
-    'AERfx',
     'AERhr',
     'AERmon',
     'AERmonZ',
@@ -590,7 +590,6 @@ table_id = [
     'CFday',
     'CFmon',
     'CFsubhr',
-    'CFsubhrOff',
     'E1hr',
     'E1hrClimMon',
     'E3hr',
@@ -620,8 +619,7 @@ table_id = [
     'SIday',
     'SImon',
     'day',
-    'fx',
-    'grids'
+    'fx'
 ]
 
 #%% Write variables to files

@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Mar 29 16:09:01 2017 -0700",
+        "creation_date":"Wed Apr 5 09:31:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (54; g8fb596c)",
-        "note":"Revise experiment_id piClim-aer",
-        "previous_commit":"8cbc681435feb0fde9f2853628500d85d457a52d"
+        "latest_tag_point":"3.2.2 (64; g9eccc73)",
+        "note":"Remove deprecated table_id entries",
+        "previous_commit":"a1470ee462a360446b347ed62805d84e37ee5fbc"
     }
 }

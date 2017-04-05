@@ -14,12 +14,7 @@
             "experiment":"1 percent per year increase in CO2",
             "experiment_id":"1pctCO2",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -46,12 +41,7 @@
             "experiment":"extension from year 140 of 1pctCO2 with 4xCO2",
             "experiment_id":"1pctCO2-4xext",
             "min_number_yrs_per_sim":"210",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'1pctCO2']"
             ],
@@ -77,12 +67,7 @@
             "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment",
             "experiment_id":"1pctCO2-bgc",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -109,12 +94,7 @@
             "experiment":"radiatively-coupled version of 1 percent per year increasing CO2 experiment",
             "experiment_id":"1pctCO2-rad",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -141,12 +121,7 @@
             "experiment":"1 percent per year increasing CO2 experiment with increasing N-deposition",
             "experiment_id":"1pctCO2Ndep",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -173,12 +148,7 @@
             "experiment":"biogeochemically-coupled version of 1 percent per year increasing CO2 experiment with increasing N-deposition",
             "experiment_id":"1pctCO2Ndep-bgc",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -206,14 +176,7 @@
             "experiment":"simulation with interactive ice sheet forced by 1 percent per year increase in CO2 to 4xCO2 (subsequently held fixed)",
             "experiment_id":"1pctCO2to4x-withism",
             "min_number_yrs_per_sim":"350",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'piControl-withism']"
             ],
@@ -241,12 +204,7 @@
             "experiment":"abrupt quadrupling of CO2 plus reduction in total solar irradiance",
             "experiment_id":"G1",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -272,19 +230,7 @@
             "experiment":"SSTs, forcings, and other prescribed conditions from year 2020 of SSP5-8.5",
             "experiment_id":"G6SST1",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -310,19 +256,7 @@
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6solar",
             "experiment_id":"G6SST2-solar",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -348,19 +282,7 @@
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G6sulfur",
             "experiment_id":"G6SST2-sulfur",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -387,12 +309,7 @@
             "experiment":"total solar irradiance reduction to reduce net forcing from SSP585 to SSP245",
             "experiment_id":"G6solar",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -419,12 +336,7 @@
             "experiment":"stratospheric sulfate aerosol injection to reduce net forcing from SSP585 to SSP245",
             "experiment_id":"G6sulfur",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -450,19 +362,7 @@
             "experiment":"SSTs from year 2020 of SSP5-8.5; forcings and other prescribed conditions from year 2020 of SSP5-8.5 and cirrus thinning",
             "experiment_id":"G7SST1-cirrus",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -488,19 +388,7 @@
             "experiment":"SSTs from year 2100 of SSP5-8.5; forcings and other prescribed conditions from year 2100 of G7cirrus",
             "experiment_id":"G7SST2-cirrus",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -527,12 +415,7 @@
             "experiment":"increase cirrus ice crystal fall speed to reduce net forcing in SSP585 by 1 W m-2",
             "experiment_id":"G7cirrus",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -558,12 +441,7 @@
             "experiment":"as piSST but with SSTs from abrupt4xCO2",
             "experiment_id":"a4SST",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'abrupt4xCO2']"
             ],
@@ -589,12 +467,7 @@
             "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2",
             "experiment_id":"a4SSTice",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'abrupt4xCO2']"
             ],
@@ -620,12 +493,7 @@
             "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2, and 4xCO2 seen by radiation and vegetation",
             "experiment_id":"a4SSTice-4xCO2",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'abrupt4xCO2']"
             ],
@@ -652,12 +520,7 @@
             "experiment":"abrupt halving of CO2",
             "experiment_id":"abrupt-0p5xCO2",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -684,12 +547,7 @@
             "experiment":"abrupt doubling of CO2",
             "experiment_id":"abrupt-2xCO2",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -716,12 +574,7 @@
             "experiment":"abrupt quadrupling of CO2",
             "experiment_id":"abrupt-4xCO2",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -748,12 +601,7 @@
             "experiment":"abrupt 4% decrease in solar constant",
             "experiment_id":"abrupt-solm4p",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -780,12 +628,7 @@
             "experiment":"abrupt 4% increase in solar constant",
             "experiment_id":"abrupt-solp4p",
             "min_number_yrs_per_sim":"150",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -811,17 +654,7 @@
             "experiment":"AMIP",
             "experiment_id":"amip",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -847,17 +680,7 @@
             "experiment":"AMIP SSTs with 4xCO2",
             "experiment_id":"amip-4xCO2",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -883,17 +706,7 @@
             "experiment":"same as \"amip\" run, but surface elevations of the Tibetan-Iranian Plateau and Himalayas reduced to 500m",
             "experiment_id":"amip-TIP",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -919,17 +732,7 @@
             "experiment":"same as \"amip\" run, but sensible heat not allowed for elevations of the Tibetan-Iranian Plateau and Himalayas above 500m",
             "experiment_id":"amip-TIP-nosh",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -955,17 +758,7 @@
             "experiment":"as AMIP but with warming pattern from abrupt4xCO2 added to SSTs and 4xCO2 seen by radiation and vegetation",
             "experiment_id":"amip-a4SST-4xCO2",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -991,17 +784,7 @@
             "experiment":"AMIP with patterned 4K SST increase",
             "experiment_id":"amip-future4K",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1027,17 +810,7 @@
             "experiment":"AMIP-style simulation covering the period 1870-2014",
             "experiment_id":"amip-hist",
             "min_number_yrs_per_sim":"144",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1063,17 +836,7 @@
             "experiment":"same as \"amip\" run, but surface elevations of the East African Highlands in Africa, Sierra Madre in N. America and Andes in S. America reduced to 500m",
             "experiment_id":"amip-hld",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1100,17 +863,7 @@
             "experiment":"prescribed land (from pseudo-observations) and AMIP SSTs",
             "experiment_id":"amip-lfmip-pObs",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1137,17 +890,7 @@
             "experiment":"prescribed land (from current climatology) and AMIP SSTs",
             "experiment_id":"amip-lfmip-pdLC",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1174,17 +917,7 @@
             "experiment":"prescribed land conditions (from running mean climatology) and AMIP SSTs",
             "experiment_id":"amip-lfmip-rmLC",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1210,17 +943,7 @@
             "experiment":"AMIP experiment with longwave cloud-radiative effects off",
             "experiment_id":"amip-lwoff",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1246,17 +969,7 @@
             "experiment":"AMIP with uniform 4K SST decrease",
             "experiment_id":"amip-m4K",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1282,17 +995,7 @@
             "experiment":"AMIP with uniform 4K SST increase",
             "experiment_id":"amip-p4K",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1318,17 +1021,7 @@
             "experiment":"AMIP experiment with uniform 4K SST increase and with longwave cloud radiative effects off",
             "experiment_id":"amip-p4K-lwoff",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1354,17 +1047,7 @@
             "experiment":"AMIP SSTs with pre-industrial anthropogenic and natural forcing",
             "experiment_id":"amip-piForcing",
             "min_number_yrs_per_sim":"145",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1390,17 +1073,7 @@
             "experiment":"aquaplanet with control SST and 4xCO2",
             "experiment_id":"aqua-4xCO2",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1426,17 +1099,7 @@
             "experiment":"aquaplanet control",
             "experiment_id":"aqua-control",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1462,17 +1125,7 @@
             "experiment":"aquaplanet control with longwave cloud radiative effects off",
             "experiment_id":"aqua-control-lwoff",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1498,17 +1151,7 @@
             "experiment":"aquaplanet with uniform 4K SST increase",
             "experiment_id":"aqua-p4K",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1534,17 +1177,7 @@
             "experiment":"aquaplanet with uniform 4K SST increase and with longwave cloud radiative effects off",
             "experiment_id":"aqua-p4K-lwoff",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1569,18 +1202,7 @@
             "experiment":"coupled control with fixed 1950's forcing (HighResMIP equivalent of pre-industrial control)",
             "experiment_id":"control-1950",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'spinup-1950']"
             ],
@@ -1607,17 +1229,7 @@
             "experiment":"control with slab ocean",
             "experiment_id":"control-slab",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1645,17 +1257,7 @@
             "experiment":"Assimilation run paralleling the historical simulation, which may be used to generate hindcast initial conditions",
             "experiment_id":"dcppA-assim",
             "min_number_yrs_per_sim":"56",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -1682,17 +1284,7 @@
             "experiment":"hindcast initialized based on observations and using historical forcing",
             "experiment_id":"dcppA-hindcast",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -1775,17 +1367,7 @@
             "experiment":"hindcast initialized based on observations but without using knowledge of subsequent historical forcing",
             "experiment_id":"dcppA-hindcast-niff",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -1868,12 +1450,7 @@
             "experiment":"hindcast initialized from historical climate simulation but without using knowledge of subsequent historical forcing",
             "experiment_id":"dcppA-historical-niff",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -1956,17 +1533,7 @@
             "experiment":"forecast initialized from observations with forcing from ssp245",
             "experiment_id":"dcppB-forecast",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2005,12 +1572,7 @@
             "experiment":"Idealized climate impact of negative extratropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-ExTrop-neg",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2037,12 +1599,7 @@
             "experiment":"Idealized climate impact of positive extratropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-ExTrop-pos",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2069,12 +1626,7 @@
             "experiment":"Idealized climate impact of negative tropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-Trop-neg",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2101,12 +1653,7 @@
             "experiment":"idealized positive tropical AMV anomaly pattern",
             "experiment_id":"dcppC-amv-Trop-pos",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2133,12 +1680,7 @@
             "experiment":"Idealized climate impact of negative AMV anomaly pattern",
             "experiment_id":"dcppC-amv-neg",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2165,12 +1707,7 @@
             "experiment":"Idealized climate impact of positive AMV anomaly pattern",
             "experiment_id":"dcppC-amv-pos",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2197,12 +1734,7 @@
             "experiment":"Idealized Atlantic control",
             "experiment_id":"dcppC-atl-control",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2229,12 +1761,7 @@
             "experiment":"pacemaker Atlantic experiment",
             "experiment_id":"dcppC-atl-pacemaker",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -2262,17 +1789,7 @@
             "experiment":"predictability of 1990s warming of Atlantic sub-polar gyre",
             "experiment_id":"dcppC-atl-spg",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -2306,17 +1823,7 @@
             "experiment":"2015 forecast with added Agung forcing",
             "experiment_id":"dcppC-forecast-addAgung",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2343,17 +1850,7 @@
             "experiment":"2015 forecast with added El Chichon forcing",
             "experiment_id":"dcppC-forecast-addElChichon",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2381,17 +1878,7 @@
             "experiment":"2015 forecast with added Pinatubo forcing",
             "experiment_id":"dcppC-forecast-addPinatubo",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2418,17 +1905,7 @@
             "experiment":"hindcast but with only background volcanic forcing to be the same as that used in the 2015 forecast",
             "experiment_id":"dcppC-hindcast-noAgung",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2455,17 +1932,7 @@
             "experiment":"hindcast but with only background volcanic forcing to be the same as that used in the 2015 forecast",
             "experiment_id":"dcppC-hindcast-noElChichon",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2492,17 +1959,7 @@
             "experiment":"hindcast but with only background volcanic forcing to be the same as that used in the 2015 forecast",
             "experiment_id":"dcppC-hindcast-noPinatubo",
             "min_number_yrs_per_sim":"5",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "[u'no parent', u'dcppA-assim']"
             ],
@@ -2529,12 +1986,7 @@
             "experiment":"idealized negative northern extratropical IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-NexTrop-neg",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2561,12 +2013,7 @@
             "experiment":"idealized positive northern extratropical IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-NexTrop-pos",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2593,12 +2040,7 @@
             "experiment":"idealized negative IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-neg",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2625,12 +2067,7 @@
             "experiment":"idealized positive IPV anomaly pattern",
             "experiment_id":"dcppC-ipv-pos",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2657,12 +2094,7 @@
             "experiment":"idealized Pacific control",
             "experiment_id":"dcppC-pac-control",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2689,12 +2121,7 @@
             "experiment":"pacemaker Pacific experiment",
             "experiment_id":"dcppC-pac-pacemaker",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -2722,12 +2149,7 @@
             "experiment":"idealized transient global deforestation",
             "experiment_id":"deforest-globe",
             "min_number_yrs_per_sim":"81",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2753,12 +2175,7 @@
             "experiment":"all-forcing simulation of the recent past with atmospheric CO2 concentration calculated",
             "experiment_id":"esm-hist",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'esm-piControl']"
             ],
@@ -2785,12 +2202,7 @@
             "experiment":"post-2014 all-forcing simulation with atmospheric CO2 concentration calculated",
             "experiment_id":"esm-hist-ext",
             "min_number_yrs_per_sim":"1",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'esm-hist']"
             ],
@@ -2817,12 +2229,7 @@
             "experiment":"pre-industrial control simulation with CO2 concentration calculated",
             "experiment_id":"esm-piControl",
             "min_number_yrs_per_sim":"500",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'esm-piControl-spinup']"
             ],
@@ -2849,17 +2256,7 @@
             "experiment":"pre-industrial control simulation with CO2 concentration calculated (spin-up)",
             "experiment_id":"esm-piControl-spinup",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -2886,12 +2283,7 @@
             "experiment":"emission-driven RCP8.5 based on SSP5",
             "experiment_id":"esm-ssp585",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'esm-hist']"
             ],
@@ -2918,12 +2310,7 @@
             "experiment":"emissions-driven SSP5-8.5 with SSP1-2.6 land use",
             "experiment_id":"esm-ssp585-ssp126Lu",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'esm-hist']"
             ],
@@ -2951,12 +2338,7 @@
             "experiment":"control plus perturbative surface fluxes of momentum, heat and water into ocean",
             "experiment_id":"faf-all",
             "min_number_yrs_per_sim":"70",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -2983,12 +2365,7 @@
             "experiment":"control plus perturbative surface flux of heat into ocean",
             "experiment_id":"faf-heat",
             "min_number_yrs_per_sim":"70",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3015,12 +2392,7 @@
             "experiment":"control plus surface flux of passive heat tracer into ocean",
             "experiment_id":"faf-passiveheat",
             "min_number_yrs_per_sim":"70",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3047,12 +2419,7 @@
             "experiment":"control plus perturbative surface flux of momentum into ocean",
             "experiment_id":"faf-stress",
             "min_number_yrs_per_sim":"70",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3079,12 +2446,7 @@
             "experiment":"control plus perturbative surface flux of water into ocean",
             "experiment_id":"faf-water",
             "min_number_yrs_per_sim":"70",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3110,14 +2472,7 @@
             "experiment":"year 100 SSTs from abrupt4xCO2 with quadrupled CO2 and solar reduction",
             "experiment_id":"futureSST-4xCO2-solar",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "G",
-                "e",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"GeoMIP",
             "parent_experiment_id":[
                 "[u'G1']"
             ],
@@ -3142,18 +2497,7 @@
             "experiment":"coupled future 2015-2050 using a scenario as close to CMIP5 RCP8.5 as possible within CMIP6",
             "experiment_id":"highres-future",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'hist-1950']"
             ],
@@ -3178,18 +2522,7 @@
             "experiment":"highresSST-present SST with 4xCO2 concentrations",
             "experiment_id":"highresSST-4co2",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'highresSST-present']"
             ],
@@ -3214,18 +2547,7 @@
             "experiment":"common LAI dataset within the highresSST-present experiment",
             "experiment_id":"highresSST-LAI",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'highresSST-present']"
             ],
@@ -3250,18 +2572,7 @@
             "experiment":"forced atmosphere experiment for 2015-2050 using SST/sea-ice derived from CMIP5 RCP8.5 simulations and a scenario as close to RCP8.5 as possible within CMIP6",
             "experiment_id":"highresSST-future",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'highresSST-present']"
             ],
@@ -3286,18 +2597,7 @@
             "experiment":"uniform 4K warming of highresSST-present SST",
             "experiment_id":"highresSST-p4K",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'highresSST-present']"
             ],
@@ -3322,17 +2622,7 @@
             "experiment":"forced atmosphere experiment for 1950-2014",
             "experiment_id":"highresSST-present",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -3357,18 +2647,7 @@
             "experiment":"smoothed SST version of highresSST-present",
             "experiment_id":"highresSST-smoothed",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'highresSST-present']"
             ],
@@ -3393,18 +2672,7 @@
             "experiment":"coupled historical 1950-2014",
             "experiment_id":"hist-1950",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "H",
-                "i",
-                "g",
-                "h",
-                "R",
-                "e",
-                "s",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"HighResMIP",
             "parent_experiment_id":[
                 "[u'spinup-1950']"
             ],
@@ -3429,12 +2697,7 @@
             "experiment":"historical forcing, but with1950s halocarbon concentrations; initialized in 1950",
             "experiment_id":"hist-1950HC",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -3463,12 +2726,7 @@
             "experiment":"historical CO2-only run",
             "experiment_id":"hist-CO2",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3495,12 +2753,7 @@
             "experiment":"historical well-mixed GHG-only run",
             "experiment_id":"hist-GHG",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3527,12 +2780,7 @@
             "experiment":"historical anthropogenic aerosols-only run",
             "experiment_id":"hist-aer",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3559,12 +2807,7 @@
             "experiment":"historical ALL-forcing run with alternate estimates of aerosol forcing",
             "experiment_id":"hist-all-aer2",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3591,12 +2834,7 @@
             "experiment":"historical ALL-forcing run with alternate estimates of natural forcing",
             "experiment_id":"hist-all-nat2",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3622,12 +2860,7 @@
             "experiment":"biogeochemically-coupled version of the simulation of the recent past with CO2 concentration prescribed",
             "experiment_id":"hist-bgc",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3655,12 +2888,7 @@
             "experiment":"historical natural-only run",
             "experiment_id":"hist-nat",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3687,12 +2915,7 @@
             "experiment":"historical with no land-use change",
             "experiment_id":"hist-noLu",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3718,12 +2941,7 @@
             "experiment":"historical forcing, but with pre-industrial aerosol emissions",
             "experiment_id":"hist-piAer",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3750,12 +2968,7 @@
             "experiment":"historical forcing, but with pre-industrial NTCF emissions",
             "experiment_id":"hist-piNTCF",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3783,12 +2996,7 @@
             "experiment":"initialized from \"historical\" run year 1870 and SSTs in the AMO domain (0deg-70degN, 70degW-0deg) restored to AMIP SSTs with historical forcings",
             "experiment_id":"hist-resAMO",
             "min_number_yrs_per_sim":"145",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -3815,12 +3023,7 @@
             "experiment":"initialized from \"historical\" run year 1870 and SSTs in tropical lobe of the IPO domain (20degS-20degN, 175degE-75degW) restored to AMIP SSTs with historical forcings",
             "experiment_id":"hist-resIPO",
             "min_number_yrs_per_sim":"145",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -3847,12 +3050,7 @@
             "experiment":"historical solar-only run",
             "experiment_id":"hist-sol",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3875,12 +3073,7 @@
             "experiment":"historical simulation with specified anthropogenic aerosols, no other forcings",
             "experiment_id":"hist-spAer-aer",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3903,12 +3096,7 @@
             "experiment":"historical simulation with specified anthropogenic aerosols",
             "experiment_id":"hist-spAer-all",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3934,12 +3122,7 @@
             "experiment":"historical stratospheric-ozone-only run",
             "experiment_id":"hist-stratO3",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3966,12 +3149,7 @@
             "experiment":"historical volcanic-only run",
             "experiment_id":"hist-volc",
             "min_number_yrs_per_sim":"171",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -3996,17 +3174,7 @@
             "experiment":"historical prescribed SSTs and historical forcing",
             "experiment_id":"histSST",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4030,17 +3198,7 @@
             "experiment":"historical SSTs and historical forcing, but with1950 halocarbon concentrations",
             "experiment_id":"histSST-1950HC",
             "min_number_yrs_per_sim":"65",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4067,17 +3225,7 @@
             "experiment":"historical SSTs and historical forcing, but with pre-industrial aerosol emissions",
             "experiment_id":"histSST-piAer",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4101,17 +3249,7 @@
             "experiment":"historical SSTs and historical forcing, but with pre-industrial methane concentrations",
             "experiment_id":"histSST-piCH4",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4138,17 +3276,7 @@
             "experiment":"historical SSTs and historical forcings, but with pre-industrial N2O concentrations",
             "experiment_id":"histSST-piN2O",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4176,17 +3304,7 @@
             "experiment":"historical SSTs and historical forcing, but with pre-industrial NTCF emissions",
             "experiment_id":"histSST-piNTCF",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4210,17 +3328,7 @@
             "experiment":"historical SSTs and historical forcing, but with pre-industrial ozone precursor emissions",
             "experiment_id":"histSST-piO3",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4249,12 +3357,7 @@
             "experiment":"all-forcing simulation of the recent past",
             "experiment_id":"historical",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -4281,12 +3384,7 @@
             "experiment":"post-2014 all-forcing simulation",
             "experiment_id":"historical-ext",
             "min_number_yrs_per_sim":"1",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -4313,14 +3411,7 @@
             "experiment":"historical with interactive ice sheet",
             "experiment_id":"historical-withism",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'piControl-withism']"
             ],
@@ -4344,14 +3435,7 @@
             "experiment":"offline ice sheet model forced by ISM's own AOGCM 1pctCO2to4x output",
             "experiment_id":"ism-1pctCO2to4x-self",
             "min_number_yrs_per_sim":"350",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-piControl-self']"
             ],
@@ -4374,14 +3458,7 @@
             "experiment":"offline ice sheet model forced by ISMIP6-specified AOGCM 1pctCO2to4x output",
             "experiment_id":"ism-1pctCO2to4x-std",
             "min_number_yrs_per_sim":"350",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-pdControl-std']"
             ],
@@ -4404,14 +3481,7 @@
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM AMIP output",
             "experiment_id":"ism-amip-std",
             "min_number_yrs_per_sim":"36",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-ctrl-std']"
             ],
@@ -4434,14 +3504,7 @@
             "experiment":"offline ice sheet forced by initMIP synthetic atmospheric experiment",
             "experiment_id":"ism-asmb-std",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-ctrl-std']"
             ],
@@ -4464,14 +3527,7 @@
             "experiment":"offline ice sheet forced by initMIP synthetic oceanic experiment",
             "experiment_id":"ism-bsmb-std",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-ctrl-std']"
             ],
@@ -4494,17 +3550,7 @@
             "experiment":"offline ice sheet model initMIP control",
             "experiment_id":"ism-ctrl-std",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4527,14 +3573,7 @@
             "experiment":"offline ice sheet forced by ISM's own AOGCM historical output",
             "experiment_id":"ism-historical-self",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-piControl-self']"
             ],
@@ -4557,14 +3596,7 @@
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM historical output",
             "experiment_id":"ism-historical-std",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-pdControl-std']"
             ],
@@ -4587,17 +3619,7 @@
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM last interglacial output",
             "experiment_id":"ism-lig127k-std",
             "min_number_yrs_per_sim":"20000",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4620,17 +3642,7 @@
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM pdControl output",
             "experiment_id":"ism-pdControl-std",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4653,17 +3665,7 @@
             "experiment":"offline ice sheet forced by ISM's own AOGCM piControl output",
             "experiment_id":"ism-piControl-self",
             "min_number_yrs_per_sim":"500",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4686,14 +3688,7 @@
             "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
             "experiment_id":"ism-ssp585-self",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-historical-self']"
             ],
@@ -4716,14 +3711,7 @@
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
             "experiment_id":"ism-ssp585-std",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'ism-historical-std']"
             ],
@@ -4746,17 +3734,7 @@
             "experiment":"historical land-only constant CO2",
             "experiment_id":"land-cCO2",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4779,17 +3757,7 @@
             "experiment":"historical land-only constant climate",
             "experiment_id":"land-cClim",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4812,17 +3780,7 @@
             "experiment":"historical land-only with cropland as natural grassland",
             "experiment_id":"land-crop-grass",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4845,17 +3803,7 @@
             "experiment":"historical land-only with no fertilizer",
             "experiment_id":"land-crop-noFert",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4878,17 +3826,7 @@
             "experiment":"historical land-only with no irrigation",
             "experiment_id":"land-crop-noIrrig",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4911,17 +3849,7 @@
             "experiment":"historical land-only with managed crops but with irrigation and fertilization held constant",
             "experiment_id":"land-crop-noIrrigFert",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4944,17 +3872,7 @@
             "experiment":"future land-only",
             "experiment_id":"land-future",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -4978,17 +3896,7 @@
             "experiment":"historical land-only",
             "experiment_id":"land-hist",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5011,17 +3919,7 @@
             "experiment":"historical land-only alternate land-use history",
             "experiment_id":"land-hist-altLu1",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5044,17 +3942,7 @@
             "experiment":"historical land-only alternate land use history",
             "experiment_id":"land-hist-altLu2",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5077,17 +3965,7 @@
             "experiment":"historical land-only alternate start year",
             "experiment_id":"land-hist-altStartYear",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5110,17 +3988,7 @@
             "experiment":"as land-hist with CRU-NCEP forcings",
             "experiment_id":"land-hist-cruNcep",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5143,17 +4011,7 @@
             "experiment":"as land-hist with Princeton forcings",
             "experiment_id":"land-hist-princeton",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5176,17 +4034,7 @@
             "experiment":"as land-hist with WFDEI forcings",
             "experiment_id":"land-hist-wfdei",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5209,17 +4057,7 @@
             "experiment":"historical land-only with no human fire management",
             "experiment_id":"land-noFire",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5242,17 +4080,7 @@
             "experiment":"historical land-only with no land-use change",
             "experiment_id":"land-noLu",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5275,17 +4103,7 @@
             "experiment":"historical land-only with constant pastureland",
             "experiment_id":"land-noPasture",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5308,17 +4126,7 @@
             "experiment":"historical land-only with shifting cultivation turned off",
             "experiment_id":"land-noShiftCultivate",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5341,17 +4149,7 @@
             "experiment":"historical land-only with no wood harvest",
             "experiment_id":"land-noWoodHarv",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5378,12 +4176,7 @@
             "experiment":"initialized from \"historical\" run year 1980, but with land conditions initialized from pseudo-observations",
             "experiment_id":"lfmip-initLC",
             "min_number_yrs_per_sim":"35",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5410,12 +4203,7 @@
             "experiment":"as LFMIP-pdLC with Land-Hist-princeton",
             "experiment_id":"lfmip-pdL-princeton",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5442,12 +4230,7 @@
             "experiment":"prescribed land conditions (from current climate climatology) and initialized from \"historical\" run year 1980",
             "experiment_id":"lfmip-pdLC",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5474,12 +4257,7 @@
             "experiment":"as LFMIP-pdLC with Land-Hist-cruNcep",
             "experiment_id":"lfmip-pdLC-cruNcep",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5506,12 +4284,7 @@
             "experiment":"as LFMIP-pdLC with Land-Hist-wfdei",
             "experiment_id":"lfmip-pdLC-wfdei",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5538,12 +4311,7 @@
             "experiment":"prescribed land conditions (from running mean climatology) and initialized from \"historical\" run year 1980",
             "experiment_id":"lfmip-rmLC",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5570,12 +4338,7 @@
             "experiment":"as LFMIP-rmLC with Land-Hist-cruNcep",
             "experiment_id":"lfmip-rmLC-cruNcep",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5602,12 +4365,7 @@
             "experiment":"as LFMIP-rmLC with Land-Hist-princeton",
             "experiment_id":"lfmip-rmLC-princeton",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5634,12 +4392,7 @@
             "experiment":"as LFMIP-rmLC with Land-Hist-wfdei",
             "experiment_id":"lfmip-rmLC-wfdei",
             "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -5666,17 +4419,7 @@
             "experiment":"last glacial maximum",
             "experiment_id":"lgm",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5703,17 +4446,7 @@
             "experiment":"last interglacial (127k)",
             "experiment_id":"lig127k",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5740,17 +4473,7 @@
             "experiment":"mid-Holocene",
             "experiment_id":"midHolocene",
             "min_number_yrs_per_sim":"200",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5777,17 +4500,7 @@
             "experiment":"mid-Pliocene warm period",
             "experiment_id":"midPliocene-eoi400",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5810,17 +4523,7 @@
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip1",
             "min_number_yrs_per_sim":"310",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5843,17 +4546,7 @@
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip1-spunup",
             "min_number_yrs_per_sim":"310",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5876,17 +4569,7 @@
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip2",
             "min_number_yrs_per_sim":"295",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5909,17 +4592,7 @@
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip2-spunup",
             "min_number_yrs_per_sim":"295",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5946,17 +4619,7 @@
             "experiment":"last millennium",
             "experiment_id":"past1000",
             "min_number_yrs_per_sim":"1000",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -5981,12 +4644,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of DMS",
             "experiment_id":"piClim-2xDMS",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6010,12 +4668,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled production of NOx due to lightning",
             "experiment_id":"piClim-2xNOx",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6040,12 +4693,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of biogenic VOCs",
             "experiment_id":"piClim-2xVOC",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6072,12 +4720,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of dust",
             "experiment_id":"piClim-2xdust",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6103,12 +4746,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions from fires",
             "experiment_id":"piClim-2xfire",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6134,12 +4772,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of sea salt",
             "experiment_id":"piClim-2xss",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6166,12 +4799,7 @@
             "experiment":"effective radiative forcing by 4xCO2",
             "experiment_id":"piClim-4xCO2",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6196,12 +4824,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 black carbon emissions",
             "experiment_id":"piClim-BC",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6225,12 +4848,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 methane concentrations (including chemistry)",
             "experiment_id":"piClim-CH4",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6255,12 +4873,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 halocarbon concentrations (including chemistry)",
             "experiment_id":"piClim-HC",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6285,12 +4898,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 N2O concentrations (including chemistry)",
             "experiment_id":"piClim-N2O",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6317,12 +4925,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ammonia emissions",
             "experiment_id":"piClim-NH3",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6346,12 +4949,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NOx emissions",
             "experiment_id":"piClim-NOx",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6379,12 +4977,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NTCF emissions",
             "experiment_id":"piClim-NTCF",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6408,12 +5001,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ozone precursor emissions",
             "experiment_id":"piClim-O3",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6440,12 +5028,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 organic carbon emissions",
             "experiment_id":"piClim-OC",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6471,12 +5054,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions",
             "experiment_id":"piClim-SO2",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6500,12 +5078,7 @@
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 VOC emissions",
             "experiment_id":"piClim-VOC",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6534,12 +5107,7 @@
             "experiment":"effective radiative forcing by present-day aerosols",
             "experiment_id":"piClim-aer",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6565,12 +5133,7 @@
             "experiment":"effective radiative forcing by present day anthropogenic agents",
             "experiment_id":"piClim-anthro",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6597,12 +5160,7 @@
             "experiment":"effective radiative forcing in present-day",
             "experiment_id":"piClim-control",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6628,12 +5186,7 @@
             "experiment":"effective radiative forcing by present-day greenhouse gases",
             "experiment_id":"piClim-ghg",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6659,12 +5212,7 @@
             "experiment":"transient effective radiative forcing by aerosols",
             "experiment_id":"piClim-histaer",
             "min_number_yrs_per_sim":"251",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6690,12 +5238,7 @@
             "experiment":"transient effective radiative forcing",
             "experiment_id":"piClim-histall",
             "min_number_yrs_per_sim":"251",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6721,12 +5264,7 @@
             "experiment":"transient effective radiative forcing by greenhouse gases",
             "experiment_id":"piClim-histghg",
             "min_number_yrs_per_sim":"251",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6752,12 +5290,7 @@
             "experiment":"transient effective radiative forcing by natural perturbations",
             "experiment_id":"piClim-histnat",
             "min_number_yrs_per_sim":"251",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6783,12 +5316,7 @@
             "experiment":"effective radiative forcing by present-day land use",
             "experiment_id":"piClim-lu",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6811,12 +5339,7 @@
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings",
             "experiment_id":"piClim-spAer-aer",
             "min_number_yrs_per_sim":"",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6839,12 +5362,7 @@
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings",
             "experiment_id":"piClim-spAer-anthro",
             "min_number_yrs_per_sim":"",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6867,12 +5385,7 @@
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing",
             "experiment_id":"piClim-spAer-histaer",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6895,12 +5408,7 @@
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings",
             "experiment_id":"piClim-spAer-histall",
             "min_number_yrs_per_sim":"165",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -6927,12 +5435,7 @@
             "experiment":"pre-industrial control",
             "experiment_id":"piControl",
             "min_number_yrs_per_sim":"500",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl-spinup']"
             ],
@@ -6959,17 +5462,7 @@
             "experiment":"pre-industrial control (spin-up)",
             "experiment_id":"piControl-spinup",
             "min_number_yrs_per_sim":"100",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -6996,17 +5489,7 @@
             "experiment":"preindustrial control with interactive ice sheet",
             "experiment_id":"piControl-withism",
             "min_number_yrs_per_sim":"500",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -7033,12 +5516,7 @@
             "experiment":"experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents",
             "experiment_id":"piSST",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -7064,12 +5542,7 @@
             "experiment":"as piSST with radiation and vegetation seeing 4xCO2",
             "experiment_id":"piSST-4xCO2",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -7095,12 +5568,7 @@
             "experiment":"as piSST with radiation-only seeing 4xCO2",
             "experiment_id":"piSST-4xCO2-rad",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -7126,12 +5594,7 @@
             "experiment":"preindustrial control SSTs with quadrupled CO2 and solar reduction",
             "experiment_id":"piSST-4xCO2-solar",
             "min_number_yrs_per_sim":"10",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -7157,12 +5620,7 @@
             "experiment":"as piSST with uniform SST increase with magnitude based on abrupt4xCO2 response",
             "experiment_id":"piSST-pxK",
             "min_number_yrs_per_sim":"20",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -7185,17 +5643,7 @@
             "experiment":"offline assessment of radiative transfer parmeterizations in clear skies",
             "experiment_id":"rad-irf",
             "min_number_yrs_per_sim":"",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -7220,17 +5668,7 @@
             "experiment":"coupled spinup with fixed 1950s forcings from 1950 initial conditions (with ocean at rest) to provide initial condition for control-1950 and hist-1950",
             "experiment_id":"spinup-1950",
             "min_number_yrs_per_sim":"30",
-            "parent_activity_id":[
-                "n",
-                "o",
-                " ",
-                "p",
-                "a",
-                "r",
-                "e",
-                "n",
-                "t"
-            ],
+            "parent_activity_id":"no parent",
             "parent_experiment_id":[
                 "no parent"
             ],
@@ -7257,12 +5695,7 @@
             "experiment":"update of RCP2.6 based on SSP1",
             "experiment_id":"ssp126",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7289,12 +5722,7 @@
             "experiment":"SSP1-2.6 with SSP3-7.0 land use",
             "experiment_id":"ssp126-ssp370Lu",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7321,12 +5749,7 @@
             "experiment":"update of RCP4.5 based on SSP2",
             "experiment_id":"ssp245",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7353,13 +5776,7 @@
             "experiment":"well-mixed GHG-only SSP2-4.5 run",
             "experiment_id":"ssp245-GHG",
             "min_number_yrs_per_sim":"80",
-            "parent_activity_id":[
-                "D",
-                "A",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"DAMIP",
             "parent_experiment_id":[
                 "[u'hist-GHG']"
             ],
@@ -7386,13 +5803,7 @@
             "experiment":"aerosol-only SSP2-4.5 run",
             "experiment_id":"ssp245-aer",
             "min_number_yrs_per_sim":"80",
-            "parent_activity_id":[
-                "D",
-                "A",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"DAMIP",
             "parent_experiment_id":[
                 "[u'hist-aer']"
             ],
@@ -7419,13 +5830,7 @@
             "experiment":"natural-only SSP2-4.5 run",
             "experiment_id":"ssp245-nat",
             "min_number_yrs_per_sim":"80",
-            "parent_activity_id":[
-                "D",
-                "A",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"DAMIP",
             "parent_experiment_id":[
                 "[u'hist-nat']"
             ],
@@ -7451,13 +5856,7 @@
             "experiment":"stratospheric-ozone-only SSP2-4.5 run",
             "experiment_id":"ssp245-stratO3",
             "min_number_yrs_per_sim":"80",
-            "parent_activity_id":[
-                "D",
-                "A",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"DAMIP",
             "parent_experiment_id":[
                 "[u'hist-stratO3']"
             ],
@@ -7485,12 +5884,7 @@
             "experiment":"gap-filling scenario reaching 7.0 based on SSP3",
             "experiment_id":"ssp370",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7516,12 +5910,7 @@
             "experiment":"SSP3-7.0, with low NTCF emissions",
             "experiment_id":"ssp370-lowNTCF",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7549,12 +5938,7 @@
             "experiment":"SSP3-7.0 with SSP1-2.6 land use",
             "experiment_id":"ssp370-ssp126Lu",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7579,19 +5963,7 @@
             "experiment":"SSP3-7.0, with SSTs prescribed from ssp370",
             "experiment_id":"ssp370SST",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7617,19 +5989,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with low aerosol emissions",
             "experiment_id":"ssp370SST-lowAer",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7655,19 +6015,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with low black carbon emissions",
             "experiment_id":"ssp370SST-lowBC",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7691,19 +6039,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with low methane concentrations",
             "experiment_id":"ssp370SST-lowCH4",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7731,19 +6067,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with low NTCF emissions",
             "experiment_id":"ssp370SST-lowNTCF",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7767,19 +6091,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with low ozone precursor emissions",
             "experiment_id":"ssp370SST-lowO3",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7806,19 +6118,7 @@
             "experiment":"SSP3-7.0, prescribed SSTs, with SSP1-2.6 land use",
             "experiment_id":"ssp370SST-ssp126Lu",
             "min_number_yrs_per_sim":"41",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp370']"
             ],
@@ -7846,12 +6146,7 @@
             "experiment":"gap-filling scenario reaching 3.4 based on SSP4",
             "experiment_id":"ssp434",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7878,12 +6173,7 @@
             "experiment":"update of RCP6.0 based on SSP4",
             "experiment_id":"ssp460",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -7910,19 +6200,7 @@
             "experiment":"overshoot of 3.4 W/m**2 branching from ssp585 in 2040",
             "experiment_id":"ssp534-over",
             "min_number_yrs_per_sim":"61",
-            "parent_activity_id":[
-                "S",
-                "c",
-                "e",
-                "n",
-                "a",
-                "r",
-                "i",
-                "o",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"ScenarioMIP",
             "parent_experiment_id":[
                 "[u'ssp585']"
             ],
@@ -7948,13 +6226,7 @@
             "experiment":"biogeochemically-coupled version of the RCP3.4-overshoot based on SSP5",
             "experiment_id":"ssp534-over-bgc",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "C",
-                "4",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"C4MIP",
             "parent_experiment_id":[
                 "[u'hist-bgc']"
             ],
@@ -7982,12 +6254,7 @@
             "experiment":"update of RCP8.5 based on SSP5",
             "experiment_id":"ssp585",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -8013,13 +6280,7 @@
             "experiment":"biogeochemically-coupled version of the RCP8.5 based on SSP5",
             "experiment_id":"ssp585-bgc",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "C",
-                "4",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"C4MIP",
             "parent_experiment_id":[
                 "[u'hist-bgc']"
             ],
@@ -8047,14 +6308,7 @@
             "experiment":"ssp585 with interactive ice sheet",
             "experiment_id":"ssp585-withism",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "I",
-                "S",
-                "M",
-                "I",
-                "P",
-                "6"
-            ],
+            "parent_activity_id":"ISMIP6",
             "parent_experiment_id":[
                 "[u'historical-withism']"
             ],
@@ -8082,12 +6336,7 @@
             "experiment":"low-end scenario informing 1.5C goal",
             "experiment_id":"sspxy",
             "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -8114,12 +6363,7 @@
             "experiment":"volcanic cluster experiment under 21st century SSP2-4.5 scenario",
             "experiment_id":"volc-cluster-21C",
             "min_number_yrs_per_sim":"85",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'historical']"
             ],
@@ -8146,12 +6390,7 @@
             "experiment":"19th century volcanic cluster initialized from PiControl",
             "experiment_id":"volc-cluster-ctrl",
             "min_number_yrs_per_sim":"50",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8178,12 +6417,7 @@
             "experiment":"19th century volcanic cluster initialized from past1000",
             "experiment_id":"volc-cluster-mill",
             "min_number_yrs_per_sim":"69",
-            "parent_activity_id":[
-                "P",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"PMIP",
             "parent_experiment_id":[
                 "[u'past1000']"
             ],
@@ -8210,12 +6444,7 @@
             "experiment":"idealized equatorial volcanic eruption emitting 56.2 Tg SO2",
             "experiment_id":"volc-long-eq",
             "min_number_yrs_per_sim":"20",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8242,12 +6471,7 @@
             "experiment":"idealized Northern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
             "experiment_id":"volc-long-hlN",
             "min_number_yrs_per_sim":"20",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8274,12 +6498,7 @@
             "experiment":"Idealized Southern Hemisphere high-latitude eruption emitting 28.1 Tg of SO2",
             "experiment_id":"volc-long-hlS",
             "min_number_yrs_per_sim":"20",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8306,12 +6525,7 @@
             "experiment":"Pinatubo experiment",
             "experiment_id":"volc-pinatubo-full",
             "min_number_yrs_per_sim":"3",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8338,14 +6552,7 @@
             "experiment":"Pinatubo experiment with slab ocean",
             "experiment_id":"volc-pinatubo-slab",
             "min_number_yrs_per_sim":"3",
-            "parent_activity_id":[
-                "V",
-                "o",
-                "l",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"VolMIP",
             "parent_experiment_id":[
                 "[u'control-slab']"
             ],
@@ -8373,12 +6580,7 @@
             "experiment":"Pinatubo experiment with partial radiative forcing, includes only stratospheric warming",
             "experiment_id":"volc-pinatubo-strat",
             "min_number_yrs_per_sim":"3",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8405,12 +6607,7 @@
             "experiment":"Pinatubo experiment with partial radiative forcing, solar radiation scattering only",
             "experiment_id":"volc-pinatubo-surf",
             "min_number_yrs_per_sim":"3",
-            "parent_activity_id":[
-                "C",
-                "M",
-                "I",
-                "P"
-            ],
+            "parent_activity_id":"CMIP",
             "parent_experiment_id":[
                 "[u'piControl']"
             ],
@@ -8426,10 +6623,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 11:21:16 2017 -0700",
+        "creation_date":"Wed Apr 5 11:21:53 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (294; gf15b05b)",
+        "latest_tag_point":"3.2.2 (308; g128ae63)",
         "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"5285891567480a720b3bca339bbb1b89bcd23e39"
+        "previous_commit":"3a271e34a516faca629252be4c5adc11ab3fee28"
     }
 }

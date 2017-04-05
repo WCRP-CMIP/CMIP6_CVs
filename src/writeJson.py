@@ -259,9 +259,15 @@ for count,key in enumerate(keyList):
         experiment_id[key]['parent_activity_id'] = list(entry)
     
     entry = experiment_id[key]['parent_experiment_id']
-    #print entry
+    print entry
+    #entry = str(entry).replace('[','').replace(']','')
+    entry = entry[0]
+    print entry
     if isinstance(entry,list):
-        experiment_id[key]['parent_experiment_id'] = [', '.join(map(str, entry))]
+        entry = entry[0]
+        print entry
+    if isinstance(entry,list):
+        experiment_id[key]['parent_experiment_id'] = entry
     else:
         experiment_id[key]['parent_experiment_id'] = list(entry)
     #experiment_id[key]['parent_experiment_id'] = list(experiment_id[key]['parent_experiment_id'])

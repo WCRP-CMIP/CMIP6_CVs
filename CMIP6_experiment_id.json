@@ -1381,10 +1381,12 @@
             "experiment_id":"dcppA-hindcast",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1466,10 +1468,12 @@
             "experiment_id":"dcppA-hindcast-niff",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1636,10 +1640,12 @@
             "experiment_id":"dcppB-forecast",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1946,10 +1952,12 @@
             "experiment_id":"dcppC-forecast-addAgung",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -1975,10 +1983,12 @@
             "experiment_id":"dcppC-forecast-addElChichon",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2005,10 +2015,12 @@
             "experiment_id":"dcppC-forecast-addPinatubo",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2034,10 +2046,12 @@
             "experiment_id":"dcppC-hindcast-noAgung",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2063,10 +2077,12 @@
             "experiment_id":"dcppC-hindcast-noElChichon",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -2092,10 +2108,12 @@
             "experiment_id":"dcppC-hindcast-noPinatubo",
             "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
-                "no parent"
+                "no parent",
+                "DCPP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "no parent",
+                "dcppA-assim"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -7119,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 11:27:46 2017 -0700",
+        "creation_date":"Wed Apr 5 11:28:29 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (392; gd3bce34)",
+        "latest_tag_point":"3.2.2 (406; g35f6d34)",
         "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"d6f66f022f371ea12836f4652d34a7093e1f4fe1"
+        "previous_commit":"2df10bd76f238debe7eb10336660e04d7114f256"
     }
 }

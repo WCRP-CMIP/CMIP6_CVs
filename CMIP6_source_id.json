@@ -474,6 +474,113 @@
             "sea_ice":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
             "source_id":"EMAC-2-53-Vol"
         },
+        "GFDL-AM4":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "aerosol":"interactive",
+            "atmosphere":"GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
+            "atmospheric_chemistry":"fast chemistry, aerosol only",
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-AM4",
+            "label_extended":"GFDL-AM4",
+            "land_ice":"GFDL-LM4.0",
+            "land_surface":"GFDL-LM4.0",
+            "nominal_resolution_atmos":[
+                "100 km"
+            ],
+            "nominal_resolution_landIce":[
+                "100 km"
+            ],
+            "nominal_resolution_ocean":[
+                "none"
+            ],
+            "ocean":"none",
+            "ocean_biogeochemistry":"none",
+            "release_year":"2017",
+            "sea_ice":"none",
+            "source_id":"GFDL-AM4"
+        },
+        "GFDL-CM4":{
+            "activity_participation":[
+                "CMIP",
+                "OMIP"
+            ],
+            "aerosol":"interactive",
+            "atmosphere":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
+            "atmospheric_chemistry":"unnamed (fast chemistry, aerosol only)",
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-CM4",
+            "label_extended":"GFDL-CM4",
+            "land_ice":"GFDL-LM4.0",
+            "land_surface":"GFDL-LM4.0",
+            "nominal_resolution_atmos":[
+                "100 km"
+            ],
+            "nominal_resolution_landIce":[
+                "100 km"
+            ],
+            "nominal_resolution_ocean":[
+                "25 km"
+            ],
+            "ocean":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440x720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+            "ocean_biogeochemistry":"none",
+            "release_year":"2017",
+            "sea_ice":"SIS2",
+            "source_id":"GFDL-CM4"
+        },
+        "GFDL-ESM4":{
+            "activity_participation":[
+                "AerChemMIP",
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "DAMIP",
+                "DynVarMIP",
+                "GMMIP",
+                "LUMIP",
+                "OMIP",
+                "RFMIP",
+                "ScenarioMIP"
+            ],
+            "aerosol":"interactive",
+            "atmosphere":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 48 levels, model top: 1 Pa)",
+            "atmospheric_chemistry":"GFDL-ATMCHEM4.1 (full atmospheric chemistry)",
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-ESM4",
+            "label_extended":"GFDL-ESM4",
+            "land_ice":"GFDL-LM4.1",
+            "land_surface":"GFDL-LM4.1",
+            "nominal_resolution_atmos":[
+                "100 km"
+            ],
+            "nominal_resolution_landIce":[
+                "100 km"
+            ],
+            "nominal_resolution_ocean":[
+                "50 km"
+            ],
+            "ocean":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720x360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+            "ocean_biogeochemistry":"COBALT 2.0",
+            "release_year":"2017",
+            "sea_ice":"SIS2",
+            "source_id":"GFDL-ESM4"
+        },
         "GISS-E2-1G":{
             "activity_participation":[
                 ""
@@ -1213,10 +1320,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 5 11:29:03 2017 -0700",
+        "creation_date":"Wed Apr 5 11:32:14 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (429; g8e3167f)",
-        "note":"Convert experiment_id parent* entries to list",
-        "previous_commit":"9f6682da0e7935c77a4f3ebcb630cfb3a5a6df7f"
+        "latest_tag_point":"note: ",
+        "note":"Issue267 source id correct parent entries (#272)",
+        "previous_commit":"1de9a9db60c6de1aa6febe1cd27b31544cad99e7"
     }
 }

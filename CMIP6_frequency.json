@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 7 18:15:48 2017 -0700",
+        "creation_date":"Fri Apr 7 18:27:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (58; g2800f82)",
-        "note":"Register GFDL source_ids",
-        "previous_commit":"4022541f207f54b3912a72a89962959f39cc199c"
+        "latest_tag_point":"3.2.2 (59; g7e4c7a5)",
+        "note":"Register source_id CAMS_CSM1-0",
+        "previous_commit":"316183f1dd13adde3db2df01674762aefd9ba4c4"
     }
 }

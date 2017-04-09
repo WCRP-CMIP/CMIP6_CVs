@@ -27,16 +27,16 @@
         "NIMS-KMA":"National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea",
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NOAA-NCEP":"National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA",
-        "NUIST":"Nanjing University of Information Science & Technology, Nanjing, 210044, China",
+        "NUIST":"Nanjing University of Information Science and Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Apr 8 19:17:06 2017 -0700",
+        "creation_date":"Sat Apr 8 19:17:13 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (107; g968075c)",
+        "latest_tag_point":"3.2.2 (126; ge3649ae)",
         "note":"Update html markup",
-        "previous_commit":"6cbe139f7131899e89d94ae5505c6250217dc331"
+        "previous_commit":"ea2ba699afccb382c53eb0c793ddfdf108bc2e02"
     }
 }

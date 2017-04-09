@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 7 18:28:44 2017 -0700",
+        "creation_date":"Sat Apr 8 17:18:51 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue246 durack1 source_id register CAMS_CSM1-0 (#275)",
-        "previous_commit":"8bac34ec9f6ab650138fad26ecc69088ef15f095"
+        "latest_tag_point":"3.2.2 (59; g6737802)",
+        "note":"Update multiple NorESM source_ids",
+        "previous_commit":"0e64ffd5a22bc6b4a2fb63d074a71ea68b212576"
     }
 }

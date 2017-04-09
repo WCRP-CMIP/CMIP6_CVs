@@ -42,7 +42,7 @@ $(document).ready( function () {
     } );
 //]]>
 </script>
-<title></title>
+<title>CMIP6 experiment_id values</title>
 </head>
 <body>
 <table id="table_id" class="display">"""

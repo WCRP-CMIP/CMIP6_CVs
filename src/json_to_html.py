@@ -34,7 +34,8 @@ print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:/
 <head>
 <link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css"/>
 <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
-<script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js">
+<script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js"></script>
+<script>
 $(document).ready( function () {
     $('#table_id').DataTable();
     } );

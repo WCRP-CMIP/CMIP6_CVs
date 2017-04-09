@@ -29,7 +29,8 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-print >> fo, """<html>
+print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
 <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
@@ -94,7 +95,8 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, """<html>
+print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
 <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
@@ -145,7 +147,8 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, """<html>
+print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="jquery.dataTables-1.10.13.min.css">
 <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>

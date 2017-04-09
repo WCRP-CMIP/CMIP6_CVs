@@ -687,6 +687,9 @@ for jsonName in masterTargets:
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +
                     string = string.replace(' & ', ' and ')  # Replace +
+                    string = string.replace('(&C', '(and C') # experiment_id html fix
+                    string = string.replace('(& ','(and ') # experiment_id html fix
+                    string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
                     string = string.replace(
                         'anthro ', 'anthropogenic ')  # Replace anthro
                     string = string.replace(

@@ -1375,7 +1375,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"A1 (& A2.1, A3.1, and A3.2) Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
+            "description":"A1 (and A2.1, A3.1, and A3.2) Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
             "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized based on observations and using historical forcing",
             "experiment_id":"dcppA-hindcast",
@@ -1634,7 +1634,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"B1 (& B2.1, B2.2) Ongoing decadal forecasts. First full forecast year follows start year (e.g., for s2017, first full forecast year is 2018)",
+            "description":"B1 (and B2.1, B2.2) Ongoing decadal forecasts. First full forecast year follows start year (e.g., for s2017, first full forecast year is 2018)",
             "end_year":"5 years after start year",
             "experiment":"forecast initialized from observations with forcing from ssp245",
             "experiment_id":"dcppB-forecast",
@@ -1910,7 +1910,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"C2.1 (&C2.2) Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs. First full hindcast year follows start year (e.g., for s1992, first full hindcast year is 1993)",
+            "description":"C2.1 (and C2.2) Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs. First full hindcast year follows start year (e.g., for s1992, first full hindcast year is 1993)",
             "end_year":"5 - 10 years after start year",
             "experiment":"predictability of 1990s warming of Atlantic sub-polar gyre",
             "experiment_id":"dcppC-atl-spg",
@@ -3277,7 +3277,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Historical solar-only transient simulation using settings from CMIP6 historical simulation but fixed GHG&ODS (1850 level)",
+            "description":"Historical solar-only transient simulation using settings from CMIP6 historical simulation but fixed GHG and ODS (1850 level)",
             "end_year":"2020",
             "experiment":"historical solar-only run",
             "experiment_id":"hist-sol",
@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Apr 8 17:29:04 2017 -0700",
+        "creation_date":"Sat Apr 8 17:30:50 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (60; gd66f098)",
-        "note":"Update multiple NorESM source_ids",
-        "previous_commit":"7b8262a56cf647048fc5ff51f0b7962c3a8bd63c"
+        "latest_tag_point":"note: ",
+        "note":"Issue248 durack1 html correct html markup (#278)",
+        "previous_commit":"b2f02b8d679a5b62bee15258bfc7802296ef6dc2"
     }
 }

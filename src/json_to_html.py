@@ -36,7 +36,7 @@ print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:/
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf8" href="jquery.dataTables-1.10.13.min.css" />
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
 <script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script type="text/javascript">
@@ -109,7 +109,7 @@ print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:/
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf8" href="jquery.dataTables-1.10.13.min.css" />
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
 <script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script type="text/javascript">
@@ -168,7 +168,7 @@ print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:/
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf8" href="jquery.dataTables-1.10.13.min.css" />
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
 <script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
 <script type="text/javascript">

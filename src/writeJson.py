@@ -143,6 +143,7 @@ PJD  5 Apr 2017    - Convert experiment_id parent* entries to list https://githu
 PJD  7 Apr 2017    - Register GFDL source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/244
 PJD  7 Apr 2017    - Register source_id CAMS_CSM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/246
 PJD  8 Apr 2017    - Update multiple NorESM source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
+PJD  8 Apr 2017    - Update html markup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/248
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -167,7 +168,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update multiple NorESM source_ids\"'
+commitMessage = '\"Update html markup\"'
 
 #%% Define functions
 # Get repo metadata
@@ -517,56 +518,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-HH']['activity_participation'] = ['HighResMIP']
-source_id['NorESM2-HH']['nominal_resolution_atmos'] = ['25 km']
-source_id['NorESM2-HH']['nominal_resolution_landIce'] = ['25 km']
-source_id['NorESM2-HH']['nominal_resolution_ocean'] = ['25 km']
-source_id['NorESM2-LM']['activity_participation'] = ['AerChemMIP',
-                                                     'CFMIP',
-                                                     'CMIP',
-                                                     'DAMIP',
-                                                     'DCPP',
-                                                     'LUMIP',
-                                                     'OMIP',
-                                                     'PMIP',
-                                                     'RFMIP',
-                                                     'ScenarioMIP',
-                                                     'VolMIP']
-source_id['NorESM2-LM']['nominal_resolution_atmos'] = ['250 km']
-source_id['NorESM2-LM']['nominal_resolution_landIce'] = ['250 km']
-source_id['NorESM2-LM']['nominal_resolution_ocean'] = ['100 km']
-source_id['NorESM2-LME']['activity_participation'] = ['C4MIP',
-                                                     'CMIP',
-                                                     'GeoMIP',
-                                                     'LUMIP',
-                                                     'OMIP']
-source_id['NorESM2-LME']['nominal_resolution_atmos'] = ['250 km']
-source_id['NorESM2-LME']['nominal_resolution_landIce'] = ['250 km']
-source_id['NorESM2-LME']['nominal_resolution_ocean'] = ['100 km']
-source_id['NorESM2-LMEC']['activity_participation'] = ['AerChemMIP']
-source_id['NorESM2-LMEC']['nominal_resolution_atmos'] = ['250 km']
-source_id['NorESM2-LMEC']['nominal_resolution_landIce'] = ['250 km']
-source_id['NorESM2-LMEC']['nominal_resolution_ocean'] = ['100 km']
-source_id['NorESM2-MH']['activity_participation'] = ['AerChemMIP',
-                                                     'CFMIP',
-                                                     'CMIP',
-                                                     'DAMIP',
-                                                     'OMIP',
-                                                     'RFMIP',
-                                                     'ScenarioMIP']
-source_id['NorESM2-MH']['nominal_resolution_atmos'] = ['100 km']
-source_id['NorESM2-MH']['nominal_resolution_landIce'] = ['100 km']
-source_id['NorESM2-MH']['nominal_resolution_ocean'] = ['25 km']
-source_id['NorESM2-MM']['activity_participation'] = ['AerChemMIP',
-                                                     'CFMIP',
-                                                     'CMIP',
-                                                     'DAMIP',
-                                                     'OMIP',
-                                                     'RFMIP',
-                                                     'ScenarioMIP']
-source_id['NorESM2-MM']['nominal_resolution_atmos'] = ['100 km']
-source_id['NorESM2-MM']['nominal_resolution_landIce'] = ['100 km']
-source_id['NorESM2-MM']['nominal_resolution_ocean'] = ['100 km']
 #==============================================================================
 #source_id['GFDL-ESM4']['activity_participation'] = ['AerChemMIP',
 #                                                    'C4MIP',

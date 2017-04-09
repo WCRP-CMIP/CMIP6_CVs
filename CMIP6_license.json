@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Apr 8 19:14:53 2017 -0700",
+        "creation_date":"Sat Apr 8 19:17:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (94; g6cbe139)",
-        "note":"Update multiple NorESM source_ids",
-        "previous_commit":"9bbaea65567d678bae42e0830279120358c19e02"
+        "latest_tag_point":"3.2.2 (108; gea2ba69)",
+        "note":"Update html markup",
+        "previous_commit":"ec0183e2caa58d9e434186b00352db4030caac2f"
     }
 }

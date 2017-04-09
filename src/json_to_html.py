@@ -35,10 +35,12 @@ print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:/
 <link rel="stylesheet" type="text/css" charset="utf8" href="jquery.dataTables-1.10.13.min.css" />
 <script type="text/javascript" charset="utf8" src="jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" charset="utf8" src="jquery.dataTables-1.10.13.min.js"></script>
-<script>
+<script type="text/javascript">
+//<![CDATA[
 $(document).ready( function () {
     $('#table_id').DataTable();
     } );
+//]]>
 </script>
 <title></title>
 </head>

@@ -1243,7 +1243,7 @@
                 "NCC"
             ],
             "label":"NorESM2-MH",
-            "label_extended":"NorESM2-MH",
+            "label_extended":"NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)",
             "land_ice":"CISM",
             "land_surface":"CLM",
             "nominal_resolution_atmos":[
@@ -1414,10 +1414,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat Apr 8 19:48:48 2017 -0700",
+        "creation_date":"Sat Apr 8 19:48:53 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (146; g427d80e)",
+        "latest_tag_point":"3.2.2 (161; ged1518c)",
         "note":"Update html markup",
-        "previous_commit":"ed86c8288eee31105d94aecd0939ee82554d2f51"
+        "previous_commit":"03fd03e092bf36f0da95931bd49783e751dd712d"
     }
 }

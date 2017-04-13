@@ -145,6 +145,7 @@ PJD  7 Apr 2017    - Register source_id CAMS_CSM1-0 https://github.com/WCRP-CMIP
 PJD  8 Apr 2017    - Update multiple NorESM source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
 PJD  8 Apr 2017    - Update html markup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/248
 PJD 10 Apr 2017    - Revise source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
+PJD 12 Apr 2017    - Revise frequency to include yrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/281
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -169,7 +170,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id NorESM2-MH\"'
+commitMessage = '\"Revise frequency to include yrClim\"'
 
 #%% Define functions
 # Get repo metadata
@@ -353,7 +354,8 @@ frequency = [
     'mon',
     'monClim',
     'subhr',
-    'yr']
+    'yr',
+    'yrClim']
 
 #%% Grid labels
 grid_label = [
@@ -519,7 +521,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-source_id['NorESM2-MH']['label_extended'] = 'NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)'
 #==============================================================================
 #source_id['GFDL-ESM4']['activity_participation'] = ['AerChemMIP',
 #                                                    'C4MIP',

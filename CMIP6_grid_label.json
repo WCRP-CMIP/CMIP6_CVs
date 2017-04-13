@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 12 18:38:10 2017 -0700",
+        "creation_date":"Wed Apr 12 18:44:20 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (169; geed3301)",
-        "note":"Revise frequency to include yrClim",
-        "previous_commit":"e22e6700ebf03fae27c6642d0b68d44b44331c13"
+        "latest_tag_point":"3.2.2 (170; gb1760aa)",
+        "note":"Add missing activity_id values",
+        "previous_commit":"3b214f55a67e473574e7e07273d16ec4f9aa7c9b"
     }
 }

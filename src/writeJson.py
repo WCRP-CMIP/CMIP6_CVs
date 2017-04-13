@@ -146,6 +146,7 @@ PJD  8 Apr 2017    - Update multiple NorESM source_ids https://github.com/WCRP-C
 PJD  8 Apr 2017    - Update html markup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/248
 PJD 10 Apr 2017    - Revise source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
 PJD 12 Apr 2017    - Revise frequency to include yrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/281
+PJD 12 Apr 2017    - Add missing activity_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/276
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -170,7 +171,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise frequency to include yrClim\"'
+commitMessage = '\"Add missing activity_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -225,8 +226,10 @@ activity_id = [
     'C4MIP',
     'CFMIP',
     'CMIP',
+    'CORDEX',
     'DAMIP',
     'DCPP',
+    'DynVarMIP',
     'FAFMIP',
     'GMMIP',
     'GeoMIP',
@@ -237,7 +240,9 @@ activity_id = [
     'OMIP',
     'PMIP',
     'RFMIP',
+    'SIMIP',
     'ScenarioMIP',
+    'VIACSAB',
     'VolMIP'
 ]
 

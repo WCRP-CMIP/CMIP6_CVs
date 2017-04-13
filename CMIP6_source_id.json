@@ -1414,10 +1414,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 12 18:38:10 2017 -0700",
+        "creation_date":"Wed Apr 12 18:39:35 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (176; g4c231f6)",
-        "note":"Revise frequency to include yrClim",
-        "previous_commit":"74295db6b3cf6ff1a6925e86708baff1ebacaf59"
+        "latest_tag_point":"note: ",
+        "note":"Issue281 frequency add yrClim (#282)",
+        "previous_commit":"dbb923e2ebb35123ccf8295764cc91d6715b1b3d"
     }
 }

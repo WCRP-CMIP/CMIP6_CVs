@@ -1414,10 +1414,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 10 11:56:02 2017 -0700",
+        "creation_date":"Wed Apr 12 18:38:10 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue259 durack1 revise source_id NorESM2-MH (#280)",
-        "previous_commit":"94864bd043b9bbd760c27aa44a0a6eb7cde96ea1"
+        "latest_tag_point":"3.2.2 (176; g4c231f6)",
+        "note":"Revise frequency to include yrClim",
+        "previous_commit":"74295db6b3cf6ff1a6925e86708baff1ebacaf59"
     }
 }

@@ -5,7 +5,7 @@
         "CAMS":"Chinese Academy of Meteorological Sciences, Beijing 100081, China",
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
-        "CMCC":"Centro Euro-Mediterraneo per i Cambiamenti Climatici, Bologna 40127, Italy",
+        "CMCC":"Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy",
         "CNRM-CERFACS":"CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31100, France)",
         "COLA-CFS":"Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA",
         "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
@@ -34,10 +34,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 17 14:03:16 2017 -0700",
+        "creation_date":"Mon Apr 17 14:04:59 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (172; g6e43ac9)",
-        "note":"Register institution_id INPE",
-        "previous_commit":"f219afc5d07d7aed6a717cef9b98a4ccf3949f42"
+        "latest_tag_point":"note: ",
+        "note":"Issue286 durack1 register institution_id INPE (#288)",
+        "previous_commit":"5235a88d7c40bf8509a30845e4058bc1bf3bc807"
     }
 }

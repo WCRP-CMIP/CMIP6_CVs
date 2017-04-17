@@ -16,10 +16,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 12 18:44:20 2017 -0700",
+        "creation_date":"Mon Apr 17 14:03:16 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (169; g0cd7e58)",
-        "note":"Add missing activity_id values",
-        "previous_commit":"c9e36baa6cbb521e8641472d140d2ec7d48dfacb"
+        "latest_tag_point":"3.2.2 (170; gfd8a488)",
+        "note":"Register institution_id INPE",
+        "previous_commit":"099ddc91cea50641f89de56f4b1dcdefad4807aa"
     }
 }

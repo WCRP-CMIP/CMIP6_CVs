@@ -150,14 +150,16 @@ PJD 12 Apr 2017    - Add missing activity_id values https://github.com/WCRP-CMIP
 PJD 17 Apr 2017    - Register institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/286
 PJD 17 Apr 2017    - Register institution_id CMCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/284
 PJD 17 Apr 2017    - Update realm format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/285
+PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
+PJD 18 Apr 2017    - Reconfigure json_to_html to deal with new source_id format
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
-                   - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
 
 @author: durack1
 """
 
 #%% Import statements
+import copy
 import datetime
 import gc
 import json
@@ -174,7 +176,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update realm format\"'
+commitMessage = '\"Reconfigure source_id format to reflect all model components\"'
 
 #%% Define functions
 # Get repo metadata
@@ -530,6 +532,58 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+keyList = source_id.keys()
+for count,key in enumerate(keyList):
+    source_id[key]['model_component'] = {}
+    source_id[key]['model_component']['aerosol'] = {}
+    source_id[key]['model_component']['aerosol']['description'] = copy.deepcopy(source_id[key]['aerosol'])
+    source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'None'
+    source_id[key].pop('aerosol')
+    source_id[key]['model_component']['atmos'] = {}
+    source_id[key]['model_component']['atmos']['description'] = copy.deepcopy(source_id[key]['atmosphere'])
+    tmp = source_id[key]['nominal_resolution_atmos']
+    if tmp == '':
+        source_id[key]['model_component']['atmos']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['atmos']['nominal_resolution'] = tmp[0]
+    source_id[key].pop('atmosphere')
+    source_id[key].pop('nominal_resolution_atmos')
+    source_id[key]['model_component']['atmosChem'] = {}
+    source_id[key]['model_component']['atmosChem']['description'] = copy.deepcopy(source_id[key]['atmospheric_chemistry'])
+    source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'None'
+    source_id[key].pop('atmospheric_chemistry')
+    source_id[key]['model_component']['land'] = {}
+    source_id[key]['model_component']['land']['description'] = copy.deepcopy(source_id[key]['land_surface'])
+    source_id[key]['model_component']['land']['nominal_resolution'] = 'None'
+    source_id[key].pop('land_surface')
+    source_id[key]['model_component']['landIce'] = {}
+    source_id[key]['model_component']['landIce']['description'] = copy.deepcopy(source_id[key]['land_ice'])
+    tmp = source_id[key]['nominal_resolution_landIce']
+    if tmp == '':
+        source_id[key]['model_component']['landIce']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['landIce']['nominal_resolution'] = tmp[0]
+    #source_id[key]['model_component']['landIce']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_landIce'])
+    source_id[key].pop('land_ice')
+    source_id[key].pop('nominal_resolution_landIce')
+    source_id[key]['model_component']['ocean'] = {}
+    source_id[key]['model_component']['ocean']['description'] = copy.deepcopy(source_id[key]['ocean'])
+    tmp = source_id[key]['nominal_resolution_ocean']
+    if tmp == '':
+        source_id[key]['model_component']['ocean']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['ocean']['nominal_resolution'] = tmp[0]
+    #source_id[key]['model_component']['ocean']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_ocean'])
+    source_id[key].pop('ocean')
+    source_id[key].pop('nominal_resolution_ocean')
+    source_id[key]['model_component']['ocnBgchem'] = {}
+    source_id[key]['model_component']['ocnBgchem']['description'] = copy.deepcopy(source_id[key]['ocean_biogeochemistry'])
+    source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'None'
+    source_id[key].pop('ocean_biogeochemistry')
+    source_id[key]['model_component']['seaIce'] = {}
+    source_id[key]['model_component']['seaIce']['description'] = copy.deepcopy(source_id[key]['sea_ice'])
+    source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'None'
+    source_id[key].pop('sea_ice')
 #==============================================================================
 #source_id['GFDL-ESM4']['activity_participation'] = ['AerChemMIP',
 #                                                    'C4MIP',

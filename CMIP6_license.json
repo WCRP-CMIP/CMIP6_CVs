@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Apr 18 12:01:21 2017 -0700",
+        "creation_date":"Tue Apr 18 13:42:27 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (176; g2947266)",
-        "note":"Update realm format",
-        "previous_commit":"4b56db92c8d22a6d0fbe9cea3061dfa927613f46"
+        "latest_tag_point":"3.2.2 (232; g05be2a0)",
+        "note":"Reconfigure source_id format to reflect all model components",
+        "previous_commit":"615f66dc4d102ca08a3bdddc3de9c2b2cf08e123"
     }
 }

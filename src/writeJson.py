@@ -534,6 +534,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 # Fix issues
 keyList = source_id.keys()
 for count,key in enumerate(keyList):
+    print key
     source_id[key]['model_component'] = {}
     source_id[key]['model_component']['aerosol'] = {}
     source_id[key]['model_component']['aerosol']['description'] = copy.deepcopy(source_id[key]['aerosol'])
@@ -541,7 +542,11 @@ for count,key in enumerate(keyList):
     source_id[key].pop('aerosol')
     source_id[key]['model_component']['atmos'] = {}
     source_id[key]['model_component']['atmos']['description'] = copy.deepcopy(source_id[key]['atmosphere'])
-    source_id[key]['model_component']['atmos']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_atmos'])
+    tmp = source_id[key]['nominal_resolution_atmos']
+    if tmp == '':
+        source_id[key]['model_component']['atmos']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['atmos']['nominal_resolution'] = tmp[0]
     source_id[key].pop('atmosphere')
     source_id[key].pop('nominal_resolution_atmos')
     source_id[key]['model_component']['atmosChem'] = {}
@@ -554,12 +559,22 @@ for count,key in enumerate(keyList):
     source_id[key].pop('land_surface')
     source_id[key]['model_component']['landIce'] = {}
     source_id[key]['model_component']['landIce']['description'] = copy.deepcopy(source_id[key]['land_ice'])
-    source_id[key]['model_component']['landIce']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_landIce'])
+    tmp = source_id[key]['nominal_resolution_landIce']
+    if tmp == '':
+        source_id[key]['model_component']['landIce']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['landIce']['nominal_resolution'] = tmp[0]
+    #source_id[key]['model_component']['landIce']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_landIce'])
     source_id[key].pop('land_ice')
     source_id[key].pop('nominal_resolution_landIce')
     source_id[key]['model_component']['ocean'] = {}
     source_id[key]['model_component']['ocean']['description'] = copy.deepcopy(source_id[key]['ocean'])
-    source_id[key]['model_component']['ocean']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_ocean'])
+    tmp = source_id[key]['nominal_resolution_ocean']
+    if tmp == '':
+        source_id[key]['model_component']['ocean']['nominal_resolution'] = ''
+    elif isinstance(tmp,list):
+        source_id[key]['model_component']['ocean']['nominal_resolution'] = tmp[0]
+    #source_id[key]['model_component']['ocean']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_ocean'])
     source_id[key].pop('ocean')
     source_id[key].pop('nominal_resolution_ocean')
     source_id[key]['model_component']['ocnBgchem'] = {}

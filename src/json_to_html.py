@@ -173,7 +173,7 @@ dictOrderK = [
 'nomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
 dictRealmKeys = [
 'atmos','ocean','aerosol','landIce','atmosChem','land','ocnBgchem','seaIce']
-dictNomResKeys = ['nomRes_atmos','nomRes_ocean','nomRes_landIce']
+dictNomResKeys = ['atmos','ocean','landIce']
 
 first_row = False
 for exp in dict1.keys():

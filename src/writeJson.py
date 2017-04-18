@@ -488,8 +488,6 @@ realm = {
     'seaIce': 'Sea Ice'
 }
 
-All after reviewing this, it seems the `ocnBgchem` -> `ocnBgChem` change is spurious, as the full descriptor 'Ocean Biogeochemistry' does not lead to camelCase for the chemistry 'C' (it's part of the complete second word), so will implement the list -> dictionary change but not the camelCase change.
-
 #%% Required global attributes
 required_global_attributes = [
     'Conventions',

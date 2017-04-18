@@ -534,7 +534,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 # Fix issues
 keyList = source_id.keys()
 for count,key in enumerate(keyList):
-    print key
     source_id[key]['model_component'] = {}
     source_id[key]['model_component']['aerosol'] = {}
     source_id[key]['model_component']['aerosol']['description'] = copy.deepcopy(source_id[key]['aerosol'])

@@ -50,11 +50,11 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-print >> fo, header, """
+print >> fo, ''.join([header, """
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<table id="table_id" class="display">"""
+<table id="table_id" class="display">"""])
 
 dictOrder = [
 'experiment_id','activity_id','description','start_year','end_year','parent_experiment_id',
@@ -107,11 +107,11 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, header, """
+print >> fo, ''.join([header, """
 <title>CMIP6 institution_id values</title>
 </head>
 <body>
-<table id="table_id" class="display">"""
+<table id="table_id" class="display">"""])
 
 dictOrder = [
 'institution_id'
@@ -150,11 +150,11 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, header, """
+print >> fo, ''.join([header, """
 <title>CMIP6 source_id values</title>
 </head>
 <body>
-<table id="table_id" class="display">"""
+<table id="table_id" class="display">"""])
 
 dictOrder = [
 'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',

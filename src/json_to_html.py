@@ -6,11 +6,32 @@ To run conversion:
 {u'note': u'Correct getGitInfo call', u'author': u'Paul J. Durack <durack1@llnl.gov>', u'creation_date': u'Wed Aug 31 16:36:15 2016 -0700', u'institution_id': u'PCMDI', u'commit': u'43c311fab67ef26acadbe81f22868691c1357f12', u'latest_tag_point': u'None'}
 Notes:
 http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-github-instead-of-just-viewing-their-source
-'''
 
-# This script takes the json file and turns it into a nice
-# jquery/data-tabled html doc
+PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
+
+'''
+# This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import json
+
+#%% Create generic header
+header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="author" content="Paul J. Durack" />
+<meta name="description" content="Controlled vocabulary for CMIP6" />
+<meta name="keywords" content="HTML, CSS, JavaScript" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
+<script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready( function () {
+    $('#table_id').DataTable();
+    } );
+//]]>
+</script>"""
 
 #%% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
@@ -29,23 +50,7 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<meta name="author" content="Paul J. Durack" />
-<meta name="description" content="Controlled vocabulary for CMIP6" />
-<meta name="keywords" content="HTML, CSS, JavaScript" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
-<script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
-<script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready( function () {
-    $('#table_id').DataTable();
-    } );
-//]]>
-</script>
+print >> fo, header, """
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
@@ -102,23 +107,7 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<meta name="author" content="Paul J. Durack" />
-<meta name="description" content="Controlled vocabulary for CMIP6" />
-<meta name="keywords" content="HTML, CSS, JavaScript" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
-<script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
-<script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready( function () {
-    $('#table_id').DataTable();
-    } );
-//]]>
-</script>
+print >> fo, header, """
 <title>CMIP6 institution_id values</title>
 </head>
 <body>
@@ -161,23 +150,7 @@ fout = infile[:-4] + 'html'
 fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<meta name="author" content="Paul J. Durack" />
-<meta name="description" content="Controlled vocabulary for CMIP6" />
-<meta name="keywords" content="HTML, CSS, JavaScript" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="jquery.dataTables-1.10.13.min.css" />
-<script type="text/javascript" charset="UTF-8" src="jquery-3.2.1.slim.min.js"></script>
-<script type="text/javascript" charset="UTF-8" src="jquery.dataTables-1.10.13.min.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready( function () {
-    $('#table_id').DataTable();
-    } );
-//]]>
-</script>
+print >> fo, header, """
 <title>CMIP6 source_id values</title>
 </head>
 <body>
@@ -189,17 +162,24 @@ dictOrder = [
 'aerosol','source_id','ocean','land_ice','activity_participation',
 'nominal_resolution_atmos','nominal_resolution_landIce',
 'nominal_resolution_ocean']
-dictOrderK = [
+dictOrderKold = [
 'institution_id','release_year','activity_participation','atmosphere',
 'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
 'atmospheric_chemistry','cohort','label','label_extended','land_ice',
 'nominal_resolution_landIce','land_surface','ocean_biogeochemistry','sea_ice']
+dictOrderK = [
+'institution_id','release_year','activity_participation','cohort','label',
+'label_extended','atmos','nomRes_atmos','ocean','nomRes_ocean','landIce',
+'nomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
+dictRealmKeys = [
+'atmos','ocean','aerosol','landIce','atmosChem','land','ocnBgchem','seaIce']
+dictNomResKeys = ['nomRes_atmos','nomRes_ocean','nomRes_landIce']
 
 first_row = False
 for exp in dict1.keys():
     exp_dict = dict1[exp]
+    # Create table columns
     if not first_row:
-        #ids = exp_dict.keys()
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             print >> fo, "<%s><tr><th>source_id</th>" % hf
@@ -209,14 +189,20 @@ for exp in dict1.keys():
             print >> fo, "</tr></%s>" % hf
     first_row = True
     print >> fo, "<tr><td>%s</td>" % exp
+    # Fill columns with values
     for k in ids:
-        st = exp_dict[k]
+        # Deal with embeds
+        if k in dictRealmKeys:
+            st = exp_dict['model_component'][k]['description']
+        elif k in dictNomResKeys:
+            st = exp_dict['model_component'][k]['nominal_resolution']
+        else:
+            st = exp_dict[k]
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         print >> fo, "<td>%s</td>" % st
     print >> fo, "</tr>"
 print >> fo, "</table>"
-
 print >> fo, """
 </body>
 </html>

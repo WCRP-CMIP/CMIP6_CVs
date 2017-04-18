@@ -19,9 +19,7 @@
                 },
                 "atmos":{
                     "description":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"None",
@@ -33,15 +31,11 @@
                 },
                 "landIce":{
                     "description":"None",
-                    "nominal_resolution":[
-                        "None"
-                    ]
+                    "nominal_resolution":"None"
                 },
                 "ocean":{
                     "description":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"None",
@@ -172,9 +166,7 @@
                 },
                 "atmos":{
                     "description":"ECHAM5_CAMS (T106; 320 x 160 longitude/latitude; 31 levels; top level 10 mb)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -186,15 +178,11 @@
                 },
                 "landIce":{
                     "description":"none",
-                    "nominal_resolution":[
-                        "none"
-                    ]
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
                     "description":"MOM4 (tripolar; 360 x 200 longitude/latitude, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10 m)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -962,9 +950,7 @@
                 },
                 "atmos":{
                     "description":"GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"fast chemistry, aerosol only",
@@ -976,15 +962,11 @@
                 },
                 "landIce":{
                     "description":"GFDL-LM4.0",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocean":{
                     "description":"none",
-                    "nominal_resolution":[
-                        "none"
-                    ]
+                    "nominal_resolution":"none"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1018,9 +1000,7 @@
                 },
                 "atmos":{
                     "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"unnamed (fast chemistry, aerosol only)",
@@ -1032,15 +1012,11 @@
                 },
                 "landIce":{
                     "description":"GFDL-LM4.0",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocean":{
                     "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440x720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
-                    "nominal_resolution":[
-                        "25 km"
-                    ]
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1083,9 +1059,7 @@
                 },
                 "atmos":{
                     "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 48 levels, model top: 1 Pa)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"GFDL-ATMCHEM4.1 (full atmospheric chemistry)",
@@ -1097,15 +1071,11 @@
                 },
                 "landIce":{
                     "description":"GFDL-LM4.1",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocean":{
                     "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720x360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
-                    "nominal_resolution":[
-                        "50 km"
-                    ]
+                    "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"COBALT 2.0",
@@ -2020,9 +1990,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "25 km"
-                    ]
+                    "nominal_resolution":"25 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
@@ -2034,15 +2002,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "25 km"
-                    ]
+                    "nominal_resolution":"25 km"
                 },
                 "ocean":{
                     "description":"MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "25 km"
-                    ]
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2085,9 +2049,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
@@ -2099,15 +2061,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "ocean":{
                     "description":"MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2144,9 +2102,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
@@ -2158,15 +2114,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "ocean":{
                     "description":"MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2199,9 +2151,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemComp",
@@ -2213,15 +2163,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "250 km"
-                    ]
+                    "nominal_resolution":"250 km"
                 },
                 "ocean":{
                     "description":"MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2260,9 +2206,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
@@ -2274,15 +2218,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocean":{
                     "description":"MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "25 km"
-                    ]
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2321,9 +2261,7 @@
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
@@ -2335,15 +2273,11 @@
                 },
                 "landIce":{
                     "description":"CISM",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocean":{
                     "description":"MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "nominal_resolution":[
-                        "100 km"
-                    ]
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
@@ -2376,9 +2310,7 @@
                 },
                 "atmos":{
                     "description":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
-                    "nominal_resolution":[
-                        "1x1 degree"
-                    ]
+                    "nominal_resolution":"1x1 degree"
                 },
                 "atmosChem":{
                     "description":"None",
@@ -2390,15 +2322,11 @@
                 },
                 "landIce":{
                     "description":"None",
-                    "nominal_resolution":[
-                        "None"
-                    ]
+                    "nominal_resolution":"None"
                 },
                 "ocean":{
                     "description":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
-                    "nominal_resolution":[
-                        "1x1 degree"
-                    ]
+                    "nominal_resolution":"1x1 degree"
                 },
                 "ocnBgchem":{
                     "description":"None",
@@ -2564,10 +2492,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Apr 18 13:23:03 2017 -0700",
+        "creation_date":"Tue Apr 18 13:23:08 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (181; g4670aaa)",
+        "latest_tag_point":"3.2.2 (195; g19b3828)",
         "note":"Reconfigure source_id format to reflect all model components",
-        "previous_commit":"dbface2b4648dfbdb8a182a4e6178080ab1f6cc2"
+        "previous_commit":"9389c5ad423b0bec52ec03995aba317e61e02b01"
     }
 }

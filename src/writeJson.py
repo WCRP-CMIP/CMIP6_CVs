@@ -149,6 +149,7 @@ PJD 12 Apr 2017    - Revise frequency to include yrClim https://github.com/WCRP-
 PJD 12 Apr 2017    - Add missing activity_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/276
 PJD 17 Apr 2017    - Register institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/286
 PJD 17 Apr 2017    - Register institution_id CMCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/284
+PJD 17 Apr 2017    - Update realm format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/285
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Redirect source_id to CMIP6_CVs master file
                    - TODO: Generate function for json compositing
@@ -173,7 +174,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id CMCC\"'
+commitMessage = '\"Update realm format\"'
 
 #%% Define functions
 # Get repo metadata
@@ -476,16 +477,16 @@ nominal_resolution = [
 ]
 
 #%% Realms
-realm = [
-    'aerosol',
-    'atmos',
-    'atmosChem',
-    'land',
-    'landIce',
-    'ocean',
-    'ocnBgchem',
-    'seaIce'
-]
+realm = {
+    'aerosol': 'Aerosol',
+    'atmos': 'Atmosphere',
+    'atmosChem': 'Atmospheric Chemistry',
+    'land': 'Land Surface',
+    'landIce': 'Land Ice',
+    'ocean': 'Ocean',
+    'ocnBgchem': 'Ocean Biogeochemistry',
+    'seaIce': 'Sea Ice'
+}
 
 #%% Required global attributes
 required_global_attributes = [

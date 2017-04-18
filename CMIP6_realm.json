@@ -1,20 +1,20 @@
 {
-    "realm":[
-        "aerosol",
-        "atmos",
-        "atmosChem",
-        "land",
-        "landIce",
-        "ocean",
-        "ocnBgchem",
-        "seaIce"
-    ],
+    "realm":{
+        "aerosol":"Aerosol",
+        "atmos":"Atmosphere",
+        "atmosChem":"Atmospheric Chemistry",
+        "land":"Land Surface",
+        "landIce":"Land Ice",
+        "ocean":"Ocean",
+        "ocnBgchem":"Ocean Biogeochemistry",
+        "seaIce":"Sea Ice"
+    },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 17 14:11:07 2017 -0700",
+        "creation_date":"Tue Apr 18 12:01:21 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (177; g5771620)",
-        "note":"Register institution_id CMCC",
-        "previous_commit":"04a5a9a345861fe42fff3b872b41f0627fe1b6b3"
+        "latest_tag_point":"3.2.2 (179; g2dd1763)",
+        "note":"Update realm format",
+        "previous_commit":"b9b15277722c243664ad3cb1ea02306835cf2f2a"
     }
 }

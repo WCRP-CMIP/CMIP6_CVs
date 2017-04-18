@@ -16,10 +16,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 17 14:11:06 2017 -0700",
+        "creation_date":"Tue Apr 18 12:01:21 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (171; g98eed47)",
-        "note":"Register institution_id CMCC",
-        "previous_commit":"949fd8e595361203f3e2fc398bce4963f1245ad1"
+        "latest_tag_point":"3.2.2 (173; g5e055b1)",
+        "note":"Update realm format",
+        "previous_commit":"f1ccc215dafd784529f35fc1b8fe2d2989ef3048"
     }
 }

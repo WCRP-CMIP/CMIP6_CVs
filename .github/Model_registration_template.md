@@ -14,7 +14,7 @@ To register (or edit) information about your model, please title your issue "sou
 
 Next you should provide further information about any named component models comprising your coupled model. If a component is missing from your model, indicate this with "None". If a component is included but unnamed in your model (i.e., without an identifying name), indicate this with "unnamed". For a "named" component model specify first the name (presumably an acronym) then provide whatever additional information you think is appropriate, identifying the version and perhaps resolution of the component model (see examples below). Here are the components that should be defined (and if necessary and appropriate, you may add others):
 
-"aerosol", "atmos", "atmosChem", "land", "landIce", "ocean", "ocnBgchem", and "seaIce". Full descriptors of these fields can be found in the CMIP6_realm.json file (see https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_realm.json)
+"aerosol", "atmos", "atmosChem", "land", "landIce", "ocean", "ocnBgchem", and "seaIce". Full descriptors of these fields can be found in the CMIP6_realm.json file (see https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_realm.json). Accepted entries for "nominal_resolution" can be found in the CMIP6_nominal_resolution.json file (see https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_nominal_resolution.json)
 
 Example:
 [title your issue: "source_id registration of ACCESS-1-0"]

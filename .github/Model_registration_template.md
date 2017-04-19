@@ -2,11 +2,15 @@ To register (or edit) information about your model, please title your issue "sou
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
 
+'label_extended' -- An extended identifier for more verbose model identifying information
+
 'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-").  The source_id will appear in the ESGF search interface and in filenames a subdirectory names. Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-".
 
 'institution_id' -- list all institutions (by institution_id) who are responsible for one or more CMIP6 simulations with this model version. Additional institutions can be added to the list as needed, but only institutions registered (see above) may be included.
 
 'release_year' -- this should be the year your model was first used in a scientific study. This year should reflect the "generation" of models rather than distinguishing between closely-related versions.
+
+'activity_participation' -- The CMIP6 MIPs that you intend to run experiment simulations (See https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_activity_id.json)
 
 Next you should provide further information about any named component models comprising your coupled model. If a component is missing from your model, indicate this with "None". If a component is included but unnamed in your model (i.e., without an identifying name), indicate this with "unnamed". For a "named" component model specify first the name (presumably an acronym) then provide whatever additional information you think is appropriate, identifying the version and perhaps resolution of the component model (see examples below). Here are the components that should be defined (and if necessary and appropriate, you may add others):
 
@@ -20,7 +24,7 @@ Example:
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = CSIRO-BOM
     release_year = 2011
-    activity_participation = CMIP (See https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_activity_id.json)
+    activity_participation = CMIP
 
     aerosol:
     description = CLASSIC (v1.0)

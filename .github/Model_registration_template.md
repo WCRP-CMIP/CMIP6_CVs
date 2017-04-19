@@ -20,6 +20,7 @@ Example:
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = CSIRO-BOM
     release_year = 2011
+    activity_participation = CMIP (See https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_activity_id.json)
 
     aerosol:
     description = CLASSIC (v1.0)

@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Apr 18 13:42:27 2017 -0700",
+        "creation_date":"Thu Apr 20 08:54:13 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (230; gc14ad54)",
-        "note":"Reconfigure source_id format to reflect all model components",
-        "previous_commit":"002373e02eccd9e3b50bf1b82035bbc788e56203"
+        "latest_tag_point":"3.2.3 (17; g7040351)",
+        "note":"Revise AWI-CM source_id",
+        "previous_commit":"8465cf8d82bd94126cdc592ef2b921cddd3b3bbf"
     }
 }

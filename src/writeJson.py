@@ -152,6 +152,7 @@ PJD 17 Apr 2017    - Register institution_id CMCC https://github.com/WCRP-CMIP/C
 PJD 17 Apr 2017    - Update realm format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/285
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 18 Apr 2017    - Reconfigure json_to_html to deal with new source_id format
+PJD 20 Apr 2017    - Revise AWI-CM source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -176,7 +177,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Reconfigure source_id format to reflect all model components\"'
+commitMessage = '\"Revise AWI-CM source_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -532,87 +533,73 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-keyList = source_id.keys()
-for count,key in enumerate(keyList):
-    source_id[key]['model_component'] = {}
-    source_id[key]['model_component']['aerosol'] = {}
-    source_id[key]['model_component']['aerosol']['description'] = copy.deepcopy(source_id[key]['aerosol'])
-    source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'None'
-    source_id[key].pop('aerosol')
-    source_id[key]['model_component']['atmos'] = {}
-    source_id[key]['model_component']['atmos']['description'] = copy.deepcopy(source_id[key]['atmosphere'])
-    tmp = source_id[key]['nominal_resolution_atmos']
-    if tmp == '':
-        source_id[key]['model_component']['atmos']['nominal_resolution'] = ''
-    elif isinstance(tmp,list):
-        source_id[key]['model_component']['atmos']['nominal_resolution'] = tmp[0]
-    source_id[key].pop('atmosphere')
-    source_id[key].pop('nominal_resolution_atmos')
-    source_id[key]['model_component']['atmosChem'] = {}
-    source_id[key]['model_component']['atmosChem']['description'] = copy.deepcopy(source_id[key]['atmospheric_chemistry'])
-    source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'None'
-    source_id[key].pop('atmospheric_chemistry')
-    source_id[key]['model_component']['land'] = {}
-    source_id[key]['model_component']['land']['description'] = copy.deepcopy(source_id[key]['land_surface'])
-    source_id[key]['model_component']['land']['nominal_resolution'] = 'None'
-    source_id[key].pop('land_surface')
-    source_id[key]['model_component']['landIce'] = {}
-    source_id[key]['model_component']['landIce']['description'] = copy.deepcopy(source_id[key]['land_ice'])
-    tmp = source_id[key]['nominal_resolution_landIce']
-    if tmp == '':
-        source_id[key]['model_component']['landIce']['nominal_resolution'] = ''
-    elif isinstance(tmp,list):
-        source_id[key]['model_component']['landIce']['nominal_resolution'] = tmp[0]
-    #source_id[key]['model_component']['landIce']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_landIce'])
-    source_id[key].pop('land_ice')
-    source_id[key].pop('nominal_resolution_landIce')
-    source_id[key]['model_component']['ocean'] = {}
-    source_id[key]['model_component']['ocean']['description'] = copy.deepcopy(source_id[key]['ocean'])
-    tmp = source_id[key]['nominal_resolution_ocean']
-    if tmp == '':
-        source_id[key]['model_component']['ocean']['nominal_resolution'] = ''
-    elif isinstance(tmp,list):
-        source_id[key]['model_component']['ocean']['nominal_resolution'] = tmp[0]
-    #source_id[key]['model_component']['ocean']['nominal_resolution'] = copy.deepcopy(source_id[key]['nominal_resolution_ocean'])
-    source_id[key].pop('ocean')
-    source_id[key].pop('nominal_resolution_ocean')
-    source_id[key]['model_component']['ocnBgchem'] = {}
-    source_id[key]['model_component']['ocnBgchem']['description'] = copy.deepcopy(source_id[key]['ocean_biogeochemistry'])
-    source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'None'
-    source_id[key].pop('ocean_biogeochemistry')
-    source_id[key]['model_component']['seaIce'] = {}
-    source_id[key]['model_component']['seaIce']['description'] = copy.deepcopy(source_id[key]['sea_ice'])
-    source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'None'
-    source_id[key].pop('sea_ice')
+key = 'AWI-CM-1-0'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'HighResMIP',
+ 'OMIP',
+ 'PMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
+]
+source_id[key]['cohort'] = ['Registered']
+source_id[key]['institution_id'] = ['AWI']
+source_id[key]['label'] = 'AWI-CM 1.0'
+source_id[key]['label_extended'] = 'AWI-CM 1.0'
+source_id[key]['model_component']['aerosol']['description'] = 'None'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'None'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'None'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'None'
+source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
+source_id[key]['model_component']['land']['nominal_resolution'] = ' 100 km'
+source_id[key]['model_component']['landIce']['description'] = 'None'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'None'
+source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'None'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'None'
+source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
-#source_id['GFDL-ESM4']['activity_participation'] = ['AerChemMIP',
-#                                                    'C4MIP',
-#                                                    'CFMIP',
-#                                                    'CMIP',
-#                                                    'DAMIP',
-#                                                    'DynVarMIP',
-#                                                    'GMMIP',
-#                                                    'LUMIP',
-#                                                    'OMIP',
-#                                                    'RFMIP',
-#                                                    'ScenarioMIP']
-#source_id['GFDL-ESM4']['aerosol'] = 'interactive'
-#source_id['GFDL-ESM4']['atmosphere'] = 'GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 48 levels, model top: 1 Pa)'
-#source_id['GFDL-ESM4']['atmospheric_chemistry'] = 'GFDL-ATMCHEM4.1 (full atmospheric chemistry)'
-#source_id['GFDL-ESM4']['cohort'] = ['Registered']
-#source_id['GFDL-ESM4']['institution_id'] = ['NOAA-GFDL']
-#source_id['GFDL-ESM4']['label'] = 'GFDL-ESM4'
-#source_id['GFDL-ESM4']['label_extended'] = 'GFDL-ESM4'
-#source_id['GFDL-ESM4']['land_ice'] = 'GFDL-LM4.1'
-#source_id['GFDL-ESM4']['land_surface'] = 'GFDL-LM4.1'
-#source_id['GFDL-ESM4']['nominal_resolution_atmos'] = ['100 km']
-#source_id['GFDL-ESM4']['nominal_resolution_landIce'] = ['100 km']
-#source_id['GFDL-ESM4']['nominal_resolution_ocean'] = ['50 km']
-#source_id['GFDL-ESM4']['ocean'] = 'GFDL-MOM6 (tripolar - nominal 0.5 deg; 720x360 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-#source_id['GFDL-ESM4']['ocean_biogeochemistry'] = 'COBALT 2.0'
-#source_id['GFDL-ESM4']['release_year'] = '2017'
-#source_id['GFDL-ESM4']['sea_ice'] = 'SIS2'
-#source_id['GFDL-ESM4']['source_id'] = 'GFDL-ESM4'
+#key = 'AWI-CM-1-0'
+#source_id[key]['activity_participation'] = [
+# 'CMIP',
+# 'CORDEX',
+# 'HighResMIP',
+# 'OMIP',
+# 'PMIP',
+# 'SIMIP',
+# 'ScenarioMIP',
+# 'VIACSAB'
+#]
+#source_id[key]['cohort'] = ['Registered']
+#source_id[key]['institution_id'] = ['AWI']
+#source_id[key]['label'] = 'AWI-CM 1.0'
+#source_id[key]['label_extended'] = 'AWI-CM 1.0'
+#source_id[key]['model_component']['aerosol']['description'] = 'None'
+#source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'None'
+#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
+#source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['atmosChem']['description'] = 'None'
+#source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'None'
+#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
+#source_id[key]['model_component']['land']['nominal_resolution'] = ' 100 km'
+#source_id[key]['model_component']['landIce']['description'] = 'None'
+#source_id[key]['model_component']['landIce']['nominal_resolution'] = 'None'
+#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
+#source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+#source_id[key]['model_component']['ocnBgchem']['description'] = 'None'
+#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'None'
+#source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
+#source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+#source_id[key]['release_year'] = '2017'
+#source_id[key]['source_id'] = key
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

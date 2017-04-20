@@ -51,7 +51,14 @@
         },
         "AWI-CM-1-0":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "CORDEX",
+                "HighResMIP",
+                "OMIP",
+                "PMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB"
             ],
             "cohort":[
                 "Registered"
@@ -67,8 +74,8 @@
                     "nominal_resolution":"None"
                 },
                 "atmos":{
-                    "description":"ECHAM6.3.02p4 (384 x 192 T127L95; 95 levels; top level 80000 m)",
-                    "nominal_resolution":""
+                    "description":"ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"None",
@@ -76,15 +83,15 @@
                 },
                 "land":{
                     "description":"JSBACH 3.10",
-                    "nominal_resolution":"None"
+                    "nominal_resolution":" 100 km"
                 },
                 "landIce":{
                     "description":"None",
-                    "nominal_resolution":""
+                    "nominal_resolution":"None"
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"None",
@@ -92,7 +99,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 1.4",
-                    "nominal_resolution":"None"
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -2492,10 +2499,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Apr 18 13:42:28 2017 -0700",
+        "creation_date":"Tue Apr 18 13:50:16 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.2 (237; ge824dbd)",
-        "note":"Reconfigure source_id format to reflect all model components",
-        "previous_commit":"8f27c82ac722351f2d2ca8f75ad540fbb6180f12"
+        "latest_tag_point":"note: ",
+        "note":"Issue264 durack1 reconfigure source_id format (#291)",
+        "previous_commit":"162ff0e906d4af92f59de55499411eae510e6cb6"
     }
 }

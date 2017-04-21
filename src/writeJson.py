@@ -646,7 +646,7 @@ table_id = [
 
 #%% Define clean functions
 def cleanString(string):
-    if isinstance(string,str):
+    if isinstance(string,str) or isinstance(string,unicode):
     # Take a string and clean it for standard errors
         string = string.strip()  # Remove trailing whitespace
         string = string.strip(',.')  # Remove trailing characters
@@ -737,7 +737,7 @@ for jsonName in masterTargets:
         p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
         args = shlex.split(''.join(['git commit -am ',commitMessage]))
-        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+        #p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 del(jsonName, jsonDict, outFile)
 gc.collect()

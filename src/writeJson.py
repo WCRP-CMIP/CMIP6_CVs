@@ -688,7 +688,7 @@ for jsonName in masterTargets:
                 if type(values[1]) is list:
                     print 'elif list'
                     print values[1]
-                    for count in len(values[1]):
+                    for count in range(0,len(values[1])):
                         print count
                         string = dictToClean[key][values[0]][count]
                         string = cleanString(string) ; # Clean string

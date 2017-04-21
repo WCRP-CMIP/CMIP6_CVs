@@ -696,7 +696,7 @@ for jsonName in masterTargets:
                     print 'elif list'
                     print values[1]
                     for count,ind in enumerate(range(0,len(values[1]))):
-                        print count
+                        print count,ind
                         string = dictToClean[key][values[1]][ind]
                         string = cleanString(string) ; # Clean string
                         dictToClean[key][values[1]][ind] = string

@@ -685,6 +685,7 @@ for jsonName in masterTargets:
                     dictToClean[key][values[0]] = string
                 elif type(values[0]) in [list]:
                     for count in len(values[0]):
+                        print count
                         string = dictToClean[key][values[0]][count]
                         string = cleanString(string) ; # Clean string
                         dictToClean[key][values[0]][count] = string

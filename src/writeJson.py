@@ -667,6 +667,13 @@ def cleanString(string):
     
     return string
 
+def dictDepth(x):
+    if type(x) is dict and x:
+        return 1 + max(dictDepth(x[a]) for a in x)
+    if type(x) is list and x:
+        return 1 + max(dictDepth(a) for a in x)
+    return 0
+
 #You can walk a nested dictionary using recursion
 def walk_dict(dictionary):
     for key in dictionary:
@@ -695,6 +702,8 @@ for jsonName in masterTargets:
                         dictToClean[key][values[0]][count] = string
                 elif type(values[1]) is dict:
                     print 'elif dict'
+                    # determine dict depth
+                    print 'depth',dictDepth(values[1])
                 elif type(values[0]) in [str,unicode]:
                     print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]

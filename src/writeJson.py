@@ -701,7 +701,7 @@ for jsonName in masterTargets:
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         print type(string)
-                        dictToClean[key][values[1]][count] = string
+                        dictToClean[key][values[1]][count] = list(string)
                 elif type(values[1]) is dict:
                     print 'elif dict'
                     # determine dict depth

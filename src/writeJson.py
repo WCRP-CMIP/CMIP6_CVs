@@ -697,13 +697,20 @@ for jsonName in masterTargets:
                     print values[1]
                     for count in range(0,len(values[1])):
                         print count
-                        string = dictToClean[key][values[0]][count]
+                        string = dictToClean[key][values[1]][count]
                         string = cleanString(string) ; # Clean string
-                        dictToClean[key][values[0]][count] = string
+                        dictToClean[key][values[1]][count] = string
                 elif type(values[1]) is dict:
                     print 'elif dict'
                     # determine dict depth
-                    print 'depth',dictDepth(values[1])
+                    pdepth = dictDepth(values[1])
+                    keys1 = values[1].keys()
+                    for d1Key in keys1:
+                        keys2 = values[1][d1Key].keys()
+                        for d2Key in keys2:
+                            string = dictToClean[key][values[1]][d1Key][d2Key]
+                            string = cleanString(string) ; # Clean string
+                            dictToClean[key][values[1]][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
                     print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]

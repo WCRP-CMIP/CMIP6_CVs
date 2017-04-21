@@ -684,13 +684,15 @@ for jsonName in masterTargets:
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
-                elif type(values) in [list]:
-                    print 'elif'
+                elif type(values) is list:
+                    print 'elif list'
                     for count in len(values[0]):
                         print count
                         string = dictToClean[key][values[0]][count]
                         string = cleanString(string) ; # Clean string
                         dictToClean[key][values[0]][count] = string
+                elif type(values) is dict:
+                    print 'elif dict'
                 
                 #if not isinstance(values,str)
         vars()[jsonName] = dictToClean

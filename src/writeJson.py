@@ -695,11 +695,11 @@ for jsonName in masterTargets:
                 if type(values[1]) is list:
                     print 'elif list'
                     print values[1]
-                    for count,ind in enumerate(range(0,len(values[1]))):
-                        print count,ind
-                        string = dictToClean[key][values[1]][ind]
+                    for count in range(0,len(values[1])):
+                        print key,count
+                        string = dictToClean[key][values[1]][count]
                         string = cleanString(string) ; # Clean string
-                        dictToClean[key][values[1]][ind] = string
+                        dictToClean[key][values[1]][count] = string
                 elif type(values[1]) is dict:
                     print 'elif dict'
                     # determine dict depth

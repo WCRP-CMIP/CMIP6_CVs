@@ -644,7 +644,7 @@ table_id = [
     'fx'
 ]
 
-#%% Define clean function
+#%% Define clean functions
 def cleanString(string):
     if isinstance(string,str):
     # Take a string and clean it for standard errors
@@ -658,15 +658,18 @@ def cleanString(string):
         #string = string.replace('(&C', '(and C') # experiment_id html fix
         #string = string.replace('(& ','(and ') # experiment_id html fix
         #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
-        #string = string.replace(
-        #    'anthro ', 'anthropogenic ')  # Replace anthro
-        #string = string.replace(
-        #    'piinatubo', 'pinatubo')  # Replace piinatubo
+        #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
+        #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
     else:
         print 'Non-string argument, aborting..'
-        return ''
+        print string
+        return string
     
     return string
+
+def extractClean(string):
+    pass
+    
 
 #%% Write variables to files
 for jsonName in masterTargets:
@@ -679,6 +682,8 @@ for jsonName in masterTargets:
                 string = dictToClean[key][values[0]]
                 string = cleanString(string) ; # Clean string
                 dictToClean[key][values[0]] = string
+                
+                #if not isinstance(values,str)
         vars()[jsonName] = dictToClean
     # Write file
     if jsonName == 'mip_era':

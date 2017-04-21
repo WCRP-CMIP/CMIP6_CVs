@@ -153,6 +153,8 @@ PJD 17 Apr 2017    - Update realm format https://github.com/WCRP-CMIP/CMIP6_CVs/
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 18 Apr 2017    - Reconfigure json_to_html to deal with new source_id format
 PJD 20 Apr 2017    - Revise AWI-CM source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
+PJD 21 Apr 2017    -  Clean up None instances in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/301
+                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
@@ -160,7 +162,7 @@ PJD 20 Apr 2017    - Revise AWI-CM source_id https://github.com/WCRP-CMIP/CMIP6_
 """
 
 #%% Import statements
-import copy
+#import copy ; # Useful for copy.deepcopy() of dictionaries
 import datetime
 import gc
 import json
@@ -177,7 +179,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise AWI-CM source_id\"'
+commitMessage = '\"Clean up None instances in source_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -533,39 +535,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'AWI-CM-1-0'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'CORDEX',
- 'HighResMIP',
- 'OMIP',
- 'PMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
-source_id[key]['cohort'] = ['Registered']
-source_id[key]['institution_id'] = ['AWI']
-source_id[key]['label'] = 'AWI-CM 1.0'
-source_id[key]['label_extended'] = 'AWI-CM 1.0'
-source_id[key]['model_component']['aerosol']['description'] = 'None'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'None'
-source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'None'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'None'
-source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
-source_id[key]['model_component']['land']['nominal_resolution'] = ' 100 km'
-source_id[key]['model_component']['landIce']['description'] = 'None'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'None'
-source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'None'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'None'
-source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0'
 #source_id[key]['activity_participation'] = [
@@ -678,7 +647,7 @@ table_id = [
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['experiment_id']:
+    if jsonName in ['experiment_id','source_id']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
@@ -700,7 +669,7 @@ for jsonName in masterTargets:
                         'piinatubo', 'pinatubo')  # Replace piinatubo
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
-                    string = string.replace('none','None')  # Replace none, None
+                    string = string.replace('None','none')  # Replace None, none
                 if isinstance(string, list):
                     if string == ['ESM']:
                         string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
@@ -708,10 +677,6 @@ for jsonName in masterTargets:
                         for count, value in enumerate(string):
                             if value == 'BGCM':
                                 string[count] = 'BGC' # Replace BGCM -> BGC
-                #    if string == ['LND']:
-                #        string = ['LAND']  # Replace LND -> LAND
-                #    if string == ['AER', 'CHEM,', 'BGCM']:
-                #        string = ['AER', 'CHEM', 'BGCM']
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

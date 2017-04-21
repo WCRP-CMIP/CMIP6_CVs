@@ -697,7 +697,7 @@ for jsonName in masterTargets:
                     print values[1]
                     for count in range(0,len(values[1])):
                         print key,count
-                        string = dictToClean[key][values[1]][count]
+                        string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         dictToClean[key][values[1]][count] = string
                 elif type(values[1]) is dict:

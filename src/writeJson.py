@@ -680,7 +680,7 @@ for jsonName in masterTargets:
             for values in value.iteritems():
                 # values is a tuple
                 if type(values[0]) in [str,unicode]:
-                    print 'if'
+                    print 'if',type(values[0])
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string

@@ -644,6 +644,30 @@ table_id = [
     'fx'
 ]
 
+#%% Define clean function
+def cleanString(string):
+    if isinstance(string,str):
+    # Take a string and clean it for standard errors
+        string = string.strip()  # Remove trailing whitespace
+        string = string.strip(',.')  # Remove trailing characters
+        string = string.replace(' + ', ' and ')  # Replace +
+        string = string.replace(' & ', ' and ')  # Replace +
+        string = string.replace('   ', ' ')  # Replace '  ', '   '
+        string = string.replace('  ', ' ')  # Replace '  ', '   '
+        string = string.replace('None','none')  # Replace None, none
+        #string = string.replace('(&C', '(and C') # experiment_id html fix
+        #string = string.replace('(& ','(and ') # experiment_id html fix
+        #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
+        #string = string.replace(
+        #    'anthro ', 'anthropogenic ')  # Replace anthro
+        #string = string.replace(
+        #    'piinatubo', 'pinatubo')  # Replace piinatubo
+    else:
+        print 'Non-string argument, aborting..'
+        return ''
+    
+    return string
+
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
@@ -651,32 +675,9 @@ for jsonName in masterTargets:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
+                # values is a tuple
                 string = dictToClean[key][values[0]]
-                #pdb.set_trace()
-                #if key == 'alt16':
-                #    print key,values,string,type(string)
-                if isinstance(string, str):
-                    string = string.strip()  # Remove trailing whitespace
-                    string = string.strip(',.')  # Remove trailing characters
-                    string = string.replace(' + ', ' and ')  # Replace +
-                    string = string.replace(' & ', ' and ')  # Replace +
-                    string = string.replace('(&C', '(and C') # experiment_id html fix
-                    string = string.replace('(& ','(and ') # experiment_id html fix
-                    string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
-                    string = string.replace(
-                        'anthro ', 'anthropogenic ')  # Replace anthro
-                    string = string.replace(
-                        'piinatubo', 'pinatubo')  # Replace piinatubo
-                    string = string.replace('   ', ' ')  # Replace '  ', '   '
-                    string = string.replace('  ', ' ')  # Replace '  ', '   '
-                    string = string.replace('None','none')  # Replace None, none
-                #if isinstance(string, list):
-                #    if string == ['ESM']:
-                #        string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
-                #    else:
-                #        for count, value in enumerate(string):
-                #            if value == 'BGCM':
-                #                string[count] = 'BGC' # Replace BGCM -> BGC
+                string = cleanString(string) ; # Clean string
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

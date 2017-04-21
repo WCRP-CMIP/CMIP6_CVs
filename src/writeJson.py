@@ -667,9 +667,6 @@ def cleanString(string):
     
     return string
 
-def extractClean(string):
-    pass
-
 #You can walk a nested dictionary using recursion
 def walk_dict(dictionary):
     for key in dictionary:
@@ -687,9 +684,10 @@ for jsonName in masterTargets:
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():
                 # values is a tuple
+                # test for dictionary
                 if type(values[1]) is list:
                     print 'elif list'
-                    for count in len(values[0]):
+                    for count in len(values[1]):
                         print count
                         string = dictToClean[key][values[0]][count]
                         string = cleanString(string) ; # Clean string
@@ -701,6 +699,10 @@ for jsonName in masterTargets:
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
+
+#                string = dictToClean[key][values[0]]
+#                string = cleanString(string) ; # Clean string
+#                dictToClean[key][values[0]] = string
                 
                 #if not isinstance(values,str)
         vars()[jsonName] = dictToClean

@@ -655,7 +655,7 @@ for jsonName in masterTargets:
                 #pdb.set_trace()
                 #if key == 'alt16':
                 #    print key,values,string,type(string)
-                if not isinstance(string, list):
+                if isinstance(string, str):
                     string = string.strip()  # Remove trailing whitespace
                     string = string.strip(',.')  # Remove trailing characters
                     string = string.replace(' + ', ' and ')  # Replace +
@@ -670,13 +670,13 @@ for jsonName in masterTargets:
                     string = string.replace('   ', ' ')  # Replace '  ', '   '
                     string = string.replace('  ', ' ')  # Replace '  ', '   '
                     string = string.replace('None','none')  # Replace None, none
-                if isinstance(string, list):
-                    if string == ['ESM']:
-                        string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
-                    else:
-                        for count, value in enumerate(string):
-                            if value == 'BGCM':
-                                string[count] = 'BGC' # Replace BGCM -> BGC
+                #if isinstance(string, list):
+                #    if string == ['ESM']:
+                #        string = ['AOGCM','BGC'] # Replace ESM -> AOGCM, BGC
+                #    else:
+                #        for count, value in enumerate(string):
+                #            if value == 'BGCM':
+                #                string[count] = 'BGC' # Replace BGCM -> BGC
                 dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file

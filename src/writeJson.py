@@ -157,6 +157,7 @@ PJD 21 Apr 2017    - Clean up None instances in source_id https://github.com/WCR
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/292
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR5 and correct ocean entry for CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/293
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/294
+PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/295
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -182,7 +183,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id CMCC-CM2-HR4\"'
+commitMessage = '\"Register source_id CMCC-CM2-VHR4\"'
 
 #%% Define functions
 # Get repo metadata
@@ -538,7 +539,7 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CMCC-CM2-HR4'
+key = 'CMCC-CM2-VHR4'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'CMIP',
@@ -551,16 +552,16 @@ source_id[key]['label_extended'] = key
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'prescribed MACv2-SP'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'CAM4 (1/4deg; 1152 x 768 longitude/latitude; 26 levels; top at ~2 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
 source_id[key]['model_component']['land']['description'] = 'CLM4.5 (SP mode)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
@@ -573,7 +574,7 @@ source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2016'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0'

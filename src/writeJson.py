@@ -661,6 +661,36 @@ table_id = [
     'fx'
 ]
 
+#%%
+tmp = [['dreqPy','https://pypi.python.org/pypi/dreqPy/json']
+      ]
+dreqPy = readJsonCreateDict(tmp)
+dreqPy = dreqPy.get('dreqPy')
+releases = dreqPy['releases'].keys() ; releases.sort()
+inds = [i for i, s in enumerate(releases) if 'beta' in s] ; inds.sort() # even sorts '01.01.10'
+latestRelease = releases[inds[0]-1]
+url = dreqPy['releases'][latestRelease][0]['url']
+del(dreqPy,i,inds,latestRelease,releases,s,tmp) ; gc.collect()
+
+
+import collections
+from dreqPy import dreq
+
+dq = dreq.loadDreq()
+
+freqDict,realmDict = [{} for _ in range(2)]
+realmCol = collections.defaultdict(set)
+
+for i in dq.coll['CMORvar'].items:
+    if i.mipTable in freqDict:
+        assert i.frequency == freqDict[i.mipTable], 'Multiple frequencies in table %s: %s, %s' % (i.mipTable, i.frequency, freqDict[i.mipTable])
+    else:
+        freqDict[i.mipTable] = i.frequency
+    realmCol[i.mipTable].add( i.modeling_realm )
+
+for k in realmCol:
+    realmDict[k] = sorted( list( realmCol[k] ) )
+
 #%% Define clean functions
 def cleanString(string):
     if isinstance(string,str) or isinstance(string,unicode):

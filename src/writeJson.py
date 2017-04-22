@@ -667,6 +667,8 @@ url = dreqPy['releases'][latestRelease][0]['url']
 del(dreqPy,i,inds,latestRelease,releases,s,tmp) ; gc.collect()
 # Download and untar - curl part of anaconda install
 # curl -O https://pypi.python.org/packages/5a/b0/099ded6e3b71fa69e845628bcd8db4517df87ce28d3c3384bbc9afbacd98/dreqPy-01.00.07.tar.gz
+#testfile = urllib.URLopener()
+#testfile.retrieve("http://randomsite.com/file.gz", "file.gz")
 # https://docs.python.org/2/library/tarfile.html
 # TarFile.open(...)
 # TarFile.extractall(path=".", members=None)

@@ -234,7 +234,7 @@
                 },
                 "landIce":{
                     "description":"none",
-                    "nominal_resolution":""
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
                     "description":"CIESM-OM (FD, SCCGrid Displaced Pole, 720x560; 46 levels; top grid cell 0-6 m)",
@@ -2499,10 +2499,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 18:10:27 2017 -0700",
+        "creation_date":"Fri Apr 21 18:10:31 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (366; g32742f9)",
+        "latest_tag_point":"3.2.3 (380; g0126337)",
         "note":"Clean up None instances in source_id",
-        "previous_commit":"54965dbec42cfb773f1ef94d1088f6b21fe587a3"
+        "previous_commit":"04800ffc015f0df9b9a8cfb528514bb7005477f1"
     }
 }

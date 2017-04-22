@@ -33,10 +33,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 18:51:45 2017 -0700",
+        "creation_date":"Fri Apr 21 18:53:55 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (26; g5315e8e)",
-        "note":"Register source_id CMCC-CM2-SR5",
-        "previous_commit":"ae34b87bbcb6040e9e2b2ad24a03d1e2b9c0b0d2"
+        "latest_tag_point":"note: ",
+        "note":"Issue292 durack1 register source_id CMCC-CM2-SR5 (#303)",
+        "previous_commit":"9101a930ee068eb9e2ddee571a27c525355ef7d0"
     }
 }

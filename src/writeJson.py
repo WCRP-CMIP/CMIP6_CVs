@@ -698,14 +698,11 @@ for jsonName in masterTargets:
                     new = []
                     for count in range(0,len(values[1])):
                         print key,count
-                        print type(values[1][count])
+                        #print type(values[1][count])
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
                         print new
-                        #print type(string)
-                        #string = [string]
-                        #print type([string])
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
                     print 'elif dict'
@@ -715,6 +712,7 @@ for jsonName in masterTargets:
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
+                            print d1Key,d2Key
                             string = dictToClean[key][values[1]][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][values[1]][d1Key][d2Key] = string

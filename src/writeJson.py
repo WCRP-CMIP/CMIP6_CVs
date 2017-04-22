@@ -542,12 +542,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CMCC-CM2-HR4'
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2 hPa)'
-key = 'CMCC-CM2-HR5'
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
-key = 'CMCC-CM2-SR5'
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
 #==============================================================================
 #key = 'CMCC-ESM2-HR5'
 #source_id[key] = {}
@@ -661,7 +655,7 @@ table_id = [
     'fx'
 ]
 
-#%%
+#%%  Start work on table_id from the DataRequest
 tmp = [['dreqPy','https://pypi.python.org/pypi/dreqPy/json']
       ]
 dreqPy = readJsonCreateDict(tmp)
@@ -671,7 +665,8 @@ inds = [i for i, s in enumerate(releases) if 'beta' in s] ; inds.sort() # even s
 latestRelease = releases[inds[0]-1]
 url = dreqPy['releases'][latestRelease][0]['url']
 del(dreqPy,i,inds,latestRelease,releases,s,tmp) ; gc.collect()
-
+# Download and untar
+# Add to path sys.path.insert(0,'path')
 
 import collections
 from dreqPy import dreq

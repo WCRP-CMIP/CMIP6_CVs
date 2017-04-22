@@ -701,7 +701,7 @@ for jsonName in masterTargets:
                         print type(values[1][count])
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
-                        new += string
+                        new += [string]
                         print new
                         #print type(string)
                         #string = [string]

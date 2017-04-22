@@ -159,6 +159,7 @@ PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR5 and correct ocean entry for
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/294
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/295
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
+PJD 21 Apr 2017    - Register source_id CMCC-ESM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/297
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -184,7 +185,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id CMCC-ESM2-SR5\"'
+commitMessage = '\"Register source_id CMCC-ESM2-HR5\"'
 
 #%% Define functions
 # Get repo metadata
@@ -540,13 +541,11 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CMCC-ESM2-SR5'
+key = 'CMCC-ESM2-HR5'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'C4MIP',
  'CMIP',
- 'LS3MIP',
- 'LUMIP'
+ 'OMIP'
 ]
 source_id[key]['cohort'] = ['Registered']
 source_id[key]['institution_id'] = ['CMCC']
@@ -569,47 +568,51 @@ source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'BFM5.1'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================
-#key = 'AWI-CM-1-0'
+#key = 'CMCC-ESM2-HR5'
+#source_id[key] = {}
 #source_id[key]['activity_participation'] = [
 # 'CMIP',
-# 'CORDEX',
-# 'HighResMIP',
-# 'OMIP',
-# 'PMIP',
-# 'SIMIP',
-# 'ScenarioMIP',
-# 'VIACSAB'
+# 'OMIP'
 #]
 #source_id[key]['cohort'] = ['Registered']
-#source_id[key]['institution_id'] = ['AWI']
-#source_id[key]['label'] = 'AWI-CM 1.0'
-#source_id[key]['label_extended'] = 'AWI-CM 1.0'
-#source_id[key]['model_component']['aerosol']['description'] = 'none'
-#source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
+#source_id[key]['institution_id'] = ['CMCC']
+#source_id[key]['label'] = key
+#source_id[key]['label_extended'] = key
+#source_id[key]['model_component'] = {}
+#source_id[key]['model_component']['aerosol'] = {}
+#source_id[key]['model_component']['aerosol']['description'] = 'MAM3'
+#source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['atmos'] = {}
+#source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
 #source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['atmosChem'] = {}
 #source_id[key]['model_component']['atmosChem']['description'] = 'none'
 #source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
+#source_id[key]['model_component']['land'] = {}
+#source_id[key]['model_component']['land']['description'] = 'CLM4.5 (BGC mode)'
 #source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['landIce'] = {}
 #source_id[key]['model_component']['landIce']['description'] = 'none'
 #source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)'
+#source_id[key]['model_component']['ocean'] = {}
+#source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
 #source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
+#source_id[key]['model_component']['ocnBgchem'] = {}
+#source_id[key]['model_component']['ocnBgchem']['description'] = 'BFM5.1'
+#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
+#source_id[key]['model_component']['seaIce'] = {}
+#source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
 #source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
 #source_id[key]['release_year'] = '2017'
 #source_id[key]['source_id'] = key

@@ -664,7 +664,7 @@ def cleanString(string):
         print 'Non-string argument, aborting..'
         print string
         return string
-    
+
     return string
 
 def dictDepth(x):
@@ -693,19 +693,19 @@ for jsonName in masterTargets:
                 # values is a tuple
                 # test for dictionary
                 if type(values[1]) is list:
-                    print 'elif list'
-                    print values[1],values[0]
+                    #print 'elif list'
+                    #print values[1],values[0]
                     new = []
                     for count in range(0,len(values[1])):
-                        print key,count
+                        #print key,count
                         #print type(values[1][count])
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
-                        print new
+                        #print new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
-                    print 'elif dict'
+                    #print 'elif dict'
                     # determine dict depth
                     pdepth = dictDepth(values[1])
                     keyInd = values[0]
@@ -713,24 +713,22 @@ for jsonName in masterTargets:
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
-                            print key
-                            print values[0]
-                            print values[1]
-                            print d1Key,d2Key
+                            #print key
+                            #print values[0]
+                            #print values[1]
+                            #print d1Key,d2Key
                             string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
-                    print 'elif str unicode',type(values[0])
+                    #print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
-
-#                string = dictToClean[key][values[0]]
-#                string = cleanString(string) ; # Clean string
-#                dictToClean[key][values[0]] = string
-                
-                #if not isinstance(values,str)
+                # Original checks
+                #string = dictToClean[key][values[0]]
+                #string = cleanString(string) ; # Clean string
+                #dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
     # Write file
     if jsonName == 'mip_era':

@@ -454,6 +454,56 @@
             "release_year":"2017",
             "source_id":"CMCC-CM2-VHR4"
         },
+        "CMCC-ESM2-HR5":{
+            "activity_participation":[
+                "CMIP",
+                "OMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CMCC"
+            ],
+            "label":"CMCC-ESM2-HR5",
+            "label_extended":"CMCC-ESM2-HR5",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM3",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.5 (BGC mode)",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"25 km"
+                },
+                "ocnBgchem":{
+                    "description":"BFM5.1",
+                    "nominal_resolution":"25 km"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"25 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"CMCC-ESM2-HR5"
+        },
         "CMCC-ESM2-SR5":{
             "activity_participation":[
                 "C4MIP",
@@ -2753,10 +2803,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:24:53 2017 -0700",
+        "creation_date":"Fri Apr 21 19:31:26 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (31; g38f5ca5)",
-        "note":"Register source_id CMCC-ESM2-SR5",
-        "previous_commit":"c632e9b2de455278173864f9c7cc776513157a1c"
+        "latest_tag_point":"3.2.3 (32; gd7c5e52)",
+        "note":"Register source_id CMCC-ESM2-HR5",
+        "previous_commit":"25665006eaf42adbcbc68725beeee6f1c2dfd1be"
     }
 }

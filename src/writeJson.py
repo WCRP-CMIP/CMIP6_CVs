@@ -717,9 +717,9 @@ for jsonName in masterTargets:
                             print values[0]
                             print values[1]
                             print d1Key,d2Key
-                            string = dictToClean[key][values[1]][keyInd][d1Key][d2Key]
+                            string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
-                            dictToClean[key][values[1]][keyInd][d1Key][d2Key] = string
+                            dictToClean[key][keyInd][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
                     print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]

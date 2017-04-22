@@ -706,7 +706,7 @@ for jsonName in masterTargets:
                         #print type(string)
                         #string = [string]
                         #print type([string])
-                    dictToClean[key][values[1]] = new
+                    dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
                     print 'elif dict'
                     # determine dict depth

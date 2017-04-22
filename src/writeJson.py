@@ -665,7 +665,15 @@ inds = [i for i, s in enumerate(releases) if 'beta' in s] ; inds.sort() # even s
 latestRelease = releases[inds[0]-1]
 url = dreqPy['releases'][latestRelease][0]['url']
 del(dreqPy,i,inds,latestRelease,releases,s,tmp) ; gc.collect()
-# Download and untar
+# Download and untar - curl part of anaconda install
+# curl -O https://pypi.python.org/packages/5a/b0/099ded6e3b71fa69e845628bcd8db4517df87ce28d3c3384bbc9afbacd98/dreqPy-01.00.07.tar.gz
+# https://docs.python.org/2/library/tarfile.html
+# TarFile.open(...)
+# TarFile.extractall(path=".", members=None)
+#import tarfile
+#tar = tarfile.open("sample.tar.gz")
+#tar.extractall()
+#tar.close()
 # Add to path sys.path.insert(0,'path')
 
 import collections

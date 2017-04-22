@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:31:26 2017 -0700",
+        "creation_date":"Fri Apr 21 19:40:33 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (30; g9ebe0a9)",
-        "note":"Register source_id CMCC-ESM2-HR5",
-        "previous_commit":"a1242de6a9e3f2ee09a7537a977eb517a6a23b96"
+        "latest_tag_point":"3.2.3 (31; g57f5564)",
+        "note":"Revise CMCC source_id atmos entries",
+        "previous_commit":"7589be155d2449109d35e90ffdd9c184bf99afa0"
     }
 }

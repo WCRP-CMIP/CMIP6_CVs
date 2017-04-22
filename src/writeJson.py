@@ -160,6 +160,7 @@ PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR4 https://github.com/WCRP-CMI
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/295
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/297
+PJD 21 Apr 2017    - Revise CMCC source_id atmos entries (issues 292-294)
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -185,7 +186,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id CMCC-ESM2-HR5\"'
+commitMessage = '\"Revise CMCC source_id atmos entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -541,43 +542,12 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CMCC-ESM2-HR5'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'OMIP'
-]
-source_id[key]['cohort'] = ['Registered']
-source_id[key]['institution_id'] = ['CMCC']
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM3'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
+key = 'CMCC-CM2-HR4'
+source_id[key]['model_component']['atmos']['description'] = 'CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2 hPa)'
+key = 'CMCC-CM2-HR5'
 source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4.5 (BGC mode)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'BFM5.1'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
+key = 'CMCC-CM2-SR5'
+source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
 #==============================================================================
 #key = 'CMCC-ESM2-HR5'
 #source_id[key] = {}

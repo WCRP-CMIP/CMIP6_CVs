@@ -155,7 +155,7 @@ PJD 18 Apr 2017    - Reconfigure json_to_html to deal with new source_id format
 PJD 20 Apr 2017    - Revise AWI-CM source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
 PJD 21 Apr 2017    - Clean up None instances in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/301
 PJD 21 Apr 2017    - Register source_id CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/292
-PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/293
+PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR5 and correct ocean entry for CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/293
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -564,7 +564,7 @@ source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0.5 m)'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
@@ -574,6 +574,8 @@ source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
+key = 'CMCC-CM2-SR5'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
 #==============================================================================
 #key = 'AWI-CM-1-0'
 #source_id[key]['activity_participation'] = [

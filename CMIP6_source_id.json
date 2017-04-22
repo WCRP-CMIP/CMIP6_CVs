@@ -271,7 +271,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2hPa)",
+                    "description":"CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -321,7 +321,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2hPa)",
+                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -373,7 +373,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2hPa)",
+                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -2803,10 +2803,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:31:26 2017 -0700",
+        "creation_date":"Fri Apr 21 19:33:11 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (32; gd7c5e52)",
-        "note":"Register source_id CMCC-ESM2-HR5",
-        "previous_commit":"25665006eaf42adbcbc68725beeee6f1c2dfd1be"
+        "latest_tag_point":"note: ",
+        "note":"Issue297 durack1 register source_id CMCC-ESM2-HR5 (#308)",
+        "previous_commit":"66503860634c87ef5001f2339847d48993edd66c"
     }
 }

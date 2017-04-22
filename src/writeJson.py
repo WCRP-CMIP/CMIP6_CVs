@@ -708,15 +708,16 @@ for jsonName in masterTargets:
                     print 'elif dict'
                     # determine dict depth
                     pdepth = dictDepth(values[1])
+                    keyInd = values[0]
                     keys1 = values[1].keys()
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
                             print key,values[1]
                             print d1Key,d2Key
-                            string = dictToClean[key][values[1]][d1Key][d2Key]
+                            string = dictToClean[key][values[1]][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
-                            dictToClean[key][values[1]][d1Key][d2Key] = string
+                            dictToClean[key][values[1]][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
                     print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]

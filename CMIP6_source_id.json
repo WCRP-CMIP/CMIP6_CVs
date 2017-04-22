@@ -287,7 +287,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0.5 m)",
+                    "description":"NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -339,7 +339,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0.5 m)",
+                    "description":"NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -2601,10 +2601,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 18:59:23 2017 -0700",
+        "creation_date":"Fri Apr 21 18:59:29 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (28; gfe659d7)",
+        "latest_tag_point":"3.2.3 (42; g1dd8a22)",
         "note":"Register source_id CMCC-CM2-HR5",
-        "previous_commit":"9225aeb91c47b5c8fe17426402fca8779e5c9e5d"
+        "previous_commit":"300b55ff0b16a69c6fe47490bb41539c5aa34e27"
     }
 }

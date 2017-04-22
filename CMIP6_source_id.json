@@ -252,6 +252,58 @@
             "release_year":"2017",
             "source_id":"CIESM"
         },
+        "CMCC-CM2-SR5":{
+            "activity_participation":[
+                "CMIP",
+                "DCPP",
+                "GMMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CMCC"
+            ],
+            "label":"CMCC-CM2-SR5",
+            "label_extended":"CMCC-CM2-SR5",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM3",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.5 (BGC mode)",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0.5 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2016",
+            "source_id":"CMCC-CM2-SR5"
+        },
         "CNRM-CM6-1":{
             "activity_participation":[
                 ""
@@ -2499,10 +2551,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 18:13:13 2017 -0700",
+        "creation_date":"Fri Apr 21 18:22:45 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (394; g59767cf)",
-        "note":"Clean up None instances in source_id",
-        "previous_commit":"4d796b34ecde3abcf3ecd052f6555b9ca848f026"
+        "latest_tag_point":"note: ",
+        "note":"Issue301 durack1 cleanup None instances (#302)",
+        "previous_commit":"94c0cb9dd06454139ccdb3431e730c2440e4b08d"
     }
 }

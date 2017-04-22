@@ -712,6 +712,7 @@ for jsonName in masterTargets:
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
+                            print key,values[1]
                             print d1Key,d2Key
                             string = dictToClean[key][values[1]][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string

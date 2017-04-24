@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:40:33 2017 -0700",
+        "creation_date":"Fri Apr 21 19:40:40 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (26; gc072ee5)",
+        "latest_tag_point":"3.2.3 (42; g847296d)",
         "note":"Revise CMCC source_id atmos entries",
-        "previous_commit":"305ad95442a6e7136002ef52e348b036903f60d5"
+        "previous_commit":"004005e8a39060adca12e90b0db21b4ddbcbfa30"
     }
 }

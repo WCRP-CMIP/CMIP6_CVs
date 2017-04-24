@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:40:33 2017 -0700",
+        "creation_date":"Mon Apr 24 12:09:12 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (26; gc072ee5)",
-        "note":"Revise CMCC source_id atmos entries",
-        "previous_commit":"305ad95442a6e7136002ef52e348b036903f60d5"
+        "latest_tag_point":"3.2.3 (56; g8839dfc)",
+        "note":"Revise source_id EMAC-2-53-AerChem",
+        "previous_commit":"56c732a62273241ce9ff28fe5b01d765eddc508a"
     }
 }

@@ -161,6 +161,7 @@ PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CM
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/297
 PJD 21 Apr 2017    - Revise CMCC source_id atmos entries (issues 292-294)
+PJD 24 Apr 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/257
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -186,7 +187,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise CMCC source_id atmos entries\"'
+commitMessage = '\"Revise source_id EMAC-2-53-AerChem\"'
 
 #%% Define functions
 # Get repo metadata
@@ -542,12 +543,33 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CMCC-CM2-HR4'
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2 hPa)'
-key = 'CMCC-CM2-HR5'
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
-key = 'CMCC-CM2-SR5'
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
+key = 'EMAC-2-53-AerChem'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'CMIP'
+]
+source_id[key]['cohort'] = ['Registered']
+source_id[key]['institution_id'] = ['MESSy-Consortium']
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = 'EMAC-2-53-x-AerChem'
+source_id[key]['model_component']['aerosol']['description'] = 'gmxe 2.2.x'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM5.3.02 (modified, spectral T42; 128 x 64 longitude/latitude; 47 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'MECCA 3.8.x'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['land']['description'] = 'same as Atmosphere'
+source_id[key]['model_component']['land']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM 1.3.0-beta (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'CMCC-ESM2-HR5'
 #source_id[key] = {}

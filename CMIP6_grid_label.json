@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 24 12:22:49 2017 -0700",
+        "creation_date":"Mon Apr 24 12:22:55 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (58; gc3ca6ac)",
+        "latest_tag_point":"3.2.3 (72; g702a03a)",
         "note":"Revise source_id BNU-ESM-1-1",
-        "previous_commit":"029eebb965e93084fcc8f129aa1ac34cad9edc94"
+        "previous_commit":"98b53abfb18627ea701ecc0c954b5c95b21f540f"
     }
 }

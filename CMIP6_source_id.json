@@ -144,7 +144,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM4p1 (tripolar, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 360x200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "description":"MOM4p1 (tripolar, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -2809,10 +2809,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 24 12:22:49 2017 -0700",
+        "creation_date":"Mon Apr 24 12:22:55 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (65; g82b0c40)",
+        "latest_tag_point":"3.2.3 (79; gb0ffce6)",
         "note":"Revise source_id BNU-ESM-1-1",
-        "previous_commit":"280defe1a3050be751ddbc3aff221021c0cfa219"
+        "previous_commit":"78b15716586687e5dd851d38e7211d8b7b11f386"
     }
 }

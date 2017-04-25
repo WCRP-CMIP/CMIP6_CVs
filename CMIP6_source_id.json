@@ -105,6 +105,55 @@
             "release_year":"2017",
             "source_id":"AWI-CM-1-0"
         },
+        "BESM-2-7":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "INPE"
+            ],
+            "label":"BESM 2.7",
+            "label_extended":"BESM 2.7",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"BAM (v1.0, T062L28; 192 x 96 longitude/latitude; 28 levels; top level 3 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"SSiB 2.0",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MOM-5 (MOM5, tripolar primarily 1 deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"TOPAZ 1.0",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"SIS 1.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"BESM-2-7"
+        },
         "BNU-ESM-1-1":{
             "activity_participation":[
                 "C4MIP",
@@ -2809,10 +2858,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Apr 24 12:24:26 2017 -0700",
+        "creation_date":"Tue Apr 25 12:49:01 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (93; g845c77c)",
-        "note":"Revise source_id BNU-ESM-1-1",
-        "previous_commit":"efb75801867799aec59b0cf31db018298464f963"
+        "latest_tag_point":"3.2.3 (36; gb28be57)",
+        "note":"Register source_id BESM-2-7",
+        "previous_commit":"489208df676b2f456378f56a0a9a47a2df117da7"
     }
 }

@@ -259,7 +259,13 @@
         },
         "CIESM":{
             "activity_participation":[
-                ""
+                "CFMIP",
+                "CMIP",
+                "CORDEX",
+                "GMMIP",
+                "OMIP",
+                "SIMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -272,27 +278,27 @@
             "model_component":{
                 "aerosol":{
                     "description":"MAM4",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"CIESM-AM (FV/FD, 288 x 192; 30 levels; top level 2.255 hPa)",
-                    "nominal_resolution":""
+                    "description":"CIESM-AM (FV/FD; 288 x 192 longitude/latitude; 30 levels; top level 2.255 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"trop_mam4",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"CIESM-LM (modified CLM4.5)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"CIESM-OM (FD, SCCGrid Displaced Pole, 720x560; 46 levels; top grid cell 0-6 m)",
-                    "nominal_resolution":""
+                    "description":"CIESM-OM (FD, SCCGrid Displaced Pole; 720 x 560 longitude/latitude; 46 levels; top grid cell 0-6 m)",
+                    "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -300,7 +306,7 @@
                 },
                 "seaIce":{
                     "description":"CICE4",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -2858,10 +2864,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Apr 25 12:49:01 2017 -0700",
+        "creation_date":"Tue Apr 25 12:51:32 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (36; gb28be57)",
-        "note":"Register source_id BESM-2-7",
-        "previous_commit":"489208df676b2f456378f56a0a9a47a2df117da7"
+        "latest_tag_point":"note: ",
+        "note":"Issue287 durack1 register source_id BESM-2-7 (#313)",
+        "previous_commit":"ab0030e7f75ab620f3a25b364821b9b9354fca05"
     }
 }

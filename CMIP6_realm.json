@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 26 07:54:24 2017 -0700",
+        "creation_date":"Wed Apr 26 09:19:24 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue226 durack1 revise source_id CIESM (#314)",
-        "previous_commit":"dc280fff3dfd5a1c9ffacaa6d0f086e4eece5d8e"
+        "latest_tag_point":"3.2.3 (36; geb45e60)",
+        "note":"Revise source_id BESM-2-7",
+        "previous_commit":"da74916ab9a8aa3f905b04aeeabaca77c15d567d"
     }
 }

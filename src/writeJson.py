@@ -165,6 +165,7 @@ PJD 24 Apr 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-
 PJD 24 Apr 2017    - Revise source_id Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
 PJD 25 Apr 2017    - Register source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
 PJD 26 Apr 2017    - Revise source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
+PJD 26 Apr 2017    - Revise source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -190,7 +191,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CIESM\"'
+commitMessage = '\"Revise source_id BESM-2-7\"'
 
 #%% Define functions
 # Get repo metadata
@@ -546,28 +547,23 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CIESM'
+key = 'BESM-2-7'
 source_id[key]['activity_participation'] = [
- 'CFMIP',
  'CMIP',
- 'CORDEX',
- 'GMMIP',
- 'OMIP',
- 'SIMIP',
+ 'DCPP',
+ 'HighResMIP',
  'ScenarioMIP'
 ]
-source_id[key]['model_component']['aerosol']['description'] = 'MAM4'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'CIESM-AM (FV/FD; 288 x 192 longitude/latitude; 30 levels; top level 2.255 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'trop_mam4'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['description'] = 'CIESM-LM (modified CLM4.5)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocean']['description'] = 'CIESM-OM (FD, SCCGrid Displaced Pole; 720 x 560 longitude/latitude; 46 levels; top grid cell 0-6 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmos']['description'] = 'BAM (v1.0, T062L28; 192 x 96 longitude/latitude; 28 levels; top level 3 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'SSiB 2.0'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocean']['description'] = 'MOM-5 (MOM5, tripolar primarily 1 deg, 1/4 deg between 10S-10N; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'TOPAZ 2.0'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'SIS 1.0'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 #==============================================================================
 #key = 'CMCC-ESM2-HR5'
 #source_id[key] = {}

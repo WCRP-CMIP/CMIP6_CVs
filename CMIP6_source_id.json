@@ -107,7 +107,10 @@
         },
         "BESM-2-7":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "DCPP",
+                "HighResMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -139,11 +142,11 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM-5 (MOM5, tripolar primarily 1 deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "description":"MOM-5 (MOM5, tripolar primarily 1 deg, 1/4 deg between 10S-10N; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"TOPAZ 1.0",
+                    "description":"TOPAZ 2.0",
                     "nominal_resolution":"100 km"
                 },
                 "seaIce":{
@@ -2864,10 +2867,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 26 07:52:40 2017 -0700",
+        "creation_date":"Wed Apr 26 09:19:24 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (37; g0c1692f)",
-        "note":"Revise source_id CIESM",
-        "previous_commit":"474f50593d2634b2c1c671a8fb09d93fe323ecba"
+        "latest_tag_point":"3.2.3 (38; g07cbb70)",
+        "note":"Revise source_id BESM-2-7",
+        "previous_commit":"b12fffd77192ac7340d4a537eba623fcfa8a8ab1"
     }
 }

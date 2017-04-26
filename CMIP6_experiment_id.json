@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 26 07:52:40 2017 -0700",
+        "creation_date":"Wed Apr 26 09:19:24 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (28; g3584e75)",
-        "note":"Revise source_id CIESM",
-        "previous_commit":"582bd4d95dbad196186051393a8b7ffa36551197"
+        "latest_tag_point":"3.2.3 (29; g9be7426)",
+        "note":"Revise source_id BESM-2-7",
+        "previous_commit":"66ea1f100a70977e3400c65e14f0c91fc6590ac6"
     }
 }

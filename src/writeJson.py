@@ -166,6 +166,7 @@ PJD 24 Apr 2017    - Revise source_id Revise source_id BNU-ESM-1-1 https://githu
 PJD 25 Apr 2017    - Register source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
 PJD 26 Apr 2017    - Revise source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
 PJD 26 Apr 2017    - Revise source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
+PJD 11 May 2017    - Revise GFDL source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -191,7 +192,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id BESM-2-7\"'
+commitMessage = '\"Revise GFDL source_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -547,23 +548,107 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'BESM-2-7'
+key = 'GFDL-AM4'
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NOAA-GFDL'
+]
+source_id[key]['label'] = 'GFDL-AM4'
+source_id[key]['label_extended'] = 'GFDL-AM4'
+source_id[key]['model_component']['aerosol']['description'] = 'interactive'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'fast chemistry, aerosol only'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM4.0'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM4.0'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'GFDL-CM4'
 source_id[key]['activity_participation'] = [
  'CMIP',
- 'DCPP',
- 'HighResMIP',
+ 'OMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NOAA-GFDL'
+]
+source_id[key]['label'] = 'GFDL-CM4'
+source_id[key]['label_extended'] = 'GFDL-CM4'
+source_id[key]['model_component']['aerosol']['description'] = 'interactive'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'unnamed (fast chemistry, aerosol only)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM4.0'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM4.0'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'GFDL-ESM4'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DynVarMIP',
+ 'GMMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'RFMIP',
  'ScenarioMIP'
 ]
-source_id[key]['model_component']['atmos']['description'] = 'BAM (v1.0, T062L28; 192 x 96 longitude/latitude; 28 levels; top level 3 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'SSiB 2.0'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean']['description'] = 'MOM-5 (MOM5, tripolar primarily 1 deg, 1/4 deg between 10S-10N; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'TOPAZ 2.0'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['description'] = 'SIS 1.0'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NOAA-GFDL'
+]
+source_id[key]['label'] = 'GFDL-ESM4'
+source_id[key]['label_extended'] = 'GFDL-ESM4'
+source_id[key]['model_component']['aerosol']['description'] = 'interactive'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 49 levels; top level 1 Pa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'GFDL-ATMCHEM4.1 (full atmospheric chemistry)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM4.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM4.1'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'COBALT 2.0'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'CMCC-ESM2-HR5'
 #source_id[key] = {}

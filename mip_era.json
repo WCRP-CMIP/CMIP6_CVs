@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu May 11 10:33:00 2017 -0700",
+        "creation_date":"Thu May 11 10:51:02 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue319 durack1 revise source_id AWI-CM-1-0 (#324)",
-        "previous_commit":"e715879686afe59302f4db82030ad8eb5bcebc98"
+        "latest_tag_point":"3.2.3 (38; gcb67a08)",
+        "note":"Register multiple AWI source_ids",
+        "previous_commit":"af6c9ddd797f5bec39d1f4547e165189daaa2564"
     }
 }

@@ -1321,19 +1321,19 @@
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
+                    "description":"GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"fast chemistry, aerosol only",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"GFDL-LM4.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"GFDL-LM4.0",
@@ -1371,26 +1371,26 @@
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 32 levels; model top: 1 hPa)",
+                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"unnamed (fast chemistry, aerosol only)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"GFDL-LM4.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"GFDL-LM4.0",
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440x720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -1399,7 +1399,7 @@
                 },
                 "seaIce":{
                     "description":"SIS2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -1430,35 +1430,35 @@
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 48 levels, model top: 1 Pa)",
+                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 49 levels; top level 1 Pa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"GFDL-ATMCHEM4.1 (full atmospheric chemistry)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"GFDL-LM4.1",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"GFDL-LM4.1",
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720x360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"COBALT 2.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "seaIce":{
                     "description":"SIS2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -2867,10 +2867,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Apr 26 09:19:24 2017 -0700",
+        "creation_date":"Wed Apr 26 09:20:53 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (38; g07cbb70)",
-        "note":"Revise source_id BESM-2-7",
-        "previous_commit":"b12fffd77192ac7340d4a537eba623fcfa8a8ab1"
+        "latest_tag_point":"note: ",
+        "note":"Issue287 durack1 revise source_id BESM-2-7 (#315)",
+        "previous_commit":"96b1114baf36f512a2fc7723ff66881544e4f61d"
     }
 }

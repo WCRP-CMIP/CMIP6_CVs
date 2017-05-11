@@ -49,7 +49,60 @@
             "release_year":"2011",
             "source_id":"ACCESS-1-0"
         },
-        "AWI-CM-1-0-MR":{
+        "AWI-CM-1-0-HR":{
+            "activity_participation":[
+                "CORDEX",
+                "HighResMIP",
+                "OMIP",
+                "SIMIP",
+                "VIACSAB"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-CM 1.0 HR",
+            "label_extended":"AWI-CM 1.0 HR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JSBACH 3.10",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FESOM 1.4 (unstructured grid in the horizontal with 1306775 wet nodes; 46 levels; top grid cell 0-5 m)",
+                    "nominal_resolution":"25 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"FESOM 1.4",
+                    "nominal_resolution":"25 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"AWI-CM-1-0-HR"
+        },
+        "AWI-CM-1-0-LR":{
             "activity_participation":[
                 "CMIP",
                 "CORDEX",
@@ -66,8 +119,62 @@
             "institution_id":[
                 "AWI"
             ],
-            "label":"AWI-CM 1.0",
-            "label_extended":"AWI-CM 1.0",
+            "label":"AWI-CM 1.0 LR",
+            "label_extended":"AWI-CM 1.0 LR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3.02p4 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JSBACH 3.10",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"FESOM 1.4",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"AWI-CM-1-0-LR"
+        },
+        "AWI-CM-1-0-MR":{
+            "activity_participation":[
+                "CMIP",
+                "CORDEX",
+                "OMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-CM 1.0 MR",
+            "label_extended":"AWI-CM 1.0 MR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -103,7 +210,7 @@
                 }
             },
             "release_year":"2017",
-            "source_id":"AWI-CM-1-0"
+            "source_id":"AWI-CM-1-0-MR"
         },
         "BESM-2-7":{
             "activity_participation":[
@@ -2867,10 +2974,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu May 11 10:30:49 2017 -0700",
+        "creation_date":"Thu May 11 10:33:00 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (41; g2bf3420)",
-        "note":"Revise source_id AWI-CM-1-0",
-        "previous_commit":"797cbc5697b0c40e0c64307500154adc3bd4c341"
+        "latest_tag_point":"note: ",
+        "note":"Issue319 durack1 revise source_id AWI-CM-1-0 (#324)",
+        "previous_commit":"e715879686afe59302f4db82030ad8eb5bcebc98"
     }
 }

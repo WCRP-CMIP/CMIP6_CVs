@@ -49,7 +49,7 @@
             "release_year":"2011",
             "source_id":"ACCESS-1-0"
         },
-        "AWI-CM-1-0":{
+        "AWI-CM-1-0-MR":{
             "activity_participation":[
                 "CMIP",
                 "CORDEX",
@@ -2867,10 +2867,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu May 11 10:22:28 2017 -0700",
+        "creation_date":"Thu May 11 10:25:53 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (40; gdf8dd05)",
-        "note":"Revise GFDL source_ids",
-        "previous_commit":"5db27de4e2b0ff3865969f438c4ddb3d9e473aa1"
+        "latest_tag_point":"note: ",
+        "note":"Issue318 revise GFDL source_id values (#323)",
+        "previous_commit":"54dd131c6e4b5b07c7f1ae4fa9bf07ea21e3aa40"
     }
 }

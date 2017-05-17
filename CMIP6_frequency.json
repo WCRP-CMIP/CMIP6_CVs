@@ -16,10 +16,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu May 11 10:51:01 2017 -0700",
+        "creation_date":"Wed May 17 07:45:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (34; g68a10b1)",
-        "note":"Register multiple AWI source_ids",
-        "previous_commit":"2db8a24c1bb5c7baab36b9cdd0de102decc57a26"
+        "latest_tag_point":"3.2.3 (63; g2c3e87b)",
+        "note":"Revise source_id EMAC-2-53-Vol",
+        "previous_commit":"e2abbdb407ce3ac8ff9bc56dd40b3fe398b881d6"
     }
 }

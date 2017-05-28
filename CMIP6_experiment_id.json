@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat May 27 22:25:10 2017 -0400",
+        "creation_date":"Sat May 27 19:40:15 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue329 durack1 revise and rename experiment_id sspxy (#331)",
-        "previous_commit":"e58700c2d3629408037456d786ca924a01b017f1"
+        "latest_tag_point":"3.2.3 (36; g4df879c)",
+        "note":"Rename and revise sspxy to ssp119",
+        "previous_commit":"c3c039892d9547b5e80ac0bce9b626f069d67ad3"
     }
 }

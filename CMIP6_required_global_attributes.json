@@ -33,10 +33,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed May 17 07:45:07 2017 -0700",
+        "creation_date":"Sat May 27 19:22:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (70; g5de5508)",
-        "note":"Revise source_id EMAC-2-53-Vol",
-        "previous_commit":"5203532548678577e800a305031b5693a0bb862a"
+        "latest_tag_point":"3.2.3 (43; gec0ebde)",
+        "note":"Rename and revise sspxy to ssp119",
+        "previous_commit":"c7b85117dc49d5fd24865b318a4d5650e4b35a13"
     }
 }

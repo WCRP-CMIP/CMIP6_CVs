@@ -171,6 +171,7 @@ PJD 11 May 2017    - Revise source_id AWI-CM-1-0 https://github.com/WCRP-CMIP/CM
 PJD 11 May 2017    - Register multiple AWI source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/320-322
 PJD 17 May 2017    - Revise source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
 PJD 27 May 2017    - Rename and revise sspxy to ssp119 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/329
+PJD 27 May 2017    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/330
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -279,22 +280,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id.pop('sspxy') ; # Remove
-key = 'ssp119'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['ScenarioMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = 'Future scenario with low radiative forcing throughout reaching about 1.9 W/m2 in 2100 based on SSP1. Concentration-driven'
-experiment_id[key]['end_year'] = '2100'
-experiment_id[key]['experiment'] = 'low-end scenario reaching 1.9 W m-2, based on SSP1'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '86'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['historical']
-experiment_id[key]['required_model_components'] = ['AOGCM']
-experiment_id[key]['start_year'] = '2015'
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -569,6 +554,63 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'CanESM5'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'CORDEX',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CCCma'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'interactive'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'CanAM5 (T63L49 native atmosphere, T63 Linear Gaussian Grid; 128 x 64 longitude/latitude; 49 levels; top level 1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'fast chemistry, aerosol only'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '500km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'CLASS3.6/CTEM1.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.4.1 (ORCA1, tripolar grid, 1 deg with refinement to 1/3 deg within 20 degrees of the equator; 362 x 292 longitude/latitude; 41 vertical levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'CanOE'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'LIM2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat May 27 19:22:06 2017 -0700",
+        "creation_date":"Sat May 27 19:40:16 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (45; g28323da)",
+        "latest_tag_point":"3.2.3 (46; g0f788d5)",
         "note":"Rename and revise sspxy to ssp119",
-        "previous_commit":"fc95cb0d85152b0aa8bd68ceec5a898789a74e02"
+        "previous_commit":"194b2557ee2f20d5074d5d8ce4f90358f3bbdd0b"
     }
 }

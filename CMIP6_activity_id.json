@@ -25,10 +25,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat May 27 19:40:15 2017 -0700",
+        "creation_date":"Sat May 27 19:44:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (35; g0790bbe)",
-        "note":"Rename and revise sspxy to ssp119",
-        "previous_commit":"2bf517a76b695d28cb7cfc72b978e1bfea143277"
+        "latest_tag_point":"note: ",
+        "note":"Issue330 durack1 register source_id CanESM5 (#332)",
+        "previous_commit":"a65449ca10bf661b44f3988a180264e997d0d9c2"
     }
 }

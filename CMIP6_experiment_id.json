@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat May 27 19:40:15 2017 -0700",
+        "creation_date":"Tue May 30 17:49:20 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (36; g4df879c)",
-        "note":"Rename and revise sspxy to ssp119",
-        "previous_commit":"c3c039892d9547b5e80ac0bce9b626f069d67ad3"
+        "latest_tag_point":"3.2.3 (37; g2cbff6b)",
+        "note":"Revise institution_id NCAR",
+        "previous_commit":"b4f6ea40fb7dfdf365e90f29a5284d1084b8e216"
     }
 }

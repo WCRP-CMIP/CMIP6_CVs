@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sat May 27 19:44:05 2017 -0700",
+        "creation_date":"Tue May 30 17:49:20 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue330 durack1 register source_id CanESM5 (#332)",
-        "previous_commit":"a65449ca10bf661b44f3988a180264e997d0d9c2"
+        "latest_tag_point":"3.2.3 (47; gf079a99)",
+        "note":"Revise institution_id NCAR",
+        "previous_commit":"2946a15485ba594a39bd3c7640a996eee7ee4bcd"
     }
 }

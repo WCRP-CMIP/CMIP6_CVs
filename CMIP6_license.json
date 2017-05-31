@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue May 30 17:49:20 2017 -0700",
+        "creation_date":"Tue May 30 17:54:36 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (41; gdcb5342)",
-        "note":"Revise institution_id NCAR",
-        "previous_commit":"9ae083f647e5a33aa243e3eb4024653a238ddb7d"
+        "latest_tag_point":"3.2.3 (42; g225fb72)",
+        "note":"Remove frequency 3hrClim",
+        "previous_commit":"eedb70ecca33a7146944e0fe4a33816311bd15a5"
     }
 }

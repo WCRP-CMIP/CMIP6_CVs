@@ -656,6 +656,8 @@ table_id = [
 ]
 
 #%%  Start work on table_id from the DataRequest
+homePath = os.path.join('/','/'.join(os.path.realpath(__file__).split('/')[0:-1])) ; # Extract path from executing file
+os.chdir(homePath) ; # Set to local dir
 tmp = [['dreqPy','https://pypi.python.org/pypi/dreqPy/json']
       ]
 dreqPy = readJsonCreateDict(tmp)

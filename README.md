@@ -1,5 +1,5 @@
-# CMIP6_CVs
-Core Controlled Vocabularies (CVs) for use in CMIP6
+# CMIP2_CVs
+Core Controlled Vocabularies (CVs) for use in CMIP2
 
 Registering Institutions, Models, or requesting changes to CVs:
 ----------------

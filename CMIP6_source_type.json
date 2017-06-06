@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue May 30 17:55:51 2017 -0700",
+        "creation_date":"Tue Jun 6 08:00:01 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue334 remove frequency 3hrClim (#337)",
-        "previous_commit":"10c9d5fe3de2bebf3814df5cf238b2b5caafebc5"
+        "latest_tag_point":"3.2.3 (49; g575d66d)",
+        "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
+        "previous_commit":"2a506323a0e4871be10f35155f1e6a249cfdebfc"
     }
 }

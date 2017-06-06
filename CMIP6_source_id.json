@@ -728,7 +728,17 @@
         },
         "CNRM-CM6-1":{
             "activity_participation":[
-                ""
+                "CFMIP",
+                "CMIP",
+                "DAMIP",
+                "DCPP",
+                "FAFMIP",
+                "GMMIP",
+                "ISMIP6",
+                "LS3MIP",
+                "PMIP",
+                "RFMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -740,28 +750,28 @@
             "label_extended":"CNRM-CM6-1",
             "model_component":{
                 "aerosol":{
-                    "description":"climatological fields computed by TACTIC (v2.0)",
-                    "nominal_resolution":""
+                    "description":"prescribed monthly fields computed by TACTIC_v2 scheme",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
-                    "nominal_resolution":""
+                    "description":"Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"OZL_v2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"Surfex 8.0c",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
-                    "description":"none (except for some FAFMIP experiments)",
+                    "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
-                    "nominal_resolution":""
+                    "description":"Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -769,15 +779,18 @@
                 },
                 "seaIce":{
                     "description":"Gelato 6.1",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2017",
             "source_id":"CNRM-CM6-1"
         },
         "CNRM-CM6-1-HR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "DCPP",
+                "HighResMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -789,28 +802,28 @@
             "label_extended":"CNRM-CM6-1-HR",
             "model_component":{
                 "aerosol":{
-                    "description":"climatological fields computed by TACTIC (v2.0)",
-                    "nominal_resolution":""
+                    "description":"prescribed monthly fields computed by TACTIC_v2 scheme",
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
-                    "nominal_resolution":""
+                    "description":"Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"OZL_v2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"Surfex 8.0c",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
-                    "nominal_resolution":""
+                    "description":"Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -818,15 +831,21 @@
                 },
                 "seaIce":{
                     "description":"Gelato 6.1",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2017",
             "source_id":"CNRM-CM6-1-HR"
         },
         "CNRM-ESM2-1":{
             "activity_participation":[
-                ""
+                "AerChemMIP",
+                "C4MIP",
+                "CMIP",
+                "GeoMIP",
+                "LUMIP",
+                "OMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -838,44 +857,46 @@
             "label_extended":"CNRM-ESM2-1",
             "model_component":{
                 "aerosol":{
-                    "description":"TACTIC (v2.0)",
-                    "nominal_resolution":""
+                    "description":"TACTIC_v2",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.2 (Tl127; 91 levels; top level 78.4 km)",
-                    "nominal_resolution":""
+                    "description":"Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
-                    "description":"REPROBUS-C (v2.0)",
-                    "nominal_resolution":""
+                    "description":"REPROBUS-C_v2",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"Surfex 8.0c",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"Nemo 3.6 (eORCA1; tripolar primarily 1deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
-                    "nominal_resolution":""
+                    "description":"Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"Pisces 2.s",
-                    "nominal_resolution":""
+                    "description":"none",
+                    "nominal_resolution":"none"
                 },
                 "seaIce":{
                     "description":"Gelato 6.1",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2017",
             "source_id":"CNRM-ESM2-1"
         },
         "CNRM-ESM2-1-HR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "OMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -887,39 +908,39 @@
             "label_extended":"CNRM-ESM2-1-HR",
             "model_component":{
                 "aerosol":{
-                    "description":"TACTIC (v2.0)",
-                    "nominal_resolution":""
+                    "description":"TACTIC_v2",
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.2 (Tl359; 91 levels; top level 78.4 km)",
-                    "nominal_resolution":""
+                    "description":"Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"OZL_v2",
-                    "nominal_resolution":""
+                    "description":"REPROBUS-C_v2",
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"Surfex 8.0c",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"Nemo 3.6 (eORCA025; tripolar primarily 1/4deg latitude/longitude; 75 levels; top grid cell 0-1 m)",
-                    "nominal_resolution":""
+                    "description":"Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"Pisces 2.s",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"Gelato 6.1",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2017",
             "source_id":"CNRM-ESM2-1-HR"
         },
         "CanESM5":{
@@ -3041,10 +3062,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue May 30 17:54:36 2017 -0700",
+        "creation_date":"Tue May 30 17:55:51 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (47; gbb13f25)",
-        "note":"Remove frequency 3hrClim",
-        "previous_commit":"cc973a607050d91d1e1d8d3ccd3ec574197232f2"
+        "latest_tag_point":"note: ",
+        "note":"Issue334 remove frequency 3hrClim (#337)",
+        "previous_commit":"10c9d5fe3de2bebf3814df5cf238b2b5caafebc5"
     }
 }

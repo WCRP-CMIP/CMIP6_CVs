@@ -174,6 +174,7 @@ PJD 27 May 2017    - Rename and revise sspxy to ssp119 https://github.com/WCRP-C
 PJD 27 May 2017    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/330
 PJD 30 May 2017    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/335
 PJD 30 May 2017    - Remove frequency 3hrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/334
+PJD  6 Jun 2017    - Revise multiple CNRM source_ids and CNRM-CERFACS institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -199,7 +200,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Remove frequency 3hrClim\"'
+commitMessage = '\"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -447,7 +448,7 @@ institution_id = {
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
-    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31100, France)',
+    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
@@ -555,6 +556,135 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'CNRM-CM6-1'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'ISMIP6', # Ice sheet MIP?
+ 'LS3MIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP']
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CNRM-CERFACS'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'CNRM-CM6-1-HR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
+ 'HighResMIP',
+ 'ScenarioMIP']
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CNRM-CERFACS'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'CNRM-ESM2-1'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CMIP',
+ 'GeoMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'ScenarioMIP']
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CNRM-CERFACS'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'CNRM-ESM2-1-HR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'OMIP',
+ 'ScenarioMIP']
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CNRM-CERFACS'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'Pisces 2.s'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

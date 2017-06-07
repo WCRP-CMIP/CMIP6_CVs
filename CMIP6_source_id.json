@@ -881,8 +881,8 @@
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
+                    "description":"Pisces 2.s",
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"Gelato 6.1",
@@ -3062,10 +3062,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jun 6 08:00:01 2017 -0700",
+        "creation_date":"Tue Jun 6 08:00:07 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (48; ga5aaa30)",
+        "latest_tag_point":"3.2.3 (62; g8985d99)",
         "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
-        "previous_commit":"882d813c7d94b579b9d4bde957350344469325da"
+        "previous_commit":"575d66d89e2206dc3e2970ec3d44fbd292c629c3"
     }
 }

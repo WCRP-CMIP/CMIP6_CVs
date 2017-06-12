@@ -4,7 +4,7 @@ Core Controlled Vocabularies (CVs) for use in CMIP2
 Registering Institutions, Models, or requesting changes to CVs:
 ----------------
 
-To register your institution or model or to request changes to a CV, please submit an issue/ticket following the instructions on the [CMIP6_CVs issue page](https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new). 
+To register your institution or model or to request changes to a CV, please submit an issue/ticket following the instructions on the [CMIP2_CVs issue page](https://github.com/musci2/CMIP2_CVs/issues/new). 
 
 Some support for CMIP participating modeling groups is available: pcmdi-cmip@llnl.gov
 

@@ -186,10 +186,11 @@ PJD 30 May 2017    - Remove frequency 3hrClim https://github.com/WCRP-CMIP/CMIP6
 import datetime
 import gc
 import json
-import os
+import os,sys
 import shlex
 import ssl
 import subprocess
+sys.path.insert(0,'/export/musci2/git/durolib/lib') ; # Add Paul's library to python path
 from durolib import readJsonCreateDict
 from durolib import getGitInfo
 #import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')

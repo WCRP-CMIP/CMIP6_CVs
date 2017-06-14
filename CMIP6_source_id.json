@@ -1011,7 +1011,16 @@
         },
         "EC-Earth3":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "CORDEX",
+                "DCPP",
+                "DynVarMIP",
+                "LS3MIP",
+                "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1027,8 +1036,8 @@
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0,01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -1036,15 +1045,15 @@
                 },
                 "land":{
                     "description":"HTESSEL (land surface scheme built in IFS)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1052,7 +1061,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1060,7 +1069,9 @@
         },
         "EC-Earth3-AerChem":{
             "activity_participation":[
-                ""
+                "AeroChemMIP",
+                "CMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1069,31 +1080,31 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-AerChem",
-            "label_extended":"EC-Earth 3.3 - AerChem (with atmospheric aerosol and chemistry)",
+            "label_extended":"EC-Earth3-AerChem",
             "model_component":{
                 "aerosol":{
-                    "description":"TM5",
-                    "nominal_resolution":""
+                    "description":"TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa",
-                    "nominal_resolution":""
+                    "description":"TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"HTESSEL (land surface scheme built in IFS)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1101,7 +1112,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1109,7 +1120,9 @@
         },
         "EC-Earth3-CC":{
             "activity_participation":[
-                ""
+                "C4MIP",
+                "CMIP",
+                "LUMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1118,39 +1131,39 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-CC",
-            "label_extended":"EC-Earth 3.3 - CC (with carbon cycle)",
+            "label_extended":"EC-Earth3-CC",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"TM5 (3 deg. (long.) x 2 deg. (lat.), 34 levels, top level: 0.1 hPa",
-                    "nominal_resolution":""
+                    "description":"TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
-                    "description":"LPJ-GUESS v4",
-                    "nominal_resolution":""
+                    "description":"HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4",
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"PISCES v2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1158,7 +1171,9 @@
         },
         "EC-Earth3-GrIS":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "ISMIP6",
+                "PMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1167,15 +1182,15 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-GrIS",
-            "label_extended":"EC-Earth 3.3 Coupled with PISM for Greenland ice sheet",
+            "label_extended":"EC-Earth3-GrIS",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -1183,15 +1198,15 @@
                 },
                 "land":{
                     "description":"HTESSEL (land surface scheme built in IFS)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
-                    "description":"PISM 0.7 (5 km x 5 km, L442)",
-                    "nominal_resolution":""
+                    "description":"PISM 0.7 (5 x 5 km; 442 levels)",
+                    "nominal_resolution":"5 km"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1199,7 +1214,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1207,7 +1222,8 @@
         },
         "EC-Earth3-HR":{
             "activity_participation":[
-                ""
+                "DCPP",
+                "HighResMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1216,15 +1232,15 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-HR",
-            "label_extended":"EC-Earth 3.3 at high resolution",
+            "label_extended":"EC-Earth3-HR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512; 91 levels; top level 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL511; linearly reduced Gaussian grid; 1024 x 512 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"50 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -1232,15 +1248,15 @@
                 },
                 "land":{
                     "description":"HTESSEL (land surface scheme built in IFS)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (tripolar, 1442x1921; 75 levels; top grid cell 5m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1248,7 +1264,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -1256,7 +1272,8 @@
         },
         "EC-Earth3-LR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "PMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1265,15 +1282,15 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-LR",
-            "label_extended":"EC-Earth 3.3 at low resolution",
+            "label_extended":"EC-Earth3-LR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL159; linearly reduced Gaussian grid; 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -1281,15 +1298,15 @@
                 },
                 "land":{
                     "description":"HTESSEL (land surface scheme built in IFS)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1297,7 +1314,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1305,7 +1322,10 @@
         },
         "EC-Earth3-Veg":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "LS3MIP",
+                "LUMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1314,31 +1334,31 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-Veg",
-            "label_extended":"EC-Earth 3.3 - LPJ-GUESS",
+            "label_extended":"EC-Earth3-Veg",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256, 91 levels, top level: 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"LPJ-GUESS v4",
-                    "nominal_resolution":""
+                    "description":"HTESSEL (land surface scheme built in IFS)",
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1346,7 +1366,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -1354,7 +1374,9 @@
         },
         "EC-Earth3-Veg-LR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "PMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1363,31 +1385,31 @@
                 "EC-Earth-Consortium"
             ],
             "label":"EC-Earth3-Veg-LR",
-            "label_extended":"EC-Earth 3.3 - LPJ-GUESS at low resolution",
+            "label_extended":"EC-Earth3-Veg-LR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160; 62 levels; top level 5 hPa)",
-                    "nominal_resolution":""
+                    "description":"IFS cy36r4 (TL159; linearly reduced Gaussian grid; 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"LPJ-GUESS v4",
-                    "nominal_resolution":""
+                    "description":"HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4",
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarily 1 deg latitude/longitude with meridional refinement down to 1/3 degree in the tropics; 75 levels; top grid cell 5 m)",
-                    "nominal_resolution":""
+                    "description":"NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1395,7 +1417,7 @@
                 },
                 "seaIce":{
                     "description":"LIM3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3062,10 +3084,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 11:08:49 2017 -0700",
+        "creation_date":"Wed Jun 14 13:28:55 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (132; g6149c0b)",
-        "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
-        "previous_commit":"47e7ad28d6ffa110fe5c17aedd7269d0ad287607"
+        "latest_tag_point":"3.2.3 (49; g742354f)",
+        "note":"Revise multiple EC-EARTH3 source_ids",
+        "previous_commit":"1eec3852187f251cb8cb11794f710f821b747407"
     }
 }

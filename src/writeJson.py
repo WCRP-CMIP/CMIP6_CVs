@@ -175,6 +175,7 @@ PJD 27 May 2017    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6
 PJD 30 May 2017    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/335
 PJD 30 May 2017    - Remove frequency 3hrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/334
 PJD  6 Jun 2017    - Revise multiple CNRM source_ids and CNRM-CERFACS institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 14 Jun 2017    - Revise multiple EC-EARTH3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -200,7 +201,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id\"'
+commitMessage = '\"Revise multiple EC-EARTH3 source_ids\"'
 
 #%% Define functions
 # Get repo metadata
@@ -556,133 +557,266 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CNRM-CM6-1'
+key = 'EC-Earth3'
 source_id[key]['activity_participation'] = [
- 'CFMIP',
  'CMIP',
- 'DAMIP',
+ 'CORDEX',
  'DCPP',
- 'FAFMIP',
- 'GMMIP',
- 'ISMIP6',
+ 'DynVarMIP',
  'LS3MIP',
- 'PMIP',
  'RFMIP',
- 'ScenarioMIP']
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
+]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'CNRM-CERFACS'
+ 'EC-Earth-Consortium'
 ]
-source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['description'] = 'GRISILI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
-key = 'CNRM-CM6-1-HR'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'HighResMIP',
- 'ScenarioMIP']
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'CNRM-CERFACS'
-]
-source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
+source_id[key]['label'] = 'EC-Earth3'
+source_id[key]['label_extended'] = 'EC-Earth 3.3'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
 source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-key = 'CNRM-ESM2-1'
+key = 'EC-Earth3-AerChem'
 source_id[key]['activity_participation'] = [
- 'AerChemMIP',
+ 'AeroChemMIP',
+ 'CMIP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-AerChem'
+source_id[key]['label_extended'] = 'EC-Earth3-AerChem'
+source_id[key]['model_component']['aerosol']['description'] = 'TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-CC'
+source_id[key]['activity_participation'] = [
  'C4MIP',
  'CMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'ScenarioMIP']
+ 'LUMIP'
+]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'CNRM-CERFACS'
+ 'EC-Earth-Consortium'
 ]
-source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'Pisces 2.s'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
-key = 'CNRM-ESM2-1-HR'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'OMIP',
- 'ScenarioMIP']
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'CNRM-CERFACS'
-]
-source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
+source_id[key]['label'] = 'EC-Earth3-CC'
+source_id[key]['label_extended'] = 'EC-Earth3-CC'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
+source_id[key]['model_component']['atmosChem']['description'] = 'TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4'
 source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'PISCES v2'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-GrIS'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'ISMIP6',
+ 'PMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-GrIS'
+source_id[key]['label_extended'] = 'EC-Earth3-GrIS'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'PISM 0.7 (5 x 5 km; 442 levels)'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '5 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-HR'
+source_id[key]['activity_participation'] = [
+ 'DCPP',
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-HR'
+source_id[key]['label_extended'] = 'EC-Earth3-HR'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL511; linearly reduced Gaussian grid; 1024 x 512 longitude/latitude; 91 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'Pisces 2.s'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['seaIce']['description'] = 'Gelato 6.1'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-LR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'PMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-LR'
+source_id[key]['label_extended'] = 'EC-Earth3-LR'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL159; linearly reduced Gaussian grid; 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-Veg'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-Veg'
+source_id[key]['label_extended'] = 'EC-Earth3-Veg'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL255; linearly reduced Gaussian grid; 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'EC-Earth3-Veg-LR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'PMIP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'EC-Earth-Consortium'
+]
+source_id[key]['label'] = 'EC-Earth3-Veg-LR'
+source_id[key]['label_extended'] = 'EC-Earth3-Veg-LR'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'IFS cy36r4 (TL159; linearly reduced Gaussian grid; 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA1; tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM3'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================

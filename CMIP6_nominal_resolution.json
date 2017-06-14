@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 11:08:49 2017 -0700",
+        "creation_date":"Wed Jun 14 13:28:54 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (129; g30c4aa9)",
-        "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
-        "previous_commit":"3bff2e55d03ac3e790f5868487c534f2006e9c26"
+        "latest_tag_point":"3.2.3 (46; gd1ab4fa)",
+        "note":"Revise multiple EC-EARTH3 source_ids",
+        "previous_commit":"9a713df9fc4be8add284802ec6e0ce046bf08539"
     }
 }

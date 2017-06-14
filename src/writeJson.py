@@ -564,7 +564,7 @@ source_id[key]['activity_participation'] = [
  'DCPP',
  'FAFMIP',
  'GMMIP',
- 'ISMIP6', # Ice sheet MIP?
+ 'ISMIP6',
  'LS3MIP',
  'PMIP',
  'RFMIP',
@@ -577,13 +577,13 @@ source_id[key]['institution_id'] = [
 ]
 source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['land']['description'] = 'Surfex 8.0c'
 source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['description'] = 'GRISILI: Collaborating with l’Institut des Geosciences de l’Environnement in Grenoble on offline ice-sheet simulations'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
@@ -607,7 +607,7 @@ source_id[key]['institution_id'] = [
 ]
 source_id[key]['model_component']['aerosol']['description'] = 'prescribed monthly fields computed by TACTIC_v2 scheme'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem']['description'] = 'OZL_v2'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
@@ -640,7 +640,7 @@ source_id[key]['institution_id'] = [
 ]
 source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
@@ -669,7 +669,7 @@ source_id[key]['institution_id'] = [
 ]
 source_id[key]['model_component']['aerosol']['description'] = 'TACTIC_v2'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)'
+source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem']['description'] = 'REPROBUS-C_v2'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'

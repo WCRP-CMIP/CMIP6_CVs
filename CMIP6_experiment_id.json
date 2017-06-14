@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue May 30 17:54:36 2017 -0700",
+        "creation_date":"Wed Jun 14 11:08:49 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (38; ge149ee4)",
-        "note":"Remove frequency 3hrClim",
-        "previous_commit":"30dc1fd00a027e898ded0d999670f9f11d19cf8a"
+        "latest_tag_point":"3.2.3 (123; gf1be928)",
+        "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
+        "previous_commit":"ef19b33b01802ee6f75377110766adb0da0b92af"
     }
 }

@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:43:54 2017 -0700",
+        "creation_date":"Wed Jun 14 13:51:50 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (44; gb9b76fb)",
-        "note":"Rename experiment_id highresSST-4co2 -> highresSST-4xCO2",
-        "previous_commit":"bf888ef98c58eb0039d6e12be9a16ee118e91d05"
+        "latest_tag_point":"3.2.3 (45; g155c61d)",
+        "note":"Update frequency format with identifiers",
+        "previous_commit":"82862ce6a063fe11ea90de2db16269936e0b789a"
     }
 }

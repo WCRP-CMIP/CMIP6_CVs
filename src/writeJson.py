@@ -289,6 +289,14 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 
 # Fix issues
 experiment_id['lfmip-pdLC-princeton'] = experiment_id.pop('lfmip-pdL-princeton')
+experiment_id['lfmip-pdLC-princeton']['experiment_id'] = 'lfmip-pdLC-princeton'
+experiment_id['highresSST-4xCO2']['experiment_id'] = 'highresSST-4xCO2' ; # Cleanup #341
+# Add test
+keyVals = experiment_id.keys()
+for key in keyVals:
+    val = experiment_id[key]['experiment_id']
+    if val != key:
+        print key,'problematic'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

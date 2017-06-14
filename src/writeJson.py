@@ -178,6 +178,7 @@ PJD  6 Jun 2017    - Revise multiple CNRM source_ids and CNRM-CERFACS institutio
 PJD 14 Jun 2017    - Revise multiple EC-EARTH3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
 PJD 14 Jun 2017    - Revise frequency decadal to dec https://github.com/WCRP-CMIP/CMIP6_CVs/issues/338
 PJD 14 Jun 2017    - Rename experiment_id highresSST-4co2 -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/341
+PJD 14 Jun 2017    - Update frequency format with identifiers -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/342
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -203,7 +204,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Rename experiment_id highresSST-4co2 -> highresSST-4xCO2\"'
+commitMessage = '\"Update frequency format with identifiers\"'
 
 #%% Define functions
 # Get repo metadata
@@ -286,7 +287,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['highresSST-4xCO2'] = experiment_id.pop('highresSST-4co2')
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -381,19 +381,19 @@ del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 
 #%% Frequencies
-frequency = [
-    '1hr',
-    '1hrClimMon',
-    '3hr',
-    '6hr',
-    'day',
-    'dec',
-    'fx',
-    'mon',
-    'monClim',
-    'subhr',
-    'yr',
-    'yrClim']
+frequency = {
+    '1hr':'sampled hourly',
+    '1hrClimMon':'monthly climatology of diurnal cycle computed from hourly samples',
+    '3hr':'sampled every 3 hours',
+    '6hr':'sampled every 6 hours',
+    'day':'daily mean samples',
+    'dec':'decadal mean samples',
+    'fx':'fixed (time invariant) field',
+    'mon':'monthly mean samples',
+    'monClim':'monthly climatology computed from monthly mean samples',
+    'subhr':'sampled sub-hourly',
+    'yr':'annual mean samples'
+}
 
 #%% Grid labels
 grid_label = [

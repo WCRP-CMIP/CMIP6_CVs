@@ -754,7 +754,7 @@
                     "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "description":"Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)",
                     "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -766,7 +766,7 @@
                     "nominal_resolution":"250 km"
                 },
                 "landIce":{
-                    "description":"none",
+                    "description":"GRISILI: Collaborating with l\u2019Institut des Geosciences de l\u2019Environnement in Grenoble on offline ice-sheet simulations",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
@@ -806,7 +806,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "description":"Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -861,7 +861,7 @@
                     "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.3 (Tl127, 24572 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "description":"Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)",
                     "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -912,7 +912,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"Arpege 6.3 (Tl359, 181724 x 1; XXX x XXX longitude/latitude; 91 levels; top level 78.4 km)",
+                    "description":"Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 33.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -3062,10 +3062,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 7 11:12:10 2017 -0700",
+        "creation_date":"Wed Jun 7 11:12:15 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (76; g18356d1)",
+        "latest_tag_point":"3.2.3 (90; g711cb61)",
         "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
-        "previous_commit":"f9ef4b082252a0f0f5b06489f9dc38c63be822f4"
+        "previous_commit":"1426a86218911d2e6e2df8a21b80378d2c322b85"
     }
 }

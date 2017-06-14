@@ -295,7 +295,7 @@ experiment_id['highresSST-4xCO2']['experiment_id'] = 'highresSST-4xCO2' ; # Clea
 keyVals = experiment_id.keys()
 for key in keyVals:
     val = experiment_id[key]['experiment_id']
-    print key,val
+    #print key,val
     if val != key:
         print key,'problematic'
 #==============================================================================

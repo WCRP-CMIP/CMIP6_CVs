@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:51:50 2017 -0700",
+        "creation_date":"Wed Jun 14 13:53:10 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (53; g9b80868)",
-        "note":"Update frequency format with identifiers",
-        "previous_commit":"64e485b59261e2cb9eeb17fb8e92920673501013"
+        "latest_tag_point":"note: ",
+        "note":"Issue342 durack1 frequency augment format with identifiers (#349)",
+        "previous_commit":"8825b468b2bc962be70edf7f95e3e183afdd2c12"
     }
 }

@@ -15,10 +15,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 11:06:26 2017 -0700",
+        "creation_date":"Wed Jun 14 11:06:31 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (96; g3d7564d)",
+        "latest_tag_point":"3.2.3 (110; gef19b33)",
         "note":"Revise multiple CNRM source_ids and CNRM-CERFACS institution_id",
-        "previous_commit":"cc2856ed03bcf4abad74a1d4cd1f339984701183"
+        "previous_commit":"98efe5bafa5b1065721ba0f62f12cb23474a3560"
     }
 }

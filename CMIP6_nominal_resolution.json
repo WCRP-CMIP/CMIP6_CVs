@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:43:54 2017 -0700",
+        "creation_date":"Wed Jun 14 13:45:47 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (48; g8e3d0d6)",
-        "note":"Rename experiment_id highresSST-4co2 -> highresSST-4xCO2",
-        "previous_commit":"7d1bcbff75fa19d3474d68bdbc1919fafced3be3"
+        "latest_tag_point":"note: ",
+        "note":"Issue341 durack1 rename experiment id highres sst co2 (#348)",
+        "previous_commit":"ac279760ea3e5692adb74ccaaf1ef6ae18dcb227"
     }
 }

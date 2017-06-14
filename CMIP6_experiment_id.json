@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:37:43 2017 -0700",
+        "creation_date":"Wed Jun 14 13:43:54 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue338 frequency rename decadal to dec (#347)",
-        "previous_commit":"c89612dd2b8ac3b62f071d929528974210ed051a"
+        "latest_tag_point":"3.2.3 (42; gbe3945f)",
+        "note":"Rename experiment_id highresSST-4co2 -> highresSST-4xCO2",
+        "previous_commit":"a01b22cc9d97a89db8fc6828d2682d5e36b0bb7e"
     }
 }

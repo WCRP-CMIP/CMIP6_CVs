@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:36:29 2017 -0700",
+        "creation_date":"Wed Jun 14 13:37:43 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (45; ge0ee9b1)",
-        "note":"Revise frequency decadal to dec",
-        "previous_commit":"cd43116c9baf3f454cf5b70c0098768d5f662cb7"
+        "latest_tag_point":"note: ",
+        "note":"Issue338 frequency rename decadal to dec (#347)",
+        "previous_commit":"c89612dd2b8ac3b62f071d929528974210ed051a"
     }
 }

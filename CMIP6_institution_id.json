@@ -34,10 +34,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 14:03:39 2017 -0700",
+        "creation_date":"Wed Jun 14 14:03:56 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (89; g8aebc9d)",
+        "latest_tag_point":"3.2.3 (103; gfb126d8)",
         "note":"Rename experiment_id lfmip-pdL-princeton",
-        "previous_commit":"efec913a9e40574f13ddd9bf346d8c4cfc89d8e0"
+        "previous_commit":"5453291beb90b7bb8638a3118be471ea2b357b71"
     }
 }

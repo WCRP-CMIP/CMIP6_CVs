@@ -2702,7 +2702,7 @@
             ],
             "tier":"2"
         },
-        "highresSST-4co2":{
+        "highresSST-4xCO2":{
             "activity_id":[
                 "HighResMIP"
             ],
@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:36:29 2017 -0700",
+        "creation_date":"Wed Jun 14 13:43:54 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (41; g00c9a48)",
-        "note":"Revise frequency decadal to dec",
-        "previous_commit":"1fcc4ce51585b8ed7382c31f1c97057908a71ed8"
+        "latest_tag_point":"3.2.3 (42; gbe3945f)",
+        "note":"Rename experiment_id highresSST-4co2 -> highresSST-4xCO2",
+        "previous_commit":"a01b22cc9d97a89db8fc6828d2682d5e36b0bb7e"
     }
 }

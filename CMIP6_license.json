@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:51:50 2017 -0700",
+        "creation_date":"Wed Jun 14 14:03:56 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (47; g622ba92)",
-        "note":"Update frequency format with identifiers",
-        "previous_commit":"9c16147147672f54bab48d0ca9b4b569a58d5068"
+        "latest_tag_point":"3.2.3 (104; ge320141)",
+        "note":"Rename experiment_id lfmip-pdL-princeton",
+        "previous_commit":"7fcbcfbdfe8ef98725e6652e930e898168f52ee8"
     }
 }

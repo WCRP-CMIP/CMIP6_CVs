@@ -2712,7 +2712,7 @@
             "description":"Similar to CFMIP amip-4xCO2, SSTs are held at highresSST-present values and the CO2 seen by the radiation scheme is quadrupled",
             "end_year":"2014",
             "experiment":"highresSST-present SST with 4xCO2 concentrations",
-            "experiment_id":"highresSST-4co2",
+            "experiment_id":"highresSST-4xCO2",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
                 "HighResMIP"
@@ -4517,35 +4517,6 @@
             ],
             "tier":"2"
         },
-        "lfmip-pdL-princeton":{
-            "activity_id":[
-                "LS3MIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM",
-                "BGC"
-            ],
-            "description":"Prescribed land conditions 1980-2014 climate with Land-Hist-princeton",
-            "end_year":"2100",
-            "experiment":"as LFMIP-pdLC with Land-Hist-princeton",
-            "experiment_id":"lfmip-pdL-princeton",
-            "min_number_yrs_per_sim":"121",
-            "parent_activity_id":[
-                "CMIP"
-            ],
-            "parent_experiment_id":[
-                "historical"
-            ],
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"1980",
-            "sub_experiment_id":[
-                "none"
-            ],
-            "tier":"2"
-        },
         "lfmip-pdLC":{
             "activity_id":[
                 "LS3MIP"
@@ -4588,6 +4559,35 @@
             "end_year":"2100",
             "experiment":"as LFMIP-pdLC with Land-Hist-cruNcep",
             "experiment_id":"lfmip-pdLC-cruNcep",
+            "min_number_yrs_per_sim":"121",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1980",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "lfmip-pdLC-princeton":{
+            "activity_id":[
+                "LS3MIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Prescribed land conditions 1980-2014 climate with Land-Hist-princeton",
+            "end_year":"2100",
+            "experiment":"as LFMIP-pdLC with Land-Hist-princeton",
+            "experiment_id":"lfmip-pdLC-princeton",
             "min_number_yrs_per_sim":"121",
             "parent_activity_id":[
                 "CMIP"
@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 13:51:50 2017 -0700",
+        "creation_date":"Wed Jun 14 14:03:56 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (43; g9947a0f)",
-        "note":"Update frequency format with identifiers",
-        "previous_commit":"57ed3e46f2395bdfac54fa2eb498e73cf6b723a1"
+        "latest_tag_point":"3.2.3 (100; gb5f93a9)",
+        "note":"Rename experiment_id lfmip-pdL-princeton",
+        "previous_commit":"0f792f89dd8de8a261bee52fb442b96ba12b533f"
     }
 }

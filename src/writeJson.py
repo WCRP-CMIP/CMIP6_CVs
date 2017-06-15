@@ -394,6 +394,7 @@ required_global_attributes = [
 #source_id = source_id.get('source_id')
 #source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
+source_id = {}
 # Fix issues
 #==============================================================================
 key = 'ARPEGE-OPA1'

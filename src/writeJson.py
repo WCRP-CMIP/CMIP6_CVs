@@ -1615,10 +1615,10 @@ source_id[key]['model_component']['ocean'] = {}
 source_id[key]['model_component']['ocean']['description'] = '1 x 1 degree, 360 x 180 longitude/latitude; 20 levels'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model','ice rheology included']
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
 source_id[key]['reference'] = [
- "Meehl and Washington, 1995 doi: 10.1007/BF00209514","Washington and Meehl, 1996 doi: 10.1029/96JD00505"
+ 'Meehl and Washington, 1995 doi: 10.1007/BF00209514','Washington and Meehl, 1996 doi: 10.1029/96JD00505'
 ]
 source_id[key]['release_year'] = '1995'
 source_id[key]['notes'] = ''

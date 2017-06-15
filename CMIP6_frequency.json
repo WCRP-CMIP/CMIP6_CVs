@@ -14,10 +14,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 11:13:40 2017 -0700",
+        "creation_date":"Thu Jun 15 11:35:44 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (47; gbe5bf09)",
-        "note":"Revise source_id MRI-ESM2-0",
-        "previous_commit":"bb19afdd5d279d860201d2276f097705088cf6a0"
+        "latest_tag_point":"3.2.3 (48; g7bc355f)",
+        "note":"Revise multiple NASA-GISS source_id values",
+        "previous_commit":"1a251c44f571e3da4316cf4ce3ae5dcdf04237a3"
     }
 }

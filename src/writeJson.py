@@ -1842,10 +1842,9 @@ for jsonName in masterTargets:
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     os.chdir(path.replace('/writeJson.py','')) ; # Reset path to local dir
     #print os.getcwd()
-    if outFile == 'CMIP6_source_id.json':
+    if jsonName == 'source_id':
         versionInfo = None
     else:
-        
         versionInfo = getFileHistory(outFileTest)
     print 'try getting file info'
     #versionInfo = None ; # Used to add a new file

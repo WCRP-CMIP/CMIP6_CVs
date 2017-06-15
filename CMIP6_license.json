@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Ben Musci <musci2@llnl.gov>",
-        "creation_date":"Wed Jun 14 17:12:43 2017 -0700",
+        "creation_date":"Wed Jun 14 17:14:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (97; gd683155)",
+        "latest_tag_point":"3.2.3 (107; g91436aa)",
         "note":"CreateCMIP2 source_id json file",
-        "previous_commit":"61c3f8e8b94093e7ea0682f16baedc888fcd7553"
+        "previous_commit":"72ebb55f8359f647d29c6ee9d87763c5ccf61531"
     }
 }

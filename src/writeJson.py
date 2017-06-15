@@ -592,7 +592,7 @@ source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
 source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
 
@@ -623,7 +623,7 @@ source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
 source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
 #==============================================================================

@@ -1786,7 +1786,7 @@ def walk_dict(dictionary):
 #%% Write variables to files
 for jsonName in masterTargets:
     # Clean experiment formats
-    if jsonName in ['experiment_id','source_id']:
+    if jsonName in ['experiment_id']: #,'source_id'
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
             for values in value.iteritems():

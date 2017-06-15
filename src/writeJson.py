@@ -8,167 +8,6 @@ Paul J. Durack 11th July 2016
 This script generates all controlled vocabulary (CV) json files residing this this subdirectory
 
 PJD 11 Jul 2016    - Started
-PJD 12 Jul 2016    - Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
-PJD 12 Jul 2016    - Format tweaks and typo corrections
-PJD 12 Jul 2016    - Added source_id ('GFDL-CM2-1': 'GFDL CM2.1' as example)
-PJD 12 Jul 2016    - Corrected mip_era to be CMIP6-less
-PJD 12 Jul 2016    - Indent/format cleanup
-PJD 13 Jul 2016    - Further tweaks to cleanup experiment json
-PJD 13 Jul 2016    - Added required_global_attributes (Denis Nadeau)
-PJD 13 Jul 2016    - Further tweaks to resolve specifics https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1
-PJD 13 Jul 2016    - Updating institution following https://github.com/WCRP-CMIP/CMIP6_CVs/issues/3
-PJD 13 Jul 2016    - Further tweaks to institution
-PJD 14 Jul 2016    - Updated source_id to include institution https://github.com/WCRP-CMIP/CMIP6_CVs/issues/8
-PJD 14 Jul 2016    - Renamed experiment to experiment_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/10
-PJD 14 Jul 2016    - Renamed institution to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/12
-PJD 14 Jul 2016    - Added coordinate https://github.com/WCRP-CMIP/CMIP6_CVs/issues/7
-PJD 14 Jul 2016    - Added grid https://github.com/WCRP-CMIP/CMIP6_CVs/issues/6
-PJD 14 Jul 2016    - Added formula_terms https://github.com/WCRP-CMIP/CMIP6_CVs/issues/5
-PJD 15 Jul 2016    - Added further cleanup of imported dictionaries
-PJD 20 Jul 2016    - Updated VolMIP experiment info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/19
-PJD 11 Aug 2016    - Added readJsonCreateDict function
-PJD 11 Aug 2016    - Converted experiment_id source from github
-PJD 11 Aug 2016    - Updated frequency to include 1hrClimMon https://github.com/WCRP-CMIP/CMIP6_CVs/issues/24
-PJD 11 Aug 2016    - Updated LUMIP experiment names https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
-PJD 15 Aug 2016    - Update experiment_id to be self-consistent (LUMIP renames complete)
-PJD 15 Aug 2016    - Converted readJsonCreateDict to source from durolib
-PJD 15 Aug 2016    - Further tweaks to LUMIP experiment_id @dlawrenncar https://github.com/WCRP-CMIP/CMIP6_CVs/issues/27
-PJD 25 Aug 2016    - Added license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/35
-PJD 25 Aug 2016    - Updated source_id contents and format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/34
-PJD 25 Aug 2016    - Add CV name to json structure https://github.com/WCRP-CMIP/CMIP6_CVs/issues/36
-PJD 26 Aug 2016    - Add repo version/metadata https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
-PJD 31 Aug 2016    - Added mip_era to source_id
-PJD 31 Aug 2016    - Correct repo user info
-PJD 31 Aug 2016    - Remove CMIP6_variable.json from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/45
-PJD  1 Sep 2016    - Updated version info to per file (was repo) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
-PJD  1 Sep 2016    - Automated update of html
-PJD 15 Sep 2016    - Further tweaks to version info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
-PJD 15 Sep 2016    - Updated source_id to maintain consistency with ES-DOCs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/53
-PJD 28 Sep 2016    - Correct activity_id to MIP -> CMIP typo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/57
-PJD 28 Sep 2016    - Add new grid_label entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/49
-PJD  3 Oct 2016    - Added "cohort" to source_id ACCESS-1-0 example https://github.com/WCRP-CMIP/CMIP6_CVs/issues/64
-PJD  3 Oct 2016    - Added institution_id NUIST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/63
-PJD  4 Oct 2016    - Added institution_id NIMS-KMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/67
-PJD  4 Oct 2016    - Revised tiers for AerChemMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/69
-PJD  4 Oct 2016    - Added AerChemMIP experiments piClim-SO2 piClim-OC piClim-NH3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/68
-PJD  1 Nov 2016    - Update to upstream sources; Convert to per-file commits
-PJD  1 Nov 2016    - Add PCMDI-test-1-0 to source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/102
-PJD  2 Nov 2016    - Add CSIR to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/100
-PJD  2 Nov 2016    - Update BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/98
-PJD  2 Nov 2016    - Add EC-Earth-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/90
-PJD  2 Nov 2016    - Update MIROC institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/89
-PJD  2 Nov 2016    - Add CCCR-IITM to institution_id and IITM-ESM to source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
-PJD  2 Nov 2016    - Update deforest-globe experiment_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/97
-PJD  2 Nov 2016    - Remove RFMIP experiment_ids piClim-aerO3x0p1 and piClim-aerO3x2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/79
-PJD  2 Nov 2016    - Revise RFMIP experiment_ids hist-all-spAerO3 and hist-spAerO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/80
-PJD  2 Nov 2016    - Revise RFMIP experiment_ids capitalization https://github.com/WCRP-CMIP/CMIP6_CVs/issues/81
-PJD  2 Nov 2016    - Revise RFMIP experiment_ids spAerO3 -> spAer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/82
-PJD  2 Nov 2016    - Revise experiment_id ssp370 to include activity_id AerChemMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/77
-PJD  2 Nov 2016    - Revise experiment_id volc-cluster-mill https://github.com/WCRP-CMIP/CMIP6_CVs/issues/75
-PJD  2 Nov 2016    - Revise experiment_id instances of LND -> LAND https://github.com/WCRP-CMIP/CMIP6_CVs/issues/74
-PJD  2 Nov 2016    - Add experiment_id ism-ctrl-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/103
-PJD  2 Nov 2016    - Add experiment_id ism-asmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/104
-PJD  2 Nov 2016    - Add experiment_id ism-bsmb-std https://github.com/WCRP-CMIP/CMIP6_CVs/issues/105
-PJD  3 Nov 2016    - Deal with invalid source_type syntax, rogue ","
-PJD  8 Nov 2016    - Add CNRM to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/129
-PJD  8 Nov 2016    - Revise source_type https://github.com/WCRP-CMIP/CMIP6_CVs/issues/131
-PJD 15 Nov 2016    - Remove coordinate, formula_terms and grids from repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/139
-PJD 15 Nov 2016    - Rename grid_resolution to nominal_resolution and add new entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/141
-PJD 15 Nov 2016    - Add MESSy-Consortium to institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/138
-PJD 16 Nov 2016    - Revise AerChemMIP experiment model configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/78
-PJD 16 Nov 2016    - Add source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
-PJD 17 Nov 2016    - Revise grid_label to include Antarctica and Greenland https://github.com/WCRP-CMIP/CMIP6_CVs/issues/130
-PJD 21 Nov 2016    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
-PJD 21 Nov 2016    - Revise experiment_id 1pctCO2Ndep https://github.com/WCRP-CMIP/CMIP6_CVs/issues/73
-PJD 21 Nov 2016    - Register source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
-PJD 21 Nov 2016    - Register source_id EC-Earth-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/91
-PJD 21 Nov 2016    - Register source_id EC-Earth-3-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/92
-PJD 21 Nov 2016    - Register source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
-PJD 21 Nov 2016    - source_id cleanup, particularly for IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
-PJD 21 Nov 2016    - Register institution_id CNRM-CERFACS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
-PJD 28 Nov 2016    - Register source_id NorESM2-LME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/84
-PJD 28 Nov 2016    - Register source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/85
-PJD 28 Nov 2016    - Register source_id NorESM2-LMEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/86
-PJD 28 Nov 2016    - Register source_id NorESM2-HH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/87
-PJD 28 Nov 2016    - Register source_id NorESM2-MM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/88
-PJD 28 Nov 2016    - Register source_id NorESM2-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
-PJD 28 Nov 2016    - Revise multiple source_id NorESM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/156
-PJD  7 Dec 2016    - Update activity_id for experiment_id ssp370 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/169#issuecomment-264726036
-PJD  7 Dec 2016    - Add experiment_id 1pctCO2-4xext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/170
-PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_CVs/issues/172
-PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
-PJD 14 Dec 2016    - Add source_id GISS-E2-1 variants https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
-PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/183
-PJD  3 Jan 2017    - Update source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
-PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/94
-PJD  3 Jan 2017    - Register source_ids HadGEM3*4 and UKESM1*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
-PJD  3 Jan 2017    - Revise CMIP6 license text https://github.com/WCRP-CMIP/CMIP6_CVs/issues/133
-PJD  3 Jan 2017    - Register source_ids CNRM-ESM2*2 and CNRM-CM6*2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
-PJD  5 Jan 2017    - Revise multiple CNRM source_ids atmospheric chemistry entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
-PJD  5 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
-PJD  5 Jan 2017    - Update DCPP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1#issuecomment-268357110
-PJD 10 Jan 2017    - Register multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
-PJD 13 Jan 2017    - Update table_id to reflect Data Request V1.0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/199
-PJD 18 Jan 2017    - Update experiment_id highres-future start_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/201
-PJD 18 Jan 2017    - Add experiment_id spinup-1950 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/202
-PJD 19 Jan 2017    - Update institution_id FIO -> FIO-SOA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/205
-PJD 21 Jan 2017    - Register institution_id AWI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/207
-PJD 21 Jan 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
-PJD 23 Jan 2017    - Update institution_id FIO-SOA -> FIO-RONM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/209
-PJD 23 Jan 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
-PJD 23 Jan 2017    - Revise experiment_id values for ISMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/168
-PJD 23 Jan 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/208
-PJD 30 Jan 2017    - Register source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
-PJD 31 Jan 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/217
-PJD  6 Feb 2017    - Revise license details
-PJD  6 Feb 2017    - Register source_id AWI-CM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
-PJD  6 Feb 2017    - Revise multiple EC-Earth3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
-PJD 27 Feb 2017    - Update license info
-PJD 27 Feb 2017    - Register institution_id THU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/225
-PJD 27 Feb 2017    - Register source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
-PJD  3 Mar 2017    - Register source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/234
-PJD  3 Mar 2017    - Register source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
-PJD  3 Mar 2017    - Update all source_id cohort entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/230
-PJD  7 Mar 2017    - Register source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
-PJD  7 Mar 2017    - Register source_ids MIROC-ES and NICAM variants https://github.com/WCRP-CMIP/CMIP6_CVs/pull/238
-PJD  7 Mar 2017    - Update experiment_id from external xlsx https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1, 61, 136, 137
-PJD 14 Mar 2017    - Update source_id ACCESS-1-0 template
-PJD 17 Mar 2017    - Cleanup required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/250
-PJD 17 Mar 2017    - Augment source_id info request https://github.com/WCRP-CMIP/CMIP6_CVs/issues/249
-PJD 20 Mar 2017    - Register institution_id CAMS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/245
-PJD 22 Mar 2017    - Revise experiment_id names and details for 2 RFMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/258
-PJD 29 Mar 2017    - Revise experiment_id piClim-aer https://github.com/WCRP-CMIP/CMIP6_CVs/issues/261
-PJD  5 Apr 2017    - Remove deprecated table_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/266
-PJD  5 Apr 2017    - Convert experiment_id parent* entries to list https://github.com/WCRP-CMIP/CMIP6_CVs/issues/267
-PJD  7 Apr 2017    - Register GFDL source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/244
-PJD  7 Apr 2017    - Register source_id CAMS_CSM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/246
-PJD  8 Apr 2017    - Update multiple NorESM source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
-PJD  8 Apr 2017    - Update html markup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/248
-PJD 10 Apr 2017    - Revise source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/259
-PJD 12 Apr 2017    - Revise frequency to include yrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/281
-PJD 12 Apr 2017    - Add missing activity_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/276
-PJD 17 Apr 2017    - Register institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/286
-PJD 17 Apr 2017    - Register institution_id CMCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/284
-PJD 17 Apr 2017    - Update realm format https://github.com/WCRP-CMIP/CMIP6_CVs/issues/285
-PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
-PJD 18 Apr 2017    - Reconfigure json_to_html to deal with new source_id format
-PJD 20 Apr 2017    - Revise AWI-CM source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/210
-PJD 21 Apr 2017    - Clean up None instances in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/301
-PJD 21 Apr 2017    - Register source_id CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/292
-PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR5 and correct ocean entry for CMCC-CM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/293
-PJD 21 Apr 2017    - Register source_id CMCC-CM2-HR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/294
-PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/295
-PJD 21 Apr 2017    - Register source_id CMCC-ESM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
-PJD 21 Apr 2017    - Register source_id CMCC-ESM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/297
-PJD 21 Apr 2017    - Revise CMCC source_id atmos entries (issues 292-294)
-PJD 24 Apr 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/257
-PJD 24 Apr 2017    - Revise source_id Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
-PJD 25 Apr 2017    - Register source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
-PJD 26 Apr 2017    - Revise source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
-PJD 26 Apr 2017    - Revise source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
-PJD 11 May 2017    - Revise GFDL source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
-PJD 11 May 2017    - Revise source_id AWI-CM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/319
-PJD 11 May 2017    - Register multiple AWI source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/320-322
 PJD 17 May 2017    - Revise source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
 PJD 27 May 2017    - Rename and revise sspxy to ssp119 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/329
 PJD 27 May 2017    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/330
@@ -178,7 +17,7 @@ PJD 30 May 2017    - Remove frequency 3hrClim https://github.com/WCRP-CMIP/CMIP6
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
 
-@author: durack1
+@author: musci2
 """
 
 #%% Import statements
@@ -200,7 +39,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Remove frequency 3hrClim\"'
+commitMessage = '\"CreateCMIP2 source_id json file\"'
 
 #%% Define functions
 # Get repo metadata
@@ -276,7 +115,7 @@ activity_id = [
 ]
 
 #%% Experiments
-tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
+tmp = [['experiment_id','https://raw.githubusercontent.com/bmusci3/CMIP6_CVs/master/CMIP6_experiment_id.json']
       ] ;
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
@@ -549,58 +388,1286 @@ required_global_attributes = [
 ]
 
 #%% Source identifiers
-tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_source_id.json']
-      ] ;
-source_id = readJsonCreateDict(tmp)
-source_id = source_id.get('source_id')
-source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
+#tmp = [['source_id','https://raw.githubusercontent.com/bmusci3/CMIP6_CVs/master/CMIP2_source_id.json']
+#      ] ;
+#source_id = readJsonCreateDict(tmp)
+#source_id = source_id.get('source_id')
+#source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 #==============================================================================
-#key = 'AWI-CM-1-0-HR'
-#source_id[key] = {}
-#source_id[key]['activity_participation'] = [
-# 'CORDEX',
-# 'HighResMIP',
-# 'OMIP',
-# 'SIMIP',
-# 'VIACSAB'
-#]
-#source_id[key]['cohort'] = [
-# 'Registered'
-#]
-#source_id[key]['institution_id'] = [
-# 'AWI'
-#]
-#source_id[key]['label'] = 'AWI-CM 1.0 HR'
-#source_id[key]['label_extended'] = 'AWI-CM 1.0 HR'
-#source_id[key]['model_component'] = {}
-#source_id[key]['model_component']['aerosol'] = {}
-#source_id[key]['model_component']['aerosol']['description'] = 'none'
-#source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['atmos'] = {}
-#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
-#source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-#source_id[key]['model_component']['atmosChem'] = {}
-#source_id[key]['model_component']['atmosChem']['description'] = 'none'
-#source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['land'] = {}
-#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
-#source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-#source_id[key]['model_component']['landIce'] = {}
-#source_id[key]['model_component']['landIce']['description'] = 'none'
-#source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['ocean'] = {}
-#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 1306775 wet nodes; 46 levels; top grid cell 0-5 m)'
-#source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-#source_id[key]['model_component']['ocnBgchem'] = {}
-#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-#source_id[key]['model_component']['seaIce'] = {}
-#source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
-#source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-#source_id[key]['release_year'] = '2017'
-#source_id[key]['source_id'] = key
+key = 'ARPEGE-OPA1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'CMIP1'
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ''
+]
+source_id[key]['institution_id'] = [
+ 'CERFACS'
+]
+source_id[key]['label'] = 'ARPEGE/OPA1'
+source_id[key]['label_extended'] = 'ARPEGE/OPA1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T21, 64 x 32 longitude/latitude; 30 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '500 km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2 degree, 180 x 90 longitude/latitude; 31 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['ice extent/thickness determined diagnostically from ocean surface temperature']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
+source_id[key]['reference'] = [
+ 'Guilyardi and Madec (1997) doi:10.1007/s003820050157'
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+key = 'ARPEGE-OPA2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'CMIP2'
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ''
+]
+source_id[key]['institution_id'] = [
+ 'CERFACS'
+]
+source_id[key]['label'] = 'ARPEGE/OPA2'
+source_id[key]['label_extended'] = 'ARPEGE/OPA2'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T31, 92 x 46 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2 degree, 180 x 90 longitude/latitude; 31 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ 'Barthelet et al., 1998a,b doi: 10.1007/s00382-003-0332-6'
+]
+source_id[key]['release_year'] = '1998'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+key = 'BMRCa'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'CMIP1'
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ''
+]
+source_id[key]['institution_id'] = [
+ 'BMRC'
+]
+source_id[key]['label'] = 'BMRCa'
+source_id[key]['label_extended'] = 'BMRCa'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R21, 64 x 56 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '3.2 x 5.6 degree, 64 x 56 longitude/latitude; 12 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ 'Power et al., 1993 doi: ????????????'
+]
+source_id[key]['release_year'] = '1993'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'BMRCb'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'CMIP2'
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'BMRC'
+]
+source_id[key]['label'] = 'BMRCb'
+source_id[key]['label_extended'] = 'BMRCb, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R21, 64 x 56 longitude/latitude; 17 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '3.2 x 5.6 degree, 64 x 56 longitude/latitude; 12 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ 'Power et al., 1998 doi: ????????????'
+]
+source_id[key]['release_year'] = '1998'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CCSR-NIES'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'CCSR/NIES'
+]
+source_id[key]['label'] = 'CCSR/NIES'
+source_id[key]['label_extended'] = 'CCSR/NIES, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T21, 64 x 32 longitude/latitude; 20 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'modified bucket scheme with spatially varying soil moisture capacity and/or a surface resistance']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2.8 x 2.8 degree, 128 x 64 longitude/latitude; 17 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ 'Emori et al., 1999 doi: 10.2151/jmsj1965.77.6_1299'
+]
+source_id[key]['release_year'] = '1999'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CCSR-NIES2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'CCSR/NIES'
+]
+source_id[key]['label'] = 'CCSR/NIES2'
+source_id[key]['label_extended'] = 'CCSR/NIES2, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T21, 64 x 32 longitude/latitude; 20 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'modified bucket scheme with spatially varying soil moisture capacity and/or a surface resistance']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2.8 x 3.8 degree, 94 x 64 longitude/latitude; 17 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model only']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ 'Nozawa et al., 2000 doi: ????'
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CGCM1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'CCCma'
+]
+source_id[key]['label'] = 'CGCM1'
+source_id[key]['label_extended'] = 'CGCM1, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T32, 96 x 47 longitude/latitude; 10 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'modified bucket scheme with spatially varying soil moisture capacity and/or a surface resistance']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1.8 x 1.8 degree, 200 x 100 longitude/latitude; 29 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model only']
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Boer et al.,2000 doi:  10.1007/s003820050337","Flato et al., 2000 doi: 10.1007/s003820050339"
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CGCM2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'CCCma'
+]
+source_id[key]['label'] = 'CGCM2'
+source_id[key]['label_extended'] = 'CGCM2, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T32, 96 x 47 longitude/latitude; 10 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['multi-layer temperature scheme', 'modified bucket scheme with spatially varying soil moisture capacity and/or a surface resistance']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1.8 x 1.8 degree, 200 x 100 longitude/latitude; 29 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Flato and Boer, 2001 doi: 10.1029/2000GL012121"
+]
+source_id[key]['release_year'] = '2001'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'COLA1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'COLA'
+]
+source_id[key]['label'] = 'COLA1'
+source_id[key]['label_extended'] = 'COLA1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R15, 48 x 40 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1.5 x 1.5 degree, 240 x 120 longitude/latitude; 20 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Schneider et al., 1997 doi: 10.1175/1520-0493(1997)125<0680:ACAEIA>2.0.CO;2","Schneider and Zhu, 1998 doi: 10.1175/1520-0442(1998)011<1932:SOTSAC>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'COLA2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'COLA'
+]
+source_id[key]['label'] = 'COLA2'
+source_id[key]['label_extended'] = 'COLA2'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T30, 90 x 45 longitude/latitude; 18 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '3 x 3 degree, 120 x 60 longitude/latitude; 20 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Dewitt and Schneider, 1999 doi: 10.1175/1520-0493(1999)127<0381:TPDTAC>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1999'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CSIRO_Mk2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water","Momentum"
+]
+source_id[key]['institution_id'] = [
+ 'CSIRO'
+]
+source_id[key]['label'] = 'CSIRO Mk2'
+source_id[key]['label_extended'] = 'CSIRO Mk2, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R21, 64 x 56 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '3.2 x 5.6 degree, 64 x 56 longitude/latitude; 20 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Gordon and O'Farrell, 1997 doi: 10.1175/1520-0493(1997)125<0875:TCCITC>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CSM_1.0'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'NCAR'
+]
+source_id[key]['label'] = 'CSM 1.0'
+source_id[key]['label_extended'] = 'CSM 1.0'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T42, 128 x 64 longitude/latitude; 18 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2.4 degree, 150 x 90 longitude/latitude; 45 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Boville and Gent, 1998 doi:10.1175/1520-0442(1998)011%3C1115:TNCSMV%3E2.0.CO;2"
+]
+source_id[key]['release_year'] = '1998'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'CSM_1.3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'NCAR'
+]
+source_id[key]['label'] = 'CSM 1.3'
+source_id[key]['label_extended'] = 'CSM 1.3'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T42, 128 x 64 longitude/latitude; 18 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2.4 degree, 150 x 90 longitude/latitude; 45 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Boville et al., 2001 doi: 10.1175/1520-0442(2001)014<0164:ITTNCF>2.0.CO;2"
+]
+source_id[key]['release_year'] = '2001'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'DOE_PCM'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'NCAR'
+]
+source_id[key]['label'] = 'DOE PCM'
+source_id[key]['label_extended'] = 'DOE PCM'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T42, 128 x 64 longitude/latitude; 18 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '0.67 x 0.67 degree, 537 x 269 longitude/latitude; 32 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Washington et al., 2000 doi: 10.1007/s003820000079"
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'ECHAM1_LSG'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water","Momentum"
+]
+source_id[key]['institution_id'] = [
+ 'DKRZ'
+]
+source_id[key]['label'] = 'ECHAM1/LSG'
+source_id[key]['label_extended'] = 'ECHAM1/LSG, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T21, 64 x 32 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4 x 4 degree, 90 x 45 longitude/latitude; 11 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Cubasch et al., 1992 doi:  10.1007/BF00209163","von Storch, 1994 doi: 10.1034/j.1600-0870.1994.t01-2-00007.x","von Storch et al., 1997 doi: 10.1175/1520-0442(1997)010<1525:ADOAYC>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1992'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'ECHAM3_LSG'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water","Momentum"
+]
+source_id[key]['institution_id'] = [
+ 'DKRZ'
+]
+source_id[key]['label'] = 'ECHAM3/LSG'
+source_id[key]['label_extended'] = 'ECHAM3/LSG, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T21, 64 x 32 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4 x 4 degree, 90 x 45 longitude/latitude; 11 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Cubasch et al., 1997 doi: 10.1007/s003820050196","Voss et al., 1998 doi: 10.1007/s003820050221"
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'ECHAM4_OPCY3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water-annual mean flux adjustment only"
+]
+source_id[key]['institution_id'] = [
+ 'DKRZ'
+]
+source_id[key]['label'] = 'ECHAM4/OPCY3'
+source_id[key]['label_extended'] = 'ECHAM4/OPCY3, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T42, 128 x 64 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['a complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2.8 x 2.8 degree, 128 x 64 longitude/latitude; 11 levels; enhanced horizontal resolution near equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Roeckner et al., 1996 doi: 10.1007/s003820050140"
+]
+source_id[key]['release_year'] = '1996'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+
+key = 'GFDL_R15_a'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'GFDL'
+]
+source_id[key]['label'] = 'GFDL_R15_a'
+source_id[key]['label_extended'] = 'GFDL_R15_a, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R15, 48 x 40 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4.5 x 3.7 degree, 96 x 40 longitude/latitude; 12 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Manabe et al., 1991 doi: 10.1175/1520-0442(1991)004<0785:TROACO>2.0.CO;2","Manabe and Stouffer, 1996 doi: 10.1175/1520-0442(1996)009<0376:LFVOSA>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1991'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'GFDL_R15_b'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'GFDL'
+]
+source_id[key]['label'] = 'GFDL_R15_b'
+source_id[key]['label_extended'] = 'GFDL_R15_b, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R15, 48 x 40 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4.5 x 3.7 degree, 96 x 40 longitude/latitude; 12 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Dixon and Lanzante, 1999 doi: 10.1029/1999GL900382"
+]
+source_id[key]['release_year'] = '1999'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'GFDL_R30_c'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'GFDL'
+]
+source_id[key]['label'] = 'GFDL_R30_c'
+source_id[key]['label_extended'] = 'GFDL_R30_c, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R30, 96 x 80 longitude/latitude; 14 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1.875 x 2.25 degree, 160 x 96 longitude/latitude; 18 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Knutson et al., 1999 doi: 10.1029/1999JD900965"
+]
+source_id[key]['release_year'] = '1999'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'GISS1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'GISS'
+]
+source_id[key]['label'] = 'GISS1'
+source_id[key]['label_extended'] = 'GISS1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 16 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Miller and Jiang, 1996 doi: 10.1175/1520-0442(1996)009<1599:SEFACV>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1996'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'GISS2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'GISS'
+]
+source_id[key]['label'] = 'GISS2'
+source_id[key]['label_extended'] = 'GISS2'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 13 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Russell et al, 1995 doi: 10.1080/07055900.1995.9649550"
+]
+source_id[key]['release_year'] = '1995'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'GOALS'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water","Momentum"
+]
+source_id[key]['institution_id'] = [
+ 'IAP/LASG'
+]
+source_id[key]['label'] = 'GOALS'
+source_id[key]['label_extended'] = 'GOALS, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R15, 48 x 40 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 20 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Wu et al., 1997 doi: 10.1007/BF02915398","Zhang et al., 2000 doi: ??????"
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'HadCM2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'UKMO'
+]
+source_id[key]['label'] = 'HadCM2'
+source_id[key]['label_extended'] = 'HadCM2, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '2.5 x 3.75 degree, 96 x 72 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2.5 x 3.75 degree, 144 x 48 longitude/latitude; 20 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Johns, 1996 doi: ?????","Johns et al., 1997 doi: 10.1007/s003820050155"
+]
+source_id[key]['release_year'] = '1996'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'HadCM3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'UKMO'
+]
+source_id[key]['label'] = 'HadCM3'
+source_id[key]['label_extended'] = 'HadCM3'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '2.5 x 3.75 degree, 96 x 72 longitude/latitude; 19 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1.25 x 1.25 degree, 288 x 144 longitude/latitude; 20 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Gordon et al., 2000 doi: 10.1007/s003820050010"
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'IPSL-CM1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'IPSL/LMD'
+]
+source_id[key]['label'] = 'IPSL-CM1'
+source_id[key]['label_extended'] = 'IPSL-CM1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '5.6 x 3.8 degree, 94 x 32 longitude/latitude; 15 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2 degree, 180 x 90 longitude/latitude; 31 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["ice extent/thickness determined diagnostically from ocean surface temperature"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Braconnot et al., 2000 doi: 10.1175/1520-0442(2000)013<1537:OFIRTK>2.0.CO;2"
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'IPSL-CM2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'IPSL/LMD'
+]
+source_id[key]['label'] = 'IPSL-CM2'
+source_id[key]['label_extended'] = 'IPSL-CM2'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '5.6 x 3.8 degree, 94 x 32 longitude/latitude; 15 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2 degree, 180 x 90 longitude/latitude; 31 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Laurent et al., 1998 doi: ??????"
+]
+source_id[key]['release_year'] = '1998'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'MRI1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2","model MRI1 exists in two versions. at time of writing more data was available for earlier version whos control run is in CMIP1 database. The later model has two extra ocean levels and a modified ocean mixing scheme, its control run is in CMIP2 databas, the equillibrium climate sensitivites and transient climate responses of the two models are the same."
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water"
+]
+source_id[key]['institution_id'] = [
+ 'MRI'
+]
+source_id[key]['label'] = 'MRI1'
+source_id[key]['label_extended'] = 'MRI1, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = '4 x 5 degree, 72 x 45 longitude/latitude; 15 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ["multi-layer temperature scheme","standard bucket hydrology scheme"]
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2.5 degree, 144 x 90 longitude/latitude; 21 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Tokioka et al., 1996 doi: 10.2151/jmsj1965.73.4_817"
+]
+source_id[key]['release_year'] = '1996'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'MRI2'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ ""
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water","Momentum"
+]
+source_id[key]['institution_id'] = [
+ 'MRI'
+]
+source_id[key]['label'] = 'MRI2'
+source_id[key]['label_extended'] = 'MRI2, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T42, 128 x 64 longitude/latitude; 30 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['complex land surface scheme usually including multi-soil layers for temperature and soil moisture, and an explicit representation of canopy processes']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '2 x 2.5 degree, 144 x 90 longitude/latitude; 23 levels; enhanced horizontal resolution near the Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","'free drift' dynamics"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Yukimoto et al., 2000 doi: 10.1029/2000JC900034"
+]
+source_id[key]['release_year'] = '2000'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'NCAR1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  ""
+]
+source_id[key]['institution_id'] = [
+ 'NCAR'
+]
+source_id[key]['label'] = 'NCAR1'
+source_id[key]['label_extended'] = 'NCAR1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'R15, 48 x 40 longitude/latitude; 9 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['standard bucket hydrology scheme']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1 x 1 degree, 360 x 180 longitude/latitude; 20 levels'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice rheology included"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Meehl and Washington, 1995 doi: 10.1007/BF00209514","Washington and Meehl, 1996 doi: 10.1029/96JD00505"
+]
+source_id[key]['release_year'] = '1995'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+key = 'NRL'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ "CMIP1","CMIP2"
+]
+source_id[key]['aliases']= [
+ 'TBD'
+]
+source_id[key]['flux_adjustment'] = [
+  "Heat","Fresh Water-annual mean flux adjustment only"
+]
+source_id[key]['institution_id'] = [
+ 'NRL'
+]
+source_id[key]['label'] = 'NRL'
+source_id[key]['label_extended'] = 'NRL, flux adjusted'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'T47, 144 x 72 longitude/latitude; 18 levels'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = ['modified bucket scheme with spatially varying soil moisture capacity and/or a surface resistance']
+source_id[key]['model_component']['land']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = '1 x 2.0 degree, 180 x 180 longitude/latitude; 25 levels; enhanced horizontal resolution near Equator'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice extent prescribed"]
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
+source_id[key]['reference'] = [
+ "Hogan and Li, 1997 doi: ?????","Li and Hogan, 1999 doi: 10.1175/1520-0442(1999)012<0780:TROTAM>2.0.CO;2"
+]
+source_id[key]['release_year'] = '1997'
+source_id[key]['notes'] = ''
+source_id[key]['source_id'] = key
+
+
+
+
+
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114
@@ -769,12 +1836,16 @@ for jsonName in masterTargets:
         outFile = ''.join(['../CMIP6_', jsonName, '.json'])
     # Get repo version/metadata
     path = os.path.realpath(__file__)
+    print 'path',path
+    print os.getcwd()
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
+    os.chdir(path.replace('/writeJson.py','')) ; # Reset path to local dir
+    print os.getcwd()
     versionInfo = getFileHistory(outFileTest)
     #versionInfo = None ; # Used to add a new file
     if versionInfo == None:
         versionInfo = {}
-        versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
+        versionInfo['author'] = 'Benjamin C. Musci <musci2@llnl.gov>'
         versionInfo['creation_date'] = ''.join([datetime.datetime.now().strftime('%c'),' -0800'])
         versionInfo['institution_id'] = 'PCMDI'
         versionInfo['latest_tag_point'] = 'None'
@@ -790,6 +1861,9 @@ for jsonName in masterTargets:
     jsonDict[jsonName] = eval(jsonName)
     # Append repo version/metadata
     jsonDict['version_metadata'] = versionInfo
+    print '***'
+    print os.getcwd()
+    print outFile
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

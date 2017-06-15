@@ -181,6 +181,8 @@ PJD 14 Jun 2017    - Rename experiment_id highresSST-4co2 -> highresSST-4xCO2 ht
 PJD 14 Jun 2017    - Update frequency format with identifiers -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/342
 PJD 14 Jun 2017    - Rename experiment_id lfmip-pdL-princeton -> lfmip-pdLC-princeton https://github.com/WCRP-CMIP/CMIP6_CVs/issues/344
 PJD 15 Jun 2017    - Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/352
+PJD 15 Jun 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/351
+                   - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -206,7 +208,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem\"'
+commitMessage = '\"Revise source_id MRI-ESM2-0\"'
 
 #%% Define functions
 # Get repo metadata
@@ -562,12 +564,53 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'EC-Earth3-AerChem'
+key = 'MRI-ESM2-0'
 source_id[key]['activity_participation'] = [
  'AerChemMIP',
+ 'C4MIP',
+ 'CFMIP',
  'CMIP',
- 'ScenarioMIP'
+ 'CORDEX',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'LS3MIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
 ]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MRI'
+]
+source_id[key]['label'] = 'MRI-ESM2.0'
+source_id[key]['label_extended'] = 'MRI-ESM2.0'
+source_id[key]['model_component']['aerosol']['description'] = 'MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'MRI-AGCM3.5 (TL159; 320 x 160 longitude/latitude; 80 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'MRI-CCM2.1 (T42; 128 x 64 longitude/latitude; 80 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'HAL 1.0'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MRI.COM4.4 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 360 x 364 longitude/latitude; 61 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'MRI.COM4.4'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'MRI.COM4.4'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

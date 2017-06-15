@@ -1656,7 +1656,7 @@ source_id[key]['model_component']['ocean'] = {}
 source_id[key]['model_component']['ocean']['description'] = '1 x 2.0 degree, 180 x 180 longitude/latitude; 25 levels; enhanced horizontal resolution near Equator'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '??? km'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = ["thermodynamic ice model","ice extent prescribed"]
+source_id[key]['model_component']['seaIce']['description'] = ['thermodynamic ice model','ice extent prescribed']
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '??? km'
 source_id[key]['reference'] = [
  "Hogan and Li, 1997 doi: ?????","Li and Hogan, 1999 doi: 10.1175/1520-0442(1999)012<0780:TROTAM>2.0.CO;2"
@@ -1868,6 +1868,7 @@ for jsonName in masterTargets:
     #print os.getcwd()
     #print outFile
     fH = open(outFile, 'w')
+    print 'json.dump'
     json.dump(
         jsonDict,
         fH,
@@ -1878,6 +1879,7 @@ for jsonName in masterTargets:
             ',',
             ':'),
         encoding="utf-8")
+    print 'json.dump complete'
     fH.close()
 
     # Convert to a per file commit

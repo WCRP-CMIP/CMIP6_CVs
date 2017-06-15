@@ -14,11 +14,11 @@
         "yrClim"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue May 30 17:54:36 2017 -0700",
+        "author":"Ben Musci <musci2@llnl.gov>",
+        "creation_date":"Wed Jun 14 17:03:16 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (39; g7899ea6)",
-        "note":"Remove frequency 3hrClim",
-        "previous_commit":"b94e6c9e9bebd603eeb38888f3bff2724da8923a"
+        "latest_tag_point":"3.2.3 (34; g32d32e2)",
+        "note":"CreateCMIP2 source_id json file",
+        "previous_commit":"7d395d22852c07721877311e0e7907132d23ac2d"
     }
 }

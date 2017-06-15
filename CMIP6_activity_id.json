@@ -1,34 +1,16 @@
 {
     "activity_id":[
-        "AerChemMIP",
-        "C4MIP",
-        "CFMIP",
-        "CMIP",
-        "CORDEX",
-        "DAMIP",
-        "DCPP",
-        "DynVarMIP",
-        "FAFMIP",
-        "GMMIP",
-        "GeoMIP",
-        "HighResMIP",
-        "ISMIP6",
-        "LS3MIP",
-        "LUMIP",
-        "OMIP",
-        "PMIP",
-        "RFMIP",
-        "SIMIP",
-        "ScenarioMIP",
-        "VIACSAB",
-        "VolMIP"
+        "AMIP1",
+        "AMIP2",
+        "CMIP1",
+        "CMIP2"
     ],
     "version_metadata":{
         "author":"Ben Musci <musci2@llnl.gov>",
-        "creation_date":"Wed Jun 14 17:17:18 2017 -0700",
+        "creation_date":"Wed Jun 14 17:21:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (122; g7e47812)",
+        "latest_tag_point":"3.2.3 (132; g4c5da1f)",
         "note":"CreateCMIP2 source_id json file",
-        "previous_commit":"eec83ebd4a8be9c9dd4704e222ce11dffecead02"
+        "previous_commit":"bcc92d5db7011cf7ff593f615cf6f2ca75ac55a1"
     }
 }

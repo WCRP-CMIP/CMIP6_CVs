@@ -90,28 +90,10 @@ masterTargets = [
 
 #%% Activities
 activity_id = [
-    'AerChemMIP',
-    'C4MIP',
-    'CFMIP',
-    'CMIP',
-    'CORDEX',
-    'DAMIP',
-    'DCPP',
-    'DynVarMIP',
-    'FAFMIP',
-    'GMMIP',
-    'GeoMIP',
-    'HighResMIP',
-    'ISMIP6',
-    'LS3MIP',
-    'LUMIP',
-    'OMIP',
-    'PMIP',
-    'RFMIP',
-    'SIMIP',
-    'ScenarioMIP',
-    'VIACSAB',
-    'VolMIP'
+    'AMIP1',
+    'AMIP2',
+    'CMIP1',
+    'CMIP2'
 ]
 
 #%% Experiments

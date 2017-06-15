@@ -1837,11 +1837,11 @@ for jsonName in masterTargets:
         outFile = ''.join(['../CMIP6_', jsonName, '.json'])
     # Get repo version/metadata
     path = os.path.realpath(__file__)
-    print 'path',path
-    print os.getcwd()
+    #print 'path',path
+    #print os.getcwd()
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
     os.chdir(path.replace('/writeJson.py','')) ; # Reset path to local dir
-    print os.getcwd()
+    #print os.getcwd()
     versionInfo = getFileHistory(outFileTest)
     #versionInfo = None ; # Used to add a new file
     if versionInfo == None:
@@ -1862,9 +1862,9 @@ for jsonName in masterTargets:
     jsonDict[jsonName] = eval(jsonName)
     # Append repo version/metadata
     jsonDict['version_metadata'] = versionInfo
-    print '***'
-    print os.getcwd()
-    print outFile
+    #print '***'
+    #print os.getcwd()
+    #print outFile
     fH = open(outFile, 'w')
     json.dump(
         jsonDict,

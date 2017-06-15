@@ -182,6 +182,7 @@ PJD 14 Jun 2017    - Update frequency format with identifiers -> highresSST-4xCO
 PJD 14 Jun 2017    - Rename experiment_id lfmip-pdL-princeton -> lfmip-pdLC-princeton https://github.com/WCRP-CMIP/CMIP6_CVs/issues/344
 PJD 15 Jun 2017    - Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/352
 PJD 15 Jun 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/351
+PJD 15 Jun 2017    - Revise multiple NASA-GISS source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -208,7 +209,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MRI-ESM2-0\"'
+commitMessage = '\"Revise multiple NASA-GISS source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -564,52 +565,66 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'MRI-ESM2-0'
+key = 'GISS-E2-1G'
 source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CFMIP',
- 'CMIP',
- 'CORDEX',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'GeoMIP',
- 'LS3MIP',
- 'OMIP',
- 'PMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VolMIP'
+ 'CMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'MRI'
+ 'NASA-GISS'
 ]
-source_id[key]['label'] = 'MRI-ESM2.0'
-source_id[key]['label_extended'] = 'MRI-ESM2.0'
-source_id[key]['model_component']['aerosol']['description'] = 'MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level 0.01 hPa)'
+source_id[key]['label'] = 'GISS-E2.1G'
+source_id[key]['label_extended'] = 'GISS-E2.1G'
+source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'MRI-AGCM3.5 (TL159; 320 x 160 longitude/latitude; 80 levels; top level 0.01 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'MRI-CCM2.1 (T42; 128 x 64 longitude/latitude; 80 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'HAL 1.0'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'MRI.COM4.4 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 360 x 364 longitude/latitude; 61 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['description'] = 'GISS Ocean (1 degree; 360 x 180 latitude/longitude; 32 levels; top grid cell 0-10 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'MRI.COM4.4'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['description'] = 'MRI.COM4.4'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2017'
+source_id[key]['release_year'] = '2016'
+source_id[key]['source_id'] = key
+
+key = 'GISS-E2-1H'
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NASA-GISS'
+]
+source_id[key]['label'] = 'GISS-E2.1H'
+source_id[key]['label_extended'] = 'GISS-E2.1H'
+source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

@@ -180,6 +180,7 @@ PJD 14 Jun 2017    - Revise frequency decadal to dec https://github.com/WCRP-CMI
 PJD 14 Jun 2017    - Rename experiment_id highresSST-4co2 -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/341
 PJD 14 Jun 2017    - Update frequency format with identifiers -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/342
 PJD 14 Jun 2017    - Rename experiment_id lfmip-pdL-princeton -> lfmip-pdLC-princeton https://github.com/WCRP-CMIP/CMIP6_CVs/issues/344
+PJD 15 Jun 2017    - Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/352
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
                    - TODO: Generate function for json compositing
@@ -205,7 +206,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Rename experiment_id lfmip-pdL-princeton\"'
+commitMessage = '\"Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem\"'
 
 #%% Define functions
 # Get repo metadata
@@ -288,16 +289,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-experiment_id['lfmip-pdLC-princeton'] = experiment_id.pop('lfmip-pdL-princeton')
-experiment_id['lfmip-pdLC-princeton']['experiment_id'] = 'lfmip-pdLC-princeton'
-experiment_id['highresSST-4xCO2']['experiment_id'] = 'highresSST-4xCO2' ; # Cleanup #341
-# Add test
-keyVals = experiment_id.keys()
-for key in keyVals:
-    val = experiment_id[key]['experiment_id']
-    #print key,val
-    if val != key:
-        print key,'problematic'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -571,6 +562,12 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'EC-Earth3-AerChem'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'CMIP',
+ 'ScenarioMIP'
+]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

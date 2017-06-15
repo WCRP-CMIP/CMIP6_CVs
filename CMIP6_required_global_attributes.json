@@ -33,10 +33,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jun 14 14:03:56 2017 -0700",
+        "creation_date":"Thu Jun 15 08:22:07 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (108; g657bf00)",
-        "note":"Rename experiment_id lfmip-pdL-princeton",
-        "previous_commit":"b2c459be450204b2c4b801b198b51be49b2d90c0"
+        "latest_tag_point":"3.2.3 (53; g3784e80)",
+        "note":"Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem",
+        "previous_commit":"c1c82ee8b433b6f8c0ea7ad634a44de7a5ac1be6"
     }
 }

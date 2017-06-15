@@ -1683,7 +1683,7 @@
         },
         "GISS-E2-1G":{
             "activity_participation":[
-                ""
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1695,28 +1695,28 @@
             "label_extended":"GISS-E2.1G",
             "model_component":{
                 "aerosol":{
-                    "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
-                    "nominal_resolution":""
+                    "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
-                    "nominal_resolution":""
+                    "description":"GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
-                    "description":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
-                    "nominal_resolution":""
+                    "description":"Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"GISS LSM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
-                    "description":"Fixed",
-                    "nominal_resolution":""
+                    "description":"none",
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"GISS Ocean (1 deg latitude/longitude; 32 levels; top grid cell 0-10m)",
-                    "nominal_resolution":""
+                    "description":"GISS Ocean (1 degree; 360 x 180 latitude/longitude; 32 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1724,7 +1724,7 @@
                 },
                 "seaIce":{
                     "description":"GISS SI",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2016",
@@ -1732,7 +1732,7 @@
         },
         "GISS-E2-1H":{
             "activity_participation":[
-                ""
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1744,28 +1744,28 @@
             "label_extended":"GISS-E2.1H",
             "model_component":{
                 "aerosol":{
-                    "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
-                    "nominal_resolution":""
+                    "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"GISS-E2.1 (90 x 144 2x2.5; 40 levels; top level 0.1hPa)",
-                    "nominal_resolution":""
+                    "description":"GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
-                    "description":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
-                    "nominal_resolution":""
+                    "description":"Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"GISS LSM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
-                    "description":"Fixed",
-                    "nominal_resolution":""
+                    "description":"none",
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"HYCOM Ocean (tripolar grid; ~1 deg latitude/longitude; 26 levels; top grid cell 0-10m)",
-                    "nominal_resolution":""
+                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -1773,7 +1773,7 @@
                 },
                 "seaIce":{
                     "description":"GISS SI",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2016",
@@ -3101,10 +3101,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 11:13:40 2017 -0700",
+        "creation_date":"Thu Jun 15 11:15:32 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (55; g1c504db)",
-        "note":"Revise source_id MRI-ESM2-0",
-        "previous_commit":"8a813fd4828deac42d4b8bd1b6e4bf2f07692e3e"
+        "latest_tag_point":"note: ",
+        "note":"Issue351 durack1 revise source_id MRI-ESM2-0 (#354)",
+        "previous_commit":"f52ba501681269adaf162050aa27d16f59dc789d"
     }
 }

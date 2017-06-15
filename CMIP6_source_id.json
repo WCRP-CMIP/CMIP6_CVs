@@ -2320,7 +2320,24 @@
         },
         "MRI-ESM2-0":{
             "activity_participation":[
-                ""
+                "AerChemMIP",
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "CORDEX",
+                "DAMIP",
+                "DCPP",
+                "DynVarMIP",
+                "FAFMIP",
+                "GMMIP",
+                "GeoMIP",
+                "LS3MIP",
+                "OMIP",
+                "PMIP",
+                "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2332,20 +2349,20 @@
             "label_extended":"MRI-ESM2.0",
             "model_component":{
                 "aerosol":{
-                    "description":"MASINGAR mk2r4",
-                    "nominal_resolution":""
+                    "description":"MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"MRI-AGCM3.5 (320 x 160 TL159; 80 levels; top level 0.01 hPa)",
-                    "nominal_resolution":""
+                    "description":"MRI-AGCM3.5 (TL159; 320 x 160 longitude/latitude; 80 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"MRI-CCM2.1",
-                    "nominal_resolution":""
+                    "description":"MRI-CCM2.1 (T42; 128 x 64 longitude/latitude; 80 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"HAL 1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2353,15 +2370,15 @@
                 },
                 "ocean":{
                     "description":"MRI.COM4.4 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 360 x 364 longitude/latitude; 61 levels; top grid cell 0-2 m)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"MRI.COM4.4",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"MRI.COM4.4",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3084,10 +3101,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 08:22:07 2017 -0700",
+        "creation_date":"Thu Jun 15 11:13:40 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (54; g9b24bfa)",
-        "note":"Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem",
-        "previous_commit":"07368b90b08d7cdf58f8c80f18336d9581016d25"
+        "latest_tag_point":"3.2.3 (55; g1c504db)",
+        "note":"Revise source_id MRI-ESM2-0",
+        "previous_commit":"8a813fd4828deac42d4b8bd1b6e4bf2f07692e3e"
     }
 }

@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 08:22:07 2017 -0700",
+        "creation_date":"Thu Jun 15 11:13:40 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (57; gc033062)",
-        "note":"Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem",
-        "previous_commit":"111093c8d3b2313a7ee377cca430c4215b94bdc9"
+        "latest_tag_point":"3.2.3 (58; gc507fd9)",
+        "note":"Revise source_id MRI-ESM2-0",
+        "previous_commit":"98cf5f8cc83b3f5fcd4007c3639caf749712a97b"
     }
 }

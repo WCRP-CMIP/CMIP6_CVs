@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 11:55:45 2017 -0700",
+        "creation_date":"Mon Jun 19 14:06:58 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue177 durack1 source_id correct NASA-GISS seaIce nominal_resolution (#356)",
-        "previous_commit":"b48ad53b379141b22ed833fa39d9902b5c2ffe2e"
+        "latest_tag_point":"3.2.4 (22; g85c51be)",
+        "note":"Revise INM institution_id",
+        "previous_commit":"5044f0ed9124262883b42aaabf706c27459a079f"
     }
 }

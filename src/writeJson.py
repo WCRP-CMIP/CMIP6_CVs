@@ -183,6 +183,7 @@ PJD 14 Jun 2017    - Rename experiment_id lfmip-pdL-princeton -> lfmip-pdLC-prin
 PJD 15 Jun 2017    - Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/352
 PJD 15 Jun 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/351
 PJD 15 Jun 2017    - Revise multiple NASA-GISS source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+PJD 19 Jun 2017    - Revise INM institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/357
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -209,7 +210,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise multiple NASA-GISS source_id values\"'
+commitMessage = '\"Revise INM institution_id\"'
 
 #%% Define functions
 # Get repo metadata
@@ -463,7 +464,7 @@ institution_id = {
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
-    'INM': 'Institute for Numerical Mathematics, Moscow 119991, Russia',
+    'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China',
@@ -565,67 +566,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'GISS-E2-1G'
-source_id[key]['activity_participation'] = [
- 'CMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'NASA-GISS'
-]
-source_id[key]['label'] = 'GISS-E2.1G'
-source_id[key]['label_extended'] = 'GISS-E2.1G'
-source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'GISS LSM'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'GISS Ocean (1 degree; 360 x 180 latitude/longitude; 32 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
-source_id[key]['release_year'] = '2016'
-source_id[key]['source_id'] = key
-
-key = 'GISS-E2-1H'
-source_id[key]['activity_participation'] = [
- 'CMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'NASA-GISS'
-]
-source_id[key]['label'] = 'GISS-E2.1H'
-source_id[key]['label_extended'] = 'GISS-E2.1H'
-source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'GISS LSM'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
-source_id[key]['release_year'] = '2016'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -14,10 +14,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 15 11:54:01 2017 -0700",
+        "creation_date":"Mon Jun 19 14:06:58 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (58; gbd02692)",
-        "note":"Revise multiple NASA-GISS source_id values",
-        "previous_commit":"4cb4c324439fe09ce33b23247cc068971a867e3f"
+        "latest_tag_point":"3.2.4 (25; geb0937a)",
+        "note":"Revise INM institution_id",
+        "previous_commit":"f3c08e0dfa83738a0f41284c2fcbb7f39e9eac36"
     }
 }

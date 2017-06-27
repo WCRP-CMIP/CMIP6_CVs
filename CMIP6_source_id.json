@@ -2122,6 +2122,55 @@
             "release_year":"2016",
             "source_id":"INM-CM5-0"
         },
+        "INM-CM5-H":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "INM"
+            ],
+            "label":"INM-CM5-H",
+            "label_extended":"INM-CM5-H",
+            "model_component":{
+                "aerosol":{
+                    "description":"INM-AER1",
+                    "nominal_resolution":"50 km"
+                },
+                "atmos":{
+                    "description":"INM-AM5-H (0.67x0.5; 540x360 longitude/latitude; 73 levels; top level sigma = 0.0002)",
+                    "nominal_resolution":"50 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"INM-LND1",
+                    "nominal_resolution":"50 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)",
+                    "nominal_resolution":"15 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"INM-ICE1",
+                    "nominal_resolution":"15 km"
+                }
+            },
+            "release_year":"2016",
+            "source_id":"INM-CM5-H"
+        },
         "MIROC-ES2H":{
             "activity_participation":[
                 ""
@@ -3199,10 +3248,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jun 26 18:06:13 2017 -0700",
+        "creation_date":"Mon Jun 26 18:12:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (26; gdc54f3a)",
-        "note":"Register source_id INM-CM4-8",
-        "previous_commit":"da4e8c2dffbdc11656bf4743bc246b208ccb1ed3"
+        "latest_tag_point":"3.2.4 (27; g540b67d)",
+        "note":"Register source_id INM-CM5-H",
+        "previous_commit":"a016e4f30d318f78d1e4a433d86ec05cd86d5f44"
     }
 }

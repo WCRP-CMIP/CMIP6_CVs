@@ -186,6 +186,7 @@ PJD 15 Jun 2017    - Revise multiple NASA-GISS source_id values https://github.c
 PJD 19 Jun 2017    - Revise INM institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/357
 PJD 26 Jun 2017    - Register source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358
 PJD 26 Jun 2017    - Register source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/359
+PJD 26 Jun 2017    - Register source_id INM-CM5-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/361
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -212,7 +213,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id INM-CM4-8\"'
+commitMessage = '\"Register source_id INM-CM5-H\"'
 
 #%% Define functions
 # Get repo metadata
@@ -568,7 +569,7 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'INM-CM4-8'
+key = 'INM-CM5-H'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'CMIP'
@@ -579,33 +580,33 @@ source_id[key]['cohort'] = [
 source_id[key]['institution_id'] = [
  'INM'
 ]
-source_id[key]['label'] = 'INM-CM4-8'
-source_id[key]['label_extended'] = 'INM-CM4-8'
+source_id[key]['label'] = 'INM-CM5-H'
+source_id[key]['label_extended'] = 'INM-CM5-H'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'INM-AER1'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '150 km'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'INM-AM4-8 (2x1.5; 180x120 longitude/latitude; 21 levels; top level sigma = 0.01)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '150 km'
+source_id[key]['model_component']['atmos']['description'] = 'INM-AM5-H (0.67x0.5; 540x360 longitude/latitude; 73 levels; top level sigma = 0.0002)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
 source_id[key]['model_component']['land']['description'] = 'INM-LND1'
-source_id[key]['model_component']['land']['nominal_resolution'] = '150 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'INM-OM5 (North Pole shifted to 60N, 90E; 360x318 longitude/latitude; 40 levels; sigma vertical coordinate)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '15 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'INM-ICE1'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '15 km'
 source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
 #==============================================================================

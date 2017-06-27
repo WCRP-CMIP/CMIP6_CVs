@@ -187,6 +187,8 @@ PJD 19 Jun 2017    - Revise INM institution_id https://github.com/WCRP-CMIP/CMIP
 PJD 26 Jun 2017    - Register source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358
 PJD 26 Jun 2017    - Register source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/359
 PJD 26 Jun 2017    - Register source_id INM-CM5-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/361
+PJD 27 Jun 2017    - Revise multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184, 343
+PJD 27 Jun 2017    - Fix INM source_id formatting https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358, 359, 361
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -213,7 +215,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id INM-CM5-H\"'
+commitMessage = '\"Revise multiple MOHC source_id entries; Fix INM formatting\"'
 
 #%% Define functions
 # Get repo metadata
@@ -569,46 +571,259 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'INM-CM5-H'
-source_id[key] = {}
+key = 'HadGEM3-GC31-HH'
 source_id[key]['activity_participation'] = [
- 'CMIP'
+ 'HighResMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'INM'
+ 'MOHC'
 ]
-source_id[key]['label'] = 'INM-CM5-H'
-source_id[key]['label_extended'] = 'INM-CM5-H'
+source_id[key]['label'] = 'HadGEM3-GC31-HH'
+source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N512ORCA12'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N512; 1024 x 768 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '10 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
+source_id[key]['release_year'] = '2016'
+source_id[key]['source_id'] = key
+key = 'HadGEM3-GC31-HM'
+source_id[key]['activity_participation'] = [
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC'
+]
+source_id[key]['label'] = 'HadGEM3-GC31-HM'
+source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N512ORCA025'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N512; 1024 x 768 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2016'
+source_id[key]['source_id'] = key
+key = 'HadGEM3-GC31-LL'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'FAFMIP',
+ 'PMIP',
+ 'RFMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC'
+]
+source_id[key]['label'] = 'HadGEM3-GC31-LL'
+source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N96ORCA1'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 400 x 180 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2016'
+source_id[key]['source_id'] = key
+key = 'HadGEM3-GC31-MM'
+source_id[key]['activity_participation'] = [
+ 'DCPP',
+ 'GMMIP',
+ 'LS3MIP',
+ 'OMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC'
+]
+source_id[key]['label'] = 'HadGEM3-GC31-MM'
+source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N216ORCA025'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2016'
+source_id[key]['source_id'] = key
+key = 'UKESM1-0-LL'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'GEOMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC',
+ 'NERC'
+]
+source_id[key]['label'] = 'UKESM1.0-LL'
+source_id[key]['label_extended'] = 'UKESM1.0-N96ORCA1'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'UKCA-StratTrop'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 180 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'MEDUSA2'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+key = 'UKESM1-0-MMh'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC',
+ 'NERC'
+]
+source_id[key]['label'] = 'UKESM1.0-MMh'
+source_id[key]['label_extended'] = 'UKESM1.0-N216ORCA025hybrid'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode (horizontal resolution degraded relative to that used for atmosphere physics)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'MEDUSA2 (horizontal resolution degraded relative to that used for ocean physics)'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
+
+#343 @jonseddon
+key = 'HadGEM3-GC31-LM'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MOHC'
+]
+source_id[key]['label'] = 'HadGEM3-GC31-LM'
+source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N96ORCA025'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'INM-AER1'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'INM-AM5-H (0.67x0.5; 540x360 longitude/latitude; 73 levels; top level sigma = 0.0002)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'INM-LND1'
-source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '15 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'INM-ICE1'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '15 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
 source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
+
+#358, #359, #361 Fix INM formatting
+key = 'INM-CM4-8'
+source_id[key]['model_component']['atmos']['description'] = 'INM-AM4-8 (2x1.5; 180 x 120 longitude/latitude; 21 levels; top level sigma = 0.01)'
+source_id[key]['model_component']['ocean']['description'] = 'INM-OM5 (North Pole shifted to 60N, 90E; 360 x 318 longitude/latitude; 40 levels; sigma vertical coordinate)'
+key = 'INM-CM5-0'
+source_id[key]['model_component']['atmos']['description'] = 'INM-AM5-0 (2x1.5; 180 x 120 longitude/latitude; 73 levels; top level sigma = 0.0002)'
+source_id[key]['model_component']['ocean']['description'] = 'INM-OM5 (North Pole shifted to 60N, 90E. 0.5x0.25; 720 x 720 longitude/latitude; 40 levels; vertical sigma coordinate)'
+key = 'INM-CM5-H'
+source_id[key]['model_component']['atmos']['description'] = 'INM-AM5-H (0.67x0.5; 540 x 360 longitude/latitude; 73 levels; top level sigma = 0.0002)'
+source_id[key]['model_component']['ocean']['description'] = 'INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)'
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -3314,10 +3314,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jun 27 10:03:39 2017 -0700",
+        "creation_date":"Tue Jun 27 10:57:57 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (30; gf2f9b79)",
-        "note":"Correct source_type BGCM to BGC",
-        "previous_commit":"275f2127c6c5a00ea4477d452f182dea060d9f38"
+        "latest_tag_point":"3.2.4 (31; g72b3c95)",
+        "note":"Remove unregistered institution_id entries",
+        "previous_commit":"453cf05b5fa9b7a330ff9288d7c12d591309ff33"
     }
 }

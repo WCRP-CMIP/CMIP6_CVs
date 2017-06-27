@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jun 27 09:51:16 2017 -0700",
+        "creation_date":"Tue Jun 27 09:53:49 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (31; gdfad4f1)",
-        "note":"Revise multiple MOHC source_id entries; Fix INM formatting",
-        "previous_commit":"8bbfa291e7ada21905aa13b2b905a76fc2fb7455"
+        "latest_tag_point":"note: ",
+        "note":"Issue184 durack1 revise multiple MOHC source_id entries; Fix INM formatting (#367)",
+        "previous_commit":"0dffc436f9bf2d0ded0eb3ec7080815d103528a5"
     }
 }

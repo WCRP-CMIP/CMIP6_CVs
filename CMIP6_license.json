@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jun 27 09:51:15 2017 -0700",
+        "creation_date":"Tue Jun 27 10:03:39 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (23; g836cbd7)",
-        "note":"Revise multiple MOHC source_id entries; Fix INM formatting",
-        "previous_commit":"43063a31ed7cefb1d1686157518befc76beaf089"
+        "latest_tag_point":"3.2.4 (25; g392b29c)",
+        "note":"Correct source_type BGCM to BGC",
+        "previous_commit":"c392a0d7fba74c254a0d4c97b3e2b45878768ac6"
     }
 }

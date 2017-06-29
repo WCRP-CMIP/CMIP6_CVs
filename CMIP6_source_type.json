@@ -13,10 +13,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 10:28:55 2017 -0700",
+        "creation_date":"Thu Jun 29 10:30:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (36; g7e63562)",
-        "note":"Delete source_type ESM",
-        "previous_commit":"5180cc7ff59129733b881524bbe5d3623801014e"
+        "latest_tag_point":"note: ",
+        "note":"Issue370 durack1 delete source_type ESM (#375)",
+        "previous_commit":"c53d2b91cb6bdbb9f2bb621bd291ca8e61a933eb"
     }
 }

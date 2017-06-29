@@ -193,6 +193,7 @@ PJD 27 Jun 2017    - Correct source_type BGCM to BGC https://github.com/WCRP-CMI
 PJD 27 Jun 2017    - Remove unregistered institution_id entries (no source_id registrations) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/362
 PJD 29 Jun 2017    - Revise source_id IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
 PJD 29 Jun 2017    - Revise multiple CNRM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 29 Jun 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -219,7 +220,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise multiple CNRM source_id values\"'
+commitMessage = '\"Revise multiple MPI source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -572,22 +573,129 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['model_component']['landIce']['description'] = 'GRISLI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-key = 'CNRM-ESM2-1'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-key = 'CNRM-CM6-1-HR'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 32.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-key = 'CNRM-ESM2-1-HR'
-source_id[key]['model_component']['atmos']['description'] = 'Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 32.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)'
-source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+key = 'MPIESM-2-LR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'OMIP',
+ 'SIMIP'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmos']['description'] = 'ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JSBACH4.2' # Should this be v3.2?
+source_id[key]['model_component']['land']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['landIce']['description'] = 'none/prescribed'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+key = 'MPIESM-1-2-HR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'HighResMIP',
+ 'OMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce']['description'] = 'none/prescribed'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (tripolar TP04, approximately 0.4deg; 900 x 450 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+key = 'MPIESM-1-2-LR'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['landIce']['description'] = 'none/prescribed'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 240 x 120 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '200 km'
+key = 'MPIESM-1-2-LR'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['landIce']['description'] = 'none/prescribed'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 240 x 120 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '200 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

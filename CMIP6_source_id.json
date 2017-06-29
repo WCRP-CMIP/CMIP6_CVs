@@ -2378,7 +2378,16 @@
         },
         "MPIESM-1-2-HR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "CORDEX",
+                "DCPP",
+                "DynVarMIP",
+                "FAFMIP",
+                "HighResMIP",
+                "OMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2391,11 +2400,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2403,23 +2412,23 @@
                 },
                 "land":{
                     "description":"JSBACH3.2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none/prescribed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MPIOM1.63 (tripolar TP04; approximately 0.4deg latitude/longitude; 40 levels; top grid cell 0-12 m)",
-                    "nominal_resolution":""
+                    "description":"MPIOM1.63 (tripolar TP04, approximately 0.4deg; 900 x 450 longitude/latitude; 40 levels; top grid cell 0-12 m)",
+                    "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "seaIce":{
-                    "description":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
-                    "nominal_resolution":""
+                    "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -2427,7 +2436,23 @@
         },
         "MPIESM-1-2-LR":{
             "activity_participation":[
-                ""
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "DCPP",
+                "DynVarMIP",
+                "FAFMIP",
+                "GMMIP",
+                "GeoMIP",
+                "ISMIP6",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PMIP",
+                "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2440,11 +2465,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "atmos":{
                     "description":"ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2452,23 +2477,23 @@
                 },
                 "land":{
                     "description":"JSBACH3.2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "landIce":{
                     "description":"none/prescribed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MPIOM1.63 (bipolar GR1.5; approximately 1.5deg latitude/longitude; 40 levels; top grid cell 0-12 m)",
-                    "nominal_resolution":""
+                    "description":"MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 240 x 120 longitude/latitude; 40 levels; top grid cell 0-12 m)",
+                    "nominal_resolution":"200 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "seaIce":{
-                    "description":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
-                    "nominal_resolution":""
+                    "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
+                    "nominal_resolution":"200 km"
                 }
             },
             "release_year":"2017",
@@ -2476,7 +2501,9 @@
         },
         "MPIESM-2-LR":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "OMIP",
+                "SIMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2489,11 +2516,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "atmos":{
                     "description":"ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2501,23 +2528,23 @@
                 },
                 "land":{
                     "description":"JSBACH4.2",
-                    "nominal_resolution":""
+                    "nominal_resolution":"200 km"
                 },
                 "landIce":{
                     "description":"none/prescribed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"none"
                 },
                 "ocean":{
                     "description":"ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "seaIce":{
-                    "description":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
-                    "nominal_resolution":""
+                    "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -3315,10 +3342,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 09:56:08 2017 -0700",
+        "creation_date":"Thu Jun 29 10:18:59 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (61; g3acdb9a)",
-        "note":"Revise multiple CNRM source_id values",
-        "previous_commit":"b41877ca911ecef9ca5e9e1362b019783505c8f5"
+        "latest_tag_point":"3.2.4 (34; g75d24b0)",
+        "note":"Revise multiple MPI source_id values",
+        "previous_commit":"278aa4cfca8437e9bb5deb747f118e509f86ca6e"
     }
 }

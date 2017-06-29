@@ -2034,7 +2034,8 @@
         },
         "IITM-ESM":{
             "activity_participation":[
-                ""
+                "CMIP",
+                "GMMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2046,36 +2047,36 @@
             "label_extended":"IITM-ESM",
             "model_component":{
                 "aerosol":{
-                    "description":"unnamed (prescribed MAC-v2)",
-                    "nominal_resolution":""
+                    "description":"prescribed MAC-v2",
+                    "nominal_resolution":"200 km"
                 },
                 "atmos":{
-                    "description":"GFS (192 x 94 T62; 64 levels; top level 0.2 mb)",
-                    "nominal_resolution":""
+                    "description":"IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)",
+                    "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"NOAH LSM",
-                    "nominal_resolution":""
+                    "description":"NOAH LSMv2.7.1",
+                    "nominal_resolution":"200 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM4p1 (tripolar, 360x200; 50 levels; top grid cell 5m)",
-                    "nominal_resolution":""
+                    "description":"MOM4p1 (tripolar, primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"TOPAZ",
-                    "nominal_resolution":""
+                    "description":"TOPAZv2.0",
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"SIS",
-                    "nominal_resolution":""
+                    "description":"SISv1.0",
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2015",
@@ -3314,10 +3315,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jun 27 10:57:57 2017 -0700",
+        "creation_date":"Tue Jun 27 10:59:40 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (31; g72b3c95)",
-        "note":"Remove unregistered institution_id entries",
-        "previous_commit":"453cf05b5fa9b7a330ff9288d7c12d591309ff33"
+        "latest_tag_point":"note: ",
+        "note":"Issue362 durack1 removed unregistered institution_id values (#369)",
+        "previous_commit":"8ff84680a18f074805cf6eca8238b391470e6931"
     }
 }

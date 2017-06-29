@@ -574,6 +574,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 # Fix issues
 key = 'CNRM-CM6-1'
 source_id[key]['model_component']['landIce']['description'] = 'GRISLI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
 source_id[key]['model_component']['ocean']['description'] = 'Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 key = 'CNRM-ESM2-1'

@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 09:37:38 2017 -0700",
+        "creation_date":"Thu Jun 29 09:56:07 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (25; gb2f47e9)",
-        "note":"Revise source_id IITM-ESM",
-        "previous_commit":"bcc9277a85505816cdecf3491838441063126143"
+        "latest_tag_point":"3.2.4 (54; g4ea8767)",
+        "note":"Revise multiple CNRM source_id values",
+        "previous_commit":"8ebc78ecc0cc7b777b434a1e3df086c8f7d1507f"
     }
 }

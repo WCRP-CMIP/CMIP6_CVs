@@ -3185,7 +3185,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
-                "GEOMIP",
+                "GeoMIP",
                 "LUMIP",
                 "OMIP",
                 "PMIP",
@@ -3342,10 +3342,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 10:28:55 2017 -0700",
+        "creation_date":"Thu Jun 29 10:36:28 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (35; g2979ec9)",
-        "note":"Delete source_type ESM",
-        "previous_commit":"fc1c16c711a3f4f60868b9f0052ece4caf40e8f7"
+        "latest_tag_point":"3.2.4 (36; gc0fa586)",
+        "note":"Correct source_id UKESM1-0-LL activity_participation error",
+        "previous_commit":"ed5432c343b8fde86cf07307d72d4d6925e1b76c"
     }
 }

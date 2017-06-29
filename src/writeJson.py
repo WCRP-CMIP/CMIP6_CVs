@@ -191,6 +191,7 @@ PJD 27 Jun 2017    - Revise multiple MOHC source_id entries https://github.com/W
 PJD 27 Jun 2017    - Fix INM source_id formatting https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358, 359, 361
 PJD 27 Jun 2017    - Correct source_type BGCM to BGC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/366
 PJD 27 Jun 2017    - Remove unregistered institution_id entries (no source_id registrations) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/362
+PJD 29 Jun 2017    - Revise source_id IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96#issuecomment-311985329
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -217,7 +218,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Remove unregistered institution_id entries\"'
+commitMessage = '\"Revise source_id IITM-ESM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -570,21 +571,37 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-instList = []
-keyList = source_id.keys()
-for count,key in enumerate(keyList):
-    a = source_id[key]['institution_id']
-    if len(a) == 1:
-        #print count,source_id[key]['institution_id'][0]
-        instList += [source_id[key]['institution_id'][0]]
-    else:
-        for count1 in range(0,len(a)):
-            #print count,source_id[key]['institution_id'][count1],'+'
-            instList += [source_id[key]['institution_id'][count1]]
-
-# Remove dupes
-instList = list(set(instList)) ; instList.sort()
-#print instList
+key = 'IITM-ESM'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'GMMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CCCR-IITM'
+]
+source_id[key]['label'] = 'IITM-ESM'
+source_id[key]['label_extended'] = 'IITM-ESM'
+source_id[key]['model_component']['aerosol']['description'] = 'prescribed MAC-v2'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmos']['description'] = 'IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'NOAH LSMv2.7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '200 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MOM4p1 (tripolar, primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'TOPAZv2.0'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'SISv1.0'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2015'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

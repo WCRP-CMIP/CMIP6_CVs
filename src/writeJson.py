@@ -578,7 +578,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 # Fix issues
 key = 'CNRM-CM6-1'
 source_id[key]['model_component']['landIce']['description'] = 'GRISLI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '15 km'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '10 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

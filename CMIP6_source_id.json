@@ -767,7 +767,7 @@
                 },
                 "landIce":{
                     "description":"GRISLI: Collaborating with l'Institut des Geosciences de l'Environnement in Grenoble on offline ice-sheet simulations",
-                    "nominal_resolution":"15 km"
+                    "nominal_resolution":"10 km"
                 },
                 "ocean":{
                     "description":"Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)",
@@ -3342,10 +3342,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 5 10:26:28 2017 -0700",
+        "creation_date":"Wed Jul 5 10:28:29 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (37; ga71c689)",
+        "latest_tag_point":"3.2.4 (51; gf04b37b)",
         "note":"Revise source_id CNRM-CM6-1",
-        "previous_commit":"56b15466ff72e48f29189abbafa41bbd4cd5f3e1"
+        "previous_commit":"90830780b53751524da6495a0c212f20dc770531"
     }
 }

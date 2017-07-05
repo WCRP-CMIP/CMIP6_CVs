@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 10:36:28 2017 -0700",
+        "creation_date":"Wed Jul 5 10:30:00 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (31; gf424710)",
-        "note":"Correct source_id UKESM1-0-LL activity_participation error",
-        "previous_commit":"cc11826942cb32b3ab2511e39cf1953ad173b5e3"
+        "latest_tag_point":"3.2.4 (60; gfcdf618)",
+        "note":"Revise source_id CNRM-CM6-1",
+        "previous_commit":"c8e5c8cd2e1848cf5d7ee9cb73de8373867561cd"
     }
 }

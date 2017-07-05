@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 10:36:28 2017 -0700",
+        "creation_date":"Wed Jul 5 10:30:00 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (27; gdb669c4)",
-        "note":"Correct source_id UKESM1-0-LL activity_participation error",
-        "previous_commit":"6fe060b3d9d43b66bf57c6e55f41194c5576cede"
+        "latest_tag_point":"3.2.4 (56; gcc9356e)",
+        "note":"Revise source_id CNRM-CM6-1",
+        "previous_commit":"f042b9339fd1cb3f5ee39bb2b5ccf958812bbd21"
     }
 }

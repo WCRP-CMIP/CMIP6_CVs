@@ -196,6 +196,7 @@ PJD 29 Jun 2017    - Revise multiple CNRM source_id values https://github.com/WC
 PJD 29 Jun 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
 PJD 29 Jun 2017    - Delete source_type ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/370
 PJD 29 Jun 2017    - Correct source_id UKESM1-0-LL activity_participation error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/371
+PJD  5 Jul 2017    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -222,7 +223,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Correct source_id UKESM1-0-LL activity_participation error\"'
+commitMessage = '\"Revise source_id CNRM-CM6-1\"'
 
 #%% Define functions
 # Get repo metadata
@@ -575,17 +576,9 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'UKESM1-0-LL'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'ScenarioMIP',
- 'VolMIP'
-]
+key = 'CNRM-CM6-1'
+source_id[key]['model_component']['landIce']['description'] = 'GRISLI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '10 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

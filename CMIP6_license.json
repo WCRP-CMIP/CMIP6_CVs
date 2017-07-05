@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jun 29 10:36:28 2017 -0700",
+        "creation_date":"Thu Jun 29 10:38:03 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (31; gf424710)",
-        "note":"Correct source_id UKESM1-0-LL activity_participation error",
-        "previous_commit":"cc11826942cb32b3ab2511e39cf1953ad173b5e3"
+        "latest_tag_point":"note: ",
+        "note":"Issue371 durack1 correct UKESM1-0-LL activity_participation error (#376)",
+        "previous_commit":"15f5a1d8baa465f534ca9da9d6eee8fa331c6a1c"
     }
 }

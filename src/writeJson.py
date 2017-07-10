@@ -197,6 +197,7 @@ PJD 29 Jun 2017    - Revise multiple MPI source_id values https://github.com/WCR
 PJD 29 Jun 2017    - Delete source_type ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/370
 PJD 29 Jun 2017    - Correct source_id UKESM1-0-LL activity_participation error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/371
 PJD  5 Jul 2017    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 10 Jul 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -223,7 +224,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CNRM-CM6-1\"'
+commitMessage = '\"Revise multiple MPI source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -576,9 +577,15 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['model_component']['landIce']['description'] = 'GRISLI: Collaborating with l\'Institut des Geosciences de l\'Environnement in Grenoble on offline ice-sheet simulations'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '10 km'
+key = 'MPIESM-1-2-HR'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.20'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (tripolar TP04, approximately 0.4deg; 802 x 404 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+key = 'MPIESM-1-2-LR'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.20'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+key = 'MPIESM-2-LR'
+source_id[key]['model_component']['land']['description'] = 'JSBACH4.20'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

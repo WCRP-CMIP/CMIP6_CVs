@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 5 10:31:43 2017 -0700",
+        "creation_date":"Mon Jul 10 04:28:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue115 durack1 revise source_id CNRM-CM6-1 (#377)",
-        "previous_commit":"6a949d47a6d24f8cc454462fc9b66c9f2f4b2445"
+        "latest_tag_point":"3.2.4 (31; ga8c568f)",
+        "note":"Revise multiple MPI source_id values",
+        "previous_commit":"a0d09b79edabfdf39b03b7774cb2595712b445e7"
     }
 }

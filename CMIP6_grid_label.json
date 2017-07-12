@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jul 10 04:28:05 2017 -0700",
+        "creation_date":"Mon Jul 10 04:29:50 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (31; ga8c568f)",
-        "note":"Revise multiple MPI source_id values",
-        "previous_commit":"a0d09b79edabfdf39b03b7774cb2595712b445e7"
+        "latest_tag_point":"note: ",
+        "note":"Issue197 durack1 revise multiple MPI source_id values (#380)",
+        "previous_commit":"40c70a1a6847aa0d2dc4f1ee42c7ee5ba04f6ccb"
     }
 }

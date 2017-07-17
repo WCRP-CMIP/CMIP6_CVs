@@ -794,7 +794,7 @@ for jsonName in masterTargets:
     # Get repo version/metadata
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
-    print outFileTest
+    #print outFileTest
     versionInfo = getFileHistory(outFileTest)
     #versionInfo = None ; # Used to add a new file
     if versionInfo == None:

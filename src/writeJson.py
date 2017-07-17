@@ -199,6 +199,7 @@ PJD 29 Jun 2017    - Correct source_id UKESM1-0-LL activity_participation error 
 PJD  5 Jul 2017    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
 PJD 10 Jul 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
 PJD 12 Jul 2017    - Revise multiple MOHC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
+PJD 17 Jul 2017    - Revise EC-EARTH3-HR source_id ocean description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -225,7 +226,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise multiple MOHC source_id values\"'
+commitMessage = '\"Revise EC-EARTH3-HR source_id ocean description\"'
 
 #%% Define functions
 # Get repo metadata
@@ -578,10 +579,8 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'HadGEM3-GC31-LL'
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-key = 'UKESM1-0-LL'
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+key = 'EC-Earth3-HR'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA025; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -795,6 +794,7 @@ for jsonName in masterTargets:
     # Get repo version/metadata
     path = os.path.realpath(__file__)
     outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
+    print outFileTest
     versionInfo = getFileHistory(outFileTest)
     #versionInfo = None ; # Used to add a new file
     if versionInfo == None:

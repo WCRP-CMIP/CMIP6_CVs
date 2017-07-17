@@ -3342,10 +3342,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jul 17 12:25:01 2017 -0700",
+        "creation_date":"Mon Jul 17 12:25:49 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"CMOR (94; g7c5264e)",
+        "latest_tag_point":"3.2.5 (108; g1cb225f)",
         "note":"Revise EC-EARTH3-HR source_id ocean description",
-        "previous_commit":"47ea3514faefd16bd1be78ac4d90dff52a689fb3"
+        "previous_commit":"81097c8e8417c73cff664656af9316dbc97693de"
     }
 }

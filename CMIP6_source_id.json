@@ -1255,7 +1255,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO3.6 (ORCA025; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -3342,10 +3342,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 12 06:21:33 2017 -0700",
+        "creation_date":"Wed Jul 12 06:23:15 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.4 (39; g8d9f5a9)",
-        "note":"Revise multiple MOHC source_id values",
-        "previous_commit":"fb30ca28cf8c538fc3d5fa8c11e87d242c97ab1e"
+        "latest_tag_point":"note: ",
+        "note":"Issue184 durack1 revise multiple MOHC source_id values (#381)",
+        "previous_commit":"8537f933f1b658f9e23251710a1bfd820c8f2594"
     }
 }

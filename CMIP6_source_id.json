@@ -2329,7 +2329,19 @@
         },
         "MIROC6":{
             "activity_participation":[
-                ""
+            "CFMIP",
+            "DAMIP",
+            "DCPP",
+            "FAFMIP",
+            "GMMIP",
+            "HighResMIP",
+            "LS3MIP",
+            "OMIP",
+            "RFMIP",
+            "ScenarioMIP",
+            "DynVar",
+            "SIMIP",
+            "VIACS"
             ],
             "cohort":[
                 "Registered"
@@ -2342,11 +2354,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"150 km"
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256x128; 81 levels; top level 0.004 hPa)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"150 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2354,7 +2366,7 @@
                 },
                 "land":{
                     "description":"MATSIRO6.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"150 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2362,7 +2374,7 @@
                 },
                 "ocean":{
                     "description":"COCO4.9 (360x256x63; tripolar primarily 1deg; 63 levels; top grid cell 0-2 m)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"1 degree"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -2370,7 +2382,7 @@
                 },
                 "seaIce":{
                     "description":"COCO4.9",
-                    "nominal_resolution":""
+                    "nominal_resolution":"1 degree"
                 }
             },
             "release_year":"2017",

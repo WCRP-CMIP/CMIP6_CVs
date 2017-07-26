@@ -665,7 +665,7 @@ source_id[key]['activity_participation'] = [
 ]
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '10 km'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '10 km'
-
+source_id[key]['model_component']['land']['nominal_resolution'] = '10 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

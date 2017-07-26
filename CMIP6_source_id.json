@@ -2816,7 +2816,7 @@
                 },
                 "land":{
                     "description":"MATSIRO6 (w/o MOSAIC)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"10 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -3368,10 +3368,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jul 17 12:49:18 2017 -0700",
+        "creation_date":"Wed Jul 26 10:08:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue191 durack1 revise EC-EARTH3-HR ocean description (#382)",
-        "previous_commit":"5cfc645f40f3f667b98ee32abc413fda43cc6896"
+        "latest_tag_point":"3.2.5 (25; ga9d675d)",
+        "note":"Revise multiple MIROC source_id values",
+        "previous_commit":"380d7c6c04a52b5af13046dda15dcc40f4ef3673"
     }
 }

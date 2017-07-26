@@ -201,6 +201,7 @@ PJD 10 Jul 2017    - Revise multiple MPI source_id values https://github.com/WCR
 PJD 12 Jul 2017    - Revise multiple MOHC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
 PJD 17 Jul 2017    - Revise EC-EARTH3-HR source_id ocean description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
 PJD 26 Jul 2017    - Revise multiple MIROC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
+PJD 26 Jul 2017    - Register institution_id SNU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/386
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -227,7 +228,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise multiple MIROC source_id values\"'
+commitMessage = '\"Register institution_id SNU\"'
 
 #%% Define functions
 # Get repo metadata
@@ -496,6 +497,7 @@ institution_id = {
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
+    'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China'
 }
 
@@ -580,92 +582,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'MIROC-ES2H'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'DynVarMIP',
- 'GeoMIP',
- 'VIACSAB'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-key = 'MIROC-ES2L'
-source_id[key]['activity_participation'] = [
- 'C4MIP',
- 'DynVarMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'ScenarioMIP',
- 'VIACSAB',
- 'VolMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-key = 'MIROC6'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'LS3MIP',
- 'OMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['description'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocean']['description'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-key = 'NICAM16-7S'
-source_id[key]['activity_participation'] = [
- 'DynVarMIP',
- 'HighResMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
-key = 'NICAM16-8S'
-source_id[key]['activity_participation'] = [
- 'DynVarMIP',
- 'HighResMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '25 km'
-key = 'NICAM16-9D-L78'
-source_id[key]['activity_participation'] = [
- 'CFMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '10 km'
-key = 'NICAM16-9S'
-source_id[key]['activity_participation'] = [
- 'DynVarMIP',
- 'HighResMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '10 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

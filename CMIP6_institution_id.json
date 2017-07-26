@@ -27,14 +27,15 @@
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NUIST":"Nanjing University of Information Science and Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
+        "SNU":"Seoul National University, Seoul 08826, Republic of Korea",
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 26 10:08:19 2017 -0700",
+        "creation_date":"Wed Jul 26 14:41:02 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (19; g6c2cacf)",
-        "note":"Revise multiple MIROC source_id values",
-        "previous_commit":"83d96dee1ec155767bf24871566f0ed8f54236ac"
+        "latest_tag_point":"note: ",
+        "note":"Issue229 durack1 update multiple MIROC source_id values (#385)",
+        "previous_commit":"f4972e1faf360335a4756cce9b5a43c43f476d8a"
     }
 }

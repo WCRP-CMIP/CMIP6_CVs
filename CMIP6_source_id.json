@@ -3421,10 +3421,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jul 27 08:01:12 2017 -0700",
+        "creation_date":"Thu Jul 27 08:02:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (29; g605e9f7)",
+        "latest_tag_point":"3.2.5 (43; g90eec03)",
         "note":"Revise MIROC and SNU source_id values",
-        "previous_commit":"6678f3548770f45bc8895a2d6cb9a1a5d3e113c8"
+        "previous_commit":"3ea1c3826e450786d885372ab90ed731e0562982"
     }
 }

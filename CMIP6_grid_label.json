@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 26 15:21:31 2017 -0700",
+        "creation_date":"Wed Jul 26 19:14:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue386 durack1 register institution_id SNU (#388)",
-        "previous_commit":"16b1b0dacd12eaa177846623efa59ed20872a226"
+        "latest_tag_point":"3.2.5 (20; gde70cda)",
+        "note":"Register source_id SAM0-UNICON",
+        "previous_commit":"88d34d3fea11fdccd15ca3c6f89b3fdceb4154e7"
     }
 }

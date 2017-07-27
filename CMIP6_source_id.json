@@ -3207,6 +3207,56 @@
             "release_year":"1989",
             "source_id":"PCMDI-test-1-0"
         },
+        "SAM0-UNICON":{
+            "activity_participation":[
+                "CMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "SNU"
+            ],
+            "label":"SAM0-UNICON",
+            "label_extended":"SAM0-UNICON",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM3",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CAM5.3 with UNICON (1deg; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"POP2 (Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"SAM0-UNICON"
+        },
         "UKESM1-0-LL":{
             "activity_participation":[
                 "AerChemMIP",
@@ -3368,10 +3418,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 26 15:19:55 2017 -0700",
+        "creation_date":"Wed Jul 26 15:21:31 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (26; gb8b4a3e)",
-        "note":"Register institution_id SNU",
-        "previous_commit":"afbbb88ef6e020179e01a7909e73f9c796b25d70"
+        "latest_tag_point":"note: ",
+        "note":"Issue386 durack1 register institution_id SNU (#388)",
+        "previous_commit":"16b1b0dacd12eaa177846623efa59ed20872a226"
     }
 }

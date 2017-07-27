@@ -594,7 +594,7 @@ source_id[key]['activity_participation'] = [
  'DynVarMIP',
  'GeoMIP',
  'VIACSAB'
-],
+]
 key = 'MIROC-ES2L'
 source_id[key]['activity_participation'] = [
  'C4MIP',

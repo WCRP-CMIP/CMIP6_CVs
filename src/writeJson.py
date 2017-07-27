@@ -203,6 +203,8 @@ PJD 17 Jul 2017    - Revise EC-EARTH3-HR source_id ocean description https://git
 PJD 26 Jul 2017    - Revise multiple MIROC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
 PJD 26 Jul 2017    - Register institution_id SNU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/386
 PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387
+PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
+                     https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -229,7 +231,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id SAM0-UNICON\"'
+commitMessage = '\"Revise MIROC and SNU source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -584,46 +586,45 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 key = 'SAM0-UNICON'
-source_id[key] = {}
+source_id[key]['label_extended'] = 'SAM0-UNICON (SNU Atmosphere Model version 0 with Unified Convection Scheme)'
+key = 'MIROC-ES2H'
 source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
  'CMIP',
- 'ScenarioMIP'
+ 'DynVarMIP',
+ 'GeoMIP',
+ 'VIACSAB'
+],
+key = 'MIROC-ES2L'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CMIP',
+ 'DynVarMIP',
+ 'GeoMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
 ]
-source_id[key]['cohort'] = [
- 'Registered'
+key = 'MIROC6'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'HighResMIP',
+ 'LS3MIP',
+ 'OMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
 ]
-source_id[key]['institution_id'] = [
- 'SNU'
-]
-source_id[key]['label'] = 'SAM0-UNICON'
-source_id[key]['label_extended'] = 'SAM0-UNICON'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM3'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 with UNICON (1deg; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4.0'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

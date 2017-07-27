@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 26 15:19:55 2017 -0700",
+        "creation_date":"Wed Jul 26 19:14:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (21; g7b292d4)",
-        "note":"Register institution_id SNU",
-        "previous_commit":"c837f7a8fe04de7f343f013d48dcf2e967e6240c"
+        "latest_tag_point":"3.2.5 (22; gbf67515)",
+        "note":"Register source_id SAM0-UNICON",
+        "previous_commit":"5691a9df8e266393224731ea63ac4d3bf5768c19"
     }
 }

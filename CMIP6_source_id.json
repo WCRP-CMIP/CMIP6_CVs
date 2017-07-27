@@ -2231,10 +2231,13 @@
         },
         "MIROC-ES2H":{
             "activity_participation":[
-                "AerChemMIP",
-                "DynVarMIP",
-                "GeoMIP",
-                "VIACSAB"
+                [
+                    "AerChemMIP",
+                    "CMIP",
+                    "DynVarMIP",
+                    "GeoMIP",
+                    "VIACSAB"
+                ]
             ],
             "cohort":[
                 "Registered"
@@ -2284,6 +2287,7 @@
         "MIROC-ES2L":{
             "activity_participation":[
                 "C4MIP",
+                "CMIP",
                 "DynVarMIP",
                 "GeoMIP",
                 "LUMIP",
@@ -2341,6 +2345,7 @@
         "MIROC6":{
             "activity_participation":[
                 "CFMIP",
+                "CMIP",
                 "DAMIP",
                 "DCPP",
                 "DynVarMIP",
@@ -3219,7 +3224,7 @@
                 "SNU"
             ],
             "label":"SAM0-UNICON",
-            "label_extended":"SAM0-UNICON",
+            "label_extended":"SAM0-UNICON (SNU Atmosphere Model version 0 with Unified Convection Scheme)",
             "model_component":{
                 "aerosol":{
                     "description":"MAM3",
@@ -3418,10 +3423,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jul 26 19:14:19 2017 -0700",
+        "creation_date":"Wed Jul 26 19:15:44 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (27; g0812038)",
-        "note":"Register source_id SAM0-UNICON",
-        "previous_commit":"8d7e63bc95cef9d23a9760de74f96b2a10ab2b2d"
+        "latest_tag_point":"note: ",
+        "note":"Issue387 durack1 register source_id SAM0-UNICON (#389)",
+        "previous_commit":"035d3d9978d4c24801fbd784070d6d9e8a15519e"
     }
 }

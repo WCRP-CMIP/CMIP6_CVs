@@ -40,14 +40,16 @@ import cdutil as cdu
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from kludgers2 import kludgers
+os.chdir('/export/musci2/git/CMIP2_CVs/src')
+from kludgersTwo import kludgers
 from matplotlib.backends.backend_pdf import PdfPages
 gc.collect()
 gc.collect()
+
 #%% USER INPUTS
 
 # Variables that are missing from the CMIP6_AMON table used for cmor writinr
-MissingVariables = json.load(open('/export/musci2/git/cmip6-cmor-tables/AmonTable_MissingVariables.json'))
+MissingVariables = json.load(open('/export/musci2/git/CMIP2_CVs/Tables/AmonTable_MissingVariables.json'))
 
 #specify run of interst: CONTROL or PERTURBED
 for exp in ['AMIP']: #'con','per'
@@ -57,7 +59,7 @@ for exp in ['AMIP']: #'con','per'
     pathin1= '/oldCMIPs/PJG_StorageRetrieval/AMIP2-STORAGE/mo/'  ## PATH FOR MAIP INPUT DATA
     
     #specify where json files and tables needed are stored
-    tablepath = '/export/musci2/git/cmip6-cmor-tables/Tables'
+    tablepath = '/export/musci2/git/CMIP2_CVs/Tables'
     
     # specify place where teh created inputjson files will be saved
     savepath = '/oldCMIPs/ben/'
@@ -375,7 +377,7 @@ for exp in ['AMIP']: #'con','per'
                  varid = returns[2]
                  Converter =returns[3]
                  oldUnits = returns[4]
-                 print 'here', uniMsg, oldUnits, d.units, Converter
+                 print uniMsg, oldUnits, d.units, Converter
                  d=d*Converter
                  
                  
@@ -529,6 +531,7 @@ for exp in ['AMIP']: #'con','per'
                      fignum = 3
                  #plot data for the zonal avg at one time slice
                  
+                 mpl.rc('figure',figsize=(10,20))
                  plt.figure(1)
                  plt.figure(1,figsize=(10,20))
                  plt.plot(latCmor[:].tolist(), dza.tolist(), label = alias)

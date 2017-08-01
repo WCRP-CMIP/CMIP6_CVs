@@ -1,0 +1,77 @@
+{
+           "_control_vocabulary_file": "CMIP6_CV.json",
+           "_AXIS_ENTRY_FILE":         "CMIP6_coordinate.json",
+           "_FORMULA_VAR_FILE":        "CMIP6_formula_terms.json",
+           "_cmip6_option":           "CMIP6",
+
+           "tracking_prefix":        "hdl:21.14100",
+           "activity_id":            "ISMIP6",
+
+
+           "#output":                "Output Path where files are written",
+           "outpath":                "CMIP6",
+
+           "#experiment_id":         "CMIP6 valid experiment_ids are found in CMIP6_CV.json",
+           "experiment_id":          "piControl-withism",
+           "sub_experiment_id":      "none",
+           "sub_experiment":         "none",
+
+           "source_type":            "AOGCM ISM AER",
+           "parent_mip_era":         "N/A",
+           "mip_era":                "CMIP6",
+           "calendar":               "360_day",
+
+           "realization_index":      "11",
+           "initialization_index":   "1",
+           "physics_index":          "1",
+           "forcing_index":          "1",
+
+           "#contact ":              "Not required",
+           "contact ":              "Python Coder (coder@a.b.c.com)",
+
+           "#history":               "not required, supplemented by CMOR",
+           "history":                "Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.",
+
+           "#comment":               "Not required",
+           "comment":                "",
+
+           "#references":            "Not required",
+           "references":             "Model described by Koder and Tolkien (J. Geophys. Res., 2001, 576-591).  Also see http://www.GICC.su/giccm/doc/index.html  2XCO2 simulation described in Dorkey et al. '(Clim. Dyn., 2003, 323-357.)'",
+
+           "grid":                   "gs1x1",
+           "grid_label":             "gr",
+           "nominal_resolution":     "5 km",
+
+           "institution_id":         "PCMDI",
+
+           "parent_experiment_id":   "histALL",
+           "parent_activity_id":     "ISMIP6",
+           "parent_mip_era":         "CMIP6",
+
+           "parent_source_id":       "PCMDI-test-1-0",
+           "parent_time_units":      "days since 1970-01-01",
+           "parent_variant_label":   "r123i1p33f5",
+
+           "branch_method":          "Spin-up documentation",
+           "branch_time_in_child":   2310.0,
+           "branch_time_in_parent":  12345.0,
+
+
+           "#run_variant":           "Description of run variant (Recommended).",
+           "run_variant":            "forcing: black carbon aerosol only",
+
+           "#source_id":              "Model Source",
+           "source_id":               "PCMDI-test-1-0",
+
+           "#source":                "source title, first part is source_id",
+           "source":                 "PCMDI-test 1.0",
+
+
+           "#output_path_template":   "Template for output path directory using tables keys or global attributes",
+           "output_path_template":    "<mip_era><activity_id><institution_id><source_id><experiment_id><_member_id><table><variable_id><grid_label><version>",
+           "output_file_template":    "<variable_id><table><source_id><experiment_id><_member_id><grid_label>",
+
+           "license":                 "CMIP6 model data produced by Lawrence Livermore PCMDI is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+
+}
+

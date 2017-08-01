@@ -33,23 +33,24 @@ EACH COLLECTION OF MODELS AS WELL
 DIFFERENT PLOTS ARE GENERATED FOR 4D AND 3D DATA
 @author: musci2
 """
-import cmor, gc, json, sys, os, shutil, pylab, math, random, glob, difflib
+import cmor, gc, json, sys, os, shutil, math, random, glob, difflib
 #import vcs
 import cdms2 as cdm
-import cdutil as cdu
+import cdutil as cdu ; # A required install
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt ; # A required install
+import matplotlib.pylab as pylab
 import matplotlib as mpl
-os.chdir('/export/musci2/git/CMIP2_CVs/src')
+#os.chdir('/export/musci2/git/CMIP2_CVs/src')
 from kludgersTwo import kludgers
 from matplotlib.backends.backend_pdf import PdfPages
 gc.collect()
-gc.collect()
 
 #%% USER INPUTS
+homeDir = os.getenv('HOME')
 
 # Variables that are missing from the CMIP6_AMON table used for cmor writinr
-MissingVariables = json.load(open('/export/musci2/git/CMIP2_CVs/Tables/AmonTable_MissingVariables.json'))
+MissingVariables = json.load(open(os.path.join(homeDir,'git/CMIP2_CVs/Tables/AmonTable_MissingVariables.json')))
 
 #specify run of interst: CONTROL or PERTURBED
 for exp in ['AMIP']: #'con','per'
@@ -59,15 +60,17 @@ for exp in ['AMIP']: #'con','per'
     pathin1= '/oldCMIPs/PJG_StorageRetrieval/AMIP2-STORAGE/mo/'  ## PATH FOR MAIP INPUT DATA
     
     #specify where json files and tables needed are stored
-    tablepath = '/export/musci2/git/CMIP2_CVs/Tables'
+    tablepath = os.path.join(homeDir,'git/CMIP2_CVs/Tables')
     
     # specify place where teh created inputjson files will be saved
-    savepath = '/oldCMIPs/ben/'
+    #savepath = '/oldCMIPs/ben/'
+    savepath = '/oldCMIPs/durack1/'
     
     # specify place where output data is to be saved
-    outpath = '/oldCMIPs/ben/CmorData/'+exp # NOT WORKING BECAUSE DON"T HAVE PROPER MOUNT, CODE CAN'T DELTE OLD FILES TO RUN CORRECTLY
-    outpath = '/export/musci2/Cmor_Testing/CmorData/'+exp
-    
+    #outpath = '/oldCMIPs/ben/CmorData/'+exp # NOT WORKING BECAUSE DON"T HAVE PROPER MOUNT, CODE CAN'T DELTE OLD FILES TO RUN CORRECTLY
+    #outpath = '/export/musci2/Cmor_Testing/CmorData/'+exp
+    outpath = os.path.join(homeDir,'Cmor_Testing/CmorData/'+exp) ; # Paul test    
+
     #grab variables of interest
     variables = glob.glob(pathin1+'*')
     variables.sort()
@@ -113,7 +116,7 @@ for exp in ['AMIP']: #'con','per'
 
         # Read the source json file into memory in order to acess the nested dictionary within
         #with open('/export/musci2/CMIP1&2_source_id.json', 'r') as f: # SOURCE ID FOR CMIP RUNS
-        with open('/export/musci2/AMIP1&2_source_id.json', 'r') as f: # SOURCE ID FOR AMIP RUNS
+        with open(os.path.join(homeDir,'git/CMIP2_CVs/AMIP1&2_source_id.json'), 'r') as f: # SOURCE ID FOR AMIP RUNS
              source_id = json.load(f)
              src_lst=source_id.keys()
              for mod in src_lst:#[0:1]:
@@ -168,7 +171,7 @@ for exp in ['AMIP']: #'con','per'
                  common_user_input_dict['_FORMULA_VAR_FILE']='CMIP6_formula_terms.json'
                  common_user_input_dict['data_specs_version']='TBD' # required by CMIP6_CV.json
                  common_user_input_dict['frequency']='TBD' # required by CMIP6_CV.json
-                 common_user_input_dict['further_info_url']='http://furtherinfo.es-doc.org/NOT_VALID_OUTPUT'#must be properly set, required by CMIP6_CV.json
+                 #common_user_input_dict['further_info_url']='http://furtherinfo.es-doc.org/NOT_VALID_OUTPUT'#must be properly set, required by CMIP6_CV.json
                  common_user_input_dict['experiment']='TBD' # required by CMIP6_CV.json
                  common_user_input_dict['experiment_id']='TBD' # required by CMIP6_CV.json
                  experiment_id = common_user_input_dict['experiment_id']

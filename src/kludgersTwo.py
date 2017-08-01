@@ -10,10 +10,13 @@ THE UNITS INPUT FROM THE XML ARE OFTEN WRONG, SO THE UNITS EXCEPTIONS FOR EACH V
 ADD NEW EXCEPTIONS TO THE 'EXCEPTIONS' DICTIONARY BELOW FOR THE CORRESPONDING VARIABLE
 UNIT CONVERSIONS CAN ALSO BE CARRIED OUT THROUGH THIS FILE USING THE CONVERSIONS DICTIONARY - SEE 'PR' FOR EXAMPLE
 """
-## WHEN BIG KAHUNDA IS RUN
+## WHEN BIG KAHUNA IS RUN
 
-import os 
-os.chdir('/export/musci2/git/CMIP2_CVs/src')
+import os
+homeDir = os.getenv('HOME')
+print homeDir
+print os.path.join(homeDir,'git/CMIP2_CVs/src')
+os.chdir(os.path.join(homeDir,'git/CMIP2_CVs/src'))
 
 def kludgers(var, d, axis_ids, alias ):    
 
@@ -22,7 +25,7 @@ def kludgers(var, d, axis_ids, alias ):
      import cdutil as cdu
      import numpy as np
      
-     Amon = json.load(open('/export/musci2/git/cmip6-cmor-tables/Tables/CMIP6_Amon.json'))
+     Amon = json.load(open(os.path.join(homeDir,'git/CMIP2_CVs/Tables/CMIP6_Amon.json')))
      DefaultUnits = Amon['variable_entry'][var]['units'].encode('ascii','ignore')
      PostvDirec = Amon['variable_entry'][var]['positive']
      

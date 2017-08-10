@@ -3482,10 +3482,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jul 27 08:03:53 2017 -0700",
+        "creation_date":"Thu Aug 10 07:48:40 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issues385+387 durack1 revise MIROC and SNU source_id values (#390)",
-        "previous_commit":"ece3d1ea86c1a4a26e282e0c75e493ecac7ff57c"
+        "latest_tag_point":"3.2.5 (29; ge78a2bc)",
+        "note":"Register source_id IPSL-CM6A-LR",
+        "previous_commit":"763b27dd370d66f1564c8e668e1f804bdd9a724a"
     }
 }

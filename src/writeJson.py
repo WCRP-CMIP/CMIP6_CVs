@@ -205,6 +205,7 @@ PJD 26 Jul 2017    - Register institution_id SNU https://github.com/WCRP-CMIP/CM
 PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387
 PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
+PJD  2 Aug 2017    - Start work on per file versioning
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -230,8 +231,40 @@ from durolib import getGitInfo
 #from unidecode import unidecode
 #import pdb
 
-#%% Set commit message
+#%% Set commit message and version identifiers
 commitMessage = '\"Revise MIROC and SNU source_id values\"'
+versionMipEra = 6 ; # CMIP6 id - The first integer is “6”, indicating the CV collection is for use in CMIP6
+versionCVStructure = 0 ; # Incremented when the structure/format of CV’s changes or a new CV is added
+versionCVContent = 0 ; # Incremented when a change to existing content is made other than “source_id” or “institution_id”
+# All versions above require a new tag to be generated
+versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution_id is added or amended
+# Have to think about last entry, as only single commit (and not per file commit) will work here
+
+
+#CMIP6_activity_id.json Wed Apr 12 18:46:00 2017 -0700
+#CMIP6_experiment_id.json Wed Jun 14 14:05:00 2017 -0700
+#CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700
+#CMIP6_grid_label.json
+#CMIP6_institution_id.json
+#CMIP6_license.json
+#CMIP6_nominal_resolution.json
+#CMIP6_realm.json
+#CMIP6_required_global_attributes.json
+#CMIP6_source_id.json
+#CMIP6_source_type.json
+#CMIP6_sub_experiment_id.json
+#CMIP6_table_id.json
+#README.md
+#mip_era.json
+#"version_metadata":{
+#   "author":"Paul J. Durack <durack1@llnl.gov>",
+#   "CV_collection_version":"6.5.2.22", 
+#   "CV_collection_modified":"Wed Jul 26 09:19:24 2017 -0700",
+#   "activity_id_CV_modified":"Wed Feb 1 07:14:22 2017 -0700",    ![The name of this entry would depend on the CV.]
+#   "activity_id_CV_change":"Added FAFMIP to list", 
+#   "latest_tag_point":"30; gf11d16d", ! is this right?
+#   "previous_commit":"cf5676f5f6ee42efd211608647aad38324505dd6"
+#}
 
 #%% Define functions
 # Get repo metadata

@@ -689,18 +689,18 @@ Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.o
 '''
 
 #%% Source types
-source_type = [
-    'AER',
-    'AGCM',
-    'AOGCM',
-    'BGC',
-    'CHEM',
-    'ISM',
-    'LAND',
-    'OGCM',
-    'RAD',
-    'SLAB'
-]
+source_type = {
+    'AER':'aerosols: appears with AOGCM or AGCM in models that calculate tropospheric aerosols driven by emission fluxes, rather than relying on prescribed concentrations',
+    'AGCM':'atmospheric general circulation model, including a land model',
+    'AOGCM':'atmosphere-ocean global climate model',
+    'BGC':'biogeochemistry: model component that includes a biogeochemical treatment which at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean; when run coupled to an AOGCM with atmospheric concentration calculated or prescribed, specify \'AOGCM BGC\'',
+    'CHEM':'chemistry: appears with either AOGCM or AGCM in models that calculate, rather than rely on prescribed concentrations of atmospheric oxidants including at least ozone',
+    'ISM':'ice-sheet: which may be run \'offline\' or coupled to an AOGCM',
+    'LAND':'land model but only if run \'offline\'',
+    'OGCM':'ocean general circulation model, including a sea-ice model',
+    'RAD':'radiation code but only if run \'offline\'',
+    'SLAB':'slab-ocean model'
+}
 
 #%% Sub experiment ids
 sub_experiment_id = {}

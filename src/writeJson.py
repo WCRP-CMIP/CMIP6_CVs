@@ -282,30 +282,30 @@ masterTargets = [
 ]
 
 #%% Activities
-activity_id = [
-    'AerChemMIP',
-    'C4MIP',
-    'CFMIP',
-    'CMIP',
-    'CORDEX',
-    'DAMIP',
-    'DCPP',
-    'DynVarMIP',
-    'FAFMIP',
-    'GMMIP',
-    'GeoMIP',
-    'HighResMIP',
-    'ISMIP6',
-    'LS3MIP',
-    'LUMIP',
-    'OMIP',
-    'PMIP',
-    'RFMIP',
-    'SIMIP',
-    'ScenarioMIP',
-    'VIACSAB',
-    'VolMIP'
-]
+activity_id = {
+    'AerChemMIP':'Aerosols and Chemistry Model Intercomparison Project',
+    'C4MIP':'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CFMIP':'Cloud Feedback Model Intercomparison Project',
+    'CMIP':'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
+    'CORDEX':'Coordinated Regional Climate Downscaling Experiment',
+    'DAMIP':'Detection and Attribution Model Intercomparison Project',
+    'DCPP':'Decadal Climate Prediction Project',
+    'DynVarMIP':'Dynamics and Variability Model Intercomparison Project',
+    'FAFMIP':'Flux-Anomaly-Forced Model Intercomparison Project',
+    'GMMIP':'Global Monsoons Model Intercomparison Project',
+    'GeoMIP':'Geoengineering Model Intercomparison Project',
+    'HighResMIP':'High-Resolution Model Intercomparison Project',
+    'ISMIP6':'Ice Sheet Model Intercomparison Project for CMIP6',
+    'LS3MIP':'Land Surface, Snow and Soil Moisture',
+    'LUMIP':'Land-Use Model Intercomparison Project',
+    'OMIP':'Ocean Model Intercomparison Project',
+    'PMIP':'Palaeoclimate Modelling Intercomparison Project',
+    'RFMIP':'Radiative Forcing Model Intercomparison Project',
+    'SIMIP':'Sea Ice Model Intercomparison Project',
+    'ScenarioMIP':'Scenario Model Intercomparison Project',
+    'VIACSAB':'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
+    'VolMIP':'Volcanic Forcings Model Intercomparison Project'
+}
 
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']

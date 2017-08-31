@@ -240,22 +240,22 @@ versionCVContent = 0 ; # Incremented when a change to existing content is made o
 versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution_id is added or amended
 # Have to think about last entry, as only single commit (and not per file commit) will work here
 
-
-#CMIP6_activity_id.json Wed Apr 12 18:46:00 2017 -0700
-#CMIP6_experiment_id.json Wed Jun 14 14:05:00 2017 -0700
-#CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700
-#CMIP6_grid_label.json
-#CMIP6_institution_id.json
-#CMIP6_license.json
-#CMIP6_nominal_resolution.json
-#CMIP6_realm.json
-#CMIP6_required_global_attributes.json
-#CMIP6_source_id.json
-#CMIP6_source_type.json
-#CMIP6_sub_experiment_id.json
-#CMIP6_table_id.json
-#README.md
-#mip_era.json
+#170815 1325 - latest versions below
+#CMIP6_activity_id.json Wed Apr 12 18:46:00 2017 -0700 'Issue276 durack1 add missing activity_id values (#283)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9bd004b539cab67c2b2c5b2b285220283d5ff4f9
+#CMIP6_experiment_id.json Wed Jun 14 14:05:00 2017 -0700 'Issue344 durack1 rename experiment_id lfmip-pdL-princeton (#350)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9ffae961621a798987d8f72704873bce4f598108
+#CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700 'Issue342 durack1 frequency augment format with identifiers (#349)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8825b468b2bc962be70edf7f95e3e183afdd2c12
+#CMIP6_grid_label.json Thu Nov 17 11:52:00 2016 -0700 'Issue130 durack1 revise grid_label (#147)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ba7b9418e432008312ed4ccf54f2d30233ad952d
+#CMIP6_institution_id.json Wed Jul 26 15:21:00 2016 -0700 'Issue386 durack1 register institution_id SNU (#388)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/16b1b0dacd12eaa177846623efa59ed20872a226
+#CMIP6_license.json Mon Feb 27 10:30:00 2016 -0700 'Issue225 durack1 add institution_id THU (#232)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44
+#CMIP6_nominal_resolution.json Tues Nov 15 16:04:00 2016 -0700 'Issue141 durack1 update grid_resolution to nominal_resolution (#143)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c45c83d65814fa3caaa965554f0d7eb74b80a186
+#CMIP6_realm.json Tues Apr 18 12:03:00 2017 -0700 'Issue285 durack1 update realm format (#290)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7de3c77a3cf91dd6c34509024d5493e40b1c8d9d
+#CMIP6_required_global_attributes.json Thu Mar 16 12:59:00 2017 -0700 'deleted trailing comma from list' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/534fa1b7ac02a92c6b7e2e770f4e34d73ae94d4c
+#CMIP6_source_id.json Thu Aug 10 07:52:00 2017 -0700 'Issue392 durack1 register source_id IPSL-CM6A-LR (#393)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e44cd842b97dd1e3a538204060a452771b4b091f
+#CMIP6_source_type.json Tue Jun 27 09:11:00 2017 -0700 'Corrected BGCM to read BGC' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bfae21f5b740cfdf0e950ab7f635f8cf092a47a3
+#CMIP6_sub_experiment_id.json Wed Mar 8 11:27:00 2017 -0700 'Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/af9202b7e26d357aa988c1741b7a25f90fdedbfd
+#CMIP6_table_id.json Fri Jan 13 09:27:00 2017 -0700 'Issue199 durack1 update table_id to Data Request v1.0 (#200)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f4a9fc202b7bea32038d92791cbce95af75022ab
+#README.md Wed Mar 22 09:46:00 2017 -0700 'shortened through minor edits' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/412f96f8df75be49b77bb9b55455fab7c7b260b4
+#mip_era.json Thu Aug 25 17:21:00 2016 -0700 'Fix #36 - Add CV name to json structure' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/317f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b
 #"version_metadata":{
 #   "author":"Paul J. Durack <durack1@llnl.gov>",
 #   "CV_collection_version":"6.5.2.22", 

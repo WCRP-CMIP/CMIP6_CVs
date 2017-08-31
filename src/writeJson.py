@@ -411,16 +411,20 @@ del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 #%% Frequencies
 frequency = {
     '1hr':'sampled hourly',
-    '1hrClimMon':'monthly climatology of diurnal cycle computed from hourly samples',
+    '1hrCM':'monthly climatology of diurnal cycle computed from hourly samples',
+    '1hrPt':'sampled hourly, at specified time point within an hour',
     '3hr':'sampled every 3 hours',
+    '3hrPt':'sampled 3 hourly, at specified time point within the time period',
     '6hr':'sampled every 6 hours',
+    '6hrPt':'sampled 6 hourly, at specified time point within the time period',
     'day':'daily mean samples',
     'dec':'decadal mean samples',
     'fx':'fixed (time invariant) field',
     'mon':'monthly mean samples',
-    'monClim':'monthly climatology computed from monthly mean samples',
-    'subhr':'sampled sub-hourly',
-    'yr':'annual mean samples'
+    'monC':'monthly climatology computed from monthly mean samples',
+    'subhrPt':'sampled sub-hourly, at specified time point within an hour',
+    'yr':'annual mean samples',
+    'yrPt':'sampled yearly, at specified time point within the time period'
 }
 
 #%% Grid labels

@@ -206,6 +206,7 @@ PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP
 PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
 PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
+PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -232,7 +233,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM6A-LR\"'
+commitMessage = '\"Augment activity_id format with description\"'
 
 #%% Define functions
 # Get repo metadata
@@ -586,58 +587,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'IPSL-CM6A-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'C4MIP',
- 'CFMIP',
- 'DCPP',
- 'FAFMIP',
- 'GMMIP',
- 'GeoMIP',
- 'LS3MIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'RFMIP',
- 'ScenarioMIP',
- 'VolMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'IPSL'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 40000 m)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.0, Water/Carbon/Energy mode)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '200 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM3'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

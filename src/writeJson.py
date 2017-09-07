@@ -206,6 +206,8 @@ PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP
 PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
 PJD  2 Aug 2017    - Start work on per file versioning
+PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
+PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -240,8 +242,8 @@ versionCVContent = 0 ; # Incremented when a change to existing content is made o
 versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution_id is added or amended
 # Have to think about last entry, as only single commit (and not per file commit) will work here
 
-#170815 1325 - latest versions below
-#CMIP6_activity_id.json Wed Apr 12 18:46:00 2017 -0700 'Issue276 durack1 add missing activity_id values (#283)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9bd004b539cab67c2b2c5b2b285220283d5ff4f9
+#170907 1114 - latest versions below
+#CMIP6_activity_id.json Thu Sep 7 10:30:00 2017 -0700 'Issue397 durack1 augment activity_id with description (#400)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c28217095e8ca770b6cd63fa97b8d022ca52aea7
 #CMIP6_experiment_id.json Wed Jun 14 14:05:00 2017 -0700 'Issue344 durack1 rename experiment_id lfmip-pdL-princeton (#350)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9ffae961621a798987d8f72704873bce4f598108
 #CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700 'Issue342 durack1 frequency augment format with identifiers (#349)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8825b468b2bc962be70edf7f95e3e183afdd2c12
 #CMIP6_grid_label.json Thu Nov 17 11:52:00 2016 -0700 'Issue130 durack1 revise grid_label (#147)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ba7b9418e432008312ed4ccf54f2d30233ad952d
@@ -258,10 +260,10 @@ versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution
 #mip_era.json Thu Aug 25 17:21:00 2016 -0700 'Fix #36 - Add CV name to json structure' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/317f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b
 #"version_metadata":{
 #   "author":"Paul J. Durack <durack1@llnl.gov>",
-#   "CV_collection_version":"6.5.2.22", 
+#   "CV_collection_version":"6.5.2.22",
 #   "CV_collection_modified":"Wed Jul 26 09:19:24 2017 -0700",
 #   "activity_id_CV_modified":"Wed Feb 1 07:14:22 2017 -0700",    ![The name of this entry would depend on the CV.]
-#   "activity_id_CV_change":"Added FAFMIP to list", 
+#   "activity_id_CV_change":"Added FAFMIP to list",
 #   "latest_tag_point":"30; gf11d16d", ! is this right?
 #   "previous_commit":"cf5676f5f6ee42efd211608647aad38324505dd6"
 #}
@@ -314,30 +316,30 @@ masterTargets = [
 ]
 
 #%% Activities
-activity_id = [
-    'AerChemMIP',
-    'C4MIP',
-    'CFMIP',
-    'CMIP',
-    'CORDEX',
-    'DAMIP',
-    'DCPP',
-    'DynVarMIP',
-    'FAFMIP',
-    'GMMIP',
-    'GeoMIP',
-    'HighResMIP',
-    'ISMIP6',
-    'LS3MIP',
-    'LUMIP',
-    'OMIP',
-    'PMIP',
-    'RFMIP',
-    'SIMIP',
-    'ScenarioMIP',
-    'VIACSAB',
-    'VolMIP'
-]
+activity_id = {
+    'AerChemMIP':'Aerosols and Chemistry Model Intercomparison Project',
+    'C4MIP':'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CFMIP':'Cloud Feedback Model Intercomparison Project',
+    'CMIP':'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
+    'CORDEX':'Coordinated Regional Climate Downscaling Experiment',
+    'DAMIP':'Detection and Attribution Model Intercomparison Project',
+    'DCPP':'Decadal Climate Prediction Project',
+    'DynVarMIP':'Dynamics and Variability Model Intercomparison Project',
+    'FAFMIP':'Flux-Anomaly-Forced Model Intercomparison Project',
+    'GMMIP':'Global Monsoons Model Intercomparison Project',
+    'GeoMIP':'Geoengineering Model Intercomparison Project',
+    'HighResMIP':'High-Resolution Model Intercomparison Project',
+    'ISMIP6':'Ice Sheet Model Intercomparison Project for CMIP6',
+    'LS3MIP':'Land Surface, Snow and Soil Moisture',
+    'LUMIP':'Land-Use Model Intercomparison Project',
+    'OMIP':'Ocean Model Intercomparison Project',
+    'PMIP':'Palaeoclimate Modelling Intercomparison Project',
+    'RFMIP':'Radiative Forcing Model Intercomparison Project',
+    'SIMIP':'Sea Ice Model Intercomparison Project',
+    'ScenarioMIP':'Scenario Model Intercomparison Project',
+    'VIACSAB':'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
+    'VolMIP':'Volcanic Forcings Model Intercomparison Project'
+}
 
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
@@ -618,46 +620,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'SAM0-UNICON'
-source_id[key]['label_extended'] = 'SAM0-UNICON (SNU Atmosphere Model version 0 with Unified Convection Scheme)'
-key = 'MIROC-ES2H'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'CMIP',
- 'DynVarMIP',
- 'GeoMIP',
- 'VIACSAB'
-]
-key = 'MIROC-ES2L'
-source_id[key]['activity_participation'] = [
- 'C4MIP',
- 'CMIP',
- 'DynVarMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'ScenarioMIP',
- 'VIACSAB',
- 'VolMIP'
-]
-key = 'MIROC6'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'LS3MIP',
- 'OMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

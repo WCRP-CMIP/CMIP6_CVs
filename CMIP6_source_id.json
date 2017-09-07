@@ -2229,6 +2229,67 @@
             "release_year":"2016",
             "source_id":"INM-CM5-H"
         },
+        "IPSL-CM6A-LR":{
+            "activity_participation":[
+                "C4MIP",
+                "CFMIP",
+                "DCPP",
+                "FAFMIP",
+                "GMMIP",
+                "GeoMIP",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PMIP",
+                "RFMIP",
+                "ScenarioMIP",
+                "VolMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"IPSL-CM6A-LR",
+            "label_extended":"IPSL-CM6A-LR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 40000 m)",
+                    "nominal_resolution":"200 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"ORCHIDEE (v2.0, Water/Carbon/Energy mode)",
+                    "nominal_resolution":"200 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"NEMO-PISCES",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"NEMO-LIM3",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"IPSL-CM6A-LR"
+        },
         "MIROC-ES2H":{
             "activity_participation":[
                 "AerChemMIP",
@@ -3421,10 +3482,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Jul 27 08:02:05 2017 -0700",
+        "creation_date":"Thu Sep 7 10:27:43 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (43; g90eec03)",
-        "note":"Revise MIROC and SNU source_id values",
-        "previous_commit":"3ea1c3826e450786d885372ab90ed731e0562982"
+        "latest_tag_point":"3.2.6 (55; g8243c0f)",
+        "note":"Augment activity_id format with description",
+        "previous_commit":"1dd6f8a06a3bfd87947679d5c94b3513a8881789"
     }
 }

@@ -48,10 +48,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Aug 10 07:48:40 2017 -0700",
+        "creation_date":"Thu Sep 7 10:27:42 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.5 (22; g3e96815)",
-        "note":"Register source_id IPSL-CM6A-LR",
-        "previous_commit":"8f3c3c5f2665c7944f0f818b47edaeb1ea214607"
+        "latest_tag_point":"3.2.6 (48; g7d09a3a)",
+        "note":"Augment activity_id format with description",
+        "previous_commit":"319320c1552d42d3563262fbb92d148e19eaa164"
     }
 }

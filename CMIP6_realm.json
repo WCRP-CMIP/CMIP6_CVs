@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 7 10:30:00 2017 -0700",
+        "creation_date":"Fri Sep 8 17:55:19 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue397 durack1 augment activity_id with description (#400)",
-        "previous_commit":"c28217095e8ca770b6cd63fa97b8d022ca52aea7"
+        "latest_tag_point":"3.2.6 (55; gc6c7f97)",
+        "note":"Augment source_type format with description",
+        "previous_commit":"0afec46bc74c46898f63f98f1c6f2a25bcb7435b"
     }
 }

@@ -209,6 +209,7 @@ PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMI
 PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
 PJD  8 Sep 2017    - Augment source_type format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/396
 PJD  8 Sep 2017    - Augment grid_label format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/395
+PJD  8 Sep 2017    - Revise frequency entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/345
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -235,7 +236,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Augment grid_label format with description\"'
+commitMessage = '\"Revise frequency entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -286,28 +287,28 @@ masterTargets = [
 
 #%% Activities
 activity_id = {
-    'AerChemMIP':'Aerosols and Chemistry Model Intercomparison Project',
-    'C4MIP':'Coupled Climate Carbon Cycle Model Intercomparison Project',
-    'CFMIP':'Cloud Feedback Model Intercomparison Project',
-    'CMIP':'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
-    'CORDEX':'Coordinated Regional Climate Downscaling Experiment',
-    'DAMIP':'Detection and Attribution Model Intercomparison Project',
-    'DCPP':'Decadal Climate Prediction Project',
-    'DynVarMIP':'Dynamics and Variability Model Intercomparison Project',
-    'FAFMIP':'Flux-Anomaly-Forced Model Intercomparison Project',
-    'GMMIP':'Global Monsoons Model Intercomparison Project',
-    'GeoMIP':'Geoengineering Model Intercomparison Project',
-    'HighResMIP':'High-Resolution Model Intercomparison Project',
-    'ISMIP6':'Ice Sheet Model Intercomparison Project for CMIP6',
-    'LS3MIP':'Land Surface, Snow and Soil Moisture',
-    'LUMIP':'Land-Use Model Intercomparison Project',
-    'OMIP':'Ocean Model Intercomparison Project',
-    'PMIP':'Palaeoclimate Modelling Intercomparison Project',
-    'RFMIP':'Radiative Forcing Model Intercomparison Project',
-    'SIMIP':'Sea Ice Model Intercomparison Project',
-    'ScenarioMIP':'Scenario Model Intercomparison Project',
-    'VIACSAB':'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
-    'VolMIP':'Volcanic Forcings Model Intercomparison Project'
+    'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
+    'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CFMIP': 'Cloud Feedback Model Intercomparison Project',
+    'CMIP': 'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
+    'CORDEX': 'Coordinated Regional Climate Downscaling Experiment',
+    'DAMIP': 'Detection and Attribution Model Intercomparison Project',
+    'DCPP': 'Decadal Climate Prediction Project',
+    'DynVarMIP': 'Dynamics and Variability Model Intercomparison Project',
+    'FAFMIP': 'Flux-Anomaly-Forced Model Intercomparison Project',
+    'GMMIP': 'Global Monsoons Model Intercomparison Project',
+    'GeoMIP': 'Geoengineering Model Intercomparison Project',
+    'HighResMIP': 'High-Resolution Model Intercomparison Project',
+    'ISMIP6': 'Ice Sheet Model Intercomparison Project for CMIP6',
+    'LS3MIP': 'Land Surface, Snow and Soil Moisture',
+    'LUMIP': 'Land-Use Model Intercomparison Project',
+    'OMIP': 'Ocean Model Intercomparison Project',
+    'PMIP': 'Palaeoclimate Modelling Intercomparison Project',
+    'RFMIP': 'Radiative Forcing Model Intercomparison Project',
+    'SIMIP': 'Sea Ice Model Intercomparison Project',
+    'ScenarioMIP': 'Scenario Model Intercomparison Project',
+    'VIACSAB': 'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
+    'VolMIP': 'Volcanic Forcings Model Intercomparison Project'
 }
 
 #%% Experiments
@@ -413,21 +414,21 @@ del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 
 #%% Frequencies
 frequency = {
-    '1hr':'sampled hourly',
-    '1hrCM':'monthly climatology of diurnal cycle computed from hourly samples',
-    '1hrPt':'sampled hourly, at specified time point within an hour',
-    '3hr':'sampled every 3 hours',
-    '3hrPt':'sampled 3 hourly, at specified time point within the time period',
-    '6hr':'sampled every 6 hours',
-    '6hrPt':'sampled 6 hourly, at specified time point within the time period',
-    'day':'daily mean samples',
-    'dec':'decadal mean samples',
-    'fx':'fixed (time invariant) field',
-    'mon':'monthly mean samples',
-    'monC':'monthly climatology computed from monthly mean samples',
-    'subhrPt':'sampled sub-hourly, at specified time point within an hour',
-    'yr':'annual mean samples',
-    'yrPt':'sampled yearly, at specified time point within the time period'
+    '1hr': 'sampled hourly',
+    '1hrCM': 'monthly climatology of diurnal cycle computed from hourly samples',
+    '1hrPt': 'sampled hourly, at specified time point within an hour',
+    '3hr': 'sampled every 3 hours',
+    '3hrPt': 'sampled 3 hourly, at specified time point within the time period',
+    '6hr': 'sampled every 6 hours',
+    '6hrPt': 'sampled 6 hourly, at specified time point within the time period',
+    'day': 'daily mean samples',
+    'dec': 'decadal mean samples',
+    'fx': 'fixed (time invariant) field',
+    'mon': 'monthly mean samples',
+    'monC': 'monthly climatology computed from monthly mean samples',
+    'subhrPt': 'sampled sub-hourly, at specified time point within an hour',
+    'yr': 'annual mean samples',
+    'yrPt': 'sampled yearly, at specified time point within the time period'
 }
 
 #%% Grid labels

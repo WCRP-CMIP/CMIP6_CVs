@@ -207,6 +207,7 @@ PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WC
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
 PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
 PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
+PJD  8 Sep 2017    - Augment source_type format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/396
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -233,7 +234,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Augment activity_id format with description\"'
+commitMessage = '\"Augment source_type format with description\"'
 
 #%% Define functions
 # Get repo metadata
@@ -638,18 +639,18 @@ Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.o
 '''
 
 #%% Source types
-source_type = [
-    'AER',
-    'AGCM',
-    'AOGCM',
-    'BGC',
-    'CHEM',
-    'ISM',
-    'LAND',
-    'OGCM',
-    'RAD',
-    'SLAB'
-]
+source_type = {
+    'AER':'aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)',
+    'AGCM':'atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface',
+    'AOGCM':'coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice',
+    'BGC':'biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean',
+    'CHEM':'chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them',
+    'ISM':'ice-sheet model that includes ice-flow',
+    'LAND':'land model run uncoupled from the atmosphere',
+    'OGCM':'ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model',
+    'RAD':'radiation component of an atmospheric model run \'offline\'',
+    'SLAB':'slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system'
+}
 
 #%% Sub experiment ids
 sub_experiment_id = {}

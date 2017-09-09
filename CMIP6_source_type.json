@@ -1,22 +1,22 @@
 {
-    "source_type":[
-        "AER",
-        "AGCM",
-        "AOGCM",
-        "BGC",
-        "CHEM",
-        "ISM",
-        "LAND",
-        "OGCM",
-        "RAD",
-        "SLAB"
-    ],
+    "source_type":{
+        "AER":"aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)",
+        "AGCM":"atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface",
+        "AOGCM":"coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice",
+        "BGC":"biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean",
+        "CHEM":"chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them",
+        "ISM":"ice-sheet model that includes ice-flow",
+        "LAND":"land model run uncoupled from the atmosphere",
+        "OGCM":"ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model",
+        "RAD":"radiation component of an atmospheric model run 'offline'",
+        "SLAB":"slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system"
+    },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 7 10:27:43 2017 -0700",
+        "creation_date":"Fri Sep 8 18:11:11 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.6 (56; g4bfc041)",
-        "note":"Augment activity_id format with description",
-        "previous_commit":"9da7693ced1d5e740107bc5eda78b302d17c4098"
+        "latest_tag_point":"3.2.6 (57; gad22379)",
+        "note":"Augment grid_label format with description",
+        "previous_commit":"0f152ee67a860f877c1cc34fb7f04d1250f0d442"
     }
 }

@@ -208,6 +208,9 @@ PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WC
 PJD  2 Aug 2017    - Start work on per file versioning
 PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
 PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
+PJD  8 Sep 2017    - Augment source_type format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/396
+PJD  8 Sep 2017    - Augment grid_label format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/395
+PJD  8 Sep 2017    - Revise frequency entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/345
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -317,28 +320,28 @@ masterTargets = [
 
 #%% Activities
 activity_id = {
-    'AerChemMIP':'Aerosols and Chemistry Model Intercomparison Project',
-    'C4MIP':'Coupled Climate Carbon Cycle Model Intercomparison Project',
-    'CFMIP':'Cloud Feedback Model Intercomparison Project',
-    'CMIP':'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
-    'CORDEX':'Coordinated Regional Climate Downscaling Experiment',
-    'DAMIP':'Detection and Attribution Model Intercomparison Project',
-    'DCPP':'Decadal Climate Prediction Project',
-    'DynVarMIP':'Dynamics and Variability Model Intercomparison Project',
-    'FAFMIP':'Flux-Anomaly-Forced Model Intercomparison Project',
-    'GMMIP':'Global Monsoons Model Intercomparison Project',
-    'GeoMIP':'Geoengineering Model Intercomparison Project',
-    'HighResMIP':'High-Resolution Model Intercomparison Project',
-    'ISMIP6':'Ice Sheet Model Intercomparison Project for CMIP6',
-    'LS3MIP':'Land Surface, Snow and Soil Moisture',
-    'LUMIP':'Land-Use Model Intercomparison Project',
-    'OMIP':'Ocean Model Intercomparison Project',
-    'PMIP':'Palaeoclimate Modelling Intercomparison Project',
-    'RFMIP':'Radiative Forcing Model Intercomparison Project',
-    'SIMIP':'Sea Ice Model Intercomparison Project',
-    'ScenarioMIP':'Scenario Model Intercomparison Project',
-    'VIACSAB':'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
-    'VolMIP':'Volcanic Forcings Model Intercomparison Project'
+    'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
+    'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CFMIP': 'Cloud Feedback Model Intercomparison Project',
+    'CMIP': 'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
+    'CORDEX': 'Coordinated Regional Climate Downscaling Experiment',
+    'DAMIP': 'Detection and Attribution Model Intercomparison Project',
+    'DCPP': 'Decadal Climate Prediction Project',
+    'DynVarMIP': 'Dynamics and Variability Model Intercomparison Project',
+    'FAFMIP': 'Flux-Anomaly-Forced Model Intercomparison Project',
+    'GMMIP': 'Global Monsoons Model Intercomparison Project',
+    'GeoMIP': 'Geoengineering Model Intercomparison Project',
+    'HighResMIP': 'High-Resolution Model Intercomparison Project',
+    'ISMIP6': 'Ice Sheet Model Intercomparison Project for CMIP6',
+    'LS3MIP': 'Land Surface, Snow and Soil Moisture',
+    'LUMIP': 'Land-Use Model Intercomparison Project',
+    'OMIP': 'Ocean Model Intercomparison Project',
+    'PMIP': 'Palaeoclimate Modelling Intercomparison Project',
+    'RFMIP': 'Radiative Forcing Model Intercomparison Project',
+    'SIMIP': 'Sea Ice Model Intercomparison Project',
+    'ScenarioMIP': 'Scenario Model Intercomparison Project',
+    'VIACSAB': 'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
+    'VolMIP': 'Volcanic Forcings Model Intercomparison Project'
 }
 
 #%% Experiments
@@ -444,67 +447,71 @@ del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 
 #%% Frequencies
 frequency = {
-    '1hr':'sampled hourly',
-    '1hrClimMon':'monthly climatology of diurnal cycle computed from hourly samples',
-    '3hr':'sampled every 3 hours',
-    '6hr':'sampled every 6 hours',
-    'day':'daily mean samples',
-    'dec':'decadal mean samples',
-    'fx':'fixed (time invariant) field',
-    'mon':'monthly mean samples',
-    'monClim':'monthly climatology computed from monthly mean samples',
-    'subhr':'sampled sub-hourly',
-    'yr':'annual mean samples'
+    '1hr': 'sampled hourly',
+    '1hrCM': 'monthly climatology of diurnal cycle computed from hourly samples',
+    '1hrPt': 'sampled hourly, at specified time point within an hour',
+    '3hr': 'sampled every 3 hours',
+    '3hrPt': 'sampled 3 hourly, at specified time point within the time period',
+    '6hr': 'sampled every 6 hours',
+    '6hrPt': 'sampled 6 hourly, at specified time point within the time period',
+    'day': 'daily mean samples',
+    'dec': 'decadal mean samples',
+    'fx': 'fixed (time invariant) field',
+    'mon': 'monthly mean samples',
+    'monC': 'monthly climatology computed from monthly mean samples',
+    'subhrPt': 'sampled sub-hourly, at specified time point within an hour',
+    'yr': 'annual mean samples',
+    'yrPt': 'sampled yearly, at specified time point within the time period'
 }
 
 #%% Grid labels
-grid_label = [
-    'gm',
-    'gn',
-    'gna',
-    'gng',
-    'gnz',
-    'gr',
-    'gr1',
-    'gr1a',
-    'gr1g',
-    'gr1z',
-    'gr2',
-    'gr2a',
-    'gr2g',
-    'gr2z',
-    'gr3',
-    'gr3a',
-    'gr3g',
-    'gr3z',
-    'gr4',
-    'gr4a',
-    'gr4g',
-    'gr4z',
-    'gr5',
-    'gr5a',
-    'gr5g',
-    'gr5z',
-    'gr6',
-    'gr6a',
-    'gr6g',
-    'gr6z',
-    'gr7',
-    'gr7a',
-    'gr7g',
-    'gr7z',
-    'gr8',
-    'gr8a',
-    'gr8g',
-    'gr8z',
-    'gr9',
-    'gr9a',
-    'gr9g',
-    'gr9z',
-    'gra',
-    'grg',
-    'grz'
-]
+grid_label = {
+    'gm': 'global mean data',
+    'gn': 'data reported on a model\'s native grid',
+    'gna': 'data reported on a native grid in the region of Antarctica',
+    'gng': 'data reported on a native grid in the region of Greenland',
+    'gnz': 'zonal mean data reported on a model\'s native latitude grid',
+    'gr': 'regridded data reported on the data provider\'s preferred target grid',
+    'gr1': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr1a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr1g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr1z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr2': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr2a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr2g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr2z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr3': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr3a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr3g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr3z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr4': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr4a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr4g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr4z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr5': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr5a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr5g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr5z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr6': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr6a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr6g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr6z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr7': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr7a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr7g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr7z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr8': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr8a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr8g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr8z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr9': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr9a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr9g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr9z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gra': 'regridded data in the region of Antarctica reported on the data provider\'s preferred target grid',
+    'grg': 'regridded data in the region of Greenland reported on the data provider\'s preferred target grid',
+    'grz': 'regridded zonal mean data reported on the data provider\'s preferred latitude target grid'
+}
 
 #%% Institutions
 institution_id = {
@@ -671,18 +678,18 @@ Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.o
 '''
 
 #%% Source types
-source_type = [
-    'AER',
-    'AGCM',
-    'AOGCM',
-    'BGC',
-    'CHEM',
-    'ISM',
-    'LAND',
-    'OGCM',
-    'RAD',
-    'SLAB'
-]
+source_type = {
+    'AER': 'aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)',
+    'AGCM': 'atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface',
+    'AOGCM': 'coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice',
+    'BGC': 'biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean',
+    'CHEM': 'chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them',
+    'ISM': 'ice-sheet model that includes ice-flow',
+    'LAND': 'land model run uncoupled from the atmosphere',
+    'OGCM': 'ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model',
+    'RAD': 'radiation component of an atmospheric model run \'offline\'',
+    'SLAB': 'slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system'
+}
 
 #%% Sub experiment ids
 sub_experiment_id = {}

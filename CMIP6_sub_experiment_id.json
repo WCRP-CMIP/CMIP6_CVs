@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 21 16:42:34 2017 -0700",
+        "creation_date":"Thu Sep 21 16:44:04 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (40; ge323ed5)",
-        "note":"Revise frequency entries",
-        "previous_commit":"9c0d8fe2b4c4741de469090486d754b919adfb5f"
+        "latest_tag_point":"3.2.7 (54; g12e4d7d)",
+        "note":"Register institution_id HAMMOZ-Consortium",
+        "previous_commit":"51e04d0c240be3ccce79f34d6063b7470b139b51"
     }
 }

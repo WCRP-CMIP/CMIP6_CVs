@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 21 16:42:30 2017 -0700",
+        "creation_date":"Thu Sep 21 16:42:33 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (15; g9d44b8a)",
+        "latest_tag_point":"3.2.7 (29; g2dfb8a7)",
         "note":"Revise frequency entries",
-        "previous_commit":"922f1b8336af2118d0c663558dbeaf44e94ba220"
+        "previous_commit":"2313c8bd6ff10c7d14998ce82d6e9de3651ad3e2"
     }
 }

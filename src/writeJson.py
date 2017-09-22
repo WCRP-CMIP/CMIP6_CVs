@@ -211,6 +211,7 @@ PJD  8 Sep 2017    - Augment source_type format with description https://github.
 PJD  8 Sep 2017    - Augment grid_label format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/395
 PJD  8 Sep 2017    - Revise frequency entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/345
 PJD 21 Sep 2017    - Register institution_id HAMMOZ-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/402
+PJD 21 Sep 2017    - Register institution_id BCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/405
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -237,7 +238,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id HAMMOZ-Consortium\"'
+commitMessage = '\"Register institution_id BCC\"'
 
 #%% Define functions
 # Get repo metadata
@@ -484,6 +485,7 @@ grid_label = {
 #%% Institutions
 institution_id = {
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
+    'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',

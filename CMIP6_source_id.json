@@ -2463,6 +2463,56 @@
             "release_year":"2017",
             "source_id":"MIROC6"
         },
+        "MPIESM-1-2-HAM":{
+            "activity_participation":[
+                "AerChemMIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "HAMMOZ-Consortium"
+            ],
+            "label":"MPIESM1.2-HAM",
+            "label_extended":"MPIESM1.2-HAM",
+            "model_component":{
+                "aerosol":{
+                    "description":"HAM2.3",
+                    "nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"sulfur chemistry (unnamed)",
+                    "nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"JSBACH 3.20",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"HAMOCC6",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"MPIESM-1-2-HAM"
+        },
         "MPIESM-1-2-HR":{
             "activity_participation":[
                 "CMIP",
@@ -3482,10 +3532,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Sep 21 17:11:12 2017 -0700",
+        "creation_date":"Tue Sep 26 13:10:08 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (26; g685bcc4)",
-        "note":"Register institution_id BCC",
-        "previous_commit":"c72438321953e3df39999a4f2e406a241e7a59c3"
+        "latest_tag_point":"3.2.7 (28; g20f14a8)",
+        "note":"Register source_id MPIESM-1-2-HAM",
+        "previous_commit":"096c32b5fe3206b5ca7aa8eb5c5582516fcb47ca"
     }
 }

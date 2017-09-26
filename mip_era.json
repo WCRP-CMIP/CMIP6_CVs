@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Sep 26 13:10:08 2017 -0700",
+        "creation_date":"Tue Sep 26 13:20:02 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (24; g83c8d0c)",
-        "note":"Register source_id MPIESM-1-2-HAM",
-        "previous_commit":"42bc805f2ac570bc0abe9f115a37a279bffc6237"
+        "latest_tag_point":"3.2.7 (26; gf17cf5b)",
+        "note":"Register source_id MRI-AGCM3-2",
+        "previous_commit":"0481a9a40239378a1db229faf1d48f2d27ebbad2"
     }
 }

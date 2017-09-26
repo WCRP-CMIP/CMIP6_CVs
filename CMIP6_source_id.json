@@ -2687,6 +2687,57 @@
             "release_year":"2017",
             "source_id":"MPIESM-2-LR"
         },
+        "MRI-AGCM3-2":{
+            "activity_participation":[
+                "CMIP",
+                "DynVarMIP",
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "MRI"
+            ],
+            "label":"MRI-AGCM3-2",
+            "label_extended":"MRI-AGCM3-2",
+            "model_component":{
+                "aerosol":{
+                    "description":"Prescribed from MRI-ESM2.0",
+                    "nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"25 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"SIB0109",
+                    "nominal_resolution":"25 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"MRI-AGCM3-2"
+        },
         "MRI-ESM2-0":{
             "activity_participation":[
                 "AerChemMIP",
@@ -3532,10 +3583,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Sep 26 13:10:08 2017 -0700",
+        "creation_date":"Tue Sep 26 13:20:02 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (28; g20f14a8)",
-        "note":"Register source_id MPIESM-1-2-HAM",
-        "previous_commit":"096c32b5fe3206b5ca7aa8eb5c5582516fcb47ca"
+        "latest_tag_point":"3.2.7 (30; gc9681ac)",
+        "note":"Register source_id MRI-AGCM3-2",
+        "previous_commit":"07f2a20f0250615c3dc8f5f1346057955edc0107"
     }
 }

@@ -212,6 +212,7 @@ PJD  8 Sep 2017    - Augment grid_label format with description https://github.c
 PJD  8 Sep 2017    - Revise frequency entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/345
 PJD 21 Sep 2017    - Register institution_id HAMMOZ-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/402
 PJD 21 Sep 2017    - Register institution_id BCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/405
+PJD 26 Sep 2017    - Register source_id MPIESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -238,7 +239,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id BCC\"'
+commitMessage = '\"Register source_id MPIESM-1-2-HAM\"'
 
 #%% Define functions
 # Get repo metadata
@@ -598,6 +599,47 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'MPIESM-1-2-HAM'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'HAMMOZ-Consortium'
+]
+source_id[key]['label'] = 'MPIESM1.2-HAM'
+source_id[key]['label_extended'] = 'MPIESM1.2-HAM'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'HAM2.3'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'sulfur chemistry (unnamed)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

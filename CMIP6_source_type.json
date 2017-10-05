@@ -13,10 +13,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Sep 26 13:20:03 2017 -0700",
+        "creation_date":"Tue Sep 26 13:21:14 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (31; gd031fac)",
-        "note":"Register source_id MRI-AGCM3-2",
-        "previous_commit":"1e7f0ddc8aa48d5dd3bd882a1daf614fa9c0c0be"
+        "latest_tag_point":"note: ",
+        "note":"Issue410 durack1 register source_id MRI-AGCM-3-2 (#412)",
+        "previous_commit":"6b58df0a827f0abb5f038a1a84759fcb071ea706"
     }
 }

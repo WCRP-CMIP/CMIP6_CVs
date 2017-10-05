@@ -214,6 +214,7 @@ PJD 21 Sep 2017    - Register institution_id HAMMOZ-Consortium https://github.co
 PJD 21 Sep 2017    - Register institution_id BCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/405
 PJD 26 Sep 2017    - Register source_id MPIESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
 PJD 26 Sep 2017    - Register source_id MRI-AGCM3-2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/410
+PJD  4 Oct 2017    - Add frequency monPt https://github.com/WCRP-CMIP/CMIP6_CVs/issues/413
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -240,7 +241,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id MRI-AGCM3-2\"'
+commitMessage = '\"Add frequency monPt\"'
 
 #%% Define functions
 # Get repo metadata
@@ -430,6 +431,7 @@ frequency = {
     'fx': 'fixed (time invariant) field',
     'mon': 'monthly mean samples',
     'monC': 'monthly climatology computed from monthly mean samples',
+    'monPt': 'sampled monthly, at specified time point within the time period',
     'subhrPt': 'sampled sub-hourly, at specified time point within an hour',
     'yr': 'annual mean samples',
     'yrPt': 'sampled yearly, at specified time point within the time period'
@@ -600,48 +602,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'MRI-AGCM3-2'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DynVarMIP',
- 'HighResMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'MRI'
-]
-source_id[key]['label'] = 'MRI-AGCM3-2'
-source_id[key]['label_extended'] = 'MRI-AGCM3-2'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'Prescribed from MRI-ESM2.0'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'SIB0109'
-source_id[key]['model_component']['land']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

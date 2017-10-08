@@ -698,10 +698,10 @@ source_id[key]['source_id'] = key
 
 key = 'GFDL-ESM​2M​'
 source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'FAFMIP'
-]
+#source_id[key]['activity_participation'] = [
+# 'CMIP',
+# 'FAFMIP'
+#]
 source_id[key]['cohort'] = [
  'Registered'
 ]

@@ -48,10 +48,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sun Oct 8 13:20:22 2017 -0700",
+        "creation_date":"Sun Oct 8 13:20:42 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (46; g7497ba6)",
+        "latest_tag_point":"3.2.7 (60; gfaa57e9)",
         "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"f7a4ab7c2d206875da877278de9625d8c1317eb4"
+        "previous_commit":"b9c9f415eb29a362bf449fe34b52c6217b2b5dbd"
     }
 }

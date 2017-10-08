@@ -708,8 +708,8 @@ source_id[key]['cohort'] = [
 source_id[key]['institution_id'] = [
  'NOAA-GFDL'
 ]
-source_id[key]['label'] = 'GFDL-ESM​2M​'
-source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
+#source_id[key]['label'] = 'GFDL-ESM​2M​'
+#source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
 #source_id[key]['model_component'] = {}
 #source_id[key]['model_component']['aerosol'] = {}
 #source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'

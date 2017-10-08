@@ -698,23 +698,22 @@ source_id[key]['source_id'] = key
 
 key = 'GFDL-ESM2M'
 source_id[key] = {}
-#source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'FAFMIP'
-#]
-#source_id[key]['cohort'] = [
-# 'Registered'
-#]
-#source_id[key]['institution_id'] = [
-# 'NOAA-GFDL'
-#]
-#source_id[key]['label'] = 'GFDL-ESM​2M​'
-#source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
-#source_id[key]['model_component'] = {}
-#source_id[key]['model_component']['aerosol'] = {}
-#source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'
-#source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
-'''
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'FAFMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NOAA-GFDL'
+]
+source_id[key]['label'] = 'GFDL-ESM2M'
+source_id[key]['label_extended'] = 'GFDL-ESM2M'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
 source_id[key]['model_component']['atmos'] = {}
 source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144x90 longitude/latitude; 24 levels; top level 10 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'
@@ -738,7 +737,6 @@ source_id[key]['model_component']['seaIce']['description'] = 'SISp2 (Tripolar360
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-'''
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

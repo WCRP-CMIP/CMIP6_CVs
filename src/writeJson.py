@@ -702,9 +702,9 @@ source_id[key] = {}
 # 'CMIP',
 # 'FAFMIP'
 #]
-source_id[key]['cohort'] = [
- 'Registered'
-]
+#source_id[key]['cohort'] = [
+# 'Registered'
+#]
 source_id[key]['institution_id'] = [
  'NOAA-GFDL'
 ]

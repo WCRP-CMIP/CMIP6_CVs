@@ -1610,7 +1610,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -1660,7 +1660,7 @@
                     "nominal_resolution":"200 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg latitude/longitude; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -1717,7 +1717,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg latitude/longitude; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -3634,10 +3634,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sun Oct 8 13:24:20 2017 -0700",
+        "creation_date":"Sun Oct 8 13:26:52 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (189; ge02bd28)",
+        "latest_tag_point":"3.2.7 (203; g1f40635)",
         "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"4bc98aed9e5cba2c4fda268ffbee3434d59cd6c2"
+        "previous_commit":"25ae0fda6f44bb551a4f7729c31bd27acbdb6f6f"
     }
 }

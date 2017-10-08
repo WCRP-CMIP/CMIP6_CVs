@@ -713,7 +713,7 @@ source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+#source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
 '''
 source_id[key]['model_component']['atmos'] = {}
 source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144x90 longitude/latitude; 24 levels; top level 10 hPa)'

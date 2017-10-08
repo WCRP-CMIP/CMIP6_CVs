@@ -695,6 +695,7 @@ source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
+'''
 key = 'GFDL-ESM​2M​'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
@@ -736,7 +737,6 @@ source_id[key]['model_component']['seaIce']['description'] = 'SISp2 (Tripolar360
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-'''
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

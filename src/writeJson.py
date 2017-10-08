@@ -653,7 +653,6 @@ source_id[key]['activity_participation'] = [
  'AerChemMIP',
  'C4MIP',
  'CMIP',
- 'CMIP',
  'DAMIP',
  'DynVarMIP',
  'LUMIP',

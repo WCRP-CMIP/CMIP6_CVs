@@ -1594,7 +1594,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 33 levels; top level 1 hPa)",
+                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -1610,7 +1610,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440x720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg latitude/longitude; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -1644,7 +1644,7 @@
                     "nominal_resolution":"200 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144x90 longitude/latitude; 24 levels; top level 10 hPa)",
+                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 10 hPa)",
                     "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
@@ -1660,7 +1660,7 @@
                     "nominal_resolution":"200 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg latitude/longitude; 360x200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg latitude/longitude; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -1701,7 +1701,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360x180 longitude/latitude; 49 levels; top level 1 Pa)",
+                    "description":"GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 49 levels; top level 1 Pa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -1717,7 +1717,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg latitude/longitude; 720x360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg latitude/longitude; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -3634,10 +3634,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sun Oct 8 13:23:39 2017 -0700",
+        "creation_date":"Sun Oct 8 13:24:20 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (175; ge88ddb1)",
+        "latest_tag_point":"3.2.7 (189; ge02bd28)",
         "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"0e075aad4a7276e05d118ea03d91ec86736c8540"
+        "previous_commit":"4bc98aed9e5cba2c4fda268ffbee3434d59cd6c2"
     }
 }

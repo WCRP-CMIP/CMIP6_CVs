@@ -1680,7 +1680,6 @@
                 "AerChemMIP",
                 "C4MIP",
                 "CMIP",
-                "CMIP",
                 "DAMIP",
                 "DynVarMIP",
                 "LUMIP",
@@ -3634,10 +3633,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Sun Oct 8 13:26:52 2017 -0700",
+        "creation_date":"Sun Oct 8 13:28:27 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (203; g1f40635)",
+        "latest_tag_point":"3.2.7 (217; g0c85a0b)",
         "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"25ae0fda6f44bb551a4f7729c31bd27acbdb6f6f"
+        "previous_commit":"180b1ecd2841eb96c650a046a297ef8f3aa4f6be"
     }
 }

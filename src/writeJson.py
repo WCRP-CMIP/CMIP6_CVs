@@ -696,8 +696,8 @@ source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 
-key = 'GFDL-ESM​2M​'
-source_id[key] = {}
+#key = 'GFDL-ESM​2M​'
+#source_id[key] = {}
 #source_id[key]['activity_participation'] = [
 # 'CMIP',
 # 'FAFMIP'
@@ -705,9 +705,9 @@ source_id[key] = {}
 #source_id[key]['cohort'] = [
 # 'Registered'
 #]
-source_id[key]['institution_id'] = [
- 'NOAA-GFDL'
-]
+#source_id[key]['institution_id'] = [
+# 'NOAA-GFDL'
+#]
 #source_id[key]['label'] = 'GFDL-ESM​2M​'
 #source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
 #source_id[key]['model_component'] = {}

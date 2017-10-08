@@ -710,8 +710,8 @@ source_id[key]['institution_id'] = [
 ]
 source_id[key]['label'] = 'GFDL-ESM​2M​'
 source_id[key]['label_extended'] = 'GFDL-ESM​2M​'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
+#source_id[key]['model_component'] = {}
+#source_id[key]['model_component']['aerosol'] = {}
 #source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'
 #source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
 '''

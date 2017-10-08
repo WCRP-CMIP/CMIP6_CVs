@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Oct 4 18:24:07 2017 -0700",
+        "creation_date":"Sun Oct 8 13:19:55 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue413 durack1 add frequency mon pt (#415)",
-        "previous_commit":"14ad07a9ca9c028ad7c644b13964d28b9e3a5d96"
+        "latest_tag_point":"3.2.7 (56; g81b3e56)",
+        "note":"Revise multiple GFDL source_id values",
+        "previous_commit":"c582c2af74c970684cedf3a72dcd9f3fa1394d3c"
     }
 }

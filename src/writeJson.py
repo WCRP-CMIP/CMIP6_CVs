@@ -695,7 +695,7 @@ source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-'''
+
 key = 'GFDL-ESM​2M​'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
@@ -714,6 +714,7 @@ source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2p14'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '200 km'
+'''
 source_id[key]['model_component']['atmos'] = {}
 source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144x90 longitude/latitude; 24 levels; top level 10 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '200 km'

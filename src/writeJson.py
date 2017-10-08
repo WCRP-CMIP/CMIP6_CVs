@@ -601,7 +601,7 @@ tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/maste
 source_id = readJsonCreateDict(tmp)
 source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
-'''
+
 # Fix issues
 key = 'GFDL-CM4'
 source_id[key] = {}
@@ -737,6 +737,7 @@ source_id[key]['model_component']['seaIce']['description'] = 'SISp2 (Tripolar360
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
+'''
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

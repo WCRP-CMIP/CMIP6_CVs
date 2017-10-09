@@ -1574,8 +1574,11 @@
         },
         "GFDL-CM4":{
             "activity_participation":[
+                "CFMIP",
                 "CMIP",
-                "OMIP"
+                "GMMIP",
+                "OMIP",
+                "RFMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1611,8 +1614,8 @@
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
+                    "description":"GFDL BLING v2",
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"SIS2",
@@ -1622,18 +1625,65 @@
             "release_year":"2017",
             "source_id":"GFDL-CM4"
         },
+        "GFDL-ESM2M":{
+            "activity_participation":[
+                "CMIP",
+                "FAFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-ESM2M",
+            "label_extended":"GFDL-ESM2M",
+            "model_component":{
+                "aerosol":{
+                    "description":"GFDL-AM2p14",
+                    "nominal_resolution":"200 km"
+                },
+                "atmos":{
+                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 10 hPa)",
+                    "nominal_resolution":"200 km"
+                },
+                "atmosChem":{
+                    "description":"GFDL-AM2p14 (full atmospheric chemistry)",
+                    "nominal_resolution":"200 km"
+                },
+                "land":{
+                    "description":"GFDL-LM3p7",
+                    "nominal_resolution":"200 km"
+                },
+                "landIce":{
+                    "description":"GFDL-LM3p7",
+                    "nominal_resolution":"200 km"
+                },
+                "ocean":{
+                    "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"SISp2 (Tripolar360x200L50)",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"GFDL-ESM2M"
+        },
         "GFDL-ESM4":{
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
-                "CFMIP",
                 "CMIP",
                 "DAMIP",
                 "DynVarMIP",
-                "GMMIP",
                 "LUMIP",
                 "OMIP",
-                "RFMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -3583,10 +3633,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Sep 26 13:21:14 2017 -0700",
+        "creation_date":"Sun Oct 8 13:28:27 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue410 durack1 register source_id MRI-AGCM-3-2 (#412)",
-        "previous_commit":"6b58df0a827f0abb5f038a1a84759fcb071ea706"
+        "latest_tag_point":"3.2.7 (217; g0c85a0b)",
+        "note":"Revise multiple GFDL source_id values",
+        "previous_commit":"180b1ecd2841eb96c650a046a297ef8f3aa4f6be"
     }
 }

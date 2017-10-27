@@ -34,10 +34,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 14:01:43 2017 -0700",
+        "creation_date":"Fri Oct 27 14:25:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (29; g4505843)",
-        "note":"Revise frequency 1hrCM definition",
-        "previous_commit":"039b0b7541fb3ee13b45fbd7ff330f7bdecb0afd"
+        "latest_tag_point":"3.2.7 (30; gbb4031f)",
+        "note":"Revise MPI source_id values",
+        "previous_commit":"fa46f88ec5a7d6685b476c92d68d864eaed83c0c"
     }
 }

@@ -218,6 +218,7 @@ PJD  4 Oct 2017    - Add frequency monPt https://github.com/WCRP-CMIP/CMIP6_CVs/
 PJD  8 Oct 2017    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 27 Oct 2017    - Further minor tweaks https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 27 Oct 2017    - Revise frequency 1hrCM definition https://github.com/WCRP-CMIP/CMIP6_CVs/issues/414#issuecomment-335032399
+PJD 27 Oct 2017    - Revise MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -244,7 +245,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise frequency 1hrCM definition\"'
+commitMessage = '\"Revise MPI source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -605,6 +606,22 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+# Remap MPI source_id values to new names
+key = 'MPI-ESM-1-2-HR'
+source_id[key] = source_id.pop('MPIESM-1-2-HR')
+source_id[key]['label'] = 'MPI-ESM1.2-HR'
+source_id[key]['label_extended'] = 'MPI-ESM1.2-HR'
+source_id[key]['source_id'] = key
+key = 'MPI-ESM-1-2-LR'
+source_id[key] = source_id.pop('MPIESM-1-2-LR')
+source_id[key]['label'] = 'MPI-ESM1.2-LR'
+source_id[key]['label_extended'] = 'MPI-ESM1.2-LR'
+source_id[key]['source_id'] = key
+key = 'ICON-ESM-LR'
+source_id[key] = source_id.pop('MPIESM-2-LR')
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 13:57:18 2017 -0700",
+        "creation_date":"Fri Oct 27 14:01:43 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue318 durack1 revise multiple gfdl source ids (#417)",
-        "previous_commit":"b7d9bbfd474537346d95d4eed90cfd9992453757"
+        "latest_tag_point":"3.2.7 (26; g88e382a)",
+        "note":"Revise frequency 1hrCM definition",
+        "previous_commit":"2bc8c9c1d173769d5fc5aa67f919f7e15711c700"
     }
 }

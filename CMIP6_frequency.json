@@ -1,7 +1,7 @@
 {
     "frequency":{
         "1hr":"sampled hourly",
-        "1hrCM":"monthly climatology of diurnal cycle computed from hourly samples",
+        "1hrCM":"monthly-mean diurnal cycle resolving each day into 1-hour means",
         "1hrPt":"sampled hourly, at specified time point within an hour",
         "3hr":"sampled every 3 hours",
         "3hrPt":"sampled 3 hourly, at specified time point within the time period",
@@ -19,10 +19,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 13:56:41 2017 -0700",
+        "creation_date":"Fri Oct 27 13:57:18 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (294; g8d2c28a)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"26a2b4b3603d36e34fe15dc352f341a85773c0bb"
+        "latest_tag_point":"note: ",
+        "note":"Issue318 durack1 revise multiple gfdl source ids (#417)",
+        "previous_commit":"b7d9bbfd474537346d95d4eed90cfd9992453757"
     }
 }

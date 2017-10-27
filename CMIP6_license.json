@@ -3,19 +3,11 @@
         "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 15:01:12 2017 -0700",
+        "author":"merge: 8d50fa4 aff17a1",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (32; g494bc75)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"def3bb5839dffdc16deb8a51e45ae6eb44396ae1"
-=======
-        "creation_date":"Fri Oct 27 15:02:06 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (60; g42d0f53)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"c7d95c7427c85072f2232c623c259fe69eb8ded8"
->>>>>>> aff17a1cb089c4f405dfc3d64ddf4bf26aa3e66b
+        "latest_tag_point":"note: Update to master",
+        "note":"Date: Fri Oct 27 15:08:42 2017 -0700",
+        "previous_commit":"24bdaaaaedd2e048593c46fe9c804ea8496277ef"
     }
 }

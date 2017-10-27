@@ -3790,19 +3790,11 @@
         }
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 15:01:12 2017 -0700",
+        "author":"merge: 8d50fa4 aff17a1",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (37; g8543ce4)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"6878e4ff0178b7a958c95ae7801a60ae39babfe5"
-=======
-        "creation_date":"Fri Oct 27 15:02:06 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (65; gc3e9510)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"d1da382e00496a845c7c3e027463137f29bb4040"
->>>>>>> aff17a1cb089c4f405dfc3d64ddf4bf26aa3e66b
+        "latest_tag_point":"note: Update to master",
+        "note":"Date: Fri Oct 27 15:08:42 2017 -0700",
+        "previous_commit":"24bdaaaaedd2e048593c46fe9c804ea8496277ef"
     }
 }

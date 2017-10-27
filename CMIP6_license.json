@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 15:01:15 2017 -0700",
+        "creation_date":"Fri Oct 27 15:02:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (46; g1ceea3e)",
+        "latest_tag_point":"3.2.7 (60; g42d0f53)",
         "note":"Register multiple BCC source_id values",
-        "previous_commit":"da27464e46d7c0ce4f68c7f427cc0d8bc12fc192"
+        "previous_commit":"c7d95c7427c85072f2232c623c259fe69eb8ded8"
     }
 }

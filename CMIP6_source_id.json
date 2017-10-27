@@ -1644,11 +1644,7 @@
                     "nominal_resolution":"200 km"
                 },
                 "atmos":{
-<<<<<<< HEAD
                     "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 3 hPa)",
-=======
-                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 10 hPa)",
->>>>>>> master
                     "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
@@ -3636,19 +3632,11 @@
         }
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 13:53:36 2017 -0700",
+        "author":"merge: b45ad3a 56015ef",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (273; gf7d7a91)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"ef7d0a513d40a47659d8769888ce3ba01acc2e7f"
-=======
-        "creation_date":"Sun Oct 8 13:28:27 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (217; g0c85a0b)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"180b1ecd2841eb96c650a046a297ef8f3aa4f6be"
->>>>>>> master
+        "latest_tag_point":"note: Revise multiple GFDL source_id values",
+        "note":"Date: Fri Oct 27 13:56:41 2017 -0700",
+        "previous_commit":"7ad37a233b3808ce1a2a8f2b73b00efcd66e996b"
     }
 }

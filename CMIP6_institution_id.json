@@ -33,11 +33,11 @@
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
     },
     "version_metadata":{
-        "author":"merge: b45ad3a 56015ef",
-        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Fri Oct 27 13:56:41 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: Revise multiple GFDL source_id values",
-        "note":"Date: Fri Oct 27 13:56:41 2017 -0700",
-        "previous_commit":"7ad37a233b3808ce1a2a8f2b73b00efcd66e996b"
+        "latest_tag_point":"3.2.7 (296; gdee0465)",
+        "note":"Revise multiple GFDL source_id values",
+        "previous_commit":"2f6b613d3f69e5cda4a542b865988ec7fe12588d"
     }
 }

@@ -212,6 +212,164 @@
             "release_year":"2017",
             "source_id":"AWI-CM-1-0-MR"
         },
+        "BCC-CSM2-HR":{
+            "activity_participation":[
+                "CMIP",
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "BCC"
+            ],
+            "label":"BCC-CSM 2 HR",
+            "label_extended":"BCC-CSM 2 HR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"BCC_AGCM3_LR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"50 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"BCC_AVIM2",
+                    "nominal_resolution":"50 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"SIS2",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"BCC-CSM2-HR"
+        },
+        "BCC-CSM2-MR":{
+            "activity_participation":[
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "DAMIP",
+                "DCPP",
+                "GMMIP",
+                "LS3MIP",
+                "LUMIP",
+                "RFMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "BCC"
+            ],
+            "label":"BCC-CSM 2 MR",
+            "label_extended":"BCC-CSM 2 MR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"BCC_AGCM3_MR (T106; 320 x 160 longitude/latitude; 46 levels; top level 1.46 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"BCC_AVIM2",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"SIS2",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"BCC-CSM2-MR"
+        },
+        "BCC-ESM1":{
+            "activity_participation":[
+                "AerChemMIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "BCC"
+            ],
+            "label":"BCC-ESM 1",
+            "label_extended":"BCC-ESM 1",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"BCC_AGCM3_LR (T42; 128 x 64 longitude/latitude; 26 levels; top level 2.19 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"BCC-AGCM3-Chem",
+                    "nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"BCC_AVIM2",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"SIS2",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"BCC-ESM1"
+        },
         "BESM-2-7":{
             "activity_participation":[
                 "CMIP",
@@ -3633,10 +3791,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 14:25:05 2017 -0700",
+        "creation_date":"Fri Oct 27 14:27:21 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (36; g1a6953a)",
-        "note":"Revise MPI source_id values",
-        "previous_commit":"b0bd6d9a5f6f6ab68bc22b889d5ab5bb40c7678a"
+        "latest_tag_point":"note: ",
+        "note":"Issue195 durack1 revise mip source id values (#419)",
+        "previous_commit":"675d116875aab0e7a7d387e6baf3f8b564831fa9"
     }
 }

@@ -18,19 +18,11 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 13:53:36 2017 -0700",
+        "author":"merge: b45ad3a 56015ef",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (265; g0cafbe6)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"683ff600476a78f27842eb7b3dbbf1b9a07b00ed"
-=======
-        "creation_date":"Sun Oct 8 13:28:27 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (209; g01c18ad)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"1a892143ff3379d2b191fbae9d070f8733ef474a"
->>>>>>> master
+        "latest_tag_point":"note: Revise multiple GFDL source_id values",
+        "note":"Date: Fri Oct 27 13:56:41 2017 -0700",
+        "previous_commit":"7ad37a233b3808ce1a2a8f2b73b00efcd66e996b"
     }
 }

@@ -24,11 +24,11 @@
         "VolMIP":"Volcanic Forcings Model Intercomparison Project"
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 13:53:40 2017 -0700",
+        "author":"merge: b45ad3a 56015ef",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (277; gb45ad3a)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"0bac562cda1d021e4ac7c9ed83dfb596f8cae984"
+        "latest_tag_point":"note: Revise multiple GFDL source_id values",
+        "note":"Date: Fri Oct 27 13:56:41 2017 -0700",
+        "previous_commit":"7ad37a233b3808ce1a2a8f2b73b00efcd66e996b"
     }
 }

@@ -12,19 +12,11 @@
         "SLAB":"slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system"
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 15:01:12 2017 -0700",
+        "author":"merge: 8d50fa4 aff17a1",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (38; gb508da3)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"3692ddc34fc3cf6c64783cc00d92f20c5aac842d"
-=======
-        "creation_date":"Fri Oct 27 15:02:06 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (66; g3101e9d)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"da73d4d55cd29b4649a01c61e588750566ad632d"
->>>>>>> aff17a1cb089c4f405dfc3d64ddf4bf26aa3e66b
+        "latest_tag_point":"note: Update to master",
+        "note":"Date: Fri Oct 27 15:08:42 2017 -0700",
+        "previous_commit":"24bdaaaaedd2e048593c46fe9c804ea8496277ef"
     }
 }

@@ -7136,19 +7136,11 @@
         }
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Fri Oct 27 13:53:36 2017 -0700",
+        "author":"merge: b45ad3a 56015ef",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (264; g0bac562)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"f94859d5f61d10e8f62e69a37cfe3097730a686a"
-=======
-        "creation_date":"Sun Oct 8 13:28:27 2017 -0700",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (208; ga545772)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"ca812d1b9009e8403ef3d56c5d1892c4a8ee873d"
->>>>>>> master
+        "latest_tag_point":"note: Revise multiple GFDL source_id values",
+        "note":"Date: Fri Oct 27 13:56:41 2017 -0700",
+        "previous_commit":"7ad37a233b3808ce1a2a8f2b73b00efcd66e996b"
     }
 }

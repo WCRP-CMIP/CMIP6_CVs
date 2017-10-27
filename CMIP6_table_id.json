@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 13:56:41 2017 -0700",
+        "creation_date":"Fri Oct 27 14:01:43 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (305; g3727970)",
-        "note":"Revise multiple GFDL source_id values",
-        "previous_commit":"83c0a12dbc3c4a7c578a42ed2415bcfb68468e03"
+        "latest_tag_point":"3.2.7 (38; gd1d9729)",
+        "note":"Revise frequency 1hrCM definition",
+        "previous_commit":"fdddbee169096a944561ad546cc16d47ab6766bb"
     }
 }

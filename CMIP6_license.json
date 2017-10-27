@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 14:25:05 2017 -0700",
+        "creation_date":"Fri Oct 27 15:02:06 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (31; g0025f77)",
-        "note":"Revise MPI source_id values",
-        "previous_commit":"5401010a28970432c99b40dc0da061387e46a477"
+        "latest_tag_point":"3.2.7 (60; g42d0f53)",
+        "note":"Register multiple BCC source_id values",
+        "previous_commit":"c7d95c7427c85072f2232c623c259fe69eb8ded8"
     }
 }

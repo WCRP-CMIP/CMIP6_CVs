@@ -219,6 +219,7 @@ PJD  8 Oct 2017    - Revise multiple GFDL source_id values https://github.com/WC
 PJD 27 Oct 2017    - Further minor tweaks https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 27 Oct 2017    - Revise frequency 1hrCM definition https://github.com/WCRP-CMIP/CMIP6_CVs/issues/414#issuecomment-335032399
 PJD 27 Oct 2017    - Revise MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
+PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/404, 406, 407
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -245,7 +246,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise MPI source_id values\"'
+commitMessage = '\"Register multiple BCC source_id values\"'
 
 #%% Define functions
 # Get repo metadata
@@ -606,21 +607,136 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-# Remap MPI source_id values to new names
-key = 'MPI-ESM-1-2-HR'
-source_id[key] = source_id.pop('MPIESM-1-2-HR')
-source_id[key]['label'] = 'MPI-ESM1.2-HR'
-source_id[key]['label_extended'] = 'MPI-ESM1.2-HR'
+key = 'BCC-CSM2-HR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'BCC'
+]
+source_id[key]['label'] = 'BCC-CSM 2 HR'
+source_id[key]['label_extended'] = 'BCC-CSM 2 HR'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'BCC_AGCM3_LR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'BCC_AVIM2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-key = 'MPI-ESM-1-2-LR'
-source_id[key] = source_id.pop('MPIESM-1-2-LR')
-source_id[key]['label'] = 'MPI-ESM1.2-LR'
-source_id[key]['label_extended'] = 'MPI-ESM1.2-LR'
+key = 'BCC-CSM2-MR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'GMMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'RFMIP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'BCC'
+]
+source_id[key]['label'] = 'BCC-CSM 2 MR'
+source_id[key]['label_extended'] = 'BCC-CSM 2 MR'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'BCC_AGCM3_MR (T106; 320 x 160 longitude/latitude; 46 levels; top level 1.46 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'BCC_AVIM2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
-key = 'ICON-ESM-LR'
-source_id[key] = source_id.pop('MPIESM-2-LR')
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
+key = 'BCC-ESM1'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'BCC'
+]
+source_id[key]['label'] = 'BCC-ESM 1'
+source_id[key]['label_extended'] = 'BCC-ESM 1'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'BCC_AGCM3_LR (T42; 128 x 64 longitude/latitude; 26 levels; top level 2.19 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'BCC-AGCM3-Chem'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'BCC_AVIM2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

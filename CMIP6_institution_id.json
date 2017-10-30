@@ -26,6 +26,7 @@
         "NCC":"NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway",
         "NERC":"Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK",
         "NIMS-KMA":"National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea",
+        "NIWA":"National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand",
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NUIST":"Nanjing University of Information Science and Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
@@ -34,10 +35,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 15:09:10 2017 -0700",
+        "creation_date":"Fri Oct 27 15:09:13 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (61; g37c73de)",
+        "latest_tag_point":"3.2.7 (75; gd36881a)",
         "note":"Register multiple BCC source_id values",
-        "previous_commit":"dbd6588521530940bdc679b43715a95f15fa9dbb"
+        "previous_commit":"7654b4fe20b5f3d1eec6751ab70d12813bb9e077"
     }
 }

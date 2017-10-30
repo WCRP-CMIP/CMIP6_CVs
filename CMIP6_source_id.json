@@ -3646,7 +3646,8 @@
             ],
             "institution_id":[
                 "MOHC",
-                "NERC"
+                "NERC",
+                "NIWA"
             ],
             "label":"UKESM1.0-LL",
             "label_extended":"UKESM1.0-N96ORCA1",
@@ -3791,10 +3792,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Oct 27 15:09:10 2017 -0700",
+        "creation_date":"Mon Oct 30 10:24:42 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (67; g19acf2f)",
-        "note":"Register multiple BCC source_id values",
-        "previous_commit":"584dc2c238a0e36a150e192bbbd69a50c816eb66"
+        "latest_tag_point":"3.2.7 (95; gc9d82a2)",
+        "note":"Register institution_id NIWA and add to UKESM1-0-LL",
+        "previous_commit":"8cbcf0832b954f480c7ed32ae70fedf5978c0bc7"
     }
 }

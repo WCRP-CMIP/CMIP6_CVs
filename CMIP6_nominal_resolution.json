@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Oct 30 10:24:42 2017 -0700",
+        "creation_date":"Thu Nov 2 11:58:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (92; gdee7a19)",
-        "note":"Register institution_id NIWA and add to UKESM1-0-LL",
-        "previous_commit":"297e2c5204d1d472c91e23815bf745f7f136a042"
+        "latest_tag_point":"3.2.7 (93; g0a9e544)",
+        "note":"Register source_id HadGEM3-GC31-MH",
+        "previous_commit":"b8ec6ab7ca5932a2639f1781162fe57f91f648ce"
     }
 }

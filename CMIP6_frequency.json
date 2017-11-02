@@ -1,7 +1,7 @@
 {
     "frequency":{
         "1hr":"sampled hourly",
-        "1hrCM":"monthly climatology of diurnal cycle computed from hourly samples",
+        "1hrCM":"monthly-mean diurnal cycle resolving each day into 1-hour means",
         "1hrPt":"sampled hourly, at specified time point within an hour",
         "3hr":"sampled every 3 hours",
         "3hrPt":"sampled 3 hourly, at specified time point within the time period",
@@ -12,16 +12,17 @@
         "fx":"fixed (time invariant) field",
         "mon":"monthly mean samples",
         "monC":"monthly climatology computed from monthly mean samples",
+        "monPt":"sampled monthly, at specified time point within the time period",
         "subhrPt":"sampled sub-hourly, at specified time point within an hour",
         "yr":"annual mean samples",
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Sep 8 18:18:21 2017 -0700",
+        "creation_date":"Thu Nov 2 11:58:05 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.6 (52; gfe76c7c)",
-        "note":"Revise frequency entries",
-        "previous_commit":"f93c205ca891f2a68973f0afd999a5445da9f14a"
+        "latest_tag_point":"3.2.7 (88; g544ff8e)",
+        "note":"Register source_id HadGEM3-GC31-MH",
+        "previous_commit":"4a5dc355a092b1b88b197a60c3f8991b9e147a16"
     }
 }

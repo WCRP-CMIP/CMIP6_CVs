@@ -1681,6 +1681,104 @@
             "release_year":"2017",
             "source_id":"EMAC-2-53-Vol"
         },
+        "FGOALS-f3":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-f3",
+            "label_extended":"FGOALS-f3",
+            "model_component":{
+                "aerosol":{
+                    "description":"CLASSIC (v1.0)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"MOSES2.2",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FGOALS-f3-LICOM (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.1",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2005",
+            "source_id":"FGOALS-f3"
+        },
+        "FGOALS-g3":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-g3",
+            "label_extended":"FGOALS-g3",
+            "model_component":{
+                "aerosol":{
+                    "description":"CLASSIC (v1.0)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"MOSES2.2",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FGOALS-g3-LICOM (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.1",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2005",
+            "source_id":"FGOALS-g3"
+        },
         "GFDL-AM4":{
             "activity_participation":[
                 "CMIP"
@@ -3842,10 +3940,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 6 10:29:16 2017 -0800",
+        "creation_date":"Mon Nov 6 10:30:35 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (97; g9fe8771)",
-        "note":"Register institution_id CAS",
-        "previous_commit":"7c17256898822f2902bf23d7b88f13d0b0977a99"
+        "latest_tag_point":"note: ",
+        "note":"Issue426 durack1 register institution_id CAS (#429)",
+        "previous_commit":"10da22759605c31affb79bc7efd3f6b7f964d02a"
     }
 }

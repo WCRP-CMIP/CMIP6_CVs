@@ -4,6 +4,7 @@
         "BCC":"Beijing Climate Center, Beijing 100081, China",
         "BNU":"Beijing Normal University, Beijing 100875, China",
         "CAMS":"Chinese Academy of Meteorological Sciences, Beijing 100081, China",
+        "CAS":"Chinese Academy of Sciences, Beijing 100029, China",
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
         "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
         "CMCC":"Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy",
@@ -35,10 +36,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 2 11:58:05 2017 -0700",
+        "creation_date":"Mon Nov 6 10:29:16 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (90; gce0a627)",
-        "note":"Register source_id HadGEM3-GC31-MH",
-        "previous_commit":"9526338391fc5adad4f8d9737b6f3b70ad92b733"
+        "latest_tag_point":"3.2.7 (91; gdcef7cc)",
+        "note":"Register institution_id CAS",
+        "previous_commit":"af774a2509bd4135765d1c9d756fc0f3b1b38eb7"
     }
 }

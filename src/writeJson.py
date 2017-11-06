@@ -223,6 +223,7 @@ PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/W
 PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/421
 PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
 PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
+PJD  6 Nov 2017    - Register source_id values FGOALS-g3 and FGOALS-f3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -249,7 +250,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id CAS\"'
+commitMessage = '\"Register source_id values FGOALS-g3 and FGOALS-f3\"'
 
 #%% Define functions
 # Get repo metadata
@@ -612,6 +613,86 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'FGOALS-g3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CAS'
+]
+source_id[key]['label'] = 'FGOALS-g3'
+source_id[key]['label_extended'] = 'FGOALS-g3'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'CLASSIC (v1.0)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'MOSES2.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'FGOALS-g3-LICOM (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2005'
+source_id[key]['source_id'] = key
+key = 'FGOALS-f3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'CAS'
+]
+source_id[key]['label'] = 'FGOALS-f3'
+source_id[key]['label_extended'] = 'FGOALS-f3'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'CLASSIC (v1.0)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'MOSES2.2'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'FGOALS-f3-LICOM (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2005'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -223,6 +223,7 @@ PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/W
 PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/421
 PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
 PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
+PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -249,7 +250,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id CAS\"'
+commitMessage = '\"Update missing nominal_resolution information for multiple source_id entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -612,6 +613,51 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'CAMS_CSM1-0'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+key = 'NICAM16-7S'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+key = 'NICAM16-8S'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+key = 'NICAM16-9D-L78'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
+key = 'NorESM2-HH'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+key = 'NorESM2-LM'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+key = 'NorESM2-LME'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+key = 'NorESM2-LMEC'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+key = 'NorESM2-MH'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+key = 'NorESM2-MM'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

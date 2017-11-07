@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 11:16:52 2017 -0800",
+        "creation_date":"Tue Nov 7 11:18:17 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (96; gf596406)",
-        "note":"Further minor tweaks to GFDL-ESM2M",
-        "previous_commit":"0c4a958ba80284dad8c95dbcabfd9c65de944dc7"
+        "latest_tag_point":"note: ",
+        "note":"Issue318 durack1 further updates source_id GFDL-ESM2M (#434)",
+        "previous_commit":"9666d4a5069774fbed3c93a06aef258fdd07d2eb"
     }
 }

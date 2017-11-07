@@ -503,7 +503,7 @@
                 },
                 "land":{
                     "description":"CoLM 1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -519,7 +519,7 @@
                 },
                 "seaIce":{
                     "description":"SIS 1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2016",
@@ -3106,7 +3106,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -3156,7 +3156,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -3205,7 +3205,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"10 km"
                 }
             },
             "release_year":"2017",
@@ -3276,7 +3276,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
@@ -3284,11 +3284,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3300,11 +3300,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2018",
@@ -3335,7 +3335,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3343,11 +3343,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3359,11 +3359,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3388,7 +3388,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3396,11 +3396,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3412,11 +3412,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3437,7 +3437,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3445,11 +3445,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemComp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3461,11 +3461,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3492,7 +3492,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
@@ -3500,11 +3500,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3516,11 +3516,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -3547,7 +3547,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
@@ -3555,11 +3555,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3571,11 +3571,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3842,10 +3842,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Nov 6 10:29:16 2017 -0800",
+        "creation_date":"Tue Nov 7 10:21:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (97; g9fe8771)",
-        "note":"Register institution_id CAS",
-        "previous_commit":"7c17256898822f2902bf23d7b88f13d0b0977a99"
+        "latest_tag_point":"3.2.7 (98; g78de1ae)",
+        "note":"Update missing nominal_resolution information for multiple source_id entries",
+        "previous_commit":"e8a69b21e2731978e37f7544d71918a12bbd4c1e"
     }
 }

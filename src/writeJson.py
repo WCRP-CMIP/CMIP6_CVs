@@ -223,7 +223,8 @@ PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/W
 PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/421
 PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
 PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
-PJD  6 Nov 2017    - Register source_id values FGOALS-g3 and FGOALS-f3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428
+PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
+PJD  7 Nov 2017    - Register source_id values FGOALS-g3 and FGOALS-f3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids

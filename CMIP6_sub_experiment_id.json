@@ -76,10 +76,18 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
+<<<<<<< HEAD
         "creation_date":"Mon Nov 6 10:44:12 2017 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"3.2.7 (100; g4888e2d)",
         "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
         "previous_commit":"2a17db9cdcfc7e9d3b392e10b0c6fa6884c77721"
+=======
+        "creation_date":"Tue Nov 7 10:21:57 2017 -0800",
+        "institution_id":"PCMDI",
+        "latest_tag_point":"3.2.7 (100; gc4872d8)",
+        "note":"Update missing nominal_resolution information for multiple source_id entries",
+        "previous_commit":"b2d0c5346d262005cb17386c4b1013e9b7853606"
+>>>>>>> master
     }
 }

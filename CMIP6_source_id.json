@@ -1826,11 +1826,11 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"SIS2 (Tripolar360x200L50)",
+                    "description":"SIS (Tripolar360x200L50)",
                     "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2012",
             "source_id":"GFDL-ESM2M"
         },
         "GFDL-ESM4":{
@@ -3842,10 +3842,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 11:16:53 2017 -0800",
+        "creation_date":"Tue Nov 7 11:18:17 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (100; gd302991)",
-        "note":"Further minor tweaks to GFDL-ESM2M",
-        "previous_commit":"b843500836261aaa37732d35139f8df4e00d952f"
+        "latest_tag_point":"note: ",
+        "note":"Issue318 durack1 further updates source_id GFDL-ESM2M (#434)",
+        "previous_commit":"9666d4a5069774fbed3c93a06aef258fdd07d2eb"
     }
 }

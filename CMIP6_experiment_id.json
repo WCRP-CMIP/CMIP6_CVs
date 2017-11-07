@@ -7137,10 +7137,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 10:35:46 2017 -0800",
+        "creation_date":"Tue Nov 7 11:16:52 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (146; g02cf6d2)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"6ff5f733acf81163c619af5d0ddba1f2c9331f3f"
+        "latest_tag_point":"3.2.7 (91; ge1daa7f)",
+        "note":"Further minor tweaks to GFDL-ESM2M",
+        "previous_commit":"7ffb9c00e0e593c29b3b154c32b78188a2c85b0d"
     }
 }

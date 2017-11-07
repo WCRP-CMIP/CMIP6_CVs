@@ -1798,23 +1798,23 @@
             "label_extended":"GFDL-ESM2M",
             "model_component":{
                 "aerosol":{
-                    "description":"GFDL-AM2p14",
+                    "description":"GFDL-AM2",
                     "nominal_resolution":"200 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 3 hPa)",
+                    "description":"GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)",
                     "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
-                    "description":"GFDL-AM2p14 (full atmospheric chemistry)",
+                    "description":"GFDL-AM2 (full atmospheric chemistry)",
                     "nominal_resolution":"200 km"
                 },
                 "land":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "landIce":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "ocean":{
@@ -1826,7 +1826,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"SISp2 (Tripolar360x200L50)",
+                    "description":"SIS2 (Tripolar360x200L50)",
                     "nominal_resolution":"100 km"
                 }
             },
@@ -3842,10 +3842,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 10:35:46 2017 -0800",
+        "creation_date":"Tue Nov 7 11:16:53 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (155; gcb7a78a)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"8f8bdf9db8ca0003d9a581c330fa5aae9396e8a0"
+        "latest_tag_point":"3.2.7 (100; gd302991)",
+        "note":"Further minor tweaks to GFDL-ESM2M",
+        "previous_commit":"b843500836261aaa37732d35139f8df4e00d952f"
     }
 }

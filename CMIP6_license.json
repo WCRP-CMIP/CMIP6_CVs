@@ -3,19 +3,11 @@
         "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Tue Nov 7 10:26:37 2017 -0800",
+        "author":"merge: ce62d62 522aa3e",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (136; gfd23f14)",
-        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"7bc5b221ceb4249ccc76b45a9ec8c3ba8c4c6931"
-=======
-        "creation_date":"Tue Nov 7 10:35:46 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (150; gf797253)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"613b967f913fb34c6504405e3349103c59e2fe99"
->>>>>>> master
+        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
+        "note":"Date: Tue Nov 7 10:45:34 2017 -0800",
+        "previous_commit":"ed371b8b38f6f954691801429a6cbbb20ac615c9"
     }
 }

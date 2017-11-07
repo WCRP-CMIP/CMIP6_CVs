@@ -17,19 +17,11 @@
         "5000 km"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Mon Nov 6 10:44:11 2017 -0800",
+        "author":"merge: 8f1cc67 0ddc30c",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (95; gf46d9af)",
-        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"058b46a0a6e03a3de6fdc1bca5a3d4f31ac9c027"
-=======
-        "creation_date":"Tue Nov 7 10:21:57 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (95; g3f5e65e)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"837660b80f81d9b65dd20f3532fbf4368c825c20"
->>>>>>> master
+        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
+        "note":"Date: Tue Nov 7 10:26:33 2017 -0800",
+        "previous_commit":"afab1b557152a24cf7714b86b707a38ddca8385d"
     }
 }

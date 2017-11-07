@@ -7,11 +7,11 @@
         "CMIP6"
     ],
     "version_metadata":{
-        "author":"merge: ce62d62 522aa3e",
-        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Tue Nov 7 10:45:34 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
-        "note":"Date: Tue Nov 7 10:45:34 2017 -0800",
-        "previous_commit":"ed371b8b38f6f954691801429a6cbbb20ac615c9"
+        "latest_tag_point":"3.2.7 (166; g5065941)",
+        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
+        "previous_commit":"09c8796bdc45e77be00517a06aa00b5296dbd90e"
     }
 }

@@ -18,10 +18,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 10:35:46 2017 -0800",
+        "creation_date":"Tue Nov 7 10:43:57 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (152; g48fdc14)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"f59b4fbff92e07f0506b0bc4ed8983d94fc9aa84"
+        "latest_tag_point":"note: ",
+        "note":"Issue431 durack1 additional fix NICAM16-9S (#433)",
+        "previous_commit":"522aa3e3fef52b94b1ca27106d25a67e3dbacc71"
     }
 }

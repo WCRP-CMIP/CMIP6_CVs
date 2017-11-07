@@ -224,6 +224,7 @@ PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https:/
 PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
 PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
 PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
+PJD  7 Nov 2017    - Further minor tweaks to GFDL-ESM2M https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -250,7 +251,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update missing nominal_resolution information for multiple source_id entries\"'
+commitMessage = '\"Further minor tweaks to GFDL-ESM2M\"'
 
 #%% Define functions
 # Get repo metadata
@@ -613,8 +614,13 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'NICAM16-9S'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
+key = 'GFDL-ESM2M'
+source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2'
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)'
+source_id[key]['model_component']['atmosChem']['description'] = 'GFDL-AM2 (full atmospheric chemistry)'
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM3.0'
+source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM3.0'
+source_id[key]['model_component']['seaIce']['description'] = 'SIS2 (Tripolar360x200L50)'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -615,12 +615,8 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 key = 'GFDL-ESM2M'
-source_id[key]['model_component']['aerosol']['description'] = 'GFDL-AM2'
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)'
-source_id[key]['model_component']['atmosChem']['description'] = 'GFDL-AM2 (full atmospheric chemistry)'
-source_id[key]['model_component']['land']['description'] = 'GFDL-LM3.0'
-source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM3.0'
-source_id[key]['model_component']['seaIce']['description'] = 'SIS2 (Tripolar360x200L50)'
+source_id[key]['model_component']['seaIce']['description'] = 'SIS (Tripolar360x200L50)'
+source_id[key]['release_year'] = '2012'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

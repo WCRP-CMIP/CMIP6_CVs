@@ -45,19 +45,11 @@
         "fx"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Tue Nov 7 10:26:37 2017 -0800",
+        "author":"merge: ce62d62 522aa3e",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (144; g12a5e7b)",
-        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"4fb6fd85be2f5a904ac68a9022cef2a51d7611a6"
-=======
-        "creation_date":"Tue Nov 7 10:35:46 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (158; g52ab82c)",
-        "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"c03b81fd4923f36a1a9a953ab918c014cef4efb6"
->>>>>>> master
+        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
+        "note":"Date: Tue Nov 7 10:45:34 2017 -0800",
+        "previous_commit":"ed371b8b38f6f954691801429a6cbbb20ac615c9"
     }
 }

@@ -614,7 +614,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 key = 'NICAM16-9S'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '15 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

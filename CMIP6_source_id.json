@@ -3255,7 +3255,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":"15 km"
+                    "nominal_resolution":"10 km"
                 }
             },
             "release_year":"2017",
@@ -3842,10 +3842,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 10:35:15 2017 -0800",
+        "creation_date":"Tue Nov 7 10:35:18 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (127; gada70f5)",
+        "latest_tag_point":"3.2.7 (141; g8bc9263)",
         "note":"Update missing nominal_resolution information for multiple source_id entries",
-        "previous_commit":"99b653ded14bf14c69071f7bfae462b19903bcc7"
+        "previous_commit":"a726b6e0c8b8010839113a5924fe30b9ecdc14fb"
     }
 }

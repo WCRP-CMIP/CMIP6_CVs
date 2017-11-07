@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 10:43:57 2017 -0800",
+        "creation_date":"Tue Nov 7 11:16:52 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue431 durack1 additional fix NICAM16-9S (#433)",
-        "previous_commit":"522aa3e3fef52b94b1ca27106d25a67e3dbacc71"
+        "latest_tag_point":"3.2.7 (96; gf596406)",
+        "note":"Further minor tweaks to GFDL-ESM2M",
+        "previous_commit":"0c4a958ba80284dad8c95dbcabfd9c65de944dc7"
     }
 }

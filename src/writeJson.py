@@ -225,6 +225,7 @@ PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-
 PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
 PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
 PJD  7 Nov 2017    - Further minor tweaks to GFDL-ESM2M https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD  8 Nov 2017    - Correct model components for various LS3MIP/LUMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/423
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -251,7 +252,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Further minor tweaks to GFDL-ESM2M\"'
+commitMessage = '\"Correct model components for various LS3MIP/LUMIP experiments\"'
 
 #%% Define functions
 # Get repo metadata
@@ -334,6 +335,21 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+noBgc = ['land-future','land-hist-cruNcep','land-hist-princeton','land-hist-wfdei',
+         'land-hist','land-noLu']
+bgc = ['land-cClim','land-cCO2','land-crop-grass','land-crop-noFert','land-crop-noIrrig',
+       'land-crop-noIrrigFert','land-hist-altLu1','land-hist-altLu2','land-hist-altStartYear',
+       'land-noFire','land-noPasture','land-noShiftCultivate','land-noWoodHarv']
+exps = experiment_id.keys()
+for count,key in enumerate(exps):
+    if key in noBgc:
+        experiment_id[key]['additional_allowed_model_components'] = ['BGC']
+        experiment_id[key]['required_model_components'] = ['LAND']
+    elif key in bgc:
+        experiment_id[key]['additional_allowed_model_components'] = ['']
+        experiment_id[key]['required_model_components'] = ['LAND','BGC']
+    if experiment_id[key]['additional_allowed_model_components'] =='':
+        experiment_id[key]['additional_allowed_model_components'] = [''] ; # Cleanup type string -> list
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -614,9 +630,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'GFDL-ESM2M'
-source_id[key]['model_component']['seaIce']['description'] = 'SIS (Tripolar360x200L50)'
-source_id[key]['release_year'] = '2012'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

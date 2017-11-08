@@ -33,10 +33,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 7 15:18:11 2017 -0800",
+        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (100; g0c6f684)",
-        "note":"Further minor tweaks to GFDL-ESM2M",
-        "previous_commit":"26b7798b1f4dd492fc389ea3c96f050c9d0347e5"
+        "latest_tag_point":"3.2.7 (101; g7edb861)",
+        "note":"Correct model components for various LS3MIP/LUMIP experiments",
+        "previous_commit":"dc6230aebfd23c565dff3beab3b11fbcdc093622"
     }
 }

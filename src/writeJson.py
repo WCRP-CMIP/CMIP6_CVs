@@ -259,7 +259,7 @@ versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution
 
 #170907 1114 - latest versions below
 #CMIP6_activity_id.json Thu Sep 7 10:30:00 2017 -0700 'Issue397 durack1 augment activity_id with description (#400)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c28217095e8ca770b6cd63fa97b8d022ca52aea7
-#CMIP6_experiment_id.json Wed Jun 14 14:05:00 2017 -0700 'Issue344 durack1 rename experiment_id lfmip-pdL-princeton (#350)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9ffae961621a798987d8f72704873bce4f598108
+#CMIP6_experiment_id.json Wed Nov 8 10:26:00 2017 -0700 'Issue423 durack1 correct experiment_id components LUMIP LS3MIP' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3bbbc883bfaf7a8f99cd50603bbf3199491d7c49
 
 ##CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700 'Issue342 durack1 frequency augment format with identifiers (#349)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8825b468b2bc962be70edf7f95e3e183afdd2c12
 

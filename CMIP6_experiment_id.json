@@ -3301,7 +3301,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. Changes in aerosols only",
             "end_year":"2014",
             "experiment":"historical simulation with specified anthropogenic aerosols, no other forcings",
@@ -3326,7 +3328,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. All forcings",
             "end_year":"2014",
             "experiment":"historical simulation with specified anthropogenic aerosols",
@@ -3436,7 +3440,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with1950 halocarbon concentrations",
@@ -3491,7 +3497,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Historical (non-CH4) WMGHG concentrations and NTCF emissions, 1850 CH4 concentrations",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with pre-industrial methane concentrations",
@@ -3576,7 +3584,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Historical WMGHG, halocarbon concentrations and aerosol precursor emissions, 1850 tropospheric ozone precursors emissions, prescribed SSTs",
             "end_year":"2014",
             "experiment":"historical SSTs and historical forcing, but with pre-industrial ozone precursor emissions",
@@ -3691,7 +3701,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation with ice sheets forced \"offline\" with DECK 1pctCO2 using forcing from its own AOGCM",
             "end_year":"",
             "experiment":"offline ice sheet model forced by ISM's own AOGCM 1pctCO2to4x output",
@@ -3716,7 +3728,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation with ice sheets forced \"offline\" with DECK 1pctCO2 using a standard forcing",
             "end_year":"",
             "experiment":"offline ice sheet model forced by ISMIP6-specified AOGCM 1pctCO2to4x output",
@@ -3741,7 +3755,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Offline ice sheet evolution for the last few decades forced by amip",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM AMIP output",
@@ -3766,7 +3782,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Offline ice sheet simulation with synthetic atmospheric dataset to explore the uncertainty in sea level due to ice sheet initialization",
             "end_year":"",
             "experiment":"offline ice sheet forced by initMIP synthetic atmospheric experiment",
@@ -3791,7 +3809,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization",
             "end_year":"",
             "experiment":"offline ice sheet forced by initMIP synthetic oceanic experiment",
@@ -3816,7 +3836,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Offline ice sheet control run for the initMIP experiment that explores the uncertainty in sea level due to ice sheet initialization",
             "end_year":"",
             "experiment":"offline ice sheet model initMIP control",
@@ -3841,7 +3863,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Historical simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISM's own AOGCM historical output",
@@ -3866,7 +3890,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Historical simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on CMIP6 AOGCM historical",
             "end_year":"2014",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM historical output",
@@ -3891,7 +3917,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Last interglacial simulation of ice sheet evolution driven by PMIP lig127k",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISMIP6-specified AGCM last interglacial output",
@@ -3916,7 +3944,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Present-day control simulation for \"offline\" ice sheets",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM pdControl output",
@@ -3941,7 +3971,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Pre-industrial control simulation for \"offline\" ice sheets",
             "end_year":"",
             "experiment":"offline ice sheet forced by ISM's own AOGCM piControl output",
@@ -3966,7 +3998,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
@@ -3991,7 +4025,9 @@
             "activity_id":[
                 "ISMIP6"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on ScenarioMIP ssp585",
             "end_year":"2300",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
@@ -4016,7 +4052,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist except with CO2 held constant",
             "end_year":"2014",
             "experiment":"historical land-only constant CO2",
@@ -4029,7 +4067,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4041,7 +4080,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist except with climate held constant",
             "end_year":"2014",
             "experiment":"historical land-only constant climate",
@@ -4054,7 +4095,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4066,7 +4108,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with all new crop and pastureland treated as unmanaged grassland",
             "end_year":"2014",
             "experiment":"historical land-only with cropland as natural grassland",
@@ -4079,7 +4123,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4091,7 +4136,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with fertilization rates and area held at 1850 levels/distribution",
             "end_year":"2014",
             "experiment":"historical land-only with no fertilizer",
@@ -4104,7 +4151,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4116,7 +4164,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with irrigated area held at 1850 levels",
             "end_year":"2014",
             "experiment":"historical land-only with no irrigation",
@@ -4129,7 +4179,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4141,7 +4192,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant",
             "end_year":"2014",
             "experiment":"historical land-only with managed crops but with irrigation and fertilization held constant",
@@ -4154,7 +4207,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4166,7 +4220,9 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Land only simulations",
             "end_year":"2100",
             "experiment":"future land-only",
@@ -4192,7 +4248,9 @@
                 "LS3MIP",
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only",
@@ -4217,7 +4275,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only alternate land-use history",
@@ -4230,7 +4290,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4242,7 +4303,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"historical land-only alternate land use history",
@@ -4255,7 +4318,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4267,7 +4331,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist except starting from either 1700 (for models that typically start in 1850) or 1850 (for models that typically start in 1700)",
             "end_year":"2014",
             "experiment":"historical land-only alternate start year",
@@ -4280,7 +4346,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4292,7 +4359,9 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with CRU-NCEP forcings",
@@ -4317,7 +4386,9 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with Princeton forcings",
@@ -4342,7 +4413,9 @@
             "activity_id":[
                 "LS3MIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Land only simulations",
             "end_year":"2014",
             "experiment":"as land-hist with WFDEI forcings",
@@ -4367,7 +4440,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with anthropogenic ignition and suppression held to 1850 levels",
             "end_year":"2014",
             "experiment":"historical land-only with no human fire management",
@@ -4380,7 +4455,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4392,7 +4468,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
             "description":"Same as land-hist except no land-use change",
             "end_year":"2014",
             "experiment":"historical land-only with no land-use change",
@@ -4417,7 +4495,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with grazing and other management on pastureland held at 1850 levels/distribution, i.e. all new pastureland is treated as unmanaged grassland (as in land-crop-grass)",
             "end_year":"2014",
             "experiment":"historical land-only with constant pastureland",
@@ -4430,7 +4510,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4442,7 +4523,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist except shifting cultivation turned off. An additional LUC transitions dataset will be provided as a data layer within LUMIP LUH2 dataset with shifting cultivation deactivated",
             "end_year":"2014",
             "experiment":"historical land-only with shifting cultivation turned off",
@@ -4455,7 +4538,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4467,7 +4551,9 @@
             "activity_id":[
                 "LUMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as land-hist but with wood harvest maintained at 1850 amounts/areas",
             "end_year":"2014",
             "experiment":"historical land-only with no wood harvest",
@@ -4480,7 +4566,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "LAND"
+                "LAND",
+                "BGC"
             ],
             "start_year":"1850 or 1700",
             "sub_experiment_id":[
@@ -4869,7 +4956,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean - ice Reference Experiments inter-annually varying atmospheric and river data sets for years 1948-2009. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 62-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"310",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data",
@@ -4894,7 +4983,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as the omip1 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle of CORE-II forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip1 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
@@ -4919,7 +5010,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Global ocean - sea-ice coupled experiment forced with the JRA-55do inter-annually varying atmospheric and river data sets for years 1958-2016. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
@@ -4944,7 +5037,9 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA-55do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
@@ -5026,7 +5121,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"1850 control with doubled emissions of lightning NOx",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled production of NOx due to lightning",
@@ -5053,7 +5150,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"1850 control with doubled emissions of biogenic VOCs",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with doubled emissions of biogenic VOCs",
@@ -5220,7 +5319,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 CH4 concentrations",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 methane concentrations (including chemistry)",
@@ -5247,7 +5348,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 halocarbon concentrations",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 halocarbon concentrations (including chemistry)",
@@ -5274,7 +5377,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 N2O concentrations",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 N2O concentrations (including chemistry)",
@@ -5329,7 +5434,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 NOx emissions",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 NOx emissions",
@@ -5385,7 +5492,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 ozone precursor emissions",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 ozone precursor emissions",
@@ -5468,7 +5577,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Perturbation from 1850 control using 2014 CO/VOC emissions",
             "end_year":"",
             "experiment":"pre-industrial climatological SSTs and forcing, but with 2014 VOC emissions",
@@ -5749,7 +5860,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
             "end_year":"",
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings",
@@ -5774,7 +5887,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. Anthropogenic forcings",
             "end_year":"",
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, anthropogenic forcings",
@@ -5799,7 +5914,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing",
@@ -5824,7 +5941,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings",
@@ -6077,7 +6196,9 @@
             "activity_id":[
                 "RFMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Offline radiation calculations",
             "end_year":"",
             "experiment":"offline assessment of radiative transfer parmeterizations in clear skies",
@@ -6532,7 +6653,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs",
             "end_year":"2055",
             "experiment":"SSP3-7.0, prescribed SSTs, with low methane concentrations",
@@ -6588,7 +6711,9 @@
             "activity_id":[
                 "AerChemMIP"
             ],
-            "additional_allowed_model_components":"",
+            "additional_allowed_model_components":[
+                ""
+            ],
             "description":"Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs",
             "end_year":"2055",
             "experiment":"SSP3-7.0, prescribed SSTs, with low ozone precursor emissions",
@@ -7137,10 +7262,18 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
+<<<<<<< HEAD
         "creation_date":"Tue Nov 7 10:45:36 2017 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"3.2.7 (175; g62af279)",
         "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
         "previous_commit":"6de4456d6b92d37ba47ae122aebbb1cd087611bd"
+=======
+        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
+        "institution_id":"PCMDI",
+        "latest_tag_point":"3.2.7 (93; g38a80ac)",
+        "note":"Correct model components for various LS3MIP/LUMIP experiments",
+        "previous_commit":"9849ad4dfe7a943e440e4a73a0821a8bf0a95bdd"
+>>>>>>> master
     }
 }

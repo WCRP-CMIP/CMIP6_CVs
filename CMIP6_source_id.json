@@ -1896,23 +1896,23 @@
             "label_extended":"GFDL-ESM2M",
             "model_component":{
                 "aerosol":{
-                    "description":"GFDL-AM2p14",
+                    "description":"GFDL-AM2",
                     "nominal_resolution":"200 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 3 hPa)",
+                    "description":"GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)",
                     "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
-                    "description":"GFDL-AM2p14 (full atmospheric chemistry)",
+                    "description":"GFDL-AM2 (full atmospheric chemistry)",
                     "nominal_resolution":"200 km"
                 },
                 "land":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "landIce":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "ocean":{
@@ -1924,11 +1924,11 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"SISp2 (Tripolar360x200L50)",
+                    "description":"SIS (Tripolar360x200L50)",
                     "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2012",
             "source_id":"GFDL-ESM2M"
         },
         "GFDL-ESM4":{
@@ -3940,10 +3940,18 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
+<<<<<<< HEAD
         "creation_date":"Tue Nov 7 10:45:37 2017 -0800",
         "institution_id":"PCMDI",
         "latest_tag_point":"3.2.7 (184; g65964a9)",
         "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
         "previous_commit":"4ac233bfc735b8031d5d4de96f9aad2ff3547b19"
+=======
+        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
+        "institution_id":"PCMDI",
+        "latest_tag_point":"3.2.7 (102; gdc0c962)",
+        "note":"Correct model components for various LS3MIP/LUMIP experiments",
+        "previous_commit":"31bb05279abedd3f3524c8e462dc3ad4145111a1"
+>>>>>>> master
     }
 }

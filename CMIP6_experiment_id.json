@@ -7262,10 +7262,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 14 09:19:19 2017 -0800",
+        "creation_date":"Tue Nov 14 09:19:25 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.8 (127; gb26db9e)",
+        "latest_tag_point":"3.2.8 (141; g9e4d16e)",
         "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"627b75f152c0f401841b55566dbfc92601753138"
+        "previous_commit":"42fb30265d1f17559da236b781fb2e7bd499b4c4"
     }
 }

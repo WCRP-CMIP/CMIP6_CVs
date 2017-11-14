@@ -1681,6 +1681,153 @@
             "release_year":"2017",
             "source_id":"EMAC-2-53-Vol"
         },
+        "FGOALS-f3-H":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-f3-H",
+            "label_extended":"FGOALS-f3-H",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"FAMIL2.2 (Cubed-sphere, c384; 1440 x 720 longitude/latitude; 32 levels; top level 2.16 hPa)",
+                    "nominal_resolution":"25 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"25 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 0.1deg; 3600 x 2302 longitude/latitude; 55 levels; top grid cell 0-5 m)",
+                    "nominal_resolution":"10 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"10 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-f3-H"
+        },
+        "FGOALS-f3-L":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-f3-L",
+            "label_extended":"FGOALS-f3-L",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"FAMIL2.2 (Cubed-sphere, c96; 360 x 180 longitude/latitude; 32 levels; top level 2.16 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-f3-L"
+        },
+        "FGOALS-g3":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-g3",
+            "label_extended":"FGOALS-g3",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)",
+                    "nominal_resolution":"200 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"200 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-g3"
+        },
         "GFDL-AM4":{
             "activity_participation":[
                 "CMIP"
@@ -3842,10 +3989,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
+        "creation_date":"Tue Nov 14 09:21:43 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (102; gdc0c962)",
-        "note":"Correct model components for various LS3MIP/LUMIP experiments",
-        "previous_commit":"31bb05279abedd3f3524c8e462dc3ad4145111a1"
+        "latest_tag_point":"3.2.8 (192; g560a1b3)",
+        "note":"Register multiple CAS source_id values FGOALS*",
+        "previous_commit":"d747f017fcb1b1305ed7bebb805900aff83f67db"
     }
 }

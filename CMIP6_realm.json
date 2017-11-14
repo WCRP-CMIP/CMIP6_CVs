@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
+        "creation_date":"Tue Nov 14 09:21:43 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (100; gc11d683)",
-        "note":"Correct model components for various LS3MIP/LUMIP experiments",
-        "previous_commit":"4d1ee7c695648e60f2087be0986b7b13589c18c4"
+        "latest_tag_point":"3.2.8 (190; gea6e689)",
+        "note":"Register multiple CAS source_id values FGOALS*",
+        "previous_commit":"2b2574824d03ec34e31eca71180ec2dcee69cac0"
     }
 }

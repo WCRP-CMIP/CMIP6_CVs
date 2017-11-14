@@ -32,19 +32,11 @@
         "variant_label"
     ],
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Tue Nov 7 10:45:37 2017 -0800",
+        "author":"merge: 647646d 3bbbc88",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (183; g83d78d1)",
-        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"92d3c6e9f44d017539a45d7d9fd866758a4766af"
-=======
-        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (101; g7edb861)",
-        "note":"Correct model components for various LS3MIP/LUMIP experiments",
-        "previous_commit":"dc6230aebfd23c565dff3beab3b11fbcdc093622"
->>>>>>> master
+        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
+        "note":"Date: Tue Nov 14 09:19:19 2017 -0800",
+        "previous_commit":"edbfc22d668cd5abbe65be919bbf3e120315a5ed"
     }
 }

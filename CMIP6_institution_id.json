@@ -35,19 +35,11 @@
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
     },
     "version_metadata":{
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-<<<<<<< HEAD
-        "creation_date":"Tue Nov 7 10:45:36 2017 -0800",
+        "author":"merge: 647646d 3bbbc88",
+        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (178; ge963d36)",
-        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
-        "previous_commit":"23972d802aae7bac43b7a04ea6fa50dd946f9bd1"
-=======
-        "creation_date":"Wed Nov 8 10:22:13 2017 -0800",
-        "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (96; g664b0c9)",
-        "note":"Correct model components for various LS3MIP/LUMIP experiments",
-        "previous_commit":"fab6f6e0ee3938ff75db05e77f4a5a652b682fce"
->>>>>>> master
+        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
+        "note":"Date: Tue Nov 14 09:19:19 2017 -0800",
+        "previous_commit":"edbfc22d668cd5abbe65be919bbf3e120315a5ed"
     }
 }

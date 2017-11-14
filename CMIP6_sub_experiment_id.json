@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 14 09:21:39 2017 -0800",
+        "creation_date":"Tue Nov 14 09:21:43 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.8 (180; gcc70747)",
+        "latest_tag_point":"3.2.8 (194; g31ede9a)",
         "note":"Register multiple CAS source_id values FGOALS*",
-        "previous_commit":"2105a829ac5079c40a66f19c7fb2c6451a628a34"
+        "previous_commit":"031befb779e4b0e91d755fe97646bbcbb92cc04e"
     }
 }

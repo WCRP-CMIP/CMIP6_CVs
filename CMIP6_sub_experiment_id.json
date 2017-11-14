@@ -75,11 +75,11 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "author":"merge: 647646d 3bbbc88",
-        "creation_date":"author: Paul J. Durack <durack1@llnl.gov>",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "creation_date":"Tue Nov 14 09:19:19 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: Register source_id values FGOALS-g3 and FGOALS-f3",
-        "note":"Date: Tue Nov 14 09:19:19 2017 -0800",
-        "previous_commit":"edbfc22d668cd5abbe65be919bbf3e120315a5ed"
+        "latest_tag_point":"3.2.8 (138; gfdbc489)",
+        "note":"Register source_id values FGOALS-g3 and FGOALS-f3",
+        "previous_commit":"d6fd2cb745c92bef8c96288cfd177619732767d9"
     }
 }

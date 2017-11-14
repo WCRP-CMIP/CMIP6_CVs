@@ -253,7 +253,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register source_id values FGOALS-g3 and FGOALS-f3\"'
+commitMessage = '\"Register multiple CAS source_id values FGOALS*\"'
 
 #%% Define functions
 # Get repo metadata

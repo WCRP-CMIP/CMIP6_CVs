@@ -48,10 +48,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Nov 14 09:21:42 2017 -0800",
+        "creation_date":"Thu Dec 7 10:14:39 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.8 (185; ga1dd74c)",
-        "note":"Register multiple CAS source_id values FGOALS*",
-        "previous_commit":"ca2e1dd7825ef9781c0f1dbcd3ca6f9a63479f0a"
+        "latest_tag_point":"3.2.8 (18; ga44475a)",
+        "note":"Revise THU source_id CIESM",
+        "previous_commit":"965b17780c0cbd3cd670de99caf696ddd59502f5"
     }
 }

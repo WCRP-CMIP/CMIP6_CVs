@@ -25,10 +25,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Dec 7 10:14:38 2017 -0800",
+        "creation_date":"Thu Dec 14 13:12:20 2017 -0600",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.8 (15; g1d5fc43)",
-        "note":"Revise THU source_id CIESM",
-        "previous_commit":"217aaf7b34f8a2b43098e8a803f1ab1993a3fe55"
+        "latest_tag_point":"3-3.0-14-g5a81ba4 (14; g5a81ba4)",
+        "note":"Update activity_participation for multiple MOHC source_id entries",
+        "previous_commit":"a7b22c1824febd9ba137498137ab034ac0cbd28c"
     }
 }

@@ -228,6 +228,7 @@ PJD  7 Nov 2017    - Further minor tweaks to GFDL-ESM2M https://github.com/WCRP-
 PJD  8 Nov 2017    - Correct model components for various LS3MIP/LUMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/423
 PJD 15 Nov 2017    - Register multiple CAS source_id values FGOALS* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428, 436
 PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/439
+PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -254,7 +255,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise THU source_id CIESM\"'
+commitMessage = '\"Update activity_participation for multiple MOHC source_id entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -632,18 +633,59 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'CIESM'
+key = 'HadGEM3-GC31-HH'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'HighResMIP'
+]
+key = 'HadGEM3-GC31-HM'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'HighResMIP'
+]
+key = 'HadGEM3-GC31-LL'
 source_id[key]['activity_participation'] = [
  'CFMIP',
  'CMIP',
- 'CORDEX',
+ 'DAMIP',
+ 'FAFMIP',
+ 'HighResMIP',
+ 'PMIP',
+ 'RFMIP'
+]
+key = 'HadGEM3-GC31-LM'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'HighResMIP'
+]
+key = 'HadGEM3-GC31-MM'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
  'GMMIP',
  'HighResMIP',
+ 'LS3MIP',
+ 'OMIP'
+]
+key = 'UKESM1-0-LL'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CMIP',
+ 'GeoMIP',
+ 'LUMIP',
  'OMIP',
- 'SIMIP',
+ 'PMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+key = 'UKESM1-0-MMh'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CMIP',
  'ScenarioMIP'
 ]
-
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

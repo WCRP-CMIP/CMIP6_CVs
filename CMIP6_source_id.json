@@ -2137,6 +2137,7 @@
         },
         "HadGEM3-GC31-HH":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -2186,6 +2187,7 @@
         },
         "HadGEM3-GC31-HM":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -2239,6 +2241,7 @@
                 "CMIP",
                 "DAMIP",
                 "FAFMIP",
+                "HighResMIP",
                 "PMIP",
                 "RFMIP"
             ],
@@ -2289,6 +2292,7 @@
         },
         "HadGEM3-GC31-LM":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -2388,8 +2392,10 @@
         },
         "HadGEM3-GC31-MM":{
             "activity_participation":[
+                "CMIP",
                 "DCPP",
                 "GMMIP",
+                "HighResMIP",
                 "LS3MIP",
                 "OMIP"
             ],
@@ -3832,6 +3838,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CMIP",
                 "GeoMIP",
                 "LUMIP",
                 "OMIP",
@@ -3890,6 +3897,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -3990,10 +3998,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Dec 7 10:14:39 2017 -0800",
+        "creation_date":"Thu Dec 14 13:12:20 2017 -0600",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.8 (25; g24020c1)",
-        "note":"Revise THU source_id CIESM",
-        "previous_commit":"a9598f2a38b6f1007ff0817dacd2d8a96cdcec67"
+        "latest_tag_point":"3-3.0-24-g283bc72 (24; g283bc72)",
+        "note":"Update activity_participation for multiple MOHC source_id entries",
+        "previous_commit":"f363d1ffb7099fb359bb38ea595a9262696faf97"
     }
 }

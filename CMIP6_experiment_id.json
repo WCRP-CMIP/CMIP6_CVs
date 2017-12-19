@@ -3413,7 +3413,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Historical transient with SSTs prescribed from historical",
             "end_year":"2014",
@@ -3441,7 +3442,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations",
             "end_year":"2014",
@@ -3470,7 +3472,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Historical WMGHG, halocarbon concentrations and tropospheric ozone precursors emissions, 1850 aerosol precursor emissions, prescribed SSTs",
             "end_year":"2014",
@@ -3498,7 +3501,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Historical (non-CH4) WMGHG concentrations and NTCF emissions, 1850 CH4 concentrations",
             "end_year":"2014",
@@ -3585,7 +3589,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Historical WMGHG, halocarbon concentrations and aerosol precursor emissions, 1850 tropospheric ozone precursors emissions, prescribed SSTs",
             "end_year":"2014",
@@ -5094,7 +5099,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"1850 control with doubled emissions of DMS",
             "end_year":"",
@@ -5122,7 +5128,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"1850 control with doubled emissions of lightning NOx",
             "end_year":"",
@@ -5151,7 +5158,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"1850 control with doubled emissions of biogenic VOCs",
             "end_year":"",
@@ -5180,7 +5188,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"1850 control with doubled dust emissions",
             "end_year":"",
@@ -5208,7 +5217,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"1850 control with doubled emissions of fires",
             "end_year":"",
@@ -5236,7 +5246,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"1850 control with doubled sea salt emissions",
             "end_year":"",
@@ -5292,7 +5303,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 BC emissions",
             "end_year":"",
@@ -5320,7 +5332,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 CH4 concentrations",
             "end_year":"",
@@ -5349,7 +5362,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 halocarbon concentrations",
             "end_year":"",
@@ -5378,7 +5392,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 N2O concentrations",
             "end_year":"",
@@ -5407,7 +5422,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 NH3 emissions",
             "end_year":"",
@@ -5435,7 +5451,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 NOx emissions",
             "end_year":"",
@@ -5493,7 +5510,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 ozone precursor emissions",
             "end_year":"",
@@ -5522,7 +5540,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 OC emissions",
             "end_year":"",
@@ -5550,7 +5569,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 SO2 emissions",
             "end_year":"",
@@ -5578,7 +5598,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 CO/VOC emissions",
             "end_year":"",
@@ -5609,7 +5630,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP",
             "end_year":"",
@@ -5666,7 +5688,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"30-year atmosphere only integration using preindustrial sea-surface temperature and sea-ice climatology. Interactive vegetation",
             "end_year":"",
@@ -6570,7 +6593,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Future SSP3-7.0, with SSTs prescribed from ssp370",
             "end_year":"2055",
@@ -6598,7 +6622,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced aerosol emissions (from ssp370-lowNTCF), prescribed SSTs",
             "end_year":"2055",
@@ -6626,7 +6651,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced black carbon emissions, prescribed SSTs",
             "end_year":"2055",
@@ -6654,7 +6680,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs",
             "end_year":"2055",
@@ -6712,7 +6739,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "",
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs",
             "end_year":"2055",
@@ -6741,7 +6769,8 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Future SSP3-7.0 with low land use change (from ssp126), prescribed SSTs",
             "end_year":"2055",
@@ -7262,10 +7291,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Dec 19 14:45:44 2017 -0800",
+        "creation_date":"Tue Dec 19 14:47:18 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-16-g3d88369 (16; g3d88369)",
-        "note":"Update institution_id for HadGEM3-GC31-H* entries",
-        "previous_commit":"34c76c5c803f0570c430cbd5009b26b9d74335e0"
+        "latest_tag_point":"note: ",
+        "note":"Issue441 durack1 update institutions had gem3 gc31 models (#444)",
+        "previous_commit":"f27070dae97bb1e9410fdccdd2c98cae0156a7a2"
     }
 }

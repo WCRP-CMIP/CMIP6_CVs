@@ -350,7 +350,7 @@ exps = experiment_id.keys()
 for count,key in enumerate(exps):
     if key in addBgc:
         vals = experiment_id[key]['additional_allowed_model_components']
-        if vals != '':
+        if vals !=  [u'']:
             vals.append('BGC')
         else:
             vals = ['BGC']

@@ -345,7 +345,7 @@ addBgc = ['histSST','histSST-1950HC','histSST-piAer','histSST-piCH4','histSST-pi
           'piClim-2xVOC','piClim-aer','piClim-BC','piClim-CH4','piClim-control',
           'piClim-HC','piClim-N2O','piClim-NH3','piClim-NOx','piClim-O3','piClim-OC',
           'piClim-SO2','piClim-VOC','ssp370SST','ssp370SST-lowAer','ssp370SST-lowBC',
-          'ssp370SST-lowCH4','ssp370SST-lowO3','ssp370SST-ssp126Lu']
+          'ssp370SST-lowCH4','ssp370SST-lowO3','ssp370SST-ssp126Lu','amip']
 exps = experiment_id.keys()
 for count,key in enumerate(exps):
     if key in addBgc:

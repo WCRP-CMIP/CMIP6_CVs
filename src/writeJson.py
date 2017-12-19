@@ -355,8 +355,6 @@ for count,key in enumerate(exps):
         else:
             vals = ['BGC']
         experiment_id[key]['additional_allowed_model_components'] = vals
-#    if experiment_id[key]['additional_allowed_model_components'] =='':
-#        experiment_id[key]['additional_allowed_model_components'] = [''] ; # Cleanup type string -> list
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

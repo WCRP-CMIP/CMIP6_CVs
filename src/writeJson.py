@@ -229,6 +229,7 @@ PJD  8 Nov 2017    - Correct model components for various LS3MIP/LUMIP experimen
 PJD 15 Nov 2017    - Register multiple CAS source_id values FGOALS* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428, 436
 PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/439
 PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
+PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -255,7 +256,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update activity_participation for multiple MOHC source_id entries\"'
+commitMessage = '\"Update institution_id for HadGEM3-GC31-H* entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -634,57 +635,14 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
 key = 'HadGEM3-GC31-HH'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'HighResMIP'
+source_id[key]['institution_id'] = [
+ 'MOHC',
+ 'NERC'
 ]
 key = 'HadGEM3-GC31-HM'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'HighResMIP'
-]
-key = 'HadGEM3-GC31-LL'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'FAFMIP',
- 'HighResMIP',
- 'PMIP',
- 'RFMIP'
-]
-key = 'HadGEM3-GC31-LM'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'HighResMIP'
-]
-key = 'HadGEM3-GC31-MM'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'GMMIP',
- 'HighResMIP',
- 'LS3MIP',
- 'OMIP'
-]
-key = 'UKESM1-0-LL'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'ScenarioMIP',
- 'VolMIP'
-]
-key = 'UKESM1-0-MMh'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CMIP',
- 'ScenarioMIP'
+source_id[key]['institution_id'] = [
+ 'MOHC',
+ 'NERC'
 ]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

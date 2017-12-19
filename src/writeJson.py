@@ -350,7 +350,10 @@ exps = experiment_id.keys()
 for count,key in enumerate(exps):
     if key in addBgc:
         vals = experiment_id[key]['additional_allowed_model_components']
-        vals.append('BGC')
+        if vals != '':
+            vals.append('BGC')
+        else:
+            vals = ['BGC']
         experiment_id[key]['additional_allowed_model_components'] = vals
 #    if experiment_id[key]['additional_allowed_model_components'] =='':
 #        experiment_id[key]['additional_allowed_model_components'] = [''] ; # Cleanup type string -> list

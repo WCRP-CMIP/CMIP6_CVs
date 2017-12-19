@@ -4000,10 +4000,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Dec 19 15:17:42 2017 -0800",
+        "creation_date":"Tue Dec 19 15:19:42 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-125-g661b0b1 (125; g661b0b1)",
+        "latest_tag_point":"3-3.0-139-g2be4481 (139; g2be4481)",
         "note":"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components",
-        "previous_commit":"288cefabce3d5c7a4d1d0813d077b3f22bda836c"
+        "previous_commit":"fb318b3fac2bef8d7253388c5718ad1f53c1ca40"
     }
 }

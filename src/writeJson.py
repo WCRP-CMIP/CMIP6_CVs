@@ -230,6 +230,7 @@ PJD 15 Nov 2017    - Register multiple CAS source_id values FGOALS* https://gith
 PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/439
 PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
+PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -256,7 +257,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update institution_id for HadGEM3-GC31-H* entries\"'
+commitMessage = '\"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components\"'
 
 #%% Define functions
 # Get repo metadata
@@ -339,21 +340,21 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-noBgc = ['land-future','land-hist-cruNcep','land-hist-princeton','land-hist-wfdei',
-         'land-hist','land-noLu']
-bgc = ['land-cClim','land-cCO2','land-crop-grass','land-crop-noFert','land-crop-noIrrig',
-       'land-crop-noIrrigFert','land-hist-altLu1','land-hist-altLu2','land-hist-altStartYear',
-       'land-noFire','land-noPasture','land-noShiftCultivate','land-noWoodHarv']
+addBgc = ['histSST','histSST-1950HC','histSST-piAer','histSST-piCH4','histSST-piO3',
+          'piClim-2xDMS','piClim-2xdust','piClim-2xfire','piClim-2xNOx','piClim-2xss',
+          'piClim-2xVOC','piClim-aer','piClim-BC','piClim-CH4','piClim-control',
+          'piClim-HC','piClim-N2O','piClim-NH3','piClim-NOx','piClim-O3','piClim-OC',
+          'piClim-SO2','piClim-VOC','ssp370SST','ssp370SST-lowAer','ssp370SST-lowBC',
+          'ssp370SST-lowCH4','ssp370SST-lowO3','ssp370SST-ssp126Lu','amip']
 exps = experiment_id.keys()
 for count,key in enumerate(exps):
-    if key in noBgc:
-        experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-        experiment_id[key]['required_model_components'] = ['LAND']
-    elif key in bgc:
-        experiment_id[key]['additional_allowed_model_components'] = ['']
-        experiment_id[key]['required_model_components'] = ['LAND','BGC']
-    if experiment_id[key]['additional_allowed_model_components'] =='':
-        experiment_id[key]['additional_allowed_model_components'] = [''] ; # Cleanup type string -> list
+    if key in addBgc:
+        vals = experiment_id[key]['additional_allowed_model_components']
+        if vals !=  [u'']:
+            vals.append('BGC')
+        else:
+            vals = ['BGC']
+        experiment_id[key]['additional_allowed_model_components'] = vals
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -634,16 +635,6 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'HadGEM3-GC31-HH'
-source_id[key]['institution_id'] = [
- 'MOHC',
- 'NERC'
-]
-key = 'HadGEM3-GC31-HM'
-source_id[key]['institution_id'] = [
- 'MOHC',
- 'NERC'
-]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

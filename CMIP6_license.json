@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Dec 19 14:45:44 2017 -0800",
+        "creation_date":"Tue Dec 19 15:19:42 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-20-g7f84776 (20; g7f84776)",
-        "note":"Update institution_id for HadGEM3-GC31-H* entries",
-        "previous_commit":"d0bce8b6f13ad175461a1972fd24977e9e37b927"
+        "latest_tag_point":"3-3.0-134-gd3a38c7 (134; gd3a38c7)",
+        "note":"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components",
+        "previous_commit":"38515d6768266610cf4f4cca3757d9513931b4b4"
     }
 }

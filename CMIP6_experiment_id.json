@@ -695,7 +695,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"DECK: AMIP",
             "end_year":"2014",
@@ -7278,10 +7279,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Dec 19 15:17:31 2017 -0800",
+        "creation_date":"Tue Dec 19 15:17:42 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-102-gde8ccc6 (102; gde8ccc6)",
+        "latest_tag_point":"3-3.0-116-gd527500 (116; gd527500)",
         "note":"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components",
-        "previous_commit":"59db4ae982a6555bd98e02c509b681a5e95c8eba"
+        "previous_commit":"75256983e8495456c9026c691254e4ee105e6f6a"
     }
 }

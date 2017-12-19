@@ -11,10 +11,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Dec 14 13:16:07 2017 -0600",
+        "creation_date":"Tue Dec 19 14:45:44 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue442 durack1 update activity participation for multiple MOHC models (#443)",
-        "previous_commit":"27ebddb110c7ec3f03e383309adfcede1af5e846"
+        "latest_tag_point":"3-3.0-23-g9461bc8 (23; g9461bc8)",
+        "note":"Update institution_id for HadGEM3-GC31-H* entries",
+        "previous_commit":"19ea34d34bdf2034879dbbb7115881f182b5be55"
     }
 }

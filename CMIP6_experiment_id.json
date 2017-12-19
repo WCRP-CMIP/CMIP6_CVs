@@ -3442,7 +3442,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations",
@@ -3501,7 +3500,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Historical (non-CH4) WMGHG concentrations and NTCF emissions, 1850 CH4 concentrations",
@@ -3589,7 +3587,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Historical WMGHG, halocarbon concentrations and aerosol precursor emissions, 1850 tropospheric ozone precursors emissions, prescribed SSTs",
@@ -5128,7 +5125,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"1850 control with doubled emissions of lightning NOx",
@@ -5158,7 +5154,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"1850 control with doubled emissions of biogenic VOCs",
@@ -5332,7 +5327,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 CH4 concentrations",
@@ -5362,7 +5356,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 halocarbon concentrations",
@@ -5392,7 +5385,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 N2O concentrations",
@@ -5451,7 +5443,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 NOx emissions",
@@ -5510,7 +5501,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 ozone precursor emissions",
@@ -5598,7 +5588,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Perturbation from 1850 control using 2014 CO/VOC emissions",
@@ -6680,7 +6669,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs",
@@ -6739,7 +6727,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "",
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs",
@@ -7291,10 +7278,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Dec 19 15:14:17 2017 -0800",
+        "creation_date":"Tue Dec 19 15:14:21 2017 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-46-gec40797 (46; gec40797)",
+        "latest_tag_point":"3-3.0-60-g8c955a8 (60; g8c955a8)",
         "note":"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components",
-        "previous_commit":"dc3dffd9e7df58163adc774064b8881415335f37"
+        "previous_commit":"a343baac90a13913afab2e366a4b8940afe3a9f7"
     }
 }

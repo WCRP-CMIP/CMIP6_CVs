@@ -231,6 +231,7 @@ PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMI
 PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
 PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
+PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -257,7 +258,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Update experiment_id AerChemMIP and AMIP additional_allowed_model_components\"'
+commitMessage = '\"Register institution_id DWD\"'
 
 #%% Define functions
 # Get repo metadata
@@ -340,21 +341,6 @@ experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-addBgc = ['histSST','histSST-1950HC','histSST-piAer','histSST-piCH4','histSST-piO3',
-          'piClim-2xDMS','piClim-2xdust','piClim-2xfire','piClim-2xNOx','piClim-2xss',
-          'piClim-2xVOC','piClim-aer','piClim-BC','piClim-CH4','piClim-control',
-          'piClim-HC','piClim-N2O','piClim-NH3','piClim-NOx','piClim-O3','piClim-OC',
-          'piClim-SO2','piClim-VOC','ssp370SST','ssp370SST-lowAer','ssp370SST-lowBC',
-          'ssp370SST-lowCH4','ssp370SST-lowO3','ssp370SST-ssp126Lu','amip']
-exps = experiment_id.keys()
-for count,key in enumerate(exps):
-    if key in addBgc:
-        vals = experiment_id[key]['additional_allowed_model_components']
-        if vals !=  [u'']:
-            vals.append('BGC')
-        else:
-            vals = ['BGC']
-        experiment_id[key]['additional_allowed_model_components'] = vals
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -530,6 +516,7 @@ institution_id = {
     'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
+    'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',

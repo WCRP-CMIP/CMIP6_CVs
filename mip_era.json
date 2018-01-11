@@ -8,10 +8,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 8 19:13:45 2018 -0800",
+        "creation_date":"Wed Jan 10 18:22:38 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-23-gdc83d95 (23; gdc83d95)",
-        "note":"Register institution_id DWD",
-        "previous_commit":"2b2b07ae9d332a479e8da8f24fee645dbd2a7801"
+        "latest_tag_point":"3.3.0 (25; g6c358d1)",
+        "note":"Revise MPI-M source_id MPIESM-1-2-HR",
+        "previous_commit":"63aca3f9f05f589eefc19d29c1014bb63b15c28a"
     }
 }

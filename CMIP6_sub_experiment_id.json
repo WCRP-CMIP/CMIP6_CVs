@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 8 19:13:45 2018 -0800",
+        "creation_date":"Wed Jan 10 18:22:38 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-29-g5b1466e (29; g5b1466e)",
-        "note":"Register institution_id DWD",
-        "previous_commit":"ca6188ae3e9da889093cedbc514bc93861bb9639"
+        "latest_tag_point":"3.3.0 (31; gd99570d)",
+        "note":"Revise MPI-M source_id MPIESM-1-2-HR",
+        "previous_commit":"c7907c1a18ae53e045f92733a48a1e1883bbdb9e"
     }
 }

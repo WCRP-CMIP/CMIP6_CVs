@@ -2945,7 +2945,8 @@
                 "Registered"
             ],
             "institution_id":[
-                "MPI-M"
+                "MPI-M",
+                "DWD"
             ],
             "label":"MPI-ESM1.2-HR",
             "label_extended":"MPI-ESM1.2-HR",
@@ -4000,10 +4001,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Mon Jan 8 19:13:45 2018 -0800",
+        "creation_date":"Mon Jan 8 19:16:16 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3-3.0-27-gbb441b9 (27; gbb441b9)",
-        "note":"Register institution_id DWD",
-        "previous_commit":"107b6b7b6fa13dcfd5efa99d80c89e07b94107e8"
+        "latest_tag_point":"note: ",
+        "note":"Issue446 durack1 register institution_id DWD (#447)",
+        "previous_commit":"d2499a27fa9adbd9d441a1a3b421dc6179b4ea5c"
     }
 }

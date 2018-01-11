@@ -232,6 +232,7 @@ PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id e
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
 PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
+PJD 10 Dec 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -258,7 +259,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id DWD\"'
+commitMessage = '\"Revise MPI-M source_id MPIESM-1-2-HR\"'
 
 #%% Define functions
 # Get repo metadata
@@ -622,6 +623,11 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
+key = 'MPI-ESM-1-2-HR'
+source_id[key]['institution_id'] = [
+ 'MPI-M',
+ 'DWD'
+]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

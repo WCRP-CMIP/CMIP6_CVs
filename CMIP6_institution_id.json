@@ -33,14 +33,15 @@
         "NUIST":"Nanjing University of Information Science and Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
         "SNU":"Seoul National University, Seoul 08826, Republic of Korea",
-        "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China"
+        "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China",
+        "UHH":"Universitat Hamburg, Hamburg 20148, Germany"
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Wed Jan 10 18:22:38 2018 -0800",
+        "creation_date":"Tue Jan 16 08:20:52 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (23; g3666f2c)",
-        "note":"Revise MPI-M source_id MPIESM-1-2-HR",
-        "previous_commit":"74bcab31b3edd3aef55d9c31ce2481dca37766ed"
+        "latest_tag_point":"3.3.0 (24; g3535efc)",
+        "note":"Register institution_id UHH",
+        "previous_commit":"79dc0149675269ae46b87bc00afc040f14dd3335"
     }
 }

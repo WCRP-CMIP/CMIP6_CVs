@@ -232,7 +232,8 @@ PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id e
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
 PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
-PJD 10 Dec 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
+PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
+PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -259,7 +260,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise MPI-M source_id MPIESM-1-2-HR\"'
+commitMessage = '\"Register institution_id UHH\"'
 
 #%% Define functions
 # Get repo metadata
@@ -539,7 +540,8 @@ institution_id = {
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
-    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China'
+    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
+    'UHH': 'Universitat Hamburg, Hamburg 20148, Germany'
 }
 
 #%% CMIP6 License

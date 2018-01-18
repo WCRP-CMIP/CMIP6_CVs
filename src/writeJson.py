@@ -234,6 +234,7 @@ PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
 PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
+PJD 18 Jan 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -260,7 +261,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id UHH\"'
+commitMessage = '\"Register UHH source_id ARTS-2-3\"'
 
 #%% Define functions
 # Get repo metadata
@@ -625,11 +626,46 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'MPI-ESM-1-2-HR'
-source_id[key]['institution_id'] = [
- 'MPI-M',
- 'DWD'
+key = 'ARTS-2-3'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'RFMIP'
 ]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'UHH'
+]
+source_id[key]['label'] = 'ARTS 2.3'
+source_id[key]['label_extended'] = 'ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'none'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2015'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

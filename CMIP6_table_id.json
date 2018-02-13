@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 16 08:20:53 2018 -0800",
+        "creation_date":"Tue Feb 13 09:37:18 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (33; g3ca06de)",
-        "note":"Register institution_id UHH",
-        "previous_commit":"30a87a9e17a321d6d9d5ebf776e627b01f61eb71"
+        "latest_tag_point":"3.3.0 (34; g0d2cbbf)",
+        "note":"Revise institution_id NCAR",
+        "previous_commit":"b1779802e7bd69b88ff7670c1e05aa7d09c667f0"
     }
 }

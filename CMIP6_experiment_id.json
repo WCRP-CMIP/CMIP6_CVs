@@ -7279,10 +7279,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 16 08:20:52 2018 -0800",
+        "creation_date":"Tue Jan 16 08:22:45 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (21; g598fe8b)",
-        "note":"Register institution_id UHH",
-        "previous_commit":"fb4ec0f163b4bd597bd61e75d814848c3306dc68"
+        "latest_tag_point":"note: ",
+        "note":"Issue450 durack1 register institution_id UHH (#451)",
+        "previous_commit":"d2c7e38fd827ee55aa171203f10f022b8b7480c9"
     }
 }

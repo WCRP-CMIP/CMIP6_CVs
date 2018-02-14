@@ -257,37 +257,30 @@ versionCVContent = 0 ; # Incremented when a change to existing content is made o
 versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution_id is added or amended
 # Have to think about last entry, as only single commit (and not per file commit) will work here
 
-#170907 1114 - latest versions below
+#180213 2143 - latest versions below
 #CMIP6_activity_id.json Thu Sep 7 10:30:00 2017 -0700 'Issue397 durack1 augment activity_id with description (#400)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c28217095e8ca770b6cd63fa97b8d022ca52aea7
 #CMIP6_experiment_id.json Wed Nov 8 10:26:00 2017 -0700 'Issue423 durack1 correct experiment_id components LUMIP LS3MIP' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3bbbc883bfaf7a8f99cd50603bbf3199491d7c49
-
-##CMIP6_frequency.json Wed Jun 14 13:53:00 2017 -0700 'Issue342 durack1 frequency augment format with identifiers (#349)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8825b468b2bc962be70edf7f95e3e183afdd2c12
-
-#CMIP6_grid_label.json Thu Nov 17 11:52:00 2016 -0700 'Issue130 durack1 revise grid_label (#147)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ba7b9418e432008312ed4ccf54f2d30233ad952d
-
-##CMIP6_institution_id.json Wed Jul 26 15:21:00 2016 -0700 'Issue386 durack1 register institution_id SNU (#388)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/16b1b0dacd12eaa177846623efa59ed20872a226
-
+#CMIP6_frequency.json Fri Oct 27 14:03:00 2017 -0700 'Issue414 durack1 revise frequency 1hrCM definition (#418)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/62129c480e970cf22a5ca31b169bca2e21cb2b9d
+#CMIP6_grid_label.json Fri Sep 8 18:12:00 2016 -0700 'Issue395 durack1 augment grid_label with description (#401)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d5ab3b13221bad7abe52def13689062886366b9b
+#CMIP6_institution_id.json Tues Feb 13 9:39:00 2016 -0700 'Issue456 durack1 revise institution_id NCAR (#458)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b
 #CMIP6_license.json Mon Feb 27 10:30:00 2016 -0700 'Issue225 durack1 add institution_id THU (#232)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44
 #CMIP6_nominal_resolution.json Tues Nov 15 16:04:00 2016 -0700 'Issue141 durack1 update grid_resolution to nominal_resolution (#143)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c45c83d65814fa3caaa965554f0d7eb74b80a186
 #CMIP6_realm.json Tues Apr 18 12:03:00 2017 -0700 'Issue285 durack1 update realm format (#290)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7de3c77a3cf91dd6c34509024d5493e40b1c8d9d
 #CMIP6_required_global_attributes.json Thu Mar 16 12:59:00 2017 -0700 'deleted trailing comma from list' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/534fa1b7ac02a92c6b7e2e770f4e34d73ae94d4c
-
-##CMIP6_source_id.json Thu Aug 10 07:52:00 2017 -0700 'Issue392 durack1 register source_id IPSL-CM6A-LR (#393)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e44cd842b97dd1e3a538204060a452771b4b091f
-
-#CMIP6_source_type.json Tue Jun 27 09:11:00 2017 -0700 'Corrected BGCM to read BGC' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bfae21f5b740cfdf0e950ab7f635f8cf092a47a3
+#CMIP6_source_id.json Wed Jan 10 18:24:00 2017 -0700 'Issue196 durack1 revise source_id MPI-ESM-1-2-HR (#449)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/415226b1f8c49a18a7d129f8f2c7ef7cf1961a59
+#CMIP6_source_type.json Fri Sep 8 17:57:00 2017 -0700 'Issue396 durack1 augment source_type with description (#399)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/fa3f07e9c215b35e0a54737acba2c2a9f6b8901f
 #CMIP6_sub_experiment_id.json Wed Mar 8 11:27:00 2017 -0700 'Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/af9202b7e26d357aa988c1741b7a25f90fdedbfd
 #CMIP6_table_id.json Fri Jan 13 09:27:00 2017 -0700 'Issue199 durack1 update table_id to Data Request v1.0 (#200)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f4a9fc202b7bea32038d92791cbce95af75022ab
 #README.md Wed Mar 22 09:46:00 2017 -0700 'shortened through minor edits' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/412f96f8df75be49b77bb9b55455fab7c7b260b4
 #mip_era.json Thu Aug 25 17:21:00 2016 -0700 'Fix #36 - Add CV name to json structure' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/317f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b
 #"version_metadata":{
-#   "author":"Paul J. Durack <durack1@llnl.gov>",
-#   "CV_collection_version":"6.5.2.22",
-#   "CV_collection_modified":"Wed Jul 26 09:19:24 2017 -0700",
-#   "activity_id_CV_modified":"Wed Feb 1 07:14:22 2017 -0700",    ![The name of this entry would depend on the CV.]
-#   "activity_id_CV_change":"Added FAFMIP to list",
-#   "latest_tag_point":"30; gf11d16d", ! is this right?
-#   "previous_commit":"cf5676f5f6ee42efd211608647aad38324505dd6"
-#}
+#        "author":"Paul J. Durack <durack1@llnl.gov>",
+#        "creation_date":"Tue Feb 13 09:37:18 2018 -0800",
+#        "institution_id":"PCMDI",
+#        "latest_tag_point":"3.3.0 (27; gf660143)",
+#        "note":"Revise institution_id NCAR",
+#        "previous_commit":"ba68f67c7773020ef7b8a5b67e68add47f0f6de3"
+#    }
 
 #%% Define functions
 # Get repo metadata

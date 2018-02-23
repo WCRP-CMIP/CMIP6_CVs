@@ -235,6 +235,7 @@ PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CM
 PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
 PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
+PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -261,7 +262,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id NCAR\"'
+commitMessage = '\"Register institution_id AER\"'
 
 #%% Define functions
 # Get repo metadata
@@ -508,6 +509,7 @@ grid_label = {
 
 #%% Institutions
 institution_id = {
+    'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',

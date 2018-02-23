@@ -46,10 +46,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Feb 13 09:39:25 2018 -0800",
+        "creation_date":"Thu Feb 22 16:03:19 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"note: ",
-        "note":"Issue456 durack1 revise institution_id NCAR (#458)",
-        "previous_commit":"ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b"
+        "latest_tag_point":"6.2.0.11 (28; gf5d876e)",
+        "note":"Register institution_id AER",
+        "previous_commit":"475136a8671bcf50bf729c919ca135cc6d5e4a8a"
     }
 }

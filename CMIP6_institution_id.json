@@ -1,5 +1,6 @@
 {
     "institution_id":{
+        "AER":"Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA",
         "AWI":"Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany",
         "BCC":"Beijing Climate Center, Beijing 100081, China",
         "BNU":"Beijing Normal University, Beijing 100875, China",
@@ -38,10 +39,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Feb 13 09:37:18 2018 -0800",
+        "creation_date":"Tue Feb 13 09:39:25 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (25; gec88f19)",
-        "note":"Revise institution_id NCAR",
-        "previous_commit":"f744cbc65f4ff5a106f6887f8f29cd3f5b1910bd"
+        "latest_tag_point":"note: ",
+        "note":"Issue456 durack1 revise institution_id NCAR (#458)",
+        "previous_commit":"ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b"
     }
 }

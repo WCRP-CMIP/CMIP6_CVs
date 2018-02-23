@@ -1,54 +1,5 @@
 {
     "source_id":{
-        "ACCESS-1-0":{
-            "activity_participation":[
-                "CMIP"
-            ],
-            "cohort":[
-                "CMIP5"
-            ],
-            "institution_id":[
-                "CSIRO-BOM"
-            ],
-            "label":"ACCESS 1.0",
-            "label_extended":"ACCESS 1.0 (This entry is free text for users to contribute verbose information)",
-            "model_component":{
-                "aerosol":{
-                    "description":"CLASSIC (v1.0)",
-                    "nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
-                    "nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"MOSES2.2",
-                    "nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"CICE4.1",
-                    "nominal_resolution":"none"
-                }
-            },
-            "release_year":"2011",
-            "source_id":"ACCESS-1-0"
-        },
         "AWI-CM-1-0-HR":{
             "activity_participation":[
                 "CORDEX",
@@ -3756,7 +3707,7 @@
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
+                    "description":"Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)",
                     "nominal_resolution":"1x1 degree"
                 },
                 "atmosChem":{
@@ -3772,7 +3723,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
+                    "description":"BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"1x1 degree"
                 },
                 "ocnBgchem":{
@@ -3780,7 +3731,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"Declining1.0-warming",
+                    "description":"Declining1.0-warming (360 x 180 longitude/latitude)",
                     "nominal_resolution":"1x1 degree"
                 }
             },
@@ -4001,10 +3952,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 22 16:03:19 2018 -0800",
+        "creation_date":"Thu Feb 22 16:04:58 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"6.2.0.11 (25; gb558543)",
-        "note":"Register institution_id AER",
-        "previous_commit":"a039ed0a78454f10332532f1eb11cc92acd47075"
+        "latest_tag_point":"note: ",
+        "note":"Issue459 durack1 register institution_id AER (#462)",
+        "previous_commit":"eacd16e330d985ae8694a6cb738b253a7d265611"
     }
 }

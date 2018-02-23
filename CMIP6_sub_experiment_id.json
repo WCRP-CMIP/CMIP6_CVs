@@ -76,10 +76,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 22 16:03:19 2018 -0800",
+        "creation_date":"Thu Feb 22 16:14:41 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"6.2.0.11 (27; g678a7d6)",
-        "note":"Register institution_id AER",
-        "previous_commit":"171284894def6827c4db7f8242a3803c61f7ff79"
+        "latest_tag_point":"6.2.0.11 (28; g02189b0)",
+        "note":"Remove source_id ACCESS-1-0",
+        "previous_commit":"3b3936163fc9d849b7aa6b616695ace4a907f738"
     }
 }

@@ -2122,7 +2122,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"10 km"
                 },
                 "ocnBgchem":{
@@ -2130,7 +2130,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)",
                     "nominal_resolution":"10 km"
                 }
             },
@@ -2173,7 +2173,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2181,7 +2181,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -2228,7 +2228,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -2236,7 +2236,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)",
                     "nominal_resolution":"100 km"
                 }
             },
@@ -2278,7 +2278,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2286,7 +2286,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -2328,7 +2328,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"10 km"
                 },
                 "ocnBgchem":{
@@ -2336,7 +2336,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)",
                     "nominal_resolution":"10 km"
                 }
             },
@@ -2382,7 +2382,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2390,7 +2390,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -3832,7 +3832,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -3840,11 +3840,11 @@
                     "nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)",
                     "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2018",
             "source_id":"UKESM1-0-LL"
         },
         "UKESM1-0-MMh":{
@@ -3885,7 +3885,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -3893,7 +3893,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -3952,10 +3952,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Feb 22 16:14:41 2018 -0800",
+        "creation_date":"Fri Feb 23 11:18:44 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"6.2.0.11 (26; gf1f5f47)",
-        "note":"Remove source_id ACCESS-1-0",
-        "previous_commit":"470b2e8cf34ba05590355f6ec1a84a85d03a7c31"
+        "latest_tag_point":"6.2.0.11 (28; g1e1adb8)",
+        "note":"Revise descriptions for HadGEM3 and UKESM1 source_id entries",
+        "previous_commit":"5318e7bdeae4a7630f0ae26ad8f439ec47418669"
     }
 }

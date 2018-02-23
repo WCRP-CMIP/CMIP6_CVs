@@ -237,6 +237,7 @@ PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CM
 PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
 PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
 PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
+PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -263,7 +264,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Remove source_id ACCESS-1-0\"'
+commitMessage = '\"Revise descriptions for HadGEM3 and UKESM1 source_id entries\"'
 
 #%% Define functions
 # Get repo metadata
@@ -629,12 +630,28 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'ACCESS-1-0'
-source_id.pop(key)
-key = 'PCMDI-test-1-0'
-source_id[key]['model_component']['atmos']['description'] = 'Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)'
-source_id[key]['model_component']['ocean']['description'] = 'BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['seaIce']['description'] = 'Declining1.0-warming (360 x 180 longitude/latitude)'
+cice_orca1_desc = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)'
+cice_orca025_desc = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)'
+cice_orca12_desc = 'CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)'
+nemo_orca1_desc = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+nemo_orca025_desc = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+nemo_orca12_desc = 'NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+orca1 = (nemo_orca1_desc, cice_orca1_desc)
+orca025 = (nemo_orca025_desc, cice_orca025_desc)
+orca12 = (nemo_orca12_desc, cice_orca12_desc)
+models_to_descriptions = {
+    'HadGEM3-GC31-HH': orca12,
+    'HadGEM3-GC31-HM': orca025,
+    'HadGEM3-GC31-LL': orca1,
+    'HadGEM3-GC31-LM': orca025,
+    'HadGEM3-GC31-MH': orca12,
+    'HadGEM3-GC31-MM': orca025,
+    'UKESM1-0-LL': orca1,
+    'UKESM1-0-MMh': orca025}
+for model_source_id, (ocean_desc, seaIce_desc) in models_to_descriptions.items():
+    source_id[model_source_id]['model_component']['ocean']['description'] = ocean_desc
+    source_id[model_source_id]['model_component']['seaIce']['description'] = seaIce_desc
+source_id['UKESM1-0-LL']['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

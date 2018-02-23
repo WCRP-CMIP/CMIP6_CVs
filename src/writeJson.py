@@ -236,6 +236,7 @@ PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCR
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
 PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
 PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
+PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -262,7 +263,7 @@ from durolib import getGitInfo
 #import pdb
 
 #%% Set commit message
-commitMessage = '\"Register institution_id AER\"'
+commitMessage = '\"Remove source_id ACCESS-1-0\"'
 
 #%% Define functions
 # Get repo metadata
@@ -628,11 +629,12 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'MPI-ESM-1-2-HR'
-source_id[key]['institution_id'] = [
- 'MPI-M',
- 'DWD'
-]
+key = 'ACCESS-1-0'
+source_id.pop(key)
+key = 'PCMDI-test-1-0'
+source_id[key]['model_component']['atmos']['description'] = 'Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)'
+source_id[key]['model_component']['ocean']['description'] = 'BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['seaIce']['description'] = 'Declining1.0-warming (360 x 180 longitude/latitude)'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -4,3 +4,4 @@
 ~$*.xlsx
 src/*.py~
 src/*.sh~
+src/*.txt

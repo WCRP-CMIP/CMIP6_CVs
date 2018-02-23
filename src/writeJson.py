@@ -223,6 +223,22 @@ PJD 27 Oct 2017    - Revise MPI source_id values https://github.com/WCRP-CMIP/CM
 PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/404, 406, 407
 PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/421
 PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
+PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
+PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
+PJD  7 Nov 2017    - Further minor tweaks to GFDL-ESM2M https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD  8 Nov 2017    - Correct model components for various LS3MIP/LUMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/423
+PJD 15 Nov 2017    - Register multiple CAS source_id values FGOALS* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428, 436
+PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/439
+PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
+PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
+PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
+PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
+PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
+PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
+PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
+PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
+PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
+PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
                    - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
@@ -257,17 +273,17 @@ versionCVContent = 0 ; # Incremented when a change to existing content is made o
 versionCVCommit = '' ; # Incremented whenever a new source_id and/or institution_id is added or amended
 # Have to think about last entry, as only single commit (and not per file commit) will work here
 
-#180213 2143 - latest versions below
+#180223 1129 - latest versions below
 #CMIP6_activity_id.json Thu Sep 7 10:30:00 2017 -0700 'Issue397 durack1 augment activity_id with description (#400)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c28217095e8ca770b6cd63fa97b8d022ca52aea7
 #CMIP6_experiment_id.json Wed Nov 8 10:26:00 2017 -0700 'Issue423 durack1 correct experiment_id components LUMIP LS3MIP' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3bbbc883bfaf7a8f99cd50603bbf3199491d7c49
 #CMIP6_frequency.json Fri Oct 27 14:03:00 2017 -0700 'Issue414 durack1 revise frequency 1hrCM definition (#418)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/62129c480e970cf22a5ca31b169bca2e21cb2b9d
-#CMIP6_grid_label.json Fri Sep 8 18:12:00 2016 -0700 'Issue395 durack1 augment grid_label with description (#401)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d5ab3b13221bad7abe52def13689062886366b9b
-#CMIP6_institution_id.json Tues Feb 13 9:39:00 2016 -0700 'Issue456 durack1 revise institution_id NCAR (#458)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b
-#CMIP6_license.json Mon Feb 27 10:30:00 2016 -0700 'Issue225 durack1 add institution_id THU (#232)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44
+#CMIP6_grid_label.json Fri Sep 8 18:12:00 2017 -0700 'Issue395 durack1 augment grid_label with description (#401)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d5ab3b13221bad7abe52def13689062886366b9b
+#CMIP6_institution_id.json Thu Feb 22 16:04:00 2018 -0700 'Issue459 durack1 register institution_id AER (#462)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/eacd16e330d985ae8694a6cb738b253a7d265611
+#CMIP6_license.json Mon Feb 27 10:30:00 2017 -0700 'Issue225 durack1 add institution_id THU (#232)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44
 #CMIP6_nominal_resolution.json Tues Nov 15 16:04:00 2016 -0700 'Issue141 durack1 update grid_resolution to nominal_resolution (#143)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c45c83d65814fa3caaa965554f0d7eb74b80a186
 #CMIP6_realm.json Tues Apr 18 12:03:00 2017 -0700 'Issue285 durack1 update realm format (#290)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7de3c77a3cf91dd6c34509024d5493e40b1c8d9d
 #CMIP6_required_global_attributes.json Thu Mar 16 12:59:00 2017 -0700 'deleted trailing comma from list' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/534fa1b7ac02a92c6b7e2e770f4e34d73ae94d4c
-#CMIP6_source_id.json Wed Jan 10 18:24:00 2017 -0700 'Issue196 durack1 revise source_id MPI-ESM-1-2-HR (#449)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/415226b1f8c49a18a7d129f8f2c7ef7cf1961a59
+#CMIP6_source_id.json Fri Feb 23 11:20:00 2018 -0700 'Issue457 durack1 revise source_id entries HadGEM3 and UKESM1 (#464)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c35e10ff690a1e36ac20f4ef3f5b73374fd440ec
 #CMIP6_source_type.json Fri Sep 8 17:57:00 2017 -0700 'Issue396 durack1 augment source_type with description (#399)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/fa3f07e9c215b35e0a54737acba2c2a9f6b8901f
 #CMIP6_sub_experiment_id.json Wed Mar 8 11:27:00 2017 -0700 'Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/af9202b7e26d357aa988c1741b7a25f90fdedbfd
 #CMIP6_table_id.json Fri Jan 13 09:27:00 2017 -0700 'Issue199 durack1 update table_id to Data Request v1.0 (#200)' https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f4a9fc202b7bea32038d92791cbce95af75022ab
@@ -527,16 +543,19 @@ grid_label = {
 
 #%% Institutions
 institution_id = {
+    'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
+    'CAS': 'Chinese Academy of Sciences, Beijing 100029, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
+    'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
@@ -549,7 +568,7 @@ institution_id = {
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
-    'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80301, USA',
+    'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
     'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
@@ -558,7 +577,8 @@ institution_id = {
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
-    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China'
+    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
+    'UHH': 'Universitat Hamburg, Hamburg 20148, Germany'
 }
 
 #%% CMIP6 License
@@ -642,47 +662,28 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 
 # Fix issues
-key = 'HadGEM3-GC31-MH'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'HighResMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'MOHC'
-]
-source_id[key]['label'] = 'HadGEM3-GC31-MH'
-source_id[key]['label_extended'] = 'HadGEM3-GC3.1-N216ORCA12'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
-source_id[key]['release_year'] = '2016'
-source_id[key]['source_id'] = key
+cice_orca1_desc = 'CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)'
+cice_orca025_desc = 'CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)'
+cice_orca12_desc = 'CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)'
+nemo_orca1_desc = 'NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+nemo_orca025_desc = 'NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+nemo_orca12_desc = 'NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+orca1 = (nemo_orca1_desc, cice_orca1_desc)
+orca025 = (nemo_orca025_desc, cice_orca025_desc)
+orca12 = (nemo_orca12_desc, cice_orca12_desc)
+models_to_descriptions = {
+    'HadGEM3-GC31-HH': orca12,
+    'HadGEM3-GC31-HM': orca025,
+    'HadGEM3-GC31-LL': orca1,
+    'HadGEM3-GC31-LM': orca025,
+    'HadGEM3-GC31-MH': orca12,
+    'HadGEM3-GC31-MM': orca025,
+    'UKESM1-0-LL': orca1,
+    'UKESM1-0-MMh': orca025}
+for model_source_id, (ocean_desc, seaIce_desc) in models_to_descriptions.items():
+    source_id[model_source_id]['model_component']['ocean']['description'] = ocean_desc
+    source_id[model_source_id]['model_component']['seaIce']['description'] = seaIce_desc
+source_id['UKESM1-0-LL']['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

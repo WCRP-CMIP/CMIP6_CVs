@@ -4,10 +4,10 @@
     ],
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 2 11:58:05 2017 -0700",
+        "creation_date":"Fri Feb 23 11:18:44 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (91; g04a635a)",
-        "note":"Register source_id HadGEM3-GC31-MH",
-        "previous_commit":"3726633806aaed588368f2fe097975922e093135"
+        "latest_tag_point":"6.2.0.11 (23; g393f634)",
+        "note":"Revise descriptions for HadGEM3 and UKESM1 source_id entries",
+        "previous_commit":"438128a20538b46048c478d8aa26dbf381ac898f"
     }
 }

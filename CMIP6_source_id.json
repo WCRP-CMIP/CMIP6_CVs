@@ -1,54 +1,5 @@
 {
     "source_id":{
-        "ACCESS-1-0":{
-            "activity_participation":[
-                "CMIP"
-            ],
-            "cohort":[
-                "CMIP5"
-            ],
-            "institution_id":[
-                "CSIRO-BOM"
-            ],
-            "label":"ACCESS 1.0",
-            "label_extended":"ACCESS 1.0 (This entry is free text for users to contribute verbose information)",
-            "model_component":{
-                "aerosol":{
-                    "description":"CLASSIC (v1.0)",
-                    "nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
-                    "nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"MOSES2.2",
-                    "nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"CICE4.1",
-                    "nominal_resolution":"none"
-                }
-            },
-            "release_year":"2011",
-            "source_id":"ACCESS-1-0"
-        },
         "AWI-CM-1-0-HR":{
             "activity_participation":[
                 "CORDEX",
@@ -503,7 +454,7 @@
                 },
                 "land":{
                     "description":"CoLM 1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -519,7 +470,7 @@
                 },
                 "seaIce":{
                     "description":"SIS 1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2016",
@@ -531,6 +482,7 @@
                 "CMIP",
                 "CORDEX",
                 "GMMIP",
+                "HighResMIP",
                 "OMIP",
                 "SIMIP",
                 "ScenarioMIP"
@@ -1681,6 +1633,153 @@
             "release_year":"2017",
             "source_id":"EMAC-2-53-Vol"
         },
+        "FGOALS-f3-H":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-f3-H",
+            "label_extended":"FGOALS-f3-H",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"FAMIL2.2 (Cubed-sphere, c384; 1440 x 720 longitude/latitude; 32 levels; top level 2.16 hPa)",
+                    "nominal_resolution":"25 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"25 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 0.1deg; 3600 x 2302 longitude/latitude; 55 levels; top grid cell 0-5 m)",
+                    "nominal_resolution":"10 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"10 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-f3-H"
+        },
+        "FGOALS-f3-L":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-f3-L",
+            "label_extended":"FGOALS-f3-L",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"FAMIL2.2 (Cubed-sphere, c96; 360 x 180 longitude/latitude; 32 levels; top level 2.16 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-f3-L"
+        },
+        "FGOALS-g3":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"FGOALS-g3",
+            "label_extended":"FGOALS-g3",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)",
+                    "nominal_resolution":"200 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "nominal_resolution":"200 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"FGOALS-g3"
+        },
         "GFDL-AM4":{
             "activity_participation":[
                 "CMIP"
@@ -1798,23 +1897,23 @@
             "label_extended":"GFDL-ESM2M",
             "model_component":{
                 "aerosol":{
-                    "description":"GFDL-AM2p14",
+                    "description":"GFDL-AM2",
                     "nominal_resolution":"200 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM2p14 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level 3 hPa)",
+                    "description":"GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)",
                     "nominal_resolution":"200 km"
                 },
                 "atmosChem":{
-                    "description":"GFDL-AM2p14 (full atmospheric chemistry)",
+                    "description":"GFDL-AM2 (full atmospheric chemistry)",
                     "nominal_resolution":"200 km"
                 },
                 "land":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "landIce":{
-                    "description":"GFDL-LM3p7",
+                    "description":"GFDL-LM3.0",
                     "nominal_resolution":"200 km"
                 },
                 "ocean":{
@@ -1826,11 +1925,11 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"SISp2 (Tripolar360x200L50)",
+                    "description":"SIS (Tripolar360x200L50)",
                     "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2012",
             "source_id":"GFDL-ESM2M"
         },
         "GFDL-ESM4":{
@@ -1989,13 +2088,15 @@
         },
         "HadGEM3-GC31-HH":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
                 "Registered"
             ],
             "institution_id":[
-                "MOHC"
+                "MOHC",
+                "NERC"
             ],
             "label":"HadGEM3-GC31-HH",
             "label_extended":"HadGEM3-GC3.1-N512ORCA12",
@@ -2021,7 +2122,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"10 km"
                 },
                 "ocnBgchem":{
@@ -2029,7 +2130,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)",
                     "nominal_resolution":"10 km"
                 }
             },
@@ -2038,13 +2139,15 @@
         },
         "HadGEM3-GC31-HM":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
                 "Registered"
             ],
             "institution_id":[
-                "MOHC"
+                "MOHC",
+                "NERC"
             ],
             "label":"HadGEM3-GC31-HM",
             "label_extended":"HadGEM3-GC3.1-N512ORCA025",
@@ -2070,7 +2173,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2078,7 +2181,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -2091,6 +2194,7 @@
                 "CMIP",
                 "DAMIP",
                 "FAFMIP",
+                "HighResMIP",
                 "PMIP",
                 "RFMIP"
             ],
@@ -2124,7 +2228,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -2132,7 +2236,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)",
                     "nominal_resolution":"100 km"
                 }
             },
@@ -2141,6 +2245,7 @@
         },
         "HadGEM3-GC31-LM":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -2173,7 +2278,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2181,7 +2286,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -2223,7 +2328,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"10 km"
                 },
                 "ocnBgchem":{
@@ -2231,7 +2336,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 2160 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)",
                     "nominal_resolution":"10 km"
                 }
             },
@@ -2240,8 +2345,10 @@
         },
         "HadGEM3-GC31-MM":{
             "activity_participation":[
+                "CMIP",
                 "DCPP",
                 "GMMIP",
+                "HighResMIP",
                 "LS3MIP",
                 "OMIP"
             ],
@@ -2275,7 +2382,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2283,7 +2390,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -2789,7 +2896,8 @@
                 "Registered"
             ],
             "institution_id":[
-                "MPI-M"
+                "MPI-M",
+                "DWD"
             ],
             "label":"MPI-ESM1.2-HR",
             "label_extended":"MPI-ESM1.2-HR",
@@ -3106,7 +3214,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2017",
@@ -3156,7 +3264,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -3205,7 +3313,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"10 km"
                 }
             },
             "release_year":"2017",
@@ -3255,7 +3363,7 @@
                 },
                 "seaIce":{
                     "description":"Fixed",
-                    "nominal_resolution":""
+                    "nominal_resolution":"10 km"
                 }
             },
             "release_year":"2017",
@@ -3276,7 +3384,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)",
@@ -3284,11 +3392,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3300,11 +3408,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2018",
@@ -3335,7 +3443,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3343,11 +3451,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3359,11 +3467,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3388,7 +3496,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3396,11 +3504,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3412,11 +3520,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3437,7 +3545,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
@@ -3445,11 +3553,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemComp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3461,11 +3569,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3492,7 +3600,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
@@ -3500,11 +3608,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3516,11 +3624,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2017",
@@ -3547,7 +3655,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
@@ -3555,11 +3663,11 @@
                 },
                 "atmosChem":{
                     "description":"OsloChemSimp",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"CLM",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"CISM",
@@ -3571,11 +3679,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"CICE",
-                    "nominal_resolution":""
+                    "nominal_resolution":"100 km"
                 }
             },
             "release_year":"2017",
@@ -3599,7 +3707,7 @@
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"Earth1.0-gettingHotter (360x180; 50 levels; top level 0.1 mb)",
+                    "description":"Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)",
                     "nominal_resolution":"1x1 degree"
                 },
                 "atmosChem":{
@@ -3615,7 +3723,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"BlueMarble1.0-warming (360x180; 50 levels; top grid cell 0-10m)",
+                    "description":"BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"1x1 degree"
                 },
                 "ocnBgchem":{
@@ -3623,7 +3731,7 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"Declining1.0-warming",
+                    "description":"Declining1.0-warming (360 x 180 longitude/latitude)",
                     "nominal_resolution":"1x1 degree"
                 }
             },
@@ -3684,6 +3792,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CMIP",
                 "GeoMIP",
                 "LUMIP",
                 "OMIP",
@@ -3723,7 +3832,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -3731,17 +3840,18 @@
                     "nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 180 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)",
                     "nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2018",
             "source_id":"UKESM1-0-LL"
         },
         "UKESM1-0-MMh":{
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -3775,7 +3885,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO-HadGEM3-GO6.0 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -3783,7 +3893,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 720 longitude/latitude)",
+                    "description":"CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
                     "nominal_resolution":"25 km"
                 }
             },
@@ -3842,10 +3952,10 @@
     },
     "version_metadata":{
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Thu Nov 2 11:58:05 2017 -0700",
+        "creation_date":"Fri Feb 23 11:18:44 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.7 (96; gb4d5ed4)",
-        "note":"Register source_id HadGEM3-GC31-MH",
-        "previous_commit":"7ecdb2d1fcf06f1dc3012cdb2b9849e8399b74f6"
+        "latest_tag_point":"6.2.0.11 (28; g1e1adb8)",
+        "note":"Revise descriptions for HadGEM3 and UKESM1 source_id entries",
+        "previous_commit":"5318e7bdeae4a7630f0ae26ad8f439ec47418669"
     }
 }

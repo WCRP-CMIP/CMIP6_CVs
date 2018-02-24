@@ -6,7 +6,7 @@ Created on Fri Feb 23 13:09:26 2018
 @author: durack1
 """
 #%% imports
-import json
+import json,re
 from durolib import getGitInfo
 
 #%% Get repo metadata
@@ -82,6 +82,10 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     return [versionHistory,versions]
 
 
+def entryCheck(entry,search=re.compile(r'[^a-zA-Z0-9-]').search):
+    return not bool(search(entry))
+
+
 def getFileHistory(filePath):
     # Call getGitInfo
     versionInfo = getGitInfo(filePath)
@@ -109,9 +113,9 @@ def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
     versionHistory[key]['timeStamp'] = timeStamp
     versionHistory[key]['URL'] = ''.join([url,MD5])
     versionHistory[key]['MD5'] = MD5
-    
+
     return versionHistory
-    
+
 
 #%% Clean functions
 def cleanString(string):
@@ -124,6 +128,7 @@ def cleanString(string):
         string = string.replace('   ', ' ')  # Replace '  ', '   '
         string = string.replace('  ', ' ')  # Replace '  ', '   '
         string = string.replace('None','none')  # Replace None, none
+        string = string.replace('abrupt4xCO2','abrupt-4xCO2')
         #string = string.replace('(&C', '(and C') # experiment_id html fix
         #string = string.replace('(& ','(and ') # experiment_id html fix
         #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix

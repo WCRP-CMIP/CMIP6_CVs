@@ -241,6 +241,7 @@ PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://
 PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
 PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 23 Feb 2018    - Added tag generation for each new version
+PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/378
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -248,7 +249,7 @@ PJD 23 Feb 2018    - Added tag generation for each new version
 """
 
 #%% Set commit message
-commitMessage = '\"Convert versioning for internal consistency\"'
+commitMessage = '\"Validate source_id entries against CVs\"'
 
 #%% Import statements
 import calendar
@@ -258,10 +259,10 @@ import json
 import os
 import shlex
 import subprocess
-#import sys
+import sys
 import time
 from durolib import readJsonCreateDict
-from CMIP6Lib import ascertainVersion,cleanString, dictDepth, getFileHistory, versionHistoryUpdate
+from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -316,6 +317,14 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key1 = 'abrupt-4xCO2'
+experiment_id[key1]['description'] = 'DECK: abrupt-4xCO2'
+key = 'a4SST'
+experiment_id[key]['parent_experiment_id'] = [key1]
+key = 'a4SSTice'
+experiment_id[key]['parent_experiment_id'] = [key1]
+key = 'a4SSTice-4xCO2'
+experiment_id[key]['parent_experiment_id'] = [key1]
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -529,6 +538,55 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'CAMS-CSM1-0'
+source_id[key] = {}
+source_id[key] = source_id.pop('CAMS_CSM1-0')
+key = 'CanESM5'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '500 km'
+key = 'FGOALS-g3'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+key = 'ICON-ESM-LR'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+key = 'INM-CM4-8'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+key = 'INM-CM5-0'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+key = 'INM-CM5-H'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '10 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
+key = 'GFDL-ESM2M'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
+key = 'MPI-ESM-1-2-LR'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
+key = 'IITM-ESM'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+key = 'IPSL-CM6A-LR'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+
+key = 'VRESM-1-0'
+source_id[key]['activity_participation'] = [
+ 'CMIP'
+]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -681,6 +739,86 @@ for jsonName in ['experiment_id','source_id']:
         vars()[jsonName] = dictToClean
 del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
     d1Key,keys2,d2Key)
+
+#%% Validate source_id and experiment_id entries
+# source_id
+for key in source_id.keys():
+    if key == 'VRESM-1-0':
+        continue ; # Ignore - https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+    # Validate source_id format
+    if not entryCheck(key):
+        print 'Invalid source_id format for entry:',key,'- aborting'
+        sys.exit()
+    # Validate activity_participation/activity_id
+    val = source_id[key]['activity_participation']
+    for act in val:
+        if act not in activity_id:
+            print 'Invalid activity_participation for entry:',key,'- aborting'
+            sys.exit()
+    # Validate institution_id
+    vals = source_id[key]['institution_id']
+    for val in vals:
+        if val not in institution_id:
+            print 'Invalid institution_id for entry:',key,'- aborting'
+            sys.exit()
+    # Validate nominal resolution
+    vals = source_id[key]['model_component'].keys()
+    for val1 in vals:
+        val2 = source_id[key]['model_component'][val1]['nominal_resolution']
+        if val2 == 'none':
+            pass
+        elif val2 not in nominal_resolution:
+            print 'Invalid nominal_resolution for entry:',key,val1,val2,'- aborting'
+            sys.exit()
+# experiment_ids
+experiment_id_keys = experiment_id.keys()
+for key in experiment_id_keys:
+    # Validate source_id format
+    if not entryCheck(key):
+        print 'Invalid experiment_id format for entry:',key,'- aborting'
+        sys.exit()
+    # Validate internal key
+    val = experiment_id[key]['experiment_id']
+    if not val == key:
+        print 'Invalid experiment_id for entry:',key,'- aborting'
+        sys.exit()
+    # Validate activity_id
+    val = experiment_id[key]['activity_id']
+    for act in val:
+        if act not in activity_id:
+            print 'Invalid activity_participation for entry:',key,act,'- aborting'
+            sys.exit()
+    # Validate additional_allowed_model_components
+    vals = experiment_id[key]['additional_allowed_model_components']
+    for val in vals:
+        if val == '':
+            pass
+        elif val not in source_type:
+            print 'Invalid additional_allowed_model_components for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate required_model_components
+    vals = experiment_id[key]['required_model_components']
+    for val in vals:
+        if val not in source_type:
+            print 'Invalid required_model_components for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate parent_activity_id
+    vals = experiment_id[key]['parent_activity_id']
+    for val in vals:
+        if val == 'no parent':
+            pass
+        elif val not in activity_id:
+            print 'Invalid parent_activity_id for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate parent_experiment_id
+    vals = experiment_id[key]['parent_experiment_id']
+    for val in vals:
+        if val == 'no parent':
+            pass
+        elif val not in experiment_id_keys:
+            print 'Invalid experiment_id_keys for entry:',key,val,'- aborting'
+            sys.exit()
+#sys.exit() ; # Turn back on to catch errors prior to running commit
 
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:

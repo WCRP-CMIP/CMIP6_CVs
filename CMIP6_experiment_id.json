@@ -7278,11 +7278,12 @@
         }
     },
     "version_metadata":{
+        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
+        "CV_collection_version":"6.2.1.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Feb 23 11:18:44 2018 -0800",
+        "experiment_id_CV_modified":"Wed Nov 8 10:26:00 2017 -0700",
+        "experiment_id_CV_note":"Issue423 durack1 correct experiment_id components LUMIP LS3MIP (#437)",
         "institution_id":"PCMDI",
-        "latest_tag_point":"6.2.0.11 (19; g5423aa9)",
-        "note":"Revise descriptions for HadGEM3 and UKESM1 source_id entries",
-        "previous_commit":"0ca4cd2eca3c82b03b67505cfc7b9833bf700c72"
+        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd"
     }
 }

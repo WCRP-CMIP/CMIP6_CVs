@@ -32,11 +32,12 @@
         "variant_label"
     ],
     "version_metadata":{
+        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
+        "CV_collection_version":"6.2.1.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 16 08:20:53 2018 -0800",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (29; gcd43f40)",
-        "note":"Register institution_id UHH",
-        "previous_commit":"8d76ecf6faa6490a665e66f7d8e0e09bf6c2e6ba"
+        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd",
+        "required_global_attributes_CV_modified":"Thu Mar 16 12:59:00 2017 -0700",
+        "required_global_attributes_CV_note":"deleted trailing comma from list"
     }
 }

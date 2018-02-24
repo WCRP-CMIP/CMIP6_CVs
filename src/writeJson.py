@@ -205,6 +205,7 @@ PJD 26 Jul 2017    - Register institution_id SNU https://github.com/WCRP-CMIP/CM
 PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387
 PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
+PJD  2 Aug 2017    - Start work on per file versioning
 PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
 PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
 PJD  8 Sep 2017    - Augment source_type format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/396
@@ -234,63 +235,34 @@ PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
 PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
-PJD 18 Jan 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
+PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
+PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
+PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
+PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
+PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD 23 Feb 2018    - Added tag generation for each new version
+PJD 23 Feb 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
-                   - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
-                   - TODO: Generate function for json compositing
 
 @author: durack1
 """
 
+#%% Set commit message
+commitMessage = '\"Convert versioning for internal consistency\"'
+
 #%% Import statements
-#import copy ; # Useful for copy.deepcopy() of dictionaries
+import calendar
 import datetime
 import gc
 import json
 import os
 import shlex
-import ssl
 import subprocess
+#import sys
+import time
 from durolib import readJsonCreateDict
-from durolib import getGitInfo
-#import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
-# pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and unidecode ('conda install unidecode')
-#from string import replace
-#from unidecode import unidecode
-#import pdb
-
-#%% Set commit message
-commitMessage = '\"Register UHH source_id ARTS-2-3\"'
-
-#%% Define functions
-# Get repo metadata
-def getFileHistory(filePath):
-    # Call getGitInfo
-    versionInfo = getGitInfo(filePath)
-    if versionInfo == None:
-        return None
-    else:
-        # print results
-        #for count in range(0,len(versionInfo)):
-        #    print count,versionInfo[count]
-
-        version_metadata = {}
-        version_metadata['author'] = versionInfo[4].replace('author: ','')
-        version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
-        version_metadata['institution_id'] = 'PCMDI'
-        version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-        version_metadata['note'] = versionInfo[1].replace('note: ','')
-        version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
-
-        #print version_metadata
-
-        return version_metadata
-
-#%% Create urllib2 context to deal with lab/LLNL web certificates
-ctx                 = ssl.create_default_context()
-ctx.check_hostname  = False
-ctx.verify_mode     = ssl.CERT_NONE
+from CMIP6Lib import ascertainVersion,cleanString, dictDepth, getFileHistory, versionHistoryUpdate
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -342,6 +314,7 @@ tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/m
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
+del(tmp)
 
 # Fix issues
 #==============================================================================
@@ -365,77 +338,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 # Remove
 #experiment_id.pop('land-noShiftcultivate')
-#==============================================================================
-'''
-# xlsx import
-# Fields
-# Alpha/json order, xlsx column, value
-# 1  0  experiment_id string
-# 2  1  activity_id list
-# 3  8  additional_allowed_model_components list
-# 4  13 description string
-# 5  10 end_year string
-# 6  2  experiment string
-# 7  11 min_number_yrs_per_sim string
-# 8  12 parent_activity_id list
-# 9  6  parent_experiment_id list
-# 10 7  required_model_components list
-# 11 9  start_year string
-# 12 5  sub_experiment string
-# 13 4  sub_experiment_id string
-# 14 3  tier string
-
-os.chdir('/sync/git/CMIP6_CVs/src')
-inFile = '170307_CMIP6_expt_list.xlsx'
-data = pyx.get_data(inFile)
-data = data['Sheet1']
-headers = data[3]
-experiment_id = {}
-for count in range(4,len(data)):
-    if data[count] == []:
-        #print count,'blank field'
-        continue
-    row = data[count]
-    key = row[0] ; #replace(row[0],'_ ','_')
-    experiment_id[key] = {}
-    for count2,entry in enumerate(headers):
-        if count2 == 5:
-            continue ; # Skip sub_experiment
-        entry = replace(entry,'_ ','_') ; # clean up spaces
-        entry = replace(entry,' ', '_') ; # replace spaces with underscores
-        if count2 >= len(row):
-            experiment_id[key][entry] = ''
-            continue
-        value = row[count2]
-        if count2 in [1,4,6,7,8,12]:
-            if value == None:
-                pass
-            elif value == 'no parent':
-                pass
-            elif 'no parent,' in value:
-                value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
-                pass
-            else:
-                value = replace(value,',','') ; # remove ','
-                value = value.split() ; # Change type to list
-                #print value
-        if type(value) == long:
-            experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
-        elif type(value) == list:
-            experiment_id[key][entry] = value
-        elif value == None:
-            experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
-        else:
-            value = replace(value,'    ',' ') ; # replace whitespace
-            value = replace(value,'   ',' ') ; # replace whitespace
-            value = replace(value,'  ',' ') ; # replace whitespace
-            experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
-            try:
-                unidecode(value)
-            except:
-                print count,count2,key,entry,value
-del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
-'''
 
 #%% Frequencies
 frequency = {
@@ -508,6 +410,7 @@ grid_label = {
 
 #%% Institutions
 institution_id = {
+    'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',
@@ -532,7 +435,7 @@ institution_id = {
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
-    'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80301, USA',
+    'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
     'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
@@ -624,6 +527,7 @@ tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/maste
 source_id = readJsonCreateDict(tmp)
 source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
+del(tmp)
 
 # Fix issues
 key = 'ARTS-2-3'
@@ -737,6 +641,7 @@ sub_experiment_id['s1910'] = 'initialized near end of year 1910'
 sub_experiment_id['s1950'] = 'initialized near end of year 1950'
 for yr in range(1960,2030):
     sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])
+del(yr)
 
 #%% Table ids
 table_id = [
@@ -785,68 +690,21 @@ table_id = [
     'fx'
 ]
 
-#%% Define clean functions
-def cleanString(string):
-    if isinstance(string,str) or isinstance(string,unicode):
-    # Take a string and clean it for standard errors
-        string = string.strip()  # Remove trailing whitespace
-        string = string.strip(',.')  # Remove trailing characters
-        string = string.replace(' + ', ' and ')  # Replace +
-        string = string.replace(' & ', ' and ')  # Replace +
-        string = string.replace('   ', ' ')  # Replace '  ', '   '
-        string = string.replace('  ', ' ')  # Replace '  ', '   '
-        string = string.replace('None','none')  # Replace None, none
-        #string = string.replace('(&C', '(and C') # experiment_id html fix
-        #string = string.replace('(& ','(and ') # experiment_id html fix
-        #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
-        #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
-        #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
-    else:
-        print 'Non-string argument, aborting..'
-        print string
-        return string
-
-    return string
-
-def dictDepth(x):
-    if type(x) is dict and x:
-        return 1 + max(dictDepth(x[a]) for a in x)
-    if type(x) is list and x:
-        return 1 + max(dictDepth(a) for a in x)
-    return 0
-
-#You can walk a nested dictionary using recursion
-def walk_dict(dictionary):
-    for key in dictionary:
-        if isinstance(dictionary[key], dict):
-           walk_dict(dictionary[key])
-        else:
-           #do something with dictionary[k]
-           pass
-
-#%% Write variables to files
-for jsonName in masterTargets:
-    # Clean experiment formats
+#%% Prepare experiment_id and source_id for comparison
+for jsonName in ['experiment_id','source_id']:
     if jsonName in ['experiment_id','source_id']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
-            for values in value.iteritems():
-                # values is a tuple
+            for values in value.iteritems(): # values is a tuple
                 # test for dictionary
                 if type(values[1]) is list:
-                    #print 'elif list'
-                    #print values[1],values[0]
                     new = []
                     for count in range(0,len(values[1])):
-                        #print key,count
-                        #print type(values[1][count])
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
-                        #print new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
-                    #print 'elif dict'
                     # determine dict depth
                     pdepth = dictDepth(values[1])
                     keyInd = values[0]
@@ -854,42 +712,74 @@ for jsonName in masterTargets:
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
-                            #print key
-                            #print values[0]
-                            #print values[1]
-                            #print d1Key,d2Key
                             string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
-                    #print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
-                # Original checks
-                #string = dictToClean[key][values[0]]
-                #string = cleanString(string) ; # Clean string
-                #dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
+del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
+    d1Key,keys2,d2Key)
+
+#%% Load remote repo versions for comparison - generate version identifier
+for jsonName in masterTargets:
+    target = ''.join(['test',jsonName])
+    testVal = ''.join(['testVal_',jsonName])
+    if jsonName == 'mip_era':
+        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/',jsonName,'.json'])
+    else:
+        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_',jsonName,'.json'])
+    # Create input list and load from web
+    tmp = [[jsonName,url]] ;
+    vars()[target] = readJsonCreateDict(tmp)
+    vars()[target] = eval(target).get(jsonName)
+    vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
+    # Test for updates
+    vars()[testVal] = cmp(eval(target),eval(jsonName))
+    del(vars()[target],target,testVal,url,tmp)
+del(jsonName)
+# Use binary test output to generate
+versionId = ascertainVersion(testVal_activity_id,testVal_experiment_id,
+                             testVal_frequency,testVal_grid_label,
+                             testVal_institution_id,testVal_license,
+                             testVal_mip_era,testVal_nominal_resolution,
+                             testVal_realm,testVal_required_global_attributes,
+                             testVal_source_id,testVal_source_type,
+                             testVal_sub_experiment_id,testVal_table_id,
+                             commitMessage)
+versionHistory = versionId[0]
+versionId = versionId[1]
+print 'Version:',versionId
+#sys.exit() ; # Use to evaluate changes
+
+#%% Write variables to files
+timeNow = datetime.datetime.now().strftime('%c')
+offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
+offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes
+timeStamp = ''.join([timeNow,' ',offset])
+del(timeNow,offset)
+
+for jsonName in masterTargets:
     # Write file
     if jsonName == 'mip_era':
         outFile = ''.join(['../', jsonName, '.json'])
     else:
         outFile = ''.join(['../CMIP6_', jsonName, '.json'])
-    # Get repo version/metadata
-    path = os.path.realpath(__file__)
-    outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
-    #print outFileTest
-    versionInfo = getFileHistory(outFileTest)
-    #versionInfo = None ; # Used to add a new file
-    if versionInfo == None:
-        versionInfo = {}
-        versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
-        versionInfo['creation_date'] = ''.join([datetime.datetime.now().strftime('%c'),' -0800'])
-        versionInfo['institution_id'] = 'PCMDI'
-        versionInfo['latest_tag_point'] = 'None'
-        versionInfo['note'] = 'None'
-        versionInfo['previous_commit'] = 'None'
+    # Get repo version/metadata - from src/writeJson.py
+
+    # Extract last recorded commit for src/writeJson.py
+    versionInfo1 = getFileHistory(os.path.realpath(__file__))
+    versionInfo = {}
+    versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
+    versionInfo['institution_id'] = 'PCMDI'
+    versionInfo['CV_collection_modified'] = timeStamp
+    versionInfo['CV_collection_version'] = versionId
+    versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
+    versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
+    versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
+    del(versionInfo1)
 
     # Check file exists
     if os.path.exists(outFile):
@@ -913,20 +803,105 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
-    # Convert to a per file commit
-    args = shlex.split(''.join(['git commit -am ',commitMessage]))
-    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+# Generate revised html - process both experiment_id and source_id (alpha order)
+#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+args = shlex.split('python ./json_to_html.py')
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-    # If source_id generate revised html - process both experiment_id and source_id (alpha order)
-    if jsonName == 'source_id':
-        #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-        args = shlex.split('python ./json_to_html.py')
-        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+# Convert to a per file commit
+args = shlex.split(''.join(['git commit -am ',commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-        args = shlex.split(''.join(['git commit -am ',commitMessage]))
-        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-del(jsonName, jsonDict, outFile)
+del(args,jsonName,jsonDict,outFile,p)
+del(activity_id,experiment_id,frequency,grid_label,institution_id,license,
+    masterTargets,mip_era,nominal_resolution,realm,required_global_attributes,
+    source_id,source_type,sub_experiment_id,table_id)
 gc.collect()
 
-# Validate - only necessary if files are not written by json module
+#%% Update version info from new file/commit history
+# Extract fresh recorded commit for src/writeJson.py
+versionInfo1 = getFileHistory(os.path.realpath(__file__))
+MD5 = versionInfo1.get('previous_commit')
+# Now update versionHistory - can use list entries, as var names aren't locatable
+if testVal_activity_id:
+    key = 'activity_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_experiment_id:
+    key = 'experiment_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_frequency:
+    key = 'frequency'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_grid_label:
+    key = 'grid_label'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_license:
+    key = 'license'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_mip_era:
+    key = 'mip_era'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_nominal_resolution:
+    key = 'nominal_resolution'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_realm:
+    key = 'realm'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_required_global_attributes:
+    key = 'required_global_attributes'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_source_type:
+    key = 'source_type'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_sub_experiment_id:
+    key = 'sub_experiment_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_table_id:
+    key = 'table_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_institution_id:
+    key = 'institution_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_source_id:
+    key = 'source_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+# Test for changes and report
+test = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
+        testVal_grid_label,testVal_license,testVal_mip_era,
+        testVal_nominal_resolution,testVal_realm,
+        testVal_required_global_attributes,testVal_source_type,
+        testVal_sub_experiment_id,testVal_table_id,testVal_institution_id,
+        testVal_source_id]
+if any(test):
+    # Create host dictionary
+    jsonDict = {}
+    jsonDict['versionHistory'] = versionHistory
+    outFile = 'versionHistory.json'
+    if os.path.exists(outFile):
+        os.remove(outFile)
+    fH = open(outFile, 'w')
+    json.dump(
+        jsonDict,
+        fH,
+        ensure_ascii=True,
+        sort_keys=True,
+        indent=4,
+        separators=(
+            ',',
+            ':'),
+        encoding="utf-8")
+    fH.close()
+    print('versionHistory.json updated')
+# Cleanup anyway
+del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_label,
+    testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
+    testVal_realm,testVal_required_global_attributes,testVal_source_id,
+    testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
+    versionHistory)
+
+# Generate composite command and execute
+cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
+print cmd
+subprocess.call(cmd,shell=True) ; # Shell=True required for string
+# And push all new tags to remote
+subprocess.call(['git','push','--tags'])

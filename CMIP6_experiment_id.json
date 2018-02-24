@@ -7278,11 +7278,12 @@
         }
     },
     "version_metadata":{
+        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
+        "CV_collection_version":"6.2.1.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Tue Jan 16 08:20:52 2018 -0800",
+        "experiment_id_CV_modified":"Wed Nov 8 10:26:00 2017 -0700",
+        "experiment_id_CV_note":"Issue423 durack1 correct experiment_id components LUMIP LS3MIP (#437)",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.3.0 (21; g598fe8b)",
-        "note":"Register institution_id UHH",
-        "previous_commit":"fb4ec0f163b4bd597bd61e75d814848c3306dc68"
+        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd"
     }
 }

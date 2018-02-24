@@ -240,6 +240,7 @@ PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CM
 PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
 PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
 PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD 23 Feb 2018    - Added tag generation for each new version
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -856,3 +857,10 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
     versionHistory)
+
+# Generate composite command and execute
+cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
+print cmd
+subprocess.call(cmd,shell=True) ; # Shell=True required for string
+# And push all new tags to remote
+subprocess.call(['git','push','--tags'])

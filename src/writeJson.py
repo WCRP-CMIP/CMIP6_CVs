@@ -249,7 +249,7 @@ PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/W
 """
 
 #%% Set commit message
-commitMessage = '\"Validate source_id entries against CVs\"'
+commitMessage = '\"Cleanup after CV validation for source_id and experiment_id\"'
 
 #%% Import statements
 import calendar
@@ -317,14 +317,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
-key1 = 'abrupt-4xCO2'
-experiment_id[key1]['description'] = 'DECK: abrupt-4xCO2'
-key = 'a4SST'
-experiment_id[key]['parent_experiment_id'] = [key1]
-key = 'a4SSTice'
-experiment_id[key]['parent_experiment_id'] = [key1]
-key = 'a4SSTice-4xCO2'
-experiment_id[key]['parent_experiment_id'] = [key1]
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -538,55 +530,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CAMS-CSM1-0'
-source_id[key] = {}
-source_id[key] = source_id.pop('CAMS_CSM1-0')
-key = 'CanESM5'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '500 km'
-key = 'FGOALS-g3'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-key = 'ICON-ESM-LR'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-key = 'INM-CM4-8'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-key = 'INM-CM5-0'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
-key = 'INM-CM5-H'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '10 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '10 km'
-key = 'GFDL-ESM2M'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
-key = 'MPI-ESM-1-2-LR'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
-key = 'IITM-ESM'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-key = 'IPSL-CM6A-LR'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-
-key = 'VRESM-1-0'
-source_id[key]['activity_participation'] = [
- 'CMIP'
-]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -818,6 +761,8 @@ for key in experiment_id_keys:
         elif val not in experiment_id_keys:
             print 'Invalid experiment_id_keys for entry:',key,val,'- aborting'
             sys.exit()
+
+del(experiment_id_keys,key,act,val,val1,val2,vals)
 #sys.exit() ; # Turn back on to catch errors prior to running commit
 
 #%% Load remote repo versions for comparison - generate version identifier
@@ -903,10 +848,6 @@ for jsonName in masterTargets:
 # Generate revised html - process both experiment_id and source_id (alpha order)
 #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
 args = shlex.split('python ./json_to_html.py')
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-# Convert to a per file commit
-args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 del(args,jsonName,jsonDict,outFile,p)
@@ -996,9 +937,15 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
     versionHistory)
 
-# Generate composite command and execute
-cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
-print cmd
-subprocess.call(cmd,shell=True) ; # Shell=True required for string
-# And push all new tags to remote
-subprocess.call(['git','push','--tags'])
+#%% Now all file changes are complete, commit and tag
+args = shlex.split(''.join(['git commit -am ',commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+
+# Test for version change and push tag
+if versionId != versionInfo['CV_collection_version']:
+    # Generate composite command and execute
+    cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
+    print cmd
+    subprocess.call(cmd,shell=True) ; # Shell=True required for string
+    # And push all new tags to remote
+    subprocess.call(['git','push','--tags'])

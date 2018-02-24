@@ -24,7 +24,7 @@
         "VolMIP":"Volcanic Forcings Model Intercomparison Project"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 23 20:21:26 2018 -0800",
+        "CV_collection_modified":"Fri Feb 23 20:47:30 2018 -0800",
         "CV_collection_version":"6.2.2.0",
         "activity_id_CV_modified":"Thu Sep 7 10:30:00 2017 -0700",
         "activity_id_CV_note":"Issue397 durack1 augment activity_id with description (#400)",

@@ -3951,12 +3951,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 23 20:21:26 2018 -0800",
+        "CV_collection_modified":"Fri Feb 23 20:47:30 2018 -0800",
         "CV_collection_version":"6.2.2.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"dd84a7f76a3591edb9ddb37f7dcf058466940657",
-        "source_id_CV_modified":"Fri Feb 23 11:20:00 2018 -0700",
-        "source_id_CV_note":"Issue457 durack1 revise source_id entries HadGEM3 and UKESM1 (#464)"
+        "source_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
+        "source_id_CV_note":"\"Validate source_id entries against CVs\""
     }
 }

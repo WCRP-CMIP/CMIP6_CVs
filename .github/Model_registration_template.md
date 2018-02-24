@@ -24,29 +24,29 @@ Example:
     source_id = ACCESS-1-0 (an alternative could be "ACCESS1-0")
     institution_id = CSIRO-BOM
     release_year = 2011
-    activity_participation = CMIP
+    activity_participation = [CMIP]
 
     aerosol:
     description = CLASSIC (v1.0)
     nominal_resolution = 100 km
     atmos:
-    description = HadGAM2 (r1.1; N96, 192 x 145 longitude/latitude; 38 levels; top level 39255 m)
+    description = HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)
     nominal_resolution = 100 km
     atmosChem:
-    description = None
-    nominal_resolution = None
+    description = none
+    nominal_resolution = none
     land:
     description = MOSES2.2
     nominal_resolution = 100 km    
     landIce:
-    description = None
-    nominal_resolution = None 
+    description = none
+    nominal_resolution = none 
     ocean:
-    description = ACCESS-OM (MOM4p1; tripolar primarily 1deg, 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)
+    description = ACCESS-OM (MOM4p1, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)
     nominal_resolution = 100 km
     ocnBgchem:
-    description = None
-    nominal_resolution = None
+    description = none
+    nominal_resolution = none
     seaIce:
     description = CICE4.1
     nominal_resolution = 100 km

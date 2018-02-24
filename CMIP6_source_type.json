@@ -1,23 +1,23 @@
 {
-    "source_type":[
-        "AER",
-        "AGCM",
-        "AOGCM",
-        "BGCM",
-        "CHEM",
-        "ESM",
-        "ISM",
-        "LAND",
-        "OGCM",
-        "RAD",
-        "SLAB"
-    ],
+    "source_type":{
+        "AER":"aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)",
+        "AGCM":"atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface",
+        "AOGCM":"coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice",
+        "BGC":"biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean",
+        "CHEM":"chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them",
+        "ISM":"ice-sheet model that includes ice-flow",
+        "LAND":"land model run uncoupled from the atmosphere",
+        "OGCM":"ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model",
+        "RAD":"radiation component of an atmospheric model run 'offline'",
+        "SLAB":"slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system"
+    },
     "version_metadata":{
+        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
+        "CV_collection_version":"6.2.1.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "creation_date":"Fri Apr 21 19:40:33 2017 -0700",
         "institution_id":"PCMDI",
-        "latest_tag_point":"3.2.3 (34; g8d4d48b)",
-        "note":"Revise CMCC source_id atmos entries",
-        "previous_commit":"81393a65c579c0e434c21dcafea416636f532449"
+        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd",
+        "source_type_CV_modified":"Fri Sep 8 17:57:00 2017 -0700",
+        "source_type_CV_note":"Issue396 durack1 augment source_type with description (#399)"
     }
 }

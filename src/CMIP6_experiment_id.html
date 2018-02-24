@@ -82,7 +82,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -96,7 +96,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -166,7 +166,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -362,7 +362,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -417,7 +417,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -502,7 +502,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -592,20 +592,6 @@ $(document).ready( function () {
 <td>86</td>
 <td>CMIP</td>
 <td>Using solar irradiance reduction, return the radiative forcing from a background of the ScenarioMIP high forcing to the ScenarioMIP middle forcing</td>
-</tr>
-<tr><td>highresSST-4co2</td>
-<td>HighResMIP</td>
-<td>highresSST-present SST with 4xCO2 concentrations</td>
-<td>3</td>
-<td>none</td>
-<td>highresSST-present</td>
-<td>AGCM</td>
-<td>AER</td>
-<td>1979</td>
-<td>2014</td>
-<td>36</td>
-<td>HighResMIP</td>
-<td>Similar to CFMIP amip-4xCO2, SSTs are held at highresSST-present values and the CO2 seen by the radiation scheme is quadrupled</td>
 </tr>
 <tr><td>1pctCO2Ndep-bgc</td>
 <td>C4MIP</td>
@@ -747,6 +733,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Additional land use policy sensitivity simulation for high radiative forcing scenario, keep all forcings the same as in C4MIP esmssp5-8.5 scenario except use SSP1-2.6 land use; emission driven</td>
 </tr>
+<tr><td>ssp585-bgc</td>
+<td>C4MIP</td>
+<td>biogeochemically-coupled version of the RCP8.5 based on SSP5</td>
+<td>2</td>
+<td>none</td>
+<td>hist-bgc</td>
+<td>AOGCM BGC</td>
+<td>AER CHEM</td>
+<td>2015</td>
+<td>2100 or 2300</td>
+<td>85</td>
+<td>C4MIP</td>
+<td>Concentration-driven future scenario simulation, biogeochemically-coupled. This simulation should optionally be extended to year 2300</td>
+</tr>
 <tr><td>dcppA-hindcast</td>
 <td>DCPP</td>
 <td>hindcast initialized based on observations and using historical forcing</td>
@@ -782,7 +782,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM</td>
-<td>AER CHEM</td>
+<td>AER CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -824,7 +824,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td>1950</td>
 <td>2014</td>
 <td>65</td>
@@ -852,7 +852,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -880,7 +880,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1076,7 +1076,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1103,7 +1103,7 @@ $(document).ready( function () {
 <td>1</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1146,7 +1146,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -1244,7 +1244,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1258,7 +1258,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -1299,7 +1299,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1355,7 +1355,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1405,20 +1405,6 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Prescribed land conditions 1980-2014 climate with Land-Hist-wfdei</td>
 </tr>
-<tr><td>sspxy</td>
-<td>ScenarioMIP</td>
-<td>low-end scenario informing 1.5C goal</td>
-<td>2</td>
-<td>none</td>
-<td>historical</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
-<td>CMIP</td>
-<td>Future scenario with low radiative forcing by the end of century. Following a forcing pathway below RCP2.6. Specific SSP and 2100 forcing level to be finalized with IAM groups within next few months. Concentration-driven</td>
-</tr>
 <tr><td>faf-stress</td>
 <td>FAFMIP</td>
 <td>control plus perturbative surface flux of momentum into ocean</td>
@@ -1454,7 +1440,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1468,7 +1454,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -1523,7 +1509,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1593,7 +1579,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1635,7 +1621,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1706,7 +1692,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM</td>
-<td>AER CHEM</td>
+<td>AER CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1719,7 +1705,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1831,7 +1817,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -1930,7 +1916,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -1958,7 +1944,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1972,7 +1958,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -1986,7 +1972,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -2048,6 +2034,20 @@ $(document).ready( function () {
 <td>100</td>
 <td>no parent</td>
 <td>DECK: spin-up portion of the control</td>
+</tr>
+<tr><td>lfmip-pdLC-princeton</td>
+<td>LS3MIP</td>
+<td>as LFMIP-pdLC with Land-Hist-princeton</td>
+<td>2</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1980</td>
+<td>2100</td>
+<td>121</td>
+<td>CMIP</td>
+<td>Prescribed land conditions 1980-2014 climate with Land-Hist-princeton</td>
 </tr>
 <tr><td>ssp245-aer</td>
 <td>DAMIP</td>
@@ -2196,7 +2196,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -2238,26 +2238,12 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
 <td>no parent</td>
 <td>Historical transient with SSTs prescribed from historical</td>
-</tr>
-<tr><td>lfmip-pdL-princeton</td>
-<td>LS3MIP</td>
-<td>as LFMIP-pdLC with Land-Hist-princeton</td>
-<td>2</td>
-<td>none</td>
-<td>historical</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>1980</td>
-<td>2100</td>
-<td>121</td>
-<td>CMIP</td>
-<td>Prescribed land conditions 1980-2014 climate with Land-Hist-princeton</td>
 </tr>
 <tr><td>land-crop-noIrrigFert</td>
 <td>LUMIP</td>
@@ -2265,7 +2251,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -2308,7 +2294,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -2350,7 +2336,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -2364,7 +2350,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>1850 or 1700</td>
 <td>2014</td>
 <td>165</td>
@@ -2742,7 +2728,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>2015</td>
 <td>2100</td>
 <td>86</td>
@@ -2896,7 +2882,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -3015,19 +3001,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments</td>
 </tr>
-<tr><td>piClim-histaer</td>
-<td>RFMIP</td>
-<td>transient effective radiative forcing by aerosols</td>
-<td>2</td>
+<tr><td>highresSST-4xCO2</td>
+<td>HighResMIP</td>
+<td>highresSST-present SST with 4xCO2 concentrations</td>
+<td>3</td>
 <td>none</td>
-<td>piControl</td>
+<td>highresSST-present</td>
 <td>AGCM</td>
-<td>AER CHEM</td>
-<td>1850</td>
-<td>2100</td>
-<td>251</td>
-<td>CMIP</td>
-<td>Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
+<td>AER</td>
+<td>1979</td>
+<td>2014</td>
+<td>36</td>
+<td>HighResMIP</td>
+<td>Similar to CFMIP amip-4xCO2, SSTs are held at highresSST-present values and the CO2 seen by the radiation scheme is quadrupled</td>
 </tr>
 <tr><td>omip1</td>
 <td>OMIP</td>
@@ -3057,19 +3043,19 @@ $(document).ready( function () {
 <td>no parent</td>
 <td>Global ocean - sea-ice coupled experiment forced with the JRA-55do inter-annually varying atmospheric and river data sets for years 1958-2016. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle</td>
 </tr>
-<tr><td>ssp585-bgc</td>
-<td>C4MIP</td>
-<td>biogeochemically-coupled version of the RCP8.5 based on SSP5</td>
+<tr><td>ssp119</td>
+<td>ScenarioMIP</td>
+<td>low-end scenario reaching 1.9 W m-2, based on SSP1</td>
 <td>2</td>
 <td>none</td>
-<td>hist-bgc</td>
-<td>AOGCM BGC</td>
-<td>AER CHEM</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
 <td>2015</td>
-<td>2100 or 2300</td>
-<td>85</td>
-<td>C4MIP</td>
-<td>Concentration-driven future scenario simulation, biogeochemically-coupled. This simulation should optionally be extended to year 2300</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Future scenario with low radiative forcing throughout reaching about 1.9 W/m2 in 2100 based on SSP1. Concentration-driven</td>
 </tr>
 <tr><td>amip-a4SST-4xCO2</td>
 <td>CFMIP</td>
@@ -3119,7 +3105,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -3148,7 +3134,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -3204,7 +3190,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER</td>
-<td>CHEM</td>
+<td>CHEM BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -3259,7 +3245,7 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
@@ -3288,7 +3274,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -3330,7 +3316,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>piControl</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td></td>
 <td></td>
 <td>30</td>
@@ -3357,13 +3343,27 @@ $(document).ready( function () {
 <td>2</td>
 <td>none</td>
 <td>no parent</td>
-<td>LAND</td>
+<td>LAND BGC</td>
 <td></td>
 <td>1850 or 1700</td>
 <td>2014</td>
 <td>165</td>
 <td>no parent</td>
 <td>Same as land-hist but with fertilization rates and area held at 1850 levels/distribution</td>
+</tr>
+<tr><td>piClim-histaer</td>
+<td>RFMIP</td>
+<td>transient effective radiative forcing by aerosols</td>
+<td>2</td>
+<td>none</td>
+<td>piControl</td>
+<td>AGCM</td>
+<td>AER CHEM</td>
+<td>1850</td>
+<td>2100</td>
+<td>251</td>
+<td>CMIP</td>
+<td>Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation</td>
 </tr>
 <tr><td>histSST-piCH4</td>
 <td>AerChemMIP</td>
@@ -3372,7 +3372,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -3400,7 +3400,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>1850 or 1700</td>
 <td>2014</td>
 <td>165</td>
@@ -3414,7 +3414,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>LAND</td>
-<td></td>
+<td>BGC</td>
 <td>1850</td>
 <td>2014</td>
 <td>165</td>
@@ -3442,7 +3442,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>ssp370</td>
 <td>AGCM AER CHEM</td>
-<td></td>
+<td>BGC</td>
 <td>2015</td>
 <td>2055</td>
 <td>41</td>
@@ -3512,7 +3512,7 @@ $(document).ready( function () {
 <td>none</td>
 <td>no parent</td>
 <td>AGCM</td>
-<td>AER CHEM</td>
+<td>AER CHEM BGC</td>
 <td>1979</td>
 <td>2014</td>
 <td>36</td>

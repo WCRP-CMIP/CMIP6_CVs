@@ -1,6 +1,8 @@
 *.py~
+*.pyc
 *.sh~
 *.swp
 ~$*.xlsx
 src/*.py~
 src/*.sh~
+src/*.txt

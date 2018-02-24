@@ -161,61 +161,107 @@ PJD 21 Apr 2017    - Register source_id CMCC-CM2-VHR4 https://github.com/WCRP-CM
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-SR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
 PJD 21 Apr 2017    - Register source_id CMCC-ESM2-HR5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/297
 PJD 21 Apr 2017    - Revise CMCC source_id atmos entries (issues 292-294)
+PJD 24 Apr 2017    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/257
+PJD 24 Apr 2017    - Revise source_id Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
+PJD 25 Apr 2017    - Register source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
+PJD 26 Apr 2017    - Revise source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/226
+PJD 26 Apr 2017    - Revise source_id BESM-2-7 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/287
+PJD 11 May 2017    - Revise GFDL source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD 11 May 2017    - Revise source_id AWI-CM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/319
+PJD 11 May 2017    - Register multiple AWI source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/320-322
+PJD 17 May 2017    - Revise source_id EMAC-2-53-Vol https://github.com/WCRP-CMIP/CMIP6_CVs/issues/231
+PJD 27 May 2017    - Rename and revise sspxy to ssp119 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/329
+PJD 27 May 2017    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/330
+PJD 30 May 2017    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/335
+PJD 30 May 2017    - Remove frequency 3hrClim https://github.com/WCRP-CMIP/CMIP6_CVs/issues/334
+PJD  6 Jun 2017    - Revise multiple CNRM source_ids and CNRM-CERFACS institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 14 Jun 2017    - Revise multiple EC-EARTH3 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
+PJD 14 Jun 2017    - Revise frequency decadal to dec https://github.com/WCRP-CMIP/CMIP6_CVs/issues/338
+PJD 14 Jun 2017    - Rename experiment_id highresSST-4co2 -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/341
+PJD 14 Jun 2017    - Update frequency format with identifiers -> highresSST-4xCO2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/342
+PJD 14 Jun 2017    - Rename experiment_id lfmip-pdL-princeton -> lfmip-pdLC-princeton https://github.com/WCRP-CMIP/CMIP6_CVs/issues/344
+PJD 15 Jun 2017    - Correct experiment_id typo AeroChemMIP -> AerChemMIP in EC-Earth3-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/352
+PJD 15 Jun 2017    - Revise source_id MRI-ESM2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/351
+PJD 15 Jun 2017    - Revise multiple NASA-GISS source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+PJD 19 Jun 2017    - Revise INM institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/357
+PJD 26 Jun 2017    - Register source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358
+PJD 26 Jun 2017    - Register source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/359
+PJD 26 Jun 2017    - Register source_id INM-CM5-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/361
+PJD 27 Jun 2017    - Revise multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184, 343
+PJD 27 Jun 2017    - Fix INM source_id formatting https://github.com/WCRP-CMIP/CMIP6_CVs/issues/358, 359, 361
+PJD 27 Jun 2017    - Correct source_type BGCM to BGC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/366
+PJD 27 Jun 2017    - Remove unregistered institution_id entries (no source_id registrations) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/362
+PJD 29 Jun 2017    - Revise source_id IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/96
+PJD 29 Jun 2017    - Revise multiple CNRM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 29 Jun 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
+PJD 29 Jun 2017    - Delete source_type ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/370
+PJD 29 Jun 2017    - Correct source_id UKESM1-0-LL activity_participation error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/371
+PJD  5 Jul 2017    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/115
+PJD 10 Jul 2017    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
+PJD 12 Jul 2017    - Revise multiple MOHC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/184
+PJD 17 Jul 2017    - Revise EC-EARTH3-HR source_id ocean description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/191
+PJD 26 Jul 2017    - Revise multiple MIROC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/229
+PJD 26 Jul 2017    - Register institution_id SNU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/386
+PJD 26 Jul 2017    - Register source_id SAM0-UNICON https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387
+PJD 27 Jul 2017    - Revise MIROC and SNU source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/pull/385#issuecomment-318256867,
+                     https://github.com/WCRP-CMIP/CMIP6_CVs/issues/387#issuecomment-318308002
+PJD  2 Aug 2017    - Start work on per file versioning
+PJD 10 Aug 2017    - Register source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/392
+PJD  7 Sep 2017    - Augment activity_id format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/397
+PJD  8 Sep 2017    - Augment source_type format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/396
+PJD  8 Sep 2017    - Augment grid_label format with description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/395
+PJD  8 Sep 2017    - Revise frequency entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/345
+PJD 21 Sep 2017    - Register institution_id HAMMOZ-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/402
+PJD 21 Sep 2017    - Register institution_id BCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/405
+PJD 26 Sep 2017    - Register source_id MPIESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
+PJD 26 Sep 2017    - Register source_id MRI-AGCM3-2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/410
+PJD  4 Oct 2017    - Add frequency monPt https://github.com/WCRP-CMIP/CMIP6_CVs/issues/413
+PJD  8 Oct 2017    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD 27 Oct 2017    - Further minor tweaks https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD 27 Oct 2017    - Revise frequency 1hrCM definition https://github.com/WCRP-CMIP/CMIP6_CVs/issues/414#issuecomment-335032399
+PJD 27 Oct 2017    - Revise MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195, 196, 197
+PJD 27 Oct 2017    - Register multiple BCC source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/404, 406, 407
+PJD 30 Oct 2017    - Register institution_id NIWA and add to UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/421
+PJD  2 Nov 2017    - Register source_id HadGEM3-GC31-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/424
+PJD  6 Nov 2017    - Register institution_id CAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/426
+PJD  7 Nov 2017    - Update missing nominal_resolution information for multiple source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/431
+PJD  7 Nov 2017    - Further minor tweaks to GFDL-ESM2M https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD  8 Nov 2017    - Correct model components for various LS3MIP/LUMIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/423
+PJD 15 Nov 2017    - Register multiple CAS source_id values FGOALS* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427, 428, 436
+PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/439
+PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
+PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
+PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
+PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
+PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
+PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
+PJD 13 Feb 2018    - Revise institution_id NCAR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/456
+PJD 22 Feb 2018    - Register institution_id AER https://github.com/WCRP-CMIP/CMIP6_CVs/issues/459
+PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/454
+PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
+PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
+PJD 23 Feb 2018    - Added tag generation for each new version
+                   - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
-                   - TODO: Redirect sources to CMIP6_CVs master files (not cmip6-cmor-tables) ; coordinate, formula_terms, grids
-                   - TODO: Generate function for json compositing
 
 @author: durack1
 """
 
+#%% Set commit message
+commitMessage = '\"Convert versioning for internal consistency\"'
+
 #%% Import statements
-#import copy ; # Useful for copy.deepcopy() of dictionaries
+import calendar
 import datetime
 import gc
 import json
 import os
 import shlex
-import ssl
 import subprocess
+#import sys
+import time
 from durolib import readJsonCreateDict
-from durolib import getGitInfo
-#import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
-# pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and unidecode ('conda install unidecode')
-#from string import replace
-#from unidecode import unidecode
-#import pdb
-
-#%% Set commit message
-commitMessage = '\"Revise CMCC source_id atmos entries\"'
-
-#%% Define functions
-# Get repo metadata
-def getFileHistory(filePath):
-    # Call getGitInfo
-    versionInfo = getGitInfo(filePath)
-    if versionInfo == None:
-        return None
-    else:
-        # print results
-        #for count in range(0,len(versionInfo)):
-        #    print count,versionInfo[count]
-
-        version_metadata = {}
-        version_metadata['author'] = versionInfo[4].replace('author: ','')
-        version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
-        version_metadata['institution_id'] = 'PCMDI'
-        version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-        version_metadata['note'] = versionInfo[1].replace('note: ','')
-        version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
-
-        #print version_metadata
-
-        return version_metadata
-
-#%% Create urllib2 context to deal with lab/LLNL web certificates
-ctx                 = ssl.create_default_context()
-ctx.check_hostname  = False
-ctx.verify_mode     = ssl.CERT_NONE
+from CMIP6Lib import ascertainVersion,cleanString, dictDepth, getFileHistory, versionHistoryUpdate
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -236,30 +282,30 @@ masterTargets = [
 ]
 
 #%% Activities
-activity_id = [
-    'AerChemMIP',
-    'C4MIP',
-    'CFMIP',
-    'CMIP',
-    'CORDEX',
-    'DAMIP',
-    'DCPP',
-    'DynVarMIP',
-    'FAFMIP',
-    'GMMIP',
-    'GeoMIP',
-    'HighResMIP',
-    'ISMIP6',
-    'LS3MIP',
-    'LUMIP',
-    'OMIP',
-    'PMIP',
-    'RFMIP',
-    'SIMIP',
-    'ScenarioMIP',
-    'VIACSAB',
-    'VolMIP'
-]
+activity_id = {
+    'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
+    'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CFMIP': 'Cloud Feedback Model Intercomparison Project',
+    'CMIP': 'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
+    'CORDEX': 'Coordinated Regional Climate Downscaling Experiment',
+    'DAMIP': 'Detection and Attribution Model Intercomparison Project',
+    'DCPP': 'Decadal Climate Prediction Project',
+    'DynVarMIP': 'Dynamics and Variability Model Intercomparison Project',
+    'FAFMIP': 'Flux-Anomaly-Forced Model Intercomparison Project',
+    'GMMIP': 'Global Monsoons Model Intercomparison Project',
+    'GeoMIP': 'Geoengineering Model Intercomparison Project',
+    'HighResMIP': 'High-Resolution Model Intercomparison Project',
+    'ISMIP6': 'Ice Sheet Model Intercomparison Project for CMIP6',
+    'LS3MIP': 'Land Surface, Snow and Soil Moisture',
+    'LUMIP': 'Land-Use Model Intercomparison Project',
+    'OMIP': 'Ocean Model Intercomparison Project',
+    'PMIP': 'Palaeoclimate Modelling Intercomparison Project',
+    'RFMIP': 'Radiative Forcing Model Intercomparison Project',
+    'SIMIP': 'Sea Ice Model Intercomparison Project',
+    'ScenarioMIP': 'Scenario Model Intercomparison Project',
+    'VIACSAB': 'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
+    'VolMIP': 'Volcanic Forcings Model Intercomparison Project'
+}
 
 #%% Experiments
 tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
@@ -267,198 +313,138 @@ tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/m
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
 experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
+del(tmp)
 
 # Fix issues
 #==============================================================================
 # Example new experiment_id entry
-#experiment_id['ism-bsmb-std'] = {}
-#experiment_id['ism-bsmb-std']['activity_id'] = ['ISMIP6']
-#experiment_id['ism-bsmb-std']['additional_allowed_model_components'] = ['']
-#experiment_id['ism-bsmb-std']['description'] = 'Offline ice sheet simulation with synthetic oceanic dataset to explore the uncertainty in sea level due to ice sheet initialization'
-#experiment_id['ism-bsmb-std']['end_year'] = ''
-#experiment_id['ism-bsmb-std']['experiment'] = 'offline ice sheet forced by initMIP synthetic oceanic experiment'
-#experiment_id['ism-bsmb-std']['min_number_yrs_per_sim'] = '100'
-#experiment_id['ism-bsmb-std']['parent_activity_id'] = ['ISMIP']
-#experiment_id['ism-bsmb-std']['parent_experiment_id'] = ['']
-#experiment_id['ism-bsmb-std']['required_model_components'] = ['ISM']
-#experiment_id['ism-bsmb-std']['start_year'] = ''
-#experiment_id['ism-bsmb-std']['sub_experiment'] = 'none'
-#experiment_id['ism-bsmb-std']['sub_experiment_id'] = 'none'
-#experiment_id['ism-bsmb-std']['tier'] = '1'
+#key = 'ssp119'
+#experiment_id[key] = {}
+#experiment_id[key]['activity_id'] = ['ScenarioMIP']
+#experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+#experiment_id[key]['description'] = 'Future scenario with low radiative forcing throughout reaching about 1.9 W/m2 in 2100 based on SSP1. Concentration-driven'
+#experiment_id[key]['end_year'] = '2100'
+#experiment_id[key]['experiment'] = 'low-end scenario reaching 1.9 W m-2, based on SSP1'
+#experiment_id[key]['experiment_id'] = key
+#experiment_id[key]['min_number_yrs_per_sim'] = '86'
+#experiment_id[key]['parent_activity_id'] = ['CMIP']
+#experiment_id[key]['parent_experiment_id'] = ['historical']
+#experiment_id[key]['required_model_components'] = ['AOGCM']
+#experiment_id[key]['start_year'] = '2015'
+#experiment_id[key]['sub_experiment_id'] = ['none']
+#experiment_id[key]['tier'] = '2'
 # Rename
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 # Remove
 #experiment_id.pop('land-noShiftcultivate')
-#==============================================================================
-'''
-# xlsx import
-# Fields
-# Alpha/json order, xlsx column, value
-# 1  0  experiment_id string
-# 2  1  activity_id list
-# 3  8  additional_allowed_model_components list
-# 4  13 description string
-# 5  10 end_year string
-# 6  2  experiment string
-# 7  11 min_number_yrs_per_sim string
-# 8  12 parent_activity_id list
-# 9  6  parent_experiment_id list
-# 10 7  required_model_components list
-# 11 9  start_year string
-# 12 5  sub_experiment string
-# 13 4  sub_experiment_id string
-# 14 3  tier string
-
-os.chdir('/sync/git/CMIP6_CVs/src')
-inFile = '170307_CMIP6_expt_list.xlsx'
-data = pyx.get_data(inFile)
-data = data['Sheet1']
-headers = data[3]
-experiment_id = {}
-for count in range(4,len(data)):
-    if data[count] == []:
-        #print count,'blank field'
-        continue
-    row = data[count]
-    key = row[0] ; #replace(row[0],'_ ','_')
-    experiment_id[key] = {}
-    for count2,entry in enumerate(headers):
-        if count2 == 5:
-            continue ; # Skip sub_experiment
-        entry = replace(entry,'_ ','_') ; # clean up spaces
-        entry = replace(entry,' ', '_') ; # replace spaces with underscores
-        if count2 >= len(row):
-            experiment_id[key][entry] = ''
-            continue
-        value = row[count2]
-        if count2 in [1,4,6,7,8,12]:
-            if value == None:
-                pass
-            elif value == 'no parent':
-                pass
-            elif 'no parent,' in value:
-                value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
-                pass
-            else:
-                value = replace(value,',','') ; # remove ','
-                value = value.split() ; # Change type to list
-                #print value
-        if type(value) == long:
-            experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
-        elif type(value) == list:
-            experiment_id[key][entry] = value
-        elif value == None:
-            experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
-        else:
-            value = replace(value,'    ',' ') ; # replace whitespace
-            value = replace(value,'   ',' ') ; # replace whitespace
-            value = replace(value,'  ',' ') ; # replace whitespace
-            experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
-            try:
-                unidecode(value)
-            except:
-                print count,count2,key,entry,value
-del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
-'''
 
 #%% Frequencies
-frequency = [
-    '1hr',
-    '1hrClimMon',
-    '3hr',
-    '3hrClim',
-    '6hr',
-    'day',
-    'decadal',
-    'fx',
-    'mon',
-    'monClim',
-    'subhr',
-    'yr',
-    'yrClim']
+frequency = {
+    '1hr': 'sampled hourly',
+    '1hrCM': 'monthly-mean diurnal cycle resolving each day into 1-hour means',
+    '1hrPt': 'sampled hourly, at specified time point within an hour',
+    '3hr': 'sampled every 3 hours',
+    '3hrPt': 'sampled 3 hourly, at specified time point within the time period',
+    '6hr': 'sampled every 6 hours',
+    '6hrPt': 'sampled 6 hourly, at specified time point within the time period',
+    'day': 'daily mean samples',
+    'dec': 'decadal mean samples',
+    'fx': 'fixed (time invariant) field',
+    'mon': 'monthly mean samples',
+    'monC': 'monthly climatology computed from monthly mean samples',
+    'monPt': 'sampled monthly, at specified time point within the time period',
+    'subhrPt': 'sampled sub-hourly, at specified time point within an hour',
+    'yr': 'annual mean samples',
+    'yrPt': 'sampled yearly, at specified time point within the time period'
+}
 
 #%% Grid labels
-grid_label = [
-    'gm',
-    'gn',
-    'gna',
-    'gng',
-    'gnz',
-    'gr',
-    'gr1',
-    'gr1a',
-    'gr1g',
-    'gr1z',
-    'gr2',
-    'gr2a',
-    'gr2g',
-    'gr2z',
-    'gr3',
-    'gr3a',
-    'gr3g',
-    'gr3z',
-    'gr4',
-    'gr4a',
-    'gr4g',
-    'gr4z',
-    'gr5',
-    'gr5a',
-    'gr5g',
-    'gr5z',
-    'gr6',
-    'gr6a',
-    'gr6g',
-    'gr6z',
-    'gr7',
-    'gr7a',
-    'gr7g',
-    'gr7z',
-    'gr8',
-    'gr8a',
-    'gr8g',
-    'gr8z',
-    'gr9',
-    'gr9a',
-    'gr9g',
-    'gr9z',
-    'gra',
-    'grg',
-    'grz'
-]
+grid_label = {
+    'gm': 'global mean data',
+    'gn': 'data reported on a model\'s native grid',
+    'gna': 'data reported on a native grid in the region of Antarctica',
+    'gng': 'data reported on a native grid in the region of Greenland',
+    'gnz': 'zonal mean data reported on a model\'s native latitude grid',
+    'gr': 'regridded data reported on the data provider\'s preferred target grid',
+    'gr1': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr1a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr1g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr1z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr2': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr2a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr2g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr2z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr3': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr3a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr3g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr3z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr4': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr4a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr4g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr4z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr5': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr5a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr5g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr5z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr6': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr6a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr6g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr6z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr7': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr7a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr7g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr7z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr8': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr8a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr8g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr8z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gr9': 'regridded data reported on a grid other than the native grid and other than the preferred target grid',
+    'gr9a': 'regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid',
+    'gr9g': 'regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid',
+    'gr9z': 'regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid',
+    'gra': 'regridded data in the region of Antarctica reported on the data provider\'s preferred target grid',
+    'grg': 'regridded data in the region of Greenland reported on the data provider\'s preferred target grid',
+    'grz': 'regridded zonal mean data reported on the data provider\'s preferred latitude target grid'
+}
 
 #%% Institutions
 institution_id = {
+    'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
+    'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
+    'CAS': 'Chinese Academy of Sciences, Beijing 100029, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
-    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31100, France)',
-    'COLA-CFS': 'Center for Ocean-Land-Atmosphere Studies, Fairfax, VA 22030, USA',
+    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
+    'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
-    'INM': 'Institute for Numerical Mathematics, Moscow 119991, Russia',
+    'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
+    'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
-    'LASG-IAP': 'Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing 100029, China',
     'MESSy-Consortium': 'The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany',
     'MIROC': 'JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)',
     'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
-    'NCAR': 'National Center for Atmospheric Research, Boulder, CO 80307, USA',
+    'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
     'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
+    'NIWA': 'National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
-    'NOAA-NCEP': 'National Oceanic and Atmospheric Administration, National Centers for Environmental Prediction, Camp Springs, MD 20746, USA',
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
-    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China'
+    'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
+    'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
+    'UHH': 'Universitat Hamburg, Hamburg 20148, Germany'
 }
 
 #%% CMIP6 License
@@ -540,43 +526,51 @@ tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/maste
 source_id = readJsonCreateDict(tmp)
 source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
+del(tmp)
 
 # Fix issues
 #==============================================================================
-#key = 'CMCC-ESM2-HR5'
+#key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
 #source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'OMIP'
+# 'CORDEX',
+# 'HighResMIP',
+# 'OMIP',
+# 'SIMIP',
+# 'VIACSAB'
 #]
-#source_id[key]['cohort'] = ['Registered']
-#source_id[key]['institution_id'] = ['CMCC']
-#source_id[key]['label'] = key
-#source_id[key]['label_extended'] = key
+#source_id[key]['cohort'] = [
+# 'Registered'
+#]
+#source_id[key]['institution_id'] = [
+# 'AWI'
+#]
+#source_id[key]['label'] = 'AWI-CM 1.0 HR'
+#source_id[key]['label_extended'] = 'AWI-CM 1.0 HR'
 #source_id[key]['model_component'] = {}
 #source_id[key]['model_component']['aerosol'] = {}
-#source_id[key]['model_component']['aerosol']['description'] = 'MAM3'
-#source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['aerosol']['description'] = 'none'
+#source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
 #source_id[key]['model_component']['atmos'] = {}
-#source_id[key]['model_component']['atmos']['description'] = 'CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)'
+#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
 #source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 #source_id[key]['model_component']['atmosChem'] = {}
 #source_id[key]['model_component']['atmosChem']['description'] = 'none'
 #source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 #source_id[key]['model_component']['land'] = {}
-#source_id[key]['model_component']['land']['description'] = 'CLM4.5 (BGC mode)'
+#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
 #source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 #source_id[key]['model_component']['landIce'] = {}
 #source_id[key]['model_component']['landIce']['description'] = 'none'
 #source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 #source_id[key]['model_component']['ocean'] = {}
-#source_id[key]['model_component']['ocean']['description'] = 'NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)'
+#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 1306775 wet nodes; 46 levels; top grid cell 0-5 m)'
 #source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
 #source_id[key]['model_component']['ocnBgchem'] = {}
-#source_id[key]['model_component']['ocnBgchem']['description'] = 'BFM5.1'
-#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
+#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 #source_id[key]['model_component']['seaIce'] = {}
-#source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0'
+#source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
 #source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
 #source_id[key]['release_year'] = '2017'
 #source_id[key]['source_id'] = key
@@ -586,19 +580,18 @@ Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.o
 '''
 
 #%% Source types
-source_type = [
-    'AER',
-    'AGCM',
-    'AOGCM',
-    'BGCM',
-    'CHEM',
-    'ESM',
-    'ISM',
-    'LAND',
-    'OGCM',
-    'RAD',
-    'SLAB'
-]
+source_type = {
+    'AER': 'aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)',
+    'AGCM': 'atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface',
+    'AOGCM': 'coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice',
+    'BGC': 'biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean',
+    'CHEM': 'chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them',
+    'ISM': 'ice-sheet model that includes ice-flow',
+    'LAND': 'land model run uncoupled from the atmosphere',
+    'OGCM': 'ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model',
+    'RAD': 'radiation component of an atmospheric model run \'offline\'',
+    'SLAB': 'slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system'
+}
 
 #%% Sub experiment ids
 sub_experiment_id = {}
@@ -607,6 +600,7 @@ sub_experiment_id['s1910'] = 'initialized near end of year 1910'
 sub_experiment_id['s1950'] = 'initialized near end of year 1950'
 for yr in range(1960,2030):
     sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])
+del(yr)
 
 #%% Table ids
 table_id = [
@@ -698,68 +692,21 @@ for i in dq.coll['CMORvar'].items:
 for k in realmCol:
     realmDict[k] = sorted( list( realmCol[k] ) )
 
-#%% Define clean functions
-def cleanString(string):
-    if isinstance(string,str) or isinstance(string,unicode):
-    # Take a string and clean it for standard errors
-        string = string.strip()  # Remove trailing whitespace
-        string = string.strip(',.')  # Remove trailing characters
-        string = string.replace(' + ', ' and ')  # Replace +
-        string = string.replace(' & ', ' and ')  # Replace +
-        string = string.replace('   ', ' ')  # Replace '  ', '   '
-        string = string.replace('  ', ' ')  # Replace '  ', '   '
-        string = string.replace('None','none')  # Replace None, none
-        #string = string.replace('(&C', '(and C') # experiment_id html fix
-        #string = string.replace('(& ','(and ') # experiment_id html fix
-        #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
-        #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
-        #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
-    else:
-        print 'Non-string argument, aborting..'
-        print string
-        return string
-
-    return string
-
-def dictDepth(x):
-    if type(x) is dict and x:
-        return 1 + max(dictDepth(x[a]) for a in x)
-    if type(x) is list and x:
-        return 1 + max(dictDepth(a) for a in x)
-    return 0
-
-#You can walk a nested dictionary using recursion
-def walk_dict(dictionary):
-    for key in dictionary:
-        if isinstance(dictionary[key], dict):
-           walk_dict(dictionary[key])
-        else:
-           #do something with dictionary[k]
-           pass
-
-#%% Write variables to files
-for jsonName in masterTargets:
-    # Clean experiment formats
+#%% Prepare experiment_id and source_id for comparison
+for jsonName in ['experiment_id','source_id']:
     if jsonName in ['experiment_id','source_id']:
         dictToClean = eval(jsonName)
         for key, value in dictToClean.iteritems():
-            for values in value.iteritems():
-                # values is a tuple
+            for values in value.iteritems(): # values is a tuple
                 # test for dictionary
                 if type(values[1]) is list:
-                    #print 'elif list'
-                    #print values[1],values[0]
                     new = []
                     for count in range(0,len(values[1])):
-                        #print key,count
-                        #print type(values[1][count])
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
-                        #print new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
-                    #print 'elif dict'
                     # determine dict depth
                     pdepth = dictDepth(values[1])
                     keyInd = values[0]
@@ -767,41 +714,74 @@ for jsonName in masterTargets:
                     for d1Key in keys1:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
-                            #print key
-                            #print values[0]
-                            #print values[1]
-                            #print d1Key,d2Key
                             string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) in [str,unicode]:
-                    #print 'elif str unicode',type(values[0])
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
-                # Original checks
-                #string = dictToClean[key][values[0]]
-                #string = cleanString(string) ; # Clean string
-                #dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
+del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
+    d1Key,keys2,d2Key)
+
+#%% Load remote repo versions for comparison - generate version identifier
+for jsonName in masterTargets:
+    target = ''.join(['test',jsonName])
+    testVal = ''.join(['testVal_',jsonName])
+    if jsonName == 'mip_era':
+        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/',jsonName,'.json'])
+    else:
+        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_',jsonName,'.json'])
+    # Create input list and load from web
+    tmp = [[jsonName,url]] ;
+    vars()[target] = readJsonCreateDict(tmp)
+    vars()[target] = eval(target).get(jsonName)
+    vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
+    # Test for updates
+    vars()[testVal] = cmp(eval(target),eval(jsonName))
+    del(vars()[target],target,testVal,url,tmp)
+del(jsonName)
+# Use binary test output to generate
+versionId = ascertainVersion(testVal_activity_id,testVal_experiment_id,
+                             testVal_frequency,testVal_grid_label,
+                             testVal_institution_id,testVal_license,
+                             testVal_mip_era,testVal_nominal_resolution,
+                             testVal_realm,testVal_required_global_attributes,
+                             testVal_source_id,testVal_source_type,
+                             testVal_sub_experiment_id,testVal_table_id,
+                             commitMessage)
+versionHistory = versionId[0]
+versionId = versionId[1]
+print 'Version:',versionId
+#sys.exit() ; # Use to evaluate changes
+
+#%% Write variables to files
+timeNow = datetime.datetime.now().strftime('%c')
+offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
+offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes
+timeStamp = ''.join([timeNow,' ',offset])
+del(timeNow,offset)
+
+for jsonName in masterTargets:
     # Write file
     if jsonName == 'mip_era':
         outFile = ''.join(['../', jsonName, '.json'])
     else:
         outFile = ''.join(['../CMIP6_', jsonName, '.json'])
-    # Get repo version/metadata
-    path = os.path.realpath(__file__)
-    outFileTest = outFile.replace('../',path.replace('src/writeJson.py',''))
-    versionInfo = getFileHistory(outFileTest)
-    #versionInfo = None ; # Used to add a new file
-    if versionInfo == None:
-        versionInfo = {}
-        versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
-        versionInfo['creation_date'] = ''.join([datetime.datetime.now().strftime('%c'),' -0800'])
-        versionInfo['institution_id'] = 'PCMDI'
-        versionInfo['latest_tag_point'] = 'None'
-        versionInfo['note'] = 'None'
-        versionInfo['previous_commit'] = 'None'
+    # Get repo version/metadata - from src/writeJson.py
+
+    # Extract last recorded commit for src/writeJson.py
+    versionInfo1 = getFileHistory(os.path.realpath(__file__))
+    versionInfo = {}
+    versionInfo['author'] = 'Paul J. Durack <durack1@llnl.gov>'
+    versionInfo['institution_id'] = 'PCMDI'
+    versionInfo['CV_collection_modified'] = timeStamp
+    versionInfo['CV_collection_version'] = versionId
+    versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
+    versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
+    versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
+    del(versionInfo1)
 
     # Check file exists
     if os.path.exists(outFile):
@@ -825,20 +805,105 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
-    # Convert to a per file commit
-    args = shlex.split(''.join(['git commit -am ',commitMessage]))
-    p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+# Generate revised html - process both experiment_id and source_id (alpha order)
+#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+args = shlex.split('python ./json_to_html.py')
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-    # If source_id generate revised html - process both experiment_id and source_id (alpha order)
-    if jsonName == 'source_id':
-        #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-        args = shlex.split('python ./json_to_html.py')
-        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+# Convert to a per file commit
+args = shlex.split(''.join(['git commit -am ',commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-        args = shlex.split(''.join(['git commit -am ',commitMessage]))
-        p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-del(jsonName, jsonDict, outFile)
+del(args,jsonName,jsonDict,outFile,p)
+del(activity_id,experiment_id,frequency,grid_label,institution_id,license,
+    masterTargets,mip_era,nominal_resolution,realm,required_global_attributes,
+    source_id,source_type,sub_experiment_id,table_id)
 gc.collect()
 
-# Validate - only necessary if files are not written by json module
+#%% Update version info from new file/commit history
+# Extract fresh recorded commit for src/writeJson.py
+versionInfo1 = getFileHistory(os.path.realpath(__file__))
+MD5 = versionInfo1.get('previous_commit')
+# Now update versionHistory - can use list entries, as var names aren't locatable
+if testVal_activity_id:
+    key = 'activity_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_experiment_id:
+    key = 'experiment_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_frequency:
+    key = 'frequency'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_grid_label:
+    key = 'grid_label'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_license:
+    key = 'license'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_mip_era:
+    key = 'mip_era'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_nominal_resolution:
+    key = 'nominal_resolution'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_realm:
+    key = 'realm'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_required_global_attributes:
+    key = 'required_global_attributes'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_source_type:
+    key = 'source_type'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_sub_experiment_id:
+    key = 'sub_experiment_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_table_id:
+    key = 'table_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_institution_id:
+    key = 'institution_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+if testVal_source_id:
+    key = 'source_id'
+    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+# Test for changes and report
+test = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
+        testVal_grid_label,testVal_license,testVal_mip_era,
+        testVal_nominal_resolution,testVal_realm,
+        testVal_required_global_attributes,testVal_source_type,
+        testVal_sub_experiment_id,testVal_table_id,testVal_institution_id,
+        testVal_source_id]
+if any(test):
+    # Create host dictionary
+    jsonDict = {}
+    jsonDict['versionHistory'] = versionHistory
+    outFile = 'versionHistory.json'
+    if os.path.exists(outFile):
+        os.remove(outFile)
+    fH = open(outFile, 'w')
+    json.dump(
+        jsonDict,
+        fH,
+        ensure_ascii=True,
+        sort_keys=True,
+        indent=4,
+        separators=(
+            ',',
+            ':'),
+        encoding="utf-8")
+    fH.close()
+    print('versionHistory.json updated')
+# Cleanup anyway
+del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_label,
+    testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
+    testVal_realm,testVal_required_global_attributes,testVal_source_id,
+    testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
+    versionHistory)
+
+# Generate composite command and execute
+cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
+print cmd
+subprocess.call(cmd,shell=True) ; # Shell=True required for string
+# And push all new tags to remote
+subprocess.call(['git','push','--tags'])

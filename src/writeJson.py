@@ -241,6 +241,8 @@ PJD 22 Feb 2018    - Remove source_id ACCESS-1-0, update PCMDI-test-1-0 https://
 PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/457
 PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 23 Feb 2018    - Added tag generation for each new version
+PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/378
+PJD 23 Feb 2018    - Register institution_id KIOST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -248,7 +250,7 @@ PJD 23 Feb 2018    - Added tag generation for each new version
 """
 
 #%% Set commit message
-commitMessage = '\"Convert versioning for internal consistency\"'
+commitMessage = '\"Register institution_id KIOST\"'
 
 #%% Import statements
 import calendar
@@ -258,10 +260,10 @@ import json
 import os
 import shlex
 import subprocess
-#import sys
+import sys
 import time
 from durolib import readJsonCreateDict
-from CMIP6Lib import ascertainVersion,cleanString, dictDepth, getFileHistory, versionHistoryUpdate
+from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -428,6 +430,7 @@ institution_id = {
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
+    'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
     'MESSy-Consortium': 'The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany',
     'MIROC': 'JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)',
     'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',
@@ -725,6 +728,88 @@ for jsonName in ['experiment_id','source_id']:
 del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
     d1Key,keys2,d2Key)
 
+#%% Validate source_id and experiment_id entries
+# source_id
+for key in source_id.keys():
+    if key == 'VRESM-1-0':
+        continue ; # Ignore - https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+    # Validate source_id format
+    if not entryCheck(key):
+        print 'Invalid source_id format for entry:',key,'- aborting'
+        sys.exit()
+    # Validate activity_participation/activity_id
+    val = source_id[key]['activity_participation']
+    for act in val:
+        if act not in activity_id:
+            print 'Invalid activity_participation for entry:',key,'- aborting'
+            sys.exit()
+    # Validate institution_id
+    vals = source_id[key]['institution_id']
+    for val in vals:
+        if val not in institution_id:
+            print 'Invalid institution_id for entry:',key,'- aborting'
+            sys.exit()
+    # Validate nominal resolution
+    vals = source_id[key]['model_component'].keys()
+    for val1 in vals:
+        val2 = source_id[key]['model_component'][val1]['nominal_resolution']
+        if val2 == 'none':
+            pass
+        elif val2 not in nominal_resolution:
+            print 'Invalid nominal_resolution for entry:',key,val1,val2,'- aborting'
+            sys.exit()
+# experiment_ids
+experiment_id_keys = experiment_id.keys()
+for key in experiment_id_keys:
+    # Validate source_id format
+    if not entryCheck(key):
+        print 'Invalid experiment_id format for entry:',key,'- aborting'
+        sys.exit()
+    # Validate internal key
+    val = experiment_id[key]['experiment_id']
+    if not val == key:
+        print 'Invalid experiment_id for entry:',key,'- aborting'
+        sys.exit()
+    # Validate activity_id
+    val = experiment_id[key]['activity_id']
+    for act in val:
+        if act not in activity_id:
+            print 'Invalid activity_participation for entry:',key,act,'- aborting'
+            sys.exit()
+    # Validate additional_allowed_model_components
+    vals = experiment_id[key]['additional_allowed_model_components']
+    for val in vals:
+        if val == '':
+            pass
+        elif val not in source_type:
+            print 'Invalid additional_allowed_model_components for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate required_model_components
+    vals = experiment_id[key]['required_model_components']
+    for val in vals:
+        if val not in source_type:
+            print 'Invalid required_model_components for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate parent_activity_id
+    vals = experiment_id[key]['parent_activity_id']
+    for val in vals:
+        if val == 'no parent':
+            pass
+        elif val not in activity_id:
+            print 'Invalid parent_activity_id for entry:',key,val,'- aborting'
+            sys.exit()
+    # Validate parent_experiment_id
+    vals = experiment_id[key]['parent_experiment_id']
+    for val in vals:
+        if val == 'no parent':
+            pass
+        elif val not in experiment_id_keys:
+            print 'Invalid experiment_id_keys for entry:',key,val,'- aborting'
+            sys.exit()
+
+del(experiment_id_keys,key,act,val,val1,val2,vals)
+#sys.exit() ; # Turn back on to catch errors prior to running commit
+
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:
     target = ''.join(['test',jsonName])
@@ -808,10 +893,6 @@ for jsonName in masterTargets:
 # Generate revised html - process both experiment_id and source_id (alpha order)
 #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
 args = shlex.split('python ./json_to_html.py')
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-# Convert to a per file commit
-args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 del(args,jsonName,jsonDict,outFile,p)
@@ -901,9 +982,15 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
     versionHistory)
 
-# Generate composite command and execute
-cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
-print cmd
-subprocess.call(cmd,shell=True) ; # Shell=True required for string
-# And push all new tags to remote
-subprocess.call(['git','push','--tags'])
+#%% Now all file changes are complete, commit and tag
+args = shlex.split(''.join(['git commit -am ',commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+
+# Test for version change and push tag
+if versionId != versionInfo['CV_collection_version']:
+    # Generate composite command and execute
+    cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
+    print cmd
+    subprocess.call(cmd,shell=True) ; # Shell=True required for string
+    # And push all new tags to remote
+    subprocess.call(['git','push','--tags'])

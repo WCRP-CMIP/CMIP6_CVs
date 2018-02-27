@@ -76,25 +76,6 @@ $(document).ready( function () {
 <td>none</td>
 <td>CICE-HadGEM3-GSI8 (ORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)</td>
 </tr>
-<tr><td>CAMS_CSM1-0</td>
-<td>CAMS</td>
-<td>2016</td>
-<td>CMIP</td>
-<td>Registered</td>
-<td>CAMS_CSM 1.0</td>
-<td>CAMS_CSM 1.0</td>
-<td>ECHAM5_CAMS (T106; 320 x 160 longitude/latitude; 31 levels; top level 10 mb)</td>
-<td>100 km</td>
-<td>MOM4 (tripolar; 360 x 200 longitude/latitude, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10 m)</td>
-<td>100 km</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>CoLM 1.0</td>
-<td>none</td>
-<td>SIS 1.0</td>
-</tr>
 <tr><td>HadGEM3-GC31-HH</td>
 <td>MOHC NERC</td>
 <td>2016</td>
@@ -217,7 +198,7 @@ $(document).ready( function () {
 <td>FGOALS-g3</td>
 <td>FGOALS-g3</td>
 <td>GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)</td>
 <td>100 km</td>
 <td>none</td>
@@ -418,24 +399,24 @@ $(document).ready( function () {
 <td>none</td>
 <td>CICE4</td>
 </tr>
-<tr><td>NICAM16-7S</td>
-<td>MIROC</td>
-<td>2017</td>
-<td>DynVarMIP HighResMIP</td>
+<tr><td>CAMS-CSM1-0</td>
+<td>CAMS</td>
+<td>2016</td>
+<td>CMIP</td>
 <td>Registered</td>
-<td>NICAM16-7S</td>
-<td>NICAM.16 gl07-L38 with NSW6</td>
-<td>NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)</td>
-<td>50 km</td>
+<td>CAMS_CSM 1.0</td>
+<td>CAMS_CSM 1.0</td>
+<td>ECHAM5_CAMS (T106; 320 x 160 longitude/latitude; 31 levels; top level 10 mb)</td>
+<td>100 km</td>
+<td>MOM4 (tripolar; 360 x 200 longitude/latitude, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
 <td>none</td>
 <td>none</td>
 <td>none</td>
 <td>none</td>
-<td>Prescribed MACv2-SP</td>
+<td>CoLM 1.0</td>
 <td>none</td>
-<td>MATSIRO6 (w/o MOSAIC)</td>
-<td>none</td>
-<td>Fixed</td>
+<td>SIS 1.0</td>
 </tr>
 <tr><td>AWI-CM-1-0-MR</td>
 <td>AWI</td>
@@ -493,6 +474,25 @@ $(document).ready( function () {
 <td>HTESSEL (land surface scheme built in IFS)</td>
 <td>none</td>
 <td>LIM3</td>
+</tr>
+<tr><td>NICAM16-7S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>NICAM16-7S</td>
+<td>NICAM.16 gl07-L38 with NSW6</td>
+<td>NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed MACv2-SP</td>
+<td>none</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>none</td>
+<td>Fixed</td>
 </tr>
 <tr><td>BCC-CSM2-HR</td>
 <td>BCC</td>
@@ -692,7 +692,7 @@ $(document).ready( function () {
 <td>INM-CM4-8</td>
 <td>INM-CM4-8</td>
 <td>INM-AM4-8 (2x1.5; 180 x 120 longitude/latitude; 21 levels; top level sigma = 0.01)</td>
-<td>150 km</td>
+<td>100 km</td>
 <td>INM-OM5 (North Pole shifted to 60N, 90E; 360 x 318 longitude/latitude; 40 levels; sigma vertical coordinate)</td>
 <td>100 km</td>
 <td>none</td>
@@ -711,9 +711,9 @@ $(document).ready( function () {
 <td>INM-CM5-0</td>
 <td>INM-CM5-0</td>
 <td>INM-AM5-0 (2x1.5; 180 x 120 longitude/latitude; 73 levels; top level sigma = 0.0002)</td>
-<td>150 km</td>
+<td>100 km</td>
 <td>INM-OM5 (North Pole shifted to 60N, 90E. 0.5x0.25; 720 x 720 longitude/latitude; 40 levels; vertical sigma coordinate)</td>
-<td>40 km</td>
+<td>50 km</td>
 <td>none</td>
 <td>none</td>
 <td>INM-AER1</td>
@@ -730,7 +730,7 @@ $(document).ready( function () {
 <td>ICON-ESM-LR</td>
 <td>ICON-ESM-LR</td>
 <td>ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)</td>
 <td>50 km</td>
 <td>none/prescribed</td>
@@ -808,7 +808,7 @@ $(document).ready( function () {
 <td>INM-AM5-H (0.67x0.5; 540 x 360 longitude/latitude; 73 levels; top level sigma = 0.0002)</td>
 <td>50 km</td>
 <td>INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)</td>
-<td>15 km</td>
+<td>10 km</td>
 <td>none</td>
 <td>none</td>
 <td>INM-AER1</td>
@@ -1034,11 +1034,11 @@ $(document).ready( function () {
 <td>GFDL-ESM2M</td>
 <td>GFDL-ESM2M</td>
 <td>GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
 <td>100 km</td>
 <td>GFDL-LM3.0</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>GFDL-AM2</td>
 <td>GFDL-AM2 (full atmospheric chemistry)</td>
 <td>GFDL-LM3.0</td>
@@ -1105,7 +1105,7 @@ $(document).ready( function () {
 <tr><td>VRESM-1-0</td>
 <td>CSIR-CSIRO</td>
 <td>2016</td>
-<td></td>
+<td>CMIP</td>
 <td>Registered</td>
 <td>VRESM 1.0</td>
 <td>VRESM 1.0 (Variable-resolution Earth System Model 1.0)</td>
@@ -1186,7 +1186,7 @@ $(document).ready( function () {
 <td>MPI-ESM1.2-LR</td>
 <td>MPI-ESM1.2-LR</td>
 <td>ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
 <td>100 km</td>
 <td>none/prescribed</td>
@@ -1357,7 +1357,7 @@ $(document).ready( function () {
 <td>IITM-ESM</td>
 <td>IITM-ESM</td>
 <td>IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>MOM4p1 (tripolar, primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
 <td>100 km</td>
 <td>none</td>
@@ -1395,7 +1395,7 @@ $(document).ready( function () {
 <td>IPSL-CM6A-LR</td>
 <td>IPSL-CM6A-LR</td>
 <td>LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 40000 m)</td>
-<td>200 km</td>
+<td>250 km</td>
 <td>NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
 <td>100 km</td>
 <td>none</td>

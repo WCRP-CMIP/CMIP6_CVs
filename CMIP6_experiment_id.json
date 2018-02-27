@@ -468,16 +468,16 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"As piSST, but with monthly-varying SSTs taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl. Sea-ice is unchanged from piSST",
+            "description":"As piSST, but with monthly-varying SSTs taken from years 111-140 of each model's own abrupt-4xCO2 experiment instead of from piControl. Sea-ice is unchanged from piSST",
             "end_year":"",
-            "experiment":"as piSST but with SSTs from abrupt4xCO2",
+            "experiment":"as piSST but with SSTs from abrupt-4xCO2",
             "experiment_id":"a4SST",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "abrupt4xCO2"
+                "abrupt-4xCO2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -496,16 +496,16 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"As piSST, but with monthly-varying SSTs and sea-ice taken from years 111-140 of each model's own abrupt4xCO2 experiment instead of from piControl",
+            "description":"As piSST, but with monthly-varying SSTs and sea-ice taken from years 111-140 of each model's own abrupt-4xCO2 experiment instead of from piControl",
             "end_year":"",
-            "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2",
+            "experiment":"as piSST but with SSTs and sea ice from abrupt-4xCO2",
             "experiment_id":"a4SSTice",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "abrupt4xCO2"
+                "abrupt-4xCO2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -526,14 +526,14 @@
             ],
             "description":"As a4SSTice, but CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation",
             "end_year":"",
-            "experiment":"as piSST but with SSTs and sea ice from abrupt4xCO2, and 4xCO2 seen by radiation and vegetation",
+            "experiment":"as piSST but with SSTs and sea ice from abrupt-4xCO2, and 4xCO2 seen by radiation and vegetation",
             "experiment_id":"a4SSTice-4xCO2",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "abrupt4xCO2"
+                "abrupt-4xCO2"
             ],
             "required_model_components":[
                 "AGCM"
@@ -611,7 +611,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"DECK: abrupt4xCO2",
+            "description":"DECK: abrupt-4xCO2",
             "end_year":"",
             "experiment":"abrupt quadrupling of CO2",
             "experiment_id":"abrupt-4xCO2",
@@ -810,9 +810,9 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"Same as amip, but a patterned SST anomaly is applied on top of the monthly-varying amip SSTs. This anomaly is a monthly climatology, taken from each model's own abrupt4xCO2 run minus piControl (using the mean of years 111-140 of abrupt4xCO2, and the parallel 30-year section of piControl). CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation",
+            "description":"Same as amip, but a patterned SST anomaly is applied on top of the monthly-varying amip SSTs. This anomaly is a monthly climatology, taken from each model's own abrupt-4xCO2 run minus piControl (using the mean of years 111-140 of abrupt-4xCO2, and the parallel 30-year section of piControl). CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation",
             "end_year":"2014",
-            "experiment":"as AMIP but with warming pattern from abrupt4xCO2 added to SSTs and 4xCO2 seen by radiation and vegetation",
+            "experiment":"as AMIP but with warming pattern from abrupt-4xCO2 added to SSTs and 4xCO2 seen by radiation and vegetation",
             "experiment_id":"amip-a4SST-4xCO2",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
@@ -2656,9 +2656,9 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"Time slice at year 100 of G1ext to examine radiative forcing of abrupt4xCO2 and G1",
+            "description":"Time slice at year 100 of G1ext to examine radiative forcing of abrupt-4xCO2 and G1",
             "end_year":"",
-            "experiment":"year 100 SSTs from abrupt4xCO2 with quadrupled CO2 and solar reduction",
+            "experiment":"year 100 SSTs from abrupt-4xCO2 with quadrupled CO2 and solar reduction",
             "experiment_id":"futureSST-4xCO2-solar",
             "min_number_yrs_per_sim":"10",
             "parent_activity_id":[
@@ -6073,7 +6073,7 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments",
+            "description":"An AGCM experiment with monthly-varying SSTs, sea-ice, atmospheric constituents and any other necessary boundary conditions (e.g. vegetation if required) taken from each model's own piControl run (using the 30 years of piControl that are parallel to years 111-140 of its abrupt-4xCO2 run). Dynamic vegetation should be turned off in all the piSST set of experiments",
             "end_year":"",
             "experiment":"experiment forced with pre-industrial SSTs, sea ice and atmospheric constituents",
             "experiment_id":"piSST",
@@ -6157,7 +6157,7 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"Time slice at 1850 (picontrol) for G1ext to examine radiative forcing of abrupt4xCO2",
+            "description":"Time slice at 1850 (picontrol) for G1ext to examine radiative forcing of abrupt-4xCO2",
             "end_year":"",
             "experiment":"preindustrial control SSTs with quadrupled CO2 and solar reduction",
             "experiment_id":"piSST-4xCO2-solar",
@@ -6185,9 +6185,9 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"Same as piSST, but with a spatially and temporally uniform SST anomaly applied on top of the monthly-varying piSST SSTs. The magnitude of the uniform increase is taken from each model's global, climatological annual mean SST change between abrupt4xCO2 minus piControl (using the mean of years 111-140 of abrupt4xCO2, and the parallel 30-year section of piControl)",
+            "description":"Same as piSST, but with a spatially and temporally uniform SST anomaly applied on top of the monthly-varying piSST SSTs. The magnitude of the uniform increase is taken from each model's global, climatological annual mean SST change between abrupt-4xCO2 minus piControl (using the mean of years 111-140 of abrupt-4xCO2, and the parallel 30-year section of piControl)",
             "end_year":"",
-            "experiment":"as piSST with uniform SST increase with magnitude based on abrupt4xCO2 response",
+            "experiment":"as piSST with uniform SST increase with magnitude based on abrupt-4xCO2 response",
             "experiment_id":"piSST-pxK",
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
@@ -7278,12 +7278,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
-        "CV_collection_version":"6.2.1.0",
+        "CV_collection_modified":"Tue Feb 27 08:55:55 2018 -0800",
+        "CV_collection_version":"6.2.2.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Wed Nov 8 10:26:00 2017 -0700",
-        "experiment_id_CV_note":"Issue423 durack1 correct experiment_id components LUMIP LS3MIP (#437)",
+        "experiment_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
+        "experiment_id_CV_note":"\"Validate source_id entries against CVs\"",
         "institution_id":"PCMDI",
-        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd"
+        "previous_commit":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269"
     }
 }

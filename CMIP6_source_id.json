@@ -427,7 +427,7 @@
             "release_year":"2016",
             "source_id":"BNU-ESM-1-1"
         },
-        "CAMS_CSM1-0":{
+        "CAMS-CSM1-0":{
             "activity_participation":[
                 "CMIP"
             ],
@@ -1093,7 +1093,7 @@
                 },
                 "atmosChem":{
                     "description":"fast chemistry, aerosol only",
-                    "nominal_resolution":"500km"
+                    "nominal_resolution":"500 km"
                 },
                 "land":{
                     "description":"CLASS3.6/CTEM1.2",
@@ -1750,7 +1750,7 @@
                 },
                 "atmos":{
                     "description":"GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -1758,7 +1758,7 @@
                 },
                 "land":{
                     "description":"CLM4.0",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -1898,23 +1898,23 @@
             "model_component":{
                 "aerosol":{
                     "description":"GFDL-AM2",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"GFDL-AM2 (full atmospheric chemistry)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "land":{
                     "description":"GFDL-LM3.0",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"GFDL-LM3.0",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "ocean":{
                     "description":"GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
@@ -2414,11 +2414,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2426,7 +2426,7 @@
                 },
                 "land":{
                     "description":"JSBACH4.20",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none/prescribed",
@@ -2464,11 +2464,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"prescribed MAC-v2",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2476,7 +2476,7 @@
                 },
                 "land":{
                     "description":"NOAH LSMv2.7.1",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2513,11 +2513,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"INM-AER1",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"INM-AM4-8 (2x1.5; 180 x 120 longitude/latitude; 21 levels; top level sigma = 0.01)",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2525,7 +2525,7 @@
                 },
                 "land":{
                     "description":"INM-LND1",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2562,11 +2562,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"INM-AER1",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "atmos":{
                     "description":"INM-AM5-0 (2x1.5; 180 x 120 longitude/latitude; 73 levels; top level sigma = 0.0002)",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2574,7 +2574,7 @@
                 },
                 "land":{
                     "description":"INM-LND1",
-                    "nominal_resolution":"150 km"
+                    "nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2582,7 +2582,7 @@
                 },
                 "ocean":{
                     "description":"INM-OM5 (North Pole shifted to 60N, 90E. 0.5x0.25; 720 x 720 longitude/latitude; 40 levels; vertical sigma coordinate)",
-                    "nominal_resolution":"40 km"
+                    "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -2590,7 +2590,7 @@
                 },
                 "seaIce":{
                     "description":"INM-ICE1",
-                    "nominal_resolution":"40 km"
+                    "nominal_resolution":"50 km"
                 }
             },
             "release_year":"2016",
@@ -2631,7 +2631,7 @@
                 },
                 "ocean":{
                     "description":"INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)",
-                    "nominal_resolution":"15 km"
+                    "nominal_resolution":"10 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -2639,7 +2639,7 @@
                 },
                 "seaIce":{
                     "description":"INM-ICE1",
-                    "nominal_resolution":"15 km"
+                    "nominal_resolution":"10 km"
                 }
             },
             "release_year":"2016",
@@ -2676,7 +2676,7 @@
                 },
                 "atmos":{
                     "description":"LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 40000 m)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2684,7 +2684,7 @@
                 },
                 "land":{
                     "description":"ORCHIDEE (v2.0, Water/Carbon/Energy mode)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -2969,11 +2969,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2981,7 +2981,7 @@
                 },
                 "land":{
                     "description":"JSBACH3.20",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none/prescribed",
@@ -2993,11 +2993,11 @@
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 },
                 "seaIce":{
                     "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
-                    "nominal_resolution":"200 km"
+                    "nominal_resolution":"250 km"
                 }
             },
             "release_year":"2017",
@@ -3902,7 +3902,7 @@
         },
         "VRESM-1-0":{
             "activity_participation":[
-                ""
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -3951,12 +3951,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 23 18:52:18 2018 -0800",
-        "CV_collection_version":"6.2.1.0",
+        "CV_collection_modified":"Tue Feb 27 08:55:55 2018 -0800",
+        "CV_collection_version":"6.2.2.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"74d42e064fadad89049881a24fce1dcf2f668ddd",
-        "source_id_CV_modified":"Fri Feb 23 11:20:00 2018 -0700",
-        "source_id_CV_note":"Issue457 durack1 revise source_id entries HadGEM3 and UKESM1 (#464)"
+        "previous_commit":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269",
+        "source_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
+        "source_id_CV_note":"\"Validate source_id entries against CVs\""
     }
 }

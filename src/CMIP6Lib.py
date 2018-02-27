@@ -73,6 +73,7 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
         versionCVCommit = versionHistory['versions'].get('versionCVCommit') + 1
         # Now update versionHistory - can use list entries, as var names aren't locatable
         if testVal_institution_id:
+            print commitMessage
             versionHistory['institution_id']['commitMessage'] = commitMessage
         if testVal_source_id:
             versionHistory['source_id']['commitMessage'] = commitMessage

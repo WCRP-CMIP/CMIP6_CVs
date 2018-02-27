@@ -75,8 +75,8 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 27 08:49:00 2018 -0800",
-        "CV_collection_version":"6.2.2.3",
+        "CV_collection_modified":"Tue Feb 27 08:52:48 2018 -0800",
+        "CV_collection_version":"6.2.2.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269",

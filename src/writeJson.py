@@ -242,6 +242,7 @@ PJD 22 Feb 2018    - Revise descriptions for HadGEM3 and UKESM1 source_id entrie
 PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.com/WCRP-CMIP/CMIP6_CVs/issues/28
 PJD 23 Feb 2018    - Added tag generation for each new version
 PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/378
+PJD 23 Feb 2018    - Register institution_id KIOST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -249,7 +250,7 @@ PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/W
 """
 
 #%% Set commit message
-commitMessage = '\"Cleanup after CV validation for source_id and experiment_id\"'
+commitMessage = '\"Register institution_id KIOST\"'
 
 #%% Import statements
 import calendar
@@ -429,6 +430,7 @@ institution_id = {
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
+    'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
     'MESSy-Consortium': 'The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany',
     'MIROC': 'JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)',
     'MOHC': 'Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK',

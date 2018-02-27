@@ -25,7 +25,9 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionCVCommit = versionHistory['versions'].get('versionCVCommit')
 
     # Deal with commitMessage formatting
+    print commitMessage
     commitMessage = commitMessage.replace('\"','')
+    print commitMessage
 
     # versionMIPEra - CMIP6 id - The first integer is “6”, indicating the CV collection is for use in CMIP6
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')

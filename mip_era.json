@@ -7,8 +7,8 @@
         "CMIP6"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 27 08:52:48 2018 -0800",
-        "CV_collection_version":"6.2.2.4",
+        "CV_collection_modified":"Tue Feb 27 08:55:55 2018 -0800",
+        "CV_collection_version":"6.2.2.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "mip_era_CV_modified":"Thu Aug 25 17:21:00 2016 -0700",

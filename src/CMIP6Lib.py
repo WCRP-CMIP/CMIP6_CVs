@@ -25,9 +25,7 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionCVCommit = versionHistory['versions'].get('versionCVCommit')
 
     # Deal with commitMessage formatting
-    print commitMessage
     commitMessage = commitMessage.replace('\"','')
-    print commitMessage
 
     # versionMIPEra - CMIP6 id - The first integer is “6”, indicating the CV collection is for use in CMIP6
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
@@ -73,7 +71,6 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
         versionCVCommit = versionHistory['versions'].get('versionCVCommit') + 1
         # Now update versionHistory - can use list entries, as var names aren't locatable
         if testVal_institution_id:
-            print commitMessage
             versionHistory['institution_id']['commitMessage'] = commitMessage
         if testVal_source_id:
             versionHistory['source_id']['commitMessage'] = commitMessage
@@ -115,6 +112,7 @@ def getFileHistory(filePath):
 
 def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
     url = 'https://github.com/WCRP-CMIP/CMIP6_CVs/commit/'
+    commitMessage = commitMessage.replace('\"','') ; # Wash out extraneous\" characters
     versionHistory[key]['commitMessage'] = commitMessage
     versionHistory[key]['timeStamp'] = timeStamp
     versionHistory[key]['URL'] = ''.join([url,MD5])

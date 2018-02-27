@@ -19,6 +19,7 @@
         "INM":"Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia",
         "INPE":"National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil",
         "IPSL":"Institut Pierre Simon Laplace, Paris 75252, France",
+        "KIOST":"Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea",
         "MESSy-Consortium":"The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany",
         "MIROC":"JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)",
         "MOHC":"Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK",
@@ -38,12 +39,12 @@
         "UHH":"Universitat Hamburg, Hamburg 20148, Germany"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 23 20:47:30 2018 -0800",
-        "CV_collection_version":"6.2.2.0",
+        "CV_collection_modified":"Tue Feb 27 08:55:55 2018 -0800",
+        "CV_collection_version":"6.2.2.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "institution_id_CV_modified":"Thu Feb 22 16:04:00 2018 -0700",
-        "institution_id_CV_note":"Issue459 durack1 register institution_id AER (#462)",
-        "previous_commit":"dd84a7f76a3591edb9ddb37f7dcf058466940657"
+        "institution_id_CV_modified":"Tue Feb 27 08:52:48 2018 -0800",
+        "institution_id_CV_note":"Register institution_id KIOST",
+        "previous_commit":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269"
     }
 }

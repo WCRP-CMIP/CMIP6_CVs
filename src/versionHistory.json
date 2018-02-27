@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"eacd16e330d985ae8694a6cb738b253a7d265611",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/eacd16e330d985ae8694a6cb738b253a7d265611",
-            "commitMessage":"Issue459 durack1 register institution_id AER (#462)",
-            "timeStamp":"Thu Feb 22 16:04:00 2018 -0700"
+            "MD5":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1fc3219fa738752b32bf50f7ca8b7c1cd571c269",
+            "commitMessage":"Register institution_id KIOST",
+            "timeStamp":"Tue Feb 27 08:55:55 2018 -0800"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":2,
             "versionCVStructure":2,
             "versionMIPEra":6

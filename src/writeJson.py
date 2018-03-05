@@ -245,6 +245,7 @@ PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/W
 PJD 23 Feb 2018    - Register institution_id KIOST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
 PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  5 Mar 2018    - Register source_id KIOST-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
+PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/471
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -252,7 +253,7 @@ PJD  5 Mar 2018    - Register source_id KIOST-ESM https://github.com/WCRP-CMIP/C
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id KIOST-ESM\"'
+commitMessage = '\"Update activity_participation for source_id CNRM-CM6-1\"'
 
 #%% Import statements
 import calendar
@@ -534,49 +535,22 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'KIOST-ESM'
-source_id[key] = {}
+key = 'CNRM-CM6-1'
 source_id[key]['activity_participation'] = [
- 'C4MIP',
- 'CMIP',
- 'DynVarMIP',
- 'PMIP'
+    'CFMIP',
+    'CMIP',
+    'DAMIP',
+    'DCPP',
+    'FAFMIP',
+    'GMMIP',
+    'HighResMIP',
+    'ISMIP6',
+    'LS3MIP',
+    'PMIP',
+    'RFMIP',
+    'ScenarioMIP'
 ]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'KIOST'
-]
-source_id[key]['label'] = 'KIOST-ESM'
-source_id[key]['label_extended'] = 'KIOST Earth System Model v2'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2.0 (cubed sphere (C48); 192 x 96 longitude/latitude; 32 vertical levels; top level 2 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'Simple carbon aerosol model (emission type)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'NCAR-CLM4'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'NCAR-CLM4'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-MOM5.0 (tripolar - nominal 1.0 deg; 360 x 200 longitude/latitude; 52 levels; top grid cell 0-2 m; NK mixed layer scheme)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'TOPAZ2'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIS'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

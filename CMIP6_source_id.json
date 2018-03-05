@@ -844,6 +844,7 @@
                 "DCPP",
                 "FAFMIP",
                 "GMMIP",
+                "HighResMIP",
                 "ISMIP6",
                 "LS3MIP",
                 "PMIP",
@@ -4003,12 +4004,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 15:19:14 2018 -0800",
-        "CV_collection_version":"6.2.2.2",
+        "CV_collection_modified":"Mon Mar  5 15:26:48 2018 -0800",
+        "CV_collection_version":"6.2.2.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3e55fee9b58156d144daf39a16b1c170ea4e4815",
-        "source_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
-        "source_id_CV_note":"Register source_id KIOST-ESM"
+        "previous_commit":"4e92460b60b0ab6b2ab200fb48f4585eea4e840f",
+        "source_id_CV_modified":"Mon Mar  5 15:19:14 2018 -0800",
+        "source_id_CV_note":"Update activity_participation for source_id CNRM-CM6-1"
     }
 }

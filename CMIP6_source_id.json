@@ -2706,6 +2706,58 @@
             "release_year":"2017",
             "source_id":"IPSL-CM6A-LR"
         },
+        "KIOST-ESM":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP",
+                "DynVarMIP",
+                "PMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "KIOST"
+            ],
+            "label":"KIOST-ESM",
+            "label_extended":"KIOST Earth System Model v2",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"GFDL-AM2.0 (cubed sphere (C48); 192 x 96 longitude/latitude; 32 vertical levels; top level 2 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"Simple carbon aerosol model (emission type)",
+                    "nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"NCAR-CLM4",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"NCAR-CLM4",
+                    "nominal_resolution":"250 km"
+                },
+                "ocean":{
+                    "description":"GFDL-MOM5.0 (tripolar - nominal 1.0 deg; 360 x 200 longitude/latitude; 52 levels; top grid cell 0-2 m; NK mixed layer scheme)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"TOPAZ2",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"GFDL-SIS",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"KIOST-ESM"
+        },
         "MIROC-ES2H":{
             "activity_participation":[
                 "AerChemMIP",
@@ -3951,12 +4003,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 15:06:47 2018 -0800",
-        "CV_collection_version":"6.2.2.1",
+        "CV_collection_modified":"Mon Mar  5 15:19:14 2018 -0800",
+        "CV_collection_version":"6.2.2.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"3e55fee9b58156d144daf39a16b1c170ea4e4815",
         "source_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
-        "source_id_CV_note":"\"Validate source_id entries against CVs\""
+        "source_id_CV_note":"Register source_id KIOST-ESM"
     }
 }

@@ -706,7 +706,7 @@ for jsonName in ['experiment_id','source_id']:
                         string = cleanString(string) ; # Clean string
                         new += [string]
                     #print 'new',new
-                    new.sort() ; # Sort all lists
+                    #new.sort() ; # Sort all lists - not experiment_id model components
                     #print 'sort',new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:

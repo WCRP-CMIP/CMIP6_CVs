@@ -2,6 +2,7 @@
     "activity_id":{
         "AerChemMIP":"Aerosols and Chemistry Model Intercomparison Project",
         "C4MIP":"Coupled Climate Carbon Cycle Model Intercomparison Project",
+        "CDRMIP":"Carbon Dioxide Removal Model Intercomparison Project",
         "CFMIP":"Cloud Feedback Model Intercomparison Project",
         "CMIP":"CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments",
         "CORDEX":"Coordinated Regional Climate Downscaling Experiment",
@@ -16,6 +17,7 @@
         "LS3MIP":"Land Surface, Snow and Soil Moisture",
         "LUMIP":"Land-Use Model Intercomparison Project",
         "OMIP":"Ocean Model Intercomparison Project",
+        "PAMIP":"Polar Amplification Model Intercomparison Project",
         "PMIP":"Palaeoclimate Modelling Intercomparison Project",
         "RFMIP":"Radiative Forcing Model Intercomparison Project",
         "SIMIP":"Sea Ice Model Intercomparison Project",
@@ -24,12 +26,12 @@
         "VolMIP":"Volcanic Forcings Model Intercomparison Project"
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 16:09:56 2018 -0800",
-        "CV_collection_version":"6.2.2.4",
+        "CV_collection_modified":"Mon Mar  5 16:39:09 2018 -0800",
+        "CV_collection_version":"6.2.3.0",
         "activity_id_CV_modified":"Thu Sep 7 10:30:00 2017 -0700",
-        "activity_id_CV_note":"Issue397 durack1 augment activity_id with description (#400)",
+        "activity_id_CV_note":"Update activity_id to include CDRMIP and PAMIP",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c6504f44d38b0ac37eef862a75e6bccc4da20c95"
+        "previous_commit":"1978084b171c7822174b979b042a05326a25ad1d"
     }
 }

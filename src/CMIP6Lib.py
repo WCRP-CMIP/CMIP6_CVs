@@ -6,8 +6,8 @@ Created on Fri Feb 23 13:09:26 2018
 @author: durack1
 """
 #%% imports
-import json,re
-from durolib import getGitInfo
+import re
+from durolib import getGitInfo,readJsonCreateDict
 
 #%% Get repo metadata
 def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency,
@@ -16,9 +16,13 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
                      testVal_required_global_attributes,testVal_source_id,
                      testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
                      commitMessage):
-    # Load current history
-    versionHistory = json.load(open('versionHistory.json'))
+    # Load current history direct from repo master
+    tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
+      ] ;
+    versionHistory = readJsonCreateDict(tmp)
     versionHistory = versionHistory.get('versionHistory')
+    versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+    del(tmp)
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
     versionCVContent = versionHistory['versions'].get('versionCVContent')

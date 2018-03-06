@@ -243,8 +243,14 @@ PJD 23 Feb 2018    - Convert versioning for internal consistency https://github.
 PJD 23 Feb 2018    - Added tag generation for each new version
 PJD 23 Feb 2018    - Validate source_id entries against CVs https://github.com/WCRP-CMIP/CMIP6_CVs/issues/378
 PJD 23 Feb 2018    - Register institution_id KIOST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
-PJD 23 Feb 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
-                   - TODO: Check all source_id activity_participation entries against activity_id list
+PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
+PJD  5 Mar 2018    - Register source_id KIOST-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
+PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/471
+PJD  5 Mar 2018    - Update activity_participation entries to include CMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
+PJD  5 Mar 2018    - Update activity_id to include CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
+PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
+PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
+PJD  5 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -263,6 +269,7 @@ import shlex
 import subprocess
 import sys
 import time
+import urllib
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 
@@ -288,6 +295,7 @@ masterTargets = [
 activity_id = {
     'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
     'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CDRMIP': 'Carbon Dioxide Removal Model Intercomparison Project',
     'CFMIP': 'Cloud Feedback Model Intercomparison Project',
     'CMIP': 'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
     'CORDEX': 'Coordinated Regional Climate Downscaling Experiment',
@@ -302,6 +310,7 @@ activity_id = {
     'LS3MIP': 'Land Surface, Snow and Soil Moisture',
     'LUMIP': 'Land-Use Model Intercomparison Project',
     'OMIP': 'Ocean Model Intercomparison Project',
+    'PAMIP': 'Polar Amplification Model Intercomparison Project',
     'PMIP': 'Palaeoclimate Modelling Intercomparison Project',
     'RFMIP': 'Radiative Forcing Model Intercomparison Project',
     'SIMIP': 'Sea Ice Model Intercomparison Project',
@@ -706,6 +715,9 @@ for jsonName in ['experiment_id','source_id']:
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
+                    #print 'new',new
+                    #new.sort() ; # Sort all lists - not experiment_id model components
+                    #print 'sort',new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
                     # determine dict depth
@@ -737,6 +749,10 @@ for key in source_id.keys():
         sys.exit()
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
+    #print key,val
+    if 'CMIP' not in val:
+        print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
+        sys.exit()
     for act in val:
         if act not in activity_id:
             print 'Invalid activity_participation for entry:',key,'- aborting'
@@ -977,18 +993,44 @@ if any(test):
 del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_label,
     testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
-    testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
-    versionHistory)
+    testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
 
-#%% Now all file changes are complete, commit and tag
+#%% Now all file changes are complete, update README.md, commit and tag
+# Load master history direct from repo
+tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
+  ] ;
+versionHistory = readJsonCreateDict(tmp)
+versionHistory = versionHistory.get('versionHistory')
+versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+del(tmp)
+# Test for version change and push tag
+versions = versionHistory['versions']
+versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStructure']),
+                       str(versions['versionCVContent']),str(versions['versionCVCommit'])])
+del(versionHistory)
+
+if versionId != versionOld:
+    #%% Now update Readme.md
+    target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
+    txt = urllib.urlopen(target_url).read()
+    txt.replace(versionOld,versionId)
+    # Now delete existing file and write back to repo
+    readmeH = '../README.md'
+    os.remove(readmeH)
+    fH = open(readmeH,'w')
+    fH.write(txt)
+    fH.close()
+    del(target_url,txt,readmeH,fH)
+
+# Commit all changes
 args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
-# Test for version change and push tag
-if versionId != versionInfo['CV_collection_version']:
+if versionId != versionOld:
     # Generate composite command and execute
     cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
     print cmd
     subprocess.call(cmd,shell=True) ; # Shell=True required for string
     # And push all new tags to remote
     subprocess.call(['git','push','--tags'])
+    print 'tag created and pushed'

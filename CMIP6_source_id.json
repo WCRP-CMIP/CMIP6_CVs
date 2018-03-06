@@ -2,6 +2,7 @@
     "source_id":{
         "AWI-CM-1-0-HR":{
             "activity_participation":[
+                "CMIP",
                 "CORDEX",
                 "HighResMIP",
                 "OMIP",
@@ -844,6 +845,7 @@
                 "DCPP",
                 "FAFMIP",
                 "GMMIP",
+                "HighResMIP",
                 "ISMIP6",
                 "LS3MIP",
                 "PMIP",
@@ -1332,6 +1334,7 @@
         },
         "EC-Earth3-HR":{
             "activity_participation":[
+                "CMIP",
                 "DCPP",
                 "HighResMIP"
             ],
@@ -2649,6 +2652,7 @@
             "activity_participation":[
                 "C4MIP",
                 "CFMIP",
+                "CMIP",
                 "DCPP",
                 "FAFMIP",
                 "GMMIP",
@@ -2705,6 +2709,58 @@
             },
             "release_year":"2017",
             "source_id":"IPSL-CM6A-LR"
+        },
+        "KIOST-ESM":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP",
+                "DynVarMIP",
+                "PMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "KIOST"
+            ],
+            "label":"KIOST-ESM",
+            "label_extended":"KIOST Earth System Model v2",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"GFDL-AM2.0 (cubed sphere (C48); 192 x 96 longitude/latitude; 32 vertical levels; top level 2 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"Simple carbon aerosol model (emission type)",
+                    "nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"NCAR-CLM4",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"NCAR-CLM4",
+                    "nominal_resolution":"250 km"
+                },
+                "ocean":{
+                    "description":"GFDL-MOM5.0 (tripolar - nominal 1.0 deg; 360 x 200 longitude/latitude; 52 levels; top grid cell 0-2 m; NK mixed layer scheme)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"TOPAZ2",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"GFDL-SIS",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"KIOST-ESM"
         },
         "MIROC-ES2H":{
             "activity_participation":[
@@ -3172,6 +3228,7 @@
         },
         "NICAM16-7S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3222,6 +3279,7 @@
         },
         "NICAM16-8S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3272,7 +3330,8 @@
         },
         "NICAM16-9D-L78":{
             "activity_participation":[
-                "CFMIP"
+                "CFMIP",
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -3321,6 +3380,7 @@
         },
         "NICAM16-9S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3371,6 +3431,7 @@
         },
         "NorESM2-HH":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -3532,7 +3593,8 @@
         },
         "NorESM2-LMEC":{
             "activity_participation":[
-                "AerChemMIP"
+                "AerChemMIP",
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -3951,12 +4013,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 27 08:55:55 2018 -0800",
-        "CV_collection_version":"6.2.2.1",
+        "CV_collection_modified":"Mon Mar  5 17:14:45 2018 -0800",
+        "CV_collection_version":"6.2.3.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1fc3219fa738752b32bf50f7ca8b7c1cd571c269",
-        "source_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
-        "source_id_CV_note":"\"Validate source_id entries against CVs\""
+        "previous_commit":"d76341a9f3d680015afbe2868303c37d4c352546",
+        "source_id_CV_modified":"Mon Mar  5 16:09:56 2018 -0800",
+        "source_id_CV_note":"Update activity_participation entries to include CMIP"
     }
 }

@@ -1,4 +1,5 @@
-# CMIP6_CVs
+# CMIP6_CVs [![stable version](https://img.shields.io/badge/Current%20version-6.2.3.0-brightgreen.svg)](https://github.com/WCRP-CMIP/CMIP6_CVs/releases/tag/6.2.3.0)
+
 Core Controlled Vocabularies (CVs) for use in CMIP6
 
 Registering Institutions, Models, or requesting changes to CVs:
@@ -14,4 +15,4 @@ To view the current `institution_id` entries point your browser to [CMIP6_instit
 
 To view the current `source_id` entries point your browser to [CMIP6_source_id.html](http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/CMIP6_source_id.html)
 
-The CVs build on logic that is described in the [CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV’s](http://goo.gl/v1drZl) document.
+The CVs build on logic that is described in the [CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV's](http://goo.gl/v1drZl) document.

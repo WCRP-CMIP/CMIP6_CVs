@@ -2,6 +2,7 @@
     "source_id":{
         "AWI-CM-1-0-HR":{
             "activity_participation":[
+                "CMIP",
                 "CORDEX",
                 "HighResMIP",
                 "OMIP",
@@ -1333,6 +1334,7 @@
         },
         "EC-Earth3-HR":{
             "activity_participation":[
+                "CMIP",
                 "DCPP",
                 "HighResMIP"
             ],
@@ -2650,6 +2652,7 @@
             "activity_participation":[
                 "C4MIP",
                 "CFMIP",
+                "CMIP",
                 "DCPP",
                 "FAFMIP",
                 "GMMIP",
@@ -2949,8 +2952,8 @@
                 "Registered"
             ],
             "institution_id":[
-                "MPI-M",
-                "DWD"
+                "DWD",
+                "MPI-M"
             ],
             "label":"MPI-ESM1.2-HR",
             "label_extended":"MPI-ESM1.2-HR",
@@ -3225,6 +3228,7 @@
         },
         "NICAM16-7S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3275,6 +3279,7 @@
         },
         "NICAM16-8S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3325,7 +3330,8 @@
         },
         "NICAM16-9D-L78":{
             "activity_participation":[
-                "CFMIP"
+                "CFMIP",
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -3374,6 +3380,7 @@
         },
         "NICAM16-9S":{
             "activity_participation":[
+                "CMIP",
                 "DynVarMIP",
                 "HighResMIP"
             ],
@@ -3424,6 +3431,7 @@
         },
         "NorESM2-HH":{
             "activity_participation":[
+                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -3585,7 +3593,8 @@
         },
         "NorESM2-LMEC":{
             "activity_participation":[
-                "AerChemMIP"
+                "AerChemMIP",
+                "CMIP"
             ],
             "cohort":[
                 "Registered"
@@ -4004,12 +4013,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 15:26:48 2018 -0800",
-        "CV_collection_version":"6.2.2.3",
+        "CV_collection_modified":"Mon Mar  5 16:05:49 2018 -0800",
+        "CV_collection_version":"6.2.3.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"4e92460b60b0ab6b2ab200fb48f4585eea4e840f",
-        "source_id_CV_modified":"Mon Mar  5 15:19:14 2018 -0800",
+        "previous_commit":"e1096fd165bb614b0056c7bccb1120284b21ebec",
+        "source_id_CV_modified":"Mon Mar  5 15:26:48 2018 -0800",
         "source_id_CV_note":"Update activity_participation for source_id CNRM-CM6-1"
     }
 }

@@ -1,6 +1,7 @@
 # CMIP6_CVs
-Core Controlled Vocabularies (CVs) for use in CMIP6
 [![stable version](https://img.shields.io/badge/Current%20version-6.2.3.0-brightgreen.svg)](https://github.com/WCRP-CMIP/CMIP6_CVs/releases/tag/6.2.3.0)
+Core Controlled Vocabularies (CVs) for use in CMIP6
+
 Registering Institutions, Models, or requesting changes to CVs:
 ----------------
 

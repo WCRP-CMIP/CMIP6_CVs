@@ -249,13 +249,14 @@ PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 http
 PJD  5 Mar 2018    - Update activity_participation entries to include CMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  5 Mar 2018    - Update activity_id to include CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
 PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
+PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Update activity_id to include CDRMIP and PAMIP\"'
+commitMessage = '\"Update README.md to include version badge\"'
 
 #%% Import statements
 import calendar
@@ -267,6 +268,7 @@ import shlex
 import subprocess
 import sys
 import time
+import urllib
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 
@@ -952,10 +954,7 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
 
-#%% Now all file changes are complete, commit and tag
-args = shlex.split(''.join(['git commit -am ',commitMessage]))
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
+#%% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo
 tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
   ] ;
@@ -968,6 +967,24 @@ versions = versionHistory['versions']
 versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStructure']),
                        str(versions['versionCVContent']),str(versions['versionCVCommit'])])
 del(versionHistory)
+
+if versionId != versionOld:
+    #%% Now update Readme.md
+    target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
+    txt = urllib.urlopen(target_url).read()
+    txt.replace(versionOld,versionId)
+    # Now delete existing file and write back to repo
+    readmeH = '../README.md'
+    os.remove(readmeH)
+    fH = open(readmeH,'w')
+    fH.write(txt)
+    fH.close()
+    del(target_url,txt,readmeH,fH)
+
+# Commit all changes
+args = shlex.split(''.join(['git commit -am ',commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+
 if versionId != versionOld:
     # Generate composite command and execute
     cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])

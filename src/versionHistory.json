@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"4e92460b60b0ab6b2ab200fb48f4585eea4e840f",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/4e92460b60b0ab6b2ab200fb48f4585eea4e840f",
-            "commitMessage":"Update activity_participation for source_id CNRM-CM6-1",
-            "timeStamp":"Mon Mar  5 15:26:48 2018 -0800"
+            "MD5":"c6504f44d38b0ac37eef862a75e6bccc4da20c95",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c6504f44d38b0ac37eef862a75e6bccc4da20c95",
+            "commitMessage":"Update activity_participation entries to include CMIP",
+            "timeStamp":"Mon Mar  5 16:09:56 2018 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":3,
+            "versionCVCommit":4,
             "versionCVContent":2,
             "versionCVStructure":2,
             "versionMIPEra":6

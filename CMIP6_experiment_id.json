@@ -7278,12 +7278,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 15:26:48 2018 -0800",
-        "CV_collection_version":"6.2.2.3",
+        "CV_collection_modified":"Mon Mar  5 16:09:56 2018 -0800",
+        "CV_collection_version":"6.2.2.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
         "experiment_id_CV_note":"\"Validate source_id entries against CVs\"",
         "institution_id":"PCMDI",
-        "previous_commit":"4e92460b60b0ab6b2ab200fb48f4585eea4e840f"
+        "previous_commit":"c6504f44d38b0ac37eef862a75e6bccc4da20c95"
     }
 }

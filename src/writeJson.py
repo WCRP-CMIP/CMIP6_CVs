@@ -246,6 +246,7 @@ PJD 23 Feb 2018    - Register institution_id KIOST https://github.com/WCRP-CMIP/
 PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  5 Mar 2018    - Register source_id KIOST-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
 PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/471
+PJD  5 Mar 2018    - Update activity_participation entries to include CMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
                    - TODO: Check all source_id activity_participation entries against activity_id list
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -253,7 +254,7 @@ PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 http
 """
 
 #%% Set commit message
-commitMessage = '\"Update activity_participation for source_id CNRM-CM6-1\"'
+commitMessage = '\"Update activity_participation entries to include CMIP\"'
 
 #%% Import statements
 import calendar
@@ -535,22 +536,42 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['activity_participation'] = [
-    'CFMIP',
-    'CMIP',
-    'DAMIP',
-    'DCPP',
-    'FAFMIP',
-    'GMMIP',
-    'HighResMIP',
-    'ISMIP6',
-    'LS3MIP',
-    'PMIP',
-    'RFMIP',
-    'ScenarioMIP'
-]
-
+key = 'AWI-CM-1-0-HR'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'EC-Earth3-HR'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'IPSL-CM6A-LR'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NICAM16-7S'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NICAM16-8S'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NICAM16-9D-L78'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NICAM16-9S'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NorESM2-HH'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
+key = 'NorESM2-LMEC'
+acts = source_id[key]['activity_participation']
+acts.append('CMIP') ; acts.sort()
+source_id[key]['activity_participation'] = acts
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -684,6 +705,9 @@ for jsonName in ['experiment_id','source_id']:
                         string = values[1][count]
                         string = cleanString(string) ; # Clean string
                         new += [string]
+                    #print 'new',new
+                    #new.sort() ; # Sort all lists - not experiment_id model components
+                    #print 'sort',new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
                     # determine dict depth
@@ -715,6 +739,10 @@ for key in source_id.keys():
         sys.exit()
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
+    #print key,val
+    if 'CMIP' not in val:
+        print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
+        sys.exit()
     for act in val:
         if act not in activity_id:
             print 'Invalid activity_participation for entry:',key,'- aborting'
@@ -955,18 +983,22 @@ if any(test):
 del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_label,
     testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
-    testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
-    versionHistory)
+    testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
 
 #%% Now all file changes are complete, commit and tag
 args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
 # Test for version change and push tag
-if versionId != versionInfo['CV_collection_version']:
+versions = versionHistory['versions']
+versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStructure']),
+                       str(versions['versionCVContent']),str(versions['versionCVCommit'])])
+del(versionHistory)
+if versionId != versionOld:
     # Generate composite command and execute
     cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
     print cmd
     subprocess.call(cmd,shell=True) ; # Shell=True required for string
     # And push all new tags to remote
     subprocess.call(['git','push','--tags'])
+    print 'tag created and pushed'

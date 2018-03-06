@@ -247,14 +247,15 @@ PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https:/
 PJD  5 Mar 2018    - Register source_id KIOST-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/469
 PJD  5 Mar 2018    - Update activity_participation for source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/471
 PJD  5 Mar 2018    - Update activity_participation entries to include CMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
-                   - TODO: Check all source_id activity_participation entries against activity_id list
+PJD  5 Mar 2018    - Update activity_id to include CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
+PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Update activity_participation entries to include CMIP\"'
+commitMessage = '\"Update activity_id to include CDRMIP and PAMIP\"'
 
 #%% Import statements
 import calendar
@@ -291,6 +292,7 @@ masterTargets = [
 activity_id = {
     'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
     'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
+    'CDRMIP': 'Carbon Dioxide Removal Model Intercomparison Project',
     'CFMIP': 'Cloud Feedback Model Intercomparison Project',
     'CMIP': 'CMIP DECK: 1pctCO2, abrupt4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments',
     'CORDEX': 'Coordinated Regional Climate Downscaling Experiment',
@@ -305,6 +307,7 @@ activity_id = {
     'LS3MIP': 'Land Surface, Snow and Soil Moisture',
     'LUMIP': 'Land-Use Model Intercomparison Project',
     'OMIP': 'Ocean Model Intercomparison Project',
+    'PAMIP': 'Polar Amplification Model Intercomparison Project',
     'PMIP': 'Palaeoclimate Modelling Intercomparison Project',
     'RFMIP': 'Radiative Forcing Model Intercomparison Project',
     'SIMIP': 'Sea Ice Model Intercomparison Project',
@@ -536,42 +539,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'AWI-CM-1-0-HR'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'EC-Earth3-HR'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'IPSL-CM6A-LR'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NICAM16-7S'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NICAM16-8S'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NICAM16-9D-L78'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NICAM16-9S'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NorESM2-HH'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
-key = 'NorESM2-LMEC'
-acts = source_id[key]['activity_participation']
-acts.append('CMIP') ; acts.sort()
-source_id[key]['activity_participation'] = acts
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -989,6 +956,13 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
 args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
+# Load master history direct from repo
+tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
+  ] ;
+versionHistory = readJsonCreateDict(tmp)
+versionHistory = versionHistory.get('versionHistory')
+versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+del(tmp)
 # Test for version change and push tag
 versions = versionHistory['versions']
 versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStructure']),

@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"c7f23d7dbe6dcb28b1ff4781227350edb1a281c0",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c7f23d7dbe6dcb28b1ff4781227350edb1a281c0",
-            "commitMessage":"Register source_id ARTS-2-3",
-            "timeStamp":"Mon Mar 12 22:40:52 2018 -0300"
+            "MD5":"07044624a04316c533a87819664044f738715269",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/07044624a04316c533a87819664044f738715269",
+            "commitMessage":"Register source_id LBLRTM",
+            "timeStamp":"Mon Mar 12 22:51:29 2018 -0300"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":3,
+            "versionCVCommit":4,
             "versionCVContent":3,
             "versionCVStructure":2,
             "versionMIPEra":6

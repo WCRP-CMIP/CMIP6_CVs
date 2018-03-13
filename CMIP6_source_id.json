@@ -2055,6 +2055,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CDRMIP",
                 "CMIP",
                 "DAMIP",
                 "DynVarMIP",
@@ -4182,12 +4183,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar 12 22:51:29 2018 -0300",
-        "CV_collection_version":"6.2.3.4",
+        "CV_collection_modified":"Mon Mar 12 23:03:19 2018 -0300",
+        "CV_collection_version":"6.2.3.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"07044624a04316c533a87819664044f738715269",
-        "source_id_CV_modified":"Mon Mar 12 22:40:52 2018 -0300",
-        "source_id_CV_note":"Register source_id LBLRTM"
+        "previous_commit":"6d8065c5d35785e58160e8f1b7789a7998ca0f6f",
+        "source_id_CV_modified":"Mon Mar 12 22:51:29 2018 -0300",
+        "source_id_CV_note":"Revise source_id GFDL-ESM4 to include CDRMIP"
     }
 }

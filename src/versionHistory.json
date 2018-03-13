@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"a9f1aa3f8d9b7de2494d793783050d4e5762719c",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a9f1aa3f8d9b7de2494d793783050d4e5762719c",
+            "MD5":"c7f23d7dbe6dcb28b1ff4781227350edb1a281c0",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c7f23d7dbe6dcb28b1ff4781227350edb1a281c0",
             "commitMessage":"Register source_id ARTS-2-3",
-            "timeStamp":"Mon Mar 12 22:39:47 2018 -0300"
+            "timeStamp":"Mon Mar 12 22:40:52 2018 -0300"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

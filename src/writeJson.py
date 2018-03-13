@@ -252,13 +252,14 @@ PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https:/
 PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/479
 PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id VRESM-1-0\"'
+commitMessage = '\"Register source_id ARTS-2-3\"'
 
 #%% Import statements
 import calendar
@@ -544,39 +545,45 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'VRESM-1-0'
+key = 'ARTS-2-3'
+source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DAMIP',
- 'HighResMIP',
- 'PMIP',
- 'ScenarioMIP'
+ 'RFMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'CSIR-CSIRO'
+ 'UHH'
 ]
-source_id[key]['label'] = 'VRESM 1.0'
-source_id[key]['label_extended'] = 'VRESM 1.0 (Variable-resolution Earth System Model 1.0)'
-source_id[key]['model_component']['aerosol']['description'] = 'Rotstayn-1.0'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmos']['description'] = 'VCAM-1.0 (C192; 192 x 192 x 6 longitude/latitude/cubeface; 35 levels; top level 35km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['label'] = 'ARTS 2.3'
+source_id[key]['label_extended'] = 'ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'none'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land']['description'] = 'CABLE v2.2.3'
-source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'VCOM-1.0 (C192; 384 x 384 x 6 longitude/latitude/cubeface; 35 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'PISCES v3.4socco'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['seaIce']['description'] = 'CSIR-ICE (visco-plastic)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2016'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2015'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
@@ -744,7 +751,9 @@ for key in source_id.keys():
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
     #print key,val
-    if 'CMIP' not in val:
+    if val == ['RFMIP']:
+        print 'CASE: RFMIP only for entry:',key,'- continuing to process'
+    elif 'CMIP' not in val:
         print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
         sys.exit()
     for act in val:
@@ -1007,13 +1016,14 @@ if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
     txt = urllib.urlopen(target_url).read()
-    txt.replace(versionOld,versionId)
+    txt = txt.replace(versionOld,versionId)
     # Now delete existing file and write back to repo
     readmeH = '../README.md'
     os.remove(readmeH)
     fH = open(readmeH,'w')
     fH.write(txt)
     fH.close()
+    print 'README.md updated'
     del(target_url,txt,readmeH,fH)
 
 # Commit all changes

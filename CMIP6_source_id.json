@@ -1,5 +1,54 @@
 {
     "source_id":{
+        "ARTS-2-3":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "UHH"
+            ],
+            "label":"ARTS 2.3",
+            "label_extended":"ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                }
+            },
+            "release_year":"2015",
+            "source_id":"ARTS-2-3"
+        },
         "AWI-CM-1-0-HR":{
             "activity_participation":[
                 "CMIP",
@@ -4084,12 +4133,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar  8 11:58:22 2018 -0800",
-        "CV_collection_version":"6.2.3.2",
+        "CV_collection_modified":"Mon Mar 12 22:40:52 2018 -0300",
+        "CV_collection_version":"6.2.3.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"4d63969f11a734fa23904d7ba49ef34b87152de0",
-        "source_id_CV_modified":"Wed Mar  7 09:39:31 2018 -0800",
-        "source_id_CV_note":"Revise source_id VRESM-1-0"
+        "previous_commit":"c7f23d7dbe6dcb28b1ff4781227350edb1a281c0",
+        "source_id_CV_modified":"Thu Mar  8 11:58:22 2018 -0800",
+        "source_id_CV_note":"Register source_id ARTS-2-3"
     }
 }

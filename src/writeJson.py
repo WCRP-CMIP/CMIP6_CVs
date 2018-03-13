@@ -267,6 +267,7 @@ import datetime
 import gc
 import json
 import os
+import pdb
 import shlex
 import subprocess
 import sys
@@ -1011,6 +1012,10 @@ versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStr
                        str(versions['versionCVContent']),str(versions['versionCVCommit'])])
 del(versionHistory)
 
+print versionId
+print versionOld
+pdb.set_trace()
+
 if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
@@ -1022,6 +1027,7 @@ if versionId != versionOld:
     fH = open(readmeH,'w')
     fH.write(txt)
     fH.close()
+    print 'README.md updated'
     del(target_url,txt,readmeH,fH)
 
 # Commit all changes

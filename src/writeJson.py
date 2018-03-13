@@ -255,13 +255,14 @@ PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMI
 PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
 PJD 12 Mar 2018    - Register AER source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
 PJD 12 Mar 2018    - Revise source_id GFDL-ESM4 to include CDRMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/483
+PJD 12 Mar 2018    - Add CMIP6 doc reference in version history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/482
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id GFDL-ESM4 to include CDRMIP\"'
+commitMessage = '\"Add CMIP6 doc reference in version history\"'
 
 #%% Import statements
 import calendar
@@ -546,18 +547,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-ESM4'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CDRMIP',
- 'CMIP',
- 'DAMIP',
- 'DynVarMIP',
- 'LUMIP',
- 'OMIP',
- 'ScenarioMIP'
-]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -856,6 +845,7 @@ for jsonName in masterTargets:
     versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
     versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
+    versionInfo['specs_doc'] = 'v6.2.6 (20th December 2017; https://goo.gl/v1drZl)'
     del(versionInfo1)
 
     # Check file exists

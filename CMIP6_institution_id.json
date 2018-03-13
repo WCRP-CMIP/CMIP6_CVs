@@ -39,12 +39,13 @@
         "UHH":"Universitat Hamburg, Hamburg 20148, Germany"
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar 12 23:03:19 2018 -0300",
+        "CV_collection_modified":"Mon Mar 12 23:25:12 2018 -0300",
         "CV_collection_version":"6.2.3.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Tue Feb 27 08:55:55 2018 -0800",
         "institution_id_CV_note":"Register institution_id KIOST",
-        "previous_commit":"6d8065c5d35785e58160e8f1b7789a7998ca0f6f"
+        "previous_commit":"e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5",
+        "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -1012,15 +1012,13 @@ versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStr
                        str(versions['versionCVContent']),str(versions['versionCVCommit'])])
 del(versionHistory)
 
-print versionId
-print versionOld
-pdb.set_trace()
-
 if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
     txt = urllib.urlopen(target_url).read()
+    print txt
     txt.replace(versionOld,versionId)
+    print txt
     # Now delete existing file and write back to repo
     readmeH = '../README.md'
     os.remove(readmeH)

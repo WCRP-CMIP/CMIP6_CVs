@@ -3,7 +3,7 @@
 """
 Created on Fri Feb 23 13:09:26 2018
 
-PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata
+PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
 
 @author: durack1
 """
@@ -112,7 +112,6 @@ def getFileHistory(filePath):
         version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
         version_metadata['note'] = versionInfo[1].replace('note: ','')
         version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
-        version_metadata['specs_doc'] = 'v6.2.6 (20th December 2017; https://goo.gl/v1drZl)'
 
         #print version_metadata
         return version_metadata

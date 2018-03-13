@@ -254,13 +254,14 @@ PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/
 PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
 PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
 PJD 12 Mar 2018    - Register AER source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
+PJD 12 Mar 2018    - Revise source_id GFDL-ESM4 to include CDRMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/483
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id LBLRTM\"'
+commitMessage = '\"Revise source_id GFDL-ESM4 to include CDRMIP\"'
 
 #%% Import statements
 import calendar
@@ -545,46 +546,18 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'LBLRTM'
-source_id[key] = {}
+key = 'GFDL-ESM4'
 source_id[key]['activity_participation'] = [
- 'RFMIP'
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DynVarMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'ScenarioMIP'
 ]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'AER'
-]
-source_id[key]['label'] = 'LBLRTM'
-source_id[key]['label_extended'] = 'Line-By-Line Radiative Transfer Model v12.8, aer_v_3.6, MT_CKD_3.2'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

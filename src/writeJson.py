@@ -1019,7 +1019,7 @@ if versionId != versionOld:
     print 'before',txt
     print 'versionOld:',versionOld
     print 'versionId:',versionId
-    txt.replace(versionOld,versionId)
+    txt = txt.replace(versionOld,versionId)
     print txt
     # Now delete existing file and write back to repo
     readmeH = '../README.md'

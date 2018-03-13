@@ -1016,7 +1016,9 @@ if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
     txt = urllib.urlopen(target_url).read()
-    print txt
+    print 'before',txt
+    print 'versionOld:',versionOld
+    print 'versionId:',versionId
     txt.replace(versionOld,versionId)
     print txt
     # Now delete existing file and write back to repo

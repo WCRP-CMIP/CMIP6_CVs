@@ -250,7 +250,9 @@ PJD  5 Mar 2018    - Update activity_participation entries to include CMIP https
 PJD  5 Mar 2018    - Update activity_id to include CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
 PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
-PJD  5 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
+PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/479
+PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -741,8 +743,6 @@ del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
 #%% Validate source_id and experiment_id entries
 # source_id
 for key in source_id.keys():
-    if key == 'VRESM-1-0':
-        continue ; # Ignore - https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
     # Validate source_id format
     if not entryCheck(key):
         print 'Invalid source_id format for entry:',key,'- aborting'
@@ -750,7 +750,9 @@ for key in source_id.keys():
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
     #print key,val
-    if 'CMIP' not in val:
+    if val == ['RFMIP']:
+        print 'CASE: RFMIP only for entry:',key,'- continuing to process'
+    elif 'CMIP' not in val:
         print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
         sys.exit()
     for act in val:
@@ -1026,6 +1028,8 @@ if versionId != versionOld:
 args = shlex.split(''.join(['git commit -am ',commitMessage]))
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 
+'''
+# Merging branches changes the checksum, so the below doesn't work, UNLESS it's a direct master push
 if versionId != versionOld:
     # Generate composite command and execute
     cmd = ''.join(['git ','tag ','-a ',versionId,' -m',commitMessage])
@@ -1034,3 +1038,4 @@ if versionId != versionOld:
     # And push all new tags to remote
     subprocess.call(['git','push','--tags'])
     print 'tag created and pushed'
+'''

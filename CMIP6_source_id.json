@@ -1,5 +1,54 @@
 {
     "source_id":{
+        "ARTS-2-3":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "UHH"
+            ],
+            "label":"ARTS 2.3",
+            "label_extended":"ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                }
+            },
+            "release_year":"2015",
+            "source_id":"ARTS-2-3"
+        },
         "AWI-CM-1-0-HR":{
             "activity_participation":[
                 "CMIP",
@@ -476,6 +525,73 @@
             },
             "release_year":"2016",
             "source_id":"CAMS_CSM1-0"
+        },
+        "CAS-ESM1-0":{
+            "activity_participation":[
+                "AerChemMIP",
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "CORDEX",
+                "DAMIP",
+                "DynVarMIP",
+                "FAFMIP",
+                "GMMIP",
+                "GeoMIP",
+                "HighResMIP",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB",
+                "VolMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CAS"
+            ],
+            "label":"CAS-ESM 1.0",
+            "label_extended":"CAS-ESM 1.0 (Chinese Academy of Sciences Earth System Model version 1.0)",
+            "model_component":{
+                "aerosol":{
+                    "description":"IAP AACM",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"IAP AGCM4.1 (Finite difference dynamical core; 256 x 128 longitude/latitude; 30 levels; top level 2.2 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"IAP AACM",
+                    "nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"CoLM",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"LICOM2.0 (LICOM2.0, primarily 1deg; 362 x 196 longitude/latitude; 30 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"IAP OBGCM",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE4",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2015",
+            "source_id":"CAS-ESM1-0"
         },
         "CIESM":{
             "activity_participation":[
@@ -3964,7 +4080,11 @@
         },
         "VRESM-1-0":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "DAMIP",
+                "HighResMIP",
+                "PMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -3977,11 +4097,11 @@
             "model_component":{
                 "aerosol":{
                     "description":"Rotstayn-1.0",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "atmos":{
-                    "description":"VCAM-1.0 (192 x 192 x 6 C192; 35 levels; top level 35km)",
-                    "nominal_resolution":""
+                    "description":"VCAM-1.0 (C192; 192 x 192 x 6 longitude/latitude/cubeface; 35 levels; top level 35km)",
+                    "nominal_resolution":"50 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -3989,23 +4109,23 @@
                 },
                 "land":{
                     "description":"CABLE v2.2.3",
-                    "nominal_resolution":""
+                    "nominal_resolution":"50 km"
                 },
                 "landIce":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"VCOM-1.0 (192 x 192 x 6 C192; 35 levels; top grid cell 0-10m)",
-                    "nominal_resolution":""
+                    "description":"VCOM-1.0 (C192; 384 x 384 x 6 longitude/latitude/cubeface; 35 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
                     "description":"PISCES v3.4socco",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 },
                 "seaIce":{
                     "description":"CSIR-ICE (visco-plastic)",
-                    "nominal_resolution":""
+                    "nominal_resolution":"25 km"
                 }
             },
             "release_year":"2016",
@@ -4013,12 +4133,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar  5 17:14:45 2018 -0800",
-        "CV_collection_version":"6.2.3.0",
+        "CV_collection_modified":"Mon Mar 12 22:29:51 2018 -0300",
+        "CV_collection_version":"6.2.3.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d76341a9f3d680015afbe2868303c37d4c352546",
-        "source_id_CV_modified":"Mon Mar  5 16:09:56 2018 -0800",
-        "source_id_CV_note":"Update activity_participation entries to include CMIP"
+        "previous_commit":"1723824baca88def325293d310465d64307f8093",
+        "source_id_CV_modified":"Thu Mar  8 11:58:22 2018 -0800",
+        "source_id_CV_note":"Register source_id ARTS-2-3"
     }
 }

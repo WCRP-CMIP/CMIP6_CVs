@@ -253,13 +253,14 @@ PJD  5 Mar 2018    - Update README.md to include version badge https://github.co
 PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/479
 PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
 PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
+PJD 12 Mar 2018    - Register AER source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id ARTS-2-3\"'
+commitMessage = '\"Register source_id LBLRTM\"'
 
 #%% Import statements
 import calendar
@@ -267,7 +268,6 @@ import datetime
 import gc
 import json
 import os
-import pdb
 import shlex
 import subprocess
 import sys
@@ -545,7 +545,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ARTS-2-3'
+key = 'LBLRTM'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'RFMIP'
@@ -554,10 +554,10 @@ source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'UHH'
+ 'AER'
 ]
-source_id[key]['label'] = 'ARTS 2.3'
-source_id[key]['label_extended'] = 'ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)'
+source_id[key]['label'] = 'LBLRTM'
+source_id[key]['label_extended'] = 'Line-By-Line Radiative Transfer Model v12.8, aer_v_3.6, MT_CKD_3.2'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'none'
@@ -583,7 +583,7 @@ source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'none'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2015'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

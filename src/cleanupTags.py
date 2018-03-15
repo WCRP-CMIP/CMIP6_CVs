@@ -56,11 +56,11 @@ tagClean.append('3.2.5')
 tagClean.append('3.2.6')
 tagClean.append('3.2.7')
 tagClean.append('3.2.8')
-tagClean.append('3.3.0')
-tagClean.append('CMOR-3.2.5')
+#tagClean.append('3.3.0')
+#tagClean.append('CMOR-3.2.5')
 tagClean.append('CMOR-3.2.7')
 tagClean.append('CMOR-3.2.8')
-tagClean.append('CMOR-3.3.0')
+#tagClean.append('CMOR-3.3.0')
 
 #%% Iterate over list to delete existing tags
 for count,tag in enumerate(tagClean):
@@ -72,6 +72,7 @@ for count,tag in enumerate(tagClean):
 
 #%% Create target dictionary
 tagList = {}
+'''
 tagList['6.2.0.1'] = {}
 tagList['6.2.0.1']['Comment'] = '3.2.0/CMOR-3.2.0'
 tagList['6.2.0.1']['MD5'] = '5c4bbac517cb2053c6d43957d552cd435809055a'
@@ -108,6 +109,17 @@ tagList['6.2.0.11']['MD5'] = 'ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b'
 #tagList['6.2.1.0'] = {}
 #tagList['6.2.1.0']['Comment'] = '6.2.1.0'
 #tagList['6.2.1.0']['MD5'] = ''
+# 180315 1205
+tagList['6.2.3.3'] = {}
+tagList['6.2.3.3']['Comment'] = 'Updated to include ARTS-2-3; Awaiting cohort guidance (#453)'
+tagList['6.2.3.3']['MD5'] = '07044624a04316c533a87819664044f738715269'
+tagList['6.2.3.4'] = {}
+tagList['6.2.3.4']['Comment'] = 'Register source_id LBLRTM (#484)'
+tagList['6.2.3.4']['MD5'] = '6d8065c5d35785e58160e8f1b7789a7998ca0f6f'
+tagList['6.2.3.5'] = {}
+tagList['6.2.3.5']['Comment'] = 'Revise source_id GFDL-ESM4 to include CDRMIP (#485)'
+tagList['6.2.3.5']['MD5'] = 'e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5'
+'''
 
 #%% Iterate over dictionary to create new tags and delete existing
 # Should look like
@@ -115,6 +127,7 @@ tagList['6.2.0.11']['MD5'] = 'ac4b169b03595f65b6f21ebe86f0aa7e7f55e45b'
 # git push origin :refs/tags/$tag &&\
 # GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)" git tag -a $tag\
 # -m"$tag"`; done; git push --tags
+'''
 for tag in tagList.keys():
     print 'tag:    ',tag
     print 'comment:',tagList[tag]['Comment']
@@ -133,10 +146,10 @@ for tag in tagList.keys():
     subprocess.call(cmd,shell=True) ; # Shell=True required for string
 # And push all new tags to remote
 subprocess.call(['git','push','--tags'])
-
+'''
 #%% Logs
 ''' 180222 1536
-[durack1ml:git/CMIP6_CVs/src] durack1% python cleanupTags.py 
+[durack1ml:git/CMIP6_CVs/src] durack1% python cleanupTags.py
 tag:     3.2.0
 Deleted tag '3.2.0' (was 5c4bbac)
 To git@github.com:WCRP-CMIP/CMIP6_CVs
@@ -208,4 +221,62 @@ Traceback (most recent call last):
   File "/Volumes/durack1ml/Users/durack1/anaconda2/lib/python2.7/subprocess.py", line 1025, in _execute_child
     raise child_exception
 OSError: [Errno 2] No such file or directory
+180315 1205
+
+(uvcdat2120) trustym:src paul$ python cleanupTags.py 
+tag:     6.2.3.4
+comment: Register source_id LBLRTM (#484)
+MD5:     6d8065c5d35785e58160e8f1b7789a7998ca0f6f
+M	src/cleanupTags.py
+Note: checking out '6d8065c5d35785e58160e8f1b7789a7998ca0f6f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6d8065c... Register source_id LBLRTM (#484)
+Mon, 12 Mar 2018 18:54:13 -0700
+GIT_COMMITTER_DATE="Mon, 12 Mar 2018 18:54:13 -0700" git tag -a 6.2.3.4 -m"Register source_id LBLRTM (#484)"
+tag:     6.2.3.5
+comment: Revise source_id GFDL-ESM4 to include CDRMIP (#485)
+MD5:     e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5
+M	src/cleanupTags.py
+Previous HEAD position was 6d8065c... Register source_id LBLRTM (#484)
+HEAD is now at e99a005... Revise source_id GFDL-ESM4 to include CDRMIP (#485)
+Mon, 12 Mar 2018 19:08:03 -0700
+GIT_COMMITTER_DATE="Mon, 12 Mar 2018 19:08:03 -0700" git tag -a 6.2.3.5 -m"Revise source_id GFDL-ESM4 to include CDRMIP (#485)"
+tag:     6.2.3.3
+comment: Updated to include ARTS-2-3; Awaiting cohort guidance (#453)
+MD5:     07044624a04316c533a87819664044f738715269
+M	src/cleanupTags.py
+Previous HEAD position was e99a005... Revise source_id GFDL-ESM4 to include CDRMIP (#485)
+HEAD is now at 0704462... Updated to include ARTS-2-3; Awaiting cohort guidance (#453)
+Mon, 12 Mar 2018 18:42:45 -0700
+GIT_COMMITTER_DATE="Mon, 12 Mar 2018 18:42:45 -0700" git tag -a 6.2.3.3 -m"Updated to include ARTS-2-3; Awaiting cohort guidance (#453)"
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 726 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 2 (delta 1)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:WCRP-CMIP/CMIP6_CVs
+ * [new tag]         3.2.0 -> 3.2.0
+ * [new tag]         3.2.1 -> 3.2.1
+ * [new tag]         3.2.2 -> 3.2.2
+ * [new tag]         3.2.3 -> 3.2.3
+ * [new tag]         3.2.4 -> 3.2.4
+ * [new tag]         3.2.5 -> 3.2.5
+ * [new tag]         3.2.6 -> 3.2.6
+ * [new tag]         3.2.7 -> 3.2.7
+ * [new tag]         3.2.8 -> 3.2.8
+ * [new tag]         6.2.3.3 -> 6.2.3.3
+ * [new tag]         6.2.3.4 -> 6.2.3.4
+ * [new tag]         6.2.3.5 -> 6.2.3.5
+ * [new tag]         CMOR-3.2.7 -> CMOR-3.2.7
+ * [new tag]         CMOR-3.2.8 -> CMOR-3.2.8
 '''

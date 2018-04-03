@@ -252,7 +252,14 @@ PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https:/
 PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/479
 PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+<<<<<<< HEAD
 PJD  3 Apr 2018    - Register source_id NESM3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/488
+=======
+PJD 12 Mar 2018    - Register UHH source_id ARTS-2-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/452
+PJD 12 Mar 2018    - Register AER source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
+PJD 12 Mar 2018    - Revise source_id GFDL-ESM4 to include CDRMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/483
+PJD 12 Mar 2018    - Add CMIP6 doc reference in version history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/482
+>>>>>>> master
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -267,7 +274,6 @@ import datetime
 import gc
 import json
 import os
-import pdb
 import shlex
 import subprocess
 import sys
@@ -891,6 +897,7 @@ for jsonName in masterTargets:
     versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
     versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
+    versionInfo['specs_doc'] = 'v6.2.6 (20th December 2017; https://goo.gl/v1drZl)'
     del(versionInfo1)
 
     # Check file exists
@@ -1024,13 +1031,14 @@ if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
     txt = urllib.urlopen(target_url).read()
-    txt.replace(versionOld,versionId)
+    txt = txt.replace(versionOld,versionId)
     # Now delete existing file and write back to repo
     readmeH = '../README.md'
     os.remove(readmeH)
     fH = open(readmeH,'w')
     fH.write(txt)
     fH.close()
+    print 'README.md updated'
     del(target_url,txt,readmeH,fH)
 
 # Commit all changes

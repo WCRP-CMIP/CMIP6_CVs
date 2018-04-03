@@ -3,6 +3,8 @@
 """
 Created on Fri Feb 23 13:09:26 2018
 
+PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
+
 @author: durack1
 """
 #%% imports

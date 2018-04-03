@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"a1a5ae648f0a6a43f2ce79c3e1a869ddd2aff02a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a1a5ae648f0a6a43f2ce79c3e1a869ddd2aff02a",
+            "MD5":"bf3b42c1dacd2f4447190ee45246293628b4beae",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bf3b42c1dacd2f4447190ee45246293628b4beae",
             "commitMessage":"Register source_id NESM3",
-            "timeStamp":"Tue Apr  3 15:21:45 2018 -0700"
+            "timeStamp":"Tue Apr  3 15:27:26 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

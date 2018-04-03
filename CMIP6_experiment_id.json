@@ -4960,7 +4960,7 @@
                 "OMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "BGC"
             ],
             "description":"Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean - ice Reference Experiments inter-annually varying atmospheric and river data sets for years 1948-2009. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 62-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"310",
@@ -4987,7 +4987,7 @@
                 "OMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "BGC"
             ],
             "description":"Same as the omip1 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle of CORE-II forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip1 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
@@ -5014,7 +5014,7 @@
                 "OMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "BGC"
             ],
             "description":"Global ocean - sea-ice coupled experiment forced with the JRA55-do inter-annually varying atmospheric and river data sets for years 1958-2017. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"",
@@ -5041,7 +5041,7 @@
                 "OMIP"
             ],
             "additional_allowed_model_components":[
-                ""
+                "BGC"
             ],
             "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA55-do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
@@ -7278,13 +7278,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr  3 15:56:32 2018 -0700",
-        "CV_collection_version":"6.2.4.0",
+        "CV_collection_modified":"Tue Apr  3 16:20:52 2018 -0700",
+        "CV_collection_version":"6.2.5.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
-        "experiment_id_CV_note":"Revise OMIP JRA55-do entry",
+        "experiment_id_CV_modified":"Tue Apr  3 15:56:32 2018 -0700",
+        "experiment_id_CV_note":"Revise OMIP allowed_components",
         "institution_id":"PCMDI",
-        "previous_commit":"82ff39afea82df085c617b14b1aa09a9b96597b8",
+        "previous_commit":"a15144ff0de7b215105a06e9558a1472b544b135",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

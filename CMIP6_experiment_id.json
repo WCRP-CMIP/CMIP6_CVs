@@ -5016,9 +5016,9 @@
             "additional_allowed_model_components":[
                 ""
             ],
-            "description":"Global ocean - sea-ice coupled experiment forced with the JRA-55do inter-annually varying atmospheric and river data sets for years 1958-2016. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
+            "description":"Global ocean - sea-ice coupled experiment forced with the JRA55-do inter-annually varying atmospheric and river data sets for years 1958-2017. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
             "end_year":"",
-            "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
+            "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip2",
             "min_number_yrs_per_sim":"295",
             "parent_activity_id":[
@@ -5043,9 +5043,9 @@
             "additional_allowed_model_components":[
                 ""
             ],
-            "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA-55do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
+            "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA55-do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
-            "experiment":"OMIP experiment forced by JRA-55do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
+            "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip2-spunup",
             "min_number_yrs_per_sim":"295",
             "parent_activity_id":[
@@ -7278,13 +7278,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr  3 15:43:22 2018 -0700",
-        "CV_collection_version":"6.2.3.7",
+        "CV_collection_modified":"Tue Apr  3 15:56:32 2018 -0700",
+        "CV_collection_version":"6.2.4.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Feb 23 20:21:26 2018 -0800",
-        "experiment_id_CV_note":"\"Validate source_id entries against CVs\"",
+        "experiment_id_CV_note":"Revise OMIP JRA55-do entry",
         "institution_id":"PCMDI",
-        "previous_commit":"d8ea7660ec8639be058ed25193893f889950afeb",
+        "previous_commit":"82ff39afea82df085c617b14b1aa09a9b96597b8",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

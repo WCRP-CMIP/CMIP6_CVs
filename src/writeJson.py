@@ -258,13 +258,14 @@ PJD 12 Mar 2018    - Revise source_id GFDL-ESM4 to include CDRMIP https://github
 PJD 12 Mar 2018    - Add CMIP6 doc reference in version history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/482
 PJD  3 Apr 2018    - Register source_id NESM3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/488
 PJD  3 Apr 2018    - Register institution_id IIASA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/490
+PJD  3 Apr 2018    - Revise OMIP JRA55-do entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/493
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register insitution_id IIASA\"'
+commitMessage = '\"Revise OMIP JRA55-do entry\"'
 
 #%% Import statements
 import calendar
@@ -335,6 +336,28 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key = 'omip2'
+experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the JRA55-do inter-annually',
+                                             ' varying atmospheric and river data sets for years 1958-2017. Initial ocean tracer',
+                                             ' fields are based on observations. All Priority=1 OMIP diagnostics are requested',
+                                             ' for all five cycles of the 59-year forcing to quantify drift. All OMIP diagnostics',
+                                             ' (Priority=1,2,3) are requested for the 5th cycle'])
+experiment_id[key]['experiment'] = ''.join(['OMIP experiment forced by JRA55-do atmospheric data set and initialized with observed',
+                                            ' physical and biogeochemical ocean data'])
+
+key = 'omip2-spunup'
+experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment except that it is not initialized with observed',
+                                             ' climatologies; rather it is initialized with results from at least a 2000-year',
+                                             ' spin up of the coupled physical-biogeochemical models. The spin up simulations',
+                                             ' may be made with the classic online or offline approach, or with tracer-acceleration',
+                                             ' techniques or fast solvers. If an online approach is used, at the end of the 5th',
+                                             ' cycle ofthe JRA55-do forcing, the model\'s physical fields should be reinitialized',
+                                             ' to the values at the start of the 3rd cycle in order to avoid long-term drift in',
+                                             ' those fields and to assure that they will not diverge greatly from physical fields',
+                                             ' in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean',
+                                             ' circulation'])
+experiment_id[key]['experiment'] = ''.join(['OMIP experiment forced by JRA55-do atmospheric data set and initialized from at',
+                                            ' least a 2000-year spin up of the coupled physical-biogeochemical model'])
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

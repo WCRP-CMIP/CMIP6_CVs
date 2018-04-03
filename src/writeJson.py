@@ -252,13 +252,14 @@ PJD  5 Mar 2018    - Updated versionHistory to be obtained from the repo https:/
 PJD  5 Mar 2018    - Update README.md to include version badge https://github.com/WCRP-CMIP/CMIP6_CVs/issues/468
 PJD  7 Mar 2018    - Register source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/479
 PJD  8 Mar 2018    - Revise source_id VRESM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/101
+PJD  3 Apr 2018    - Register source_id NESM3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/488
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id VRESM-1-0\"'
+commitMessage = '\"Register source_id NESM3\"'
 
 #%% Import statements
 import calendar
@@ -544,38 +545,51 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'VRESM-1-0'
+key = 'NESM3'
+source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'CMIP',
  'DAMIP',
- 'HighResMIP',
+ 'DCPP',
+ 'GMMIP',
+ 'GeoMIP',
  'PMIP',
- 'ScenarioMIP'
+ 'ScenarioMIP',
+ 'VolMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'CSIR-CSIRO'
+ 'NUIST'
 ]
-source_id[key]['label'] = 'VRESM 1.0'
-source_id[key]['label_extended'] = 'VRESM 1.0 (Variable-resolution Earth System Model 1.0)'
-source_id[key]['model_component']['aerosol']['description'] = 'Rotstayn-1.0'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmos']['description'] = 'VCAM-1.0 (C192; 192 x 192 x 6 longitude/latitude/cubeface; 35 levels; top level 35km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['label'] = 'NESM v3'
+source_id[key]['label_extended'] = 'NUIST ESM v3'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM v6.3 (T63; 192 x 96 longitude/latitude; 47 levels; top level 1 Pa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land']['description'] = 'CABLE v2.2.3'
-source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'JSBACH v3.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '2.5 km'
+source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean']['description'] = 'VCOM-1.0 (C192; 384 x 384 x 6 longitude/latitude/cubeface; 35 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'PISCES v3.4socco'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '25 km'
-source_id[key]['model_component']['seaIce']['description'] = 'CSIR-ICE (visco-plastic)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'NEMO v3.4 (NEMO v3.4, tripolar primarily 1deg; 384 x 362 longitude/latitude; 46 levels; top grid cell 0-6 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4.1'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2016'
 source_id[key]['source_id'] = key
 #==============================================================================
@@ -745,8 +759,11 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
-        sys.exit()
+        if key in ['LBLRTM','ARTS-2-3']:
+            print key,'RFMIP only - continue'
+        else:
+            print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
+            sys.exit()
     for act in val:
         if act not in activity_id:
             print 'Invalid activity_participation for entry:',key,'- aborting'

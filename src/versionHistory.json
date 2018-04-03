@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"4d63969f11a734fa23904d7ba49ef34b87152de0",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/4d63969f11a734fa23904d7ba49ef34b87152de0",
-            "commitMessage":"Revise source_id VRESM-1-0",
-            "timeStamp":"Thu Mar  8 11:58:22 2018 -0800"
+            "MD5":"a1a5ae648f0a6a43f2ce79c3e1a869ddd2aff02a",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a1a5ae648f0a6a43f2ce79c3e1a869ddd2aff02a",
+            "commitMessage":"Register source_id NESM3",
+            "timeStamp":"Tue Apr  3 15:21:45 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":6,
             "versionCVContent":3,
             "versionCVStructure":2,
             "versionMIPEra":6

@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"a15144ff0de7b215105a06e9558a1472b544b135",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a15144ff0de7b215105a06e9558a1472b544b135",
+            "MD5":"fe0fae0a0a0b36d451aa8923b891b8e705e0311f",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/fe0fae0a0a0b36d451aa8923b891b8e705e0311f",
             "commitMessage":"Revise OMIP allowed_components",
-            "timeStamp":"Tue Apr  3 16:20:52 2018 -0700"
+            "timeStamp":"Tue Apr  3 16:24:56 2018 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",

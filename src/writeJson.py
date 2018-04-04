@@ -560,6 +560,11 @@ key = 'MPIESM-1-2-HAM'
 source_id[key]['label'] = 'MPI-ESM1.2-HAM'
 source_id[key]['label_extended'] = 'MPI-ESM1.2-HAM'
 source_id['MPI-ESM-1-2-HAM'] = source_id.pop(key)
+source_id['MPI-ESM-1-2-HAM']['source_id'] = 'MPI-ESM-1-2-HAM'
+# Cleanup MPI-ESM1-2-HR
+source_id['MPI-ESM1-2-HR']['source_id'] = 'MPI-ESM1-2-HR'
+# Cleanup CAMS-CSM1-0
+source_id['CAMS-CSM1-0']['source_id'] = 'CAMS-CSM1-0'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -750,6 +755,11 @@ for key in source_id.keys():
             pass
         elif val2 not in nominal_resolution:
             print 'Invalid nominal_resolution for entry:',key,val1,val2,'- aborting'
+            sys.exit()
+    # Validate source_id
+    val = source_id[key]['source_id']
+    if key != val:
+            print 'Invalid source_id for entry:',val,'not equal',key,'- aborting'
             sys.exit()
 # experiment_ids
 experiment_id_keys = experiment_id.keys()

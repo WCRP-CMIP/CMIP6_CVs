@@ -266,13 +266,14 @@ PJD  3 Apr 2018    - Revise ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/i
 PJD  3 Apr 2018    - Revise MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
 PJD  4 Apr 2018    - Revise CAS FGOALS* activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427
 PJD  4 Apr 2018    - Revise NASA-GISS source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+PJD  4 Apr 2018    - Register source_id GISS-E2-1-MA-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/506
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise NASA-GISS source_id entries\"'
+commitMessage = '\"Register source_id GISS-E2-1-MA-G\"'
 
 #%% Import statements
 import calendar
@@ -558,42 +559,48 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GISS-E2-1G'
+key = 'GISS-E2-1-MA-G'
+source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CFMIP',
  'CMIP',
- 'DAMIP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'ISMIP6',
- 'LS3MIP',
- 'LUMIP',
- 'OMIP',
- 'PAMIP',
- 'PMIP',
  'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB',
  'VolMIP'
 ]
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)'
-source_id[key]['source_id'] = 'GISS-E2-1-G'
-source_id['GISS-E2-1-G'] = source_id.pop(key)
-key = 'GISS-E2-1H'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'OMIP',
- 'PAMIP',
- 'SIMIP',
- 'ScenarioMIP'
+source_id[key]['cohort'] = [
+ 'Registered'
 ]
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)'
-source_id[key]['source_id'] = 'GISS-E2-1-H'
-source_id['GISS-E2-1-H'] = source_id.pop(key)
+source_id[key]['institution_id'] = [
+ 'NASA-GISS'
+]
+source_id[key]['label'] = 'GISS-E2.1MA-G'
+source_id[key]['label_extended'] = 'GISS-E2.1MA-G'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1MA (2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

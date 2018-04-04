@@ -2244,6 +2244,57 @@
             "release_year":"2016",
             "source_id":"GISS-E2-1-H"
         },
+        "GISS-E2-1-MA-G":{
+            "activity_participation":[
+                "CMIP",
+                "RFMIP",
+                "VolMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NASA-GISS"
+            ],
+            "label":"GISS-E2.1MA-G",
+            "label_extended":"GISS-E2.1MA-G",
+            "model_component":{
+                "aerosol":{
+                    "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"GISS-E2.1MA (2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"GISS LSM",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"GISS SI",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"GISS-E2-1-MA-G"
+        },
         "HadGEM3-GC31-HH":{
             "activity_participation":[
                 "CMIP",
@@ -4277,13 +4328,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr  4 08:06:18 2018 -0700",
-        "CV_collection_version":"6.2.6.5",
+        "CV_collection_modified":"Wed Apr  4 09:22:07 2018 -0700",
+        "CV_collection_version":"6.2.6.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
-        "source_id_CV_modified":"Wed Apr  4 07:49:52 2018 -0700",
-        "source_id_CV_note":"Revise NASA-GISS source_id entries",
+        "previous_commit":"e00c18414ad770d5826d4da86a80c9e677cc4445",
+        "source_id_CV_modified":"Wed Apr  4 08:06:18 2018 -0700",
+        "source_id_CV_note":"Register source_id GISS-E2-1-MA-G",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
-            "commitMessage":"Revise NASA-GISS source_id entries",
-            "timeStamp":"Wed Apr  4 08:06:18 2018 -0700"
+            "MD5":"e00c18414ad770d5826d4da86a80c9e677cc4445",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e00c18414ad770d5826d4da86a80c9e677cc4445",
+            "commitMessage":"Register source_id GISS-E2-1-MA-G",
+            "timeStamp":"Wed Apr  4 09:22:07 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":6,
             "versionCVStructure":2,
             "versionMIPEra":6

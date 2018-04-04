@@ -267,13 +267,14 @@ PJD  3 Apr 2018    - Revise MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_C
 PJD  4 Apr 2018    - Revise CAS FGOALS* activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427
 PJD  4 Apr 2018    - Revise NASA-GISS source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
 PJD  4 Apr 2018    - Register source_id GISS-E2-1-MA-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/506
+PJD  4 Apr 2018    - Register source_id GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/507
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id GISS-E2-1-MA-G\"'
+commitMessage = '\"Register source_id GISS-E3-G\"'
 
 #%% Import statements
 import calendar
@@ -559,11 +560,27 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GISS-E2-1-MA-G'
+key = 'GISS-E3-G'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CFMIP',
  'CMIP',
+ 'DAMIP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PAMIP',
+ 'PMIP',
  'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
  'VolMIP'
 ]
 source_id[key]['cohort'] = [
@@ -572,21 +589,21 @@ source_id[key]['cohort'] = [
 source_id[key]['institution_id'] = [
  'NASA-GISS'
 ]
-source_id[key]['label'] = 'GISS-E2.1MA-G'
-source_id[key]['label_extended'] = 'GISS-E2.1MA-G'
+source_id[key]['label'] = 'GISS-E3-G'
+source_id[key]['label_extended'] = 'GISS-E3-G'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1MA (2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E3 (Cubed sphere (C90); 90 x 90 x 6 longitude/latitude/cubeface, grid resolution varies for each cubeface; 102 levels; top level 0.002 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['land'] = {}
 source_id[key]['model_component']['land']['description'] = 'GISS LSM'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'

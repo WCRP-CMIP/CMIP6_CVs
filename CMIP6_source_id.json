@@ -1754,7 +1754,8 @@
         },
         "FGOALS-f3-H":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "HighResMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1803,7 +1804,12 @@
         },
         "FGOALS-f3-L":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "DCPP",
+                "GMMIP",
+                "OMIP",
+                "SIMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1852,7 +1858,17 @@
         },
         "FGOALS-g3":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "CORDEX",
+                "DAMIP",
+                "DCPP",
+                "FAFMIP",
+                "GMMIP",
+                "LS3MIP",
+                "OMIP",
+                "PMIP",
+                "SIMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -4239,13 +4255,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr  3 21:26:29 2018 -0700",
-        "CV_collection_version":"6.2.6.3",
+        "CV_collection_modified":"Wed Apr  4 07:49:52 2018 -0700",
+        "CV_collection_version":"6.2.6.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"24475d26eb5f91f582b0f54a4cb5c6000cd94a30",
-        "source_id_CV_modified":"Tue Apr  3 21:09:39 2018 -0700",
-        "source_id_CV_note":"Revise MPI-ESM-1-2-HAM",
+        "previous_commit":"acd9f01bb026c55363abef608f19f723d40687b3",
+        "source_id_CV_modified":"Tue Apr  3 21:26:29 2018 -0700",
+        "source_id_CV_note":"Revise CAS FGOALS* activity_participation",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

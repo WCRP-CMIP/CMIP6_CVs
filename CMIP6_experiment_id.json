@@ -870,7 +870,7 @@
             "end_year":"2014",
             "experiment":"AMIP-style simulation covering the period 1870-2014",
             "experiment_id":"amip-hist",
-            "min_number_yrs_per_sim":"144",
+            "min_number_yrs_per_sim":"145",
             "parent_activity_id":[
                 "no parent"
             ],
@@ -2457,7 +2457,7 @@
             "end_year":"2100",
             "experiment":"emission-driven RCP8.5 based on SSP5",
             "experiment_id":"esm-ssp585",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -4005,10 +4005,10 @@
                 ""
             ],
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is from its own AOGCM",
-            "end_year":"2300",
+            "end_year":"2100 or 2300",
             "experiment":"offline ice sheet forced by ISM's own AOGCM ssp585 output",
             "experiment_id":"ism-ssp585-self",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -4032,10 +4032,10 @@
                 ""
             ],
             "description":"Future climate ScenarioMIP SSP5-8.5 simulation using \"offline\" ice sheet models. Forcing for ice sheet model is the standard dataset based on ScenarioMIP ssp585",
-            "end_year":"2300",
+            "end_year":"2100 or 2300",
             "experiment":"offline ice sheet forced by ISMIP6-specified AOGCM ssp585 output",
             "experiment_id":"ism-ssp585-std",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -4963,7 +4963,7 @@
                 "BGC"
             ],
             "description":"Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean - ice Reference Experiments inter-annually varying atmospheric and river data sets for years 1948-2009. Initial ocean tracer fields are based on observations. All Priority=1 OMIP diagnostics are requested for all five cycles of the 62-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the 5th cycle",
-            "end_year":"310",
+            "end_year":"",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip1",
             "min_number_yrs_per_sim":"310",
@@ -4976,7 +4976,7 @@
             "required_model_components":[
                 "OGCM"
             ],
-            "start_year":"1",
+            "start_year":"",
             "sub_experiment_id":[
                 "none"
             ],
@@ -6880,7 +6880,7 @@
             "end_year":"2100 or 2300",
             "experiment":"biogeochemically-coupled version of the RCP3.4-overshoot based on SSP5",
             "experiment_id":"ssp534-over-bgc",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "C4MIP"
             ],
@@ -6938,7 +6938,7 @@
             "end_year":"2100 or 2300",
             "experiment":"biogeochemically-coupled version of the RCP8.5 based on SSP5",
             "experiment_id":"ssp585-bgc",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "C4MIP"
             ],
@@ -6965,10 +6965,10 @@
                 "BGC"
             ],
             "description":"Future climate from ScenarioMIP SSP5-8.5 simulation that includes interactive ice sheets. Set up follows the standard SSP5-8.5 experiment",
-            "end_year":"2300",
+            "end_year":"2100 or 2300",
             "experiment":"ssp585 with interactive ice sheet",
             "experiment_id":"ssp585-withism",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "ISMIP6"
             ],
@@ -6998,7 +6998,7 @@
             "end_year":"2100",
             "experiment":"volcanic cluster experiment under 21st century SSP2-4.5 scenario",
             "experiment_id":"volc-cluster-21C",
-            "min_number_yrs_per_sim":"85",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -7278,11 +7278,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr  3 16:34:07 2018 -0700",
-        "CV_collection_version":"6.2.5.0",
+        "CV_collection_modified":"Tue Apr  3 17:13:04 2018 -0700",
+        "CV_collection_version":"6.2.6.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Tue Apr  3 16:22:02 2018 -0700",
-        "experiment_id_CV_note":"Revise OMIP allowed_components",
+        "experiment_id_CV_modified":"Tue Apr  3 16:24:56 2018 -0700",
+        "experiment_id_CV_note":"Revise years in experiment_id entries",
         "institution_id":"PCMDI",
         "previous_commit":"fe0fae0a0a0b36d451aa8923b891b8e705e0311f",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"

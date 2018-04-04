@@ -2537,8 +2537,8 @@
                     "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"ICON-AES (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
-                    "nominal_resolution":"250 km"
+                    "description":"ICON-A (icosahedral/triangles; 160 km; 47 levels; top level 80 km)",
+                    "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -2553,7 +2553,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"ICON-OES (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)",
+                    "description":"ICON-O (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)",
                     "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -4239,13 +4239,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr  3 18:25:02 2018 -0700",
-        "CV_collection_version":"6.2.6.1",
+        "CV_collection_modified":"Tue Apr  3 21:09:39 2018 -0700",
+        "CV_collection_version":"6.2.6.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"31e4ed1827df07f9c61d326795003f2b03b7e068",
-        "source_id_CV_modified":"Tue Apr  3 15:30:56 2018 -0700",
-        "source_id_CV_note":"Revise MPI-ESM1-2-HR",
+        "previous_commit":"057aaf46196cde6936a6026581410f2b3095a462",
+        "source_id_CV_modified":"Tue Apr  3 18:25:02 2018 -0700",
+        "source_id_CV_note":"evise ICON-ESM-LR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

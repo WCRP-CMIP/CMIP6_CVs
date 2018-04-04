@@ -262,13 +262,14 @@ PJD  3 Apr 2018    - Revise OMIP JRA55-do entry https://github.com/WCRP-CMIP/CMI
 PJD  3 Apr 2018    - Revise OMIP allowed_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/491
 PJD  3 Apr 2018    - Revise years in experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/489
 PJD  3 Apr 2018    - Revise MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
+PJD  3 Apr 2018    - Revise ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise MPI-ESM1-2-HR\"'
+commitMessage = '\"evise ICON-ESM-LR\"'
 
 #%% Import statements
 import calendar
@@ -554,8 +555,11 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM-1-2-HR'
-source_id['MPI-ESM1-2-HR'] = source_id.pop(key)
+key = 'ICON-ESM-LR'
+source_id[key]['model_component']['atmos']['description'] = 'ICON-A (icosahedral/triangles; 160 km; 47 levels; top level 80 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'ICON-O (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

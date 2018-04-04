@@ -265,13 +265,14 @@ PJD  3 Apr 2018    - Revise MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs
 PJD  3 Apr 2018    - Revise ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
 PJD  3 Apr 2018    - Revise MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
 PJD  4 Apr 2018    - Revise CAS FGOALS* activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427
+PJD  4 Apr 2018    - Revise NASA-GISS source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise CAS FGOALS* activity_participation\"'
+commitMessage = '\"Revise NASA-GISS source_id entries\"'
 
 #%% Import statements
 import calendar
@@ -557,34 +558,42 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FGOALS-f3-H'
+key = 'GISS-E2-1G'
 source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CFMIP',
  'CMIP',
- 'HighResMIP'
-]
-key = 'FGOALS-f3-L'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'GMMIP',
- 'OMIP',
- 'SIMIP',
- 'ScenarioMIP'
-]
-key = 'FGOALS-g3'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'CORDEX',
  'DAMIP',
- 'DCPP',
+ 'DynVarMIP',
  'FAFMIP',
  'GMMIP',
+ 'ISMIP6',
  'LS3MIP',
+ 'LUMIP',
  'OMIP',
+ 'PAMIP',
  'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
+]
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)'
+source_id[key]['source_id'] = 'GISS-E2-1-G'
+source_id['GISS-E2-1-G'] = source_id.pop(key)
+key = 'GISS-E2-1H'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'OMIP',
+ 'PAMIP',
  'SIMIP',
  'ScenarioMIP'
 ]
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)'
+source_id[key]['source_id'] = 'GISS-E2-1-H'
+source_id['GISS-E2-1-H'] = source_id.pop(key)
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

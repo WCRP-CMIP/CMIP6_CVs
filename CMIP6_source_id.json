@@ -2124,9 +2124,27 @@
             "release_year":"2017",
             "source_id":"GFDL-ESM4"
         },
-        "GISS-E2-1G":{
+        "GISS-E2-1-G":{
             "activity_participation":[
-                "CMIP"
+                "AerChemMIP",
+                "C4MIP",
+                "CFMIP",
+                "CMIP",
+                "DAMIP",
+                "DynVarMIP",
+                "FAFMIP",
+                "GMMIP",
+                "ISMIP6",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PAMIP",
+                "PMIP",
+                "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2142,7 +2160,7 @@
                     "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)",
+                    "description":"GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)",
                     "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -2171,11 +2189,15 @@
                 }
             },
             "release_year":"2016",
-            "source_id":"GISS-E2-1G"
+            "source_id":"GISS-E2-1-G"
         },
-        "GISS-E2-1H":{
+        "GISS-E2-1-H":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "OMIP",
+                "PAMIP",
+                "SIMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -2191,7 +2213,7 @@
                     "nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"GISS-E2.1 (2x2.5 degree; 90 x 144 longitude/latitude; 40 levels; top level 0.1 hPa)",
+                    "description":"GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)",
                     "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -2220,7 +2242,7 @@
                 }
             },
             "release_year":"2016",
-            "source_id":"GISS-E2-1H"
+            "source_id":"GISS-E2-1-H"
         },
         "HadGEM3-GC31-HH":{
             "activity_participation":[
@@ -4255,13 +4277,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr  4 07:49:52 2018 -0700",
-        "CV_collection_version":"6.2.6.4",
+        "CV_collection_modified":"Wed Apr  4 08:06:18 2018 -0700",
+        "CV_collection_version":"6.2.6.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"acd9f01bb026c55363abef608f19f723d40687b3",
-        "source_id_CV_modified":"Tue Apr  3 21:26:29 2018 -0700",
-        "source_id_CV_note":"Revise CAS FGOALS* activity_participation",
+        "previous_commit":"ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
+        "source_id_CV_modified":"Wed Apr  4 07:49:52 2018 -0700",
+        "source_id_CV_note":"Revise NASA-GISS source_id entries",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

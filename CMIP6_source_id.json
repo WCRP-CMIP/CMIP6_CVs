@@ -2331,7 +2331,7 @@
                     "nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"GISS-E3 (Cubed sphere (C90); 90 x 90 x 6 longitude/latitude/cubeface, grid resolution varies for each cubeface; 102 levels; top level 0.002 hPa)",
+                    "description":"GISS-E3 (Cubed sphere, C90; 90 x 90 x 6 gridboxes/cubeface, grid resolution aligns with longitude/latitude along central lines for each cubeface; 102 levels; top level 0.002 hPa)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -4395,12 +4395,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr  4 09:37:18 2018 -0700",
-        "CV_collection_version":"6.2.6.7",
+        "CV_collection_modified":"Wed Apr  4 09:39:52 2018 -0700",
+        "CV_collection_version":"6.2.6.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3b1a9c6f18ecc954c96ad89f0bd76148d3c62f4f",
-        "source_id_CV_modified":"Wed Apr  4 09:22:07 2018 -0700",
+        "previous_commit":"bf4858954f4b2b9620a8ac84425a2c70a8289172",
+        "source_id_CV_modified":"Wed Apr  4 09:37:18 2018 -0700",
         "source_id_CV_note":"Register source_id GISS-E3-G",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }

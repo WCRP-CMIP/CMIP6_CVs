@@ -596,7 +596,7 @@ source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E3 (Cubed sphere (C90); 90 x 90 x 6 longitude/latitude/cubeface, grid resolution varies for each cubeface; 102 levels; top level 0.002 hPa)'
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E3 (Cubed sphere, C90; 90 x 90 x 6 gridboxes/cubeface, grid resolution aligns with longitude/latitude along central lines for each cubeface; 102 levels; top level 0.002 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'

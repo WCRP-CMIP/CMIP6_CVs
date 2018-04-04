@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"acd9f01bb026c55363abef608f19f723d40687b3",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/acd9f01bb026c55363abef608f19f723d40687b3",
-            "commitMessage":"Revise CAS FGOALS* activity_participation",
-            "timeStamp":"Wed Apr  4 07:49:52 2018 -0700"
+            "MD5":"ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ae04ef2b5b01984f0aeb9de25eba2d84facda13d",
+            "commitMessage":"Revise NASA-GISS source_id entries",
+            "timeStamp":"Wed Apr  4 08:06:18 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":4,
+            "versionCVCommit":5,
             "versionCVContent":6,
             "versionCVStructure":2,
             "versionMIPEra":6

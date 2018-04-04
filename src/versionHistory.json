@@ -9,12 +9,8 @@
         "experiment_id":{
             "MD5":"fe0fae0a0a0b36d451aa8923b891b8e705e0311f",
             "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/fe0fae0a0a0b36d451aa8923b891b8e705e0311f",
-            "commitMessage":"Revise OMIP allowed_components",
-<<<<<<< HEAD
+            "commitMessage":"Revise OMIP additional_allowed_model_components (#498)",
             "timeStamp":"Tue Apr  3 16:24:56 2018 -0700"
-=======
-            "timeStamp":"Tue Apr  3 16:22:02 2018 -0700"
->>>>>>> 986e6707050f787cfefe8eb9666f17eeaf4a0c8c
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",

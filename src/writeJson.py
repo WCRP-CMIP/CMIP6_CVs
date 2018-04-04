@@ -260,13 +260,14 @@ PJD  3 Apr 2018    - Register source_id NESM3 https://github.com/WCRP-CMIP/CMIP6
 PJD  3 Apr 2018    - Register institution_id IIASA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/490
 PJD  3 Apr 2018    - Revise OMIP JRA55-do entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/493
 PJD  3 Apr 2018    - Revise OMIP allowed_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/491
+PJD  3 Apr 2018    - Revise years in experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/489
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise OMIP allowed_components\"'
+commitMessage = '\"Revise years in experiment_id entries\"'
 
 #%% Import statements
 import calendar
@@ -337,14 +338,28 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key = 'esm-ssp585'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+key = 'ism-ssp585-self'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+experiment_id[key]['end_year'] = '2100 or 2300'
+key = 'ism-ssp585-std'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+experiment_id[key]['end_year'] = '2100 or 2300'
+key = 'ssp534-over-bgc'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+key = 'ssp585-bgc'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+key = 'ssp585-withism'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+experiment_id[key]['end_year'] = '2100 or 2300'
+key = 'volc-cluster-21C'
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+key = 'amip-hist'
+experiment_id[key]['min_number_yrs_per_sim'] = '145'
 key = 'omip1'
-experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-key = 'omip2'
-experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-key = 'omip1-spunup'
-experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-key = 'omip2-spunup'
-experiment_id[key]['additional_allowed_model_components'] = ['BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['end_year'] = ''
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

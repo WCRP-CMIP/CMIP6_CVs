@@ -264,13 +264,14 @@ PJD  3 Apr 2018    - Revise years in experiment_id entries https://github.com/WC
 PJD  3 Apr 2018    - Revise MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD  3 Apr 2018    - Revise ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/197
 PJD  3 Apr 2018    - Revise MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/403
+PJD  4 Apr 2018    - Revise CAS FGOALS* activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/427
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise MPI-ESM-1-2-HAM\"'
+commitMessage = '\"Revise CAS FGOALS* activity_participation\"'
 
 #%% Import statements
 import calendar
@@ -556,15 +557,34 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPIESM-1-2-HAM'
-source_id[key]['label'] = 'MPI-ESM1.2-HAM'
-source_id[key]['label_extended'] = 'MPI-ESM1.2-HAM'
-source_id['MPI-ESM-1-2-HAM'] = source_id.pop(key)
-source_id['MPI-ESM-1-2-HAM']['source_id'] = 'MPI-ESM-1-2-HAM'
-# Cleanup MPI-ESM1-2-HR
-source_id['MPI-ESM1-2-HR']['source_id'] = 'MPI-ESM1-2-HR'
-# Cleanup CAMS-CSM1-0
-source_id['CAMS-CSM1-0']['source_id'] = 'CAMS-CSM1-0'
+key = 'FGOALS-f3-H'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'HighResMIP'
+]
+key = 'FGOALS-f3-L'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
+ 'GMMIP',
+ 'OMIP',
+ 'SIMIP',
+ 'ScenarioMIP'
+]
+key = 'FGOALS-g3'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'DAMIP',
+ 'DCPP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'LS3MIP',
+ 'OMIP',
+ 'PMIP',
+ 'SIMIP',
+ 'ScenarioMIP'
+]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -739,7 +759,7 @@ for key in source_id.keys():
             sys.exit()
     for act in val:
         if act not in activity_id:
-            print 'Invalid activity_participation for entry:',key,'- aborting'
+            print 'Invalid activity_participation for entry:',key,':',act,'- aborting'
             sys.exit()
     # Validate institution_id
     vals = source_id[key]['institution_id']

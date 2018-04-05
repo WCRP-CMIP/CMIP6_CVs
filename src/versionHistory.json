@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"d8ea7660ec8639be058ed25193893f889950afeb",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d8ea7660ec8639be058ed25193893f889950afeb",
-            "commitMessage":"Register insitution_id IIASA",
-            "timeStamp":"Tue Apr  3 15:43:22 2018 -0700"
+            "MD5":"1f42a2900bc3900eaecb390fdd6423841d47f501",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1f42a2900bc3900eaecb390fdd6423841d47f501",
+            "commitMessage":"Register institution_id UofT, source_id UofT-CCSM4",
+            "timeStamp":"Wed Apr  4 19:36:28 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"bf4858954f4b2b9620a8ac84425a2c70a8289172",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bf4858954f4b2b9620a8ac84425a2c70a8289172",
-            "commitMessage":"Register source_id GISS-E3-G",
-            "timeStamp":"Wed Apr  4 09:39:52 2018 -0700"
+            "MD5":"1f42a2900bc3900eaecb390fdd6423841d47f501",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1f42a2900bc3900eaecb390fdd6423841d47f501",
+            "commitMessage":"Register institution_id UofT, source_id UofT-CCSM4",
+            "timeStamp":"Wed Apr  4 19:36:28 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":8,
+            "versionCVCommit":9,
             "versionCVContent":6,
             "versionCVStructure":2,
             "versionMIPEra":6

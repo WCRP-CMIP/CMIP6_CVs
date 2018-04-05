@@ -268,13 +268,14 @@ PJD  4 Apr 2018    - Revise CAS FGOALS* activity_participation https://github.co
 PJD  4 Apr 2018    - Revise NASA-GISS source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
 PJD  4 Apr 2018    - Register source_id GISS-E2-1-MA-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/506
 PJD  4 Apr 2018    - Register source_id GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/507
+PJD  4 Apr 2018    - Register institution_id UofT, source_id UofT-CCSM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/511 + 512
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id GISS-E3-G\"'
+commitMessage = '\"Register institution_id UofT, source_id UofT-CCSM4\"'
 
 #%% Import statements
 import calendar
@@ -475,7 +476,8 @@ institution_id = {
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
-    'UHH': 'Universitat Hamburg, Hamburg 20148, Germany'
+    'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
+    'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
 }
 
 #%% CMIP6 License
@@ -560,63 +562,51 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GISS-E3-G'
+key = 'UofT-CCSM4'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CFMIP',
  'CMIP',
- 'DAMIP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'ISMIP6',
- 'LS3MIP',
- 'LUMIP',
- 'OMIP',
- 'PAMIP',
- 'PMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB',
- 'VolMIP'
+ 'PMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'NASA-GISS'
+ 'UofT'
 ]
-source_id[key]['label'] = 'GISS-E3-G'
-source_id[key]['label_extended'] = 'GISS-E3-G'
+source_id[key]['label'] = 'UofT-CCSM4'
+source_id[key]['label_extended'] = ' '.join(['The NCAR CCSM4 model with the ocean component run in a non-default configuration',
+                                            '(the University of Toronto configuration) where tidal mixing and overflow parametrizations',
+                                            'are turned off. The vertical profile of ocean diapycnal diffusivity is fixed to the POP1',
+                                            'profile used in CCSM3. See Peltier and Vettoretti, 2014 GRL',
+                                            '(https://doi.org/10.1002/2014GL061413), Chandan and Peltier, 2017 Clim. Past.',
+                                            '(https://doi.org/10.5194/cp-13-919-2017)'])
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
+source_id[key]['model_component']['aerosol']['description'] = 'unnamed'
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GISS-E3 (Cubed sphere, C90; 90 x 90 x 6 gridboxes/cubeface, grid resolution aligns with longitude/latitude along central lines for each cubeface; 102 levels; top level 0.002 hPa)'
+source_id[key]['model_component']['atmos']['description'] = 'CAM4 (finite-volume dynamical core; 288 x 192 longitude/latitude; 26 levels; top level ~2 hPa)'
 source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['description'] = 'CLM4'
 source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['description'] = 'POP2 (displaced dipole grid; 384 x 320 longitude/latitude; 60 levels; top grid cell 0-10 m)'
 source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4'
 source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
+source_id[key]['release_year'] = '2014'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

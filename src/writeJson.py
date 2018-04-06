@@ -270,13 +270,14 @@ PJD  4 Apr 2018    - Register source_id GISS-E2-1-MA-G https://github.com/WCRP-C
 PJD  4 Apr 2018    - Register source_id GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/507
 PJD  4 Apr 2018    - Register institution_id UofT, source_id UofT-CCSM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/511 + 512
 PJD  6 Apr 2018    - Revise MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/494
+PJD  6 Apr 2018    - Revise source_id MPI-ESM-1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise MOHC source_id entries\"'
+commitMessage = '\"Revise source_id MPI-ESM-1-2-LR\"'
 
 #%% Import statements
 import calendar
@@ -563,16 +564,33 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-models = [
-    'HadGEM3-GC31-HH', 'HadGEM3-GC31-HM', 'HadGEM3-GC31-LL',
-    'HadGEM3-GC31-LM', 'HadGEM3-GC31-MH', 'HadGEM3-GC31-MM',
-    'UKESM1-0-LL', 'UKESM1-0-MMh']
-
-for model_source_id in models:
-     source_id[model_source_id]['model_component']['ocean']['description'] = \
-         source_id[model_source_id]['model_component']['ocean']['description'].replace('ORCA', 'eORCA')
-     source_id[model_source_id]['model_component']['seaIce']['description'] = \
-         source_id[model_source_id]['model_component']['seaIce']['description'].replace('ORCA', 'eORCA')
+key = 'MPI-ESM-1-2-LR'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CDRMIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
+source_id[key]['institution_id'] = [
+ 'MPI-M',
+ 'AWI'
+]
+source_id[key]['source_id'] = 'MPI-ESM1-2-LR'
+source_id['MPI-ESM1-2-LR'] = source_id.pop(key)
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

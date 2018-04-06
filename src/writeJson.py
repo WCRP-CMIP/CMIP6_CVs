@@ -269,13 +269,14 @@ PJD  4 Apr 2018    - Revise NASA-GISS source_id entries https://github.com/WCRP-
 PJD  4 Apr 2018    - Register source_id GISS-E2-1-MA-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/506
 PJD  4 Apr 2018    - Register source_id GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/507
 PJD  4 Apr 2018    - Register institution_id UofT, source_id UofT-CCSM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/511 + 512
+PJD  6 Apr 2018    - Revise MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/494
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register institution_id UofT, source_id UofT-CCSM4\"'
+commitMessage = '\"Revise MOHC source_id entries\"'
 
 #%% Import statements
 import calendar
@@ -562,52 +563,16 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UofT-CCSM4'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'PMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'UofT'
-]
-source_id[key]['label'] = 'UofT-CCSM4'
-source_id[key]['label_extended'] = ' '.join(['The NCAR CCSM4 model with the ocean component run in a non-default configuration',
-                                            '(the University of Toronto configuration) where tidal mixing and overflow parametrizations',
-                                            'are turned off. The vertical profile of ocean diapycnal diffusivity is fixed to the POP1',
-                                            'profile used in CCSM3. See Peltier and Vettoretti, 2014 GRL',
-                                            '(https://doi.org/10.1002/2014GL061413), Chandan and Peltier, 2017 Clim. Past.',
-                                            '(https://doi.org/10.5194/cp-13-919-2017)'])
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'unnamed'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (finite-volume dynamical core; 288 x 192 longitude/latitude; 26 levels; top level ~2 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (displaced dipole grid; 384 x 320 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2014'
-source_id[key]['source_id'] = key
+models = [
+    'HadGEM3-GC31-HH', 'HadGEM3-GC31-HM', 'HadGEM3-GC31-LL',
+    'HadGEM3-GC31-LM', 'HadGEM3-GC31-MH', 'HadGEM3-GC31-MM',
+    'UKESM1-0-LL', 'UKESM1-0-MMh']
+
+for model_source_id in models:
+     source_id[model_source_id]['model_component']['ocean']['description'] = \
+         source_id[model_source_id]['model_component']['ocean']['description'].replace('ORCA', 'eORCA')
+     source_id[model_source_id]['model_component']['seaIce']['description'] = \
+         source_id[model_source_id]['model_component']['seaIce']['description'].replace('ORCA', 'eORCA')
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -418,17 +418,17 @@ for inFile in inFiles:
             elif value == None:
                 experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
             elif type(value) == float:
-                print 'elif type(value):',value
+                #print 'elif type(value):',value
                 value = str(int(value))
                 experiment_id[key][entry] = value
             else:
-                print 'else:',value
+                #print 'else:',value
                 value = replace(value,'    ',' ') ; # replace whitespace
                 value = replace(value,'   ',' ') ; # replace whitespace
                 value = replace(value,'  ',' ') ; # replace whitespace
                 experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
                 try:
-                    print 'try:',value
+                    #print 'try:',value
                     unidecode(value)
                 except:
                     print count,count2,key,entry,value

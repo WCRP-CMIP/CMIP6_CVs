@@ -273,13 +273,14 @@ PJD  6 Apr 2018    - Revise MOHC source_id entries https://github.com/WCRP-CMIP/
 PJD  6 Apr 2018    - Revise source_id MPI-ESM-1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195
 PJD 20 Apr 2018    - Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
 PJD 20 Apr 2018    - Revise experiment_id deforest-globe https://github.com/WCRP-CMIP/CMIP6_CVs/issues/489#issuecomment-380183402
+PJD 20 Apr 2018    - Revise institution_id EC-Earth-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/515
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id deforest-globe\"'
+commitMessage = '\"Revise institution_id EC-Earth-Consortium\"'
 
 #%% Import statements
 import calendar
@@ -350,8 +351,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
-key = 'deforest-globe'
-experiment_id[key]['start_year'] = ''
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -458,7 +457,15 @@ institution_id = {
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
-    'EC-Earth-Consortium': 'KNMI, The Netherlands; SMHI, Sweden; DMI, Denmark; AEMET, Spain; Met Eireann, Ireland; CNR-ISAC, Italy; Instituto de Meteorologia, Portugal; FMI, Finland; BSC, Spain; Centro de Geofisica, University of Lisbon, Portugal; ENEA, Italy; Geomar, Germany; Geophysical Institute, University of Bergen, Norway; ICHEC, Ireland; ICTP, Italy; IMAU, The Netherlands; IRV, Sweden;  Lund University, Sweden; Meteorologiska Institutionen, Stockholms University, Sweden; Niels Bohr Institute, University of Copenhagen, Denmark; NTNU, Norway; SARA, The Netherlands; Unite ASTR, Belgium; Universiteit Utrecht, The Netherlands; Universiteit Wageningen, The Netherlands; University College Dublin, Ireland; Vrije Universiteit Amsterdam, the Netherlands; University of Helsinki, Finland; KIT, Karlsruhe, Germany; USC, University of Santiago de Compostela, Spain; Uppsala Universitet, Sweden; NLeSC, Netherlands eScience Center, The Netherlands',
+    'EC-Earth-Consortium': ''.join(['AEMET, Spain; BSC, Spain; CNR-ISAC, Italy; DMI, Denmark; ENEA, Italy; FMI, Finland; Geomar, Germany; ICHEC, ',
+                            'Ireland; ICTP, Italy; IDL, Portugal; IMAU, The Netherlands; IPMA, Portugal; KIT, Karlsruhe, Germany; KNMI, ',
+                            'The Netherlands; Lund University, Sweden; Met Eireann, Ireland; NLeSC, The Netherlands; NTNU, Norway; Oxford ',
+                            'University, UK; surfSARA, The Netherlands; SMHI, Sweden; Stockholm University, Sweden; Unite ASTR, Belgium; ',
+                            'University College Dublin, Ireland; University of Bergen, Norway; University of Copenhagen, Denmark; ',
+                            'University of Helsinki, Finland; University of Santiago de Compostela, Spain; Uppsala University, Sweden; ',
+                            'Utrecht University, The Netherlands; Vrije Universiteit Amsterdam, the Netherlands; Wageningen University, ',
+                            'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
+                            'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
     'IIASA': 'International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1 - A-2361 Laxenburg, Austria',

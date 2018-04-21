@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"1f42a2900bc3900eaecb390fdd6423841d47f501",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1f42a2900bc3900eaecb390fdd6423841d47f501",
-            "commitMessage":"Register institution_id UofT, source_id UofT-CCSM4",
-            "timeStamp":"Wed Apr  4 19:36:28 2018 -0700"
+            "MD5":"de810ecd7d39407fb7c2239b1e53927329c2b7ff",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/de810ecd7d39407fb7c2239b1e53927329c2b7ff",
+            "commitMessage":"Revise institution_id EC-Earth-Consortium",
+            "timeStamp":"Fri Apr 20 19:05:06 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":7,
             "versionCVStructure":2,
             "versionMIPEra":6

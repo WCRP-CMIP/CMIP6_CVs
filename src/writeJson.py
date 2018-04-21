@@ -274,13 +274,14 @@ PJD  6 Apr 2018    - Revise source_id MPI-ESM-1-2-LR https://github.com/WCRP-CMI
 PJD 20 Apr 2018    - Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
 PJD 20 Apr 2018    - Revise experiment_id deforest-globe https://github.com/WCRP-CMIP/CMIP6_CVs/issues/489#issuecomment-380183402
 PJD 20 Apr 2018    - Revise institution_id EC-Earth-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/515
+PJD 20 Apr 2018    - Revise MIROC source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/517
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id EC-Earth-Consortium\"'
+commitMessage = '\"Revise MIROC source_ids\"'
 
 #%% Import statements
 import calendar
@@ -575,6 +576,41 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'MIROC6'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'HighResMIP',
+ 'LS3MIP',
+ 'OMIP',
+ 'PAMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
+]
+key = 'MIROC-ES2L'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'DynVarMIP',
+ 'GeoMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
+]
+source_id[key]['release_year'] = '2018'
+key = 'MIROC-ES2H'
+source_id[key]['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

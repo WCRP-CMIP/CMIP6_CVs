@@ -568,10 +568,13 @@ del(tmp)
 key = 'BNU-ESM-1-1'
 source_id[key]['activity_participation'] = [
  'C4MIP',
+ 'CDRMIP',
+ 'CFMIP',
  'CMIP',
  'GMMIP',
  'GeoMIP',
  'OMIP',
+ 'RFMIP',
  'ScenarioMIP'
 ]
 source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'

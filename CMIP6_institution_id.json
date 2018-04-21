@@ -22,7 +22,7 @@
         "IPSL":"Institut Pierre Simon Laplace, Paris 75252, France",
         "KIOST":"Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea",
         "MESSy-Consortium":"The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany",
-        "MIROC":"JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and AICS (RIKEN Advanced Institute for Computational Science, Hyogo 650-0047, Japan)",
+        "MIROC":"JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and R-CCS (RIKEN Center for Computational Science, Hyogo 650-0047, Japan)",
         "MOHC":"Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK",
         "MPI-M":"Max Planck Institute for Meteorology, Hamburg 20146, Germany",
         "MRI":"Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan",
@@ -41,13 +41,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 20 19:13:04 2018 -0700",
-        "CV_collection_version":"6.2.7.2",
+        "CV_collection_modified":"Fri Apr 20 19:19:10 2018 -0700",
+        "CV_collection_version":"6.2.7.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Fri Apr 20 19:05:06 2018 -0700",
-        "institution_id_CV_note":"Revise institution_id EC-Earth-Consortium",
-        "previous_commit":"c156bc426274d1efe07240a78cab3da4ec9fff2e",
+        "institution_id_CV_note":"Revise institution_id MIROC",
+        "previous_commit":"e99de7a3761a1be86f08c3d5324c3c3f6fb4e0b2",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -4452,11 +4452,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 20 19:19:10 2018 -0700",
-        "CV_collection_version":"6.2.7.3",
+        "CV_collection_modified":"Fri Apr 20 20:46:44 2018 -0700",
+        "CV_collection_version":"6.2.8.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"e99de7a3761a1be86f08c3d5324c3c3f6fb4e0b2",
+        "previous_commit":"3fe5a7e463e3fad12d82c4dcfaa500241a89ef6a",
         "source_id_CV_modified":"Fri Apr 20 19:13:04 2018 -0700",
         "source_id_CV_note":"Revise MIROC source_ids",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"

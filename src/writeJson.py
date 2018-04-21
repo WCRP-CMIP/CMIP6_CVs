@@ -276,13 +276,14 @@ PJD 20 Apr 2018    - Revise experiment_id deforest-globe https://github.com/WCRP
 PJD 20 Apr 2018    - Revise institution_id EC-Earth-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/515
 PJD 20 Apr 2018    - Revise MIROC source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/517
 PJD 20 Apr 2018    - Revise institution_id MIROC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/518
+PJD 20 Apr 2018    - Add experiment_id values for CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id MIROC\"'
+commitMessage = '\"Add experiment_id values for CDRMIP and PAMIP\"'
 
 #%% Import statements
 import calendar
@@ -297,6 +298,9 @@ import time
 import urllib
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
+import pyexcel_xlsx as pyx
+from string import replace
+from unidecode import unidecode
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -353,6 +357,87 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+# xlsx import
+# Fields
+# Alpha/json order, xlsx column old, xlsx column new, type, value
+# 1  0  0  str  experiment_id string
+# 2  1  1  list activity_id list
+# 3  8  7  list additional_allowed_model_components list
+# 4  13 12 str  description string
+# 5  10 10 str  end_year string
+# 6  2  2  str  experiment string
+# 7  11 11 str  min_number_yrs_per_sim string
+# 8  12 5  list parent_activity_id list
+# 9  6  6  list parent_experiment_id list
+# 10 7  8  list required_model_components list
+# 11 9  9  str  start_year string
+# 12 5  -  -    sub_experiment string
+# 13 4  4  list sub_experiment_id string
+# 14 3  3  str tier string
+
+os.chdir('/sync/git/CMIP6_CVs/src')
+inFiles = ['180421_1927_DavidKeller_CMIP6-CDRMIP-ExpList.xlsx',
+           '180421_1927_DougSmith_CMIP6-PAMIP-ExpList.xlsx']
+for inFile in inFiles:
+    data = pyx.get_data(inFile)
+    data = data['Sheet1']
+    headers = data[3]
+    #experiment_id = {} ; Already defined and loaded
+    for count in range(4,len(data)): # Start on 5th row, headers
+        if data[count] == []:
+            #print count,'blank field'
+            continue
+        row = data[count]
+        key = row[0] ; #replace(row[0],'_ ','_')
+        experiment_id[key] = {}
+        for count2,entry in enumerate(headers):
+            #if count2 == 5:
+            #    continue ; # Skip sub_experiment - removed in update
+            entry = replace(entry,'_ ','_') ; # clean up spaces
+            entry = replace(entry,' ', '_') ; # replace spaces with underscores
+            if count2 >= len(row):
+                experiment_id[key][entry] = ''
+                continue
+            value = row[count2]
+            if count2 in [1,4,6,7,8,12]:
+                if value == None:
+                    pass
+                elif value == 'no parent':
+                    pass
+                elif 'no parent,' in value:
+                    value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
+                    pass
+                else:
+                    value = replace(value,',','') ; # remove ','
+                    value = value.split() ; # Change type to list
+                    #print value
+            if type(value) == long:
+                experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
+            elif type(value) == list:
+                experiment_id[key][entry] = ' '.join(value)
+            elif value == None:
+                experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
+            elif type(value) == float:
+                print 'elif type(value):',value
+                value = str(int(value))
+                experiment_id[key][entry] = value
+            else:
+                print 'else:',value
+                value = replace(value,'    ',' ') ; # replace whitespace
+                value = replace(value,'   ',' ') ; # replace whitespace
+                value = replace(value,'  ',' ') ; # replace whitespace
+                experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+                try:
+                    print 'try:',value
+                    unidecode(value)
+                except:
+                    print count,count2,key,entry,value
+            # Now sort by type
+            if count2 in [1,4,6,7,8]:
+                experiment_id[key][entry] = list(value)
+            elif count2 == 5:
+                experiment_id[key][entry] = list([value])
+    del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

@@ -87,6 +87,35 @@
             ],
             "tier":"1"
         },
+        "1pctCO2-cdr":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"1 percent per year decrease in CO2 (immediately after reaching 4xCO2 in the 1pctCO2 simulation); then held constant at pre-industrial level (part of the CDR-reversibility experiment)",
+            "end_year":"",
+            "experiment":"1 percent per year decrease in CO2 from 4xCO2",
+            "experiment_id":"1pctCO2-cdr",
+            "min_number_yrs_per_sim":"200",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "1pctCO2"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
         "1pctCO2-rad":{
             "activity_id":[
                 "C4MIP"
@@ -829,6 +858,64 @@
                 "none"
             ],
             "tier":"2"
+        },
+        "amip-climSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA5.2: investigate role of transient SST in recent climate change",
+            "end_year":"2014",
+            "experiment":"AMIP with climatological SIC",
+            "experiment_id":"amip-climSIC",
+            "min_number_yrs_per_sim":"36",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"1979",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "amip-climSST":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA5.1: investigate role of transient sea ice in recent climate change",
+            "end_year":"2014",
+            "experiment":"AMIP with climatological SST",
+            "experiment_id":"amip-climSST",
+            "min_number_yrs_per_sim":"36",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"1979",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
         },
         "amip-future4K":{
             "activity_id":[
@@ -2387,6 +2474,64 @@
             ],
             "tier":"2"
         },
+        "esm-pi-CO2pulse":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"100 Gt C instantly added (positive pulse) to a pre-industrial atmosphere (part of the CDR-pi-pulse experiment)",
+            "end_year":"",
+            "experiment":"pulse addition of 100 Gt carbon to pre-industrial atmosphere",
+            "experiment_id":"esm-pi-CO2pulse",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "esm-pi-cdr-pulse":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"100 Gt C instantly removed (negative pulse) from a pre-industrial atmosphere (part of the CDR-pi-pulse experiment)",
+            "end_year":"",
+            "experiment":"pulse removal of 100 Gt carbon from pre-industrial atmosphere",
+            "experiment_id":"esm-pi-cdr-pulse",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
         "esm-piControl":{
             "activity_id":[
                 "CMIP"
@@ -2445,6 +2590,35 @@
             ],
             "tier":"2"
         },
+        "esm-ssp534-over":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"CO2 emissions driven SSP5-3.4 overshoot scenario simulation optionally extending to year 2300 (part of the CDR-overshoot experiment)",
+            "end_year":"2100 or 2300",
+            "experiment":"emission-driven SSP5-3.4-OS scenario",
+            "experiment_id":"esm-ssp534-over",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-hist"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
         "esm-ssp585":{
             "activity_id":[
                 "C4MIP"
@@ -2474,6 +2648,64 @@
             ],
             "tier":"1"
         },
+        "esm-ssp585-ocn-alk":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"emission driven SSP5-8.5 scenario with 0.14 Pmol/yr alkalinity added to ice free ocean surface waters from 2020 optionally extended from 2100 to 2300 (part of the CDR-ocean-alk experiment)",
+            "end_year":"2100 or 2300",
+            "experiment":"emission-driven SSP5-8.5 scenario but with ocean alkalinization from year 2020 onward",
+            "experiment_id":"esm-ssp585-ocn-alk",
+            "min_number_yrs_per_sim":"81",
+            "parent_activity_id":[
+                "C4MIP"
+            ],
+            "parent_experiment_id":[
+                "esm-ssp585"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "esm-ssp585-ocn-alk-stop":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Simulation of abrupt termination of ocean alkalinsation in 2070 during an emission driven SSP5-8.5 scenario (part of the CDR-ocean-alk experiment)",
+            "end_year":"2100",
+            "experiment":"emission-driven SSP5-8.5 scenario with alkalinization terminated in year 2070",
+            "experiment_id":"esm-ssp585-ocn-alk-stop",
+            "min_number_yrs_per_sim":"31",
+            "parent_activity_id":[
+                "CDRMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-ssp585-ocn-alk"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2070",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "esm-ssp585-ssp126Lu":{
             "activity_id":[
                 "LUMIP"
@@ -2502,6 +2734,180 @@
                 "none"
             ],
             "tier":"1"
+        },
+        "esm-ssp585-ssp126Lu-ext":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Long term extension of CO2 emissions driven SSP5-8.5 with SSP1-2.6 land use forcing (part of the CDR-afforestation experiment)",
+            "end_year":"2300",
+            "experiment":"extension of the LUMIP emissions-driven simulation following SSP5-8.5 with SSP1-2.6 land use",
+            "experiment_id":"esm-ssp585-ssp126Lu-ext",
+            "min_number_yrs_per_sim":"201",
+            "parent_activity_id":[
+                "LUMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-ssp585-ssp126Lu"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2100",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "esm-ssp585ext":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Long term extension of CO2 emissions driven SSP5-8.5 scenario (used in the CDR-afforestation and CDR-ocean-alk experiments)",
+            "end_year":"2300",
+            "experiment":"emission-driven long-term extension of the SSP5-8.5 scenario",
+            "experiment_id":"esm-ssp585ext",
+            "min_number_yrs_per_sim":"201",
+            "parent_activity_id":[
+                "C4MIP"
+            ],
+            "parent_experiment_id":[
+                "esm-ssp585"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2100",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "esm-yr2010CO2-CO2pulse":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Upon initialization from end of year 2015 of esm-yr2010CO2-control instantaneously introduce 100 Gt C (\"positive pulse\"; part of the CDR-yr2010-pulse experiment)",
+            "end_year":"2115",
+            "experiment":"instantaneous 100 Gt C addition to an industrial era atmosphere",
+            "experiment_id":"esm-yr2010CO2-CO2pulse",
+            "min_number_yrs_per_sim":"101",
+            "parent_activity_id":[
+                "CDRMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-yr2010CO2-control"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-yr2010CO2-cdr-pulse":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Upon initialization from end of year 2015 of esm-yr2010CO2-control instantaneously remove 100 Gt C (\"negative pulse\"; part of the CDR-yr2010-pulse experiment",
+            "end_year":"2115",
+            "experiment":"instantaneous 100 Gt C removal from industrial era atmosphere",
+            "experiment_id":"esm-yr2010CO2-cdr-pulse",
+            "min_number_yrs_per_sim":"101",
+            "parent_activity_id":[
+                "CDRMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-yr2010CO2-control"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-yr2010CO2-control":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Forced with CO2 emissions diagnosed from historical and yr2010CO2 simulations and all other forcings the same as in that simulation (part of the CDR-yr2010-pulse experiment)",
+            "end_year":"2115",
+            "experiment":"historical emissions followed by fixed 2010 emissions (both model-diagnosed)",
+            "experiment_id":"esm-yr2010CO2-control",
+            "min_number_yrs_per_sim":"266",
+            "parent_activity_id":[
+                "CDRMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"1850",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-yr2010CO2-noemit":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Upon initialization from end of year 2015 of esm-yr2010-control CO2 emissions are fixed at zero; all other forcing fixed at 2010 level (part of the CDR-yr2010-pulse experiment)",
+            "end_year":"2115",
+            "experiment":"branches from esm-yr2010CO2-control with zero emissions",
+            "experiment_id":"esm-yr2010CO2-noemit",
+            "min_number_yrs_per_sim":"101",
+            "parent_activity_id":[
+                "CDRMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-yr2010CO2-control"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
         },
         "faf-all":{
             "activity_id":[
@@ -2647,6 +3053,35 @@
                 "none"
             ],
             "tier":"1"
+        },
+        "futSST-pdSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.4: investigate role of SST in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with future SST and present day SIC",
+            "experiment_id":"futSST-pdSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
         },
         "futureSST-4xCO2-solar":{
             "activity_id":[
@@ -4955,6 +5390,64 @@
             ],
             "tier":"1"
         },
+        "modelSST-futArcSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA4.2: investigate role of background state in response to Arctic sea ice",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day coupled model SST and future Arctic SIC",
+            "experiment_id":"modelSST-futArcSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "modelSST-pdSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA4.1: atmosphere only model present day control with coupled model SST",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice present day control with coupled model SST",
+            "experiment_id":"modelSST-pdSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "omip1":{
             "activity_id":[
                 "OMIP"
@@ -5063,6 +5556,238 @@
             ],
             "tier":"3"
         },
+        "pa-futAntSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA2.5: investigate response to Antarctic sea ice in coupled model",
+            "end_year":"2001",
+            "experiment":"Partially-coupled time slice constrained by future Antarctic SIC",
+            "experiment_id":"pa-futAntSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "pa-futAntSIC-ext":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA6.2: investigate decadal and longer timescale response to Antarctic sea ice",
+            "end_year":"2099",
+            "experiment":"Partially-coupled extended simulation with future Antarctic SIC",
+            "experiment_id":"pa-futAntSIC-ext",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pa-futArcSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA2.3: investigate response to Arctic sea ice in coupled model",
+            "end_year":"2001",
+            "experiment":"Partially-coupled time slice constrained by future Arctic SIC",
+            "experiment_id":"pa-futArcSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "pa-futArcSIC-ext":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA6.2: investigate decadal and longer timescale response to Arctic sea ice",
+            "end_year":"2099",
+            "experiment":"Partially-coupled extended simulation with future Arctic SIC",
+            "experiment_id":"pa-futArcSIC-ext",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pa-pdSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA2.1: coupled model present day control constrained by oberved sea ice",
+            "end_year":"2001",
+            "experiment":"Partially-coupled time slice contrained by present day SIC",
+            "experiment_id":"pa-pdSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "pa-pdSIC-ext":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA6.1: centennial coupled model present day control constrained by oberved sea ice",
+            "end_year":"2099",
+            "experiment":"Partially-coupled extended simulation constrained by present day SIC",
+            "experiment_id":"pa-pdSIC-ext",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pa-piAntSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA2.4: investigate response to Antarctic sea ice in coupled model",
+            "end_year":"2001",
+            "experiment":"Partially-coupled time slice with pre-industrial Antarctic SIC",
+            "experiment_id":"pa-piAntSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "pa-piArcSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA2.2: investigate response to Arctic sea ice in coupled model",
+            "end_year":"2001",
+            "experiment":"Partially-coupled time slice constrained by pre-industrial Arctic SIC",
+            "experiment_id":"pa-piArcSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
         "past1000":{
             "activity_id":[
                 "PMIP"
@@ -5087,6 +5812,267 @@
                 "AOGCM"
             ],
             "start_year":"850",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "pdSST-futAntSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.8: investigate response to Antarctic sea ice and its role in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and future Antarctic SIC",
+            "experiment_id":"pdSST-futAntSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "pdSST-futArcSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.6: investigate response to Arctic sea ice and its role in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and future Arctic SIC",
+            "experiment_id":"pdSST-futArcSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "pdSST-futArcSICSIT":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.10: investigate role of sea ice thickness in response to Arctic sea ice",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and future Arctic SIC and sea ice thickness",
+            "experiment_id":"pdSST-futArcSICSIT",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pdSST-futBKSeasSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA3.2: investigate response to sea ice in Barents and Kara Seas",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and future Barents and Kara Seas SIC",
+            "experiment_id":"pdSST-futBKSeasSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pdSST-futOkhotskSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA3.1: investigate response to sea ice in Sea of Okhotsk",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and future Sea of Okhotsk SIC",
+            "experiment_id":"pdSST-futOkhotskSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pdSST-pdSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.1: atmosphere only model present day control",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and SIC",
+            "experiment_id":"pdSST-pdSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "pdSST-pdSICSIT":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.9: atmosphere only model present day control with sea ice thickness",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice constrained by present day conditions including sea ice thickness",
+            "experiment_id":"pdSST-pdSICSIT",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "pdSST-piAntSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.7: investigate response to Antarctic sea ice and its role in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and pre-industrial Antarctic SIC",
+            "experiment_id":"pdSST-piAntSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "pdSST-piArcSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.5: investigate response to Arctic sea ice and its role in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with present day SST and pre-industrial Arctic SIC",
+            "experiment_id":"pdSST-piArcSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
             "sub_experiment_id":[
                 "none"
             ],
@@ -6172,6 +7158,64 @@
                 "AGCM"
             ],
             "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "piSST-pdSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.3: investigate role of SST in polar amplification",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with pre-industrial SST and present day SIC",
+            "experiment_id":"piSST-pdSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
+        "piSST-piSIC":{
+            "activity_id":[
+                "PAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"PA1.2: atmosphere only model pre-industrial control",
+            "end_year":"2001",
+            "experiment":"Atmosphere time slice with pre-industrial SST and SIC",
+            "experiment_id":"piSST-piSIC",
+            "min_number_yrs_per_sim":"1",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "amip"
+            ],
+            "required_model_components":[
+                "AGCM"
+            ],
+            "start_year":"2000",
             "sub_experiment_id":[
                 "none"
             ],
@@ -7275,16 +8319,45 @@
                 "none"
             ],
             "tier":"1"
+        },
+        "yr2010CO2":{
+            "activity_id":[
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"Branch from beginning of year 2010 of the historical simulation with CO2 concentration and all other forcing held fixed at 2010 level (part of the CDR-yr2010-pulse experiment to diagnose CO2 emissions)",
+            "end_year":"2115",
+            "experiment":"concentration-driven fixed 2010 forcing",
+            "experiment_id":"yr2010CO2",
+            "min_number_yrs_per_sim":"106",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"2010",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 20 19:19:10 2018 -0700",
-        "CV_collection_version":"6.2.7.3",
+        "CV_collection_modified":"Fri Apr 20 20:46:44 2018 -0700",
+        "CV_collection_version":"6.2.8.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Apr 20 18:54:17 2018 -0700",
-        "experiment_id_CV_note":"Revise experiment_id deforest-globe",
+        "experiment_id_CV_note":"Add experiment_id values for CDRMIP and PAMIP",
         "institution_id":"PCMDI",
-        "previous_commit":"e99de7a3761a1be86f08c3d5324c3c3f6fb4e0b2",
+        "previous_commit":"3fe5a7e463e3fad12d82c4dcfaa500241a89ef6a",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

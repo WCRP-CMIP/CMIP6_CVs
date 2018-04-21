@@ -272,13 +272,14 @@ PJD  4 Apr 2018    - Register institution_id UofT, source_id UofT-CCSM4 https://
 PJD  6 Apr 2018    - Revise MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/494
 PJD  6 Apr 2018    - Revise source_id MPI-ESM-1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/195
 PJD 20 Apr 2018    - Revise source_id BNU-ESM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/99
+PJD 20 Apr 2018    - Revise experiment_id deforest-globe https://github.com/WCRP-CMIP/CMIP6_CVs/issues/489#issuecomment-380183402
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id BNU-ESM-1-1\"'
+commitMessage = '\"Revise experiment_id deforest-globe\"'
 
 #%% Import statements
 import calendar
@@ -349,6 +350,8 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key = 'deforest-globe'
+experiment_id[key]['start_year'] = ''
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -565,25 +568,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'BNU-ESM-1-1'
-source_id[key]['activity_participation'] = [
- 'C4MIP',
- 'CDRMIP',
- 'CFMIP',
- 'CMIP',
- 'GMMIP',
- 'GeoMIP',
- 'OMIP',
- 'RFMIP',
- 'ScenarioMIP'
-]
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (2deg; 144 x 96 longitude/latitude; 26 levels; top level 2.194 mb)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

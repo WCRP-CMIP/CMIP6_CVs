@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"de810ecd7d39407fb7c2239b1e53927329c2b7ff",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/de810ecd7d39407fb7c2239b1e53927329c2b7ff",
-            "commitMessage":"Revise institution_id EC-Earth-Consortium",
-            "timeStamp":"Fri Apr 20 19:05:06 2018 -0700"
+            "MD5":"e99de7a3761a1be86f08c3d5324c3c3f6fb4e0b2",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e99de7a3761a1be86f08c3d5324c3c3f6fb4e0b2",
+            "commitMessage":"Revise institution_id MIROC",
+            "timeStamp":"Fri Apr 20 19:19:10 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":7,
             "versionCVStructure":2,
             "versionMIPEra":6

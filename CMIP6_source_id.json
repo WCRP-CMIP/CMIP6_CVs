@@ -598,7 +598,29 @@
         },
         "CESM2":{
             "activity_participation":[
-                "CMIP"
+                "AerChemMIP",
+                "C4MIP",
+                "CDRMIP",
+                "CFMIP",
+                "CMIP",
+                "CORDEX",
+                "DAMIP",
+                "DCPP",
+                "DynVarMIP",
+                "GMMIP",
+                "GeoMIP",
+                "HighResMIP",
+                "ISMIP6",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PAMIP",
+                "PMIP",
+                "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB",
+                "VolMIP"
             ],
             "cohort":[
                 "Registered"
@@ -4501,13 +4523,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr 24 18:40:14 2018 -0700",
-        "CV_collection_version":"6.2.8.1",
+        "CV_collection_modified":"Sat Apr 28 18:02:11 2018 -0700",
+        "CV_collection_version":"6.2.8.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5f70e85483e0931df5fafff11d9ed67df7d2e42a",
-        "source_id_CV_modified":"Fri Apr 20 19:13:04 2018 -0700",
-        "source_id_CV_note":"Register source_id CESM2",
+        "previous_commit":"0a9803f65c4ddc9d62ee8dc3eb0cdc51da46977c",
+        "source_id_CV_modified":"Tue Apr 24 18:40:14 2018 -0700",
+        "source_id_CV_note":"Revise CESM2 activity_participation",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

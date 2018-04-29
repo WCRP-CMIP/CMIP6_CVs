@@ -278,13 +278,14 @@ PJD 20 Apr 2018    - Revise MIROC source_ids https://github.com/WCRP-CMIP/CMIP6_
 PJD 20 Apr 2018    - Revise institution_id MIROC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/518
 PJD 20 Apr 2018    - Add experiment_id values for CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
 PJD 24 Apr 2018    - Register source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
+PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id CESM2\"'
+commitMessage = '\"Revise CESM2 activity_participation\"'
 
 #%% Import statements
 import calendar
@@ -297,6 +298,7 @@ import subprocess
 import sys
 import time
 import urllib
+sys.path.insert(0,'/sync/git/durolib/lib') ; # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 #import pyexcel_xlsx as pyx
@@ -669,45 +671,31 @@ del(tmp)
 
 # Fix issues
 key = 'CESM2'
-source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'CMIP'
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CDRMIP',
+ 'CFMIP',
+ 'CMIP',
+ 'CORDEX',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'HighResMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PAMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
 ]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'NCAR'
-]
-source_id[key]['label'] = 'CESM2'
-source_id[key]['label_extended'] = 'CESM2'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM4 (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM6 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'MAM4 (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM5 (same grid as atmos)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'CISM2.1'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '5 km'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'MARBL (same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -279,13 +279,14 @@ PJD 20 Apr 2018    - Revise institution_id MIROC https://github.com/WCRP-CMIP/CM
 PJD 20 Apr 2018    - Add experiment_id values for CDRMIP and PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/455
 PJD 24 Apr 2018    - Register source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
+PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise CESM2 activity_participation\"'
+commitMessage = '\"Revise institution_id NCC\"'
 
 #%% Import statements
 import calendar
@@ -575,7 +576,15 @@ institution_id = {
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
     'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
-    'NCC': 'NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway',
+    'NCC': ''.join(['NorESM Climate modeling Consortium consisting of ',
+                    'CICERO (Center for International Climate and Environmental Research, Oslo 0349), ',
+                    'MET-Norway (Norwegian Meteorological Institute, Oslo 0313), ',
+                    'NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), ',
+                    'NILU (Norwegian Institute for Air Research, Kjeller 2027), ',
+                    'UiB (University of Bergen, Bergen 5007), ',
+                    'UiO (University of Oslo, Oslo 0313) ',
+                    'and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway, ',
+                    'Henrik Mohns plass 1, Oslo 0313, Norway']),
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
     'NIWA': 'National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand',
@@ -670,32 +679,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CESM2'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CDRMIP',
- 'CFMIP',
- 'CMIP',
- 'CORDEX',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'GMMIP',
- 'GeoMIP',
- 'HighResMIP',
- 'ISMIP6',
- 'LS3MIP',
- 'LUMIP',
- 'OMIP',
- 'PAMIP',
- 'PMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB',
- 'VolMIP'
-]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

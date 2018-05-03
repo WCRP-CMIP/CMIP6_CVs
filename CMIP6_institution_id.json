@@ -28,7 +28,7 @@
         "MRI":"Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan",
         "NASA-GISS":"Goddard Institute for Space Studies, New York, NY 10025, USA",
         "NCAR":"National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA",
-        "NCC":"NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway",
+        "NCC":"NorESM Climate modeling Consortium consisting of CICERO (Center for International Climate and Environmental Research, Oslo 0349), MET-Norway (Norwegian Meteorological Institute, Oslo 0313), NERSC (Nansen Environmental and Remote Sensing Center, Bergen 5006), NILU (Norwegian Institute for Air Research, Kjeller 2027), UiB (University of Bergen, Bergen 5007), UiO (University of Oslo, Oslo 0313) and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway Henrik Mohns plass 1, Oslo 0313, Norway",
         "NERC":"Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK",
         "NIMS-KMA":"National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea",
         "NIWA":"National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand",
@@ -41,13 +41,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Sat Apr 28 18:02:11 2018 -0700",
-        "CV_collection_version":"6.2.8.2",
+        "CV_collection_modified":"Thu May  3 13:11:34 2018 -0700",
+        "CV_collection_version":"6.2.8.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Fri Apr 20 19:19:10 2018 -0700",
-        "institution_id_CV_note":"Revise institution_id MIROC",
-        "previous_commit":"0a9803f65c4ddc9d62ee8dc3eb0cdc51da46977c",
+        "institution_id_CV_note":"Revise institution_id NCC",
+        "previous_commit":"bbcd446bb664fee59fa3f7a93b79a0648d7e9cd8",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

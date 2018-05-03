@@ -583,7 +583,7 @@ institution_id = {
                     'NILU (Norwegian Institute for Air Research, Kjeller 2027), ',
                     'UiB (University of Bergen, Bergen 5007), ',
                     'UiO (University of Oslo, Oslo 0313) ',
-                    'and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway ',
+                    'and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway, ',
                     'Henrik Mohns plass 1, Oslo 0313, Norway']),
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',

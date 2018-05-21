@@ -280,13 +280,14 @@ PJD 20 Apr 2018    - Add experiment_id values for CDRMIP and PAMIP https://githu
 PJD 24 Apr 2018    - Register source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
+PJD 21 May 2018    - Revise source_id UKESM1.0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id NCC\"'
+commitMessage = '\"Revise source_id UKESM1.0-LL\"'
 
 #%% Import statements
 import calendar
@@ -679,6 +680,13 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'UKESM1-0-LL'
+source_id[key]['institution_id'] = [
+ 'MOHC',
+ 'NERC',
+ 'NIMS-KMA',
+ 'NIWA'
+]
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

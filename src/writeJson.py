@@ -281,13 +281,14 @@ PJD 24 Apr 2018    - Register source_id CESM2 https://github.com/WCRP-CMIP/CMIP6
 PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
 PJD 21 May 2018    - Revise source_id UKESM1.0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
+PJD 21 May 2018    - Register source_id KACE-1-0-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/532
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id UKESM1.0-LL\"'
+commitMessage = '\"Register source_id KACE-1-0-G\"'
 
 #%% Import statements
 import calendar
@@ -680,13 +681,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-0-LL'
-source_id[key]['institution_id'] = [
- 'MOHC',
- 'NERC',
- 'NIMS-KMA',
- 'NIWA'
+key = 'KACE-1-0-G'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'ScenarioMIP'
 ]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NIMS-KMA'
+]
+source_id[key]['label'] = 'KACE1.0-G'
+source_id[key]['label_extended'] = 'KACE1.0-GLOMAP'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
+source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MOM4p1 (tripolar primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (tripolar primarily 1deg; 360 x 200 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

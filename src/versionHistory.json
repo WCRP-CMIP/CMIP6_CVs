@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"74a326b75b753e115aa21a160800683eabe3c5f6",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/74a326b75b753e115aa21a160800683eabe3c5f6",
-            "commitMessage":"Revise source_id UKESM1.0-LL",
-            "timeStamp":"Mon May 21 07:44:05 2018 -0700"
+            "MD5":"2f1cf94b515c35b4da712ff718349198e3c69261",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2f1cf94b515c35b4da712ff718349198e3c69261",
+            "commitMessage":"Register source_id KACE-1-0-G",
+            "timeStamp":"Mon May 21 07:54:20 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":4,
+            "versionCVCommit":5,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

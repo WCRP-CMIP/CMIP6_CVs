@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"0b8ac206872548663367c61322e502ad5208583d",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/0b8ac206872548663367c61322e502ad5208583d",
-            "commitMessage":"Register institution_id UTAS",
-            "timeStamp":"Tue May 22 03:34:32 2018 -0700"
+            "MD5":"41e36ca649bd7837680f12ac0eb55b7100833ae5",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/41e36ca649bd7837680f12ac0eb55b7100833ae5",
+            "commitMessage":"Revise institution_id CSIRO-ARCCSS-BoM",
+            "timeStamp":"Tue May 22 03:40:40 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":7,
+            "versionCVCommit":8,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

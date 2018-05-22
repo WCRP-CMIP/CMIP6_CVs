@@ -283,13 +283,14 @@ PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP
 PJD 21 May 2018    - Revise source_id UKESM1.0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
 PJD 21 May 2018    - Register source_id KACE-1-0-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/532
 PJD 21 May 2018    - Register institution_id E3SM-Project https://github.com/WCRP-CMIP/CMIP6_CVs/issues/533
+PJD 22 May 2018    - Register institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/535
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register institution_id E3SM-Project\"'
+commitMessage = '\"Register institution_id UTAS\"'
 
 #%% Import statements
 import calendar
@@ -607,6 +608,7 @@ institution_id = {
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
+    'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
     'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
 }
 

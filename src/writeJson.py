@@ -608,8 +608,8 @@ institution_id = {
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
-    'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada',
-    'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia'
+    'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
+    'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
 }
 
 #%% CMIP6 License

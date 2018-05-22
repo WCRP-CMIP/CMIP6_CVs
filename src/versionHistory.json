@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"5cf596edb50836eea7c178409f61d1d31b9fcb2e",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5cf596edb50836eea7c178409f61d1d31b9fcb2e",
-            "commitMessage":"Revise institution_id NCC",
-            "timeStamp":"Thu May  3 13:12:52 2018 -0700"
+            "MD5":"d03f1b7569492aa03873dffdce7f3f1058df64ed",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d03f1b7569492aa03873dffdce7f3f1058df64ed",
+            "commitMessage":"Register institution_id E3SM-Project",
+            "timeStamp":"Tue May 22 03:08:55 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

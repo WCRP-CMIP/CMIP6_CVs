@@ -1,5 +1,59 @@
 {
     "source_id":{
+        "ACCESS-ESM1-5":{
+            "activity_participation":[
+                "C4MIP",
+                "CDRMIP",
+                "CMIP",
+                "OMIP",
+                "RFMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CSIRO"
+            ],
+            "label":"ACCESS-ESM1.5",
+            "label_extended":"Australian Community Climate and Earth System Simulator Earth System Model Version 1.5",
+            "model_component":{
+                "aerosol":{
+                    "description":"CLASSIC (v1.0)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CABLE2.2.3",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"WOMBAT1.0 (same grid as ocean)",
+                    "nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE5.1 (same grid as ocean)",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"ACCESS-ESM1-5"
+        },
         "ARTS-2-3":{
             "activity_participation":[
                 "RFMIP"
@@ -4624,13 +4678,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue May 22 07:07:44 2018 -0700",
-        "CV_collection_version":"6.2.8.10",
+        "CV_collection_modified":"Tue May 22 07:16:30 2018 -0700",
+        "CV_collection_version":"6.2.8.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c6fa0442c3bf602c3d14fca4eebc4727c651c320",
-        "source_id_CV_modified":"Mon May 21 07:54:20 2018 -0700",
-        "source_id_CV_note":"Register source_id GFDL-CM4C192",
+        "previous_commit":"d1e8342ecb7be1c09b6522060f4d2be81ffb37ce",
+        "source_id_CV_modified":"Tue May 22 07:07:44 2018 -0700",
+        "source_id_CV_note":"Register source_id ACCESS-ESM1-5",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

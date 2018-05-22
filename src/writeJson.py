@@ -282,13 +282,14 @@ PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP
 PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
 PJD 21 May 2018    - Revise source_id UKESM1.0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
 PJD 21 May 2018    - Register source_id KACE-1-0-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/532
+PJD 21 May 2018    - Register institution_id E3SM-Project https://github.com/WCRP-CMIP/CMIP6_CVs/issues/533
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id KACE-1-0-G\"'
+commitMessage = '\"Register institution_id E3SM-Project\"'
 
 #%% Import statements
 import calendar
@@ -552,6 +553,16 @@ institution_id = {
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
     'CSIRO-BOM': 'Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
+    'E3SM-Project': ''.join(['LLNL (Lawrence Livermore National Laboratory, Livermore, CA 94550, USA); ',
+                             'ANL (Argonne National Laboratory, Argonne, IL 60439, USA); ',
+                             'BNL (Brookhaven National Laboratory, Upton, NY 11973, USA); ',
+                             'LANL (Los Alamos National Laboratory, Los Alamos, NM 87545, USA); ',
+                             'LBNL (Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA); ',
+                             'ORNL (Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA); ',
+                             'PNNL (Pacific Northwest National Laboratory, Richland, WA 99352, USA); ',
+                             'SNL (Sandia National Laboratories, Albuquerque, NM 87185, USA). ',
+                             'Mailing address: LLNL Climate Program, c/o David C. Bader, ',
+                             'Principal Investigator, L-103, 7000 East Avenue, Livermore, CA 94550, USA']),
     'EC-Earth-Consortium': ''.join(['AEMET, Spain; BSC, Spain; CNR-ISAC, Italy; DMI, Denmark; ENEA, Italy; FMI, Finland; Geomar, Germany; ICHEC, ',
                             'Ireland; ICTP, Italy; IDL, Portugal; IMAU, The Netherlands; IPMA, Portugal; KIT, Karlsruhe, Germany; KNMI, ',
                             'The Netherlands; Lund University, Sweden; Met Eireann, Ireland; NLeSC, The Netherlands; NTNU, Norway; Oxford ',
@@ -681,47 +692,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'KACE-1-0-G'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'ScenarioMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'NIMS-KMA'
-]
-source_id[key]['label'] = 'KACE1.0-G'
-source_id[key]['label_extended'] = 'KACE1.0-GLOMAP'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'JULES-HadGEM3-GL7.1'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'MOM4p1 (tripolar primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (tripolar primarily 1deg; 360 x 200 longitude/latitude)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -285,13 +285,14 @@ PJD 21 May 2018    - Register source_id KACE-1-0-G https://github.com/WCRP-CMIP/
 PJD 21 May 2018    - Register institution_id E3SM-Project https://github.com/WCRP-CMIP/CMIP6_CVs/issues/533
 PJD 22 May 2018    - Register institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/535
 PJD 22 May 2018    - Revise institution_id CSIRO-ARCCSS-BoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/540
+PJD 22 May 2018    - Register institution_id CSIRO https://github.com/WCRP-CMIP/CMIP6_CVs/issues/546
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id CSIRO-ARCCSS-BoM\"'
+commitMessage = '\"Register institution_id CSIRO\"'
 
 #%% Import statements
 import calendar
@@ -553,6 +554,7 @@ institution_id = {
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
     'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
+    'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
     'CSIRO-ARCCSS-BoM': 'Commonwealth Scientific and Industrial Research Organisation, Australian Research Council Centre of Excellence for Climate System Science, and Bureau of Meteorology, Aspendale, Victoria 3195, Australia',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'E3SM-Project': ''.join(['LLNL (Lawrence Livermore National Laboratory, Livermore, CA 94550, USA); ',

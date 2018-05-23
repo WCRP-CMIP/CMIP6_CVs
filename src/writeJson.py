@@ -280,7 +280,7 @@ PJD 20 Apr 2018    - Add experiment_id values for CDRMIP and PAMIP https://githu
 PJD 24 Apr 2018    - Register source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD 28 Apr 2018    - Revise CESM2 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/525
 PJD  3 May 2018    - Revise institution_id NCC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/83
-PJD 21 May 2018    - Revise source_id UKESM1.0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
+PJD 21 May 2018    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/531
 PJD 21 May 2018    - Register source_id KACE-1-0-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/532
 PJD 21 May 2018    - Register institution_id E3SM-Project https://github.com/WCRP-CMIP/CMIP6_CVs/issues/533
 PJD 22 May 2018    - Register institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/535
@@ -289,13 +289,14 @@ PJD 22 May 2018    - Register institution_id CSIRO https://github.com/WCRP-CMIP/
 PJD 22 May 2018    - Register source_id GFDL-CM4C192 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/537
 PJD 22 May 2018    - Register source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/538
 PJD 22 May 2018    - Register source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/539
+PJD 22 May 2018    - Register source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/534
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id ACCESS-CM2\"'
+commitMessage = '\"Register source_id E3SM-1-0\"'
 
 #%% Import statements
 import calendar
@@ -700,48 +701,44 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-CM2'
+key = 'E3SM-1-0'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
-  'CMIP',
-  'FAFMIP',
-  'OMIP',
-  'RFMIP',
-  'ScenarioMIP'
+  'CMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'CSIRO-ARCCSS-BoM'
+ 'E3SM-Project'
 ]
-source_id[key]['label'] = 'ACCESS-CM2'
-source_id[key]['label_extended'] = 'Australian Community Climate and Earth System Simulator Climate Model Version 2'
+source_id[key]['label'] = 'E3SM 1.0'
+source_id[key]['label_extended'] = 'E3SM 1.0 (Energy Exascale Earth System Model)'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['aerosol']['description'] = 'MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'EAM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; 72 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmosChem']['description'] = 'Troposphere specified oxidants for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CABLE2.3.5'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'ELM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; satellite phenology mode), MOSART (v1.0, 0.5 degree latitude/longitude grid)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'ACCESS-OM2 (GFDL-MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'MPAS-Ocean (v6.0, oEC60to30 mesh, variable resolution 60 km to 30km; 60 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'MPAS-Seaice (v6.0, same grid as ocean)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
 source_id[key]['release_year'] = '2018'
 source_id[key]['source_id'] = key
 

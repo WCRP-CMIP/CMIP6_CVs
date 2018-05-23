@@ -2454,6 +2454,56 @@
             "release_year":"2017",
             "source_id":"GFDL-ESM4"
         },
+        "GFDL-OM4p5B":{
+            "activity_participation":[
+                "CMIP",
+                "OMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-OM4p5B",
+            "label_extended":"GFDL-OM4p5B",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"GFDL BLING v2",
+                    "nominal_resolution":"50 km"
+                },
+                "seaIce":{
+                    "description":"SIS2",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"GFDL-OM4p5B"
+        },
         "GISS-E2-1-G":{
             "activity_participation":[
                 "AerChemMIP",
@@ -4831,13 +4881,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May 23 13:21:20 2018 -0700",
-        "CV_collection_version":"6.2.8.17",
+        "CV_collection_modified":"Wed May 23 13:28:03 2018 -0700",
+        "CV_collection_version":"6.2.8.18",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f0cace1c7948222ec99d684b2e4bf9a81f82c5bd",
-        "source_id_CV_modified":"Wed May 23 13:14:02 2018 -0700",
-        "source_id_CV_note":"Revise source_id E3SM1-0",
+        "previous_commit":"9a6bfc34ea3acc415928e3f89c66aee209310e46",
+        "source_id_CV_modified":"Wed May 23 13:21:20 2018 -0700",
+        "source_id_CV_note":"Register source_id GFDL-OM4p5B",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

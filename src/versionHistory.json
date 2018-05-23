@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"f0cace1c7948222ec99d684b2e4bf9a81f82c5bd",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f0cace1c7948222ec99d684b2e4bf9a81f82c5bd",
-            "commitMessage":"Revise source_id E3SM1-0",
-            "timeStamp":"Wed May 23 13:21:20 2018 -0700"
+            "MD5":"9a6bfc34ea3acc415928e3f89c66aee209310e46",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9a6bfc34ea3acc415928e3f89c66aee209310e46",
+            "commitMessage":"Register source_id GFDL-OM4p5B",
+            "timeStamp":"Wed May 23 13:28:03 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":17,
+            "versionCVCommit":18,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

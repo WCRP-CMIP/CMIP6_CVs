@@ -290,13 +290,14 @@ PJD 22 May 2018    - Register source_id GFDL-CM4C192 https://github.com/WCRP-CMI
 PJD 22 May 2018    - Register source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/538
 PJD 22 May 2018    - Register source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/539
 PJD 22 May 2018    - Register source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/534
+PJD 22 May 2018    - Revise AWI source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/526
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id E3SM-1-0\"'
+commitMessage = '\"Revise AWI source_id entries\"'
 
 #%% Import statements
 import calendar
@@ -701,47 +702,42 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'E3SM-1-0'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-  'CMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'E3SM-Project'
-]
-source_id[key]['label'] = 'E3SM 1.0'
-source_id[key]['label_extended'] = 'E3SM 1.0 (Energy Exascale Earth System Model)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'EAM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; 72 levels; top level 0.1 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'Troposphere specified oxidants for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ELM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; satellite phenology mode), MOSART (v1.0, 0.5 degree latitude/longitude grid)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'MPAS-Ocean (v6.0, oEC60to30 mesh, variable resolution 60 km to 30km; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'MPAS-Seaice (v6.0, same grid as ocean)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
+key = 'AWI-CM-1-1-HR'
+source_id[key] = source_id.pop('AWI-CM-1-0-HR')
+source_id[key]['label'] = 'AWI-CM 1.1 HR'
+source_id[key]['label_extended'] = 'AWI-CM 1.1 HR'
+desc = source_id[key]['model_component']['atmos']['description']
+desc = desc.replace('ECHAM6.3.02p4','ECHAM6.3.04p1')
+source_id[key]['model_component']['atmos']['description'] = desc
+desc = source_id[key]['model_component']['land']['description']
+desc = desc.replace('JSBACH 3.10','JSBACH 3.20')
+source_id[key]['model_component']['land']['description'] = desc
 source_id[key]['release_year'] = '2018'
 source_id[key]['source_id'] = key
-
+key = 'AWI-CM-1-1-LR'
+source_id[key] = source_id.pop('AWI-CM-1-0-LR')
+source_id[key]['label'] = 'AWI-CM 1.1 LR'
+source_id[key]['label_extended'] = 'AWI-CM 1.1 LR'
+desc = source_id[key]['model_component']['atmos']['description']
+desc = desc.replace('ECHAM6.3.02p4','ECHAM6.3.04p1')
+source_id[key]['model_component']['atmos']['description'] = desc
+desc = source_id[key]['model_component']['land']['description']
+desc = desc.replace('JSBACH 3.10','JSBACH 3.20')
+source_id[key]['model_component']['land']['description'] = desc
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
+key = 'AWI-CM-1-1-MR'
+source_id[key] = source_id.pop('AWI-CM-1-0-MR')
+source_id[key]['label'] = 'AWI-CM 1.1 MR'
+source_id[key]['label_extended'] = 'AWI-CM 1.1 MR'
+desc = source_id[key]['model_component']['atmos']['description']
+desc = desc.replace('ECHAM6.3.02p4','ECHAM6.3.04p1')
+source_id[key]['model_component']['atmos']['description'] = desc
+desc = source_id[key]['model_component']['land']['description']
+desc = desc.replace('JSBACH 3.10','JSBACH 3.20')
+source_id[key]['model_component']['land']['description'] = desc
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

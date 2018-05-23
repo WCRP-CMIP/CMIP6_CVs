@@ -156,7 +156,7 @@
             "release_year":"2015",
             "source_id":"ARTS-2-3"
         },
-        "AWI-CM-1-0-HR":{
+        "AWI-CM-1-1-HR":{
             "activity_participation":[
                 "CMIP",
                 "CORDEX",
@@ -171,15 +171,15 @@
             "institution_id":[
                 "AWI"
             ],
-            "label":"AWI-CM 1.0 HR",
-            "label_extended":"AWI-CM 1.0 HR",
+            "label":"AWI-CM 1.1 HR",
+            "label_extended":"AWI-CM 1.1 HR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
+                    "description":"ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -187,7 +187,7 @@
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"JSBACH 3.10",
+                    "description":"JSBACH 3.20",
                     "nominal_resolution":"100 km"
                 },
                 "landIce":{
@@ -207,10 +207,10 @@
                     "nominal_resolution":"25 km"
                 }
             },
-            "release_year":"2017",
-            "source_id":"AWI-CM-1-0-HR"
+            "release_year":"2018",
+            "source_id":"AWI-CM-1-1-HR"
         },
-        "AWI-CM-1-0-LR":{
+        "AWI-CM-1-1-LR":{
             "activity_participation":[
                 "CMIP",
                 "CORDEX",
@@ -227,15 +227,15 @@
             "institution_id":[
                 "AWI"
             ],
-            "label":"AWI-CM 1.0 LR",
-            "label_extended":"AWI-CM 1.0 LR",
+            "label":"AWI-CM 1.1 LR",
+            "label_extended":"AWI-CM 1.1 LR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"ECHAM6.3.02p4 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
+                    "description":"ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
                     "nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -243,7 +243,7 @@
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"JSBACH 3.10",
+                    "description":"JSBACH 3.20",
                     "nominal_resolution":"250 km"
                 },
                 "landIce":{
@@ -263,10 +263,10 @@
                     "nominal_resolution":"50 km"
                 }
             },
-            "release_year":"2017",
-            "source_id":"AWI-CM-1-0-LR"
+            "release_year":"2018",
+            "source_id":"AWI-CM-1-1-LR"
         },
-        "AWI-CM-1-0-MR":{
+        "AWI-CM-1-1-MR":{
             "activity_participation":[
                 "CMIP",
                 "CORDEX",
@@ -281,15 +281,15 @@
             "institution_id":[
                 "AWI"
             ],
-            "label":"AWI-CM 1.0 MR",
-            "label_extended":"AWI-CM 1.0 MR",
+            "label":"AWI-CM 1.1 MR",
+            "label_extended":"AWI-CM 1.1 MR",
             "model_component":{
                 "aerosol":{
                     "description":"none",
                     "nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
+                    "description":"ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)",
                     "nominal_resolution":"100 km"
                 },
                 "atmosChem":{
@@ -297,7 +297,7 @@
                     "nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"JSBACH 3.10",
+                    "description":"JSBACH 3.20",
                     "nominal_resolution":"100 km"
                 },
                 "landIce":{
@@ -317,8 +317,8 @@
                     "nominal_resolution":"25 km"
                 }
             },
-            "release_year":"2017",
-            "source_id":"AWI-CM-1-0-MR"
+            "release_year":"2018",
+            "source_id":"AWI-CM-1-1-MR"
         },
         "BCC-CSM2-HR":{
             "activity_participation":[
@@ -4780,13 +4780,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue May 22 19:16:29 2018 -0700",
-        "CV_collection_version":"6.2.8.13",
+        "CV_collection_modified":"Tue May 22 19:29:10 2018 -0700",
+        "CV_collection_version":"6.2.8.14",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5429affb9b803eb7ed88bc48b18b0428103980aa",
-        "source_id_CV_modified":"Tue May 22 07:23:16 2018 -0700",
-        "source_id_CV_note":"Register source_id E3SM-1-0",
+        "previous_commit":"24826ba94254b4563ab96e19778212f78545cc82",
+        "source_id_CV_modified":"Tue May 22 19:16:29 2018 -0700",
+        "source_id_CV_note":"Revise AWI source_id entries",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

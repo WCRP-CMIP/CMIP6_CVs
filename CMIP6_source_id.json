@@ -1418,6 +1418,55 @@
             "release_year":"2017",
             "source_id":"CanESM5"
         },
+        "E3SM-1-0":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "E3SM-Project"
+            ],
+            "label":"E3SM 1.0",
+            "label_extended":"E3SM 1.0 (Energy Exascale Earth System Model)",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"EAM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; 72 levels; top level 0.1 hPa)",
+                    "nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"Troposphere specified oxidants for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos)",
+                    "nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"ELM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; satellite phenology mode), MOSART (v1.0, 0.5 degree latitude/longitude grid)",
+                    "nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MPAS-Ocean (v6.0, oEC60to30 mesh, variable resolution 60 km to 30km; 60 levels; top grid cell 0-10 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"MPAS-Seaice (v6.0, same grid as ocean)",
+                    "nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"E3SM-1-0"
+        },
         "EC-Earth3":{
             "activity_participation":[
                 "CMIP",
@@ -4731,13 +4780,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue May 22 07:23:16 2018 -0700",
-        "CV_collection_version":"6.2.8.12",
+        "CV_collection_modified":"Tue May 22 19:16:29 2018 -0700",
+        "CV_collection_version":"6.2.8.13",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d244f8c49b80012ba5a8cb5e728b8d0f1107df8e",
-        "source_id_CV_modified":"Tue May 22 07:16:30 2018 -0700",
-        "source_id_CV_note":"Register source_id ACCESS-CM2",
+        "previous_commit":"5429affb9b803eb7ed88bc48b18b0428103980aa",
+        "source_id_CV_modified":"Tue May 22 07:23:16 2018 -0700",
+        "source_id_CV_note":"Register source_id E3SM-1-0",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"d244f8c49b80012ba5a8cb5e728b8d0f1107df8e",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d244f8c49b80012ba5a8cb5e728b8d0f1107df8e",
-            "commitMessage":"Register source_id ACCESS-CM2",
-            "timeStamp":"Tue May 22 07:23:16 2018 -0700"
+            "MD5":"5429affb9b803eb7ed88bc48b18b0428103980aa",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5429affb9b803eb7ed88bc48b18b0428103980aa",
+            "commitMessage":"Register source_id E3SM-1-0",
+            "timeStamp":"Tue May 22 19:16:29 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":12,
+            "versionCVCommit":13,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

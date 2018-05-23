@@ -1502,7 +1502,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MPAS-Ocean (v6.0, oEC60to30 mesh, variable resolution 60 km to 30km; 60 levels; top grid cell 0-10 m)",
+                    "description":"MPAS-Ocean (v6.0, oEC60to30 unstructured SVTs mesh with 235160 cells and 714274 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)",
                     "nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -4831,13 +4831,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May 23 13:14:02 2018 -0700",
-        "CV_collection_version":"6.2.8.16",
+        "CV_collection_modified":"Wed May 23 13:21:20 2018 -0700",
+        "CV_collection_version":"6.2.8.17",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c80423a4c93200f8279415ebd4d4c61a5303a35d",
-        "source_id_CV_modified":"Wed May 23 06:31:02 2018 -0700",
-        "source_id_CV_note":"Revise source_id INM-CM4-8",
+        "previous_commit":"f0cace1c7948222ec99d684b2e4bf9a81f82c5bd",
+        "source_id_CV_modified":"Wed May 23 13:14:02 2018 -0700",
+        "source_id_CV_note":"Revise source_id E3SM1-0",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

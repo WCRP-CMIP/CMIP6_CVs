@@ -8351,13 +8351,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May 23 13:14:02 2018 -0700",
-        "CV_collection_version":"6.2.8.16",
+        "CV_collection_modified":"Wed May 23 13:21:20 2018 -0700",
+        "CV_collection_version":"6.2.8.17",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Apr 20 20:46:44 2018 -0700",
         "experiment_id_CV_note":"Add experiment_id values for CDRMIP and PAMIP",
         "institution_id":"PCMDI",
-        "previous_commit":"c80423a4c93200f8279415ebd4d4c61a5303a35d",
+        "previous_commit":"f0cace1c7948222ec99d684b2e4bf9a81f82c5bd",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

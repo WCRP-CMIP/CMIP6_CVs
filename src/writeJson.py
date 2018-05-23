@@ -293,13 +293,14 @@ PJD 22 May 2018    - Register source_id E3SM-1-0 https://github.com/WCRP-CMIP/CM
 PJD 22 May 2018    - Revise AWI source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/526
 PJD 23 May 2018    - Register source_id CSIRO-Mk3L-1-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/536
 PJD 23 May 2018    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/359
+PJD 23 May 2018    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/534
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Revise source_id INM-CM4-8\"'
+commitMessage = '\"Revise source_id E3SM1-0\"'
 
 #%% Import statements
 import calendar
@@ -704,12 +705,8 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'INM-CM4-8'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'PMIP'
-]
-
+key = 'E3SM-1-0'
+source_id[key]['model_component']['ocean']['description'] = 'MPAS-Ocean (v6.0, oEC60to30 unstructured SVTs mesh with 235160 cells and 714274 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

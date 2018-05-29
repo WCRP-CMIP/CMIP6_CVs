@@ -295,13 +295,14 @@ PJD 23 May 2018    - Register source_id CSIRO-Mk3L-1-3 https://github.com/WCRP-C
 PJD 23 May 2018    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/359
 PJD 23 May 2018    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/534
 PJD 23 May 2018    - Register source_id GFDL-OM4p5B https://github.com/WCRP-CMIP/CMIP6_CVs/issues/554
+PJD 29 May 2018    - Revise source_id CSIRO-Mk3L-1-3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/536
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id GFDL-OM4p5B\"'
+commitMessage = '\"Revise source_id CSIRO-Mk3L-1-3\"'
 
 #%% Import statements
 import calendar
@@ -706,47 +707,9 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-OM4p5B'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'OMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'NOAA-GFDL'
-]
-source_id[key]['label'] = 'GFDL-OM4p5B'
-source_id[key]['label_extended'] = 'GFDL-OM4p5B'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'GFDL BLING v2'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'SIS2'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '50 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+key = 'CSIRO-Mk3L-1-3'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (same grid as atmosphere)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '500 km'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

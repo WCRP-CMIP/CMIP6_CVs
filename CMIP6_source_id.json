@@ -1395,8 +1395,8 @@
                     "nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"unnamed",
-                    "nominal_resolution":"250 km"
+                    "description":"unnamed (same grid as atmosphere)",
+                    "nominal_resolution":"500 km"
                 }
             },
             "release_year":"2006",
@@ -4881,13 +4881,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May 23 13:28:03 2018 -0700",
-        "CV_collection_version":"6.2.8.18",
+        "CV_collection_modified":"Tue May 29 08:00:40 2018 -0700",
+        "CV_collection_version":"6.2.8.19",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9a6bfc34ea3acc415928e3f89c66aee209310e46",
-        "source_id_CV_modified":"Wed May 23 13:21:20 2018 -0700",
-        "source_id_CV_note":"Register source_id GFDL-OM4p5B",
+        "previous_commit":"597a6c53ee4115c4cbad2bbc51c4a3a991984b21",
+        "source_id_CV_modified":"Wed May 23 13:28:03 2018 -0700",
+        "source_id_CV_note":"Revise source_id CSIRO-Mk3L-1-3",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

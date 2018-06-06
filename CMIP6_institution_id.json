@@ -44,13 +44,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun  6 16:57:24 2018 -0700",
+        "CV_collection_modified":"Wed Jun  6 16:59:50 2018 -0700",
         "CV_collection_version":"6.2.8.20",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Tue May 22 04:48:31 2018 -0700",
         "institution_id_CV_note":"Register institution_id CSIRO",
-        "previous_commit":"34a71a2e8de1cd76164cf8cc494a9fd92da0c250",
+        "previous_commit":"198a5a748a6589ba8fe48596db22bbb2a3af45cf",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

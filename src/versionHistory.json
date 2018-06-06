@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"34a71a2e8de1cd76164cf8cc494a9fd92da0c250",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/34a71a2e8de1cd76164cf8cc494a9fd92da0c250",
+            "MD5":"198a5a748a6589ba8fe48596db22bbb2a3af45cf",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/198a5a748a6589ba8fe48596db22bbb2a3af45cf",
             "commitMessage":"Register 3 additional source_id entries for EC-Earth-Consortia",
-            "timeStamp":"Wed Jun  6 16:57:24 2018 -0700"
+            "timeStamp":"Wed Jun  6 16:59:50 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

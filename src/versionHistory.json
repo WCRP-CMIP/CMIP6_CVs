@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"5ed52268c368f159fde7bd1eb5e404bf87f942b8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5ed52268c368f159fde7bd1eb5e404bf87f942b8",
-            "commitMessage":"Register institution_id CSIRO",
-            "timeStamp":"Tue May 22 04:48:31 2018 -0700"
+            "MD5":"3798ccd7540519e37a2857b57a781ad1b92ea3ac",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3798ccd7540519e37a2857b57a781ad1b92ea3ac",
+            "commitMessage":"Register institution_id DKRZ",
+            "timeStamp":"Tue Jun 12 13:07:29 2018 -0700"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":21,
+            "versionCVCommit":22,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

@@ -299,13 +299,14 @@ PJD 29 May 2018    - Revise source_id CSIRO-Mk3L-1-3 https://github.com/WCRP-CMI
 PJD  6 Jun 2018    - Register 3 additional source_id entries for EC-Earth-Consortia https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 12 Jun 2018    - Revise source_id EC-Earth3P-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 12 Jun 2018    - Register institution_id DKRZ https://github.com/WCRP-CMIP/CMIP6_CVs/issues/561
+PJD 12 Jun 2018    - Register source_id IPSL-CM6A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/562
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register institution_id DKRZ\"'
+commitMessage = '\"Register source_id IPSL-CM6A-ATM-HR\"'
 
 #%% Import statements
 import calendar
@@ -711,6 +712,46 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'IPSL-CM6A-ATM-HR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'IPSL'
+]
+source_id[key]['label'] = 'IPSL-CM6A-ATM-HR'
+source_id[key]['label_extended'] = 'IPSL-CM6A-ATM-HR'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 40000 m)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.0, Water/Carbon/Energy mode)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES'
+source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

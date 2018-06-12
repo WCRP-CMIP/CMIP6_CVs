@@ -2015,7 +2015,7 @@
                     "nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "description":"NEMO3.6 (ORCA025; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)",
                     "nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -5028,13 +5028,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun  6 16:59:50 2018 -0700",
-        "CV_collection_version":"6.2.8.20",
+        "CV_collection_modified":"Tue Jun 12 13:01:31 2018 -0700",
+        "CV_collection_version":"6.2.8.21",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"198a5a748a6589ba8fe48596db22bbb2a3af45cf",
-        "source_id_CV_modified":"Tue May 29 08:00:40 2018 -0700",
-        "source_id_CV_note":"Register 3 additional source_id entries for EC-Earth-Consortia",
+        "previous_commit":"40d1087b5d32cf34ef744c4ab8eb08d4eb5f5f30",
+        "source_id_CV_modified":"Wed Jun  6 16:59:50 2018 -0700",
+        "source_id_CV_note":"Revise source_id EC-Earth3P-HR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -3449,6 +3449,55 @@
             "release_year":"2016",
             "source_id":"INM-CM5-H"
         },
+        "IPSL-CM6A-ATM-HR":{
+            "activity_participation":[
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"IPSL-CM6A-ATM-HR",
+            "label_extended":"IPSL-CM6A-ATM-HR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 40000 m)",
+                    "nominal_resolution":"50 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"ORCHIDEE (v2.0, Water/Carbon/Energy mode)",
+                    "nominal_resolution":"50 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"IPSL-CM6A-ATM-HR"
+        },
         "IPSL-CM6A-LR":{
             "activity_participation":[
                 "C4MIP",
@@ -5028,13 +5077,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jun 12 13:07:29 2018 -0700",
-        "CV_collection_version":"6.2.8.22",
+        "CV_collection_modified":"Wed Jun 13 15:23:43 2018 -0700",
+        "CV_collection_version":"6.2.8.23",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3798ccd7540519e37a2857b57a781ad1b92ea3ac",
+        "previous_commit":"556490ffe323ca32b3eadc0d1e8a3138c31b4987",
         "source_id_CV_modified":"Tue Jun 12 13:01:31 2018 -0700",
-        "source_id_CV_note":"Revise source_id EC-Earth3P-HR",
+        "source_id_CV_note":"Register source_id IPSL-CM6A-ATM-HR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

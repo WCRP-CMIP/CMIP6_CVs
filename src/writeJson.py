@@ -300,15 +300,14 @@ PJD  6 Jun 2018    - Register 3 additional source_id entries for EC-Earth-Consor
 PJD 12 Jun 2018    - Revise source_id EC-Earth3P-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 12 Jun 2018    - Register institution_id DKRZ https://github.com/WCRP-CMIP/CMIP6_CVs/issues/561
 PJD 12 Jun 2018    - Register source_id IPSL-CM6A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/562
+PJD 25 Jun 2018    - Update for py3
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
-#%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM6A-ATM-HR\"'
-
 #%% Import statements
+from __future__ import print_function
 import calendar
 import datetime
 import gc
@@ -325,6 +324,9 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #import pyexcel_xlsx as pyx
 #from string import replace
 #from unidecode import unidecode
+
+#%% Set commit message
+commitMessage = '\"Register source_id IPSL-CM6A-ATM-HR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -914,28 +916,28 @@ del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
 for key in source_id.keys():
     # Validate source_id format
     if not entryCheck(key):
-        print 'Invalid source_id format for entry:',key,'- aborting'
+        print('Invalid source_id format for entry:',key,'- aborting')
         sys.exit()
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
         if key in ['LBLRTM','ARTS-2-3']:
-            print key,'RFMIP only - continue'
+            print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
-            print key,'HighResMIP no CMIP required - continue'
+            print(key,'HighResMIP no CMIP required - continue')
         else:
-            print 'Invalid activity_participation for entry:',key,'no CMIP listed - aborting'
+            print('Invalid activity_participation for entry:',key,'no CMIP listed - aborting')
             sys.exit()
     for act in val:
         if act not in activity_id:
-            print 'Invalid activity_participation for entry:',key,':',act,'- aborting'
+            print('Invalid activity_participation for entry:',key,':',act,'- aborting')
             sys.exit()
     # Validate institution_id
     vals = source_id[key]['institution_id']
     for val in vals:
         if val not in institution_id:
-            print 'Invalid institution_id for entry:',key,'- aborting'
+            print('Invalid institution_id for entry:',key,'- aborting')
             sys.exit()
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()
@@ -944,30 +946,30 @@ for key in source_id.keys():
         if val2 == 'none':
             pass
         elif val2 not in nominal_resolution:
-            print 'Invalid nominal_resolution for entry:',key,val1,val2,'- aborting'
+            print('Invalid nominal_resolution for entry:',key,val1,val2,'- aborting')
             sys.exit()
     # Validate source_id
     val = source_id[key]['source_id']
     if key != val:
-            print 'Invalid source_id for entry:',val,'not equal',key,'- aborting'
+            print('Invalid source_id for entry:',val,'not equal',key,'- aborting')
             sys.exit()
 # experiment_ids
 experiment_id_keys = experiment_id.keys()
 for key in experiment_id_keys:
     # Validate source_id format
     if not entryCheck(key):
-        print 'Invalid experiment_id format for entry:',key,'- aborting'
+        print('Invalid experiment_id format for entry:',key,'- aborting')
         sys.exit()
     # Validate internal key
     val = experiment_id[key]['experiment_id']
     if not val == key:
-        print 'Invalid experiment_id for entry:',key,'- aborting'
+        print('Invalid experiment_id for entry:',key,'- aborting')
         sys.exit()
     # Validate activity_id
     val = experiment_id[key]['activity_id']
     for act in val:
         if act not in activity_id:
-            print 'Invalid activity_participation for entry:',key,act,'- aborting'
+            print('Invalid activity_participation for entry:',key,act,'- aborting')
             sys.exit()
     # Validate additional_allowed_model_components
     vals = experiment_id[key]['additional_allowed_model_components']
@@ -975,13 +977,13 @@ for key in experiment_id_keys:
         if val == '':
             pass
         elif val not in source_type:
-            print 'Invalid additional_allowed_model_components for entry:',key,val,'- aborting'
+            print('Invalid additional_allowed_model_components for entry:',key,val,'- aborting')
             sys.exit()
     # Validate required_model_components
     vals = experiment_id[key]['required_model_components']
     for val in vals:
         if val not in source_type:
-            print 'Invalid required_model_components for entry:',key,val,'- aborting'
+            print('Invalid required_model_components for entry:',key,val,'- aborting')
             sys.exit()
     # Validate parent_activity_id
     vals = experiment_id[key]['parent_activity_id']
@@ -989,7 +991,7 @@ for key in experiment_id_keys:
         if val == 'no parent':
             pass
         elif val not in activity_id:
-            print 'Invalid parent_activity_id for entry:',key,val,'- aborting'
+            print('Invalid parent_activity_id for entry:',key,val,'- aborting')
             sys.exit()
     # Validate parent_experiment_id
     vals = experiment_id[key]['parent_experiment_id']
@@ -997,7 +999,7 @@ for key in experiment_id_keys:
         if val == 'no parent':
             pass
         elif val not in experiment_id_keys:
-            print 'Invalid experiment_id_keys for entry:',key,val,'- aborting'
+            print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
             sys.exit()
 
 del(experiment_id_keys,key,act,val,val1,val2,vals)
@@ -1031,7 +1033,7 @@ versionId = ascertainVersion(testVal_activity_id,testVal_experiment_id,
                              commitMessage)
 versionHistory = versionId[0]
 versionId = versionId[1]
-print 'Version:',versionId
+print('Version:',versionId)
 #sys.exit() ; # Use to evaluate changes
 
 #%% Write variables to files
@@ -1064,7 +1066,7 @@ for jsonName in masterTargets:
 
     # Check file exists
     if os.path.exists(outFile):
-        print 'File existing, purging:', outFile
+        print('File existing, purging:', outFile)
         os.remove(outFile)
     # Create host dictionary
     jsonDict = {}
@@ -1200,7 +1202,7 @@ if versionId != versionOld:
     fH = open(readmeH,'w')
     fH.write(txt)
     fH.close()
-    print 'README.md updated'
+    print('README.md updated')
     del(target_url,txt,readmeH,fH)
 
 # Commit all changes

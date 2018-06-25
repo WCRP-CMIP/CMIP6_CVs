@@ -3711,6 +3711,55 @@
             "release_year":"2017",
             "source_id":"LBLRTM"
         },
+        "MCM-UA-1-0":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "UA"
+            ],
+            "label":"MCM-UA-1-0",
+            "label_extended":"Manabe Climate Model v1.0 - University of Arizona",
+            "model_component":{
+                "aerosol":{
+                    "description":"Modifies surface albedoes (Haywood et al. 1997, doi: 10.1175/1520-0442(1997)010<1562:GCMCOT>2.0.CO;2)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"R30L14 (3.75 X 2.5 degree (long-lat) configuration; 96 x 80 longitude/latitude; 14 levels; top level 0.015 sigma, 15 mb)",
+                    "nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"Standard Manabe bucket hydrology scheme (Manabe 1969, doi: 10.1175/1520-0493(1969)097<0739:CATOC>2.3.CO;2)",
+                    "nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"Specified location - invariant in time, has high albedo and latent heat capacity",
+                    "nominal_resolution":"250 km"
+                },
+                "ocean":{
+                    "description":"MOM1.0 (MOM1, 1.875 X 2.5 deg; 192 x 80 longitude/latitude; 18 levels; top grid cell 0-40 m)",
+                    "nominal_resolution":"250 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"Thermodynamic ice model (free drift dynamics)",
+                    "nominal_resolution":"250 km"
+                }
+            },
+            "release_year":"1991",
+            "source_id":"MCM-UA-1-0"
+        },
         "MIROC-ES2H":{
             "activity_participation":[
                 "AerChemMIP",
@@ -5077,13 +5126,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun 25 21:11:39 2018 00800",
-        "CV_collection_version":"6.2.8.24",
+        "CV_collection_modified":"Mon Jun 25 21:51:49 2018 00800",
+        "CV_collection_version":"6.2.8.25",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9b9bb2f41770c0437d29b6381b6707eb1688b560",
+        "previous_commit":"a981eab89bac9180be55359d13405d36d92bfd40",
         "source_id_CV_modified":"Wed Jun 13 15:23:43 2018 -0700",
-        "source_id_CV_note":"Register source_id IPSL-CM6A-ATM-HR",
+        "source_id_CV_note":"Register source_id MCM-UA-1-0",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

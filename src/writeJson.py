@@ -301,6 +301,7 @@ PJD 12 Jun 2018    - Revise source_id EC-Earth3P-HR https://github.com/WCRP-CMIP
 PJD 12 Jun 2018    - Register institution_id DKRZ https://github.com/WCRP-CMIP/CMIP6_CVs/issues/561
 PJD 12 Jun 2018    - Register source_id IPSL-CM6A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/562
 PJD 25 Jun 2018    - Update for py3
+PJD 25 Jun 2018    - Register institution_id UA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/566
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -326,7 +327,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM6A-ATM-HR\"'
+commitMessage = '\"Register institution_id UA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -627,6 +628,7 @@ institution_id = {
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
+    'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
     'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
     'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'

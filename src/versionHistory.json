@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"aa5d06592424b99f2d686b6a0126c644218a81f8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/aa5d06592424b99f2d686b6a0126c644218a81f8",
-            "commitMessage":"Register source_id ECMWF-IFS-LR",
-            "timeStamp":"Wed Jun 27 22:58:45 2018 00800"
+            "MD5":"26ad08ec299854e9a9d36992cc2eececc7ae09eb",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/26ad08ec299854e9a9d36992cc2eececc7ae09eb",
+            "commitMessage":"Register source_id ECMWF-IFS-HR",
+            "timeStamp":"Wed Jun 27 23:06:15 2018 00800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":28,
+            "versionCVCommit":29,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

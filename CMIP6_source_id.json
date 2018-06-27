@@ -2079,6 +2079,55 @@
             "release_year":"2017",
             "source_id":"EC-Earth3P-VHR"
         },
+        "ECMWF-IFS-LR":{
+            "activity_participation":[
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "ECMWF"
+            ],
+            "label":"ECMWF-IFS-LR",
+            "label_extended":"ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)",
+                    "nominal_resolution":"50 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"HTESSEL (as implemented in IFS CY43R1)",
+                    "nominal_resolution":"50 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO3.4 (NEMO v3.4; ORCA1 tripolar grid; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"LIM2 (LIM v2; ORCA1 tripolar grid; 362 x 292 longitude/latitude)",
+                    "nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"ECMWF-IFS-LR"
+        },
         "EMAC-2-53-AerChem":{
             "activity_participation":[
                 "AerChemMIP",
@@ -5126,13 +5175,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 27 22:43:06 2018 00800",
-        "CV_collection_version":"6.2.8.27",
+        "CV_collection_modified":"Wed Jun 27 22:58:45 2018 00800",
+        "CV_collection_version":"6.2.8.28",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"061d5e9c3fed8ea5bcb9f531f6aaf76433a1b60f",
+        "previous_commit":"aa5d06592424b99f2d686b6a0126c644218a81f8",
         "source_id_CV_modified":"Mon Jun 25 21:51:49 2018 00800",
-        "source_id_CV_note":"Register source_id MCM-UA-1-0",
+        "source_id_CV_note":"Register source_id ECMWF-IFS-LR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

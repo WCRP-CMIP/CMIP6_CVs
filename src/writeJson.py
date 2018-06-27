@@ -305,6 +305,7 @@ PJD 25 Jun 2018    - Register institution_id UA https://github.com/WCRP-CMIP/CMI
 PJD 25 Jun 2018    - Register source_id MCM-UA-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/568
 PJD 27 Jun 2018    - Deregister institution_id IIASA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/490
 PJD 27 Jun 2018    - Register institution_id ECMWF https://github.com/WCRP-CMIP/CMIP6_CVs/issues/566
+PJD 27 Jun 2018    - Register source_id ECMWF-IFS-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/571
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -330,7 +331,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register institution_id ECMWF\"'
+commitMessage = '\"Register source_id ECMWF-IFS-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -719,45 +720,45 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MCM-UA-1-0'
+key = 'ECMWF-IFS-LR'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'CMIP'
+ 'HighResMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'UA'
+ 'ECMWF'
 ]
-source_id[key]['label'] = 'MCM-UA-1-0'
-source_id[key]['label_extended'] = 'Manabe Climate Model v1.0 - University of Arizona'
+source_id[key]['label'] = 'ECMWF-IFS-LR'
+source_id[key]['label_extended'] = 'ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'Modifies surface albedoes (Haywood et al. 1997, doi: 10.1175/1520-0442(1997)010<1562:GCMCOT>2.0.CO;2)'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'R30L14 (3.75 X 2.5 degree (long-lat) configuration; 96 x 80 longitude/latitude; 14 levels; top level 0.015 sigma, 15 mb)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos']['description'] = 'IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'Standard Manabe bucket hydrology scheme (Manabe 1969, doi: 10.1175/1520-0493(1969)097<0739:CATOC>2.3.CO;2)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land']['description'] = 'HTESSEL (as implemented in IFS CY43R1)'
+source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
 source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'Specified location - invariant in time, has high albedo and latent heat capacity'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'MOM1.0 (MOM1, 1.875 X 2.5 deg; 192 x 80 longitude/latitude; 18 levels; top grid cell 0-40 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO3.4 (NEMO v3.4; ORCA1 tripolar grid; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)'
+source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'Thermodynamic ice model (free drift dynamics)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '250 km'
-source_id[key]['release_year'] = '1991'
+source_id[key]['model_component']['seaIce']['description'] = 'LIM2 (LIM v2; ORCA1 tripolar grid; 362 x 292 longitude/latitude)'
+source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

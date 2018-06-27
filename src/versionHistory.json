@@ -25,10 +25,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"9b9bb2f41770c0437d29b6381b6707eb1688b560",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9b9bb2f41770c0437d29b6381b6707eb1688b560",
-            "commitMessage":"Register institution_id UA",
-            "timeStamp":"Mon Jun 25 21:11:39 2018 00800"
+            "MD5":"6bad69cc618c61b3c7f9f181983594ef96169fe0",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/6bad69cc618c61b3c7f9f181983594ef96169fe0",
+            "commitMessage":"Deregister institution_id IIASA",
+            "timeStamp":"Wed Jun 27 22:34:12 2018 00800"
         },
         "license":{
             "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":25,
+            "versionCVCommit":26,
             "versionCVContent":8,
             "versionCVStructure":2,
             "versionMIPEra":6

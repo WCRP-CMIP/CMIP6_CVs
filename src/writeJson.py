@@ -303,6 +303,7 @@ PJD 12 Jun 2018    - Register source_id IPSL-CM6A-ATM-HR https://github.com/WCRP
 PJD 25 Jun 2018    - Update for py3
 PJD 25 Jun 2018    - Register institution_id UA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/566
 PJD 25 Jun 2018    - Register source_id MCM-UA-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/568
+PJD 27 Jun 2018    - Deregister institution_id IIASA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/490
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -328,7 +329,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id MCM-UA-1-0\"'
+commitMessage = '\"Deregister institution_id IIASA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -597,7 +598,6 @@ institution_id = {
                             'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
-    'IIASA': 'International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1 - A-2361 Laxenburg, Austria',
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',

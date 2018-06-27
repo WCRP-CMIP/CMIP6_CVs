@@ -304,6 +304,7 @@ PJD 25 Jun 2018    - Update for py3
 PJD 25 Jun 2018    - Register institution_id UA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/566
 PJD 25 Jun 2018    - Register source_id MCM-UA-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/568
 PJD 27 Jun 2018    - Deregister institution_id IIASA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/490
+PJD 27 Jun 2018    - Register institution_id ECMWF https://github.com/WCRP-CMIP/CMIP6_CVs/issues/566
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -329,7 +330,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Deregister institution_id IIASA\"'
+commitMessage = '\"Register institution_id ECMWF\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -596,6 +597,7 @@ institution_id = {
                             'Utrecht University, The Netherlands; Vrije Universiteit Amsterdam, the Netherlands; Wageningen University, ',
                             'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
                             'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
+    'ECMWF': 'European Centre for Medium-Range Weather Forecasts, Reading RG2 9AX, UK',
     'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',

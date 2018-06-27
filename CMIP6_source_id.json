@@ -4150,7 +4150,8 @@
             ],
             "institution_id":[
                 "MPI-M",
-                "DWD"
+                "DWD",
+                "DKRZ"
             ],
             "label":"MPI-ESM1.2-HR",
             "label_extended":"MPI-ESM1.2-HR",
@@ -5273,13 +5274,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 27 23:12:41 2018 00800",
-        "CV_collection_version":"6.2.8.30",
+        "CV_collection_modified":"Wed Jun 27 23:19:43 2018 00800",
+        "CV_collection_version":"6.2.8.31",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5641415fc89ac789b634de9c17889397bba7a53a",
-        "source_id_CV_modified":"Wed Jun 27 23:06:15 2018 00800",
-        "source_id_CV_note":"Register source_id ECMWF-IFS-MR",
+        "previous_commit":"b6f24cd703c259f89e7a42f3c83a7175d6522f1a",
+        "source_id_CV_modified":"Wed Jun 27 23:12:41 2018 00800",
+        "source_id_CV_note":"Revise source_id MPI-ESM1-2-HR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

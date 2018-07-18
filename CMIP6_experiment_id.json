@@ -4654,33 +4654,6 @@
             ],
             "tier":"2"
         },
-        "land-future":{
-            "activity_id":[
-                "LS3MIP"
-            ],
-            "additional_allowed_model_components":[
-                "BGC"
-            ],
-            "description":"Land only simulations",
-            "end_year":"2100",
-            "experiment":"future land-only",
-            "experiment_id":"land-future",
-            "min_number_yrs_per_sim":"86",
-            "parent_activity_id":[
-                "no parent"
-            ],
-            "parent_experiment_id":[
-                "no parent"
-            ],
-            "required_model_components":[
-                "LAND"
-            ],
-            "start_year":"2015",
-            "sub_experiment_id":[
-                "none"
-            ],
-            "tier":"2"
-        },
         "land-hist":{
             "activity_id":[
                 "LS3MIP",
@@ -5008,6 +4981,60 @@
                 "BGC"
             ],
             "start_year":"1850 or 1700",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "land-ssp434":{
+            "activity_id":[
+                "LS3MIP"
+            ],
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
+            "description":"land only simulation for ssp4-3.4",
+            "end_year":"2100",
+            "experiment":"future ssp4-3.4 land only",
+            "experiment_id":"land-ssp434",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "no parent"
+            ],
+            "parent_experiment_id":[
+                "no parent"
+            ],
+            "required_model_components":[
+                "LAND"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "land-ssp585":{
+            "activity_id":[
+                "LS3MIP"
+            ],
+            "additional_allowed_model_components":[
+                "BGC"
+            ],
+            "description":"land only simulation for ssp5-8.5",
+            "end_year":"2100",
+            "experiment":"future ssp5-8.5 land only",
+            "experiment_id":"land-ssp585",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "no parent"
+            ],
+            "parent_experiment_id":[
+                "no parent"
+            ],
+            "required_model_components":[
+                "LAND"
+            ],
+            "start_year":"2015",
             "sub_experiment_id":[
                 "none"
             ],
@@ -8351,13 +8378,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jul 17 18:04:43 2018 -0700",
-        "CV_collection_version":"6.2.9.0",
+        "CV_collection_modified":"Tue Jul 17 18:23:10 2018 -0700",
+        "CV_collection_version":"6.2.10.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Fri Apr 20 20:46:44 2018 -0700",
-        "experiment_id_CV_note":"Revise experiment_id G7cirrus",
+        "experiment_id_CV_modified":"Tue Jul 17 18:04:43 2018 -0700",
+        "experiment_id_CV_note":"Revise experiment_id land-future",
         "institution_id":"PCMDI",
-        "previous_commit":"ade5afe53d5016ad9216228d0015d8ccc6a3b755",
+        "previous_commit":"298e48f4476de3890752e8372813720d1b685f9c",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

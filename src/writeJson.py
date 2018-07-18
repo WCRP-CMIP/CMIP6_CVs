@@ -309,6 +309,7 @@ PJD 27 Jun 2018    - Register source_id ECMWF-IFS-LR https://github.com/WCRP-CMI
 PJD 27 Jun 2018    - Register source_id ECMWF-IFS-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/573
 PJD 27 Jun 2018    - Register source_id ECMWF-IFS-MR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/574
 PJD 27 Jun 2018    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/575
+PJD 17 Jul 2018    - Revise institution_id FIO-RONM -> FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -334,7 +335,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MPI-ESM1-2-HR\"'
+commitMessage = '\"Register institution_id FIO-QLNM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -602,7 +603,7 @@ institution_id = {
                             'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
                             'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
     'ECMWF': 'European Centre for Medium-Range Weather Forecasts, Reading RG2 9AX, UK',
-    'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
+    'FIO-QLNM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
@@ -723,12 +724,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM1-2-HR'
-source_id[key]['institution_id'] = [
- 'MPI-M',
- 'DWD',
- 'DKRZ'
-]
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -912,7 +908,7 @@ for key in source_id.keys():
     vals = source_id[key]['institution_id']
     for val in vals:
         if val not in institution_id:
-            print('Invalid institution_id for entry:',key,'- aborting')
+            print('Invalid institution_id for entry:',key,';',val,'- aborting')
             sys.exit()
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()

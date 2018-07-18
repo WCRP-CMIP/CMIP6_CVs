@@ -311,6 +311,7 @@ PJD 27 Jun 2018    - Register source_id ECMWF-IFS-MR https://github.com/WCRP-CMI
 PJD 27 Jun 2018    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/575
 PJD 17 Jul 2018    - Revise institution_id FIO-RONM -> FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
 PJD 17 Jul 2018    - Register source_id FIO-ESM-2-0 -> FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/583
+PJD 17 Jul 2018    - Revise experiment_id G7cirrus https://github.com/WCRP-CMIP/CMIP6_CVs/issues/584
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -336,7 +337,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id FIO-ESM-2-0\"'
+commitMessage = '\"Revise experiment_id G7cirrus\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -476,6 +477,9 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
+key = 'G7cirrus'
+experiment_id[key]['tier'] = '2'
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -725,51 +729,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FIO-ESM-2-0'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'GMMIP',
- 'OMIP',
- 'ScenarioMIP',
- 'SIMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'FIO-QLNM'
-]
-source_id[key]['label'] = 'FIO-ESM 2.0'
-source_id[key]['label_extended'] = 'FIO-ESM 2.0'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'Prescribed monthly fields'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (0.9x1.25 finite volume grid; 192 x 288 longitude/latitude; 26 levels; top level ~2 hPa)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4.0 (same grid at atmos)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2-W (POP2 coupled with MASNUM surface wave model, Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4.0 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

@@ -114,24 +114,24 @@ $(document).ready( function () {
 <td>none</td>
 <td>CICE4.0</td>
 </tr>
-<tr><td>MPI-ESM1-2-LR</td>
-<td>MPI-M AWI</td>
+<tr><td>ECMWF-IFS-LR</td>
+<td>ECMWF</td>
 <td>2017</td>
-<td>C4MIP CDRMIP CFMIP CMIP DCPP DynVarMIP FAFMIP GMMIP GeoMIP ISMIP6 LS3MIP LUMIP OMIP PMIP RFMIP SIMIP ScenarioMIP VolMIP</td>
+<td>HighResMIP</td>
 <td>Registered</td>
-<td>MPI-ESM1.2-LR</td>
-<td>MPI-ESM1.2-LR</td>
-<td>ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
-<td>250 km</td>
-<td>MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>ECMWF-IFS-LR</td>
+<td>ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA1 tripolar grid; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
 <td>100 km</td>
-<td>none/prescribed</td>
 <td>none</td>
-<td>none, prescribed MACv2-SP</td>
 <td>none</td>
-<td>JSBACH3.20</td>
-<td>HAMOCC</td>
-<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA1 tripolar grid; 362 x 292 longitude/latitude)</td>
 </tr>
 <tr><td>NICAM16-7S</td>
 <td>MIROC</td>
@@ -323,6 +323,25 @@ $(document).ready( function () {
 <td>none</td>
 <td>COCO4.9</td>
 </tr>
+<tr><td>MCM-UA-1-0</td>
+<td>UA</td>
+<td>1991</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>MCM-UA-1-0</td>
+<td>Manabe Climate Model v1.0 - University of Arizona</td>
+<td>R30L14 (3.75 X 2.5 degree (long-lat) configuration; 96 x 80 longitude/latitude; 14 levels; top level 0.015 sigma, 15 mb)</td>
+<td>250 km</td>
+<td>MOM1.0 (MOM1, 1.875 X 2.5 deg; 192 x 80 longitude/latitude; 18 levels; top grid cell 0-40 m)</td>
+<td>250 km</td>
+<td>Specified location - invariant in time, has high albedo and latent heat capacity</td>
+<td>250 km</td>
+<td>Modifies surface albedoes (Haywood et al. 1997, doi: 10.1175/1520-0442(1997)010<1562:GCMCOT>2.0.CO;2)</td>
+<td>none</td>
+<td>Standard Manabe bucket hydrology scheme (Manabe 1969, doi: 10.1175/1520-0493(1969)097<0739:CATOC>2.3.CO;2)</td>
+<td>none</td>
+<td>Thermodynamic ice model (free drift dynamics)</td>
+</tr>
 <tr><td>IITM-ESM</td>
 <td>CCCR-IITM</td>
 <td>2015</td>
@@ -341,6 +360,25 @@ $(document).ready( function () {
 <td>NOAH LSMv2.7.1</td>
 <td>TOPAZv2.0</td>
 <td>SISv1.0</td>
+</tr>
+<tr><td>MPI-ESM1-2-LR</td>
+<td>MPI-M AWI</td>
+<td>2017</td>
+<td>C4MIP CDRMIP CFMIP CMIP DCPP DynVarMIP FAFMIP GMMIP GeoMIP ISMIP6 LS3MIP LUMIP OMIP PMIP RFMIP SIMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>MPI-ESM1.2-LR</td>
+<td>MPI-ESM1.2-LR</td>
+<td>ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
+<td>250 km</td>
+<td>MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>100 km</td>
+<td>none/prescribed</td>
+<td>none</td>
+<td>none, prescribed MACv2-SP</td>
+<td>none</td>
+<td>JSBACH3.20</td>
+<td>HAMOCC</td>
+<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
 </tr>
 <tr><td>AWI-CM-1-1-LR</td>
 <td>AWI</td>
@@ -665,6 +703,25 @@ $(document).ready( function () {
 <td>none</td>
 <td>CICE-HadGEM3-GSI8 (tripolar primarily 1deg; 360 x 200 longitude/latitude)</td>
 </tr>
+<tr><td>ECMWF-IFS-MR</td>
+<td>ECMWF</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>ECMWF-IFS-MR</td>
+<td>ECMWF-IFS-MR (50 km atmosphere and 25 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
+</tr>
 <tr><td>NorESM2-MH</td>
 <td>NCC</td>
 <td>2017</td>
@@ -837,7 +894,7 @@ $(document).ready( function () {
 <td>LIM3</td>
 </tr>
 <tr><td>MPI-ESM1-2-HR</td>
-<td>MPI-M DWD</td>
+<td>MPI-M DWD DKRZ</td>
 <td>2017</td>
 <td>CMIP CORDEX DCPP DynVarMIP FAFMIP HighResMIP OMIP SIMIP ScenarioMIP VolMIP</td>
 <td>Registered</td>
@@ -1234,6 +1291,25 @@ $(document).ready( function () {
 <td>CLM4.0</td>
 <td>none</td>
 <td>CICE4.0</td>
+</tr>
+<tr><td>ECMWF-IFS-HR</td>
+<td>ECMWF</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>ECMWF-IFS-HR</td>
+<td>ECMWF-IFS-HR (25 km atmosphere and 25 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco399, cubic octahedral reduced Gaussian grid equivalent to 1600 x 800 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>25 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
 </tr>
 <tr><td>EC-Earth3-Veg-LR</td>
 <td>EC-Earth-Consortium</td>

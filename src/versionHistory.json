@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"3fe5a7e463e3fad12d82c4dcfaa500241a89ef6a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3fe5a7e463e3fad12d82c4dcfaa500241a89ef6a",
-            "commitMessage":"Add experiment_id values for CDRMIP and PAMIP",
-            "timeStamp":"Fri Apr 20 20:46:44 2018 -0700"
+            "MD5":"ade5afe53d5016ad9216228d0015d8ccc6a3b755",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ade5afe53d5016ad9216228d0015d8ccc6a3b755",
+            "commitMessage":"Revise experiment_id G7cirrus",
+            "timeStamp":"Tue Jul 17 18:04:43 2018 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":33,
-            "versionCVContent":8,
+            "versionCVCommit":0,
+            "versionCVContent":9,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

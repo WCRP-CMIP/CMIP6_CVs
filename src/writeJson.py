@@ -315,9 +315,6 @@ PJD 17 Jul 2018    - Revise institution_id FIO-RONM -> FIO-QLNM https://github.c
 @author: durack1
 """
 
-#%% Set commit message
-commitMessage = '\"Register institution_id FIO-QLNM"'
-
 #%% Import statements
 from __future__ import print_function
 import calendar
@@ -338,7 +335,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MPI-ESM1-2-HR\"'
+commitMessage = '\"Register institution_id FIO-QLNM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

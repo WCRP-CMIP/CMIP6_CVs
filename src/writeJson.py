@@ -300,13 +300,14 @@ PJD  6 Jun 2018    - Register 3 additional source_id entries for EC-Earth-Consor
 PJD 12 Jun 2018    - Revise source_id EC-Earth3P-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 12 Jun 2018    - Register institution_id DKRZ https://github.com/WCRP-CMIP/CMIP6_CVs/issues/561
 PJD 12 Jun 2018    - Register source_id IPSL-CM6A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/562
+PJD 17 Jul 2018    - Revise institution_id FIO-RONM -> FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM6A-ATM-HR\"'
+commitMessage = '\"Register institution_id FIO-QLNM"'
 
 #%% Import statements
 import calendar
@@ -591,7 +592,7 @@ institution_id = {
                             'Utrecht University, The Netherlands; Vrije Universiteit Amsterdam, the Netherlands; Wageningen University, ',
                             'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
                             'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
-    'FIO-RONM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), RONM (Laboratory for Regional Oceanography and Numerical Modeling, Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
+    'FIO-QLNM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
     'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
     'IIASA': 'International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1 - A-2361 Laxenburg, Austria',
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
@@ -712,46 +713,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM6A-ATM-HR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'HighResMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'IPSL'
-]
-source_id[key]['label'] = 'IPSL-CM6A-ATM-HR'
-source_id[key]['label_extended'] = 'IPSL-CM6A-ATM-HR'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 40000 m)'
-source_id[key]['model_component']['atmos']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.0, Water/Carbon/Energy mode)'
-source_id[key]['model_component']['land']['nominal_resolution'] = '50 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -935,7 +897,7 @@ for key in source_id.keys():
     vals = source_id[key]['institution_id']
     for val in vals:
         if val not in institution_id:
-            print 'Invalid institution_id for entry:',key,'- aborting'
+            print 'Invalid institution_id for entry:',key,';',val,'- aborting'
             sys.exit()
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()

@@ -313,6 +313,7 @@ PJD 17 Jul 2018    - Revise institution_id FIO-RONM -> FIO-QLNM https://github.c
 PJD 17 Jul 2018    - Register source_id FIO-ESM-2-0 -> FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/583
 PJD 17 Jul 2018    - Revise experiment_id G7cirrus https://github.com/WCRP-CMIP/CMIP6_CVs/issues/584
 PJD 17 Jul 2018    - Revise experiment_id land-future https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
+PJD 25 Jul 2018    - Revise LS3MIP experiment_ids, add land-ssp126 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -338,7 +339,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id land-future\"'
+commitMessage = '\"Revise LS3MIP experiment_ids, add land-ssp126\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -479,28 +480,15 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Rename
-experiment_id['land-ssp434'] = experiment_id.pop('land-future')
-key = 'land-ssp434'
-experiment_id[key]['activity_id'] = ['LS3MIP']
-experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-experiment_id[key]['description'] = 'land only simulation for ssp4-3.4'
-experiment_id[key]['end_year'] = '2100'
-experiment_id[key]['experiment'] = 'future ssp4-3.4 land only'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '86'
-experiment_id[key]['parent_activity_id'] = ['no parent']
-experiment_id[key]['parent_experiment_id'] = ['no parent']
-experiment_id[key]['required_model_components'] = ['LAND']
-experiment_id[key]['start_year'] = '2015'
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
 key = 'land-ssp585'
+experiment_id[key]['tier'] = '1'
+key = 'land-ssp126'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['LS3MIP']
 experiment_id[key]['additional_allowed_model_components'] = ['BGC']
-experiment_id[key]['description'] = 'land only simulation for ssp5-8.5'
+experiment_id[key]['description'] = 'land only simulation for ssp1-2.6'
 experiment_id[key]['end_year'] = '2100'
-experiment_id[key]['experiment'] = 'future ssp5-8.5 land only'
+experiment_id[key]['experiment'] = 'future ssp1-2.6 land only'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '86'
 experiment_id[key]['parent_activity_id'] = ['no parent']
@@ -508,7 +496,7 @@ experiment_id[key]['parent_experiment_id'] = ['no parent']
 experiment_id[key]['required_model_components'] = ['LAND']
 experiment_id[key]['start_year'] = '2015'
 experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+experiment_id[key]['tier'] = '1'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"298e48f4476de3890752e8372813720d1b685f9c",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/298e48f4476de3890752e8372813720d1b685f9c",
-            "commitMessage":"Revise experiment_id land-future",
-            "timeStamp":"Tue Jul 17 18:23:10 2018 -0700"
+            "MD5":"cda909b3f92d67a2bb43512807babe6f1c53263c",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/cda909b3f92d67a2bb43512807babe6f1c53263c",
+            "commitMessage":"Revise LS3MIP experiment_ids, add land-ssp126",
+            "timeStamp":"Wed Jul 25 07:56:41 2018 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -86,7 +86,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":10,
+            "versionCVContent":11,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

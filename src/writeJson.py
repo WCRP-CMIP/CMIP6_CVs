@@ -315,6 +315,7 @@ PJD 17 Jul 2018    - Revise experiment_id G7cirrus https://github.com/WCRP-CMIP/
 PJD 17 Jul 2018    - Revise experiment_id land-future https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
 PJD 25 Jul 2018    - Revise LS3MIP experiment_ids, add land-ssp126 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
 PJD 26 Jul 2018    - Revise source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/590
+PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -340,7 +341,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MIROC6\"'
+commitMessage = '\"Revise multiple GFDL source_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -730,25 +731,12 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC6'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'LS3MIP',
- 'OMIP',
- 'PAMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
+key = 'GFDL-AM4'
+source_id[key]['release_year'] = '2018'
+key = 'GFDL-CM4'
+source_id[key]['release_year'] = '2018'
+key = 'GFDL-ESM4'
+source_id[key]['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

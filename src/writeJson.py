@@ -1069,12 +1069,8 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
-# Generate revised html - process both experiment_id and source_id (alpha order)
-#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split('python ./json_to_html.py')
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-del(args,jsonName,jsonDict,outFile,p)
+# Cleanup
+del(jsonName,jsonDict,outFile)
 del(activity_id,experiment_id,frequency,grid_label,institution_id,license,
     masterTargets,mip_era,nominal_resolution,realm,required_global_attributes,
     source_id,source_type,sub_experiment_id,table_id)
@@ -1159,6 +1155,14 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
+
+#%% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
+#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+args = shlex.split(''.join(['python ./json_to_html.py ',versionId]))
+#print(args)
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+del(args,p)
+gc.collect()
 
 #%% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo

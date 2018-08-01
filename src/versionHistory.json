@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"9a5934de7ea6e8f406d6ce880e2f11de2f292131",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9a5934de7ea6e8f406d6ce880e2f11de2f292131",
+            "MD5":"80f0f714fd30fee5fe9e41c58e60a6d520c0e0d2",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/80f0f714fd30fee5fe9e41c58e60a6d520c0e0d2",
             "commitMessage":"Revise multiple GFDL source_id values",
-            "timeStamp":"Tue Jul 31 16:16:00 2018 -0700"
+            "timeStamp":"Tue Jul 31 17:33:00 2018 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

@@ -8,10 +8,11 @@ Notes:
 http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-github-instead-of-just-viewing-their-source
 
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
+PJD 31 Jul 2018    - Update to include version info in html head
 
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
-import json
+import argparse,json,re,sys
 
 #%% Create generic header
 header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -31,6 +32,18 @@ $(document).ready( function () {
     } );
 //]]>
 </script>"""
+
+#%% Argparse extract
+verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+') ; # Matching version format 6.2.11.2
+parser = argparse.ArgumentParser()
+parser.add_argument('ver',metavar='str',type=str,help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')
+args = parser.parse_args()
+if re.search(verTest,args.ver):
+   version = args.ver ; # 1 = make files
+   print "** HTML Write mode - ",version," will be written **"
+else:
+    print "** Version: ",version," invalid, exiting"
+    sys.exit()
 
 #%% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
@@ -53,6 +66,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
+<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [
@@ -110,6 +124,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 institution_id values</title>
 </head>
 <body>
+<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [
@@ -153,6 +168,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 source_id values</title>
 </head>
 <body>
+<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [

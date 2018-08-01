@@ -2589,7 +2589,7 @@
                     "nominal_resolution":"none"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2018",
             "source_id":"GFDL-AM4"
         },
         "GFDL-CM4":{
@@ -2642,7 +2642,7 @@
                     "nominal_resolution":"25 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2018",
             "source_id":"GFDL-CM4"
         },
         "GFDL-CM4C192":{
@@ -2799,7 +2799,7 @@
                     "nominal_resolution":"50 km"
                 }
             },
-            "release_year":"2017",
+            "release_year":"2018",
             "source_id":"GFDL-ESM4"
         },
         "GFDL-OM4p5B":{
@@ -5329,13 +5329,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jul 26 18:28:10 2018 -0700",
-        "CV_collection_version":"6.2.11.1",
+        "CV_collection_modified":"Tue Jul 31 17:33:00 2018 -0700",
+        "CV_collection_version":"6.2.11.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"cd545dd4b53b6336adc6a4495f32f636e332f1ba",
-        "source_id_CV_modified":"Tue Jul 17 17:57:17 2018 -0700",
-        "source_id_CV_note":"Revise source_id MIROC6",
+        "previous_commit":"80f0f714fd30fee5fe9e41c58e60a6d520c0e0d2",
+        "source_id_CV_modified":"Thu Jul 26 18:28:10 2018 -0700",
+        "source_id_CV_note":"Revise multiple GFDL source_id values",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

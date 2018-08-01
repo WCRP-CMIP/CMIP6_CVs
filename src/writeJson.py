@@ -315,6 +315,7 @@ PJD 17 Jul 2018    - Revise experiment_id G7cirrus https://github.com/WCRP-CMIP/
 PJD 17 Jul 2018    - Revise experiment_id land-future https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
 PJD 25 Jul 2018    - Revise LS3MIP experiment_ids, add land-ssp126 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
 PJD 26 Jul 2018    - Revise source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/590
+PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -340,7 +341,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MIROC6\"'
+commitMessage = '\"Revise multiple GFDL source_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -730,25 +731,12 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC6'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'DCPP',
- 'DynVarMIP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'LS3MIP',
- 'OMIP',
- 'PAMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
+key = 'GFDL-AM4'
+source_id[key]['release_year'] = '2018'
+key = 'GFDL-CM4'
+source_id[key]['release_year'] = '2018'
+key = 'GFDL-ESM4'
+source_id[key]['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -1081,12 +1069,8 @@ for jsonName in masterTargets:
         encoding="utf-8")
     fH.close()
 
-# Generate revised html - process both experiment_id and source_id (alpha order)
-#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split('python ./json_to_html.py')
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-
-del(args,jsonName,jsonDict,outFile,p)
+# Cleanup
+del(jsonName,jsonDict,outFile)
 del(activity_id,experiment_id,frequency,grid_label,institution_id,license,
     masterTargets,mip_era,nominal_resolution,realm,required_global_attributes,
     source_id,source_type,sub_experiment_id,table_id)
@@ -1171,6 +1155,14 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
     testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
     testVal_realm,testVal_required_global_attributes,testVal_source_id,
     testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
+
+#%% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
+#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+args = shlex.split(''.join(['python ./json_to_html.py ',versionId]))
+#print(args)
+p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+del(args,p)
+gc.collect()
 
 #%% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo

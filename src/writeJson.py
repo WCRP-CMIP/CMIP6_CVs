@@ -316,6 +316,7 @@ PJD 17 Jul 2018    - Revise experiment_id land-future https://github.com/WCRP-CM
 PJD 25 Jul 2018    - Revise LS3MIP experiment_ids, add land-ssp126 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/567
 PJD 26 Jul 2018    - Revise source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/590
 PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD 31 Jul 2018    - Revise piClim experiment_ids allowed components - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/592
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -341,7 +342,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple GFDL source_id values\"'
+commitMessage = '\"Revise piClim experiment_ids allowed components\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -398,6 +399,18 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key = 'piClim-ghg'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+key = 'piClim-histaer'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+key = 'piClim-histall'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+key = 'piClim-histghg'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+key = 'piClim-histnat'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+key = 'piClim-lu'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 '''
 # xlsx import
 # Fields
@@ -731,12 +744,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-AM4'
-source_id[key]['release_year'] = '2018'
-key = 'GFDL-CM4'
-source_id[key]['release_year'] = '2018'
-key = 'GFDL-ESM4'
-source_id[key]['release_year'] = '2018'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

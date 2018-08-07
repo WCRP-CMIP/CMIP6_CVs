@@ -6747,7 +6747,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases",
             "end_year":"",
@@ -6775,7 +6776,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Time-varying forcing by aerosols. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
@@ -6803,7 +6805,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Time-varying forcing. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
@@ -6831,7 +6834,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Time-varying forcing by GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
@@ -6859,7 +6863,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"Time-varying forcing from volcanos, solar variability, etc. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
@@ -6887,7 +6892,8 @@
             ],
             "additional_allowed_model_components":[
                 "AER",
-                "CHEM"
+                "CHEM",
+                "BGC"
             ],
             "description":"As in RFMIP-ERF-PI-Cntrl but with present-day land use",
             "end_year":"",
@@ -8405,13 +8411,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jul 31 17:33:00 2018 -0700",
-        "CV_collection_version":"6.2.11.2",
+        "CV_collection_modified":"Tue Aug  7 07:31:46 2018 -0700",
+        "CV_collection_version":"6.2.12.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Jul 25 07:56:41 2018 -0700",
-        "experiment_id_CV_note":"Revise LS3MIP experiment_ids, add land-ssp126",
+        "experiment_id_CV_note":"Revise piClim experiment_ids allowed components",
         "institution_id":"PCMDI",
-        "previous_commit":"80f0f714fd30fee5fe9e41c58e60a6d520c0e0d2",
+        "previous_commit":"b27ce275adcf31632cbafb9b9f92af4235b3fff2",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

@@ -9,6 +9,7 @@ http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-gi
 
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 31 Jul 2018    - Update to include version info in html head
+PJD  7 Aug 2018    - Update version format
 
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -66,7 +67,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
+<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [
@@ -124,7 +125,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 institution_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
+<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [
@@ -168,7 +169,7 @@ print >> fo, ''.join([header, """
 <title>CMIP6 source_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version:""",version,"""</p>
+<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
 <table id="table_id" class="display">"""])
 
 dictOrder = [

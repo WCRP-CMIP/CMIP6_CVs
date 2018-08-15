@@ -189,7 +189,7 @@ dictOrderK = [
 'nomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
 dictRealmKeys = [
 'atmos','ocean','aerosol','landIce','atmosChem','land','ocnBgchem','seaIce']
-dictNomResKeys = ['nomRes_atmos','nomRes_ocean','nomRes_landIce']
+dictNomResKeys = ['natNomRes_atmos','natNomRes_ocean','natNomRes_landIce']
 
 first_row = False
 for exp in dict1.keys():
@@ -212,7 +212,7 @@ for exp in dict1.keys():
             st = exp_dict['model_component'][k]['description']
         elif k in dictNomResKeys:
             keyVal = k.replace('nomRes_','')
-            st = exp_dict['model_component'][keyVal]['nominal_resolution']
+            st = exp_dict['model_component'][keyVal]['native_nominal_resolution']
         else:
             st = exp_dict[k]
         if isinstance(st, (list, tuple)):

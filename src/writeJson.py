@@ -317,6 +317,7 @@ PJD 25 Jul 2018    - Revise LS3MIP experiment_ids, add land-ssp126 https://githu
 PJD 26 Jul 2018    - Revise source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/590
 PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 31 Jul 2018    - Revise piClim experiment_ids allowed components - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/592
+PJD 15 Aug 2018    - Rename nominal_resolution -> native_nominal_resolution in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/597
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -342,7 +343,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise piClim experiment_ids allowed components\"'
+commitMessage = '\"Rename nominal_resolution -> native_nominal_resolution in source_id\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -399,18 +400,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
-key = 'piClim-ghg'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'piClim-histaer'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'piClim-histall'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'piClim-histghg'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'piClim-histnat'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'piClim-lu'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 '''
 # xlsx import
 # Fields
@@ -744,6 +733,17 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+for key in source_id.keys():
+    print(key)
+    source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = source_id[key]['model_component']['aerosol'].pop('nominal_resolution')
+    source_id[key]['model_component']['atmos']['native_nominal_resolution'] = source_id[key]['model_component']['atmos'].pop('nominal_resolution')
+    source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = source_id[key]['model_component']['atmosChem'].pop('nominal_resolution')
+    source_id[key]['model_component']['land']['native_nominal_resolution'] = source_id[key]['model_component']['land'].pop('nominal_resolution')
+    source_id[key]['model_component']['landIce']['native_nominal_resolution'] = source_id[key]['model_component']['landIce'].pop('nominal_resolution')
+    source_id[key]['model_component']['ocean']['native_nominal_resolution'] = source_id[key]['model_component']['ocean'].pop('nominal_resolution')
+    source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = source_id[key]['model_component']['ocnBgchem'].pop('nominal_resolution')
+    source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = source_id[key]['model_component']['seaIce'].pop('nominal_resolution')
+
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}
@@ -932,11 +932,11 @@ for key in source_id.keys():
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()
     for val1 in vals:
-        val2 = source_id[key]['model_component'][val1]['nominal_resolution']
+        val2 = source_id[key]['model_component'][val1]['native_nominal_resolution']
         if val2 == 'none':
             pass
         elif val2 not in nominal_resolution:
-            print('Invalid nominal_resolution for entry:',key,val1,val2,'- aborting')
+            print('Invalid native_nominal_resolution for entry:',key,val1,val2,'- aborting')
             sys.exit()
     # Validate source_id
     val = source_id[key]['source_id']

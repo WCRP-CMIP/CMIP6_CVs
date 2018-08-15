@@ -28,11 +28,11 @@ $(document).ready( function () {
 <th>label</th>
 <th>label extended</th>
 <th>atmos</th>
-<th>nomRes atmos</th>
+<th>natNomRes atmos</th>
 <th>ocean</th>
-<th>nomRes ocean</th>
+<th>natNomRes ocean</th>
 <th>landIce</th>
-<th>nomRes landIce</th>
+<th>natNomRes landIce</th>
 <th>aerosol</th>
 <th>atmosChem</th>
 <th>land</th>
@@ -47,11 +47,11 @@ $(document).ready( function () {
 <th>label</th>
 <th>label extended</th>
 <th>atmos</th>
-<th>nomRes atmos</th>
+<th>natNomRes atmos</th>
 <th>ocean</th>
-<th>nomRes ocean</th>
+<th>natNomRes ocean</th>
 <th>landIce</th>
-<th>nomRes landIce</th>
+<th>natNomRes landIce</th>
 <th>aerosol</th>
 <th>atmosChem</th>
 <th>land</th>
@@ -66,3 +66,1900 @@ $(document).ready( function () {
 <td>KIOST-ESM</td>
 <td>KIOST Earth System Model v2</td>
 <td>GFDL-AM2.0 (cubed sphere (C48); 192 x 96 longitude/latitude; 32 vertical levels; top level 2 hPa)</td>
+<td>250 km</td>
+<td>GFDL-MOM5.0 (tripolar - nominal 1.0 deg; 360 x 200 longitude/latitude; 52 levels; top grid cell 0-2 m; NK mixed layer scheme)</td>
+<td>100 km</td>
+<td>NCAR-CLM4</td>
+<td>250 km</td>
+<td>none</td>
+<td>Simple carbon aerosol model (emission type)</td>
+<td>NCAR-CLM4</td>
+<td>TOPAZ2</td>
+<td>GFDL-SIS</td>
+</tr>
+<tr><td>GFDL-OM4p5B</td>
+<td>NOAA-GFDL</td>
+<td>2018</td>
+<td>CMIP OMIP</td>
+<td>Registered</td>
+<td>GFDL-OM4p5B</td>
+<td>GFDL-OM4p5B</td>
+<td>none</td>
+<td>none</td>
+<td>GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>GFDL BLING v2</td>
+<td>SIS2</td>
+</tr>
+<tr><td>FGOALS-g3</td>
+<td>CAS</td>
+<td>2017</td>
+<td>CMIP CORDEX DAMIP DCPP FAFMIP GMMIP LS3MIP OMIP PMIP SIMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>FGOALS-g3</td>
+<td>FGOALS-g3</td>
+<td>GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)</td>
+<td>250 km</td>
+<td>LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>CLM4.0</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>ECMWF-IFS-LR</td>
+<td>ECMWF</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>ECMWF-IFS-LR</td>
+<td>ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA1 tripolar grid; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA1 tripolar grid; 362 x 292 longitude/latitude)</td>
+</tr>
+<tr><td>NICAM16-7S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CMIP DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>NICAM16-7S</td>
+<td>NICAM.16 gl07-L38 with NSW6</td>
+<td>NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed MACv2-SP</td>
+<td>none</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>none</td>
+<td>Fixed</td>
+</tr>
+<tr><td>GFDL-AM4</td>
+<td>NOAA-GFDL</td>
+<td>2018</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>GFDL-AM4</td>
+<td>GFDL-AM4</td>
+<td>GFDL-AM4.0 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>GFDL-LM4.0</td>
+<td>100 km</td>
+<td>interactive</td>
+<td>fast chemistry, aerosol only</td>
+<td>GFDL-LM4.0</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr><td>IPSL-CM6A-ATM-HR</td>
+<td>IPSL</td>
+<td>2018</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>IPSL-CM6A-ATM-HR</td>
+<td>IPSL-CM6A-ATM-HR</td>
+<td>LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 40000 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>ORCHIDEE (v2.0, Water/Carbon/Energy mode)</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr><td>CanESM5</td>
+<td>CCCma</td>
+<td>2017</td>
+<td>C4MIP CFMIP CMIP CORDEX DAMIP DCPP DynVarMIP FAFMIP GMMIP GeoMIP ISMIP6 LS3MIP LUMIP OMIP RFMIP SIMIP ScenarioMIP VIACSAB</td>
+<td>Registered</td>
+<td>CanESM5</td>
+<td>CanESM5</td>
+<td>CanAM5 (T63L49 native atmosphere, T63 Linear Gaussian Grid; 128 x 64 longitude/latitude; 49 levels; top level 1 hPa)</td>
+<td>500 km</td>
+<td>NEMO3.4.1 (ORCA1, tripolar grid, 1 deg with refinement to 1/3 deg within 20 degrees of the equator; 362 x 292 longitude/latitude; 41 vertical levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>interactive</td>
+<td>fast chemistry, aerosol only</td>
+<td>CLASS3.6/CTEM1.2</td>
+<td>CanOE</td>
+<td>LIM2</td>
+</tr>
+<tr><td>GISS-E3-G</td>
+<td>NASA-GISS</td>
+<td>2018</td>
+<td>AerChemMIP C4MIP CFMIP CMIP DAMIP DynVarMIP FAFMIP GMMIP ISMIP6 LS3MIP LUMIP OMIP PAMIP PMIP RFMIP SIMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>GISS-E3-G</td>
+<td>GISS-E3-G</td>
+<td>GISS-E3 (Cubed sphere, C90; 90 x 90 x 6 gridboxes/cubeface, grid resolution aligns with longitude/latitude along central lines for each cubeface; 102 levels; top level 0.002 hPa)</td>
+<td>100 km</td>
+<td>GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)</td>
+<td>Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)</td>
+<td>GISS LSM</td>
+<td>none</td>
+<td>GISS SI</td>
+</tr>
+<tr><td>EC-Earth3</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>CMIP CORDEX DCPP DynVarMIP LS3MIP RFMIP SIMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>EC-Earth3</td>
+<td>EC Earth 3.3</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>BCC-CSM2-MR</td>
+<td>BCC</td>
+<td>2017</td>
+<td>C4MIP CFMIP CMIP DAMIP DCPP GMMIP LS3MIP LUMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>BCC-CSM 2 MR</td>
+<td>BCC-CSM 2 MR</td>
+<td>BCC_AGCM3_MR (T106; 320 x 160 longitude/latitude; 46 levels; top level 1.46 hPa)</td>
+<td>100 km</td>
+<td>MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>BCC_AVIM2</td>
+<td>none</td>
+<td>SIS2</td>
+</tr>
+<tr><td>EC-Earth3-CC</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>C4MIP CMIP LUMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-CC</td>
+<td>EC-Earth3-CC</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level: 0.1 hPa)</td>
+<td>HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4</td>
+<td>PISCES v2</td>
+<td>LIM3</td>
+</tr>
+<tr><td>CSIRO-Mk3L-1-3</td>
+<td>UTAS</td>
+<td>2006</td>
+<td>CMIP PMIP</td>
+<td>Registered</td>
+<td>CSIRO Mk3L 1.3</td>
+<td>CSIRO Mk3L 1.3</td>
+<td>unnamed (R21; 64 x 56 longitude/latitude; 18 levels; top level 36355 m)</td>
+<td>500 km</td>
+<td>MOM1.x (128 x 112 longitude/latitude; 31 levels; top grid cell 0-10 m; bottom grid cell 4600-5000 m)</td>
+<td>250 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>unnamed</td>
+<td>none</td>
+<td>unnamed (same grid as atmosphere)</td>
+</tr>
+<tr><td>MIROC6</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>AerChemMIP CFMIP CMIP DAMIP DCPP DynVarMIP FAFMIP GMMIP HighResMIP LS3MIP OMIP PAMIP RFMIP SIMIP ScenarioMIP VIACSAB</td>
+<td>Registered</td>
+<td>MIROC6</td>
+<td>MIROC6</td>
+<td>CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)</td>
+<td>100 km</td>
+<td>COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>SPRINTARS6.0</td>
+<td>none</td>
+<td>MATSIRO6.0</td>
+<td>none</td>
+<td>COCO4.9</td>
+</tr>
+<tr><td>MCM-UA-1-0</td>
+<td>UA</td>
+<td>1991</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>MCM-UA-1-0</td>
+<td>Manabe Climate Model v1.0 - University of Arizona</td>
+<td>R30L14 (3.75 X 2.5 degree (long-lat) configuration; 96 x 80 longitude/latitude; 14 levels; top level 0.015 sigma, 15 mb)</td>
+<td>250 km</td>
+<td>MOM1.0 (MOM1, 1.875 X 2.5 deg; 192 x 80 longitude/latitude; 18 levels; top grid cell 0-40 m)</td>
+<td>250 km</td>
+<td>Specified location - invariant in time, has high albedo and latent heat capacity</td>
+<td>250 km</td>
+<td>Modifies surface albedoes (Haywood et al. 1997, doi: 10.1175/1520-0442(1997)010<1562:GCMCOT>2.0.CO;2)</td>
+<td>none</td>
+<td>Standard Manabe bucket hydrology scheme (Manabe 1969, doi: 10.1175/1520-0493(1969)097<0739:CATOC>2.3.CO;2)</td>
+<td>none</td>
+<td>Thermodynamic ice model (free drift dynamics)</td>
+</tr>
+<tr><td>IITM-ESM</td>
+<td>CCCR-IITM</td>
+<td>2015</td>
+<td>CMIP GMMIP</td>
+<td>Registered</td>
+<td>IITM-ESM</td>
+<td>IITM-ESM</td>
+<td>IITM-GFSv1 (T62L64, Linearly Reduced Gaussian Grid; 192 x 94 longitude/latitude; 64 levels; top level 0.2 mb)</td>
+<td>250 km</td>
+<td>MOM4p1 (tripolar, primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>prescribed MAC-v2</td>
+<td>none</td>
+<td>NOAH LSMv2.7.1</td>
+<td>TOPAZv2.0</td>
+<td>SISv1.0</td>
+</tr>
+<tr><td>MPI-ESM1-2-LR</td>
+<td>MPI-M AWI</td>
+<td>2017</td>
+<td>C4MIP CDRMIP CFMIP CMIP DCPP DynVarMIP FAFMIP GMMIP GeoMIP ISMIP6 LS3MIP LUMIP OMIP PMIP RFMIP SIMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>MPI-ESM1.2-LR</td>
+<td>MPI-ESM1.2-LR</td>
+<td>ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
+<td>250 km</td>
+<td>MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>100 km</td>
+<td>none/prescribed</td>
+<td>none</td>
+<td>none, prescribed MACv2-SP</td>
+<td>none</td>
+<td>JSBACH3.20</td>
+<td>HAMOCC</td>
+<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
+</tr>
+<tr><td>AWI-CM-1-1-LR</td>
+<td>AWI</td>
+<td>2018</td>
+<td>CMIP CORDEX HighResMIP OMIP PMIP SIMIP ScenarioMIP VIACSAB</td>
+<td>Registered</td>
+<td>AWI-CM 1.1 LR</td>
+<td>AWI-CM 1.1 LR</td>
+<td>ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)</td>
+<td>250 km</td>
+<td>FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>JSBACH 3.20</td>
+<td>none</td>
+<td>FESOM 1.4</td>
+</tr>
+<tr><td>E3SM-1-0</td>
+<td>E3SM-Project</td>
+<td>2018</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>E3SM 1.0</td>
+<td>E3SM 1.0 (Energy Exascale Earth System Model)</td>
+<td>EAM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; 72 levels; top level 0.1 hPa)</td>
+<td>100 km</td>
+<td>MPAS-Ocean (v6.0, oEC60to30 unstructured SVTs mesh with 235160 cells and 714274 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)</td>
+<td>Troposphere specified oxidants for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos)</td>
+<td>ELM (v1.0, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; satellite phenology mode), MOSART (v1.0, 0.5 degree latitude/longitude grid)</td>
+<td>none</td>
+<td>MPAS-Seaice (v6.0, same grid as ocean)</td>
+</tr>
+<tr><td>HadGEM3-GC31-HM</td>
+<td>MOHC NERC</td>
+<td>2016</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-HM</td>
+<td>HadGEM3-GC3.1-N512ORCA025</td>
+<td>MetUM-HadGEM3-GA7.1 (N512; 1024 x 768 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>50 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)</td>
+</tr>
+<tr><td>HadGEM3-GC31-HH</td>
+<td>MOHC NERC</td>
+<td>2016</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-HH</td>
+<td>HadGEM3-GC3.1-N512ORCA12</td>
+<td>MetUM-HadGEM3-GA7.1 (N512; 1024 x 768 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>50 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)</td>
+</tr>
+<tr><td>UKESM1-0-LL</td>
+<td>MOHC NERC NIMS-KMA NIWA</td>
+<td>2018</td>
+<td>AerChemMIP C4MIP CMIP GeoMIP LUMIP OMIP PMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>UKESM1.0-LL</td>
+<td>UKESM1.0-N96ORCA1</td>
+<td>MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>250 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>UKCA-StratTrop</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>MEDUSA2</td>
+<td>CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)</td>
+</tr>
+<tr><td>EC-Earth3-Veg</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>CMIP LS3MIP LUMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-Veg</td>
+<td>EC-Earth3-Veg</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>MPI-ESM-1-2-HAM</td>
+<td>HAMMOZ-Consortium</td>
+<td>2017</td>
+<td>AerChemMIP CMIP</td>
+<td>Registered</td>
+<td>MPI-ESM1.2-HAM</td>
+<td>MPI-ESM1.2-HAM</td>
+<td>ECHAM6.3 (spectral T63; 192 x 96 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
+<td>250 km</td>
+<td>MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>HAM2.3</td>
+<td>sulfur chemistry (unnamed)</td>
+<td>JSBACH 3.20</td>
+<td>HAMOCC6</td>
+<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
+</tr>
+<tr><td>EC-Earth3P</td>
+<td>EC-Earth-Consortium</td>
+<td>2017</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>EC-Earth3P</td>
+<td>EC-Earth 3.2 in PRIMAVERA</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>NorESM2-LM</td>
+<td>NCC</td>
+<td>2017</td>
+<td>AerChemMIP CFMIP CMIP DAMIP DCPP LUMIP OMIP PMIP RFMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>NorESM2-LM</td>
+<td>NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)</td>
+<td>CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)</td>
+<td>250 km</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>100 km</td>
+<td>CISM</td>
+<td>250 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>NICAM16-9D-L78</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CFMIP CMIP</td>
+<td>Registered</td>
+<td>NICAM16-9D-L78</td>
+<td>NICAM.16 gl09-L78 with NDW6</td>
+<td>NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed MACv2-SP</td>
+<td>none</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>none</td>
+<td>Fixed</td>
+</tr>
+<tr><td>FIO-ESM-2-0</td>
+<td>FIO-QLNM</td>
+<td>2018</td>
+<td>CMIP DCPP GMMIP OMIP ScenarioMIP SIMIP</td>
+<td>Registered</td>
+<td>FIO-ESM 2.0</td>
+<td>FIO-ESM 2.0</td>
+<td>CAM4 (0.9x1.25 finite volume grid; 192 x 288 longitude/latitude; 26 levels; top level ~2 hPa)</td>
+<td>100 km</td>
+<td>POP2-W (POP2 coupled with MASNUM surface wave model, Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed monthly fields</td>
+<td>none</td>
+<td>CLM4.0 (same grid at atmos)</td>
+<td>none</td>
+<td>CICE4.0 (same grid as ocean)</td>
+</tr>
+<tr><td>EC-Earth3-LR</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>CMIP PMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-LR</td>
+<td>EC-Earth3-LR</td>
+<td>IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)</td>
+<td>250 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>INM-CM5-0</td>
+<td>INM</td>
+<td>2016</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>INM-CM5-0</td>
+<td>INM-CM5-0</td>
+<td>INM-AM5-0 (2x1.5; 180 x 120 longitude/latitude; 73 levels; top level sigma = 0.0002)</td>
+<td>100 km</td>
+<td>INM-OM5 (North Pole shifted to 60N, 90E. 0.5x0.25; 720 x 720 longitude/latitude; 40 levels; vertical sigma coordinate)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>INM-AER1</td>
+<td>none</td>
+<td>INM-LND1</td>
+<td>none</td>
+<td>INM-ICE1</td>
+</tr>
+<tr><td>INM-CM5-H</td>
+<td>INM</td>
+<td>2016</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>INM-CM5-H</td>
+<td>INM-CM5-H</td>
+<td>INM-AM5-H (0.67x0.5; 540 x 360 longitude/latitude; 73 levels; top level sigma = 0.0002)</td>
+<td>50 km</td>
+<td>INM-OM5-H (North Pole shifted to 60N, 90E. 0.167x0.125; 2160x1440 longitude/latitude; 40 levels; vertical sigma coordinate)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>INM-AER1</td>
+<td>none</td>
+<td>INM-LND1</td>
+<td>none</td>
+<td>INM-ICE1</td>
+</tr>
+<tr><td>CMCC-ESM2-SR5</td>
+<td>CMCC</td>
+<td>2017</td>
+<td>C4MIP CMIP LS3MIP LUMIP</td>
+<td>Registered</td>
+<td>CMCC-ESM2-SR5</td>
+<td>CMCC-ESM2-SR5</td>
+<td>CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM3</td>
+<td>none</td>
+<td>CLM4.5 (BGC mode)</td>
+<td>BFM5.1</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>EMAC-2-53-Vol</td>
+<td>MESSy-Consortium</td>
+<td>2017</td>
+<td>CMIP VolMIP</td>
+<td>Registered</td>
+<td>EMAC-2-53-Vol</td>
+<td>EMAC-2-53-x-Vol</td>
+<td>ECHAM5.3.02 (modified; spectral T42; 128 x 64 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
+<td>500 km</td>
+<td>MPIOM 1.3.0-beta (bipolar GR1.5, approximately 1.5deg reducing toward the poles; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>250 km</td>
+<td>none</td>
+<td>none</td>
+<td>gmxe 2.2.x</td>
+<td>MECCA 3.8.x</td>
+<td>same as Atmosphere</td>
+<td>none</td>
+<td>thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model</td>
+</tr>
+<tr><td>PCMDI-test-1-0</td>
+<td>PCMDI</td>
+<td>1989</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>PCMDI-test 1.0</td>
+<td>PCMDI-test 1.0 (This entry is free text for users to contribute verbose information)</td>
+<td>Earth1.0-gettingHotter (360 x 180 longitude/latitude; 50 levels; top level 0.1 mb)</td>
+<td>1x1 degree</td>
+<td>BlueMarble1.0-warming (360 x 180 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>1x1 degree</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Earth1.0</td>
+<td>none</td>
+<td>Declining1.0-warming (360 x 180 longitude/latitude)</td>
+</tr>
+<tr><td>KACE-1-0-G</td>
+<td>NIMS-KMA</td>
+<td>2018</td>
+<td>CMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>KACE1.0-G</td>
+<td>KACE1.0-GLOMAP</td>
+<td>MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>250 km</td>
+<td>MOM4p1 (tripolar primarily 1deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (tripolar primarily 1deg; 360 x 200 longitude/latitude)</td>
+</tr>
+<tr><td>ECMWF-IFS-MR</td>
+<td>ECMWF</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>ECMWF-IFS-MR</td>
+<td>ECMWF-IFS-MR (50 km atmosphere and 25 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco199, cubic octahedral reduced Gaussian grid equivalent to 800 x 400 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
+</tr>
+<tr><td>NorESM2-MH</td>
+<td>NCC</td>
+<td>2017</td>
+<td>AerChemMIP CFMIP CMIP DAMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>NorESM2-MH</td>
+<td>NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)</td>
+<td>CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)</td>
+<td>100 km</td>
+<td>MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>25 km</td>
+<td>CISM</td>
+<td>100 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>CESM2</td>
+<td>NCAR</td>
+<td>2018</td>
+<td>AerChemMIP C4MIP CDRMIP CFMIP CMIP CORDEX DAMIP DCPP DynVarMIP GMMIP GeoMIP HighResMIP ISMIP6 LS3MIP LUMIP OMIP PAMIP PMIP RFMIP SIMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>CESM2</td>
+<td>CESM2</td>
+<td>CAM6 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)</td>
+<td>100 km</td>
+<td>POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>CISM2.1</td>
+<td>5 km</td>
+<td>MAM4 (same grid as atmos)</td>
+<td>MAM4 (same grid as atmos)</td>
+<td>CLM5 (same grid as atmos)</td>
+<td>MARBL (same grid as ocean)</td>
+<td>CICE5.1 (same grid as ocean)</td>
+</tr>
+<tr><td>NorESM2-MM</td>
+<td>NCC</td>
+<td>2017</td>
+<td>AerChemMIP CFMIP CMIP DAMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>NorESM2-MM</td>
+<td>NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)</td>
+<td>CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)</td>
+<td>100 km</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>100 km</td>
+<td>CISM</td>
+<td>100 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>GFDL-CM4</td>
+<td>NOAA-GFDL</td>
+<td>2018</td>
+<td>CFMIP CMIP GMMIP OMIP RFMIP</td>
+<td>Registered</td>
+<td>GFDL-CM4</td>
+<td>GFDL-CM4</td>
+<td>GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)</td>
+<td>100 km</td>
+<td>GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
+<td>25 km</td>
+<td>GFDL-LM4.0</td>
+<td>100 km</td>
+<td>interactive</td>
+<td>unnamed (fast chemistry, aerosol only)</td>
+<td>GFDL-LM4.0</td>
+<td>GFDL BLING v2</td>
+<td>SIS2</td>
+</tr>
+<tr><td>ACCESS-CM2</td>
+<td>CSIRO-ARCCSS-BoM</td>
+<td>2018</td>
+<td>CMIP FAFMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>ACCESS-CM2</td>
+<td>Australian Community Climate and Earth System Simulator Climate Model Version 2</td>
+<td>MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>250 km</td>
+<td>ACCESS-OM2 (GFDL-MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>CABLE2.3.5</td>
+<td>none</td>
+<td>CICE5.1 (same grid as ocean)</td>
+</tr>
+<tr><td>CNRM-ESM2-1-HR</td>
+<td>CNRM-CERFACS</td>
+<td>2017</td>
+<td>CMIP OMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CNRM-ESM2-1-HR</td>
+<td>CNRM-ESM2-1-HR</td>
+<td>Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 32.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)</td>
+<td>100 km</td>
+<td>Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>TACTIC_v2</td>
+<td>REPROBUS-C_v2</td>
+<td>Surfex 8.0c</td>
+<td>Pisces 2.s</td>
+<td>Gelato 6.1</td>
+</tr>
+<tr><td>MIROC-ES2H</td>
+<td>MIROC</td>
+<td>2018</td>
+<td>AerChemMIP CMIP DynVarMIP GeoMIP VIACSAB</td>
+<td>Registered</td>
+<td>MIROC-ES2H</td>
+<td>MIROC-ES2H</td>
+<td>CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)</td>
+<td>100 km</td>
+<td>COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>SPRINTARS6.0</td>
+<td>CHASER4.0</td>
+<td>MATSIRO6.0+VISIT-e ver.1.0</td>
+<td>OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles</td>
+<td>COCO4.9</td>
+</tr>
+<tr><td>MIROC-ES2L</td>
+<td>MIROC</td>
+<td>2018</td>
+<td>C4MIP CDRMIP CMIP DynVarMIP GeoMIP LUMIP OMIP PMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>MIROC-ES2L</td>
+<td>MIROC-ES2L</td>
+<td>CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)</td>
+<td>250 km</td>
+<td>COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>SPRINTARS6.0</td>
+<td>none</td>
+<td>MATSIRO6.0+VISIT-e ver.1.0</td>
+<td>OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles</td>
+<td>COCO4.9</td>
+</tr>
+<tr><td>EC-Earth3P-VHR</td>
+<td>EC-Earth-Consortium</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>EC-Earth3P-VHR</td>
+<td>EC-Earth3P-VHR in PRIMAVERA</td>
+<td>IFS cy36r4 (TL1279, linearly reduced Gaussian grid equivalent to 2560 x 1280 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>25 km</td>
+<td>NEMO3.6 (ORCA012 tripolar primarily 0.08 degrees; 4322 x 3059 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>MPI-ESM1-2-HR</td>
+<td>MPI-M DWD DKRZ</td>
+<td>2017</td>
+<td>CMIP CORDEX DCPP DynVarMIP FAFMIP HighResMIP OMIP SIMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>MPI-ESM1.2-HR</td>
+<td>MPI-ESM1.2-HR</td>
+<td>ECHAM6.3 (spectral T127; 384 x 192 longitude/latitude; 95 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>MPIOM1.63 (tripolar TP04, approximately 0.4deg; 802 x 404 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>50 km</td>
+<td>none/prescribed</td>
+<td>none</td>
+<td>none, prescribed MACv2-SP</td>
+<td>none</td>
+<td>JSBACH3.20</td>
+<td>HAMOCC</td>
+<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
+</tr>
+<tr><td>CMCC-CM2-VHR4</td>
+<td>CMCC</td>
+<td>2017</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>CMCC-CM2-VHR4</td>
+<td>CMCC-CM2-VHR4</td>
+<td>CAM4 (1/4deg; 1152 x 768 longitude/latitude; 26 levels; top at ~2 hPa)</td>
+<td>25 km</td>
+<td>NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>prescribed MACv2-SP</td>
+<td>none</td>
+<td>CLM4.5 (SP mode)</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>LBLRTM</td>
+<td>AER</td>
+<td>2017</td>
+<td>RFMIP</td>
+<td>Registered</td>
+<td>LBLRTM</td>
+<td>Line-By-Line Radiative Transfer Model v12.8, aer_v_3.6, MT_CKD_3.2</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr><td>MRI-ESM2-0</td>
+<td>MRI</td>
+<td>2017</td>
+<td>AerChemMIP C4MIP CFMIP CMIP CORDEX DAMIP DCPP DynVarMIP FAFMIP GMMIP GeoMIP LS3MIP OMIP PMIP RFMIP SIMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>MRI-ESM2.0</td>
+<td>MRI-ESM2.0</td>
+<td>MRI-AGCM3.5 (TL159; 320 x 160 longitude/latitude; 80 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>MRI.COM4.4 (tripolar primarily 0.5 deg latitude/1 deg longitude with meridional refinement down to 0.3 deg within 10 degrees north and south of the equator; 360 x 364 longitude/latitude; 61 levels; top grid cell 0-2 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level 0.01 hPa)</td>
+<td>MRI-CCM2.1 (T42; 128 x 64 longitude/latitude; 80 levels; top level 0.01 hPa)</td>
+<td>HAL 1.0</td>
+<td>MRI.COM4.4</td>
+<td>MRI.COM4.4</td>
+</tr>
+<tr><td>BESM-2-7</td>
+<td>INPE</td>
+<td>2017</td>
+<td>CMIP DCPP HighResMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>BESM 2.7</td>
+<td>BESM 2.7</td>
+<td>BAM (v1.0, T062L28; 192 x 96 longitude/latitude; 28 levels; top level 3 hPa)</td>
+<td>250 km</td>
+<td>MOM-5 (MOM5, tripolar primarily 1 deg, 1/4 deg between 10S-10N; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>SSiB 2.0</td>
+<td>TOPAZ 2.0</td>
+<td>SIS 1.0</td>
+</tr>
+<tr><td>IPSL-CM6A-LR</td>
+<td>IPSL</td>
+<td>2017</td>
+<td>C4MIP CFMIP CMIP DCPP FAFMIP GMMIP GeoMIP LS3MIP LUMIP OMIP PMIP RFMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>IPSL-CM6A-LR</td>
+<td>IPSL-CM6A-LR</td>
+<td>LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 40000 m)</td>
+<td>250 km</td>
+<td>NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>ORCHIDEE (v2.0, Water/Carbon/Energy mode)</td>
+<td>NEMO-PISCES</td>
+<td>NEMO-LIM3</td>
+</tr>
+<tr><td>UofT-CCSM4</td>
+<td>UofT</td>
+<td>2014</td>
+<td>CMIP PMIP</td>
+<td>Registered</td>
+<td>UofT-CCSM4</td>
+<td>The NCAR CCSM4 model with the ocean component run in a non-default configuration (the University of Toronto configuration) where tidal mixing and overflow parametrizations are turned off. The vertical profile of ocean diapycnal diffusivity is fixed to the POP1 profile used in CCSM3. See Peltier and Vettoretti, 2014 GRL (https://doi.org/10.1002/2014GL061413), Chandan and Peltier, 2017 Clim. Past. (https://doi.org/10.5194/cp-13-919-2017)</td>
+<td>CAM4 (finite-volume dynamical core; 288 x 192 longitude/latitude; 26 levels; top level ~2 hPa)</td>
+<td>100 km</td>
+<td>POP2 (displaced dipole grid; 384 x 320 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>unnamed</td>
+<td>none</td>
+<td>CLM4</td>
+<td>none</td>
+<td>CICE4</td>
+</tr>
+<tr><td>GISS-E2-1-G</td>
+<td>NASA-GISS</td>
+<td>2016</td>
+<td>AerChemMIP C4MIP CFMIP CMIP DAMIP DynVarMIP FAFMIP GMMIP ISMIP6 LS3MIP LUMIP OMIP PAMIP PMIP RFMIP SIMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>GISS-E2.1G</td>
+<td>GISS-E2.1G</td>
+<td>GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)</td>
+<td>250 km</td>
+<td>GISS Ocean (1 degree; 360 x 180 latitude/longitude; 32 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)</td>
+<td>Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)</td>
+<td>GISS LSM</td>
+<td>none</td>
+<td>GISS SI</td>
+</tr>
+<tr><td>BCC-CSM2-HR</td>
+<td>BCC</td>
+<td>2017</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>BCC-CSM 2 HR</td>
+<td>BCC-CSM 2 HR</td>
+<td>BCC_AGCM3_LR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)</td>
+<td>50 km</td>
+<td>MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>BCC_AVIM2</td>
+<td>none</td>
+<td>SIS2</td>
+</tr>
+<tr><td>CMCC-ESM2-HR5</td>
+<td>CMCC</td>
+<td>2017</td>
+<td>CMIP OMIP</td>
+<td>Registered</td>
+<td>CMCC-ESM2-HR5</td>
+<td>CMCC-ESM2-HR5</td>
+<td>CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM3</td>
+<td>none</td>
+<td>CLM4.5 (BGC mode)</td>
+<td>BFM5.1</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>EMAC-2-53-AerChem</td>
+<td>MESSy-Consortium</td>
+<td>2017</td>
+<td>AerChemMIP CMIP</td>
+<td>Registered</td>
+<td>EMAC-2-53-AerChem</td>
+<td>EMAC-2-53-x-AerChem</td>
+<td>ECHAM5.3.02 (modified, spectral T42; 128 x 64 longitude/latitude; 47 levels; top level 0.01 hPa)</td>
+<td>500 km</td>
+<td>MPIOM 1.3.0-beta (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)</td>
+<td>250 km</td>
+<td>none</td>
+<td>none</td>
+<td>gmxe 2.2.x</td>
+<td>MECCA 3.8.x</td>
+<td>same as Atmosphere</td>
+<td>none</td>
+<td>thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model</td>
+</tr>
+<tr><td>GISS-E2-1-H</td>
+<td>NASA-GISS</td>
+<td>2016</td>
+<td>CMIP OMIP PAMIP SIMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>GISS-E2.1H</td>
+<td>GISS-E2.1H</td>
+<td>GISS-E2.1 (2.5x2 degree; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)</td>
+<td>250 km</td>
+<td>HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)</td>
+<td>Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)</td>
+<td>GISS LSM</td>
+<td>none</td>
+<td>GISS SI</td>
+</tr>
+<tr><td>EC-Earth3-GrIS</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>CMIP ISMIP6 PMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-GrIS</td>
+<td>EC-Earth3-GrIS</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>PISM 0.7 (5 km x 5 km, 442 levels)</td>
+<td>5 km</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>GFDL-CM4C192</td>
+<td>NOAA-GFDL</td>
+<td>2018</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>GFDL-CM4C192</td>
+<td>GFDL-CM4C192</td>
+<td>GFDL-AM4.0.1 (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 720 x 360 longitude/latitude; 33 levels; top level 1 hPa)</td>
+<td>50 km</td>
+<td>GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
+<td>25 km</td>
+<td>GFDL-LM4.0.1</td>
+<td>50 km</td>
+<td>interactive</td>
+<td>unnamed (fast chemistry, aerosol only)</td>
+<td>GFDL-LM4.0.1</td>
+<td>none</td>
+<td>SIS2</td>
+</tr>
+<tr><td>CMCC-CM2-SR5</td>
+<td>CMCC</td>
+<td>2016</td>
+<td>CMIP DCPP GMMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CMCC-CM2-SR5</td>
+<td>CMCC-CM2-SR5</td>
+<td>CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM3</td>
+<td>none</td>
+<td>CLM4.5 (BGC mode)</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>BNU-ESM-1-1</td>
+<td>BNU</td>
+<td>2016</td>
+<td>C4MIP CDRMIP CFMIP CMIP GMMIP GeoMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>BNU-ESM 1.1</td>
+<td>BNU-ESM 1.1</td>
+<td>CAM4 (2deg; 144 x 96 longitude/latitude; 26 levels; top level 2.194 mb)</td>
+<td>250 km</td>
+<td>MOM4p1 (tripolar, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>CAM-chem; semi-interactive</td>
+<td>none</td>
+<td>CoLM version 2014 with carbon-nitrogen interactions</td>
+<td>Dynamic ecosystem-carbon model version 1</td>
+<td>CICE4.1</td>
+</tr>
+<tr><td>NorESM2-LMEC</td>
+<td>NCC</td>
+<td>2017</td>
+<td>AerChemMIP CMIP</td>
+<td>Registered</td>
+<td>NorESM2-LMEC</td>
+<td>NorESM2-LMEC (low atmosphere-medium ocean resolution, GHG emission driven, complex atmospheric chemistry)</td>
+<td>CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)</td>
+<td>250 km</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>100 km</td>
+<td>CISM</td>
+<td>250 km</td>
+<td>OsloAero</td>
+<td>OsloChemComp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>GFDL-ESM2M</td>
+<td>NOAA-GFDL</td>
+<td>2012</td>
+<td>CMIP FAFMIP</td>
+<td>Registered</td>
+<td>GFDL-ESM2M</td>
+<td>GFDL-ESM2M</td>
+<td>GFDL-AM2 (Cubed-sphere (c48L24) - 2.5 degree lon x 2 degree lat; 144 x 90 longitude/latitude; 24 levels; top level ~3 hPa)</td>
+<td>250 km</td>
+<td>GFDL-MOM4p1 (tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>GFDL-LM3.0</td>
+<td>250 km</td>
+<td>GFDL-AM2</td>
+<td>GFDL-AM2 (full atmospheric chemistry)</td>
+<td>GFDL-LM3.0</td>
+<td>none</td>
+<td>SIS (Tripolar360x200L50)</td>
+</tr>
+<tr><td>FGOALS-f3-H</td>
+<td>CAS</td>
+<td>2017</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>FGOALS-f3-H</td>
+<td>FGOALS-f3-H</td>
+<td>FAMIL2.2 (Cubed-sphere, c384; 1440 x 720 longitude/latitude; 32 levels; top level 2.16 hPa)</td>
+<td>25 km</td>
+<td>LICOM3.0 (LICOM3.0, tripolar primarily 0.1deg; 3600 x 2302 longitude/latitude; 55 levels; top grid cell 0-5 m)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>CLM4.0</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>ARTS-2-3</td>
+<td>UHH</td>
+<td>2015</td>
+<td>RFMIP</td>
+<td>Registered</td>
+<td>ARTS 2.3</td>
+<td>ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr><td>FGOALS-f3-L</td>
+<td>CAS</td>
+<td>2017</td>
+<td>CMIP DCPP GMMIP OMIP SIMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>FGOALS-f3-L</td>
+<td>FGOALS-f3-L</td>
+<td>FAMIL2.2 (Cubed-sphere, c96; 360 x 180 longitude/latitude; 32 levels; top level 2.16 hPa)</td>
+<td>100 km</td>
+<td>LICOM3.0 (LICOM3.0, tripolar primarily 1deg; 360 x 218 longitude/latitude; 30 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>CLM4.0</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>ECMWF-IFS-HR</td>
+<td>ECMWF</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>ECMWF-IFS-HR</td>
+<td>ECMWF-IFS-HR (25 km atmosphere and 25 km ocean)</td>
+<td>IFS (IFS CY43R1, Tco399, cubic octahedral reduced Gaussian grid equivalent to 1600 x 800 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>25 km</td>
+<td>NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (as implemented in IFS CY43R1)</td>
+<td>none</td>
+<td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
+</tr>
+<tr><td>EC-Earth3-Veg-LR</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>CMIP PMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-Veg-LR</td>
+<td>EC-Earth3-Veg-LR</td>
+<td>IFS cy36r4 (TL159, linearly reduced Gaussian grid equivalent to 320 x 160 longitude/latitude; 62 levels; top level 5 hPa)</td>
+<td>250 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>VRESM-1-0</td>
+<td>CSIR-CSIRO</td>
+<td>2016</td>
+<td>CMIP DAMIP HighResMIP PMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>VRESM 1.0</td>
+<td>VRESM 1.0 (Variable-resolution Earth System Model 1.0)</td>
+<td>VCAM-1.0 (C192; 192 x 192 x 6 longitude/latitude/cubeface; 35 levels; top level 35km)</td>
+<td>50 km</td>
+<td>VCOM-1.0 (C192; 384 x 384 x 6 longitude/latitude/cubeface; 35 levels; top grid cell 0-10 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>Rotstayn-1.0</td>
+<td>none</td>
+<td>CABLE v2.2.3</td>
+<td>PISCES v3.4socco</td>
+<td>CSIR-ICE (visco-plastic)</td>
+</tr>
+<tr><td>AWI-CM-1-1-HR</td>
+<td>AWI</td>
+<td>2018</td>
+<td>CMIP CORDEX HighResMIP OMIP SIMIP VIACSAB</td>
+<td>Registered</td>
+<td>AWI-CM 1.1 HR</td>
+<td>AWI-CM 1.1 HR</td>
+<td>ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)</td>
+<td>100 km</td>
+<td>FESOM 1.4 (unstructured grid in the horizontal with 1306775 wet nodes; 46 levels; top grid cell 0-5 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>JSBACH 3.20</td>
+<td>none</td>
+<td>FESOM 1.4</td>
+</tr>
+<tr><td>BCC-ESM1</td>
+<td>BCC</td>
+<td>2017</td>
+<td>AerChemMIP CMIP</td>
+<td>Registered</td>
+<td>BCC-ESM 1</td>
+<td>BCC-ESM 1</td>
+<td>BCC_AGCM3_LR (T42; 128 x 64 longitude/latitude; 26 levels; top level 2.19 hPa)</td>
+<td>250 km</td>
+<td>MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>BCC-AGCM3-Chem</td>
+<td>BCC_AVIM2</td>
+<td>none</td>
+<td>SIS2</td>
+</tr>
+<tr><td>EC-Earth3P-HR</td>
+<td>EC-Earth-Consortium</td>
+<td>2017</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>EC-Earth3P-HR</td>
+<td>EC-Earth3P-HR in PRIMAVERA</td>
+<td>IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.6 (ORCA025; tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>GISS-E2-1-MA-G</td>
+<td>NASA-GISS</td>
+<td>2018</td>
+<td>CMIP RFMIP VolMIP</td>
+<td>Registered</td>
+<td>GISS-E2.1MA-G</td>
+<td>GISS-E2.1MA-G</td>
+<td>GISS-E2.1MA (2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)</td>
+<td>250 km</td>
+<td>GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)</td>
+<td>Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)</td>
+<td>GISS LSM</td>
+<td>none</td>
+<td>GISS SI</td>
+</tr>
+<tr><td>CNRM-CM6-1-HR</td>
+<td>CNRM-CERFACS</td>
+<td>2017</td>
+<td>CMIP DCPP HighResMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CNRM-CM6-1-HR</td>
+<td>CNRM-CM6-1-HR</td>
+<td>Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 32.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)</td>
+<td>100 km</td>
+<td>Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>prescribed monthly fields computed by TACTIC_v2 scheme</td>
+<td>OZL_v2</td>
+<td>Surfex 8.0c</td>
+<td>none</td>
+<td>Gelato 6.1</td>
+</tr>
+<tr><td>HadGEM3-GC31-LL</td>
+<td>MOHC</td>
+<td>2016</td>
+<td>CFMIP CMIP DAMIP FAFMIP HighResMIP PMIP RFMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-LL</td>
+<td>HadGEM3-GC3.1-N96ORCA1</td>
+<td>MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>250 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)</td>
+</tr>
+<tr><td>HadGEM3-GC31-LM</td>
+<td>MOHC</td>
+<td>2016</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-LM</td>
+<td>HadGEM3-GC3.1-N96ORCA025</td>
+<td>MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>250 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)</td>
+</tr>
+<tr><td>ACCESS-ESM1-5</td>
+<td>CSIRO</td>
+<td>2018</td>
+<td>C4MIP CDRMIP CMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>ACCESS-ESM1.5</td>
+<td>Australian Community Climate and Earth System Simulator Earth System Model Version 1.5</td>
+<td>HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)</td>
+<td>250 km</td>
+<td>ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>CLASSIC (v1.0)</td>
+<td>none</td>
+<td>CABLE2.2.3</td>
+<td>WOMBAT1.0 (same grid as ocean)</td>
+<td>CICE5.1 (same grid as ocean)</td>
+</tr>
+<tr><td>UKESM1-0-MMh</td>
+<td>MOHC NERC</td>
+<td>2018</td>
+<td>AerChemMIP C4MIP CMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>UKESM1.0-MMh</td>
+<td>UKESM1.0-N216ORCA025hybrid</td>
+<td>MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>100 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode (horizontal resolution degraded relative to that used for atmosphere physics)</td>
+<td>UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>MEDUSA2 (horizontal resolution degraded relative to that used for ocean physics)</td>
+<td>CICE-HadGEM3-GSI8 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)</td>
+</tr>
+<tr><td>NorESM2-HH</td>
+<td>NCC</td>
+<td>2018</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>NorESM2-HH</td>
+<td>NorESM2-HH (high atmosphere-high ocean resolution, GHG concentration driven)</td>
+<td>CAM-OSLO (0.25 degree resolution; 1152 x 768; 32 levels; top level 3 mb)</td>
+<td>25 km</td>
+<td>MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>25 km</td>
+<td>CISM</td>
+<td>25 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+<tr><td>CMCC-CM2-HR4</td>
+<td>CMCC</td>
+<td>2016</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>CMCC-CM2-HR4</td>
+<td>CMCC-CM2-HR4</td>
+<td>CAM4 (1deg; 288 x 192 longitude/latitude; 26 levels; top at ~2 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>prescribed MACv2-SP</td>
+<td>none</td>
+<td>CLM4.5 (SP mode)</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>CMCC-CM2-HR5</td>
+<td>CMCC</td>
+<td>2017</td>
+<td>CMIP OMIP</td>
+<td>Registered</td>
+<td>CMCC-CM2-HR5</td>
+<td>CMCC-CM2-HR5</td>
+<td>CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM3</td>
+<td>none</td>
+<td>CLM4.5 (BGC mode)</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>CIESM</td>
+<td>THU</td>
+<td>2017</td>
+<td>CFMIP CMIP CORDEX GMMIP HighResMIP OMIP SIMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CIESM</td>
+<td>Community Integrated Earth System Model</td>
+<td>CIESM-AM (FV/FD; 288 x 192 longitude/latitude; 30 levels; top level 2.255 hPa)</td>
+<td>100 km</td>
+<td>CIESM-OM (FD, SCCGrid Displaced Pole; 720 x 560 longitude/latitude; 46 levels; top grid cell 0-6 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM4</td>
+<td>trop_mam4</td>
+<td>CIESM-LM (modified CLM4.5)</td>
+<td>none</td>
+<td>CICE4</td>
+</tr>
+<tr><td>CAMS-CSM1-0</td>
+<td>CAMS</td>
+<td>2016</td>
+<td>CMIP</td>
+<td>Registered</td>
+<td>CAMS_CSM 1.0</td>
+<td>CAMS_CSM 1.0</td>
+<td>ECHAM5_CAMS (T106; 320 x 160 longitude/latitude; 31 levels; top level 10 mb)</td>
+<td>100 km</td>
+<td>MOM4 (tripolar; 360 x 200 longitude/latitude, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 50 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>CoLM 1.0</td>
+<td>none</td>
+<td>SIS 1.0</td>
+</tr>
+<tr><td>EC-Earth3-AerChem</td>
+<td>EC-Earth-Consortium</td>
+<td>2018</td>
+<td>AerChemMIP CMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-AerChem</td>
+<td>EC-Earth3-AerChem</td>
+<td>IFS cy36r4 (TL255, linearly reduced Gaussian grid equivalent to 512 x 256 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>100 km</td>
+<td>NEMO3.6 (ORCA1 tripolar primarily 1 degree with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level: 0.1 hPa)</td>
+<td>TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level: 0.1 hPa)</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>EC-Earth3-HR</td>
+<td>EC-Earth-Consortium</td>
+<td>2017</td>
+<td>DCPP HighResMIP</td>
+<td>Registered</td>
+<td>EC-Earth3-HR</td>
+<td>EC-Earth3-HR</td>
+<td>IFS cy36r4 (TL511, linearly reduced Gaussian grid equivalent to 1024 x 512 longitude/latitude; 91 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>NEMO3.6 (ORCA025 tripolar primarily 0.25 degrees; 1442 x 1921 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>HTESSEL (land surface scheme built in IFS)</td>
+<td>none</td>
+<td>LIM3</td>
+</tr>
+<tr><td>ICON-ESM-LR</td>
+<td>MPI-M</td>
+<td>2017</td>
+<td>CMIP OMIP SIMIP</td>
+<td>Registered</td>
+<td>ICON-ESM-LR</td>
+<td>ICON-ESM-LR</td>
+<td>ICON-A (icosahedral/triangles; 160 km; 47 levels; top level 80 km)</td>
+<td>100 km</td>
+<td>ICON-O (icosahedral/triangles; 40 km; 40 levels; top grid cell 0-12 m)</td>
+<td>50 km</td>
+<td>none/prescribed</td>
+<td>none</td>
+<td>none, prescribed MACv2-SP</td>
+<td>none</td>
+<td>JSBACH4.20</td>
+<td>HAMOCC</td>
+<td>unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)</td>
+</tr>
+<tr><td>NESM3</td>
+<td>NUIST</td>
+<td>2016</td>
+<td>CMIP DAMIP DCPP GMMIP GeoMIP PMIP ScenarioMIP VolMIP</td>
+<td>Registered</td>
+<td>NESM v3</td>
+<td>NUIST ESM v3</td>
+<td>ECHAM v6.3 (T63; 192 x 96 longitude/latitude; 47 levels; top level 1 Pa)</td>
+<td>250 km</td>
+<td>NEMO v3.4 (NEMO v3.4, tripolar primarily 1deg; 384 x 362 longitude/latitude; 46 levels; top grid cell 0-6 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>JSBACH v3.1</td>
+<td>none</td>
+<td>CICE4.1</td>
+</tr>
+<tr><td>NICAM16-9S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CMIP DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>NICAM16-9S</td>
+<td>NICAM.16 gl09-L38 with NSW6</td>
+<td>NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed MACv2-SP</td>
+<td>none</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>none</td>
+<td>Fixed</td>
+</tr>
+<tr><td>INM-CM4-8</td>
+<td>INM</td>
+<td>2016</td>
+<td>CMIP PMIP</td>
+<td>Registered</td>
+<td>INM-CM4-8</td>
+<td>INM-CM4-8</td>
+<td>INM-AM4-8 (2x1.5; 180 x 120 longitude/latitude; 21 levels; top level sigma = 0.01)</td>
+<td>100 km</td>
+<td>INM-OM5 (North Pole shifted to 60N, 90E; 360 x 318 longitude/latitude; 40 levels; sigma vertical coordinate)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>INM-AER1</td>
+<td>none</td>
+<td>INM-LND1</td>
+<td>none</td>
+<td>INM-ICE1</td>
+</tr>
+<tr><td>AWI-CM-1-1-MR</td>
+<td>AWI</td>
+<td>2018</td>
+<td>CMIP CORDEX OMIP SIMIP ScenarioMIP VIACSAB</td>
+<td>Registered</td>
+<td>AWI-CM 1.1 MR</td>
+<td>AWI-CM 1.1 MR</td>
+<td>ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)</td>
+<td>100 km</td>
+<td>FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>JSBACH 3.20</td>
+<td>none</td>
+<td>FESOM 1.4</td>
+</tr>
+<tr><td>MRI-AGCM3-2</td>
+<td>MRI</td>
+<td>2017</td>
+<td>CMIP DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>MRI-AGCM3-2</td>
+<td>MRI-AGCM3-2</td>
+<td>MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed from MRI-ESM2.0</td>
+<td>none</td>
+<td>SIB0109</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr><td>CNRM-ESM2-1</td>
+<td>CNRM-CERFACS</td>
+<td>2017</td>
+<td>AerChemMIP C4MIP CMIP GeoMIP LUMIP OMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CNRM-ESM2-1</td>
+<td>CNRM-ESM2-1</td>
+<td>Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)</td>
+<td>250 km</td>
+<td>Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>TACTIC_v2</td>
+<td>REPROBUS-C_v2</td>
+<td>Surfex 8.0c</td>
+<td>Pisces 2.s</td>
+<td>Gelato 6.1</td>
+</tr>
+<tr><td>CNRM-CM6-1</td>
+<td>CNRM-CERFACS</td>
+<td>2017</td>
+<td>CFMIP CMIP DAMIP DCPP FAFMIP GMMIP HighResMIP ISMIP6 LS3MIP PMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>CNRM-CM6-1</td>
+<td>CNRM-CM6-1</td>
+<td>Arpege 6.3 (T127; Gaussian Reduced with 24572 grid points in total distributed over 128 latitude circles (with 256 grid points per latitude circle between 30degN and 30degS reducing to 20 grid points per latitude circle at 88.9degN and 88.9degS); 91 levels; top level 78.4 km)</td>
+<td>250 km</td>
+<td>Nemo 3.6 (eORCA1, tripolar primarily 1deg; 362 x 294 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>100 km</td>
+<td>GRISLI: Collaborating with l'Institut des Geosciences de l'Environnement in Grenoble on offline ice-sheet simulations</td>
+<td>10 km</td>
+<td>prescribed monthly fields computed by TACTIC_v2 scheme</td>
+<td>OZL_v2</td>
+<td>Surfex 8.0c</td>
+<td>none</td>
+<td>Gelato 6.1</td>
+</tr>
+<tr><td>HadGEM3-GC31-MH</td>
+<td>MOHC</td>
+<td>2016</td>
+<td>CMIP HighResMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-MH</td>
+<td>HadGEM3-GC3.1-N216ORCA12</td>
+<td>MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>100 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>10 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA12 tripolar primarily 1/12 deg; 4320 x 3604 longitude/latitude)</td>
+</tr>
+<tr><td>SAM0-UNICON</td>
+<td>SNU</td>
+<td>2017</td>
+<td>CMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>SAM0-UNICON</td>
+<td>SAM0-UNICON (SNU Atmosphere Model version 0 with Unified Convection Scheme)</td>
+<td>CAM5.3 with UNICON (1deg; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)</td>
+<td>100 km</td>
+<td>POP2 (Displaced Pole; 320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>MAM3</td>
+<td>none</td>
+<td>CLM4.0</td>
+<td>none</td>
+<td>CICE4.0</td>
+</tr>
+<tr><td>HadGEM3-GC31-MM</td>
+<td>MOHC</td>
+<td>2016</td>
+<td>CMIP DCPP GMMIP HighResMIP LS3MIP OMIP</td>
+<td>Registered</td>
+<td>HadGEM3-GC31-MM</td>
+<td>HadGEM3-GC3.1-N216ORCA025</td>
+<td>MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)</td>
+<td>100 km</td>
+<td>NEMO-HadGEM3-GO6.0 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>UKCA-GLOMAP-mode</td>
+<td>none</td>
+<td>JULES-HadGEM3-GL7.1</td>
+<td>none</td>
+<td>CICE-HadGEM3-GSI8 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)</td>
+</tr>
+<tr><td>CAS-ESM1-0</td>
+<td>CAS</td>
+<td>2015</td>
+<td>AerChemMIP C4MIP CFMIP CMIP CORDEX DAMIP DynVarMIP FAFMIP GMMIP GeoMIP HighResMIP LS3MIP LUMIP OMIP PMIP SIMIP ScenarioMIP VIACSAB VolMIP</td>
+<td>Registered</td>
+<td>CAS-ESM 1.0</td>
+<td>CAS-ESM 1.0 (Chinese Academy of Sciences Earth System Model version 1.0)</td>
+<td>IAP AGCM4.1 (Finite difference dynamical core; 256 x 128 longitude/latitude; 30 levels; top level 2.2 hPa)</td>
+<td>100 km</td>
+<td>LICOM2.0 (LICOM2.0, primarily 1deg; 362 x 196 longitude/latitude; 30 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>IAP AACM</td>
+<td>IAP AACM</td>
+<td>CoLM</td>
+<td>IAP OBGCM</td>
+<td>CICE4</td>
+</tr>
+<tr><td>NICAM16-8S</td>
+<td>MIROC</td>
+<td>2017</td>
+<td>CMIP DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>NICAM16-8S</td>
+<td>NICAM.16 gl08-L38 with NSW6</td>
+<td>NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed MACv2-SP</td>
+<td>none</td>
+<td>MATSIRO6 (w/o MOSAIC)</td>
+<td>none</td>
+<td>Fixed</td>
+</tr>
+<tr><td>GFDL-ESM4</td>
+<td>NOAA-GFDL</td>
+<td>2018</td>
+<td>AerChemMIP C4MIP CDRMIP CMIP DAMIP DynVarMIP LUMIP OMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>GFDL-ESM4</td>
+<td>GFDL-ESM4</td>
+<td>GFDL-AM4.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 49 levels; top level 1 Pa)</td>
+<td>100 km</td>
+<td>GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)</td>
+<td>50 km</td>
+<td>GFDL-LM4.1</td>
+<td>100 km</td>
+<td>interactive</td>
+<td>GFDL-ATMCHEM4.1 (full atmospheric chemistry)</td>
+<td>GFDL-LM4.1</td>
+<td>COBALT 2.0</td>
+<td>SIS2</td>
+</tr>
+<tr><td>NorESM2-LME</td>
+<td>NCC</td>
+<td>2017</td>
+<td>C4MIP CMIP GeoMIP LUMIP OMIP</td>
+<td>Registered</td>
+<td>NorESM2-LME</td>
+<td>NorESM2-LME (low atmosphere-medium ocean resolution, GHG emission driven)</td>
+<td>CAM-OSLO (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)</td>
+<td>250 km</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>100 km</td>
+<td>CISM</td>
+<td>250 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
+</table>
+
+</body>
+</html>
+

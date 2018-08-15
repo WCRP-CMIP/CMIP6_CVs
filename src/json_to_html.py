@@ -176,8 +176,8 @@ dictOrder = [
 'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
 'release_year','cohort','sea_ice','label','institution_id','land_surface',
 'aerosol','source_id','ocean','land_ice','activity_participation',
-'nominal_resolution_atmos','nominal_resolution_landIce',
-'nominal_resolution_ocean']
+'native_nominal_resolution_atmos','native_nominal_resolution_landIce',
+'native_nominal_resolution_ocean']
 dictOrderKold = [
 'institution_id','release_year','activity_participation','atmosphere',
 'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
@@ -185,8 +185,8 @@ dictOrderKold = [
 'nominal_resolution_landIce','land_surface','ocean_biogeochemistry','sea_ice']
 dictOrderK = [
 'institution_id','release_year','activity_participation','cohort','label',
-'label_extended','atmos','nomRes_atmos','ocean','nomRes_ocean','landIce',
-'nomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
+'label_extended','atmos','natNomRes_atmos','ocean','natNomRes_ocean','landIce',
+'natNomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
 dictRealmKeys = [
 'atmos','ocean','aerosol','landIce','atmosChem','land','ocnBgchem','seaIce']
 dictNomResKeys = ['natNomRes_atmos','natNomRes_ocean','natNomRes_landIce']
@@ -211,7 +211,7 @@ for exp in dict1.keys():
         if k in dictRealmKeys:
             st = exp_dict['model_component'][k]['description']
         elif k in dictNomResKeys:
-            keyVal = k.replace('nomRes_','')
+            keyVal = k.replace('natNomRes_','')
             st = exp_dict['model_component'][keyVal]['native_nominal_resolution']
         else:
             st = exp_dict[k]

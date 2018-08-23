@@ -318,6 +318,7 @@ PJD 26 Jul 2018    - Revise source_id MIROC6 https://github.com/WCRP-CMIP/CMIP6_
 PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 31 Jul 2018    - Revise piClim experiment_ids allowed components - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/592
 PJD 15 Aug 2018    - Rename nominal_resolution -> native_nominal_resolution in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/597
+PJD 22 Aug 2018    - Revise CDRMIP experiment_id start_years and num years https://github.com/WCRP-CMIP/CMIP6_CVs/issues/594
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -343,7 +344,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Rename nominal_resolution -> native_nominal_resolution in source_id\"'
+commitMessage = '\"Revise CDRMIP experiment_id start_years and num years\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -484,6 +485,12 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Rename
+key = 'esm-ssp585ext'
+experiment_id[key]['start_year'] = '2101'
+experiment_id[key]['min_number_yrs_per_sim'] = '200'
+key = 'esm-ssp585-ssp126Lu-ext'
+experiment_id[key]['start_year'] = '2101'
+experiment_id[key]['min_number_yrs_per_sim'] = '200'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -733,17 +740,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-for key in source_id.keys():
-    print(key)
-    source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = source_id[key]['model_component']['aerosol'].pop('nominal_resolution')
-    source_id[key]['model_component']['atmos']['native_nominal_resolution'] = source_id[key]['model_component']['atmos'].pop('nominal_resolution')
-    source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = source_id[key]['model_component']['atmosChem'].pop('nominal_resolution')
-    source_id[key]['model_component']['land']['native_nominal_resolution'] = source_id[key]['model_component']['land'].pop('nominal_resolution')
-    source_id[key]['model_component']['landIce']['native_nominal_resolution'] = source_id[key]['model_component']['landIce'].pop('nominal_resolution')
-    source_id[key]['model_component']['ocean']['native_nominal_resolution'] = source_id[key]['model_component']['ocean'].pop('nominal_resolution')
-    source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = source_id[key]['model_component']['ocnBgchem'].pop('nominal_resolution')
-    source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = source_id[key]['model_component']['seaIce'].pop('nominal_resolution')
-
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

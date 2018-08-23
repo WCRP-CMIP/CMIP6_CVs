@@ -2747,7 +2747,7 @@
             "end_year":"2300",
             "experiment":"extension of the LUMIP emissions-driven simulation following SSP5-8.5 with SSP1-2.6 land use",
             "experiment_id":"esm-ssp585-ssp126Lu-ext",
-            "min_number_yrs_per_sim":"201",
+            "min_number_yrs_per_sim":"200",
             "parent_activity_id":[
                 "LUMIP"
             ],
@@ -2758,7 +2758,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"2100",
+            "start_year":"2101",
             "sub_experiment_id":[
                 "none"
             ],
@@ -2776,7 +2776,7 @@
             "end_year":"2300",
             "experiment":"emission-driven long-term extension of the SSP5-8.5 scenario",
             "experiment_id":"esm-ssp585ext",
-            "min_number_yrs_per_sim":"201",
+            "min_number_yrs_per_sim":"200",
             "parent_activity_id":[
                 "C4MIP"
             ],
@@ -2787,7 +2787,7 @@
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"2100",
+            "start_year":"2101",
             "sub_experiment_id":[
                 "none"
             ],
@@ -8411,13 +8411,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Aug 15 07:28:43 2018 -0700",
-        "CV_collection_version":"6.2.12.1",
+        "CV_collection_modified":"Wed Aug 22 18:48:22 2018 -0700",
+        "CV_collection_version":"6.2.13.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Tue Aug  7 07:31:46 2018 -0700",
-        "experiment_id_CV_note":"Revise piClim experiment_ids allowed components",
+        "experiment_id_CV_note":"Revise CDRMIP experiment_id start_years and num years",
         "institution_id":"PCMDI",
-        "previous_commit":"a2b22b7543cfabe98a8dc0d5e82d9f52c02c556b",
+        "previous_commit":"4775436280578b7f0ca75634666ec743f68e38f3",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

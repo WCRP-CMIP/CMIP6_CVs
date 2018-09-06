@@ -2737,7 +2737,7 @@
                 },
                 "ocnBgchem":{
                     "description":"TOPAZ2",
-                    "native_nominal_resolution":"none"
+                    "native_nominal_resolution":"100km"
                 },
                 "seaIce":{
                     "description":"SIS (Tripolar360x200L50)",

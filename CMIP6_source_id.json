@@ -2670,7 +2670,7 @@
                     "native_nominal_resolution":"50 km"
                 },
                 "atmosChem":{
-                    "description":"unnamed (fast chemistry, aerosol only)",
+                    "description":"fast chemistry, aerosol only",
                     "native_nominal_resolution":"50 km"
                 },
                 "land":{

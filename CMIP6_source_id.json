@@ -2620,27 +2620,27 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"unnamed (fast chemistry, aerosol only)",
+                    "description":"fast chemistry, aerosol only",
                     "native_nominal_resolution":"100 km"
                 },
                 "land":{
-                    "description":"GFDL-LM4.0",
+                    "description":" GFDL-LM4.0.1 (1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 20 levels; bot level 10m) ; land-Veg:unnamed (dynamic vegetation, dynamic land use) ; land-Hydro:unnamed (soil water and ice, multi-layer snow, rivers and lakes)",
                     "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
-                    "description":"GFDL-LM4.0",
+                    "description":"GFDL-LM4.0.1",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-OM4p25 (GFDL-MOM6, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "native_nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
-                    "description":"GFDL BLING v2",
+                    "description":"GFDL-BLINGv2",
                     "native_nominal_resolution":"25 km"
                 },
                 "seaIce":{
-                    "description":"SIS2",
+                    "description":"GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)",
                     "native_nominal_resolution":"25 km"
                 }
             },

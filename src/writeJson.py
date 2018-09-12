@@ -319,6 +319,7 @@ PJD 31 Jul 2018    - Revise multiple GFDL source_id values - release_year https:
 PJD 31 Jul 2018    - Revise piClim experiment_ids allowed components - release_year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/592
 PJD 15 Aug 2018    - Rename nominal_resolution -> native_nominal_resolution in source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/597
 PJD 22 Aug 2018    - Revise CDRMIP experiment_id start_years and num years https://github.com/WCRP-CMIP/CMIP6_CVs/issues/594
+PJD 12 Sep 2018    - Revise source_id BCC-CSM2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/407, 600
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -344,7 +345,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise CDRMIP experiment_id start_years and num years\"'
+commitMessage = '\"Revise source_id BCC-CSM2-HR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -484,13 +485,6 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
-# Rename
-key = 'esm-ssp585ext'
-experiment_id[key]['start_year'] = '2101'
-experiment_id[key]['min_number_yrs_per_sim'] = '200'
-key = 'esm-ssp585-ssp126Lu-ext'
-experiment_id[key]['start_year'] = '2101'
-experiment_id[key]['min_number_yrs_per_sim'] = '200'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -740,6 +734,13 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'BCC-CSM2-HR'
+source_id[key]['model_component']['atmos']['description'] = 'BCC_AGCM3_HR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
+key = 'BCC-CSM2-MR'
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
+key = 'BCC-ESM1'
+source_id[key]['model_component']['ocean']['description'] = 'MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)'
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'
 #source_id[key] = {}

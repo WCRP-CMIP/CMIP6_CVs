@@ -339,7 +339,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"BCC_AGCM3_LR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)",
+                    "description":"BCC_AGCM3_HR (T266; 800 x 400 longitude/latitude; 56 levels; top level 0.1 hPa)",
                     "native_nominal_resolution":"50 km"
                 },
                 "atmosChem":{
@@ -355,7 +355,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "description":"MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -413,7 +413,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "description":"MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -463,7 +463,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MOM4 (1/3 deg 30S-30N, 1/3-1 deg 30-60 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
+                    "description":"MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -5329,13 +5329,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Aug 22 18:48:22 2018 -0700",
-        "CV_collection_version":"6.2.13.0",
+        "CV_collection_modified":"Wed Sep 12 09:53:06 2018 -0700",
+        "CV_collection_version":"6.2.13.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"4775436280578b7f0ca75634666ec743f68e38f3",
+        "previous_commit":"f17e2910435136dd68708f870a7712535942d5fa",
         "source_id_CV_modified":"Wed Aug 15 07:28:43 2018 -0700",
-        "source_id_CV_note":"Rename nominal_resolution -> native_nominal_resolution in source_id",
+        "source_id_CV_note":"Revise source_id BCC-CSM2-HR",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

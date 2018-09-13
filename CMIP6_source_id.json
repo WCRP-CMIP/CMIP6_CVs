@@ -2666,7 +2666,8 @@
                     "native_nominal_resolution":"50 km"
                 },
                 "atmos":{
-                    "description":"GFDL-AM4.0.1 (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 720 x 360 longitude/latitude; 33 levels; top level 1 hPa)",
+                    "description":"GFDL-AM4C192 (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 720 x 360 longitude/latitude; 33 levels; top level 1 hPa)",
+                 
                     "native_nominal_resolution":"50 km"
                 },
                 "atmosChem":{

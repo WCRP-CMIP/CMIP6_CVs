@@ -2736,7 +2736,7 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"TOPAZ2",
+                    "description":"GFDL-TOPAZ2",
                     "native_nominal_resolution":"100km"
                 },
                 "seaIce":{

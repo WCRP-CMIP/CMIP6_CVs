@@ -2740,7 +2740,8 @@
                     "native_nominal_resolution":"100km"
                 },
                 "seaIce":{
-                    "description":"SIS (Tripolar360x200L50)",
+                    "description":"GFDL-SIM2 (GFDL-SIS, tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 3 layers; 5 thickness categories)
+",
                     "native_nominal_resolution":"100 km"
                 }
             },
@@ -2846,7 +2847,7 @@
                     "native_nominal_resolution":"50 km"
                 },
                 "seaIce":{
-                    "description":"SIS2",
+                    "description":"GFDL-SIM4p5 (GFDL-SIS2.0, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 5 layers; 5 thickness categories)",
                     "native_nominal_resolution":"50 km"
                 }
             },

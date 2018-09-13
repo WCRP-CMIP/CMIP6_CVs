@@ -2683,7 +2683,7 @@
                     "native_nominal_resolution":"50 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.25 deg; 1440 x 720 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-OM4p25 (GFDL-MOM6, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "native_nominal_resolution":"25 km"
                 },
                 "ocnBgchem":{
@@ -2691,7 +2691,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"SIS2",
+                    "description":"GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)",
                     "native_nominal_resolution":"25 km"
                 }
             },

@@ -2840,11 +2840,11 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-OM4p5 (GFDL-MOM6, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
-                    "description":"GFDL BLING v2",
+                    "description":"GFDL-BLINGv2",
                     "native_nominal_resolution":"50 km"
                 },
                 "seaIce":{

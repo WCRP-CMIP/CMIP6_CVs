@@ -2790,15 +2790,15 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "ocean":{
-                    "description":"GFDL-MOM6 (tripolar - nominal 0.5 deg; 720 x 360 longitude/latitude; 75 levels; top grid cell 0-2 m)",
+                    "description":"GFDL-OM4p5 (GFDL-MOM6, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
-                    "description":"COBALT 2.0",
+                    "description":"GFDL-COBALTv2",
                     "native_nominal_resolution":"50 km"
                 },
                 "seaIce":{
-                    "description":"SIS2",
+                    "description":"GFDL-SIM4p5 (GFDL-SIS2.0, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 5 layers; 5 thickness categories)",
                     "native_nominal_resolution":"50 km"
                 }
             },

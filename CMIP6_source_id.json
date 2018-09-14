@@ -2649,7 +2649,6 @@
         },
         "GFDL-CM4C192":{
             "activity_participation":[
-                "CMIP",
                 "HighResMIP"
             ],
             "cohort":[
@@ -2807,7 +2806,6 @@
         },
         "GFDL-OM4p5B":{
             "activity_participation":[
-                "CMIP",
                 "OMIP"
             ],
             "cohort":[

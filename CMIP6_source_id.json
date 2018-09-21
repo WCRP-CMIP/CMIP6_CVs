@@ -216,7 +216,6 @@
                 "CORDEX",
                 "HighResMIP",
                 "OMIP",
-                "PMIP",
                 "SIMIP",
                 "ScenarioMIP",
                 "VIACSAB"
@@ -319,6 +318,56 @@
             },
             "release_year":"2018",
             "source_id":"AWI-CM-1-1-MR"
+        },
+        "AWI-ESM-1-1-LR":{
+            "activity_participation":[
+                "CMIP",
+                "PMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-ESM 1.1 LR",
+            "label_extended":"AWI-ESM 1.1 LR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JSBACH 3.20 with dynamic vegetation",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"FESOM 1.4",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"AWI-ESM-1-1-LR"
         },
         "BCC-CSM2-HR":{
             "activity_participation":[

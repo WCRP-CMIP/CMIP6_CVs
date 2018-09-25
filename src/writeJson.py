@@ -321,6 +321,7 @@ PJD 15 Aug 2018    - Rename nominal_resolution -> native_nominal_resolution in s
 PJD 22 Aug 2018    - Revise CDRMIP experiment_id start_years and num years https://github.com/WCRP-CMIP/CMIP6_CVs/issues/594
 PJD 12 Sep 2018    - Revise source_id BCC-CSM2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/407, 600
 PJD 14 Sep 2018    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
+PJD 25 Sep 2018    - Revise multiple NICAM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/606
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -346,7 +347,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple GFDL source_id values\"'
+commitMessage = '\"Revise multiple NICAM source_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -735,62 +736,14 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-CM4'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'CMIP',
- 'DynVarMIP',
- 'GMMIP',
- 'OMIP',
- 'RFMIP',
- 'ScenarioMIP'
-]
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM4.0.1 (Cubed-sphere (c96) - 1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 33 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmosChem']['description'] = 'fast chemistry, aerosol only'
-source_id[key]['model_component']['land']['description'] = 'GFDL-LM4.0.1 (1 degree nominal horizontal resolution; 360 x 180 longitude/latitude; 20 levels; bottom level 10m); land-Veg:unnamed (dynamic vegetation, dynamic land use); land-Hydro:unnamed (soil water and ice, multi-layer snow, rivers and lakes)'
-source_id[key]['model_component']['landIce']['description'] = 'GFDL-LM4.0.1'
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-OM4p25 (GFDL-MOM6, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'GFDL-BLINGv2'
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)'
-key = 'GFDL-CM4C192'
-source_id[key]['activity_participation'] = [
- 'HighResMIP'
-]
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM4C192 (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 720 x 360 longitude/latitude; 33 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmosChem']['description'] = 'fast chemistry, aerosol only'
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-OM4p25 (GFDL-MOM6, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)'
-key = 'GFDL-ESM2M'
-source_id[key]['activity_participation'] = [
- 'FAFMIP'
-]
-source_id[key]['model_component']['aerosol']['description'] = 'prescribed'
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-AM2 (144 x 90 longitude/latitude; 24 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmosChem']['description'] = 'prescribed'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'GFDL-TOPAZ2'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIM2 (GFDL-SIS, tripolar - nominal 1 deg; 360 x 200 longitude/latitude; 3 layers; 5 thickness categories)'
-key = 'GFDL-ESM4'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CDRMIP',
- 'CMIP',
- 'DAMIP',
- 'DynVarMIP',
- 'LUMIP',
- 'ScenarioMIP'
-]
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-OM4p5 (GFDL-MOM6, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'GFDL-COBALTv2'
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIM4p5 (GFDL-SIS2.0, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 5 layers; 5 thickness categories)'
-key = 'GFDL-OM4p5B'
-source_id[key]['activity_participation'] = [
- 'OMIP'
-]
-source_id[key]['model_component']['ocean']['description'] = 'GFDL-OM4p5 (GFDL-MOM6, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'GFDL-BLINGv2'
-source_id[key]['model_component']['seaIce']['description'] = 'GFDL-SIM4p5 (GFDL-SIS2.0, tripolar - nominal 0.5 deg; 720 x 576 longitude/latitude; 5 layers; 5 thickness categories)'
+key = 'NICAM16-7S'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+key = 'NICAM16-8S'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
+key = 'NICAM16-9S'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
+key = 'NICAM16-9D-L78'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
 
 #==============================================================================
 #key = 'AWI-CM-1-0-HR'

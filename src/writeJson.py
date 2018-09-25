@@ -322,6 +322,7 @@ PJD 22 Aug 2018    - Revise CDRMIP experiment_id start_years and num years https
 PJD 12 Sep 2018    - Revise source_id BCC-CSM2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/407, 600
 PJD 14 Sep 2018    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 25 Sep 2018    - Revise multiple NICAM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/606
+PJD 25 Sep 2018    - Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/pull/608
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -347,7 +348,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple NICAM source_id values\"'
+commitMessage = '\"Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -736,25 +737,64 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'NICAM16-7S'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-key = 'NICAM16-8S'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
-key = 'NICAM16-9S'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
-key = 'NICAM16-9D-L78'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
+key = 'AWI-CM-1-1-LR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'HighResMIP',
+ 'OMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
+]
+key = 'AWI-ESM-1-1-LR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'PMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'AWI'
+]
+source_id[key]['label'] = 'AWI-ESM 1.1 LR'
+source_id[key]['label_extended'] = 'AWI-ESM 1.1 LR'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20 with dynamic vegetation'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 
 #==============================================================================
-#key = 'AWI-CM-1-0-HR'
+#key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
 #source_id[key]['activity_participation'] = [
 # 'CMIP',
-# 'CORDEX',
-# 'HighResMIP',
-# 'OMIP',
-# 'SIMIP',
-# 'VIACSAB'
+# 'PMIP'
 #]
 #source_id[key]['cohort'] = [
 # 'Registered'
@@ -762,34 +802,34 @@ source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km
 #source_id[key]['institution_id'] = [
 # 'AWI'
 #]
-#source_id[key]['label'] = 'AWI-CM 1.0 HR'
-#source_id[key]['label_extended'] = 'AWI-CM 1.0 HR'
+#source_id[key]['label'] = 'AWI-ESM 1.1 LR'
+#source_id[key]['label_extended'] = 'AWI-ESM 1.1 LR'
 #source_id[key]['model_component'] = {}
 #source_id[key]['model_component']['aerosol'] = {}
 #source_id[key]['model_component']['aerosol']['description'] = 'none'
-#source_id[key]['model_component']['aerosol']['nominal_resolution'] = 'none'
+#source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
 #source_id[key]['model_component']['atmos'] = {}
-#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.02p4 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km)'
-#source_id[key]['model_component']['atmos']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)'
+#source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 #source_id[key]['model_component']['atmosChem'] = {}
 #source_id[key]['model_component']['atmosChem']['description'] = 'none'
-#source_id[key]['model_component']['atmosChem']['nominal_resolution'] = 'none'
+#source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 #source_id[key]['model_component']['land'] = {}
-#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.10'
-#source_id[key]['model_component']['land']['nominal_resolution'] = '100 km'
+#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20 with dynamic vegetation'
+#source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
 #source_id[key]['model_component']['landIce'] = {}
 #source_id[key]['model_component']['landIce']['description'] = 'none'
-#source_id[key]['model_component']['landIce']['nominal_resolution'] = 'none'
+#source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 #source_id[key]['model_component']['ocean'] = {}
-#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 1306775 wet nodes; 46 levels; top grid cell 0-5 m)'
-#source_id[key]['model_component']['ocean']['nominal_resolution'] = '25 km'
+#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)'
+#source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
 #source_id[key]['model_component']['ocnBgchem'] = {}
 #source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-#source_id[key]['model_component']['ocnBgchem']['nominal_resolution'] = 'none'
+#source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 #source_id[key]['model_component']['seaIce'] = {}
 #source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
-#source_id[key]['model_component']['seaIce']['nominal_resolution'] = '25 km'
-#source_id[key]['release_year'] = '2017'
+#source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
+#source_id[key]['release_year'] = '2018'
 #source_id[key]['source_id'] = key
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76

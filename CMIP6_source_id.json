@@ -4506,7 +4506,7 @@
                 },
                 "atmos":{
                     "description":"NICAM.16 (56km icosahedral grid; 163,842 grid cells (=10*4^7+2); 38 levels; top level 40 km)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -4557,7 +4557,7 @@
                 },
                 "atmos":{
                     "description":"NICAM.16 (28km icosahedral grid; 655,362 grid cells (=10*4^8+2); 38 levels; top level 40 km)",
-                    "native_nominal_resolution":"25 km"
+                    "native_nominal_resolution":"50 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -4607,7 +4607,7 @@
                 },
                 "atmos":{
                     "description":"NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 78 levels; top level 40 km)",
-                    "native_nominal_resolution":"10 km"
+                    "native_nominal_resolution":"25 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -4658,7 +4658,7 @@
                 },
                 "atmos":{
                     "description":"NICAM.16 (14km icosahedral grid; 2,621,442 grid cells (=10*4^9+2); 38 levels; top level 40 km)",
-                    "native_nominal_resolution":"10 km"
+                    "native_nominal_resolution":"25 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -5327,13 +5327,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Sep 14 17:22:09 2018 -0700",
-        "CV_collection_version":"6.2.13.2",
+        "CV_collection_modified":"Tue Sep 25 09:13:46 2018 -0700",
+        "CV_collection_version":"6.2.13.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"682d730dd14327afa24877a464ca411788bc6845",
-        "source_id_CV_modified":"Wed Sep 12 09:53:06 2018 -0700",
-        "source_id_CV_note":"Revise multiple GFDL source_id values",
+        "previous_commit":"d0da5c55aa61f0468c54abc069fd92d036ac7d50",
+        "source_id_CV_modified":"Fri Sep 14 17:22:09 2018 -0700",
+        "source_id_CV_note":"Revise multiple NICAM source_id values",
         "specs_doc":"v6.2.6 (20th December 2017; https://goo.gl/v1drZl)"
     }
 }

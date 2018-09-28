@@ -323,6 +323,7 @@ PJD 12 Sep 2018    - Revise source_id BCC-CSM2-HR https://github.com/WCRP-CMIP/C
 PJD 14 Sep 2018    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 25 Sep 2018    - Revise multiple NICAM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/606
 PJD 25 Sep 2018    - Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/pull/608
+PJD 17 Jul 2018    - Revise experiment_id esm-ssp534-over https://github.com/WCRP-CMIP/CMIP6_CVs/issues/607
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -348,7 +349,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR\"'
+commitMessage = '\"Revise experiment_id esm-ssp534-over\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -488,6 +489,18 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
+
+key = 'esm-ssp534-over'
+experiment_id[key]['parent_activity_id'] = ['C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['esm-ssp585']
+experiment_id[key]['start_year'] = '2040'
+experiment_id[key]['min_number_yrs_per_sim'] = '61'
+key = 'ssp534-over'
+experiment_id[key]['description'] = ''.join(['21st century overshoot scenario relative to SSP5_34. ',
+                                             'Branches from SSP5_85 at 2040 with emissions reduced to ',
+                                             'zero by 2070 and negative thereafter. This simulation ',
+                                             'should optionally be extended to year 2300'])
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -737,57 +750,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'AWI-CM-1-1-LR'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'CORDEX',
- 'HighResMIP',
- 'OMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB'
-]
-key = 'AWI-ESM-1-1-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'PMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'AWI'
-]
-source_id[key]['label'] = 'AWI-ESM 1.1 LR'
-source_id[key]['label_extended'] = 'AWI-ESM 1.1 LR'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20 with dynamic vegetation'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

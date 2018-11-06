@@ -325,6 +325,7 @@ PJD 25 Sep 2018    - Revise multiple NICAM source_id values https://github.com/W
 PJD 25 Sep 2018    - Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/pull/608
 PJD 28 Sep 2018    - Revise experiment_id esm-ssp534-over https://github.com/WCRP-CMIP/CMIP6_CVs/issues/607
 PJD  6 Nov 2018    - Revise CNRM-CM6-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/617
+PJD  6 Nov 2018    - Correct CNRM-ESM2-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/618
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -350,7 +351,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise CNRM-CM6-1 activity_participation\"'
+commitMessage = '\"Correct CNRM-ESM2-1 activity_participation\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -767,7 +768,7 @@ source_id[key]['activity_participation'] = [
  'RFMIP',
  'ScenarioMIP'
 ]
-key = 'CNRM-CM6-1'
+key = 'CNRM-ESM2-1'
 source_id[key]['activity_participation'] = [
  'AerChemMIP',
  'C4MIP',

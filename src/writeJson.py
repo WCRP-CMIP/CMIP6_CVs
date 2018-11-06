@@ -323,7 +323,8 @@ PJD 12 Sep 2018    - Revise source_id BCC-CSM2-HR https://github.com/WCRP-CMIP/C
 PJD 14 Sep 2018    - Revise multiple GFDL source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/318
 PJD 25 Sep 2018    - Revise multiple NICAM source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/606
 PJD 25 Sep 2018    - Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/pull/608
-PJD 17 Jul 2018    - Revise experiment_id esm-ssp534-over https://github.com/WCRP-CMIP/CMIP6_CVs/issues/607
+PJD 28 Sep 2018    - Revise experiment_id esm-ssp534-over https://github.com/WCRP-CMIP/CMIP6_CVs/issues/607
+PJD  6 Nov 2018    - Revise CNRM-CM6-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/617
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -349,7 +350,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id esm-ssp534-over\"'
+commitMessage = '\"Revise CNRM-CM6-1 activity_participation\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -750,7 +751,35 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key = 'CNRM-CM6-1'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'HighResMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'PAMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP'
+]
+key = 'CNRM-CM6-1'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'CORDEX',
+ 'GeoMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'ScenarioMIP'
+]
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
@@ -1058,7 +1087,7 @@ for jsonName in masterTargets:
     versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
     versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
-    versionInfo['specs_doc'] = 'v6.2.6 (20th December 2017; https://goo.gl/v1drZl)'
+    versionInfo['specs_doc'] = 'v6.2.7 (10th September 2018; https://goo.gl/v1drZl)'
     del(versionInfo1)
 
     # Check file exists

@@ -326,6 +326,7 @@ PJD 25 Sep 2018    - Register source_id AWI-ESM-1-1-LR, amend AWI-CM-1-1-LR http
 PJD 28 Sep 2018    - Revise experiment_id esm-ssp534-over https://github.com/WCRP-CMIP/CMIP6_CVs/issues/607
 PJD  6 Nov 2018    - Revise CNRM-CM6-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/617
 PJD  6 Nov 2018    - Correct CNRM-ESM2-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/618
+PJD  7 Nov 2018    - Revise CNRM-ESM2-1 activity_participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/621
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -351,7 +352,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Correct CNRM-ESM2-1 activity_participation\"'
+commitMessage = '\"Revise CNRM-ESM2-1 activity_participation\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -752,22 +753,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'DCPP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'ISMIP6',
- 'LS3MIP',
- 'PAMIP',
- 'PMIP',
- 'RFMIP',
- 'ScenarioMIP'
-]
 key = 'CNRM-ESM2-1'
 source_id[key]['activity_participation'] = [
  'AerChemMIP',
@@ -779,6 +764,7 @@ source_id[key]['activity_participation'] = [
  'LS3MIP',
  'LUMIP',
  'OMIP',
+ 'RFMIP',
  'ScenarioMIP'
 ]
 #==============================================================================

@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"088f820cade952a1f80cd08d98e41e03625ad2f7",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/088f820cade952a1f80cd08d98e41e03625ad2f7",
-            "commitMessage":"Correct CNRM-ESM2-1 activity_participation",
-            "timeStamp":"Tue Nov  6 09:26:19 2018 -0500"
+            "MD5":"d4ea02744848dd1b3153be6829cfcbf9d9f7c215",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d4ea02744848dd1b3153be6829cfcbf9d9f7c215",
+            "commitMessage":"Revise CNRM-ESM2-1 activity_participation",
+            "timeStamp":"Wed Nov  7 11:55:05 2018 -0500"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":14,
             "versionCVStructure":2,
             "versionMIPEra":6

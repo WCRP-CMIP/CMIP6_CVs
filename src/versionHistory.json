@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"07ad4df21e6250844403ba67fecd2beac4e3073e",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/07ad4df21e6250844403ba67fecd2beac4e3073e",
-            "commitMessage":"Revise experiment_id esm-ssp534-over",
-            "timeStamp":"Fri Sep 28 11:32:31 2018 -0700"
+            "MD5":"970e50891f92b970949669d0ab73b1f6230142b7",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/970e50891f92b970949669d0ab73b1f6230142b7",
+            "commitMessage":"Revise experiment_id values, BGC as allowed component",
+            "timeStamp":"Thu Nov 29 10:12:56 2018 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
-            "versionCVContent":14,
+            "versionCVCommit":0,
+            "versionCVContent":15,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

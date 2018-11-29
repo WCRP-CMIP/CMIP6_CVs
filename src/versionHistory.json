@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"d4ea02744848dd1b3153be6829cfcbf9d9f7c215",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d4ea02744848dd1b3153be6829cfcbf9d9f7c215",
-            "commitMessage":"Revise CNRM-ESM2-1 activity_participation",
-            "timeStamp":"Wed Nov  7 11:55:05 2018 -0500"
+            "MD5":"3fc0369461e626a69fda3fda0c883fd8b810b6c8",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3fc0369461e626a69fda3fda0c883fd8b810b6c8",
+            "commitMessage":"Register source_id TaiESM1",
+            "timeStamp":"Thu Nov 29 08:09:22 2018 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":4,
+            "versionCVCommit":5,
             "versionCVContent":14,
             "versionCVStructure":2,
             "versionMIPEra":6

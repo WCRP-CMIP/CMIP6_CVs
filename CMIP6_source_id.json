@@ -5163,6 +5163,61 @@
             "release_year":"2017",
             "source_id":"SAM0-UNICON"
         },
+        "TaiESM1":{
+            "activity_participation":[
+                "AerChemMIP",
+                "CFMIP",
+                "CMIP",
+                "GMMIP",
+                "LUMIP",
+                "PMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AS-RCEC"
+            ],
+            "label":"TaiESM 1.0",
+            "label_extended":"Taiwan Earth System Model 1.0",
+            "model_component":{
+                "aerosol":{
+                    "description":"SNAP (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"SNAP (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"CLM4.0 (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"TaiESM1"
+        },
         "UKESM1-0-LL":{
             "activity_participation":[
                 "AerChemMIP",
@@ -5381,13 +5436,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 29 08:00:53 2018 -0800",
-        "CV_collection_version":"6.2.14.4",
+        "CV_collection_modified":"Thu Nov 29 08:09:22 2018 -0800",
+        "CV_collection_version":"6.2.14.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1ec86a3d37b77cb6075b6783007390942ab24b3f",
+        "previous_commit":"3fc0369461e626a69fda3fda0c883fd8b810b6c8",
         "source_id_CV_modified":"Wed Nov  7 11:55:05 2018 -0500",
-        "source_id_CV_note":"Revise CNRM-ESM2-1 activity_participation",
+        "source_id_CV_note":"Register source_id TaiESM1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

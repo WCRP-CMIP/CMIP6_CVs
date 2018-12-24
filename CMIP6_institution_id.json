@@ -1,7 +1,7 @@
 {
     "institution_id":{
         "AER":"Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA",
-        "AS-RCEC":"Research Center for Environmental Changes, Nankang, Taipei 11529, Taiwan",
+        "AS-RCEC":"Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan",
         "AWI":"Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany",
         "BCC":"Beijing Climate Center, Beijing 100081, China",
         "BNU":"Beijing Normal University, Beijing 100875, China",
@@ -47,13 +47,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 29 10:12:56 2018 -0800",
-        "CV_collection_version":"6.2.15.0",
+        "CV_collection_modified":"Sun Dec 23 18:45:50 2018 -0800",
+        "CV_collection_version":"6.2.15.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Thu Nov 29 08:00:53 2018 -0800",
-        "institution_id_CV_note":"Register institution_id AS-RCEC",
-        "previous_commit":"970e50891f92b970949669d0ab73b1f6230142b7",
+        "institution_id_CV_note":"Revise institution_id AS-RCEC",
+        "previous_commit":"27357922199883d6c2ea89f412c60ea6130de6c9",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

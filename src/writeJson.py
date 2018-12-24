@@ -330,6 +330,7 @@ PJD  7 Nov 2018    - Revise CNRM-ESM2-1 activity_participation https://github.co
 PJD 29 Nov 2018    - Register institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
 PJD 29 Nov 2018    - Register source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/626
 PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https://github.com/WCRP-CMIP/CMIP6_CVs/issues/623
+PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -355,7 +356,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id values, BGC as allowed component\"'
+commitMessage = '\"Revise institution_id AS-RCEC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -597,7 +598,7 @@ grid_label = {
 #%% Institutions
 institution_id = {
     'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
-    'AS-RCEC': 'Research Center for Environmental Changes, Nankang, Taipei 11529, Taiwan',
+    'AS-RCEC': 'Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
     'BNU': 'Beijing Normal University, Beijing 100875, China',

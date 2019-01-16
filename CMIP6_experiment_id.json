@@ -8415,13 +8415,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Sun Dec 23 18:45:50 2018 -0800",
-        "CV_collection_version":"6.2.15.1",
+        "CV_collection_modified":"Wed Jan 16 15:18:02 2019 -0800",
+        "CV_collection_version":"6.2.15.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Nov 29 10:12:56 2018 -0800",
         "experiment_id_CV_note":"Revise experiment_id values, BGC as allowed component",
         "institution_id":"PCMDI",
-        "previous_commit":"27357922199883d6c2ea89f412c60ea6130de6c9",
+        "previous_commit":"9ee37b66fb944f8d3b7628d7921506e38e7eb1f9",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

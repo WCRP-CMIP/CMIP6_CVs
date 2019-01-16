@@ -331,6 +331,7 @@ PJD 29 Nov 2018    - Register institution_id AS-RCEC https://github.com/WCRP-CMI
 PJD 29 Nov 2018    - Register source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/626
 PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https://github.com/WCRP-CMIP/CMIP6_CVs/issues/623
 PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
+PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -356,7 +357,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id AS-RCEC\"'
+commitMessage = '\"Revise source_id values for EC-Earth3 configurations\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -754,6 +755,55 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'EC-Earth3'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'DCPP',
+ 'DynVarMIP',
+ 'LS3MIP',
+ 'PAMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
+]
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-AerChem'
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-CC'
+source_id[key]['activity_participation'] = [
+ 'CDRMIP',
+ 'CMIP',
+ 'C4MIP',
+ 'LUMIP',
+ 'OMIP'
+]
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-GrIS'
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-HR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
+ 'HighResMIP'
+]
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-LR'
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-Veg'
+source_id[key]['activity_participation'] = [
+ 'CDRMIP',
+ 'CMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'ScenarioMIP'
+]
+source_id[key]['release_year'] = '2019'
+key = 'EC-Earth3-Veg-LR'
+source_id[key]['release_year'] = '2019'
+
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

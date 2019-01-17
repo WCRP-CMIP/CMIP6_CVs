@@ -1986,9 +1986,10 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"1910 or 1950",
+            "start_year":"1910, 1920 or 1950",
             "sub_experiment_id":[
                 "s1910",
+                "s1920",
                 "s1950"
             ],
             "tier":"3"
@@ -2384,9 +2385,10 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"either 1910 or 1950",
+            "start_year":"1910, 1920 or 1950",
             "sub_experiment_id":[
                 "s1910",
+                "s1920",
                 "s1950"
             ],
             "tier":"3"
@@ -8415,13 +8417,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 16 16:34:51 2019 -0800",
-        "CV_collection_version":"6.2.16.0",
+        "CV_collection_modified":"Wed Jan 16 16:46:27 2019 -0800",
+        "CV_collection_version":"6.2.17.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Thu Nov 29 10:12:56 2018 -0800",
-        "experiment_id_CV_note":"Revise LS3MIP experiment_id values",
+        "experiment_id_CV_modified":"Wed Jan 16 16:34:51 2019 -0800",
+        "experiment_id_CV_note":"Revise DCPP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"501a6c08ce1779c563939a5a074cdde6ff93cc50",
+        "previous_commit":"e295f0b31bd26712fc3bacfc22b92e18fe9eb1e6",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

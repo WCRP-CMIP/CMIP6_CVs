@@ -333,6 +333,7 @@ PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https
 PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
 PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
+PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -358,7 +359,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise LS3MIP experiment_id values\"'
+commitMessage = '\"Revise DCPP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -499,18 +500,13 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'amip-lfmip-rmLC'
-experiment_id[key]['description'] = ('Scenario forced experiment with prescribed land surface climatology derived from 30yr '
-                                     'running mean from the first ensemble members of the historical and ssp585 experiments. '
-                                     'SST and sea-ice from the first ensemble members of the historical and ssp585 experiments')
-experiment_id[key]['experiment'] = ('prescribed land surface climatology from historical plus scenario 30yr running mean, '
-                                   'prescribed SST and sea-ice from historical plus scenario runs')
-key = 'amip-lfmip-pdLC'
-experiment_id[key]['description'] = ('Scenario forced experiment with prescribed land surface climatology derived from modern '
-                                     'conditions from the first historical ensemble member (1980-2014). SST and sea-ice from '
-                                     'the first ensemble members of the historical and ssp585 experiments')
-experiment_id[key]['experiment'] = ('prescribed modern land surface climatology from historical, prescribed SST and sea-ice '
-                                    'from historical plus scenario runs')
+key = 'dcppC-atl-pacemaker'
+experiment_id[key]['start_year'] = '1910, 1920 or 1950'
+experiment_id[key]['sub_experiment_id'] = ['s1910', 's1920', 's1950']
+key = 'dcppC-pac-pacemaker'
+experiment_id[key]['start_year'] = '1910, 1920 or 1950'
+experiment_id[key]['sub_experiment_id'] = ['s1910', 's1920', 's1950']
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

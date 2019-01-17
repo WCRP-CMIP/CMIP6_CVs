@@ -332,6 +332,7 @@ PJD 29 Nov 2018    - Register source_id TaiESM1 https://github.com/WCRP-CMIP/CMI
 PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https://github.com/WCRP-CMIP/CMIP6_CVs/issues/623
 PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
 PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
+PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -357,7 +358,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id values for EC-Earth3 configurations\"'
+commitMessage = '\"Revise LS3MIP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -497,14 +498,19 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
-key = 'amip-hist'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'amip-hld'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'amip-TIP'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-key = 'amip-TIP-nosh'
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+# Fix issues
+key = 'amip-lfmip-rmLC'
+experiment_id[key]['description'] = ('Scenario forced experiment with prescribed land surface climatology derived from 30yr '
+                                     'running mean from the first ensemble members of the historical and ssp585 experiments. '
+                                     'SST and sea-ice from the first ensemble members of the historical and ssp585 experiments')
+experiment_id[key]['experiment'] = ('prescribed land surface climatology from historical plus scenario 30yr running mean, '
+                                   'prescribed SST and sea-ice from historical plus scenario runs')
+key = 'amip-lfmip-pdLC'
+experiment_id[key]['description'] = ('Scenario forced experiment with prescribed land surface climatology derived from modern '
+                                     'conditions from the first historical ensemble member (1980-2014). SST and sea-ice from '
+                                     'the first ensemble members of the historical and ssp585 experiments')
+experiment_id[key]['experiment'] = ('prescribed modern land surface climatology from historical, prescribed SST and sea-ice '
+                                    'from historical plus scenario runs')
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -755,54 +761,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'EC-Earth3'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'CORDEX',
- 'DCPP',
- 'DynVarMIP',
- 'LS3MIP',
- 'PAMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP',
- 'VIACSAB',
- 'VolMIP'
-]
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-AerChem'
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-CC'
-source_id[key]['activity_participation'] = [
- 'CDRMIP',
- 'CMIP',
- 'C4MIP',
- 'LUMIP',
- 'OMIP'
-]
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-GrIS'
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-HR'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'HighResMIP'
-]
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-LR'
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-Veg'
-source_id[key]['activity_participation'] = [
- 'CDRMIP',
- 'CMIP',
- 'LS3MIP',
- 'LUMIP',
- 'ScenarioMIP'
-]
-source_id[key]['release_year'] = '2019'
-key = 'EC-Earth3-Veg-LR'
-source_id[key]['release_year'] = '2019'
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

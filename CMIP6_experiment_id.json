@@ -1043,9 +1043,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Prescribed land conditions 1980-2014 climate; AMIP SSTs",
+            "description":"Scenario forced experiment with prescribed land surface climatology derived from modern conditions from the first historical ensemble member (1980-2014). SST and sea-ice from the first ensemble members of the historical and ssp585 experiments",
             "end_year":"2014",
-            "experiment":"prescribed land (from current climatology) and AMIP SSTs",
+            "experiment":"prescribed modern land surface climatology from historical, prescribed SST and sea-ice from historical plus scenario runs",
             "experiment_id":"amip-lfmip-pdLC",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
@@ -1072,9 +1072,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Prescribed land conditions 30yr running mean; AMIP SSTs",
+            "description":"Scenario forced experiment with prescribed land surface climatology derived from 30yr running mean from the first ensemble members of the historical and ssp585 experiments. SST and sea-ice from the first ensemble members of the historical and ssp585 experiments",
             "end_year":"2014",
-            "experiment":"prescribed land conditions (from running mean climatology) and AMIP SSTs",
+            "experiment":"prescribed land surface climatology from historical plus scenario 30yr running mean, prescribed SST and sea-ice from historical plus scenario runs",
             "experiment_id":"amip-lfmip-rmLC",
             "min_number_yrs_per_sim":"36",
             "parent_activity_id":[
@@ -8415,13 +8415,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 16 15:18:02 2019 -0800",
-        "CV_collection_version":"6.2.15.2",
+        "CV_collection_modified":"Wed Jan 16 16:34:51 2019 -0800",
+        "CV_collection_version":"6.2.16.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Nov 29 10:12:56 2018 -0800",
-        "experiment_id_CV_note":"Revise experiment_id values, BGC as allowed component",
+        "experiment_id_CV_note":"Revise LS3MIP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"9ee37b66fb944f8d3b7628d7921506e38e7eb1f9",
+        "previous_commit":"501a6c08ce1779c563939a5a074cdde6ff93cc50",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

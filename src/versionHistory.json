@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"ad91316d9b30a539c37e91a1b483f59e91c6053c",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ad91316d9b30a539c37e91a1b483f59e91c6053c",
-            "commitMessage":"Register source_id CESM2-WACCM",
-            "timeStamp":"Thu Jan 31 14:56:31 2019 -0800"
+            "MD5":"9dcaad79f282e851347ce12bb6b8a45b90caf52b",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9dcaad79f282e851347ce12bb6b8a45b90caf52b",
+            "commitMessage":"Register source_id CESM2-SE",
+            "timeStamp":"Thu Jan 31 15:02:49 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":3,
+            "versionCVCommit":4,
             "versionCVContent":17,
             "versionCVStructure":2,
             "versionMIPEra":6

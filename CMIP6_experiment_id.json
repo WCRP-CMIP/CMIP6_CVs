@@ -8417,13 +8417,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan 31 14:56:31 2019 -0800",
-        "CV_collection_version":"6.2.17.3",
+        "CV_collection_modified":"Thu Jan 31 15:02:49 2019 -0800",
+        "CV_collection_version":"6.2.17.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Jan 16 16:46:27 2019 -0800",
         "experiment_id_CV_note":"Revise DCPP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"ad91316d9b30a539c37e91a1b483f59e91c6053c",
+        "previous_commit":"9dcaad79f282e851347ce12bb6b8a45b90caf52b",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

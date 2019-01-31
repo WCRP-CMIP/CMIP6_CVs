@@ -334,6 +334,7 @@ PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/
 PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
 PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
+PJD 31 Jan 2019    - Revise source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -359,7 +360,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise DCPP experiment_id values\"'
+commitMessage = '\"Revise source_id LBLRTM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -757,6 +758,12 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'LBLRTM-12-8'
+oldKey = 'LBLRTM'
+source_id[key] = {}
+source_id[key] = source_id.pop(oldKey)
+source_id[key]['label'] = 'LBLRTM 12.8'
+source_id[key]['source_id'] = key
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
@@ -922,7 +929,7 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        if key in ['LBLRTM','ARTS-2-3']:
+        if key in ['LBLRTM-12-8','ARTS-2-3']:
             print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
             print(key,'HighResMIP no CMIP required - continue')

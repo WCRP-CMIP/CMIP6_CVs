@@ -335,7 +335,7 @@ PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https:
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
 PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
 PJD 31 Jan 2019    - Revise source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
-PJD 31 Jan 2019    - Register source_id RRTMG-LW-4-91 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/638 
+PJD 31 Jan 2019    - Register source_id RRTMG-LW-4-91 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/638
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1

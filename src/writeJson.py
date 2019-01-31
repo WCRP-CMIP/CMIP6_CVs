@@ -335,6 +335,7 @@ PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https:
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
 PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
 PJD 31 Jan 2019    - Revise source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/460
+PJD 31 Jan 2019    - Register source_id RRTMG-LW-4-91 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/638
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -360,7 +361,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id LBLRTM\"'
+commitMessage = '\"Register source_id RRTMG-LW-4-91\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -757,12 +758,45 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-# Fix issues
-key = 'LBLRTM-12-8'
-oldKey = 'LBLRTM'
+key = 'RRTMG-LW-4-91'
 source_id[key] = {}
-source_id[key] = source_id.pop(oldKey)
-source_id[key]['label'] = 'LBLRTM 12.8'
+source_id[key]['activity_participation'] = [
+ 'RFMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'AER'
+]
+source_id[key]['label'] = 'RRTMG-LW 4.91'
+source_id[key]['label_extended'] = 'RRTM for GCMs v4.91, longwave'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'none'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 
 #==============================================================================
@@ -929,7 +963,7 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        if key in ['LBLRTM-12-8','ARTS-2-3']:
+        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91']:
             print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
             print(key,'HighResMIP no CMIP required - continue')

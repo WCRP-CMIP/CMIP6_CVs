@@ -338,6 +338,7 @@ PJD 31 Jan 2019    - Revise source_id LBLRTM https://github.com/WCRP-CMIP/CMIP6_
 PJD 31 Jan 2019    - Register source_id RRTMG-LW-4-91 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/638
 PJD 31 Jan 2019    - Register source_id CESM2-WACCM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/639
 PJD 31 Jan 2019    - Register source_id CESM2-SE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/640
+PJD 31 Jan 2019    - Register source_id RRTMG-SW https://github.com/WCRP-CMIP/CMIP6_CVs/issues/641
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -363,7 +364,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id CESM2-SE\"'
+commitMessage = '\"Register source_id RRTMG-SW\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -760,46 +761,45 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-key = 'CESM2-SE'
+key = 'RRTMG-SW-4-02'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'CMIP',
- 'HighResMIP'
+ 'RFMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'NCAR'
+ 'AER'
 ]
-source_id[key]['label'] = 'CESM2-SE'
-source_id[key]['label_extended'] = 'CESM2-SE spectral element (cubed-sphere grid)'
+source_id[key]['label'] = 'RRTMG-SW 4.02'
+source_id[key]['label_extended'] = 'RRTM for GCMs v4.02, shortwave'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM4 (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '25 km'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM6 (0.25 degree spectral element; 777602 cells; 30 levels; top level 2.25 mb)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
+source_id[key]['model_component']['atmos']['description'] = 'none'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'MAM4 (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '25 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM5 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '25 km'
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'CISM2.1'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '5 km'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'MARBL (same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2019'
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 
 #==============================================================================
@@ -966,7 +966,7 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91']:
+        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91','RRTMG-SW-4-02']:
             print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
             print(key,'HighResMIP no CMIP required - continue')

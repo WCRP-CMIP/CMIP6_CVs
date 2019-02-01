@@ -339,6 +339,7 @@ PJD 31 Jan 2019    - Register source_id RRTMG-LW-4-91 https://github.com/WCRP-CM
 PJD 31 Jan 2019    - Register source_id CESM2-WACCM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/639
 PJD 31 Jan 2019    - Register source_id CESM2-SE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/640
 PJD 31 Jan 2019    - Register source_id RRTMG-SW https://github.com/WCRP-CMIP/CMIP6_CVs/issues/641
+PJD 31 Jan 2019    - Revise experiment_id pa-futAntSIC-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/648
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -364,7 +365,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id RRTMG-SW\"'
+commitMessage = '\"Revise experiment_id pa-futAntSIC-ext\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -505,12 +506,8 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'dcppC-atl-pacemaker'
-experiment_id[key]['start_year'] = '1910, 1920 or 1950'
-experiment_id[key]['sub_experiment_id'] = ['s1910', 's1920', 's1950']
-key = 'dcppC-pac-pacemaker'
-experiment_id[key]['start_year'] = '1910, 1920 or 1950'
-experiment_id[key]['sub_experiment_id'] = ['s1910', 's1920', 's1950']
+key = 'pa-futAntSIC-ext'
+experiment_id[key]['description'] = 'PA6.3: investigate decadal and longer timescale response to Antarctic sea ice'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -761,46 +758,46 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-key = 'RRTMG-SW-4-02'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'RFMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'AER'
-]
-source_id[key]['label'] = 'RRTMG-SW 4.02'
-source_id[key]['label_extended'] = 'RRTM for GCMs v4.02, shortwave'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
+#key = 'RRTMG-SW-4-02'
+#source_id[key] = {}
+#source_id[key]['activity_participation'] = [
+# 'RFMIP'
+#]
+#source_id[key]['cohort'] = [
+# 'Registered'
+#]
+#source_id[key]['institution_id'] = [
+# 'AER'
+#]
+#source_id[key]['label'] = 'RRTMG-SW 4.02'
+#source_id[key]['label_extended'] = 'RRTM for GCMs v4.02, shortwave'
+#source_id[key]['model_component'] = {}
+#source_id[key]['model_component']['aerosol'] = {}
+#source_id[key]['model_component']['aerosol']['description'] = 'none'
+#source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['atmos'] = {}
+#source_id[key]['model_component']['atmos']['description'] = 'none'
+#source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['atmosChem'] = {}
+#source_id[key]['model_component']['atmosChem']['description'] = 'none'
+#source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['land'] = {}
+#source_id[key]['model_component']['land']['description'] = 'none'
+#source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['landIce'] = {}
+#source_id[key]['model_component']['landIce']['description'] = 'none'
+#source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['ocean'] = {}
+#source_id[key]['model_component']['ocean']['description'] = 'none'
+#source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['ocnBgchem'] = {}
+#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+#source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+#source_id[key]['model_component']['seaIce'] = {}
+#source_id[key]['model_component']['seaIce']['description'] = 'none'
+#source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+#source_id[key]['release_year'] = '2017'
+#source_id[key]['source_id'] = key
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

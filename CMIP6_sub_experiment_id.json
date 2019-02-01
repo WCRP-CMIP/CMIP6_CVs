@@ -75,11 +75,11 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan 31 15:49:38 2019 -0800",
-        "CV_collection_version":"6.2.17.5",
+        "CV_collection_modified":"Thu Jan 31 16:06:21 2019 -0800",
+        "CV_collection_version":"6.2.18.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3ecf11784b4d940ba57bce6a3b009711e74a4f93",
+        "previous_commit":"ba732e8378f5c8029c49d079ef5ca180c6b370d5",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "sub_experiment_id_CV_modified":"Wed Mar 8 11:27:00 2017 -0700",
         "sub_experiment_id_CV_note":"Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)"

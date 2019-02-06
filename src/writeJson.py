@@ -340,6 +340,8 @@ PJD 31 Jan 2019    - Register source_id CESM2-WACCM https://github.com/WCRP-CMIP
 PJD 31 Jan 2019    - Register source_id CESM2-SE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/640
 PJD 31 Jan 2019    - Register source_id RRTMG-SW https://github.com/WCRP-CMIP/CMIP6_CVs/issues/641
 PJD 31 Jan 2019    - Revise experiment_id pa-futAntSIC-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/648
+PJD  6 Feb 2019    - Register institution_id RTE-RRTMGP-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/650
+PJD  6 Feb 2019    - Register source_id RTE-RRTMGP-181204 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/642
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -365,7 +367,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id pa-futAntSIC-ext\"'
+commitMessage = '\"Register institution_id RTE-RRTMGP-Consortium\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -612,10 +614,13 @@ institution_id = {
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
     'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
-    'CNRM-CERFACS': 'CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)',
-    'CSIR-CSIRO': 'CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)',
+    'CNRM-CERFACS': ''.join(['CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche ',
+                             'et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)']),
+    'CSIR-CSIRO': ''.join(['CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), ',
+                           'CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
-    'CSIRO-ARCCSS-BoM': 'Commonwealth Scientific and Industrial Research Organisation, Australian Research Council Centre of Excellence for Climate System Science, and Bureau of Meteorology, Aspendale, Victoria 3195, Australia',
+    'CSIRO-ARCCSS-BoM': ''.join(['Commonwealth Scientific and Industrial Research Organisation, Australian Research Council Centre of Excellence ',
+                                 'for Climate System Science, and Bureau of Meteorology, Aspendale, Victoria 3195, Australia']),
     'DKRZ': 'Deutsches Klimarechenzentrum, Hamburg 20146, Germany',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'E3SM-Project': ''.join(['LLNL (Lawrence Livermore National Laboratory, Livermore, CA 94550, USA); ',
@@ -629,22 +634,26 @@ institution_id = {
                              'Mailing address: LLNL Climate Program, c/o David C. Bader, ',
                              'Principal Investigator, L-103, 7000 East Avenue, Livermore, CA 94550, USA']),
     'EC-Earth-Consortium': ''.join(['AEMET, Spain; BSC, Spain; CNR-ISAC, Italy; DMI, Denmark; ENEA, Italy; FMI, Finland; Geomar, Germany; ICHEC, ',
-                            'Ireland; ICTP, Italy; IDL, Portugal; IMAU, The Netherlands; IPMA, Portugal; KIT, Karlsruhe, Germany; KNMI, ',
-                            'The Netherlands; Lund University, Sweden; Met Eireann, Ireland; NLeSC, The Netherlands; NTNU, Norway; Oxford ',
-                            'University, UK; surfSARA, The Netherlands; SMHI, Sweden; Stockholm University, Sweden; Unite ASTR, Belgium; ',
-                            'University College Dublin, Ireland; University of Bergen, Norway; University of Copenhagen, Denmark; ',
-                            'University of Helsinki, Finland; University of Santiago de Compostela, Spain; Uppsala University, Sweden; ',
-                            'Utrecht University, The Netherlands; Vrije Universiteit Amsterdam, the Netherlands; Wageningen University, ',
-                            'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
-                            'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
+                                    'Ireland; ICTP, Italy; IDL, Portugal; IMAU, The Netherlands; IPMA, Portugal; KIT, Karlsruhe, Germany; KNMI, ',
+                                    'The Netherlands; Lund University, Sweden; Met Eireann, Ireland; NLeSC, The Netherlands; NTNU, Norway; Oxford ',
+                                    'University, UK; surfSARA, The Netherlands; SMHI, Sweden; Stockholm University, Sweden; Unite ASTR, Belgium; ',
+                                    'University College Dublin, Ireland; University of Bergen, Norway; University of Copenhagen, Denmark; ',
+                                    'University of Helsinki, Finland; University of Santiago de Compostela, Spain; Uppsala University, Sweden; ',
+                                    'Utrecht University, The Netherlands; Vrije Universiteit Amsterdam, the Netherlands; Wageningen University, ',
+                                    'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
+                                    'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
     'ECMWF': 'European Centre for Medium-Range Weather Forecasts, Reading RG2 9AX, UK',
-    'FIO-QLNM': 'FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)',
-    'HAMMOZ-Consortium': 'ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland',
+    'FIO-QLNM': ''.join(['FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine ',
+                         'Science and Technology, Qingdao 266237, China)']),
+    'HAMMOZ-Consortium': ''.join(['ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, ',
+                                  'Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric ',
+                                  'Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland']),
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
-    'MESSy-Consortium': 'The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany',
+    'MESSy-Consortium': ''.join(['The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, ',
+                                 'Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany']),
     'MIROC': ''.join(['JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), ',
                       'AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), ',
                       'NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), ',
@@ -669,6 +678,8 @@ institution_id = {
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
+    'RTE-RRTMGP-Consortium': ''.join(['AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, ',
+                              'Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA']),
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
@@ -758,7 +769,7 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-#key = 'RRTMG-SW-4-02'
+#key = 'RTE-RRTMGP-181204'
 #source_id[key] = {}
 #source_id[key]['activity_participation'] = [
 # 'RFMIP'

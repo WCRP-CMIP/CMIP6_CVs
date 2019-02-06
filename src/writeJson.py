@@ -367,7 +367,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register institution_id RTE-RRTMGP-Consortium\"'
+commitMessage = '\"Register source_id RTE-RRTMGP-181204\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -769,46 +769,46 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-#key = 'RTE-RRTMGP-181204'
-#source_id[key] = {}
-#source_id[key]['activity_participation'] = [
-# 'RFMIP'
-#]
-#source_id[key]['cohort'] = [
-# 'Registered'
-#]
-#source_id[key]['institution_id'] = [
-# 'AER'
-#]
-#source_id[key]['label'] = 'RRTMG-SW 4.02'
-#source_id[key]['label_extended'] = 'RRTM for GCMs v4.02, shortwave'
-#source_id[key]['model_component'] = {}
-#source_id[key]['model_component']['aerosol'] = {}
-#source_id[key]['model_component']['aerosol']['description'] = 'none'
-#source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['atmos'] = {}
-#source_id[key]['model_component']['atmos']['description'] = 'none'
-#source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['atmosChem'] = {}
-#source_id[key]['model_component']['atmosChem']['description'] = 'none'
-#source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['land'] = {}
-#source_id[key]['model_component']['land']['description'] = 'none'
-#source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['landIce'] = {}
-#source_id[key]['model_component']['landIce']['description'] = 'none'
-#source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['ocean'] = {}
-#source_id[key]['model_component']['ocean']['description'] = 'none'
-#source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['ocnBgchem'] = {}
-#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-#source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['seaIce'] = {}
-#source_id[key]['model_component']['seaIce']['description'] = 'none'
-#source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-#source_id[key]['release_year'] = '2017'
-#source_id[key]['source_id'] = key
+key = 'RTE-RRTMGP-181204'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'RFMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'AER'
+]
+source_id[key]['label'] = 'RTE+RRTMGP (2018-12-04 full-resolution)'
+source_id[key]['label_extended'] = 'Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'none'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
@@ -974,7 +974,7 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91','RRTMG-SW-4-02']:
+        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91','RRTMG-SW-4-02','RTE-RRTMGP-181204']:
             print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
             print(key,'HighResMIP no CMIP required - continue')

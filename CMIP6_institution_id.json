@@ -39,6 +39,7 @@
         "NOAA-GFDL":"National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA",
         "NUIST":"Nanjing University of Information Science and Technology, Nanjing, 210044, China",
         "PCMDI":"Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA",
+        "RTE-RRTMGP-Consortium":"AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA",
         "SNU":"Seoul National University, Seoul 08826, Republic of Korea",
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China",
         "UA":"Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA",
@@ -47,13 +48,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan 31 16:06:21 2019 -0800",
-        "CV_collection_version":"6.2.18.0",
+        "CV_collection_modified":"Wed Feb  6 15:30:34 2019 -0800",
+        "CV_collection_version":"6.2.18.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Sun Dec 23 18:45:50 2018 -0800",
-        "institution_id_CV_note":"Revise institution_id AS-RCEC",
-        "previous_commit":"ba732e8378f5c8029c49d079ef5ca180c6b370d5",
+        "institution_id_CV_note":"Register institution_id RTE-RRTMGP-Consortium",
+        "previous_commit":"43951489826e383e8004d7b6e28709bb3e2d0336",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

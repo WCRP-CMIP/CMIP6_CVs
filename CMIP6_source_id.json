@@ -5318,6 +5318,55 @@
             "release_year":"2017",
             "source_id":"RRTMG-SW-4-02"
         },
+        "RTE-RRTMGP-181204":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AER"
+            ],
+            "label":"RTE+RRTMGP (2018-12-04 full-resolution)",
+            "label_extended":"Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"RTE-RRTMGP-181204"
+        },
         "SAM0-UNICON":{
             "activity_participation":[
                 "CMIP",
@@ -5641,13 +5690,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb  6 15:30:34 2019 -0800",
-        "CV_collection_version":"6.2.18.1",
+        "CV_collection_modified":"Wed Feb  6 15:35:52 2019 -0800",
+        "CV_collection_version":"6.2.18.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"43951489826e383e8004d7b6e28709bb3e2d0336",
+        "previous_commit":"6ca79aea085199e7402d8d678db853a9fa18c66e",
         "source_id_CV_modified":"Thu Jan 31 15:49:38 2019 -0800",
-        "source_id_CV_note":"Register source_id RRTMG-SW",
+        "source_id_CV_note":"Register source_id RTE-RRTMGP-181204",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

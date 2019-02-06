@@ -48,13 +48,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb  6 15:30:34 2019 -0800",
-        "CV_collection_version":"6.2.18.1",
+        "CV_collection_modified":"Wed Feb  6 15:35:52 2019 -0800",
+        "CV_collection_version":"6.2.18.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "institution_id_CV_modified":"Sun Dec 23 18:45:50 2018 -0800",
+        "institution_id_CV_modified":"Wed Feb  6 15:30:34 2019 -0800",
         "institution_id_CV_note":"Register institution_id RTE-RRTMGP-Consortium",
-        "previous_commit":"43951489826e383e8004d7b6e28709bb3e2d0336",
+        "previous_commit":"6ca79aea085199e7402d8d678db853a9fa18c66e",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

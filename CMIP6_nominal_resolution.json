@@ -17,13 +17,13 @@
         "5000 km"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb  6 15:30:34 2019 -0800",
-        "CV_collection_version":"6.2.18.1",
+        "CV_collection_modified":"Wed Feb  6 15:35:52 2019 -0800",
+        "CV_collection_version":"6.2.18.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "nominal_resolution_CV_modified":"Tues Nov 15 16:04:00 2016 -0700",
         "nominal_resolution_CV_note":"Issue141 durack1 update grid_resolution to nominal_resolution (#143)",
-        "previous_commit":"43951489826e383e8004d7b6e28709bb3e2d0336",
+        "previous_commit":"6ca79aea085199e7402d8d678db853a9fa18c66e",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

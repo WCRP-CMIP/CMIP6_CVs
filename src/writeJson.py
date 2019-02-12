@@ -342,6 +342,7 @@ PJD 31 Jan 2019    - Register source_id RRTMG-SW https://github.com/WCRP-CMIP/CM
 PJD 31 Jan 2019    - Revise experiment_id pa-futAntSIC-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/648
 PJD  6 Feb 2019    - Register institution_id RTE-RRTMGP-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/650
 PJD  6 Feb 2019    - Register source_id RTE-RRTMGP-181204 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/642
+PJD 12 Feb 2019    - Revise source_id RTE-RRTMGP-181204 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/642
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -367,7 +368,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id RTE-RRTMGP-181204\"'
+commitMessage = '\"Revise source_id RTE-RRTMGP-181204\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -778,7 +779,7 @@ source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'AER'
+ 'RTE-RRTMGP-Consortium'
 ]
 source_id[key]['label'] = 'RTE+RRTMGP (2018-12-04 full-resolution)'
 source_id[key]['label_extended'] = 'Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)'

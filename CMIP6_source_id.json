@@ -5326,7 +5326,7 @@
                 "Registered"
             ],
             "institution_id":[
-                "AER"
+                "RTE-RRTMGP-Consortium"
             ],
             "label":"RTE+RRTMGP (2018-12-04 full-resolution)",
             "label_extended":"Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)",
@@ -5690,13 +5690,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb  6 15:35:52 2019 -0800",
-        "CV_collection_version":"6.2.18.2",
+        "CV_collection_modified":"Tue Feb 12 08:46:26 2019 -0800",
+        "CV_collection_version":"6.2.18.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"6ca79aea085199e7402d8d678db853a9fa18c66e",
-        "source_id_CV_modified":"Thu Jan 31 15:49:38 2019 -0800",
-        "source_id_CV_note":"Register source_id RTE-RRTMGP-181204",
+        "previous_commit":"f0b28f062005f049505be08ccf6fb65a35d67254",
+        "source_id_CV_modified":"Wed Feb  6 15:35:52 2019 -0800",
+        "source_id_CV_note":"Revise source_id RTE-RRTMGP-181204",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"6ca79aea085199e7402d8d678db853a9fa18c66e",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/6ca79aea085199e7402d8d678db853a9fa18c66e",
-            "commitMessage":"Register source_id RTE-RRTMGP-181204",
-            "timeStamp":"Wed Feb  6 15:35:52 2019 -0800"
+            "MD5":"f0b28f062005f049505be08ccf6fb65a35d67254",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f0b28f062005f049505be08ccf6fb65a35d67254",
+            "commitMessage":"Revise source_id RTE-RRTMGP-181204",
+            "timeStamp":"Tue Feb 12 08:46:26 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":18,
             "versionCVStructure":2,
             "versionMIPEra":6

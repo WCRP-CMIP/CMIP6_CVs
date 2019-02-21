@@ -8417,13 +8417,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 12 08:46:26 2019 -0800",
-        "CV_collection_version":"6.2.18.3",
+        "CV_collection_modified":"Thu Feb 21 16:00:09 2019 01100",
+        "CV_collection_version":"6.2.18.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Jan 31 16:06:21 2019 -0800",
         "experiment_id_CV_note":"Revise experiment_id pa-futAntSIC-ext",
         "institution_id":"PCMDI",
-        "previous_commit":"f0b28f062005f049505be08ccf6fb65a35d67254",
+        "previous_commit":"89e09cbcdf73757fc5dd5d35cce41c554d862ce4",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

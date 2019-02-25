@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"25e59cea743efc2e98afaf8702fab3ddb9b2f962",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/25e59cea743efc2e98afaf8702fab3ddb9b2f962",
-            "commitMessage":"Revise source_id CanESM5",
-            "timeStamp":"Mon Feb 25 13:18:51 2019 -0800"
+            "MD5":"cc3372563956c496a04090f680a8f9fedcf2ab6d",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/cc3372563956c496a04090f680a8f9fedcf2ab6d",
+            "commitMessage":"Register source_id CanESM5-CanOE",
+            "timeStamp":"Mon Feb 25 13:26:23 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":18,
             "versionCVStructure":2,
             "versionMIPEra":6

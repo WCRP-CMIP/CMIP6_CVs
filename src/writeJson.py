@@ -343,6 +343,7 @@ PJD 31 Jan 2019    - Revise experiment_id pa-futAntSIC-ext https://github.com/WC
 PJD  6 Feb 2019    - Register institution_id RTE-RRTMGP-Consortium https://github.com/WCRP-CMIP/CMIP6_CVs/issues/650
 PJD  6 Feb 2019    - Register source_id RTE-RRTMGP-181204 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/642
 PJD 12 Feb 2019    - Revise source_id RTE-RRTMGP-181204 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/642
+PJD 21 Feb 2019    - Register source_id MPI-ESM1-2-XR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/654
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -368,7 +369,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id RTE-RRTMGP-181204\"'
+commitMessage = '\"Register source_id MPI-ESM1-2-XR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -770,45 +771,45 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-key = 'RTE-RRTMGP-181204'
+key = 'MPI-ESM1-2-XR'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
- 'RFMIP'
+ 'HighResMIP'
 ]
 source_id[key]['cohort'] = [
  'Registered'
 ]
 source_id[key]['institution_id'] = [
- 'RTE-RRTMGP-Consortium'
+ 'MPI-M'
 ]
-source_id[key]['label'] = 'RTE+RRTMGP (2018-12-04 full-resolution)'
-source_id[key]['label_extended'] = 'Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)'
+source_id[key]['label'] = 'MPI-ESM1.2-XR'
+source_id[key]['label_extended'] = 'MPI-ESM1.2-XR'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3 (spectral T255; 768 x 384 longitude/latitude; 95 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land']['description'] = 'JSBACH3.20'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['description'] = 'none/prescribed'
 source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean']['description'] = 'MPIOM1.63 (tripolar TP04, approximately 0.4deg; 802 x 404 longitude/latitude; 40 levels; top grid cell 0-12 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2019'
+source_id[key]['model_component']['seaIce']['description'] = 'unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2017'
 source_id[key]['source_id'] = key
 
 #==============================================================================

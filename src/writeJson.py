@@ -346,6 +346,7 @@ PJD 12 Feb 2019    - Revise source_id RTE-RRTMGP-181204 https://github.com/WCRP-
 PJD 21 Feb 2019    - Register source_id MPI-ESM1-2-XR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/654
 PJD 25 Feb 2019    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/655
 PJD 21 Feb 2019    - Register source_id CanESM5-CanOE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/656
+PJD 26 Feb 2019    - Revise MPI-M source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/654
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -371,7 +372,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id CanESM5-CanOE\"'
+commitMessage = '\"Revise MPI-M source_ids\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -773,50 +774,12 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-key = 'CanESM5-CanOE'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'C4MIP',
-'CDRMIP',
-'CMIP',
-'OMIP',
-'ScenarioMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'CCCma'
-]
-source_id[key]['label'] = 'CanESM5-CanOE'
-source_id[key]['label_extended'] = 'CanESM5-CanOE'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'interactive'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CanAM5 (T63L49 native atmosphere, T63 Linear Gaussian Grid; 128 x 64 longitude/latitude; 49 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'specified oxidants for aerosols'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLASS3.6/CTEM1.2'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'specified ice sheets'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO3.4.1 (ORCA1 tripolar grid, 1 deg with refinement to 1/3 deg within 20 degrees of the equator; 361 x 290 longitude/latitude; 45 vertical levels; top grid cell 0-6.19 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'Canadian Ocean Ecosystem (CanOE) with OMIP prescribed carbon chemistry'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'LIM2'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2019'
-source_id[key]['source_id'] = key
+key = 'MPI-ESM1-2-HR'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
+key = 'MPI-ESM1-2-LR'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
+key = 'MPI-ESM1-2-XR'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

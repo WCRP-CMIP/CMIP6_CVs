@@ -45,11 +45,11 @@
         "fx"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Mon Feb 25 13:26:23 2019 -0800",
-        "CV_collection_version":"6.2.18.6",
+        "CV_collection_modified":"Tue Feb 26 10:52:24 2019 -0800",
+        "CV_collection_version":"6.2.18.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"cc3372563956c496a04090f680a8f9fedcf2ab6d",
+        "previous_commit":"623dc6f6b361a431f9aa9963075a79da68af1f4a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "table_id_CV_modified":"Fri Jan 13 09:27:00 2017 -0700",
         "table_id_CV_note":"Issue199 durack1 update table_id to Data Request v1.0 (#200)"

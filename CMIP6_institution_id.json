@@ -8,7 +8,7 @@
         "CAMS":"Chinese Academy of Meteorological Sciences, Beijing 100081, China",
         "CAS":"Chinese Academy of Sciences, Beijing 100029, China",
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
-        "CCCma":"Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada",
+        "CCCma":"Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria, BC V8P 5C2, Canada",
         "CMCC":"Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy",
         "CNRM-CERFACS":"CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
         "CSIR-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)",
@@ -48,13 +48,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 26 10:52:24 2019 -0800",
-        "CV_collection_version":"6.2.18.7",
+        "CV_collection_modified":"Wed Feb 27 08:29:57 2019 -0800",
+        "CV_collection_version":"6.2.18.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Wed Feb  6 15:30:34 2019 -0800",
-        "institution_id_CV_note":"Register institution_id RTE-RRTMGP-Consortium",
-        "previous_commit":"623dc6f6b361a431f9aa9963075a79da68af1f4a",
+        "institution_id_CV_note":"Revise CCCma institution_id",
+        "previous_commit":"6bd7176a47ee520d192de609807c6973bcd9e6d8",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

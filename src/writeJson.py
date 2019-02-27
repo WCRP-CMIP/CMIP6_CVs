@@ -347,6 +347,7 @@ PJD 21 Feb 2019    - Register source_id MPI-ESM1-2-XR https://github.com/WCRP-CM
 PJD 25 Feb 2019    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/655
 PJD 21 Feb 2019    - Register source_id CanESM5-CanOE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/656
 PJD 26 Feb 2019    - Revise MPI-M source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/654
+PJD 27 Feb 2019    - Revise CCCma institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/662
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -372,7 +373,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise MPI-M source_ids\"'
+commitMessage = '\"Revise CCCma institution_id\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -617,7 +618,7 @@ institution_id = {
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
     'CAS': 'Chinese Academy of Sciences, Beijing 100029, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
-    'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Victoria, BC V8P 5C2, Canada',
+    'CCCma': 'Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria, BC V8P 5C2, Canada',
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': ''.join(['CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche ',
                              'et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)']),

@@ -5794,12 +5794,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 26 10:52:24 2019 -0800",
-        "CV_collection_version":"6.2.18.7",
+        "CV_collection_modified":"Wed Feb 27 08:29:57 2019 -0800",
+        "CV_collection_version":"6.2.18.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"623dc6f6b361a431f9aa9963075a79da68af1f4a",
-        "source_id_CV_modified":"Mon Feb 25 13:26:23 2019 -0800",
+        "previous_commit":"6bd7176a47ee520d192de609807c6973bcd9e6d8",
+        "source_id_CV_modified":"Tue Feb 26 10:52:24 2019 -0800",
         "source_id_CV_note":"Revise MPI-M source_ids",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

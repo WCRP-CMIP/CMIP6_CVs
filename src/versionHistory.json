@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"623dc6f6b361a431f9aa9963075a79da68af1f4a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/623dc6f6b361a431f9aa9963075a79da68af1f4a",
-            "commitMessage":"Revise MPI-M source_ids",
-            "timeStamp":"Tue Feb 26 10:52:24 2019 -0800"
+            "MD5":"31e43b0aa463546f4b0a5fa0852a650bc42260c2",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/31e43b0aa463546f4b0a5fa0852a650bc42260c2",
+            "commitMessage":"Revise source_id UKESM1-0",
+            "timeStamp":"Tue Mar  5 14:16:45 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":8,
+            "versionCVCommit":9,
             "versionCVContent":18,
             "versionCVStructure":2,
             "versionMIPEra":6

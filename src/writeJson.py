@@ -348,6 +348,7 @@ PJD 25 Feb 2019    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6
 PJD 21 Feb 2019    - Register source_id CanESM5-CanOE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/656
 PJD 26 Feb 2019    - Revise MPI-M source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/654
 PJD 27 Feb 2019    - Revise CCCma institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/662
+PJD  5 Mar 2019    - Revise source_id UKESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/664
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -373,7 +374,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise CCCma institution_id\"'
+commitMessage = '\"Revise source_id UKESM1-0\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -775,12 +776,10 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
-key = 'MPI-ESM1-2-HR'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
-key = 'MPI-ESM1-2-LR'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
-key = 'MPI-ESM1-2-XR'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC6'
+key = 'UKESM1-0-LL'
+source_id[key]['model_component']['land']['description'] = 'JULES-ES-1.0'
+key = 'UKESM1-0-MMh'
+source_id[key]['model_component']['land']['description'] = 'JULES-ES-1.0'
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

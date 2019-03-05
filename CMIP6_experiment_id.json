@@ -359,17 +359,17 @@
             "end_year":"2100",
             "experiment":"total solar irradiance reduction to reduce net forcing from SSP585 to SSP245",
             "experiment_id":"G6solar",
-            "min_number_yrs_per_sim":"86",
+            "min_number_yrs_per_sim":"81",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "historical"
+                "ssp585"
             ],
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"2015",
+            "start_year":"2020",
             "sub_experiment_id":[
                 "none"
             ],
@@ -388,17 +388,17 @@
             "end_year":"2100",
             "experiment":"stratospheric sulfate aerosol injection to reduce net forcing from SSP585 to SSP245",
             "experiment_id":"G6sulfur",
-            "min_number_yrs_per_sim":"86",
+            "min_number_yrs_per_sim":"81",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "historical"
+                "ssp585"
             ],
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"2015",
+            "start_year":"2020",
             "sub_experiment_id":[
                 "none"
             ],
@@ -473,17 +473,17 @@
             "end_year":"2100",
             "experiment":"increase cirrus ice crystal fall speed to reduce net forcing in SSP585 by 1 W m-2",
             "experiment_id":"G7cirrus",
-            "min_number_yrs_per_sim":"86",
+            "min_number_yrs_per_sim":"81",
             "parent_activity_id":[
                 "CMIP"
             ],
             "parent_experiment_id":[
-                "historical"
+                "ssp585"
             ],
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"2015",
+            "start_year":"2020",
             "sub_experiment_id":[
                 "none"
             ],
@@ -8417,13 +8417,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Mar  5 14:16:45 2019 -0800",
-        "CV_collection_version":"6.2.18.9",
+        "CV_collection_modified":"Tue Mar  5 14:27:11 2019 -0800",
+        "CV_collection_version":"6.2.19.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Jan 31 16:06:21 2019 -0800",
-        "experiment_id_CV_note":"Revise experiment_id pa-futAntSIC-ext",
+        "experiment_id_CV_note":"Revise GeoMIP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"31e43b0aa463546f4b0a5fa0852a650bc42260c2",
+        "previous_commit":"8ff00a17c503ada9b8590e6f62c58618abcdd5a1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"ba732e8378f5c8029c49d079ef5ca180c6b370d5",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ba732e8378f5c8029c49d079ef5ca180c6b370d5",
-            "commitMessage":"Revise experiment_id pa-futAntSIC-ext",
-            "timeStamp":"Thu Jan 31 16:06:21 2019 -0800"
+            "MD5":"8ff00a17c503ada9b8590e6f62c58618abcdd5a1",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8ff00a17c503ada9b8590e6f62c58618abcdd5a1",
+            "commitMessage":"Revise GeoMIP experiment_id values",
+            "timeStamp":"Tue Mar  5 14:27:11 2019 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":9,
-            "versionCVContent":18,
+            "versionCVCommit":0,
+            "versionCVContent":19,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

@@ -350,6 +350,7 @@ PJD 26 Feb 2019    - Revise MPI-M source_ids https://github.com/WCRP-CMIP/CMIP6_
 PJD 27 Feb 2019    - Revise CCCma institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/662
 PJD  5 Mar 2019    - Revise source_id UKESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/664
 PJD  5 Mar 2019    - Revise GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/665
+PJD  7 Mar 2019    - Revise CNRM-CM6-1 source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/668
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -375,7 +376,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise GeoMIP experiment_id values\"'
+commitMessage = '\"Revise CNRM-CM6-1 source_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -780,6 +781,31 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'CNRM-CM6-1'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'HighResMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'OMIP',
+ 'PAMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP'
+]
+key = 'CNRM-CM6-1-HR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
+ 'HighResMIP',
+ 'OMIP',
+ 'ScenarioMIP'
+]
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

@@ -5539,9 +5539,7 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":[
-                "BGC"
-            ],
+            "additional_allowed_model_components":[],
             "description":"Same as the omip1 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle of CORE-II forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip1 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
             "experiment":"OMIP experiment forced by Large and Yeager (CORE-2, NCEP) atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
@@ -5554,7 +5552,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "OGCM"
+                "OGCM",
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment_id":[
@@ -5593,9 +5592,7 @@
             "activity_id":[
                 "OMIP"
             ],
-            "additional_allowed_model_components":[
-                "BGC"
-            ],
+            "additional_allowed_model_components":[],
             "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle ofthe JRA55-do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
@@ -5608,7 +5605,8 @@
                 "no parent"
             ],
             "required_model_components":[
-                "OGCM"
+                "OGCM",
+                "BGC"
             ],
             "start_year":"",
             "sub_experiment_id":[
@@ -8417,13 +8415,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar  7 12:27:59 2019 -0800",
-        "CV_collection_version":"6.2.19.1",
+        "CV_collection_modified":"Thu Mar 21 14:19:42 2019 -0700",
+        "CV_collection_version":"6.2.20.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Tue Mar  5 14:27:11 2019 -0800",
-        "experiment_id_CV_note":"Revise GeoMIP experiment_id values",
+        "experiment_id_CV_note":"Revise OMIP*-spunup experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"1689bc7f7ed25237ca771352a8b3b6014251c3a4",
+        "previous_commit":"66210e6485dd59752db8882ac642574fde5cbb14",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

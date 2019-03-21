@@ -351,6 +351,7 @@ PJD 27 Feb 2019    - Revise CCCma institution_id https://github.com/WCRP-CMIP/CM
 PJD  5 Mar 2019    - Revise source_id UKESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/664
 PJD  5 Mar 2019    - Revise GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/665
 PJD  7 Mar 2019    - Revise CNRM-CM6-1 source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/668
+PJD 21 Mar 2019    - Revise OMIP*-spunup experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/670
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -368,7 +369,7 @@ import subprocess
 import sys
 import time
 import urllib
-sys.path.insert(0,'/sync/git/durolib/lib') ; # trustym
+sys.path.insert(0,'/sync/git/durolib/durolib') ; # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 #import pyexcel_xlsx as pyx
@@ -376,7 +377,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise CNRM-CM6-1 source_id values\"'
+commitMessage = '\"Revise OMIP*-spunup experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -517,10 +518,9 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-for key in ['G6solar','G6sulfur','G7cirrus']:
-    experiment_id[key]['parent_experiment_id'] = ['ssp585']
-    experiment_id[key]['start_year'] = '2020'
-    experiment_id[key]['min_number_yrs_per_sim'] = '81'
+for key in ['omip1-spunup','omip2-spunup']:
+    experiment_id[key]['additional_allowed_model_components'] = []
+    experiment_id[key]['required_model_components'] = ['OGCM','BGC']
 
 #==============================================================================
 # Example new experiment_id entry
@@ -781,31 +781,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['activity_participation'] = [
- 'CFMIP',
- 'CMIP',
- 'DAMIP',
- 'DCPP',
- 'FAFMIP',
- 'GMMIP',
- 'HighResMIP',
- 'ISMIP6',
- 'LS3MIP',
- 'OMIP',
- 'PAMIP',
- 'PMIP',
- 'RFMIP',
- 'ScenarioMIP'
-]
-key = 'CNRM-CM6-1-HR'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'HighResMIP',
- 'OMIP',
- 'ScenarioMIP'
-]
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

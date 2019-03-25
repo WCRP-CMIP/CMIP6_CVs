@@ -352,6 +352,7 @@ PJD  5 Mar 2019    - Revise source_id UKESM1-0 https://github.com/WCRP-CMIP/CMIP
 PJD  5 Mar 2019    - Revise GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/665
 PJD  7 Mar 2019    - Revise CNRM-CM6-1 source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/668
 PJD 21 Mar 2019    - Revise OMIP*-spunup experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/670
+PJD 25 Mar 2019    - Register GFDL RFMIP model contributors https://github.com/WCRP-CMIP/CMIP6_CVs/issues/673
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -377,7 +378,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise OMIP*-spunup experiment_id values\"'
+commitMessage = '\"Register GFDL RFMIP model contributors\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -781,6 +782,52 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+sourceIds = [
+        ['GFDL-RFM-DISORT','GFDL-RFM-DISORT','GFDL Reference Forward Model Line-by-Line with DISORT solver (March 2019)','2019'],
+        ['GFDL-GRTCODE','GFDL-GRTCODE','GFDL GPU radiative transfer code with two stream solver (March 2019)','2019'],
+        ['GFDL-GLOBAL-LBL','GFDL-GLOBAL-LBL','GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)','2019']
+        ]
+for sourceId in sourceIds:
+    key = sourceId[0]
+    source_id[key] = {}
+    source_id[key]['activity_participation'] = [
+     'RFMIP'
+    ]
+    source_id[key]['cohort'] = [
+     'Registered'
+    ]
+    source_id[key]['institution_id'] = [
+     'NOAA-GFDL'
+    ]
+    source_id[key]['label'] = sourceId[1]
+    source_id[key]['label_extended'] = sourceId[2]
+    source_id[key]['model_component'] = {}
+    source_id[key]['model_component']['aerosol'] = {}
+    source_id[key]['model_component']['aerosol']['description'] = 'none'
+    source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['atmos'] = {}
+    source_id[key]['model_component']['atmos']['description'] = 'none'
+    source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['atmosChem'] = {}
+    source_id[key]['model_component']['atmosChem']['description'] = 'none'
+    source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['land'] = {}
+    source_id[key]['model_component']['land']['description'] = 'none'
+    source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['landIce'] = {}
+    source_id[key]['model_component']['landIce']['description'] = 'none'
+    source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['ocean'] = {}
+    source_id[key]['model_component']['ocean']['description'] = 'none'
+    source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['ocnBgchem'] = {}
+    source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+    source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+    source_id[key]['model_component']['seaIce'] = {}
+    source_id[key]['model_component']['seaIce']['description'] = 'none'
+    source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+    source_id[key]['release_year'] = sourceId[3]
+    source_id[key]['source_id'] = key
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
@@ -936,6 +983,17 @@ del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
     d1Key,keys2,d2Key)
 
 #%% Validate source_id and experiment_id entries
+RFMIPOnlyList = [
+        'ARTS-2-3',
+        'GFDL-GLOBAL-LBL',
+        'GFDL-GRTCODE',
+        'GFDL-RFM-DISORT',
+        'LBLRTM-12-8',
+        'RRTMG-LW-4-91',
+        'RRTMG-SW-4-02',
+        'RTE-RRTMGP-181204'
+        ]
+
 # source_id
 for key in source_id.keys():
     # Validate source_id format
@@ -946,7 +1004,7 @@ for key in source_id.keys():
     val = source_id[key]['activity_participation']
     #print key,val
     if 'CMIP' not in val:
-        if key in ['ARTS-2-3','LBLRTM-12-8','RRTMG-LW-4-91','RRTMG-SW-4-02','RTE-RRTMGP-181204']:
+        if key in RFMIPOnlyList:
             print(key,'RFMIP only - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only
             print(key,'HighResMIP no CMIP required - continue')

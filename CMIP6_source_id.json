@@ -3019,6 +3019,104 @@
             "release_year":"2018",
             "source_id":"GFDL-ESM4"
         },
+        "GFDL-GLOBAL-LBL":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-GLOBAL-LBL",
+            "label_extended":"GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"GFDL-GLOBAL-LBL"
+        },
+        "GFDL-GRTCODE":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-GRTCODE",
+            "label_extended":"GFDL GPU radiative transfer code with two stream solver (March 2019)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"GFDL-GRTCODE"
+        },
         "GFDL-OM4p5B":{
             "activity_participation":[
                 "OMIP"
@@ -3067,6 +3165,55 @@
             },
             "release_year":"2018",
             "source_id":"GFDL-OM4p5B"
+        },
+        "GFDL-RFM-DISORT":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NOAA-GFDL"
+            ],
+            "label":"GFDL-RFM-DISORT",
+            "label_extended":"GFDL Reference Forward Model Line-by-Line with DISORT solver (March 2019)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"GFDL-RFM-DISORT"
         },
         "GISS-E2-1-G":{
             "activity_participation":[
@@ -5796,13 +5943,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 21 14:19:42 2019 -0700",
-        "CV_collection_version":"6.2.20.0",
+        "CV_collection_modified":"Mon Mar 25 14:32:35 2019 -0700",
+        "CV_collection_version":"6.2.20.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"66210e6485dd59752db8882ac642574fde5cbb14",
+        "previous_commit":"690451863bfd7a92a6fa13d879a9df6af32e0379",
         "source_id_CV_modified":"Thu Mar  7 12:27:59 2019 -0800",
-        "source_id_CV_note":"Revise CNRM-CM6-1 source_id values",
+        "source_id_CV_note":"Register GFDL RFMIP model contributors",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

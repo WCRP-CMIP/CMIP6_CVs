@@ -353,6 +353,7 @@ PJD  5 Mar 2019    - Revise GeoMIP experiment_id values https://github.com/WCRP-
 PJD  7 Mar 2019    - Revise CNRM-CM6-1 source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/668
 PJD 21 Mar 2019    - Revise OMIP*-spunup experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/670
 PJD 25 Mar 2019    - Register GFDL RFMIP model contributors https://github.com/WCRP-CMIP/CMIP6_CVs/issues/673
+PJD 23 Apr 2019    - Update VRESM/CSIR-CSIRO registration https://github.com/WCRP-CMIP/CMIP6_CVs/issues/100 and 101
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -378,7 +379,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register GFDL RFMIP model contributors\"'
+commitMessage = '\"Update VRESM/CSIR-CSIRO registration\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -628,8 +629,10 @@ institution_id = {
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': ''.join(['CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche ',
                              'et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)']),
-    'CSIR-CSIRO': ''.join(['CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), ',
-                           'CSIRO (Commonwealth Scientific and Industrial Research Organisation and Bureau of Meteorology, Melbourne, Victoria 3208, Australia)']),
+    'CSIR-Wits-CSIRO': ''.join(['CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), ',
+                                'Wits (University of the Witwatersrand - Global Change Institute, Johannesburg 2050, South Africa), ',
+                                'CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)',
+                                'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
     'CSIRO-ARCCSS-BoM': ''.join(['Commonwealth Scientific and Industrial Research Organisation, Australian Research Council Centre of Excellence ',
                                  'for Climate System Science, and Bureau of Meteorology, Aspendale, Victoria 3195, Australia']),
@@ -782,52 +785,10 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-sourceIds = [
-        ['GFDL-RFM-DISORT','GFDL-RFM-DISORT','GFDL Reference Forward Model Line-by-Line with DISORT solver (March 2019)','2019'],
-        ['GFDL-GRTCODE','GFDL-GRTCODE','GFDL GPU radiative transfer code with two stream solver (March 2019)','2019'],
-        ['GFDL-GLOBAL-LBL','GFDL-GLOBAL-LBL','GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)','2019']
-        ]
-for sourceId in sourceIds:
-    key = sourceId[0]
-    source_id[key] = {}
-    source_id[key]['activity_participation'] = [
-     'RFMIP'
-    ]
-    source_id[key]['cohort'] = [
-     'Registered'
-    ]
-    source_id[key]['institution_id'] = [
-     'NOAA-GFDL'
-    ]
-    source_id[key]['label'] = sourceId[1]
-    source_id[key]['label_extended'] = sourceId[2]
-    source_id[key]['model_component'] = {}
-    source_id[key]['model_component']['aerosol'] = {}
-    source_id[key]['model_component']['aerosol']['description'] = 'none'
-    source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['atmos'] = {}
-    source_id[key]['model_component']['atmos']['description'] = 'none'
-    source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['atmosChem'] = {}
-    source_id[key]['model_component']['atmosChem']['description'] = 'none'
-    source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['land'] = {}
-    source_id[key]['model_component']['land']['description'] = 'none'
-    source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['landIce'] = {}
-    source_id[key]['model_component']['landIce']['description'] = 'none'
-    source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['ocean'] = {}
-    source_id[key]['model_component']['ocean']['description'] = 'none'
-    source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['ocnBgchem'] = {}
-    source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-    source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-    source_id[key]['model_component']['seaIce'] = {}
-    source_id[key]['model_component']['seaIce']['description'] = 'none'
-    source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-    source_id[key]['release_year'] = sourceId[3]
-    source_id[key]['source_id'] = key
+key = 'VRESM-1-0'
+source_id[key]['institution_id'] = [
+ 'CSIR-Wits-CSIRO'
+]
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

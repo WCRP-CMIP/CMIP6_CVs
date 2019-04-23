@@ -5900,7 +5900,7 @@
                 "Registered"
             ],
             "institution_id":[
-                "CSIR-CSIRO"
+                "CSIR-Wits-CSIRO"
             ],
             "label":"VRESM 1.0",
             "label_extended":"VRESM 1.0 (Variable-resolution Earth System Model 1.0)",
@@ -5943,13 +5943,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar 25 14:32:35 2019 -0700",
-        "CV_collection_version":"6.2.20.1",
+        "CV_collection_modified":"Tue Apr 23 13:51:30 2019 -0700",
+        "CV_collection_version":"6.2.20.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"690451863bfd7a92a6fa13d879a9df6af32e0379",
-        "source_id_CV_modified":"Thu Mar  7 12:27:59 2019 -0800",
-        "source_id_CV_note":"Register GFDL RFMIP model contributors",
+        "previous_commit":"6b99dc9c0076223fc259713723387ff18b9e3054",
+        "source_id_CV_modified":"Mon Mar 25 14:32:35 2019 -0700",
+        "source_id_CV_note":"Update VRESM/CSIR-CSIRO registration",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

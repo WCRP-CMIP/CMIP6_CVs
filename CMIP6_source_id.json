@@ -4347,7 +4347,7 @@
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"CHASER4.0",
@@ -4406,7 +4406,7 @@
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)",
-                    "native_nominal_resolution":"250 km"
+                    "native_nominal_resolution":"500 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -4470,7 +4470,7 @@
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"none",
@@ -5943,13 +5943,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr 23 13:51:30 2019 -0700",
-        "CV_collection_version":"6.2.20.2",
+        "CV_collection_modified":"Tue Apr 23 14:01:43 2019 -0700",
+        "CV_collection_version":"6.2.20.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"6b99dc9c0076223fc259713723387ff18b9e3054",
-        "source_id_CV_modified":"Mon Mar 25 14:32:35 2019 -0700",
-        "source_id_CV_note":"Update VRESM/CSIR-CSIRO registration",
+        "previous_commit":"ea72caae1889f55a6e8dc807aef600fdfba52e98",
+        "source_id_CV_modified":"Tue Apr 23 13:51:30 2019 -0700",
+        "source_id_CV_note":"Revise multiple MIROC registrations",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

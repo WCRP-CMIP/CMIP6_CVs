@@ -354,6 +354,7 @@ PJD  7 Mar 2019    - Revise CNRM-CM6-1 source_id values https://github.com/WCRP-
 PJD 21 Mar 2019    - Revise OMIP*-spunup experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/670
 PJD 25 Mar 2019    - Register GFDL RFMIP model contributors https://github.com/WCRP-CMIP/CMIP6_CVs/issues/673
 PJD 23 Apr 2019    - Update VRESM/CSIR-CSIRO registration https://github.com/WCRP-CMIP/CMIP6_CVs/issues/100 and 101
+PJD 23 Apr 2019    - Revise multiple MIROC registrations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/675
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -379,7 +380,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Update VRESM/CSIR-CSIRO registration\"'
+commitMessage = '\"Revise multiple MIROC registrations\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -785,10 +786,12 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'VRESM-1-0'
-source_id[key]['institution_id'] = [
- 'CSIR-Wits-CSIRO'
-]
+key = 'MIROC-ES2H'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+key = 'MIROC-ES2L'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '500 km'
+key = 'MIROC6'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

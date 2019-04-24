@@ -357,6 +357,7 @@ PJD 23 Apr 2019    - Update VRESM/CSIR-CSIRO registration https://github.com/WCR
 PJD 23 Apr 2019    - Revise multiple MIROC registrations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/675
 PJD 24 Apr 2019    - Update RFMIP experiment descriptions https://github.com/WCRP-CMIP/CMIP6_CVs/issues/676
 PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/679
+PJD 24 Apr 2019    - Register institution_id NASA-GSFC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/680
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -382,7 +383,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register 8 new C4MIP experiments\"'
+commitMessage = '\"Register institution_id NASA-GSFC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -523,126 +524,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'esm-1pct-brch-1000PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 1000 PgC'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 1000 PgC cumulative emission'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '100'
-experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
-experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
-key = 'esm-1pct-brch-750PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 750 PgC'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 750 PgC cumulative emission'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '100'
-experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
-experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-1pct-brch-2000PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 2000 PgC'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 2000 PgC cumulative emission'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '100'
-experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
-experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-1pct-brch-2000PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 2000 PgC'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 2000 PgC cumulative emission'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '100'
-experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
-experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-1pctCO2'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from the esm-piControl using CO2 emissions diagnosed from the 1pctCO2 experiment so that the emissions-driven run replicates as closely as possible the 1pctCO2 concentration profile'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'emissions driven 1% run'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '150'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-bell-1000PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 1000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'emissions driven 1000PgC bell-curve'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '200'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-bell-750PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 750 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'emissions driven 750PgC bell-curve'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '200'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
-key = 'esm-bell-2000PgC'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
-experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 2000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
-experiment_id[key]['end_year'] = ''
-experiment_id[key]['experiment'] = 'emissions driven 2000PgC bell-curve'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '200'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
-experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
-experiment_id[key]['start_year'] = ''
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '3'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -797,6 +678,7 @@ institution_id = {
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
+    'NASA-GSFC': 'NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA',    
     'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
     'NCC': ''.join(['NorESM Climate modeling Consortium consisting of ',
                     'CICERO (Center for International Climate and Environmental Research, Oslo 0349), ',

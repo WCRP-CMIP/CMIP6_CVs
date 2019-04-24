@@ -2422,6 +2422,222 @@
             ],
             "tier":"1"
         },
+        "esm-1pct-brch-1000PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 1000 PgC",
+            "end_year":"",
+            "experiment":"zero emissions simulation branched from 1% run after 1000 PgC cumulative emission",
+            "experiment_id":"esm-1pct-brch-1000PgC",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP",
+                "C4MIP"
+            ],
+            "parent_experiment_id":[
+                "1pctCO2",
+                "esm-1pctCO2"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "esm-1pct-brch-2000PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 2000 PgC",
+            "end_year":"",
+            "experiment":"zero emissions simulation branched from 1% run after 2000 PgC cumulative emission",
+            "experiment_id":"esm-1pct-brch-2000PgC",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP",
+                "C4MIP"
+            ],
+            "parent_experiment_id":[
+                "1pctCO2",
+                "esm-1pctCO2"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-1pct-brch-750PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 750 PgC",
+            "end_year":"",
+            "experiment":"zero emissions simulation branched from 1% run after 750 PgC cumulative emission",
+            "experiment_id":"esm-1pct-brch-750PgC",
+            "min_number_yrs_per_sim":"100",
+            "parent_activity_id":[
+                "CMIP",
+                "C4MIP"
+            ],
+            "parent_experiment_id":[
+                "1pctCO2",
+                "esm-1pctCO2"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-1pctCO2":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"An emissions-driven simulation (fully interactive CO2), initiated from the esm-piControl using CO2 emissions diagnosed from the 1pctCO2 experiment so that the emissions-driven run replicates as closely as possible the 1pctCO2 concentration profile",
+            "end_year":"",
+            "experiment":"emissions driven 1% run",
+            "experiment_id":"esm-1pctCO2",
+            "min_number_yrs_per_sim":"150",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-bell-1000PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 1000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years",
+            "end_year":"",
+            "experiment":"emissions driven 1000PgC bell-curve",
+            "experiment_id":"esm-bell-1000PgC",
+            "min_number_yrs_per_sim":"200",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-bell-2000PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 2000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years",
+            "end_year":"",
+            "experiment":"emissions driven 2000PgC bell-curve",
+            "experiment_id":"esm-bell-2000PgC",
+            "min_number_yrs_per_sim":"200",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "esm-bell-750PgC":{
+            "activity_id":[
+                "C4MIP",
+                "CDRMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM"
+            ],
+            "description":"An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 750 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years",
+            "end_year":"",
+            "experiment":"emissions driven 750PgC bell-curve",
+            "experiment_id":"esm-bell-750PgC",
+            "min_number_yrs_per_sim":"200",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "esm-piControl"
+            ],
+            "required_model_components":[
+                "AOGCM",
+                "BGC"
+            ],
+            "start_year":"",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "esm-hist":{
             "activity_id":[
                 "CMIP"
@@ -8415,13 +8631,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr 24 13:55:20 2019 -0700",
-        "CV_collection_version":"6.2.21.0",
+        "CV_collection_modified":"Wed Apr 24 14:09:47 2019 -0700",
+        "CV_collection_version":"6.2.22.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Thu Mar 21 14:19:42 2019 -0700",
-        "experiment_id_CV_note":"Update RFMIP experiment descriptions",
+        "experiment_id_CV_modified":"Wed Apr 24 13:55:20 2019 -0700",
+        "experiment_id_CV_note":"Register 8 new C4MIP experiments",
         "institution_id":"PCMDI",
-        "previous_commit":"69c6efa45e5227f169d3a9515b14cf5a47557031",
+        "previous_commit":"5891ae79ca890827359c3f0b9e8580821c249e9b",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

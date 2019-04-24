@@ -356,6 +356,7 @@ PJD 25 Mar 2019    - Register GFDL RFMIP model contributors https://github.com/W
 PJD 23 Apr 2019    - Update VRESM/CSIR-CSIRO registration https://github.com/WCRP-CMIP/CMIP6_CVs/issues/100 and 101
 PJD 23 Apr 2019    - Revise multiple MIROC registrations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/675
 PJD 24 Apr 2019    - Update RFMIP experiment descriptions https://github.com/WCRP-CMIP/CMIP6_CVs/issues/676
+PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/679
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -381,7 +382,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Update RFMIP experiment descriptions\"'
+commitMessage = '\"Register 8 new C4MIP experiments\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -522,26 +523,126 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'piClim-control'
-experiment_id[key]['experiment'] = 'Control simulation providing baseline for evaluating effective radiative forcing (ERF)'
-key = 'piClim-anthro'
-experiment_id[key]['description'] = 'As in piClim-control but with present-day anthropogenic forcing (greenhouse gases, ozone, aerosols and land-use)'
-key = 'piClim-ghg'
-experiment_id[key]['description'] = 'As in piClim-control but with present-day non-ozone greenhouse gases'
-key = 'piClim-4xCO2'
-experiment_id[key]['description'] = 'As in piClim-control but with 4xCO2'
-key = 'piClim-lu'
-experiment_id[key]['description'] = 'As in piClim-control but with present-day land use'
-key = 'piClim-aer'
-experiment_id[key]['description'] = 'As in piClim-control but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP'
-key = 'piClim-histghg'
-experiment_id[key]['description'] = 'Time-varying forcing by non-ozone GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation'
-key = 'piClim-spAer-aer'
-experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. Aerosol forcings'
-key = 'piClim-spAer-histaer'
-experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. Aerosol forcings'
-key = 'piClim-spAer-histall'
-experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. All anthropogenic and natural forcings'
+key = 'esm-1pct-brch-1000PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 1000 PgC'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 1000 PgC cumulative emission'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '100'
+experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'esm-1pct-brch-750PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 750 PgC'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 750 PgC cumulative emission'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '100'
+experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-1pct-brch-2000PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 2000 PgC'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 2000 PgC cumulative emission'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '100'
+experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-1pct-brch-2000PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'A zero-emissions simulation (fully interactive CO2; emissions-driven configuration), initiated from the point in the 1pctCO2 experiment when the cumulative carbon emissions reach 2000 PgC'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'zero emissions simulation branched from 1% run after 2000 PgC cumulative emission'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '100'
+experiment_id[key]['parent_activity_id'] = ['CMIP','C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['1pctCO2','esm-1pctCO2']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-1pctCO2'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from the esm-piControl using CO2 emissions diagnosed from the 1pctCO2 experiment so that the emissions-driven run replicates as closely as possible the 1pctCO2 concentration profile'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'emissions driven 1% run'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '150'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-bell-1000PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 1000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'emissions driven 1000PgC bell-curve'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '200'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-bell-750PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 750 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'emissions driven 750PgC bell-curve'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '200'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'esm-bell-2000PgC'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['C4MIP','CDRMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = 'An emissions-driven simulation (fully interactive CO2), initiated from esm-piControl using CO2 emissions, amounting to 2000 PgC, following a bell-shape curve for 100 years followed by zero-emissions for 100 years'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'emissions driven 2000PgC bell-curve'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '200'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['esm-piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
 
 #==============================================================================
 # Example new experiment_id entry

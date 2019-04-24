@@ -6318,7 +6318,7 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with 4xCO2",
+            "description":"As in piClim-control but with 4xCO2",
             "end_year":"",
             "experiment":"effective radiative forcing by 4xCO2",
             "experiment_id":"piClim-4xCO2",
@@ -6667,7 +6667,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP",
+            "description":"As in piClim-control but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP",
             "end_year":"",
             "experiment":"effective radiative forcing by present-day aerosols",
             "experiment_id":"piClim-aer",
@@ -6695,7 +6695,7 @@
                 "AER",
                 "CHEM"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with present-day anthropogenic forcing (greenhouse gases, aerosols and land-use)",
+            "description":"As in piClim-control but with present-day anthropogenic forcing (greenhouse gases, ozone, aerosols and land-use)",
             "end_year":"",
             "experiment":"effective radiative forcing by present day anthropogenic agents",
             "experiment_id":"piClim-anthro",
@@ -6727,7 +6727,7 @@
             ],
             "description":"30-year atmosphere only integration using preindustrial sea-surface temperature and sea-ice climatology. Interactive vegetation",
             "end_year":"",
-            "experiment":"effective radiative forcing in present-day",
+            "experiment":"Control simulation providing baseline for evaluating effective radiative forcing (ERF)",
             "experiment_id":"piClim-control",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
@@ -6754,7 +6754,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with present-day greenhouse gases",
+            "description":"As in piClim-control but with present-day non-ozone greenhouse gases",
             "end_year":"",
             "experiment":"effective radiative forcing by present-day greenhouse gases",
             "experiment_id":"piClim-ghg",
@@ -6841,7 +6841,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Time-varying forcing by GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation",
+            "description":"Time-varying forcing by non-ozone GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation",
             "end_year":"2100",
             "experiment":"transient effective radiative forcing by greenhouse gases",
             "experiment_id":"piClim-histghg",
@@ -6899,7 +6899,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"As in RFMIP-ERF-PI-Cntrl but with present-day land use",
+            "description":"As in piClim-control but with present-day land use",
             "end_year":"",
             "experiment":"effective radiative forcing by present-day land use",
             "experiment_id":"piClim-lu",
@@ -6926,7 +6926,7 @@
             "additional_allowed_model_components":[
                 ""
             ],
-            "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
+            "description":"Prescribed anthropogenic aerosol optical properties. Aerosol forcings",
             "end_year":"",
             "experiment":"effective radiative forcing at present day with specified anthropogenic aerosol optical properties, all forcings",
             "experiment_id":"piClim-spAer-aer",
@@ -6980,7 +6980,7 @@
             "additional_allowed_model_components":[
                 ""
             ],
-            "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
+            "description":"Prescribed anthropogenic aerosol optical properties. Aerosol forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, aerosol forcing",
             "experiment_id":"piClim-spAer-histaer",
@@ -7007,7 +7007,7 @@
             "additional_allowed_model_components":[
                 ""
             ],
-            "description":"Prescribed anthropogenic aerosol optical properties. Aerosol and ozone forcings",
+            "description":"Prescribed anthropogenic aerosol optical properties. All anthropogenic and natural forcings",
             "end_year":"2014",
             "experiment":"transient effective radiative forcing with specified anthropogenic aerosol optical properties, all forcings",
             "experiment_id":"piClim-spAer-histall",
@@ -8415,13 +8415,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr 23 14:01:43 2019 -0700",
-        "CV_collection_version":"6.2.20.3",
+        "CV_collection_modified":"Wed Apr 24 13:55:20 2019 -0700",
+        "CV_collection_version":"6.2.21.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Mar 21 14:19:42 2019 -0700",
-        "experiment_id_CV_note":"Revise OMIP*-spunup experiment_id values",
+        "experiment_id_CV_note":"Update RFMIP experiment descriptions",
         "institution_id":"PCMDI",
-        "previous_commit":"ea72caae1889f55a6e8dc807aef600fdfba52e98",
+        "previous_commit":"69c6efa45e5227f169d3a9515b14cf5a47557031",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

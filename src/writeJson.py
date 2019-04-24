@@ -355,6 +355,7 @@ PJD 21 Mar 2019    - Revise OMIP*-spunup experiment_id values https://github.com
 PJD 25 Mar 2019    - Register GFDL RFMIP model contributors https://github.com/WCRP-CMIP/CMIP6_CVs/issues/673
 PJD 23 Apr 2019    - Update VRESM/CSIR-CSIRO registration https://github.com/WCRP-CMIP/CMIP6_CVs/issues/100 and 101
 PJD 23 Apr 2019    - Revise multiple MIROC registrations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/675
+PJD 24 Apr 2019    - Update RFMIP experiment descriptions https://github.com/WCRP-CMIP/CMIP6_CVs/issues/676
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -380,7 +381,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple MIROC registrations\"'
+commitMessage = '\"Update RFMIP experiment descriptions\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -521,9 +522,26 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-for key in ['omip1-spunup','omip2-spunup']:
-    experiment_id[key]['additional_allowed_model_components'] = []
-    experiment_id[key]['required_model_components'] = ['OGCM','BGC']
+key = 'piClim-control'
+experiment_id[key]['experiment'] = 'Control simulation providing baseline for evaluating effective radiative forcing (ERF)'
+key = 'piClim-anthro'
+experiment_id[key]['description'] = 'As in piClim-control but with present-day anthropogenic forcing (greenhouse gases, ozone, aerosols and land-use)'
+key = 'piClim-ghg'
+experiment_id[key]['description'] = 'As in piClim-control but with present-day non-ozone greenhouse gases'
+key = 'piClim-4xCO2'
+experiment_id[key]['description'] = 'As in piClim-control but with 4xCO2'
+key = 'piClim-lu'
+experiment_id[key]['description'] = 'As in piClim-control but with present-day land use'
+key = 'piClim-aer'
+experiment_id[key]['description'] = 'As in piClim-control but with with present-day aerosols. Note that this experiment is considered to be tier 1 by RFMIP but tier 2 by AerChemMIP'
+key = 'piClim-histghg'
+experiment_id[key]['description'] = 'Time-varying forcing by non-ozone GHGs. SST and sea ice fixed at preindustrial control. Interactive vegetation'
+key = 'piClim-spAer-aer'
+experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. Aerosol forcings'
+key = 'piClim-spAer-histaer'
+experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. Aerosol forcings'
+key = 'piClim-spAer-histall'
+experiment_id[key]['description'] = 'Prescribed anthropogenic aerosol optical properties. All anthropogenic and natural forcings'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -786,12 +804,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC-ES2H'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-key = 'MIROC-ES2L'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '500 km'
-key = 'MIROC6'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'

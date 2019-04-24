@@ -29,7 +29,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
-    $('#table_id').DataTable();
+    $('#example').dataTable( {
+      "pageLength": 50,
+      "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
     } );
 //]]>
 </script>"""

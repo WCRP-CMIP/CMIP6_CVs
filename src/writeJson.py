@@ -358,6 +358,7 @@ PJD 23 Apr 2019    - Revise multiple MIROC registrations https://github.com/WCRP
 PJD 24 Apr 2019    - Update RFMIP experiment descriptions https://github.com/WCRP-CMIP/CMIP6_CVs/issues/676
 PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/679
 PJD 24 Apr 2019    - Register institution_id NASA-GSFC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/680
+PJD 25 Apr 2019    - Update html page length defaults https://github.com/WCRP-CMIP/CMIP6_CVs/issues/658
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -383,7 +384,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register institution_id NASA-GSFC\"'
+commitMessage = '\"Update html page length defaults\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -678,7 +679,7 @@ institution_id = {
     'MPI-M': 'Max Planck Institute for Meteorology, Hamburg 20146, Germany',
     'MRI': 'Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan',
     'NASA-GISS': 'Goddard Institute for Space Studies, New York, NY 10025, USA',
-    'NASA-GSFC': 'NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA',    
+    'NASA-GSFC': 'NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA',
     'NCAR': 'National Center for Atmospheric Research, Climate and Global Dynamics Laboratory, 1850 Table Mesa Drive, Boulder, CO 80305, USA',
     'NCC': ''.join(['NorESM Climate modeling Consortium consisting of ',
                     'CICERO (Center for International Climate and Environmental Research, Oslo 0349), ',

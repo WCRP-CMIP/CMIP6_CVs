@@ -30,17 +30,18 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
-    $('#table_id').DataTable();
+    $('#table_id').DataTable( {
+      "pageLength": 50,
+      "lengthMenu": [ [5,10,25,50,100,150,200,250,300,-1], [5,10,25,50,100,150,200,250,300,"All"] ]
     } );
 //]]>
 </script>"""
 
+# 190425 Replaced defaults below
 #<script type="text/javascript">
 #//<![CDATA[
 #$(document).ready( function () {
-#    $('#table_id').dataTable( {
-#      "pageLength": 50,
-#      "lengthMenu": [ [5,10,25,50,100,200,250,300,-1], [5,10,25,50,100,200,250,300,"All"] ]
+#    $('#table_id').DataTable();
 #    } );
 #//]]>
 #</script>"""

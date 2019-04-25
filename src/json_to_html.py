@@ -10,6 +10,7 @@ http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-gi
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 31 Jul 2018    - Update to include version info in html head
 PJD  7 Aug 2018    - Update version format
+PJD 25 Apr 2019    - Updated default page lengths
 
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -29,7 +30,7 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
-    $('#table_id').dataTable();
+    $('#table_id').DataTable();
 //]]>
 </script>"""
 

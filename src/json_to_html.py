@@ -29,12 +29,22 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
-    $('#example').dataTable( {
+    $('#table_id').dataTable( {
       "pageLength": 50,
       "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
     } );
 //]]>
 </script>"""
+
+#<script type="text/javascript">
+#//<![CDATA[
+#$(document).ready( function () {
+#    $('#table_id').dataTable( {
+#      "pageLength": 50,
+#      "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
+#    } );
+#//]]>
+#</script>"""
 
 #%% Argparse extract
 verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+') ; # Matching version format 6.2.11.2

@@ -10,8 +10,8 @@ http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-gi
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 31 Jul 2018    - Update to include version info in html head
 PJD  7 Aug 2018    - Update version format
-PJD 25 Apr 2019    - Updated default page lengths
-
+PJD 25 Apr 2019    - Updated sources to latest 1.10.13 -> 1.10.18; 3.2.1 -> 3.3.1
+                   - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse,json,re,sys
@@ -30,18 +30,18 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
-    $('#table_id').DataTable( {
-      "pageLength": 50,
-      "lengthMenu": [ [5,10,25,50,100,150,200,250,300,-1], [5,10,25,50,100,150,200,250,300,"All"] ]
+    $('#table_id').DataTable();
     } );
 //]]>
 </script>"""
 
-# 190425 Replaced defaults below
+# 190425 Updates below fail
 #<script type="text/javascript">
 #//<![CDATA[
 #$(document).ready( function () {
-#    $('#table_id').DataTable();
+#    $('#table_id').DataTable( {
+#      "pageLength": 50,
+#      "lengthMenu": [ [5,10,25,50,100,150,200,250,300,-1], [5,10,25,50,100,150,200,250,300,"All"] ]
 #    } );
 #//]]>
 #</script>"""

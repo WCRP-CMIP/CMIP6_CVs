@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"ea72caae1889f55a6e8dc807aef600fdfba52e98",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ea72caae1889f55a6e8dc807aef600fdfba52e98",
-            "commitMessage":"Revise multiple MIROC registrations",
-            "timeStamp":"Tue Apr 23 14:01:43 2019 -0700"
+            "MD5":"f799f9679d3a944aa5ee0b20ab1195a99a774628",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f799f9679d3a944aa5ee0b20ab1195a99a774628",
+            "commitMessage":"Revise source_id EMAC-2-53-AerChem",
+            "timeStamp":"Tue May  7 12:28:37 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":1,
+            "versionCVCommit":2,
             "versionCVContent":22,
             "versionCVStructure":2,
             "versionMIPEra":6

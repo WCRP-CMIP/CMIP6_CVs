@@ -359,6 +359,7 @@ PJD 24 Apr 2019    - Update RFMIP experiment descriptions https://github.com/WCR
 PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/679
 PJD 24 Apr 2019    - Register institution_id NASA-GSFC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/680
 PJD 25 Apr 2019    - Update html page length defaults https://github.com/WCRP-CMIP/CMIP6_CVs/issues/658
+PJD  7 May 2019    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/695
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -384,7 +385,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Update html page length defaults\"'
+commitMessage = '\"Revise source_id EMAC-2-53-AerChem\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -788,7 +789,13 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key1 = 'EMAC-2-53-AerChem'
+key2 = 'EMAC-2-54-AerChem'
+source_id[key2] = source_id.pop(key1)
+source_id[key2]['label'] = 'EMAC-2-54-AerChem'
+source_id[key2]['label_extended'] = 'EMAC-2-54-x-AerChem'
+source_id[key2]['release_year'] = '2018'
+source_id[key2]['source_id'] = key2
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
@@ -831,6 +838,11 @@ del(tmp)
 #source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
 #source_id[key]['release_year'] = '2018'
 #source_id[key]['source_id'] = key
+# Rename
+#source_id[key2] = experiment_id.pop(key1)
+# Remove
+#source_id.pop(key1)
+
 '''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114

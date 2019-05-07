@@ -2444,56 +2444,6 @@
             "release_year":"2017",
             "source_id":"ECMWF-IFS-MR"
         },
-        "EMAC-2-53-AerChem":{
-            "activity_participation":[
-                "AerChemMIP",
-                "CMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "MESSy-Consortium"
-            ],
-            "label":"EMAC-2-53-AerChem",
-            "label_extended":"EMAC-2-53-x-AerChem",
-            "model_component":{
-                "aerosol":{
-                    "description":"gmxe 2.2.x",
-                    "native_nominal_resolution":"500 km"
-                },
-                "atmos":{
-                    "description":"ECHAM5.3.02 (modified, spectral T42; 128 x 64 longitude/latitude; 47 levels; top level 0.01 hPa)",
-                    "native_nominal_resolution":"500 km"
-                },
-                "atmosChem":{
-                    "description":"MECCA 3.8.x",
-                    "native_nominal_resolution":"500 km"
-                },
-                "land":{
-                    "description":"same as Atmosphere",
-                    "native_nominal_resolution":"500 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"MPIOM 1.3.0-beta (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
-                    "native_nominal_resolution":"250 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"EMAC-2-53-AerChem"
-        },
         "EMAC-2-53-Vol":{
             "activity_participation":[
                 "CMIP",
@@ -2543,6 +2493,56 @@
             },
             "release_year":"2017",
             "source_id":"EMAC-2-53-Vol"
+        },
+        "EMAC-2-54-AerChem":{
+            "activity_participation":[
+                "AerChemMIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "MESSy-Consortium"
+            ],
+            "label":"EMAC-2-54-AerChem",
+            "label_extended":"EMAC-2-54-x-AerChem",
+            "model_component":{
+                "aerosol":{
+                    "description":"gmxe 2.2.x",
+                    "native_nominal_resolution":"500 km"
+                },
+                "atmos":{
+                    "description":"ECHAM5.3.02 (modified, spectral T42; 128 x 64 longitude/latitude; 47 levels; top level 0.01 hPa)",
+                    "native_nominal_resolution":"500 km"
+                },
+                "atmosChem":{
+                    "description":"MECCA 3.8.x",
+                    "native_nominal_resolution":"500 km"
+                },
+                "land":{
+                    "description":"same as Atmosphere",
+                    "native_nominal_resolution":"500 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MPIOM 1.3.0-beta (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model",
+                    "native_nominal_resolution":"250 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"EMAC-2-54-AerChem"
         },
         "FGOALS-f3-H":{
             "activity_participation":[
@@ -5943,13 +5943,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Apr 25 09:50:49 2019 -0700",
-        "CV_collection_version":"6.2.22.1",
+        "CV_collection_modified":"Tue May  7 12:28:37 2019 -0700",
+        "CV_collection_version":"6.2.22.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"f799f9679d3a944aa5ee0b20ab1195a99a774628",
         "source_id_CV_modified":"Tue Apr 23 14:01:43 2019 -0700",
-        "source_id_CV_note":"Revise multiple MIROC registrations",
+        "source_id_CV_note":"Revise source_id EMAC-2-53-AerChem",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

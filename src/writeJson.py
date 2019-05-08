@@ -360,6 +360,7 @@ PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CM
 PJD 24 Apr 2019    - Register institution_id NASA-GSFC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/680
 PJD 25 Apr 2019    - Update html page length defaults https://github.com/WCRP-CMIP/CMIP6_CVs/issues/658
 PJD  7 May 2019    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/695
+PJD  8 May 2019    - Register source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -385,7 +386,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id EMAC-2-53-AerChem\"'
+commitMessage = '\"Register source_id NorESM1-1-ME\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -789,13 +790,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key1 = 'EMAC-2-53-AerChem'
-key2 = 'EMAC-2-54-AerChem'
-source_id[key2] = source_id.pop(key1)
-source_id[key2]['label'] = 'EMAC-2-54-AerChem'
-source_id[key2]['label_extended'] = 'EMAC-2-54-x-AerChem'
-source_id[key2]['release_year'] = '2018'
-source_id[key2]['source_id'] = key2
+key = 'NorESM1-1-ME'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'NCC'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = 'NorESM1-1-ME (Medium resolution, Emission capable)'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'OsloAero4.1 (same grid as atmos)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'CAM-Oslo4.1 (2.5 x 1.5 finite volume grid; 144 x 96 longitude/latitude; 26 levels; top level 3 mb)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'OsloChemSimp4.1 (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'CLM4 (same grid as atmos)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'MICOM1.1 (1 degree resolution; 384 x 320 longtitude/latitude; 70 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC5.1 (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2011'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

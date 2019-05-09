@@ -8631,13 +8631,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May  8 09:36:26 2019 -0700",
-        "CV_collection_version":"6.2.22.3",
+        "CV_collection_modified":"Thu May  9 08:26:38 2019 -0700",
+        "CV_collection_version":"6.2.22.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Apr 24 14:09:47 2019 -0700",
         "experiment_id_CV_note":"Register 8 new C4MIP experiments",
         "institution_id":"PCMDI",
-        "previous_commit":"3edf0ea0dcd44667b6aa749252d7e276d507a975",
+        "previous_commit":"1a7c434d5b9cbaa5fdc5761107cdf6ebce6f479a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

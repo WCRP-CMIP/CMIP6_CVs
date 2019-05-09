@@ -362,7 +362,8 @@ PJD 25 Apr 2019    - Update html page length defaults https://github.com/WCRP-CM
 PJD  7 May 2019    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/695
 PJD  8 May 2019    - Register source_id NorESM1-1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  9 May 2019    - Revise HadGEM3-GC31 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/699
-PJD  8 May 2019    - Rename source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD  9 May 2019    - Rename source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD  9 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -388,7 +389,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Rename source_id NorESM1-1-ME\"'
+commitMessage = '\"evise source_id NorESM1-LM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -792,14 +793,8 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key1 = 'NorESM1-1-ME'
-key2 = 'NorESM1-LM'
-source_id[key2] = source_id.pop(key1)
-source_id[key2]['label'] = 'NorESM1-LM'
-source_id[key2]['label_extended'] = 'NorESM1-LM (low atmosphere-medium ocean resolution, GHG concentration driven)'
-source_id[key2]['model_component']['atmos']['description'] = 'CAM-OSLO4.1 (2 degree resolution; 144 x 96 longitude/latitude; 26 levels; top level ~2 hPa)'
-source_id[key2]['model_component']['ocean']['description'] = 'MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 35 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id[key2]['source_id'] = key2
+key = 'NorESM1-LM'
+source_id[key]['release_year'] = '2019'
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

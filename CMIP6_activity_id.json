@@ -26,13 +26,13 @@
         "VolMIP":"Volcanic Forcings Model Intercomparison Project"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May  9 11:06:23 2019 -0700",
-        "CV_collection_version":"6.2.22.5",
+        "CV_collection_modified":"Thu May  9 13:20:05 2019 -0700",
+        "CV_collection_version":"6.2.22.6",
         "activity_id_CV_modified":"Mon Mar  5 16:39:09 2018 -0800",
         "activity_id_CV_note":"Update activity_id to include CDRMIP and PAMIP",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1555851426e3cc404aa858f3062916d1695532c5",
+        "previous_commit":"92db8a4db30eaeb2eb52a8ab61a8b9e10b59e0fb",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

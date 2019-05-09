@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"1a7c434d5b9cbaa5fdc5761107cdf6ebce6f479a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1a7c434d5b9cbaa5fdc5761107cdf6ebce6f479a",
-            "commitMessage":"Revise HadGEM3-GC31 source_ids",
-            "timeStamp":"Thu May  9 08:26:38 2019 -0700"
+            "MD5":"1555851426e3cc404aa858f3062916d1695532c5",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1555851426e3cc404aa858f3062916d1695532c5",
+            "commitMessage":"Rename source_id NorESM1-1-ME",
+            "timeStamp":"Thu May  9 11:06:23 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":4,
+            "versionCVCommit":5,
             "versionCVContent":22,
             "versionCVStructure":2,
             "versionMIPEra":6

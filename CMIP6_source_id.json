@@ -5104,7 +5104,7 @@
             "release_year":"2017",
             "source_id":"NICAM16-9S"
         },
-        "NorESM1-1-ME":{
+        "NorESM1-LM":{
             "activity_participation":[
                 "CMIP",
                 "DCPP"
@@ -5115,15 +5115,15 @@
             "institution_id":[
                 "NCC"
             ],
-            "label":"NorESM1-1-ME",
-            "label_extended":"NorESM1-1-ME (Medium resolution, Emission capable)",
+            "label":"NorESM1-LM",
+            "label_extended":"NorESM1-LM (low atmosphere-medium ocean resolution, GHG concentration driven)",
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero4.1 (same grid as atmos)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"CAM-Oslo4.1 (2.5 x 1.5 finite volume grid; 144 x 96 longitude/latitude; 26 levels; top level 3 mb)",
+                    "description":"CAM-OSLO4.1 (2 degree resolution; 144 x 96 longitude/latitude; 26 levels; top level ~2 hPa)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -5139,7 +5139,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MICOM1.1 (1 degree resolution; 384 x 320 longtitude/latitude; 70 levels; top grid cell 0-10 m)",
+                    "description":"MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 35 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -5152,7 +5152,7 @@
                 }
             },
             "release_year":"2011",
-            "source_id":"NorESM1-1-ME"
+            "source_id":"NorESM1-LM"
         },
         "NorESM2-HH":{
             "activity_participation":[
@@ -5995,13 +5995,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May  9 08:26:38 2019 -0700",
-        "CV_collection_version":"6.2.22.4",
+        "CV_collection_modified":"Thu May  9 11:06:23 2019 -0700",
+        "CV_collection_version":"6.2.22.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1a7c434d5b9cbaa5fdc5761107cdf6ebce6f479a",
-        "source_id_CV_modified":"Wed May  8 09:36:26 2019 -0700",
-        "source_id_CV_note":"Revise HadGEM3-GC31 source_ids",
+        "previous_commit":"1555851426e3cc404aa858f3062916d1695532c5",
+        "source_id_CV_modified":"Thu May  9 08:26:38 2019 -0700",
+        "source_id_CV_note":"Rename source_id NorESM1-1-ME",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

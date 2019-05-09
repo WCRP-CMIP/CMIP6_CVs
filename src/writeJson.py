@@ -360,8 +360,9 @@ PJD 24 Apr 2019    - Register 8 new C4MIP experiments https://github.com/WCRP-CM
 PJD 24 Apr 2019    - Register institution_id NASA-GSFC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/680
 PJD 25 Apr 2019    - Update html page length defaults https://github.com/WCRP-CMIP/CMIP6_CVs/issues/658
 PJD  7 May 2019    - Revise source_id EMAC-2-53-AerChem https://github.com/WCRP-CMIP/CMIP6_CVs/issues/695
-PJD  8 May 2019    - Register source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD  8 May 2019    - Register source_id NorESM1-1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  9 May 2019    - Revise HadGEM3-GC31 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/699
+PJD  8 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1

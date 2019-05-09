@@ -5151,7 +5151,7 @@
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2011",
+            "release_year":"2019",
             "source_id":"NorESM1-LM"
         },
         "NorESM2-HH":{
@@ -5995,13 +5995,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May  9 11:06:23 2019 -0700",
-        "CV_collection_version":"6.2.22.5",
+        "CV_collection_modified":"Thu May  9 13:20:05 2019 -0700",
+        "CV_collection_version":"6.2.22.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1555851426e3cc404aa858f3062916d1695532c5",
-        "source_id_CV_modified":"Thu May  9 08:26:38 2019 -0700",
-        "source_id_CV_note":"Rename source_id NorESM1-1-ME",
+        "previous_commit":"92db8a4db30eaeb2eb52a8ab61a8b9e10b59e0fb",
+        "source_id_CV_modified":"Thu May  9 11:06:23 2019 -0700",
+        "source_id_CV_note":"evise source_id NorESM1-LM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

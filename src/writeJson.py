@@ -364,6 +364,7 @@ PJD  8 May 2019    - Register source_id NorESM1-1-LM https://github.com/WCRP-CMI
 PJD  9 May 2019    - Revise HadGEM3-GC31 source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/699
 PJD  9 May 2019    - Rename source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  9 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD 13 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -389,7 +390,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"evise source_id NorESM1-LM\"'
+commitMessage = '\"Revise source_id NorESM1-LM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -794,7 +795,7 @@ del(tmp)
 
 # Fix issues
 key = 'NorESM1-LM'
-source_id[key]['release_year'] = '2019'
+source_id[key]['model_component']['ocean']['description'] = 'MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 53 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

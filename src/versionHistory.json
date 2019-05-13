@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"92db8a4db30eaeb2eb52a8ab61a8b9e10b59e0fb",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/92db8a4db30eaeb2eb52a8ab61a8b9e10b59e0fb",
-            "commitMessage":"evise source_id NorESM1-LM",
-            "timeStamp":"Thu May  9 13:20:05 2019 -0700"
+            "MD5":"5605d3abf86b99580be15c07858cbd026b19df20",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5605d3abf86b99580be15c07858cbd026b19df20",
+            "commitMessage":"Revise source_id NorESM1-LM",
+            "timeStamp":"Mon May 13 12:44:03 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":6,
+            "versionCVCommit":7,
             "versionCVContent":22,
             "versionCVStructure":2,
             "versionMIPEra":6

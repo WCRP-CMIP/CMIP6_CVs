@@ -5139,7 +5139,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 35 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
+                    "description":"MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 53 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -5995,13 +5995,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May  9 13:20:05 2019 -0700",
-        "CV_collection_version":"6.2.22.6",
+        "CV_collection_modified":"Mon May 13 12:44:03 2019 -0700",
+        "CV_collection_version":"6.2.22.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"92db8a4db30eaeb2eb52a8ab61a8b9e10b59e0fb",
-        "source_id_CV_modified":"Thu May  9 11:06:23 2019 -0700",
-        "source_id_CV_note":"evise source_id NorESM1-LM",
+        "previous_commit":"5605d3abf86b99580be15c07858cbd026b19df20",
+        "source_id_CV_modified":"Thu May  9 13:20:05 2019 -0700",
+        "source_id_CV_note":"Revise source_id NorESM1-LM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

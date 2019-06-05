@@ -368,6 +368,7 @@ PJD 13 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CM
 PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to MRI-AGCM3-2-S https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  5 Jun 2019    - Revise experiment_id ssp534-over-bgc https://github.com/WCRP-CMIP/CMIP6_CVs/issues/708
 PJD  5 Jun 2019    - Revise numerous GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
+PJD  5 Jun 2019    - Revise source_id BESM-2-7 to BESM-2-9 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/711
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -393,7 +394,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise numerous GeoMIP experiment_id values\"'
+commitMessage = '\"Revise source_id BESM-2-7 to BESM-2-9\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -534,18 +535,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'G6SST2-solar'
-experiment_id[key]['parent_activity_id'] = ['GeoMIP']
-experiment_id[key]['parent_experiment_id'] = ['G6solar']
-key = 'G6SST2-sulfur'
-experiment_id[key]['parent_activity_id'] = ['GeoMIP']
-experiment_id[key]['parent_experiment_id'] = ['G6sulfur']
-key = 'G7SST2-cirrus'
-experiment_id[key]['parent_activity_id'] = ['GeoMIP']
-experiment_id[key]['parent_experiment_id'] = ['G7cirrus']
-keys = ['G6solar','G6sulfur','G7cirrus']
-for key in keys:
-    experiment_id[key]['parent_activity_id'] = ['ScenarioMIP']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -808,6 +797,55 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+# Rename
+key1 = 'BESM-2-7'
+key2 = 'BESM-2-9'
+source_id[key2] = source_id.pop(key1)
+key = key2
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'DCPP',
+ 'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'INPE'
+]
+source_id[key]['label'] = 'BESM 2.9'
+source_id[key]['label_extended'] = 'BESM 2.9'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'BAM (v1.0, T062L42; 192 x 96 longitude/latitude; 42 levels; top level 3 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'SSiB 2.0'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = ''.join(['MOM-5 (MOM5, tripolar, primarily 1 deg, 1/4 deg between 22.5S-22.5N, ',
+                                                                     'downgrading from 1/4 deg at 22.5N(S) to 1 deg at 45N(S), 1 deg between ',
+                                                                     '22.5N(S) and 45N(S), upgrading from 1 deg at 45N(S) to 0.5 deg at 90N(S) ',
+                                                                     '; 360 x 192 longitude/latitude; 50 levels; top grid cell 0-10 m)'])
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'TOPAZ 2.0'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'SIS 1.0'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

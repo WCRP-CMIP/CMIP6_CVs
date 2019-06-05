@@ -367,6 +367,7 @@ PJD  9 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CM
 PJD 13 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to MRI-AGCM3-2-S https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  5 Jun 2019    - Revise experiment_id ssp534-over-bgc https://github.com/WCRP-CMIP/CMIP6_CVs/issues/708
+PJD  5 Jun 2019    - Revise numerous GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -392,7 +393,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id ssp534-over-bgc\"'
+commitMessage = '\"Revise numerous GeoMIP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -533,11 +534,18 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'ssp534-over-bgc'
-experiment_id[key]['min_number_yrs_per_sim'] = '61'
-experiment_id[key]['parent_activity_id'] = ['C4MIP']
-experiment_id[key]['parent_experiment_id'] = ['ssp585-bgc']
-experiment_id[key]['start_year'] = '2040'
+key = 'G6SST2-solar'
+experiment_id[key]['parent_activity_id'] = ['GeoMIP']
+experiment_id[key]['parent_experiment_id'] = ['G6solar']
+key = 'G6SST2-sulfur'
+experiment_id[key]['parent_activity_id'] = ['GeoMIP']
+experiment_id[key]['parent_experiment_id'] = ['G6sulfur']
+key = 'G7SST2-cirrus'
+experiment_id[key]['parent_activity_id'] = ['GeoMIP']
+experiment_id[key]['parent_experiment_id'] = ['G7cirrus']
+keys = ['G6solar','G6sulfur','G7cirrus']
+for key in keys:
+    experiment_id[key]['parent_activity_id'] = ['ScenarioMIP']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

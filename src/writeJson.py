@@ -366,6 +366,7 @@ PJD  9 May 2019    - Rename source_id NorESM1-1-ME https://github.com/WCRP-CMIP/
 PJD  9 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD 13 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to MRI-AGCM3-2-S https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD  5 Jun 2019    - Revise experiment_id ssp534-over-bgc https://github.com/WCRP-CMIP/CMIP6_CVs/issues/708
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -391,7 +392,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2\"'
+commitMessage = '\"Revise experiment_id ssp534-over-bgc\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -532,7 +533,11 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-
+key = 'ssp534-over-bgc'
+experiment_id[key]['min_number_yrs_per_sim'] = '61'
+experiment_id[key]['parent_activity_id'] = ['C4MIP']
+experiment_id[key]['parent_experiment_id'] = ['ssp585-bgc']
+experiment_id[key]['start_year'] = '2040'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -795,55 +800,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Rename
-key1 = 'MRI-AGCM3-2'
-key2 = 'MRI-AGCM3-2-S'
-source_id[key2] = source_id.pop(key1)
-source_id[key2]['label'] = 'MRI-AGCM3-2-S'
-source_id[key2]['label_extended'] = 'MRI-AGCM3-2-S'
-source_id[key2]['source_id'] = key2
-key = 'MRI-AGCM3-2-H'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'DynVarMIP',
- 'HighResMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'MRI'
-]
-source_id[key]['label'] = 'MRI-AGCM3-2-H'
-source_id[key]['label_extended'] = 'MRI-AGCM3-2-H'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'Prescribed from MRI-ESM2.0'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MRI-AGCM3.2H (TL319; 640 x 320 longitude/latitude; 64 levels; top level 0.01 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'SIB0109'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2017'
-source_id[key]['source_id'] = key
-#==============================================================================
+#============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
 #source_id[key]['activity_participation'] = [

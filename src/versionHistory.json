@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"89827a61b77ab704ee1bfb24f2efa08dad090fb1",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/89827a61b77ab704ee1bfb24f2efa08dad090fb1",
-            "commitMessage":"Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2",
-            "timeStamp":"Wed Jun  5 16:12:58 2019 -0700"
+            "MD5":"60fb3490c30c40cddf74dfb03b6ee73a17e40f49",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/60fb3490c30c40cddf74dfb03b6ee73a17e40f49",
+            "commitMessage":"Revise source_id BESM-2-7 to BESM-2-9",
+            "timeStamp":"Wed Jun  5 16:44:49 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":24,
             "versionCVStructure":2,
             "versionMIPEra":6

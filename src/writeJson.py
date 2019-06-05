@@ -365,6 +365,7 @@ PJD  9 May 2019    - Revise HadGEM3-GC31 source_ids https://github.com/WCRP-CMIP
 PJD  9 May 2019    - Rename source_id NorESM1-1-ME https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD  9 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
 PJD 13 May 2019    - Revise source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
+PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to MRI-AGCM3-2-S https://github.com/WCRP-CMIP/CMIP6_CVs/issues/696
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -390,7 +391,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id NorESM1-LM\"'
+commitMessage = '\"Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -794,8 +795,54 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'NorESM1-LM'
-source_id[key]['model_component']['ocean']['description'] = 'MICOM1.1 (1 degree resolution; 320 x 384 longitude/latitude; 53 levels; top grid cell 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
+# Rename
+key1 = 'MRI-AGCM3-2'
+key2 = 'MRI-AGCM3-2-S'
+source_id[key2] = source_id.pop(key1)
+source_id[key2]['label'] = 'MRI-AGCM3-2-S'
+source_id[key2]['label_extended'] = 'MRI-AGCM3-2-S'
+source_id[key2]['source_id'] = key2
+key = 'MRI-AGCM3-2-H'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'DynVarMIP',
+ 'HighResMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'MRI'
+]
+source_id[key]['label'] = 'MRI-AGCM3-2-H'
+source_id[key]['label_extended'] = 'MRI-AGCM3-2-H'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'Prescribed from MRI-ESM2.0'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'MRI-AGCM3.2H (TL319; 640 x 320 longitude/latitude; 64 levels; top level 0.01 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'SIB0109'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
 #==============================================================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

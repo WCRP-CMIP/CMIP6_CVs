@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 source_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.22.7</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.22.8</p>
 <table id="table_id" class="display">
 <thead><tr><th>source_id</th>
 <th>institution id</th>
@@ -875,24 +875,24 @@ $(document).ready( function () {
 <td>MARBL (same grid as ocean)</td>
 <td>CICE5.1 (same grid as ocean)</td>
 </tr>
-<tr><td>NorESM2-MM</td>
-<td>NCC</td>
+<tr><td>MRI-AGCM3-2-S</td>
+<td>MRI</td>
 <td>2017</td>
-<td>AerChemMIP CFMIP CMIP DAMIP OMIP RFMIP ScenarioMIP</td>
+<td>CMIP DynVarMIP HighResMIP</td>
 <td>Registered</td>
-<td>NorESM2-MM</td>
-<td>NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)</td>
-<td>CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)</td>
-<td>100 km</td>
-<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
-<td>100 km</td>
-<td>CISM</td>
-<td>100 km</td>
-<td>OsloAero</td>
-<td>OsloChemSimp</td>
-<td>CLM</td>
-<td>HAMOCC</td>
-<td>CICE</td>
+<td>MRI-AGCM3-2-S</td>
+<td>MRI-AGCM3-2-S</td>
+<td>MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)</td>
+<td>25 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed from MRI-ESM2.0</td>
+<td>none</td>
+<td>SIB0109</td>
+<td>none</td>
+<td>none</td>
 </tr>
 <tr><td>GFDL-CM4</td>
 <td>NOAA-GFDL</td>
@@ -1236,6 +1236,25 @@ $(document).ready( function () {
 <td>none</td>
 <td>GISS SI</td>
 </tr>
+<tr><td>NorESM2-MM</td>
+<td>NCC</td>
+<td>2017</td>
+<td>AerChemMIP CFMIP CMIP DAMIP OMIP RFMIP ScenarioMIP</td>
+<td>Registered</td>
+<td>NorESM2-MM</td>
+<td>NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)</td>
+<td>CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)</td>
+<td>100 km</td>
+<td>MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])</td>
+<td>100 km</td>
+<td>CISM</td>
+<td>100 km</td>
+<td>OsloAero</td>
+<td>OsloChemSimp</td>
+<td>CLM</td>
+<td>HAMOCC</td>
+<td>CICE</td>
+</tr>
 <tr><td>EC-Earth3-GrIS</td>
 <td>EC-Earth-Consortium</td>
 <td>2019</td>
@@ -1463,6 +1482,25 @@ $(document).ready( function () {
 <td>HTESSEL (as implemented in IFS CY43R1)</td>
 <td>none</td>
 <td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
+</tr>
+<tr><td>MRI-AGCM3-2-H</td>
+<td>MRI</td>
+<td>2017</td>
+<td>DynVarMIP HighResMIP</td>
+<td>Registered</td>
+<td>MRI-AGCM3-2-H</td>
+<td>MRI-AGCM3-2-H</td>
+<td>MRI-AGCM3.2H (TL319; 640 x 320 longitude/latitude; 64 levels; top level 0.01 hPa)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>Prescribed from MRI-ESM2.0</td>
+<td>none</td>
+<td>SIB0109</td>
+<td>none</td>
+<td>none</td>
 </tr>
 <tr><td>EC-Earth3-Veg-LR</td>
 <td>EC-Earth-Consortium</td>
@@ -1957,25 +1995,6 @@ $(document).ready( function () {
 <td>JSBACH 3.20</td>
 <td>none</td>
 <td>FESOM 1.4</td>
-</tr>
-<tr><td>MRI-AGCM3-2</td>
-<td>MRI</td>
-<td>2017</td>
-<td>CMIP DynVarMIP HighResMIP</td>
-<td>Registered</td>
-<td>MRI-AGCM3-2</td>
-<td>MRI-AGCM3-2</td>
-<td>MRI-AGCM3.2S (TL959; 1920 x 960 longitude/latitude; 64 levels; top level 0.01 hPa)</td>
-<td>25 km</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>Prescribed from MRI-ESM2.0</td>
-<td>none</td>
-<td>SIB0109</td>
-<td>none</td>
-<td>none</td>
 </tr>
 <tr><td>CNRM-ESM2-1</td>
 <td>CNRM-CERFACS</td>

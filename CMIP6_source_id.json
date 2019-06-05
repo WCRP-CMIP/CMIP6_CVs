@@ -4728,7 +4728,57 @@
             "release_year":"2017",
             "source_id":"MPI-ESM1-2-XR"
         },
-        "MRI-AGCM3-2":{
+        "MRI-AGCM3-2-H":{
+            "activity_participation":[
+                "DynVarMIP",
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "MRI"
+            ],
+            "label":"MRI-AGCM3-2-H",
+            "label_extended":"MRI-AGCM3-2-H",
+            "model_component":{
+                "aerosol":{
+                    "description":"Prescribed from MRI-ESM2.0",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"MRI-AGCM3.2H (TL319; 640 x 320 longitude/latitude; 64 levels; top level 0.01 hPa)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"SIB0109",
+                    "native_nominal_resolution":"50 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"MRI-AGCM3-2-H"
+        },
+        "MRI-AGCM3-2-S":{
             "activity_participation":[
                 "CMIP",
                 "DynVarMIP",
@@ -4740,8 +4790,8 @@
             "institution_id":[
                 "MRI"
             ],
-            "label":"MRI-AGCM3-2",
-            "label_extended":"MRI-AGCM3-2",
+            "label":"MRI-AGCM3-2-S",
+            "label_extended":"MRI-AGCM3-2-S",
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed from MRI-ESM2.0",
@@ -4777,7 +4827,7 @@
                 }
             },
             "release_year":"2017",
-            "source_id":"MRI-AGCM3-2"
+            "source_id":"MRI-AGCM3-2-S"
         },
         "MRI-ESM2-0":{
             "activity_participation":[
@@ -5995,13 +6045,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon May 13 12:44:03 2019 -0700",
-        "CV_collection_version":"6.2.22.7",
+        "CV_collection_modified":"Wed Jun  5 16:12:58 2019 -0700",
+        "CV_collection_version":"6.2.22.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5605d3abf86b99580be15c07858cbd026b19df20",
-        "source_id_CV_modified":"Thu May  9 13:20:05 2019 -0700",
-        "source_id_CV_note":"Revise source_id NorESM1-LM",
+        "previous_commit":"89827a61b77ab704ee1bfb24f2efa08dad090fb1",
+        "source_id_CV_modified":"Mon May 13 12:44:03 2019 -0700",
+        "source_id_CV_note":"Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

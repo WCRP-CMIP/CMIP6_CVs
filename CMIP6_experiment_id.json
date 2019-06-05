@@ -8204,18 +8204,18 @@
             "end_year":"2100 or 2300",
             "experiment":"biogeochemically-coupled version of the RCP3.4-overshoot based on SSP5",
             "experiment_id":"ssp534-over-bgc",
-            "min_number_yrs_per_sim":"86",
+            "min_number_yrs_per_sim":"61",
             "parent_activity_id":[
                 "C4MIP"
             ],
             "parent_experiment_id":[
-                "hist-bgc"
+                "ssp585-bgc"
             ],
             "required_model_components":[
                 "AOGCM",
                 "BGC"
             ],
-            "start_year":"2015",
+            "start_year":"2040",
             "sub_experiment_id":[
                 "none"
             ],
@@ -8631,13 +8631,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun  5 16:12:58 2019 -0700",
-        "CV_collection_version":"6.2.22.8",
+        "CV_collection_modified":"Wed Jun  5 16:24:59 2019 -0700",
+        "CV_collection_version":"6.2.23.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Apr 24 14:09:47 2019 -0700",
-        "experiment_id_CV_note":"Register 8 new C4MIP experiments",
+        "experiment_id_CV_note":"Revise experiment_id ssp534-over-bgc",
         "institution_id":"PCMDI",
-        "previous_commit":"89827a61b77ab704ee1bfb24f2efa08dad090fb1",
+        "previous_commit":"9824ee867750dd11717b9aebe170e71d301c1b69",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

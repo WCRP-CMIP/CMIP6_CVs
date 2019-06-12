@@ -369,7 +369,7 @@ PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to 
 PJD  5 Jun 2019    - Revise experiment_id ssp534-over-bgc https://github.com/WCRP-CMIP/CMIP6_CVs/issues/708
 PJD  5 Jun 2019    - Revise numerous GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
 PJD  5 Jun 2019    - Revise source_id BESM-2-7 to BESM-2-9 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/711
-PJD 12 Jun 2019    - Revise numerous AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
+PJD 12 Jun 2019    - Revise multiple AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -395,7 +395,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id BESM-2-7 to BESM-2-9\"'
+commitMessage = '\"Revise multiple AerChemMIP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

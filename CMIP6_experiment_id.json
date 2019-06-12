@@ -4080,10 +4080,10 @@
             "experiment_id":"histSST",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4138,10 +4138,10 @@
             "experiment_id":"histSST-piAer",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4166,10 +4166,10 @@
             "experiment_id":"histSST-piCH4",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4195,10 +4195,10 @@
             "experiment_id":"histSST-piN2O",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4225,10 +4225,10 @@
             "experiment_id":"histSST-piNTCF",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -4253,10 +4253,10 @@
             "experiment_id":"histSST-piO3",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "no parent"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "piControl"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7916,10 +7916,10 @@
             "experiment_id":"ssp370SST",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7945,10 +7945,10 @@
             "experiment_id":"ssp370SST-lowAer",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -7974,10 +7974,10 @@
             "experiment_id":"ssp370SST-lowBC",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8002,10 +8002,10 @@
             "experiment_id":"ssp370SST-lowCH4",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8032,10 +8032,10 @@
             "experiment_id":"ssp370SST-lowNTCF",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8060,10 +8060,10 @@
             "experiment_id":"ssp370SST-lowO3",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8631,13 +8631,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun  5 16:44:49 2019 -0700",
-        "CV_collection_version":"6.2.24.1",
+        "CV_collection_modified":"Wed Jun 12 10:42:31 2019 -0700",
+        "CV_collection_version":"6.2.25.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Jun  5 16:35:41 2019 -0700",
-        "experiment_id_CV_note":"Revise numerous GeoMIP experiment_id values",
+        "experiment_id_CV_note":"Revise multiple AerChemMIP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"60fb3490c30c40cddf74dfb03b6ee73a17e40f49",
+        "previous_commit":"dfe30f048ddafcacdf3ecab3822e1dc0bd655fb4",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

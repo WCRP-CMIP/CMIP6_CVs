@@ -369,7 +369,8 @@ PJD  5 Jun 2019    - Register source_id MRI-AGCM3-2-H and revise MRI-AGCM3-2 to 
 PJD  5 Jun 2019    - Revise experiment_id ssp534-over-bgc https://github.com/WCRP-CMIP/CMIP6_CVs/issues/708
 PJD  5 Jun 2019    - Revise numerous GeoMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
 PJD  5 Jun 2019    - Revise source_id BESM-2-7 to BESM-2-9 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/711
-PJD 12 Jun 2019    - Revise multiple AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/710
+PJD 12 Jun 2019    - Revise multiple AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
+PJD 12 Jun 2019    - Revise multiple CFMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/709
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -395,7 +396,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple AerChemMIP experiment_id values\"'
+commitMessage = '\"Revise multiple CFMIP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -536,16 +537,11 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-keys = ['hist-1950HC','ssp370SST','ssp370SST-lowAer','ssp370SST-lowBC',
-        'ssp370SST-lowCH4','ssp370SST-lowNTCF','ssp370SST-lowO3']
+keys = ['a4SST','a4SSTice','a4SSTice-4xCO2','piSST','piSST-4xCO2',
+        'piSST-4xCO2-rad','piSST-pxK']
 for key in keys:
-    experiment_id[key]['parent_activity_id'] = ['CMIP']
-    experiment_id[key]['parent_experiment_id'] = ['historical']
-keys = ['histSST','histSST-piAer','histSST-piCH4','histSST-piN2O',
-        'histSST-piNTCF','histSST-piO3']
-for key in keys:
-    experiment_id[key]['parent_activity_id'] = ['CMIP']
-    experiment_id[key]['parent_experiment_id'] = ['piControl']
+    experiment_id[key]['parent_activity_id'] = ['no parent']
+    experiment_id[key]['parent_experiment_id'] = ['no parent']
 
 #==============================================================================
 # Example new experiment_id entry

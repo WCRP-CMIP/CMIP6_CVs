@@ -503,10 +503,10 @@
             "experiment_id":"a4SST",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "abrupt-4xCO2"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -531,10 +531,10 @@
             "experiment_id":"a4SSTice",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "abrupt-4xCO2"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -559,10 +559,10 @@
             "experiment_id":"a4SSTice-4xCO2",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "abrupt-4xCO2"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7345,10 +7345,10 @@
             "experiment_id":"piSST",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "piControl"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7373,10 +7373,10 @@
             "experiment_id":"piSST-4xCO2",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "piControl"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7401,10 +7401,10 @@
             "experiment_id":"piSST-4xCO2-rad",
             "min_number_yrs_per_sim":"30",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "piControl"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -7515,10 +7515,10 @@
             "experiment_id":"piSST-pxK",
             "min_number_yrs_per_sim":"20",
             "parent_activity_id":[
-                "CMIP"
+                "no parent"
             ],
             "parent_experiment_id":[
-                "piControl"
+                "no parent"
             ],
             "required_model_components":[
                 "AGCM"
@@ -8631,13 +8631,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 12 10:42:31 2019 -0700",
-        "CV_collection_version":"6.2.25.0",
+        "CV_collection_modified":"Wed Jun 12 10:51:23 2019 -0700",
+        "CV_collection_version":"6.2.26.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Wed Jun  5 16:35:41 2019 -0700",
-        "experiment_id_CV_note":"Revise multiple AerChemMIP experiment_id values",
+        "experiment_id_CV_modified":"Wed Jun 12 10:42:31 2019 -0700",
+        "experiment_id_CV_note":"Revise multiple CFMIP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"dfe30f048ddafcacdf3ecab3822e1dc0bd655fb4",
+        "previous_commit":"c97fbf7fd19f285f5ab46b1f76df8d247b6a4dfc",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

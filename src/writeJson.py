@@ -371,6 +371,7 @@ PJD  5 Jun 2019    - Revise numerous GeoMIP experiment_id values https://github.
 PJD  5 Jun 2019    - Revise source_id BESM-2-7 to BESM-2-9 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/711
 PJD 12 Jun 2019    - Revise multiple AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
 PJD 12 Jun 2019    - Revise multiple CFMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/709
+PJD 12 Jun 2019    - Revise multiple DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/716
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -396,7 +397,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple CFMIP experiment_id values\"'
+commitMessage = '\"Revise multiple DCPP experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -537,13 +538,32 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-keys = ['a4SST','a4SSTice','a4SSTice-4xCO2','piSST','piSST-4xCO2',
-        'piSST-4xCO2-rad','piSST-pxK']
+sub = []
+for yr in range(1960,2020):
+    sub.append(''.join(['s',str(yr)]))
+keys = ['dcppA-hindcast','dcppA-hindcast-niff','dcppA-historical-niff']
 for key in keys:
-    experiment_id[key]['parent_activity_id'] = ['no parent']
-    experiment_id[key]['parent_experiment_id'] = ['no parent']
+    experiment_id[key]['sub_experiment_id'] = sub
+    experiment_id[key]['start_year'] = 'a year in the range 1960-2019'
+key = 'dcppA-hindcast'
+experiment_id[key]['description'] = ''.join(['A1 (and A2.1, A3.1, and A3.2) ',
+                                             'Decadal hindcasts begun near the ',
+                                             'end of each year from 1960 to 2019, ',
+                                             'or every other year at minimum. ',
+                                             'First full hindcast year follows ',
+                                             'start year (e.g., for s1960, first ',
+                                             'full hindcast year is 1961)'])
+key = 'dcppA-hindcast-niff'
+experiment_id[key]['description'] = ''.join(['A4.1 Decadal hindcasts begun near ',
+                                             'the end of each year from 1960 to ',
+                                             '2019, or every other year at minimum, ',
+                                             'but with no information from the ',
+                                             'future. First full hindcast year ',
+                                             'follows start year (e.g., for ',
+                                             's1960, first full hindcast year ',
+                                             'is 1961)'])
 
-#==============================================================================
+    #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
 #experiment_id[key] = {}

@@ -1467,7 +1467,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"A1 (and A2.1, A3.1, and A3.2) Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
+            "description":"A1 (and A2.1, A3.1, and A3.2) Decadal hindcasts begun near the end of each year from 1960 to 2019, or every other year at minimum. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
             "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized based on observations and using historical forcing",
             "experiment_id":"dcppA-hindcast",
@@ -1483,7 +1483,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"a year in the range 1960-2016",
+            "start_year":"a year in the range 1960-2019",
             "sub_experiment_id":[
                 "s1960",
                 "s1961",
@@ -1541,7 +1541,10 @@
                 "s2013",
                 "s2014",
                 "s2015",
-                "s2016"
+                "s2016",
+                "s2017",
+                "s2018",
+                "s2019"
             ],
             "tier":"1"
         },
@@ -1554,7 +1557,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"A4.1 Decadal hindcasts begun near the end of each year from 1960 to 2016, or every other year at minimum, but with no information from the future. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
+            "description":"A4.1 Decadal hindcasts begun near the end of each year from 1960 to 2019, or every other year at minimum, but with no information from the future. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)",
             "end_year":"5 - 10 years after start year",
             "experiment":"hindcast initialized based on observations but without using knowledge of subsequent historical forcing",
             "experiment_id":"dcppA-hindcast-niff",
@@ -1570,7 +1573,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"a year in the range 1960-2016",
+            "start_year":"a year in the range 1960-2019",
             "sub_experiment_id":[
                 "s1960",
                 "s1961",
@@ -1628,7 +1631,10 @@
                 "s2013",
                 "s2014",
                 "s2015",
-                "s2016"
+                "s2016",
+                "s2017",
+                "s2018",
+                "s2019"
             ],
             "tier":"4"
         },
@@ -1655,7 +1661,7 @@
             "required_model_components":[
                 "AOGCM"
             ],
-            "start_year":"A year in the range 1960-2016",
+            "start_year":"a year in the range 1960-2019",
             "sub_experiment_id":[
                 "s1960",
                 "s1961",
@@ -1713,7 +1719,10 @@
                 "s2013",
                 "s2014",
                 "s2015",
-                "s2016"
+                "s2016",
+                "s2017",
+                "s2018",
+                "s2019"
             ],
             "tier":"4"
         },
@@ -8631,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 12 10:51:23 2019 -0700",
-        "CV_collection_version":"6.2.26.0",
+        "CV_collection_modified":"Wed Jun 12 11:10:52 2019 -0700",
+        "CV_collection_version":"6.2.27.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Wed Jun 12 10:42:31 2019 -0700",
-        "experiment_id_CV_note":"Revise multiple CFMIP experiment_id values",
+        "experiment_id_CV_modified":"Wed Jun 12 10:51:23 2019 -0700",
+        "experiment_id_CV_note":"Revise multiple DCPP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"c97fbf7fd19f285f5ab46b1f76df8d247b6a4dfc",
+        "previous_commit":"51d21bb9104b2b023c2149ffe3e3ce76fa2c811c",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

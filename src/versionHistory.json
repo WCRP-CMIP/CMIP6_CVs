@@ -73,10 +73,10 @@
             "timeStamp":"Fri Sep 8 17:57:00 2017 -0700"
         },
         "sub_experiment_id":{
-            "MD5":"af9202b7e26d357aa988c1741b7a25f90fdedbfd",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/af9202b7e26d357aa988c1741b7a25f90fdedbfd",
-            "commitMessage":"Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)",
-            "timeStamp":"Wed Mar 8 11:27:00 2017 -0700"
+            "MD5":"7f7e6eea0f02ebf82ba42ca95e165edd3d78cb1d",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7f7e6eea0f02ebf82ba42ca95e165edd3d78cb1d",
+            "commitMessage":"Revise sub_experiment_id values",
+            "timeStamp":"Mon Jun 17 11:01:51 2019 -0700"
         },
         "table_id":{
             "MD5":"f4a9fc202b7bea32038d92791cbce95af75022ab",
@@ -86,7 +86,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":27,
+            "versionCVContent":28,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

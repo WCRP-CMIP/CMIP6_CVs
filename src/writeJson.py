@@ -372,6 +372,7 @@ PJD  5 Jun 2019    - Revise source_id BESM-2-7 to BESM-2-9 https://github.com/WC
 PJD 12 Jun 2019    - Revise multiple AerChemMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
 PJD 12 Jun 2019    - Revise multiple CFMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/709
 PJD 12 Jun 2019    - Revise multiple DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/716
+PJD 17 Jun 2019    - Revise sub_experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/720
 PJD 17 Jun 2019    - Revise multiple OMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -539,6 +540,7 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+<<<<<<< HEAD
 key = 'omip1'
 experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean ',
                                              '- ice Reference Experiments inter-annually varying atmospheric and river ',
@@ -592,6 +594,9 @@ experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment excep
                                              'diverge greatly from physical fields in the omip2 simulation. The spin up also ',
                                              'includes radiocarbon to evaluate deep-ocean circulation'])
 experiment_id[key]['min_number_yrs_per_sim'] = 305
+=======
+
+>>>>>>> master
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -925,6 +930,7 @@ source_type = {
 sub_experiment_id = {}
 sub_experiment_id['none'] = 'none'
 sub_experiment_id['s1910'] = 'initialized near end of year 1910'
+sub_experiment_id['s1920'] = 'initialized near end of year 1920'
 sub_experiment_id['s1950'] = 'initialized near end of year 1950'
 for yr in range(1960,2030):
     sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])

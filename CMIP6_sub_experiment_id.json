@@ -2,6 +2,7 @@
     "sub_experiment_id":{
         "none":"none",
         "s1910":"initialized near end of year 1910",
+        "s1920":"initialized near end of year 1920",
         "s1950":"initialized near end of year 1950",
         "s1960":"initialized near end of year 1960",
         "s1961":"initialized near end of year 1961",
@@ -75,13 +76,13 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 12 11:10:52 2019 -0700",
-        "CV_collection_version":"6.2.27.0",
+        "CV_collection_modified":"Mon Jun 17 11:01:51 2019 -0700",
+        "CV_collection_version":"6.2.28.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"51d21bb9104b2b023c2149ffe3e3ce76fa2c811c",
+        "previous_commit":"7f7e6eea0f02ebf82ba42ca95e165edd3d78cb1d",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "sub_experiment_id_CV_modified":"Wed Mar 8 11:27:00 2017 -0700",
-        "sub_experiment_id_CV_note":"Issue1 durack1 update experiment_id from spreadsheet (MIP-chair review) (#241)"
+        "sub_experiment_id_CV_note":"Revise sub_experiment_id values"
     }
 }

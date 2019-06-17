@@ -540,7 +540,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-<<<<<<< HEAD
 key = 'omip1'
 experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean ',
                                              '- ice Reference Experiments inter-annually varying atmospheric and river ',
@@ -594,9 +593,7 @@ experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment excep
                                              'diverge greatly from physical fields in the omip2 simulation. The spin up also ',
                                              'includes radiocarbon to evaluate deep-ocean circulation'])
 experiment_id[key]['min_number_yrs_per_sim'] = 305
-=======
 
->>>>>>> master
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

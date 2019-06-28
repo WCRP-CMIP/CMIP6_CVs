@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"51d21bb9104b2b023c2149ffe3e3ce76fa2c811c",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/51d21bb9104b2b023c2149ffe3e3ce76fa2c811c",
-            "commitMessage":"Revise multiple DCPP experiment_id values",
-            "timeStamp":"Wed Jun 12 11:10:52 2019 -0700"
+            "MD5":"c8acfef951cf29f809a7edce8e06a3719b411c5c",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c8acfef951cf29f809a7edce8e06a3719b411c5c",
+            "commitMessage":"Revise multiple OMIP experiment_id values",
+            "timeStamp":"Fri Jun 28 16:59:05 2019 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -86,7 +86,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":28,
+            "versionCVContent":29,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

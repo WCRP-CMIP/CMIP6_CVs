@@ -557,9 +557,9 @@ experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled exp
                                              'ensemble of simulations is reported in a global attribute named \'variant_info\'. ',
                                              'This information should also be recorded in the ES-DOC documentation of each ',
                                              'experiment performed by a model and be made available via the ',
-                                             '\'further_info_url\' attribute. All Priority=1 OMIP diagnostics are requested ',
-                                             'for all cycles of the 62-year forcing to quantify drift. All OMIP diagnostics ',
-                                             '(Priority=1,2,3) are requested for the last cycle'])
+                                             '\'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
+                                             'requested for all cycles of the 62-year forcing to quantify drift. All OMIP ',
+                                             'diagnostics (Priority=1,2,3) are requested for the last cycle'])
 key = 'omip2'
 experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the JRA55-do ',
                                              'inter-annually varying atmospheric and river data sets for years 1958-2018. ',
@@ -576,8 +576,8 @@ experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled exp
                                              'members of an ensemble of simulations is reported in a global attribute named ',
                                              '\'variant_info\'. This information should also be recorded in the ES-DOC ',
                                              'documentation of each experiment performed by a model and be made available ',
-                                             'via the \'further_info_url\' attribute. All Priority=1 OMIP diagnostics are ',
-                                             'requested for the all cycles of the 61-year forcing to quantify drift. All OMIP ',
+                                             'via the \'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
+                                             'requested for all cycles of the 61-year forcing to quantify drift. All OMIP ',
                                              'diagnostics (Priority=1,2,3) are requested for the last cycle'])
 experiment_id[key]['min_number_yrs_per_sim'] = 366
 key = 'omip2-spunup'

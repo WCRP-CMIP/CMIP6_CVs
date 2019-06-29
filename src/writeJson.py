@@ -375,6 +375,7 @@ PJD 12 Jun 2019    - Revise multiple DCPP experiment_id values https://github.co
 PJD 17 Jun 2019    - Revise sub_experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/720
 PJD 17 Jun 2019    - Revise multiple OMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
 PJD 28 Jun 2019    - Revise AerChemMIP experiment_id histSST-1950HC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
+PJD 28 Jun 2019    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/723
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -400,7 +401,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise AerChemMIP experiment_id histSST-1950HC\"'
+commitMessage = '\"Revise source_id CNRM-CM6-1\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -541,19 +542,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'histSST-1950HC'
-experiment_id[key]['description'] = 'Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations'
-experiment_id[key]['end_year'] = '2014'
-experiment_id[key]['experiment'] = ''.join(['historical SSTs and historical forcing, but with 1950 halocarbon ',
-                                            'concentrations. Experiment is initialized from histSST (AerChemMIP) ',
-                                            'simulation from January 1950'])
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '65'
-experiment_id[key]['parent_activity_id'] = ['AerChemMIP']
-experiment_id[key]['parent_experiment_id'] = ['histSST']
-experiment_id[key]['start_year'] = '1950'
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '1'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -817,6 +805,9 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'CNRM-CM6-1'
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

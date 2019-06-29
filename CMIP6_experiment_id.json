@@ -5797,7 +5797,7 @@
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip2",
-            "min_number_yrs_per_sim":366,
+            "min_number_yrs_per_sim":"366",
             "parent_activity_id":[
                 "no parent"
             ],
@@ -5822,7 +5822,7 @@
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip2-spunup",
-            "min_number_yrs_per_sim":305,
+            "min_number_yrs_per_sim":"305",
             "parent_activity_id":[
                 "no parent"
             ],
@@ -8640,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 28 16:59:05 2019 -0700",
+        "CV_collection_modified":"Fri Jun 28 17:00:38 2019 -0700",
         "CV_collection_version":"6.2.29.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Jun 12 11:10:52 2019 -0700",
         "experiment_id_CV_note":"Revise multiple OMIP experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"c8acfef951cf29f809a7edce8e06a3719b411c5c",
+        "previous_commit":"69252cf8b4331f2373e13d3aef5cbfbed0366603",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

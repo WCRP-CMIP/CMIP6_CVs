@@ -579,7 +579,7 @@ experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled exp
                                              'via the \'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
                                              'requested for all cycles of the 61-year forcing to quantify drift. All OMIP ',
                                              'diagnostics (Priority=1,2,3) are requested for the last cycle'])
-experiment_id[key]['min_number_yrs_per_sim'] = 366
+experiment_id[key]['min_number_yrs_per_sim'] = '366'
 key = 'omip2-spunup'
 experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment except that it is not initialized with observed ',
                                              'climatologies; rather it is initialized with results from at least a 2000-year ',
@@ -592,7 +592,7 @@ experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment excep
                                              'order to avoid long-term drift in those fields and to assure that they will not ',
                                              'diverge greatly from physical fields in the omip2 simulation. The spin up also ',
                                              'includes radiocarbon to evaluate deep-ocean circulation'])
-experiment_id[key]['min_number_yrs_per_sim'] = 305
+experiment_id[key]['min_number_yrs_per_sim'] = '305'
 
 #==============================================================================
 # Example new experiment_id entry

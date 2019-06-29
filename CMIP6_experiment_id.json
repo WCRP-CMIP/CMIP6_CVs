@@ -4113,14 +4113,14 @@
             ],
             "description":"Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations",
             "end_year":"2014",
-            "experiment":"historical SSTs and historical forcing, but with1950 halocarbon concentrations",
+            "experiment":"historical SSTs and historical forcing, but with 1950 halocarbon concentrations. Experiment is initialized from histSST (AerChemMIP) simulation from January 1950",
             "experiment_id":"histSST-1950HC",
             "min_number_yrs_per_sim":"65",
             "parent_activity_id":[
-                "no parent"
+                "AerChemMIP"
             ],
             "parent_experiment_id":[
-                "no parent"
+                "histSST"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8640,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 28 17:00:38 2019 -0700",
-        "CV_collection_version":"6.2.29.0",
+        "CV_collection_modified":"Fri Jun 28 17:12:12 2019 -0700",
+        "CV_collection_version":"6.2.30.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Wed Jun 12 11:10:52 2019 -0700",
-        "experiment_id_CV_note":"Revise multiple OMIP experiment_id values",
+        "experiment_id_CV_modified":"Fri Jun 28 17:00:38 2019 -0700",
+        "experiment_id_CV_note":"Revise AerChemMIP experiment_id histSST-1950HC",
         "institution_id":"PCMDI",
-        "previous_commit":"69252cf8b4331f2373e13d3aef5cbfbed0366603",
+        "previous_commit":"ab62d375ee778f1001f7f53293971cd06cb06614",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

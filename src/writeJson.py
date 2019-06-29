@@ -374,6 +374,7 @@ PJD 12 Jun 2019    - Revise multiple CFMIP experiment_id values https://github.c
 PJD 12 Jun 2019    - Revise multiple DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/716
 PJD 17 Jun 2019    - Revise sub_experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/720
 PJD 17 Jun 2019    - Revise multiple OMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
+PJD 28 Jun 2019    - Revise AerChemMIP experiment_id histSST-1950HC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -399,7 +400,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple OMIP experiment_id values\"'
+commitMessage = '\"Revise AerChemMIP experiment_id histSST-1950HC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -540,59 +541,19 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'omip1'
-experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the Coordinated Ocean ',
-                                             '- ice Reference Experiments inter-annually varying atmospheric and river ',
-                                             'data sets for years 1948-2009. Initial ocean tracer fields are based on ',
-                                             'observations. Simulation length for at least 5 cycles of the 62-year forcing ',
-                                             'is required. The 5-cycle length is recommended to facilitate intercomparison ',
-                                             'within the experiment by using a common simulation length, but a longer ',
-                                             'simulation length is also accepted. For each simulation, set the beginning of ',
-                                             'the simulation (e.g., 1700 and 1638 for the 5-cycle and 6-cycle simulation, ',
-                                             'respectively) as the \'base time\' of the time axis. Simulations with different ',
-                                             'simulation lengths by a single model are treated as members of an ensemble. ',
-                                             'Thus, different \'realization\' indexes (e.g., r1, r2, r3, ...) should be used ',
-                                             'in a global attribute named \'variant_index\' (e.g., r1i1p1f1). It is requested ',
-                                             'that information relevant to understanding the differences in members of an ',
-                                             'ensemble of simulations is reported in a global attribute named \'variant_info\'. ',
-                                             'This information should also be recorded in the ES-DOC documentation of each ',
-                                             'experiment performed by a model and be made available via the ',
-                                             '\'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
-                                             'requested for all cycles of the 62-year forcing to quantify drift. All OMIP ',
-                                             'diagnostics (Priority=1,2,3) are requested for the last cycle'])
-key = 'omip2'
-experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the JRA55-do ',
-                                             'inter-annually varying atmospheric and river data sets for years 1958-2018. ',
-                                             'Initial ocean tracer fields are based on observations. Simulation length for ',
-                                             'at least 6 cycles of the 61-year forcing is required. The 6-cycle length is ',
-                                             'recommended to facilitate intercomparison within the experiment by using a ',
-                                             'common simulation length, but a longer simulation length is also accepted. In ',
-                                             'each simulation, set the beginning of the simulation (e.g., 1653 for the ',
-                                             '6-cycle simulation) as the‘base time’of the time axis. Simulations with ',
-                                             'different simulation lengths by a single model are treated as members of an ',
-                                             'ensemble. Thus, different \'realization\' indexes (e.g., r1, r2, r3, ...) ',
-                                             'should be used in a global attribute named \'variant_index\' (e.g., r1i1p1f1). ',
-                                             'It is requested that information relevant to understanding the differences in ',
-                                             'members of an ensemble of simulations is reported in a global attribute named ',
-                                             '\'variant_info\'. This information should also be recorded in the ES-DOC ',
-                                             'documentation of each experiment performed by a model and be made available ',
-                                             'via the \'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
-                                             'requested for all cycles of the 61-year forcing to quantify drift. All OMIP ',
-                                             'diagnostics (Priority=1,2,3) are requested for the last cycle'])
-experiment_id[key]['min_number_yrs_per_sim'] = '366'
-key = 'omip2-spunup'
-experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment except that it is not initialized with observed ',
-                                             'climatologies; rather it is initialized with results from at least a 2000-year ',
-                                             'spin up of the coupled physical-biogeochemical models. Another difference from ',
-                                             'omip2 is that the required simulation length is 5 cycles of the 61-year forcing. ',
-                                             'The spin up simulations may be made with the classic online or offline approach, ',
-                                             'or with tracer-acceleration techniques or fast solvers. If an online approach is ',
-                                             'used, at the end of the 5th cycle of the JRA55-do forcing, the model\'s physical ',
-                                             'fields should be reinitialized to the values at the start of the 3rd cycle in ',
-                                             'order to avoid long-term drift in those fields and to assure that they will not ',
-                                             'diverge greatly from physical fields in the omip2 simulation. The spin up also ',
-                                             'includes radiocarbon to evaluate deep-ocean circulation'])
-experiment_id[key]['min_number_yrs_per_sim'] = '305'
+key = 'histSST-1950HC'
+experiment_id[key]['description'] = 'Historical WMGHG concentrations and NTCF emissions, 1950 halocarbon concentrations'
+experiment_id[key]['end_year'] = '2014'
+experiment_id[key]['experiment'] = ''.join(['historical SSTs and historical forcing, but with 1950 halocarbon ',
+                                            'concentrations. Experiment is initialized from histSST (AerChemMIP) ',
+                                            'simulation from January 1950'])
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '65'
+experiment_id[key]['parent_activity_id'] = ['AerChemMIP']
+experiment_id[key]['parent_experiment_id'] = ['histSST']
+experiment_id[key]['start_year'] = '1950'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '1'
 
 #==============================================================================
 # Example new experiment_id entry

@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"ab62d375ee778f1001f7f53293971cd06cb06614",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ab62d375ee778f1001f7f53293971cd06cb06614",
-            "commitMessage":"Revise AerChemMIP experiment_id histSST-1950HC",
-            "timeStamp":"Fri Jun 28 17:12:12 2019 -0700"
+            "MD5":"8314fb87e4770ff735ab361e39098e26be6f2822",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8314fb87e4770ff735ab361e39098e26be6f2822",
+            "commitMessage":"Correct omip2 non-unicode char issue; implement checks",
+            "timeStamp":"Mon Jul  1 12:40:02 2019 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":1,
-            "versionCVContent":30,
+            "versionCVCommit":0,
+            "versionCVContent":31,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

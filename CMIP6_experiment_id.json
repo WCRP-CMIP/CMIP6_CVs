@@ -5793,7 +5793,7 @@
             "additional_allowed_model_components":[
                 "BGC"
             ],
-            "description":"Global ocean - sea-ice coupled experiment forced with the JRA55-do inter-annually varying atmospheric and river data sets for years 1958-2018. Initial ocean tracer fields are based on observations. Simulation length for at least 6 cycles of the 61-year forcing is required. The 6-cycle length is recommended to facilitate intercomparison within the experiment by using a common simulation length, but a longer simulation length is also accepted. In each simulation, set the beginning of the simulation (e.g., 1653 for the 6-cycle simulation) as the\u2018base time\u2019of the time axis. Simulations with different simulation lengths by a single model are treated as members of an ensemble. Thus, different 'realization' indexes (e.g., r1, r2, r3, ...) should be used in a global attribute named 'variant_index' (e.g., r1i1p1f1). It is requested that information relevant to understanding the differences in members of an ensemble of simulations is reported in a global attribute named 'variant_info'. This information should also be recorded in the ES-DOC documentation of each experiment performed by a model and be made available via the 'further_info_url' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are requested for all cycles of the 61-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the last cycle",
+            "description":"Global ocean - sea-ice coupled experiment forced with the JRA55-do inter-annually varying atmospheric and river data sets for years 1958-2018. Initial ocean tracer fields are based on observations. Simulation length for at least 6 cycles of the 61-year forcing is required. The 6-cycle length is recommended to facilitate intercomparison within the experiment by using a common simulation length, but a longer simulation length is also accepted. In each simulation, set the beginning of the simulation (e.g., 1653 for the 6-cycle simulation) as the 'base time' of the time axis. Simulations with different simulation lengths by a single model are treated as members of an ensemble. Thus, different 'realization' indexes (e.g., r1, r2, r3, ...) should be used in a global attribute named 'variant_index' (e.g., r1i1p1f1). It is requested that information relevant to understanding the differences in members of an ensemble of simulations is reported in a global attribute named 'variant_info'. This information should also be recorded in the ES-DOC documentation of each experiment performed by a model and be made available via the 'further_info_url' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are requested for all cycles of the 61-year forcing to quantify drift. All OMIP diagnostics (Priority=1,2,3) are requested for the last cycle",
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized with observed physical and biogeochemical ocean data",
             "experiment_id":"omip2",
@@ -8640,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 28 17:19:10 2019 -0700",
-        "CV_collection_version":"6.2.30.1",
+        "CV_collection_modified":"Mon Jul  1 12:40:02 2019 -0700",
+        "CV_collection_version":"6.2.31.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Jun 28 17:12:12 2019 -0700",
-        "experiment_id_CV_note":"Revise AerChemMIP experiment_id histSST-1950HC",
+        "experiment_id_CV_note":"Correct omip2 non-unicode char issue; implement checks",
         "institution_id":"PCMDI",
-        "previous_commit":"cd066d50fc2a25f67475bbce81d7351d179dee10",
+        "previous_commit":"8314fb87e4770ff735ab361e39098e26be6f2822",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

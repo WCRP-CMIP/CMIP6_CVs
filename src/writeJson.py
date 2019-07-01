@@ -376,6 +376,7 @@ PJD 17 Jun 2019    - Revise sub_experiment_id values https://github.com/WCRP-CMI
 PJD 17 Jun 2019    - Revise multiple OMIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
 PJD 28 Jun 2019    - Revise AerChemMIP experiment_id histSST-1950HC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
 PJD 28 Jun 2019    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/723
+PJD  1 Jul 2019    - Correct omip2 non-unicode char issue; implement checks description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -401,7 +402,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CNRM-CM6-1\"'
+commitMessage = '\"Correct omip2 non-unicode char issue; implement checks\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -542,6 +543,25 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+key = 'omip2'
+experiment_id[key]['description'] = ''.join(['Global ocean - sea-ice coupled experiment forced with the JRA55-do ',
+                                             'inter-annually varying atmospheric and river data sets for years 1958-2018. ',
+                                             'Initial ocean tracer fields are based on observations. Simulation length for ',
+                                             'at least 6 cycles of the 61-year forcing is required. The 6-cycle length is ',
+                                             'recommended to facilitate intercomparison within the experiment by using a ',
+                                             'common simulation length, but a longer simulation length is also accepted. In ',
+                                             'each simulation, set the beginning of the simulation (e.g., 1653 for the ',
+                                             '6-cycle simulation) as the \'base time\' of the time axis. Simulations with ',
+                                             'different simulation lengths by a single model are treated as members of an ',
+                                             'ensemble. Thus, different \'realization\' indexes (e.g., r1, r2, r3, ...) ',
+                                             'should be used in a global attribute named \'variant_index\' (e.g., r1i1p1f1). ',
+                                             'It is requested that information relevant to understanding the differences in ',
+                                             'members of an ensemble of simulations is reported in a global attribute named ',
+                                             '\'variant_info\'. This information should also be recorded in the ES-DOC ',
+                                             'documentation of each experiment performed by a model and be made available ',
+                                             'via the \'further_info_url\' attribute. All Priority=1 OMIP diagnostics (Omon, Oyr) are ',
+                                             'requested for all cycles of the 61-year forcing to quantify drift. All OMIP ',
+                                             'diagnostics (Priority=1,2,3) are requested for the last cycle'])
 
 #==============================================================================
 # Example new experiment_id entry
@@ -805,9 +825,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CNRM-CM6-1'
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1108,6 +1125,40 @@ versionId = versionId[1]
 print('Version:',versionId)
 #sys.exit() ; # Use to evaluate changes
 
+#%% Validate UTF-8 encoding - catch omip2 error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
+for jsonName in masterTargets:
+    testDict = eval(jsonName)
+    print(jsonName,type(testDict))
+    try:
+        if type(testDict) is list:
+            print('enter list')
+            ''.join(testDict).decode('utf-8')
+        else:
+            for key1,val1 in testDict.items():
+                key1.decode('utf-8')
+                if type(val1) is dict:
+                    for key2,val2 in val1.items():
+                        key2.decode('utf-8')
+                        if type(val2) is list:
+                            ''.join(val2).decode('utf-8') ; # Deal with list types
+                        elif type(val2) is dict:
+                            for key3,val3 in val2.items():
+                                if type(val3) is list:
+                                    ''.join(val3).decode('utf-8') ; # Deal with list types
+                                elif type(val3) is dict:
+                                    for key4,val4 in val3.items():
+                                        val4.decode('utf-8')
+                                else:
+                                    val3.decode('utf-8')
+                        else:
+                            val2.decode('utf-8')
+                else:
+                    val1.decode('utf-8')
+    except UnicodeEncodeError:
+        # If left as UnicodeDecodeError - prints traceback
+        print('UTF-8 failure for:',jsonName, 'exiting')
+        sys.exit()
+
 #%% Write variables to files
 timeNow = datetime.datetime.now().strftime('%c')
 offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
@@ -1250,6 +1301,14 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
 args = shlex.split(''.join(['python ./json_to_html.py ',versionId]))
 #print(args)
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+stdOut,stdErr = p.communicate()
+print('Returncode:',p.returncode) ; # If not 0 there was an issue
+print('stdOut:',stdOut)
+print('stdErr:',stdErr)
+if 'Traceback' in stdErr:
+    print('json_to_html failure:')
+    print('Exiting..')
+    sys.exit()
 del(args,p)
 gc.collect()
 

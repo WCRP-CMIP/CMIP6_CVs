@@ -378,6 +378,7 @@ PJD 28 Jun 2019    - Revise AerChemMIP experiment_id histSST-1950HC https://gith
 PJD 28 Jun 2019    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/723
 PJD  1 Jul 2019    - Correct omip2 non-unicode char issue; implement checks description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
 PJD  3 Jul 2019    - Revise source_id CAMS-CSM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/729
+PJD  8 Jul 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/731
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -403,7 +404,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CAMS-CSM1-0\"'
+commitMessage = '\"Revise source_id UKESM1-0-LL\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -807,16 +808,19 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CAMS-CSM1-0'
+key = 'UKESM1-0-LL'
 source_id[key]['activity_participation'] = [
- 'CFMIP',
+ 'AerChemMIP',
+ 'C4MIP',
  'CMIP',
- 'GMMIP',
- 'HighResMIP',
- 'ScenarioMIP'
+ 'GeoMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
 ]
-source_id[key]['label'] = 'CAMS-CSM 1.0'
-source_id[key]['label_extended'] = 'CAMS-CSM 1.0'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

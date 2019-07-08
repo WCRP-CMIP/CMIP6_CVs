@@ -5839,6 +5839,7 @@
                 "LUMIP",
                 "OMIP",
                 "PMIP",
+                "RFMIP",
                 "ScenarioMIP",
                 "VolMIP"
             ],
@@ -6048,13 +6049,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul  3 09:49:42 2019 -0700",
-        "CV_collection_version":"6.2.31.1",
+        "CV_collection_modified":"Mon Jul  8 14:14:42 2019 -0700",
+        "CV_collection_version":"6.2.31.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"23bec6648c46a68038d35ecf427f56abe01e05e0",
-        "source_id_CV_modified":"Fri Jun 28 17:19:10 2019 -0700",
-        "source_id_CV_note":"Revise source_id CAMS-CSM1-0",
+        "previous_commit":"9fc3112be9dadae4f1d1c136d2e6d24c59129215",
+        "source_id_CV_modified":"Wed Jul  3 09:49:42 2019 -0700",
+        "source_id_CV_note":"Revise source_id UKESM1-0-LL",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

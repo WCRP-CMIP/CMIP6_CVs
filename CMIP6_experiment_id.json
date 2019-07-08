@@ -5818,11 +5818,11 @@
                 "OMIP"
             ],
             "additional_allowed_model_components":[],
-            "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. Another difference from omip2 is that the required simulation length is 5 cycles of the 61-year forcing. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 5th cycle of the JRA55-do forcing, the model's physical fields should be reinitialized to the values at the start of the 3rd cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
+            "description":"Same as the omip2 experiment except that it is not initialized with observed climatologies; rather it is initialized with results from at least a 2000-year spin up of the coupled physical-biogeochemical models. The spin up simulations may be made with the classic online or offline approach, or with tracer-acceleration techniques or fast solvers. If an online approach is used, at the end of the 6th cycle of the JRA55-do forcing, the model's physical fields should be reinitialized to the values at the start of the 4th cycle in order to avoid long-term drift in those fields and to assure that they will not diverge greatly from physical fields in the omip2 simulation. The spin up also includes radiocarbon to evaluate deep-ocean circulation",
             "end_year":"",
             "experiment":"OMIP experiment forced by JRA55-do atmospheric data set and initialized from at least a 2000-year spin up of the coupled physical-biogeochemical model",
             "experiment_id":"omip2-spunup",
-            "min_number_yrs_per_sim":"305",
+            "min_number_yrs_per_sim":"366",
             "parent_activity_id":[
                 "no parent"
             ],
@@ -8640,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jul  8 14:14:42 2019 -0700",
-        "CV_collection_version":"6.2.31.2",
+        "CV_collection_modified":"Mon Jul  8 14:29:27 2019 -0700",
+        "CV_collection_version":"6.2.32.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Mon Jul  1 12:40:02 2019 -0700",
-        "experiment_id_CV_note":"Correct omip2 non-unicode char issue; implement checks",
+        "experiment_id_CV_note":"Revise experiment_id omip2-spunup",
         "institution_id":"PCMDI",
-        "previous_commit":"9fc3112be9dadae4f1d1c136d2e6d24c59129215",
+        "previous_commit":"4b4be95d2d2d0a18e76c672ae5d537bb0d093f03",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

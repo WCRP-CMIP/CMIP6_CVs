@@ -379,6 +379,7 @@ PJD 28 Jun 2019    - Revise source_id CNRM-CM6-1 https://github.com/WCRP-CMIP/CM
 PJD  1 Jul 2019    - Correct omip2 non-unicode char issue; implement checks description https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
 PJD  3 Jul 2019    - Revise source_id CAMS-CSM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/729
 PJD  8 Jul 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/731
+PJD  8 Jul 2019    - Revise experiment_id omip2-spunup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -404,7 +405,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id UKESM1-0-LL\"'
+commitMessage = '\"Revise experiment_id omip2-spunup\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -545,6 +546,26 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+key = 'omip2-spunup'
+experiment_id[key]['description'] = ''.join(['Same as the omip2 experiment except that ',
+                                             'it is not initialized with observed ',
+                                             'climatologies; rather it is initialized ',
+                                             'with results from at least a 2000-year spin ',
+                                             'up of the coupled physical-biogeochemical ',
+                                             'models. The spin up simulations may be made ',
+                                             'with the classic online or offline approach, ',
+                                             'or with tracer-acceleration techniques or ',
+                                             'fast solvers. If an online approach is used, ',
+                                             'at the end of the 6th cycle of the JRA55-do ',
+                                             'forcing, the model\'s physical fields should ',
+                                             'be reinitialized to the values at the start ',
+                                             'of the 4th cycle in order to avoid long-term ',
+                                             'drift in those fields and to assure that they ',
+                                             'will not diverge greatly from physical fields ',
+                                             'in the omip2 simulation. The spin up also ',
+                                             'includes radiocarbon to evaluate deep-ocean ',
+                                             'circulation'])
+experiment_id[key]['min_number_yrs_per_sim'] = '366'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -808,19 +829,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-0-LL'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'RFMIP',
- 'ScenarioMIP',
- 'VolMIP'
-]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

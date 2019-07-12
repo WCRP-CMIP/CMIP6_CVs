@@ -4541,15 +4541,15 @@
                 },
                 "ocean":{
                     "description":"MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC6",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "seaIce":{
                     "description":"unnamed (thermodynamic (Semtner zero-layer) dynamic (Hibler 79) sea ice model)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 }
             },
             "release_year":"2017",
@@ -4668,7 +4668,7 @@
                 },
                 "ocean":{
                     "description":"MPIOM1.63 (bipolar GR1.5, approximately 1.5deg; 256 x 220 longitude/latitude; 40 levels; top grid cell 0-12 m)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "ocnBgchem":{
                     "description":"HAMOCC6",

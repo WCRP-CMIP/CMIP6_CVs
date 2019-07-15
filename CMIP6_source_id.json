@@ -6049,13 +6049,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jul 15 15:27:39 2019 -0700",
+        "CV_collection_modified":"Mon Jul 15 15:28:00 2019 -0700",
         "CV_collection_version":"6.2.32.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d43dacbb2e9b345a4a22d7d843a60d1a6ca6bcc1",
+        "previous_commit":"75b0adb94d8a22f3a208d532cf26be6f6534b607",
         "source_id_CV_modified":"Mon Jul  8 14:14:42 2019 -0700",
-        "source_id_CV_note":"Revise various MPI source_id values",
+        "source_id_CV_note":"Revise multiple MPI source_id values",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

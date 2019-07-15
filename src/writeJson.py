@@ -381,7 +381,7 @@ PJD  3 Jul 2019    - Revise source_id CAMS-CSM1-0 https://github.com/WCRP-CMIP/C
 PJD  8 Jul 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/731
 PJD  8 Jul 2019    - Revise experiment_id omip2-spunup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
 PJD 11 Jul 2019    - Revise README.md https://github.com/WCRP-CMIP/CMIP6_CVs/issues/735
-PJD 15 Jul 2019    - Revise various MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/734
+PJD 15 Jul 2019    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/734
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -407,7 +407,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise various MPI source_id values\"'
+commitMessage = '\"Revise multiple MPI source_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

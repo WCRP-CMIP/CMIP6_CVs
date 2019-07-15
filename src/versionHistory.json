@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"53475ed9276f6c67c82916f039df7d45e0f87f05",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/53475ed9276f6c67c82916f039df7d45e0f87f05",
+            "MD5":"d43dacbb2e9b345a4a22d7d843a60d1a6ca6bcc1",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d43dacbb2e9b345a4a22d7d843a60d1a6ca6bcc1",
             "commitMessage":"Revise various MPI source_id values",
-            "timeStamp":"Mon Jul 15 15:25:06 2019 -0700"
+            "timeStamp":"Mon Jul 15 15:27:39 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

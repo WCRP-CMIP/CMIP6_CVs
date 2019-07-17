@@ -8099,10 +8099,10 @@
             "experiment_id":"ssp370SST-ssp126Lu",
             "min_number_yrs_per_sim":"41",
             "parent_activity_id":[
-                "ScenarioMIP"
+                "CMIP"
             ],
             "parent_experiment_id":[
-                "ssp370"
+                "historical"
             ],
             "required_model_components":[
                 "AGCM",
@@ -8640,13 +8640,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jul 15 15:28:00 2019 -0700",
-        "CV_collection_version":"6.2.32.1",
+        "CV_collection_modified":"Wed Jul 17 09:26:24 2019 -0700",
+        "CV_collection_version":"6.2.33.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Mon Jul  8 14:29:27 2019 -0700",
-        "experiment_id_CV_note":"Revise experiment_id omip2-spunup",
+        "experiment_id_CV_note":"Revise experiment_id ssp370SST-ssp126Lu",
         "institution_id":"PCMDI",
-        "previous_commit":"75b0adb94d8a22f3a208d532cf26be6f6534b607",
+        "previous_commit":"4e388741413a43230fb8afaeb5cd58b49ef584d6",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

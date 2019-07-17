@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.33.0</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.34.0</p>
 <table id="table_id" class="display">
 <thead><tr><th>experiment_id</th>
 <th>activity id</th>
@@ -1378,19 +1378,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>DECK: control</td>
 </tr>
-<tr><td>piClim-SO2</td>
+<tr><td>histSST-noLu</td>
 <td>AerChemMIP</td>
-<td>pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions</td>
-<td>3</td>
+<td>historical SSTs and historical forcing, but with pre-industrial LULCC</td>
+<td>1</td>
 <td>none</td>
 <td>piControl</td>
-<td>AGCM AER</td>
-<td>CHEM BGC</td>
-<td></td>
-<td></td>
-<td>30</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2014</td>
+<td>165</td>
 <td>CMIP</td>
-<td>Perturbation from 1850 control using 2014 SO2 emissions</td>
+<td>An uncoupled (atmosphere and land) experiment in which sea surface temperatures (SST) and sea ice concentrations (SICONC) are taken from historical (as in existing histSST experiment). All forcing agents to follow historical except LULCC. LULCC set to 1850 (exactly following hist-noLu prescription)</td>
 </tr>
 <tr><td>esm-pi-CO2pulse</td>
 <td>CDRMIP</td>
@@ -3799,6 +3799,20 @@ $(document).ready( function () {
 <td>10</td>
 <td>CMIP</td>
 <td>C1.8 Mechanisms and predictability of the hiatus and of similar long timescale variations of both signs</td>
+</tr>
+<tr><td>piClim-SO2</td>
+<td>AerChemMIP</td>
+<td>pre-industrial climatological SSTs and forcing, but with 2014 SO2 emissions</td>
+<td>3</td>
+<td>none</td>
+<td>piControl</td>
+<td>AGCM AER</td>
+<td>CHEM BGC</td>
+<td></td>
+<td></td>
+<td>30</td>
+<td>CMIP</td>
+<td>Perturbation from 1850 control using 2014 SO2 emissions</td>
 </tr>
 <tr><td>ssp534-over</td>
 <td>ScenarioMIP</td>

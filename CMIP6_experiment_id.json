@@ -4133,6 +4133,35 @@
             ],
             "tier":"1"
         },
+        "histSST-noLu":{
+            "activity_id":[
+                "AerChemMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"An uncoupled (atmosphere and land) experiment in which sea surface temperatures (SST) and sea ice concentrations (SICONC) are taken from historical (as in existing histSST experiment). All forcing agents to follow historical except LULCC. LULCC set to 1850 (exactly following hist-noLu prescription)",
+            "end_year":"2014",
+            "experiment":"historical SSTs and historical forcing, but with pre-industrial LULCC",
+            "experiment_id":"histSST-noLu",
+            "min_number_yrs_per_sim":"165",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "piControl"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1850",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"1"
+        },
         "histSST-piAer":{
             "activity_id":[
                 "AerChemMIP"
@@ -8640,13 +8669,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 17 09:26:24 2019 -0700",
-        "CV_collection_version":"6.2.33.0",
+        "CV_collection_modified":"Wed Jul 17 09:35:08 2019 -0700",
+        "CV_collection_version":"6.2.34.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Mon Jul  8 14:29:27 2019 -0700",
-        "experiment_id_CV_note":"Revise experiment_id ssp370SST-ssp126Lu",
+        "experiment_id_CV_modified":"Wed Jul 17 09:26:24 2019 -0700",
+        "experiment_id_CV_note":"Add experiment_id histSST-noLu (AerChemMIP)",
         "institution_id":"PCMDI",
-        "previous_commit":"4e388741413a43230fb8afaeb5cd58b49ef584d6",
+        "previous_commit":"50f90dcb35ec96d495d5bb644e3856170e4ac703",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

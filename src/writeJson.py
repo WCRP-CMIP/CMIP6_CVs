@@ -382,6 +382,7 @@ PJD  8 Jul 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/C
 PJD  8 Jul 2019    - Revise experiment_id omip2-spunup https://github.com/WCRP-CMIP/CMIP6_CVs/issues/704
 PJD 11 Jul 2019    - Revise README.md https://github.com/WCRP-CMIP/CMIP6_CVs/issues/735
 PJD 15 Jul 2019    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/734
+PJD 17 Jul 2019    - Revise experiment_id ssp370SST-ssp126Lu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -407,7 +408,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple MPI source_id values\"'
+commitMessage = '\"Revise experiment_id ssp370SST-ssp126Lu\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -548,6 +549,9 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+key = 'ssp370SST-ssp126Lu'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical']
 
 #==============================================================================
 # Example new experiment_id entry
@@ -811,12 +815,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM-1-2-HAM'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
-key = 'MPI-ESM1-2-LR'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '250 km'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

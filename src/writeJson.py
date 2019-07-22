@@ -384,6 +384,7 @@ PJD 11 Jul 2019    - Revise README.md https://github.com/WCRP-CMIP/CMIP6_CVs/iss
 PJD 15 Jul 2019    - Revise multiple MPI source_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/734
 PJD 17 Jul 2019    - Revise experiment_id ssp370SST-ssp126Lu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
 PJD 17 Jul 2019    - Add experiment_id histSST-noLu (AerChemMIP) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/739
+PJD 22 Jul 2019    - Revise experiment_id esm-hist-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/740
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -409,7 +410,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Add experiment_id histSST-noLu (AerChemMIP)\"'
+commitMessage = '\"Revise experiment_id esm-hist-ext\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -550,26 +551,8 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'histSST-noLu'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['AerChemMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['An uncoupled (atmosphere and land) experiment in which sea ',
-                                    'surface temperatures (SST) and sea ice concentrations (SICONC) ',
-                                    'are taken from historical (as in existing histSST ',
-                                    'experiment). All forcing agents to follow historical except ',
-                                    'LULCC. LULCC set to 1850 (exactly following hist-noLu ',
-                                    'prescription)'])
-experiment_id[key]['end_year'] = '2014'
-experiment_id[key]['experiment'] = 'historical SSTs and historical forcing, but with pre-industrial LULCC'
-experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '165'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['piControl']
-experiment_id[key]['required_model_components'] = ['AOGCM']
-experiment_id[key]['start_year'] = '1850'
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '1'
+key = 'esm-hist-ext'
+experiment_id[key]['end_year'] = 'present'
 
 #==============================================================================
 # Example new experiment_id entry

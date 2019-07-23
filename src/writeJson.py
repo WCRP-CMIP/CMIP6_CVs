@@ -385,6 +385,7 @@ PJD 15 Jul 2019    - Revise multiple MPI source_id values https://github.com/WCR
 PJD 17 Jul 2019    - Revise experiment_id ssp370SST-ssp126Lu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/706
 PJD 17 Jul 2019    - Add experiment_id histSST-noLu (AerChemMIP) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/739
 PJD 22 Jul 2019    - Revise experiment_id esm-hist-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/740
+PJD 23 Jul 2019    - Register source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/745
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -410,7 +411,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id esm-hist-ext\"'
+commitMessage = '\"Register source_id AWI-ESM-2-1-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -551,8 +552,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'esm-hist-ext'
-experiment_id[key]['end_year'] = 'present'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -816,6 +815,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'AWI-ESM-2-1-LR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'PMIP'
+]
+source_id[key]['cohort'] = [
+ 'Registered'
+]
+source_id[key]['institution_id'] = [
+ 'AWI'
+]
+source_id[key]['label'] = 'AWI-ESM 2.1 LR'
+source_id[key]['label_extended'] = 'AWI-ESM 2.1 LR'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20 with dynamic vegetation'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'FESOM 2 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'FESOM 2'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

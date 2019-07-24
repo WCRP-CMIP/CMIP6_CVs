@@ -369,6 +369,56 @@
             "release_year":"2018",
             "source_id":"AWI-ESM-1-1-LR"
         },
+        "AWI-ESM-2-1-LR":{
+            "activity_participation":[
+                "CMIP",
+                "PMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-ESM 2.1 LR",
+            "label_extended":"AWI-ESM 2.1 LR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JSBACH 3.20 with dynamic vegetation",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FESOM 2 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"FESOM 2",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"AWI-ESM-2-1-LR"
+        },
         "BCC-CSM2-HR":{
             "activity_participation":[
                 "CMIP",
@@ -6049,13 +6099,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jul 22 11:09:12 2019 -0700",
-        "CV_collection_version":"6.2.35.0",
+        "CV_collection_modified":"Wed Jul 24 09:17:00 2019 -0700",
+        "CV_collection_version":"6.2.35.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3aa1d6e45b27576caaf0a23b2d04419e74f5ccb9",
+        "previous_commit":"54de91ba6fcb704c68d5f2b9ca85f9471cc523a9",
         "source_id_CV_modified":"Mon Jul 15 15:28:00 2019 -0700",
-        "source_id_CV_note":"Revise multiple MPI source_id values",
+        "source_id_CV_note":"Register source_id AWI-ESM-2-1-LR",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

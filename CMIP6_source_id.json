@@ -1791,6 +1791,7 @@
                 "DynVarMIP",
                 "LS3MIP",
                 "PAMIP",
+                "PMIP",
                 "RFMIP",
                 "SIMIP",
                 "ScenarioMIP",
@@ -6099,13 +6100,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 24 09:56:49 2019 -0700",
-        "CV_collection_version":"6.2.35.2",
+        "CV_collection_modified":"Mon Jul 29 14:43:08 2019 -0700",
+        "CV_collection_version":"6.2.35.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a911f3882ad4462964051bbc7f946ce7cad2022e",
-        "source_id_CV_modified":"Wed Jul 24 09:17:00 2019 -0700",
-        "source_id_CV_note":"Revise source_id AWI-ESM-2-1-LR",
+        "previous_commit":"a613682c14fa76d0e7e845139bd182123c913e17",
+        "source_id_CV_modified":"Wed Jul 24 09:56:49 2019 -0700",
+        "source_id_CV_note":"Revise source_id EC-Earth3",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

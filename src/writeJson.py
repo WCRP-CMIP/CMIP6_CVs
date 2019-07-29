@@ -387,6 +387,7 @@ PJD 17 Jul 2019    - Add experiment_id histSST-noLu (AerChemMIP) https://github.
 PJD 22 Jul 2019    - Revise experiment_id esm-hist-ext https://github.com/WCRP-CMIP/CMIP6_CVs/issues/740
 PJD 23 Jul 2019    - Register source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/745
 PJD 24 Jul 2019    - Revise source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/745
+PJD 29 Jul 2019    - Revise source_id EC-Earth3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/749
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -412,7 +413,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id AWI-ESM-2-1-LR\"'
+commitMessage = '\"Revise source_id EC-Earth3\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -816,9 +817,21 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'AWI-ESM-2-1-LR'
-source_id[key]['model_component']['ocean']['description'] = 'FESOM 2 (unstructured grid in the horizontal with 126858 wet nodes; 48 levels; top grid cell 0-5 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
+key = 'EC-Earth3'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'DCPP',
+ 'DynVarMIP',
+ 'LS3MIP',
+ 'PAMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
+]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

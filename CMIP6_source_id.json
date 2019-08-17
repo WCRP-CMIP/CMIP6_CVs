@@ -1027,6 +1027,55 @@
             "release_year":"2018",
             "source_id":"CESM2-WACCM"
         },
+        "CESM2-WACCM-FV2":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NCAR"
+            ],
+            "label":"CESM2-WACCM-FV2",
+            "label_extended":"CESM2-WACCM-FV2",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM4 (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"WACCM6 (1.9x2.5 finite volume grid; 144 x 96 longitude/latitude; 70 levels; top level 4.5e-06 mb)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"MAM4 (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"CLM5 (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"CISM2.1",
+                    "native_nominal_resolution":"5 km"
+                },
+                "ocean":{
+                    "description":"POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"MARBL (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE5.1 (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"CESM2-WACCM-FV2"
+        },
         "CIESM":{
             "activity_participation":[
                 "CFMIP",
@@ -6150,13 +6199,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Sat Aug 17 10:07:47 2019 -0700",
-        "CV_collection_version":"6.2.35.5",
+        "CV_collection_modified":"Sat Aug 17 10:16:10 2019 -0700",
+        "CV_collection_version":"6.2.35.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"701d12e4b42a19dec075b00ee83e7f6292731bec",
-        "source_id_CV_modified":"Mon Aug  5 12:04:45 2019 -0700",
-        "source_id_CV_note":"Register source_id CESM2-FV2",
+        "previous_commit":"3fe84e76b18f042bdd04fb6062d7dca2e24a5ebc",
+        "source_id_CV_modified":"Sat Aug 17 10:07:47 2019 -0700",
+        "source_id_CV_note":"Register source_id CESM2-WACCM-FV2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

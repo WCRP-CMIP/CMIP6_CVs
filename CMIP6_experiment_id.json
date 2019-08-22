@@ -8143,6 +8143,35 @@
             ],
             "tier":"1"
         },
+        "ssp370pdSST":{
+            "activity_id":[
+                "AerChemMIP"
+            ],
+            "additional_allowed_model_components":[
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Experimental set up as ssp370SST except sea surface temperatures (SST) and sea ice concentrations (SICONC) are from a 2005-2014 climatology. Diagnostics are as ssp370SST",
+            "end_year":"2100",
+            "experiment":"SSP3-7.0, with SSTs prescribed as present day",
+            "experiment_id":"ssp370pdSST",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AGCM",
+                "AER"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
         "ssp434":{
             "activity_id":[
                 "ScenarioMIP"
@@ -8669,13 +8698,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Aug 22 15:01:15 2019 -0700",
-        "CV_collection_version":"6.2.35.7",
+        "CV_collection_modified":"Thu Aug 22 15:16:07 2019 -0700",
+        "CV_collection_version":"6.2.36.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Mon Jul 22 11:09:12 2019 -0700",
-        "experiment_id_CV_note":"Revise experiment_id esm-hist-ext",
+        "experiment_id_CV_note":"Register experiment_id ssp370pdSST",
         "institution_id":"PCMDI",
-        "previous_commit":"ee2d574e3f65353f716ab65fd39ea6daf649e088",
+        "previous_commit":"26f3d0932518cbf16cc97a29356f811a39c500ca",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

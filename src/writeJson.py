@@ -392,7 +392,8 @@ PJD  5 Aug 2019    - Revise source_id KIOST-ESM https://github.com/WCRP-CMIP/CMI
 PJD 17 Aug 2019    - Register source_id CESM2-FV2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/754
 PJD 17 Aug 2019    - Register source_id CESM2-WACCM-FV2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/755
 PJD 22 Aug 2019    - Revise source_id GFDL-CM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/758
-PJD 22 Aug 2019    - Register experiment_id ssp370pdSST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/740
+PJD 22 Aug 2019    - Register experiment_id ssp370pdSST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/759
+PJD 22 Jul 2019    - Revise experiment_id ssp370SST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/760
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -418,7 +419,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register experiment_id ssp370pdSST\"'
+commitMessage = '\"Revise experiment_id ssp370SST\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -559,21 +560,10 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'ssp370pdSST'
-experiment_id[key] = {}
-experiment_id[key]['activity_id'] = ['AerChemMIP']
-experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
-experiment_id[key]['description'] = 'Experimental set up as ssp370SST except sea surface temperatures (SST) and sea ice concentrations (SICONC) are from a 2005-2014 climatology. Diagnostics are as ssp370SST'
+key = 'ssp370SST'
 experiment_id[key]['end_year'] = '2100'
-experiment_id[key]['experiment'] = 'SSP3-7.0, with SSTs prescribed as present day'
-experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '86'
-experiment_id[key]['parent_activity_id'] = ['CMIP']
-experiment_id[key]['parent_experiment_id'] = ['historical']
-experiment_id[key]['required_model_components'] = ['AGCM','AER']
-experiment_id[key]['start_year'] = '2015'
-experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

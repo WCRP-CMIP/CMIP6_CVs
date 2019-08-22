@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"dab599d8502fe6fa5a7f437db1faf80fd12ec892",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/dab599d8502fe6fa5a7f437db1faf80fd12ec892",
-            "commitMessage":"Register source_id IPSL-CM7A-ATM-HR",
-            "timeStamp":"Thu Aug 22 15:35:51 2019 -0700"
+            "MD5":"d0261dc94cdfba37af81e07b8ebc801aa47a7ae7",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d0261dc94cdfba37af81e07b8ebc801aa47a7ae7",
+            "commitMessage":"Register source_id IPSL-CM7A-ATM-LR",
+            "timeStamp":"Thu Aug 22 15:41:35 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":37,
             "versionCVStructure":2,
             "versionMIPEra":6

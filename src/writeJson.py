@@ -396,6 +396,7 @@ PJD 22 Aug 2019    - Register experiment_id ssp370pdSST https://github.com/WCRP-
 PJD 22 Jul 2019    - Revise experiment_id ssp370SST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/760
 PJD 22 Aug 2019    - Register institution_id RUBISCO https://github.com/WCRP-CMIP/CMIP6_CVs/issues/761
 PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/763
+PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/764
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -421,7 +422,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM7A-ATM-HR\"'
+commitMessage = '\"Register source_id IPSL-CM7A-ATM-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -831,7 +832,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM7A-ATM-HR'
+key = 'IPSL-CM7A-ATM-LR'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'HighResMIP'
@@ -842,21 +843,21 @@ source_id[key]['cohort'] = [
 source_id[key]['institution_id'] = [
  'IPSL'
 ]
-source_id[key]['label'] = 'IPSL-CM7A-ATM-HR'
-source_id[key]['label_extended'] = 'IPSL-CM7A-ATM-HR'
+source_id[key]['label'] = 'IPSL-CM7A-ATM-LR'
+source_id[key]['label_extended'] = 'IPSL-CM7A-ATM-LR'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'none'
 source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 256000-point icosahedral-hexagonal; 79 levels; top level 40000 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 40000 m)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmosChem'] = {}
 source_id[key]['model_component']['atmosChem']['description'] = 'none'
 source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
 source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.2, Water/Carbon/Energy mode)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'

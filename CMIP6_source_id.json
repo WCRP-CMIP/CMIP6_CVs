@@ -4328,6 +4328,55 @@
             "release_year":"2019",
             "source_id":"IPSL-CM7A-ATM-HR"
         },
+        "IPSL-CM7A-ATM-LR":{
+            "activity_participation":[
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"IPSL-CM7A-ATM-LR",
+            "label_extended":"IPSL-CM7A-ATM-LR",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 40000 m)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"ORCHIDEE (v2.2, Water/Carbon/Energy mode)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"IPSL-CM7A-ATM-LR"
+        },
         "KACE-1-0-G":{
             "activity_participation":[
                 "CMIP",
@@ -6249,13 +6298,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Aug 22 15:35:51 2019 -0700",
-        "CV_collection_version":"6.2.37.2",
+        "CV_collection_modified":"Thu Aug 22 15:41:35 2019 -0700",
+        "CV_collection_version":"6.2.37.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"dab599d8502fe6fa5a7f437db1faf80fd12ec892",
-        "source_id_CV_modified":"Thu Aug 22 15:01:15 2019 -0700",
-        "source_id_CV_note":"Register source_id IPSL-CM7A-ATM-HR",
+        "previous_commit":"d0261dc94cdfba37af81e07b8ebc801aa47a7ae7",
+        "source_id_CV_modified":"Thu Aug 22 15:35:51 2019 -0700",
+        "source_id_CV_note":"Register source_id IPSL-CM7A-ATM-LR",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

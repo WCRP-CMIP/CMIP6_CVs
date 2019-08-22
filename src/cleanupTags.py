@@ -7,6 +7,8 @@ This file cleans up the existing repo tags following discussions contained in
 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/448
 
 PJD 31 Jan 2018     - Started
+PJD 15 Mar 2018     - Updated missing tags 6.2.3.3-6.2.3.5
+PJD 22 Aug 2018     - Updated missing tags 6.2.37.2
 
 https://stackoverflow.com/questions/21738647/change-date-of-git-tag-or-github-release-based-on-it
 
@@ -45,6 +47,7 @@ import os,subprocess
 os.chdir('/sync/git/CMIP6_CVs')
 
 #%% Create cleanup list
+'''
 # [durack1ml:sync/git/CMIP6_CVs] durack1% git show-ref --tags
 tagClean = []
 tagClean.append('3.2.0')
@@ -61,14 +64,17 @@ tagClean.append('3.2.8')
 tagClean.append('CMOR-3.2.7')
 tagClean.append('CMOR-3.2.8')
 #tagClean.append('CMOR-3.3.0')
+'''
 
 #%% Iterate over list to delete existing tags
+'''
 for count,tag in enumerate(tagClean):
     print 'tag:    ',tag
     # Git delete existing tag
     subprocess.call(['git','tag','-d',tag])
     # And push to remote
     subprocess.call(['git','push','origin',''.join([':refs/tags/',tag])])
+'''
 
 #%% Create target dictionary
 tagList = {}
@@ -120,6 +126,11 @@ tagList['6.2.3.5'] = {}
 tagList['6.2.3.5']['Comment'] = 'Revise source_id GFDL-ESM4 to include CDRMIP (#485)'
 tagList['6.2.3.5']['MD5'] = 'e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5'
 '''
+# 190822 1547
+tagList['6.2.37.2'] = {}
+tagList['6.2.37.2']['Comment'] = 'Register source_id IPSL-CM7A-ATM-HR (#769)'
+tagList['6.2.37.2']['MD5'] = 'd0261dc94cdfba37af81e07b8ebc801aa47a7ae7'
+
 
 #%% Iterate over dictionary to create new tags and delete existing
 # Should look like
@@ -127,7 +138,7 @@ tagList['6.2.3.5']['MD5'] = 'e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5'
 # git push origin :refs/tags/$tag &&\
 # GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)" git tag -a $tag\
 # -m"$tag"`; done; git push --tags
-'''
+
 for tag in tagList.keys():
     print 'tag:    ',tag
     print 'comment:',tagList[tag]['Comment']
@@ -146,7 +157,7 @@ for tag in tagList.keys():
     subprocess.call(cmd,shell=True) ; # Shell=True required for string
 # And push all new tags to remote
 subprocess.call(['git','push','--tags'])
-'''
+
 #%% Logs
 ''' 180222 1536
 [durack1ml:git/CMIP6_CVs/src] durack1% python cleanupTags.py
@@ -223,7 +234,7 @@ Traceback (most recent call last):
 OSError: [Errno 2] No such file or directory
 180315 1205
 
-(uvcdat2120) trustym:src paul$ python cleanupTags.py 
+(uvcdat2120) trustym:src paul$ python cleanupTags.py
 tag:     6.2.3.4
 comment: Register source_id LBLRTM (#484)
 MD5:     6d8065c5d35785e58160e8f1b7789a7998ca0f6f

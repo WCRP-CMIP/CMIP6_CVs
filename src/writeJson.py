@@ -394,6 +394,7 @@ PJD 17 Aug 2019    - Register source_id CESM2-WACCM-FV2 https://github.com/WCRP-
 PJD 22 Aug 2019    - Revise source_id GFDL-CM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/758
 PJD 22 Aug 2019    - Register experiment_id ssp370pdSST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/759
 PJD 22 Jul 2019    - Revise experiment_id ssp370SST https://github.com/WCRP-CMIP/CMIP6_CVs/issues/760
+PJD 22 Aug 2019    - Register institution_id RUBISCO https://github.com/WCRP-CMIP/CMIP6_CVs/issues/761
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -419,7 +420,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id ssp370SST\"'
+commitMessage = '\"Register institution_id RUBISCO\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -560,9 +561,6 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'ssp370SST'
-experiment_id[key]['end_year'] = '2100'
-experiment_id[key]['min_number_yrs_per_sim'] = '86'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -736,6 +734,12 @@ institution_id = {
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'RTE-RRTMGP-Consortium': ''.join(['AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, ',
                               'Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA']),
+    'RUBISCO': ''.join(['ORNL (Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA); ANL (Argonne National Laboratory, Argonne, IL 60439, USA); ',
+                        'BNL (Brookhaven National Laboratory, Upton, NY 11973, USA); LANL (Los Alamos National Laboratory, Los Alamos, NM 87545); ',
+                        'LBNL (Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA); NAU (Northern Arizona University, Flagstaff, AZ 86011, USA); ',
+                        'NCAR (National Center for Atmospheric Research, Boulder, CO 80305, USA); UCI (University of California Irvine, Irvine, CA 92697, USA); ',
+                        'UM (University of Michigan, Ann Arbor, MI 48109, USA). Mailing address: ORNL Climate Change Science Institute, c/o Forrest M. Hoffman, ',
+                        'Laboratory Research Manager, Building 4500N Room F106, 1 Bethel Valley Road, Oak Ridge, TN 37831-6301, USA']),
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',

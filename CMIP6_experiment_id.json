@@ -7949,10 +7949,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0, with SSTs prescribed from ssp370",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, with SSTs prescribed from ssp370",
             "experiment_id":"ssp370SST",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8698,13 +8698,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Aug 22 15:16:07 2019 -0700",
-        "CV_collection_version":"6.2.36.0",
+        "CV_collection_modified":"Thu Aug 22 15:21:58 2019 -0700",
+        "CV_collection_version":"6.2.37.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Mon Jul 22 11:09:12 2019 -0700",
-        "experiment_id_CV_note":"Register experiment_id ssp370pdSST",
+        "experiment_id_CV_modified":"Thu Aug 22 15:16:07 2019 -0700",
+        "experiment_id_CV_note":"Revise experiment_id ssp370SST",
         "institution_id":"PCMDI",
-        "previous_commit":"26f3d0932518cbf16cc97a29356f811a39c500ca",
+        "previous_commit":"3d45587511f0a8300dc62a5975c7ecc9765065e3",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

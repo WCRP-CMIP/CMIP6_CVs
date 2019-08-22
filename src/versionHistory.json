@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"3fe84e76b18f042bdd04fb6062d7dca2e24a5ebc",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3fe84e76b18f042bdd04fb6062d7dca2e24a5ebc",
-            "commitMessage":"Register source_id CESM2-WACCM-FV2",
-            "timeStamp":"Sat Aug 17 10:16:10 2019 -0700"
+            "MD5":"ee2d574e3f65353f716ab65fd39ea6daf649e088",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/ee2d574e3f65353f716ab65fd39ea6daf649e088",
+            "commitMessage":"Revise source_id GFDL-CM4",
+            "timeStamp":"Thu Aug 22 15:01:15 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":6,
+            "versionCVCommit":7,
             "versionCVContent":35,
             "versionCVStructure":2,
             "versionMIPEra":6

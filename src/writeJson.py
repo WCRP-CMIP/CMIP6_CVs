@@ -397,6 +397,7 @@ PJD 22 Jul 2019    - Revise experiment_id ssp370SST https://github.com/WCRP-CMIP
 PJD 22 Aug 2019    - Register institution_id RUBISCO https://github.com/WCRP-CMIP/CMIP6_CVs/issues/761
 PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/763
 PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/764
+PJD  5 Sep 2019    - Revise institution_id FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -422,7 +423,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM7A-ATM-LR\"'
+commitMessage = '\"Revise institution_id FIO-QLNM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -698,8 +699,8 @@ institution_id = {
                                     'The Netherlands. Mailing address: EC-Earth consortium, Rossby Center, Swedish Meteorological and Hydrological ',
                                     'Institute/SMHI, SE-601 76 Norrkoping, Sweden']),
     'ECMWF': 'European Centre for Medium-Range Weather Forecasts, Reading RG2 9AX, UK',
-    'FIO-QLNM': ''.join(['FIO (First Institute of Oceanography, State Oceanic Administration, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine ',
-                         'Science and Technology, Qingdao 266237, China)']),
+    'FIO-QLNM': ''.join(['FIO (First Institute of Oceanography, Ministry of Natural Resources, Qingdao 266061, China), ',
+                         'QNLM (Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)']),
     'HAMMOZ-Consortium': ''.join(['ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, ',
                                   'Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric ',
                                   'Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland']),

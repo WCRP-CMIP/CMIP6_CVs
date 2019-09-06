@@ -5406,7 +5406,7 @@
             "release_year":"2017",
             "source_id":"NICAM16-9S"
         },
-        "NorESM1-LM":{
+        "NorCPM1":{
             "activity_participation":[
                 "CMIP",
                 "DCPP"
@@ -5417,8 +5417,8 @@
             "institution_id":[
                 "NCC"
             ],
-            "label":"NorESM1-LM",
-            "label_extended":"NorESM1-LM (low atmosphere-medium ocean resolution, GHG concentration driven)",
+            "label":"NorCPM1",
+            "label_extended":"Norwegian Climate Prediction Model version 1",
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero4.1 (same grid as atmos)",
@@ -5454,7 +5454,7 @@
                 }
             },
             "release_year":"2019",
-            "source_id":"NorESM1-LM"
+            "source_id":"NorCPM1"
         },
         "NorESM2-HH":{
             "activity_participation":[
@@ -6298,13 +6298,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Sep  5 16:23:55 2019 -0700",
-        "CV_collection_version":"6.2.37.4",
+        "CV_collection_modified":"Thu Sep  5 17:17:41 2019 -0700",
+        "CV_collection_version":"6.2.37.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f504ad38af1b3cdd5b024c681d4aedf5ecde7c7e",
+        "previous_commit":"2a00db52be45f55e5b17745c0e78da9bd8d31889",
         "source_id_CV_modified":"Thu Aug 22 15:41:35 2019 -0700",
-        "source_id_CV_note":"Register source_id IPSL-CM7A-ATM-LR",
+        "source_id_CV_note":"Rename source_id NorESM1-LM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -398,6 +398,7 @@ PJD 22 Aug 2019    - Register institution_id RUBISCO https://github.com/WCRP-CMI
 PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/763
 PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/764
 PJD  5 Sep 2019    - Revise institution_id FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
+PJD  5 Sep 2019    - Rename source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/772
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -423,7 +424,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id FIO-QLNM\"'
+commitMessage = '\"Rename source_id NorESM1-LM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -833,46 +834,13 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM7A-ATM-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
- 'HighResMIP'
-]
-source_id[key]['cohort'] = [
- 'Registered'
-]
-source_id[key]['institution_id'] = [
- 'IPSL'
-]
-source_id[key]['label'] = 'IPSL-CM7A-ATM-LR'
-source_id[key]['label_extended'] = 'IPSL-CM7A-ATM-LR'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 40000 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.2, Water/Carbon/Energy mode)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2019'
-source_id[key]['source_id'] = key
+key1 = 'NorESM1-LM'
+key2 = 'NorCPM1'
+source_id[key2] = source_id.pop(key1)
+source_id[key2]['label'] = 'NorCPM1'
+source_id[key2]['label_extended'] = 'Norwegian Climate Prediction Model version 1'
+source_id[key2]['release_year'] = '2019'
+source_id[key2]['source_id'] = key2
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

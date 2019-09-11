@@ -400,6 +400,7 @@ PJD 22 Aug 2019    - Register source_id IPSL-CM7A-ATM-LR https://github.com/WCRP
 PJD  5 Sep 2019    - Revise institution_id FIO-QLNM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/582
 PJD  5 Sep 2019    - Rename source_id NorESM1-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/772
 PJD 10 Sep 2019    - Register source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
+PJD 10 Sep 2019    - Register source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -425,7 +426,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id E3SM-1-1\"'
+commitMessage = '\"Register source_id E3SM-1-1-ECA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -835,7 +836,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'E3SM-1-1'
+key = 'E3SM-1-1-ECA'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
  'C4MIP',
@@ -847,8 +848,8 @@ source_id[key]['cohort'] = [
 source_id[key]['institution_id'] = [
  'E3SM-Project'
 ]
-source_id[key]['label'] = 'E3SM 1.1'
-source_id[key]['label_extended'] = 'E3SM 1.1 (Energy Exascale Earth System Model)'
+source_id[key]['label'] = 'E3SM 1.1 ECA'
+source_id[key]['label_extended'] = 'E3SM 1.1 (Energy Exascale Earth System Model) with an experimental land BGC ECA configuration'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
 source_id[key]['model_component']['aerosol']['description'] = 'MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)'
@@ -861,9 +862,9 @@ source_id[key]['model_component']['atmosChem']['description'] = 'Troposphere spe
 source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
 source_id[key]['model_component']['land'] = {}
 source_id[key]['model_component']['land']['description'] = ''.join(['ELM (v1.1, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; ',
-                                                                    '90 x 90 x 6 longitude/latitude/cubeface; active biogeochemistry using the Converging Trophic ',
-                                                                    'Cascade plant and soil carbon and nutrient mechanisms to represent carbon, nitrogen and phosphorus ',
-                                                                    'cycles), MOSART (v1.1, 0.5 degree latitude/longitude grid)'])
+                                                                    '90 x 90 x 6 longitude/latitude/cubeface; active biogeochemistry using the Equilibrium Chemistry ',
+                                                                    'Approximation to represent plant and soil carbon and nutrient mechanisms especially carbon, nitrogen ',
+                                                                    'and phosphorus limitation), MOSART (v1.1, 0.5 degree latitude/longitude grid)'])
 source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
@@ -872,8 +873,8 @@ source_id[key]['model_component']['ocean'] = {}
 source_id[key]['model_component']['ocean']['description'] = 'MPAS-Ocean (v6.0, oEC60to30 unstructured SVTs mesh with 235160 cells and 714274 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)'
 source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (Biogeochemical Elemental Cycling model, NPZD-type with C/N/P/Fe/Si/O; same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'MPAS-Seaice (v6.0; same grid as ocean)'
 source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'

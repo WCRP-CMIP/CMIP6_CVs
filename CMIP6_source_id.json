@@ -1931,6 +1931,56 @@
             "release_year":"2019",
             "source_id":"E3SM-1-1"
         },
+        "E3SM-1-1-ECA":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "E3SM-Project"
+            ],
+            "label":"E3SM 1.1 ECA",
+            "label_extended":"E3SM 1.1 (Energy Exascale Earth System Model) with an experimental land BGC ECA configuration",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"EAM (v1.1, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; 72 levels; top level 0.1 hPa)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"Troposphere specified oxidants for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"ELM (v1.1, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; active biogeochemistry using the Equilibrium Chemistry Approximation to represent plant and soil carbon and nutrient mechanisms especially carbon, nitrogen and phosphorus limitation), MOSART (v1.1, 0.5 degree latitude/longitude grid)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MPAS-Ocean (v6.0, oEC60to30 unstructured SVTs mesh with 235160 cells and 714274 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"MPAS-Seaice (v6.0; same grid as ocean)",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"E3SM-1-1-ECA"
+        },
         "EC-Earth3":{
             "activity_participation":[
                 "CMIP",
@@ -6348,13 +6398,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Sep 10 17:10:22 2019 -0700",
-        "CV_collection_version":"6.2.37.6",
+        "CV_collection_modified":"Tue Sep 10 17:18:02 2019 -0700",
+        "CV_collection_version":"6.2.37.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"00487815a37b96dedebdb9fb4fb53afb420c34a5",
-        "source_id_CV_modified":"Thu Sep  5 17:17:41 2019 -0700",
-        "source_id_CV_note":"Register source_id E3SM-1-1",
+        "previous_commit":"0573fd886d7ed8264b51612e00e67053830b0b12",
+        "source_id_CV_modified":"Tue Sep 10 17:10:22 2019 -0700",
+        "source_id_CV_note":"Register source_id E3SM-1-1-ECA",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

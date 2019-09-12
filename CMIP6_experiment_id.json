@@ -8698,13 +8698,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Sep 10 17:18:02 2019 -0700",
-        "CV_collection_version":"6.2.37.7",
+        "CV_collection_modified":"Thu Sep 12 15:40:53 2019 -0700",
+        "CV_collection_version":"6.2.37.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Aug 22 15:21:58 2019 -0700",
         "experiment_id_CV_note":"Revise experiment_id ssp370SST",
         "institution_id":"PCMDI",
-        "previous_commit":"0573fd886d7ed8264b51612e00e67053830b0b12",
+        "previous_commit":"9b2005923c76161beab4d245cc60af94f89db406",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

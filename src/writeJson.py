@@ -402,6 +402,7 @@ PJD  5 Sep 2019    - Rename source_id NorESM1-LM https://github.com/WCRP-CMIP/CM
 PJD 10 Sep 2019    - Register source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
 PJD 10 Sep 2019    - Register source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
 PJD 12 Sep 2019    - Revise source_id FGOALS-f3-L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/779
+PJD 13 Sep 2019    - Revise experiment_id entries hist-spAer-aer and hist-spAer-all https://github.com/WCRP-CMIP/CMIP6_CVs/issues/781
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -427,7 +428,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id FGOALS-f3-L\"'
+commitMessage = '\"Revise experiment_id entries hist-spAer-aer and hist-spAer-all\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -568,7 +569,9 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-
+keys = ['hist-spAer-aer','hist-spAer-all']
+for key in keys:
+    experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -837,16 +840,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FGOALS-f3-L'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'DCPP',
- 'GMMIP',
- 'OMIP',
- 'PAMIP',
- 'SIMIP',
- 'ScenarioMIP'
-]
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

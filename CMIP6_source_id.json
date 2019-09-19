@@ -1958,7 +1958,7 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "land":{
-                    "description":"ELM (v1.1, cubed sphere spectral-element grid; 5400 elements with p=3; 1 deg average grid spacing; 90 x 90 x 6 longitude/latitude/cubeface; active biogeochemistry using the Equilibrium Chemistry Approximation to represent plant and soil carbon and nutrient mechanisms especially carbon, nitrogen and phosphorus limitation), MOSART (v1.1, 0.5 degree latitude/longitude grid)",
+                    "description":"ELM (v1.1, same as atmos; active biogeochemistry using the Equilibrium Chemistry Approximation to represent plant and soil carbon and nutrient mechanisms especially carbon, nitrogen and phosphorus limitation), MOSART (v1.1, 0.5 degree latitude/longitude grid)",
                     "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
@@ -6399,13 +6399,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Sep 19 11:33:25 2019 -1000",
-        "CV_collection_version":"6.2.38.1",
+        "CV_collection_modified":"Thu Sep 19 11:46:27 2019 -1000",
+        "CV_collection_version":"6.2.38.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"e2f74b7c583b7a1b34f0edbdca9ec3163c4a0198",
-        "source_id_CV_modified":"Thu Sep 12 15:40:53 2019 -0700",
-        "source_id_CV_note":"Revise source_id E3SM-1-1 for 1024 char lim",
+        "previous_commit":"71c0ddb7798d36e920fce2a8efc8e9104e35639a",
+        "source_id_CV_modified":"Thu Sep 19 11:33:25 2019 -1000",
+        "source_id_CV_note":"Revise source_id E3SM-1-1-ECA for 1024 char lim",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -403,6 +403,7 @@ PJD 10 Sep 2019    - Register source_id E3SM-1-1 https://github.com/WCRP-CMIP/CM
 PJD 10 Sep 2019    - Register source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
 PJD 12 Sep 2019    - Revise source_id FGOALS-f3-L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/779
 PJD 13 Sep 2019    - Revise experiment_id entries hist-spAer-aer and hist-spAer-all https://github.com/WCRP-CMIP/CMIP6_CVs/issues/781
+PJD 19 Sep 2019    - Revise source_id E3SM-1-1 for 1024 char lim https://github.com/PCMDI/cmip6-cmor-tables/pull/260/files
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -428,7 +429,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id entries hist-spAer-aer and hist-spAer-all\"'
+commitMessage = '\"Revise source_id E3SM-1-1 for 1024 char lim\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -840,6 +841,11 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+
+key = 'E3SM-1-1'
+source_id[key]['model_component']['land']['description'] = ''.join(['ELM (v1.1, same grid as atmos; ',
+                                                                    'active biogeochemistry using the Converging Trophic Cascade plant and soil carbon and nutrient mechanisms ',
+                                                                    'to represent carbon, nitrogen and phosphorus cycles), MOSART (v1.1, 0.5 degree latitude/longitude grid)'])
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

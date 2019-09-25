@@ -805,6 +805,56 @@
             "release_year":"2015",
             "source_id":"CAS-ESM1-0"
         },
+        "CESM1-1-CAM5-CMIP5":{
+            "activity_participation":[
+                "CMIP",
+                "DCPP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NCAR"
+            ],
+            "label":"CESM1-1-CAM5-CMIP5",
+            "label_extended":"CESM1-1-CAM5-CMIP5",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM3 (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CAM5.2 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"MAM3 (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"CLM4 (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"BEC (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE4 (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2011",
+            "source_id":"CESM1-1-CAM5-CMIP5"
+        },
         "CESM2":{
             "activity_participation":[
                 "AerChemMIP",
@@ -6399,13 +6449,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Sep 19 11:46:27 2019 -1000",
-        "CV_collection_version":"6.2.38.2",
+        "CV_collection_modified":"Wed Sep 25 10:45:16 2019 -0700",
+        "CV_collection_version":"6.2.38.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"71c0ddb7798d36e920fce2a8efc8e9104e35639a",
-        "source_id_CV_modified":"Thu Sep 19 11:33:25 2019 -1000",
-        "source_id_CV_note":"Revise source_id E3SM-1-1-ECA for 1024 char lim",
+        "previous_commit":"06011179498259901ba2b7039bbe65d248c096af",
+        "source_id_CV_modified":"Thu Sep 19 11:46:27 2019 -1000",
+        "source_id_CV_note":"Register source_id CESM1-1-CAM5-CMIP5",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

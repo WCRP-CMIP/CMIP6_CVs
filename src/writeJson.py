@@ -843,46 +843,46 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CESM1-1-CAM5-CMIP5'
+key = 'NorESM1-F'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
 'CMIP',
-'DCPP'
+'PMIP'
 ]
 source_id[key]['cohort'] = [
 'Registered'
 ]
 source_id[key]['institution_id'] = [
-'NCAR'
+'NCC'
 ]
 source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
+source_id[key]['label_extended'] = 'NorESM1-F (a fast version of NorESM that is designed for paleo and multi-ensemble simulations)'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM3 (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.2 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'CAM (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'MAM3 (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'CLM'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
 source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce']['description'] = 'CISM'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '250 km'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['description'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
 source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC'
 source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE'
 source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2011'
+source_id[key]['release_year'] = '2018'
 source_id[key]['source_id'] = key
 #============================================
 #key = 'AWI-ESM-1-1-LR'

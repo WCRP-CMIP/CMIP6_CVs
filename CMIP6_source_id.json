@@ -5607,6 +5607,56 @@
             "release_year":"2019",
             "source_id":"NorCPM1"
         },
+        "NorESM1-F":{
+            "activity_participation":[
+                "CMIP",
+                "PMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NCC"
+            ],
+            "label":"NorESM1-F",
+            "label_extended":"NorESM1-F (a fast version of NorESM that is designed for paleo and multi-ensemble simulations)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"CAM (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"CISM",
+                    "native_nominal_resolution":"250 km"
+                },
+                "ocean":{
+                    "description":"MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"HAMOCC",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"NorESM1-F"
+        },
         "NorESM2-HH":{
             "activity_participation":[
                 "CMIP",
@@ -6449,12 +6499,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Sep 25 10:45:16 2019 -0700",
-        "CV_collection_version":"6.2.38.3",
+        "CV_collection_modified":"Wed Sep 25 10:55:21 2019 -0700",
+        "CV_collection_version":"6.2.38.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"06011179498259901ba2b7039bbe65d248c096af",
-        "source_id_CV_modified":"Thu Sep 19 11:46:27 2019 -1000",
+        "previous_commit":"7fae7b18a016e05370d339bc7210f584d8663860",
+        "source_id_CV_modified":"Wed Sep 25 10:45:16 2019 -0700",
         "source_id_CV_note":"Register source_id CESM1-1-CAM5-CMIP5",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

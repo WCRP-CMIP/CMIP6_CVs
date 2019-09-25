@@ -5626,7 +5626,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"CAM (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
+                    "description":"CAM4 (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -5634,7 +5634,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"CLM",
+                    "description":"CLM4",
                     "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
@@ -5646,11 +5646,11 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"HAMOCC",
+                    "description":"HAMOCC5.1",
                     "native_nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE",
+                    "description":"CICE4",
                     "native_nominal_resolution":"100 km"
                 }
             },
@@ -6499,13 +6499,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Sep 25 10:56:15 2019 -0700",
-        "CV_collection_version":"6.2.38.4",
+        "CV_collection_modified":"Wed Sep 25 16:30:20 2019 -0700",
+        "CV_collection_version":"6.2.38.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d8699c9f7cc0679453d0b5ffaf44ae0787515cf4",
-        "source_id_CV_modified":"Wed Sep 25 10:45:16 2019 -0700",
-        "source_id_CV_note":"Register source_id NorESM1-F",
+        "previous_commit":"9d44353ab459f297183c72f754a08edc3fa0e929",
+        "source_id_CV_modified":"Wed Sep 25 10:56:15 2019 -0700",
+        "source_id_CV_note":"Revise source_id NorESM1-F",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

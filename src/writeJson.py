@@ -406,6 +406,7 @@ PJD 13 Sep 2019    - Revise experiment_id entries hist-spAer-aer and hist-spAer-
 PJD 19 Sep 2019    - Revise source_id E3SM-1-1 for 1024 char lim https://github.com/PCMDI/cmip6-cmor-tables/pull/260/files
 PJD 19 Sep 2019    - Revise source_id E3SM-1-1-ECA for 1024 char lim https://github.com/PCMDI/cmip6-cmor-tables/pull/260/files
 PJD 25 Sep 2019    - Register source_id CESM1-1-CAM5-CMIP5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/785
+PJD 25 Sep 2019    - Register source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -431,7 +432,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id CESM1-1-CAM5-CMIP5\"'
+commitMessage = '\"Register source_id NorESM1-F\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

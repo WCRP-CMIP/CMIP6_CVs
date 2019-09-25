@@ -8700,13 +8700,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Sep 25 10:45:16 2019 -0700",
-        "CV_collection_version":"6.2.38.3",
+        "CV_collection_modified":"Wed Sep 25 10:56:15 2019 -0700",
+        "CV_collection_version":"6.2.38.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Sep 13 08:39:20 2019 -0700",
         "experiment_id_CV_note":"Revise experiment_id entries hist-spAer-aer and hist-spAer-all",
         "institution_id":"PCMDI",
-        "previous_commit":"06011179498259901ba2b7039bbe65d248c096af",
+        "previous_commit":"d8699c9f7cc0679453d0b5ffaf44ae0787515cf4",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

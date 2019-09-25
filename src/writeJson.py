@@ -405,6 +405,7 @@ PJD 12 Sep 2019    - Revise source_id FGOALS-f3-L https://github.com/WCRP-CMIP/C
 PJD 13 Sep 2019    - Revise experiment_id entries hist-spAer-aer and hist-spAer-all https://github.com/WCRP-CMIP/CMIP6_CVs/issues/781
 PJD 19 Sep 2019    - Revise source_id E3SM-1-1 for 1024 char lim https://github.com/PCMDI/cmip6-cmor-tables/pull/260/files
 PJD 19 Sep 2019    - Revise source_id E3SM-1-1-ECA for 1024 char lim https://github.com/PCMDI/cmip6-cmor-tables/pull/260/files
+PJD 25 Sep 2019    - Register source_id CESM1-1-CAM5-CMIP5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/785
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -430,7 +431,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id E3SM-1-1-ECA for 1024 char lim\"'
+commitMessage = '\"Register source_id CESM1-1-CAM5-CMIP5\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -842,13 +843,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
-key = 'E3SM-1-1-ECA'
-source_id[key]['model_component']['land']['description'] = ''.join(['ELM (v1.1, same as atmos; ',
-                                                                    'active biogeochemistry using the Equilibrium Chemistry Approximation to represent plant and soil carbon ',
-                                                                    'and nutrient mechanisms especially carbon, nitrogen and phosphorus limitation), MOSART (v1.1, 0.5 degree ',
-                                                                    'latitude/longitude grid)'])
-
+key = 'CESM1-1-CAM5-CMIP5'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'CMIP',
+'DCPP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'NCAR'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'MAM3 (same grid as atmos)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'CAM5.2 (0.9x1.25 finite volume grid; 288 x 192 longitude/latitude; 32 levels; top level 2.25 mb)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'MAM3 (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'CLM4 (same grid as atmos)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2011'
+source_id[key]['source_id'] = key
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

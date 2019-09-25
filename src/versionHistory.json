@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"71c0ddb7798d36e920fce2a8efc8e9104e35639a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/71c0ddb7798d36e920fce2a8efc8e9104e35639a",
-            "commitMessage":"Revise source_id E3SM-1-1-ECA for 1024 char lim",
-            "timeStamp":"Thu Sep 19 11:46:27 2019 -1000"
+            "MD5":"06011179498259901ba2b7039bbe65d248c096af",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/06011179498259901ba2b7039bbe65d248c096af",
+            "commitMessage":"Register source_id CESM1-1-CAM5-CMIP5",
+            "timeStamp":"Wed Sep 25 10:45:16 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":38,
             "versionCVStructure":2,
             "versionMIPEra":6

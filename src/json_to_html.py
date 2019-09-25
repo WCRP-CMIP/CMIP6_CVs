@@ -11,6 +11,7 @@ PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model component
 PJD 31 Jul 2018    - Update to include version info in html head
 PJD  7 Aug 2018    - Update version format
 PJD 25 Apr 2019    - Updated sources to latest 1.10.13 -> 1.10.18; 3.2.1 -> 3.3.1
+PJD 25 Sep 2019    - Updated to redirect contents from rawgit.com to github pages (https://wcrp-cmip.github.io/CMIP6_CVs/)
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -58,6 +59,9 @@ else:
     print "** Version: ",version," invalid, exiting"
     sys.exit()
 
+#%% Set global arguments
+destDir = '../docs/'
+
 #%% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
 f = open(infile)
@@ -66,8 +70,9 @@ dict1 = dict.get('experiment_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print dict2
 #print dict.keys()
-fout = infile[:-4] + 'html'
-fout = fout.split('/')[-1] ; # Write to local directory
+fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
+print "processing",fout
+#fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
 # Old remote references
@@ -129,8 +134,9 @@ dict1 = dict.get('institution_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print dict2
 #print dict.keys()
-fout = infile[:-4] + 'html'
-fout = fout.split('/')[-1] ; # Write to local directory
+fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
+print "processing",fout
+#fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
 print >> fo, ''.join([header, """
@@ -173,8 +179,9 @@ dict1 = dict.get('source_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print dict2
 #print dict.keys()
-fout = infile[:-4] + 'html'
-fout = fout.split('/')[-1] ; # Write to local directory
+fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
+print "processing",fout
+#fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
 print >> fo, ''.join([header, """

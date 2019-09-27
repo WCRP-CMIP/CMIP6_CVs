@@ -2979,7 +2979,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "atmos":{
-                    "description":"GAMIL2 (180 x 90 longitude/latitude; 26 levels; top level 2.19hPa)",
+                    "description":"GAMIL3 (180 x 80 longitude/latitude; 26 levels; top level 2.19hPa)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -2987,7 +2987,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"CLM4.0",
+                    "description":"CAS-LSM",
                     "native_nominal_resolution":"250 km"
                 },
                 "landIce":{

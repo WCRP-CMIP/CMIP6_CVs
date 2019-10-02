@@ -3691,10 +3691,25 @@
             "release_year":"2016",
             "source_id":"GISS-E2-1-H"
         },
-        "GISS-E2-1-MA-G":{
+        "GISS-E2-2-G":{
             "activity_participation":[
+                "AerChemMIP",
+                "CFMIP",
                 "CMIP",
+                "DAMIP",
+                "DynVarMIP",
+                "FAFMIP",
+                "GMMIP",
+                "ISMIP6",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "PAMIP",
+                "PMIP",
                 "RFMIP",
+                "SIMIP",
+                "ScenarioMIP",
+                "VIACSAB",
                 "VolMIP"
             ],
             "cohort":[
@@ -3703,19 +3718,19 @@
             "institution_id":[
                 "NASA-GISS"
             ],
-            "label":"GISS-E2.1MA-G",
-            "label_extended":"GISS-E2.1MA-G",
+            "label":"GISS-E2-2-G",
+            "label_extended":"GISS-E2-2-G",
             "model_component":{
                 "aerosol":{
-                    "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"GISS-E2.1MA (2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)",
+                    "description":"GISS-E2.2 (High-top, 2 x 2.5 degrees; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
-                    "description":"Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "description":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
                     "native_nominal_resolution":"250 km"
                 },
                 "land":{
@@ -3723,11 +3738,11 @@
                     "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
+                    "description":"Fixed",
+                    "native_nominal_resolution":"250 km"
                 },
                 "ocean":{
-                    "description":"GISS Ocean (1 degree; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)",
+                    "description":"GISS Ocean (GO1, 1 degree; 360 x 180 longitude/latitude; 40 levels; top grid cell 0-10m)",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -3739,8 +3754,8 @@
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2018",
-            "source_id":"GISS-E2-1-MA-G"
+            "release_year":"2019",
+            "source_id":"GISS-E2-2-G"
         },
         "GISS-E3-G":{
             "activity_participation":[
@@ -6551,13 +6566,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct  2 16:18:07 2019 -0700",
-        "CV_collection_version":"6.2.38.9",
+        "CV_collection_modified":"Wed Oct  2 16:30:32 2019 -0700",
+        "CV_collection_version":"6.2.38.10",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5970dc7f71f1a1d264f10e77b92592d2db51275f",
-        "source_id_CV_modified":"Wed Oct  2 16:09:48 2019 -0700",
-        "source_id_CV_note":"Revise source_id GISS-E2-1-G",
+        "previous_commit":"502913b8ec6d333e6d513056eb6a8dac56196a6a",
+        "source_id_CV_modified":"Wed Oct  2 16:18:07 2019 -0700",
+        "source_id_CV_note":"Revise and rename source_id GISS-E2-1-MA-G",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -409,6 +409,7 @@ PJD 25 Sep 2019    - Register source_id CESM1-1-CAM5-CMIP5 https://github.com/WC
 PJD 25 Sep 2019    - Register source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
 PJD 25 Sep 2019    - Revise source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
 PJD  2 Oct 2019    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
+PJD  2 Oct 2019    - Revise source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -434,7 +435,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id E3SM-1-1\"'
+commitMessage = '\"Revise source_id E3SM-1-1-ECA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -846,19 +847,9 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'E3SM-1-1'
-source_id[key]['activity_participation'] = [
-'C4MIP',
-'CMIP',
-'LS3MIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'E3SM-Project',
-'RUBISCO'
-]
+key = 'E3SM-1-1-ECA'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (Biogeochemical Elemental Cycling model, NPZD-type with C/N/P/Fe/Si/O; same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '50 km'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

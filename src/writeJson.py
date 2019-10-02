@@ -408,6 +408,7 @@ PJD 19 Sep 2019    - Revise source_id E3SM-1-1-ECA for 1024 char lim https://git
 PJD 25 Sep 2019    - Register source_id CESM1-1-CAM5-CMIP5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/785
 PJD 25 Sep 2019    - Register source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
 PJD 25 Sep 2019    - Revise source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
+PJD  2 Oct 2019    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -433,7 +434,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id NorESM1-F\"'
+commitMessage = '\"Revise source_id E3SM-1-1\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -845,47 +846,20 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'NorESM1-F'
-source_id[key] = {}
+key = 'E3SM-1-1'
 source_id[key]['activity_participation'] = [
+'C4MIP',
 'CMIP',
-'PMIP'
+'LS3MIP'
 ]
 source_id[key]['cohort'] = [
 'Registered'
 ]
 source_id[key]['institution_id'] = [
-'NCC'
+'E3SM-Project',
+'RUBISCO'
 ]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'NorESM1-F (a fast version of NorESM that is designed for paleo and multi-ensemble simulations)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM4 (2 degree resolution; 144 x 96; 32 levels; top level 3 mb)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'CISM'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'MICOM (1 degree resolution; 360 x 384; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'HAMOCC5.1'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

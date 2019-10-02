@@ -32,11 +32,11 @@
         "variant_label"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct  2 15:53:49 2019 -0700",
-        "CV_collection_version":"6.2.38.7",
+        "CV_collection_modified":"Wed Oct  2 16:09:48 2019 -0700",
+        "CV_collection_version":"6.2.38.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1e4e7b03cd184bd2e9cd9262d0cd3ca8c997cc53",
+        "previous_commit":"c71fa07a8038419e816b33f968ecedd52ddbee75",
         "required_global_attributes_CV_modified":"Thu Mar 16 12:59:00 2017 -0700",
         "required_global_attributes_CV_note":"deleted trailing comma from list",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

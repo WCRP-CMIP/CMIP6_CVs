@@ -410,6 +410,7 @@ PJD 25 Sep 2019    - Register source_id NorESM1-F https://github.com/WCRP-CMIP/C
 PJD 25 Sep 2019    - Revise source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
 PJD  2 Oct 2019    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
 PJD  2 Oct 2019    - Revise source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
+PJD  2 Oct 2019    - Register source_id GISS-E2-1-G-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/794
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -435,7 +436,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id E3SM-1-1-ECA\"'
+commitMessage = '\"Register source_id GISS-E2-1-G-CC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -847,9 +848,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'E3SM-1-1-ECA'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (Biogeochemical Elemental Cycling model, NPZD-type with C/N/P/Fe/Si/O; same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '50 km'
+key = 'GISS-E2-1-G-CC'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'C4MIP',
+'CMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'NASA-GISS'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.1 (2 x 2.5 degrees; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'Fixed'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'GISS Ocean (1 deg; 360 x 180 longitude/latitude; 40 levels; top grid cell 0-10m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'NOBM (NASA Ocean Biogeochemistry Model; same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI (same grid as ocean)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

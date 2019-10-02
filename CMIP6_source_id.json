@@ -3588,6 +3588,56 @@
             "release_year":"2016",
             "source_id":"GISS-E2-1-G"
         },
+        "GISS-E2-1-G-CC":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NASA-GISS"
+            ],
+            "label":"GISS-E2-1-G-CC",
+            "label_extended":"GISS-E2-1-G-CC",
+            "model_component":{
+                "aerosol":{
+                    "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"GISS-E2.1 (2 x 2.5 degrees; 144 x 90 longitude/latitude; 40 levels; top level 0.1 hPa)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"GISS LSM",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"Fixed",
+                    "native_nominal_resolution":"250 km"
+                },
+                "ocean":{
+                    "description":"GISS Ocean (1 deg; 360 x 180 longitude/latitude; 40 levels; top grid cell 0-10m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"NOBM (NASA Ocean Biogeochemistry Model; same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"GISS SI (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"GISS-E2-1-G-CC"
+        },
         "GISS-E2-1-H":{
             "activity_participation":[
                 "CMIP",
@@ -6501,13 +6551,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct  2 15:53:49 2019 -0700",
-        "CV_collection_version":"6.2.38.7",
+        "CV_collection_modified":"Wed Oct  2 16:09:48 2019 -0700",
+        "CV_collection_version":"6.2.38.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1e4e7b03cd184bd2e9cd9262d0cd3ca8c997cc53",
-        "source_id_CV_modified":"Wed Oct  2 15:47:16 2019 -0700",
-        "source_id_CV_note":"Revise source_id E3SM-1-1-ECA",
+        "previous_commit":"c71fa07a8038419e816b33f968ecedd52ddbee75",
+        "source_id_CV_modified":"Wed Oct  2 15:53:49 2019 -0700",
+        "source_id_CV_note":"Register source_id GISS-E2-1-G-CC",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

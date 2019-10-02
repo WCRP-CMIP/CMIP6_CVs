@@ -3573,7 +3573,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"GISS Ocean (1 degree; 360 x 180 latitude/longitude; 32 levels; top grid cell 0-10 m)",
+                    "description":"GISS Ocean (GO1, 1 degree; 360 x 180 longitude/latitude; 40 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -3585,7 +3585,7 @@
                     "native_nominal_resolution":"250 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2019",
             "source_id":"GISS-E2-1-G"
         },
         "GISS-E2-1-G-CC":{
@@ -6551,13 +6551,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct  2 16:09:48 2019 -0700",
-        "CV_collection_version":"6.2.38.8",
+        "CV_collection_modified":"Wed Oct  2 16:18:07 2019 -0700",
+        "CV_collection_version":"6.2.38.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c71fa07a8038419e816b33f968ecedd52ddbee75",
-        "source_id_CV_modified":"Wed Oct  2 15:53:49 2019 -0700",
-        "source_id_CV_note":"Register source_id GISS-E2-1-G-CC",
+        "previous_commit":"5970dc7f71f1a1d264f10e77b92592d2db51275f",
+        "source_id_CV_modified":"Wed Oct  2 16:09:48 2019 -0700",
+        "source_id_CV_note":"Revise source_id GISS-E2-1-G",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

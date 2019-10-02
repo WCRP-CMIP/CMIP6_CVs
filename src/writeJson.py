@@ -410,6 +410,7 @@ PJD 25 Sep 2019    - Register source_id NorESM1-F https://github.com/WCRP-CMIP/C
 PJD 25 Sep 2019    - Revise source_id NorESM1-F https://github.com/WCRP-CMIP/CMIP6_CVs/issues/786
 PJD  2 Oct 2019    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/775
 PJD  2 Oct 2019    - Revise source_id E3SM-1-1-ECA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/776
+PJD  2 Oct 2019    - Register source_id GISS-E2-1-G-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/794
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -435,7 +436,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id E3SM-1-1-ECA\"'
+commitMessage = '\"Register source_id GISS-E2-1-G-CC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

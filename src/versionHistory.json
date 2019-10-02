@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"92d399310d70485a1f6421ec2e1fcc4f54a48274",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/92d399310d70485a1f6421ec2e1fcc4f54a48274",
-            "commitMessage":"Revise source_id E3SM-1-1-ECA",
-            "timeStamp":"Wed Oct  2 16:03:09 2019 -0700"
+            "MD5":"61027a9f8df8ac5cd950e58213bb3dc97adea0ca",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/61027a9f8df8ac5cd950e58213bb3dc97adea0ca",
+            "commitMessage":"Register source_id GISS-E2-1-G-CC",
+            "timeStamp":"Wed Oct  2 16:05:21 2019 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

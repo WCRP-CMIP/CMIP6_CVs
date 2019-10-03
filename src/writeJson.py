@@ -414,6 +414,7 @@ PJD  2 Oct 2019    - Register source_id GISS-E2-1-G-CC https://github.com/WCRP-C
 PJD  2 Oct 2019    - Revise source_id GISS-E2-1-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/794
 PJD  2 Oct 2019    - Revise and rename source_id GISS-E2-1-MA-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/795
 PJD  2 Oct 2019    - Revise source_id FGOALS-g3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/796
+PJD  3 Oct 2019    - Register 3 new FAFMIP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/797
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -439,7 +440,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id FGOALS-g3\"'
+commitMessage = '\"Register 3 new FAFMIP experiment_ids\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -580,9 +581,63 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-keys = ['hist-spAer-aer','hist-spAer-all']
-for key in keys:
-    experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
+key = 'faf-heat-NA50pct'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['FAFMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['1xCO2 experiment, parallel to piControl, forced over the ocean ',
+                                             'by the same method and with the same surface net heat flux perturbation ',
+                                             'field as in faf-heat, except that within part of the North Atlantic ',
+                                             'ocean the perturbation is multiplied by 0.5'])
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'control plus perturbative surface flux of heat into ocean'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '70'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '1'
+
+key = 'faf-heat-NA0pct'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['FAFMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['1xCO2 experiment, parallel to piControl, forced over the ocean ',
+                                             'by the same method and with the same surface net heat flux perturbation ',
+                                             'field as in faf-heat, except that within part of the North Atlantic ',
+                                             'ocean the perturbation is zero'])
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'control plus perturbative surface flux of heat into ocean'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '70'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+
+key = 'faf-antwater-stress'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['FAFMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['1xCO2 experiment, parallel to piControl, forced over the ocean ',
+                                             'with the momentum flux perturbation field of faf-stress and a surface ',
+                                             'freshwater flux of 0.1 Sv in total to be applied uniformly around the ',
+                                             'coast of Antarctica in whatever way is most suitable in the model'])
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = ''.join(['control plus perturbative surface fluxes of momentum and freshwater into ',
+                                            'ocean, the latter around the coast of Antarctica only'])
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '70'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -851,11 +906,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FGOALS-g3'
-source_id[key]['model_component']['atmos']['description'] = 'GAMIL3 (180 x 80 longitude/latitude; 26 levels; top level 2.19hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['description'] = 'CAS-LSM'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

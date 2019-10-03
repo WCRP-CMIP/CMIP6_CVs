@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.38.11</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.39.0</p>
 <table id="table_id" class="display">
 <thead><tr><th>experiment_id</th>
 <th>activity id</th>
@@ -271,6 +271,20 @@ $(document).ready( function () {
 <td>86</td>
 <td>no parent</td>
 <td>land only simulation for ssp1-2.6</td>
+</tr>
+<tr><td>volc-cluster-21C</td>
+<td>VolMIP</td>
+<td>volcanic cluster experiment under 21st century SSP2-4.5 scenario</td>
+<td>3</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Parallel experiment to volc-cluster-ctrl, using restart files from the end of the historical simulation instead of from piControl, and boundary conditions from the 21st century SSP2-4.5 scenario experiment of ScenarioMIP</td>
 </tr>
 <tr><td>G6SST1</td>
 <td>GeoMIP</td>
@@ -720,19 +734,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>PA1.8: investigate response to Antarctic sea ice and its role in polar amplification</td>
 </tr>
-<tr><td>volc-cluster-21C</td>
-<td>VolMIP</td>
-<td>volcanic cluster experiment under 21st century SSP2-4.5 scenario</td>
-<td>3</td>
+<tr><td>faf-heat-NA0pct</td>
+<td>FAFMIP</td>
+<td>control plus perturbative surface flux of heat into ocean</td>
+<td>2</td>
 <td>none</td>
-<td>historical</td>
+<td>piControl</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
+<td></td>
+<td></td>
+<td>70</td>
 <td>CMIP</td>
-<td>Parallel experiment to volc-cluster-ctrl, using restart files from the end of the historical simulation instead of from piControl, and boundary conditions from the 21st century SSP2-4.5 scenario experiment of ScenarioMIP</td>
+<td>1xCO2 experiment, parallel to piControl, forced over the ocean by the same method and with the same surface net heat flux perturbation field as in faf-heat, except that within part of the North Atlantic ocean the perturbation is zero</td>
 </tr>
 <tr><td>ism-asmb-std</td>
 <td>ISMIP6</td>
@@ -1195,6 +1209,20 @@ $(document).ready( function () {
 <td>165</td>
 <td>no parent</td>
 <td>Same as land-hist except starting from either 1700 (for models that typically start in 1850) or 1850 (for models that typically start in 1700)</td>
+</tr>
+<tr><td>faf-antwater-stress</td>
+<td>FAFMIP</td>
+<td>control plus perturbative surface fluxes of momentum and freshwater into ocean, the latter around the coast of Antarctica only</td>
+<td>2</td>
+<td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>70</td>
+<td>CMIP</td>
+<td>1xCO2 experiment, parallel to piControl, forced over the ocean with the momentum flux perturbation field of faf-stress and a surface freshwater flux of 0.1 Sv in total to be applied uniformly around the coast of Antarctica in whatever way is most suitable in the model</td>
 </tr>
 <tr><td>hist-GHG</td>
 <td>DAMIP</td>
@@ -3435,6 +3463,20 @@ $(document).ready( function () {
 <td>30</td>
 <td>CMIP</td>
 <td>Perturbation from 1850 control using 2014 aerosol and ozone precursor emissions</td>
+</tr>
+<tr><td>faf-heat-NA50pct</td>
+<td>FAFMIP</td>
+<td>control plus perturbative surface flux of heat into ocean</td>
+<td>1</td>
+<td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>70</td>
+<td>CMIP</td>
+<td>1xCO2 experiment, parallel to piControl, forced over the ocean by the same method and with the same surface net heat flux perturbation field as in faf-heat, except that within part of the North Atlantic ocean the perturbation is multiplied by 0.5</td>
 </tr>
 <tr><td>lfmip-initLC</td>
 <td>LS3MIP</td>

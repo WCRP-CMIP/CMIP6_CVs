@@ -2904,8 +2904,10 @@
                 "CMIP",
                 "DCPP",
                 "GMMIP",
+                "HighResMIP",
                 "OMIP",
                 "PAMIP",
+                "PMIP",
                 "SIMIP",
                 "ScenarioMIP"
             ],
@@ -6568,13 +6570,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 11:53:54 2019 -0700",
-        "CV_collection_version":"6.2.39.4",
+        "CV_collection_modified":"Tue Oct 22 12:00:17 2019 -0700",
+        "CV_collection_version":"6.2.39.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"8d82113e898adcd865d48335b19193e85c9dbfd4",
-        "source_id_CV_modified":"Tue Oct 22 11:46:48 2019 -0700",
-        "source_id_CV_note":"Revise source_id ACCESS-ESM1-5",
+        "previous_commit":"382781de16bfebd7e025aad372d94833b39f8fd2",
+        "source_id_CV_modified":"Tue Oct 22 11:53:54 2019 -0700",
+        "source_id_CV_note":"Revise source_id FGOALS-f3-L",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -8787,13 +8787,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 11:44:59 2019 -0700",
+        "CV_collection_modified":"Tue Oct 22 11:46:48 2019 -0700",
         "CV_collection_version":"6.2.39.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Oct  3 10:54:58 2019 -0700",
         "experiment_id_CV_note":"Register 3 new FAFMIP experiment_ids",
         "institution_id":"PCMDI",
-        "previous_commit":"915a010f8495d61a795fbbb4ff5064e191b0e5b5",
+        "previous_commit":"ee4631bf33246a2a5c46e08d19f55558826e73d0",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

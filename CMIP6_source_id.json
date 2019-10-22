@@ -32,7 +32,7 @@
                 },
                 "land":{
                     "description":"CABLE2.5",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -47,7 +47,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE5.1.2",
+                    "description":"CICE5.1.2 (same grid as ocean)",
                     "native_nominal_resolution":"100 km"
                 }
             },
@@ -6568,11 +6568,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 11:44:59 2019 -0700",
+        "CV_collection_modified":"Tue Oct 22 11:46:48 2019 -0700",
         "CV_collection_version":"6.2.39.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"915a010f8495d61a795fbbb4ff5064e191b0e5b5",
+        "previous_commit":"ee4631bf33246a2a5c46e08d19f55558826e73d0",
         "source_id_CV_modified":"Tue Oct 22 11:36:12 2019 -0700",
         "source_id_CV_note":"Revise source_id ACCESS-CM2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

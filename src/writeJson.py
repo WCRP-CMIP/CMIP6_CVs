@@ -863,8 +863,8 @@ source_id[key]['activity_participation'] = [
  'ScenarioMIP'
 ]
 source_id[key]['model_component']['land']['description'] = 'CABLE2.5'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1.2'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1.2 (same grid as ocean)'
 source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2019'
 

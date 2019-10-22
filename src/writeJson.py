@@ -416,6 +416,7 @@ PJD  2 Oct 2019    - Revise and rename source_id GISS-E2-1-MA-G https://github.c
 PJD  2 Oct 2019    - Revise source_id FGOALS-g3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/796
 PJD  3 Oct 2019    - Register 3 new FAFMIP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/797
 PJD 17 Oct 2019    - Revise source_id GFDL-ESM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/806
+PJD 22 Oct 2019    - Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos https://github.com/WCRP-CMIP/CMIP6_CVs/issues/809
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -441,7 +442,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id GFDL-ESM4\"'
+commitMessage = '\"Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -693,8 +694,8 @@ institution_id = {
                                 'CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)',
                                 'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
-    'CSIRO-ARCCSS-BoM': ''.join(['Commonwealth Scientific and Industrial Research Organisation, Australian Research Council Centre of Excellence ',
-                                 'for Climate System Science, and Bureau of Meteorology, Aspendale, Victoria 3195, Australia']),
+    'CSIRO-ARCCSS': ''.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia), ',
+                                 'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science)']),
     'DKRZ': 'Deutsches Klimarechenzentrum, Hamburg 20146, Germany',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'E3SM-Project': ''.join(['LLNL (Lawrence Livermore National Laboratory, Livermore, CA 94550, USA); ',
@@ -851,17 +852,13 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-ESM4'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CDRMIP',
- 'CMIP',
- 'DAMIP',
- 'DynVarMIP',
- 'LUMIP',
- 'RFMIP',
- 'ScenarioMIP'
+key = 'ACCESS-CM2'
+source_id[key]['institution_id'] = [
+'CSIRO-ARCCSS'
+]
+key = 'ACCESS-ESM1-5'
+source_id[key]['institution_id'] = [
+'CSIRO-ARCCSS'
 ]
 #============================================
 #key = 'AWI-ESM-1-1-LR'

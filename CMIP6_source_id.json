@@ -2906,7 +2906,9 @@
                 "OMIP",
                 "PAMIP",
                 "SIMIP",
-                "ScenarioMIP"
+                "ScenarioMIP",
+                "HighResMIP",
+                "PMIP"
             ],
             "cohort":[
                 "Registered"

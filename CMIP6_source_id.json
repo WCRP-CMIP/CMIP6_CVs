@@ -6,6 +6,7 @@
                 "FAFMIP",
                 "OMIP",
                 "RFMIP",
+                "SIMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -30,8 +31,8 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"CABLE2.3.5",
-                    "native_nominal_resolution":"250 km"
+                    "description":"CABLE2.5",
+                    "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -46,11 +47,11 @@
                     "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE5.1 (same grid as ocean)",
+                    "description":"CICE5.1.2",
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2018",
+            "release_year":"2019",
             "source_id":"ACCESS-CM2"
         },
         "ACCESS-ESM1-5":{
@@ -6567,13 +6568,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 11:36:12 2019 -0700",
-        "CV_collection_version":"6.2.39.2",
+        "CV_collection_modified":"Tue Oct 22 11:44:59 2019 -0700",
+        "CV_collection_version":"6.2.39.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"b4fc6f69db94ac80df60f92f70f5c6cd55690278",
-        "source_id_CV_modified":"Thu Oct 17 13:15:49 2019 -0700",
-        "source_id_CV_note":"Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos",
+        "previous_commit":"915a010f8495d61a795fbbb4ff5064e191b0e5b5",
+        "source_id_CV_modified":"Tue Oct 22 11:36:12 2019 -0700",
+        "source_id_CV_note":"Revise source_id ACCESS-CM2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

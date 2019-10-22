@@ -417,6 +417,7 @@ PJD  2 Oct 2019    - Revise source_id FGOALS-g3 https://github.com/WCRP-CMIP/CMI
 PJD  3 Oct 2019    - Register 3 new FAFMIP experiment_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/797
 PJD 17 Oct 2019    - Revise source_id GFDL-ESM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/806
 PJD 22 Oct 2019    - Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos https://github.com/WCRP-CMIP/CMIP6_CVs/issues/809
+PJD 22 Oct 2019    - Revise source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/810
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -442,7 +443,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos\"'
+commitMessage = '\"Revise source_id ACCESS-CM2\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -853,13 +854,25 @@ del(tmp)
 
 # Fix issues
 key = 'ACCESS-CM2'
-source_id[key]['institution_id'] = [
-'CSIRO-ARCCSS'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'FAFMIP',
+ 'OMIP',
+ 'RFMIP',
+ 'SIMIP',
+ 'ScenarioMIP'
 ]
-key = 'ACCESS-ESM1-5'
-source_id[key]['institution_id'] = [
-'CSIRO-ARCCSS'
-]
+source_id[key]['model_component']['land']['description'] = 'CABLE2.5'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1.2'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2019'
+
+
+#key = 'ACCESS-ESM1-5'
+#source_id[key]['institution_id'] = [
+#'CSIRO-ARCCSS'
+#]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

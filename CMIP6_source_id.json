@@ -85,7 +85,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"CABLE2.2.3",
+                    "description":"CABLE2.4",
                     "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
@@ -97,15 +97,15 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
-                    "description":"WOMBAT1.0 (same grid as ocean)",
+                    "description":"WOMBAT (same grid as ocean)",
                     "native_nominal_resolution":"100 km"
                 },
                 "seaIce":{
-                    "description":"CICE5.1 (same grid as ocean)",
+                    "description":"CICE4.1 (same grid as ocean)",
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2018",
+            "release_year":"2019",
             "source_id":"ACCESS-ESM1-5"
         },
         "ARTS-2-3":{
@@ -6568,13 +6568,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 11:46:48 2019 -0700",
-        "CV_collection_version":"6.2.39.3",
+        "CV_collection_modified":"Tue Oct 22 11:53:54 2019 -0700",
+        "CV_collection_version":"6.2.39.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"ee4631bf33246a2a5c46e08d19f55558826e73d0",
-        "source_id_CV_modified":"Tue Oct 22 11:36:12 2019 -0700",
-        "source_id_CV_note":"Revise source_id ACCESS-CM2",
+        "previous_commit":"8d82113e898adcd865d48335b19193e85c9dbfd4",
+        "source_id_CV_modified":"Tue Oct 22 11:46:48 2019 -0700",
+        "source_id_CV_note":"Revise source_id ACCESS-ESM1-5",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

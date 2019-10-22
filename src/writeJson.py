@@ -418,6 +418,7 @@ PJD  3 Oct 2019    - Register 3 new FAFMIP experiment_ids https://github.com/WCR
 PJD 17 Oct 2019    - Revise source_id GFDL-ESM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/806
 PJD 22 Oct 2019    - Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos https://github.com/WCRP-CMIP/CMIP6_CVs/issues/809
 PJD 22 Oct 2019    - Revise source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/810
+PJD 22 Oct 2019    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/811
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -443,7 +444,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id ACCESS-CM2\"'
+commitMessage = '\"Revise source_id ACCESS-ESM1-5\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -773,7 +774,17 @@ institution_id = {
 
 #%% CMIP6 License
 license = [
-    'CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.'
+    ''.join(['CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons ',
+             'Attribution-[NonCommercial-]ShareAlike 4.0 International License ',
+             '(https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse ',
+             'for terms of use governing CMIP6 output, including citation requirements and proper ',
+             'acknowledgment. Further information about this data, including some limitations, can be ',
+             'found via the further_info_url (recorded as a global attribute in this file)[ and at ',
+             '<some URL maintained by modeling group>]. The data producers and data providers make ',
+             'no warranty, either express or implied, including, but not limited to, warranties of ',
+             'merchantability and fitness for a particular purpose. All liabilities arising from the ',
+             'supply of the information (including any liability arising in negligence) are excluded ',
+             'to the fullest extent permitted by law.'])
 ]
 
 #%% MIP eras
@@ -853,26 +864,15 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-CM2'
-source_id[key]['activity_participation'] = [
- 'CMIP',
- 'FAFMIP',
- 'OMIP',
- 'RFMIP',
- 'SIMIP',
- 'ScenarioMIP'
-]
-source_id[key]['model_component']['land']['description'] = 'CABLE2.5'
+key = 'ACCESS-ESM1-5'
+source_id[key]['model_component']['land']['description'] = 'CABLE2.4'
 source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1.2 (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'WOMBAT (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4.1 (same grid as ocean)'
 source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2019'
 
-
-#key = 'ACCESS-ESM1-5'
-#source_id[key]['institution_id'] = [
-#'CSIRO-ARCCSS'
-#]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

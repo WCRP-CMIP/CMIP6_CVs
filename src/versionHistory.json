@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"0525d862eb91fb28759a440f4c26944a462893d5",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/0525d862eb91fb28759a440f4c26944a462893d5",
-            "commitMessage":"Revise source_id ACCESS-ESM1-5",
-            "timeStamp":"Tue Oct 22 21:34:12 2019 -0700"
+            "MD5":"0ba774adeac123006fbc6aec82c470c59b3bf911",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/0ba774adeac123006fbc6aec82c470c59b3bf911",
+            "commitMessage":"Revise source_id AWI-CM-1-1-MR",
+            "timeStamp":"Wed Oct 30 21:45:26 2019 -0400"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":6,
+            "versionCVCommit":7,
             "versionCVContent":39,
             "versionCVStructure":2,
             "versionMIPEra":6

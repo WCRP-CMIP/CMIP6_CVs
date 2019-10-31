@@ -10,11 +10,11 @@
         "seaIce":"Sea Ice"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct 22 21:34:12 2019 -0700",
-        "CV_collection_version":"6.2.39.6",
+        "CV_collection_modified":"Wed Oct 30 21:45:26 2019 -0400",
+        "CV_collection_version":"6.2.39.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"0525d862eb91fb28759a440f4c26944a462893d5",
+        "previous_commit":"0ba774adeac123006fbc6aec82c470c59b3bf911",
         "realm_CV_modified":"Tues Apr 18 12:03:00 2017 -0700",
         "realm_CV_note":"Issue285 durack1 update realm format (#290)",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

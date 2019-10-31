@@ -421,6 +421,7 @@ PJD 22 Oct 2019    - Revise source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CM
 PJD 22 Oct 2019    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/811
 PJD 22 Oct 2019    - Revise source_id FGOALS-f3-L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/812
 PJD 22 Oct 2019    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/817
+PJD 30 Oct 2019    - Revise source_id AWI-CM-1-1-MR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/820
                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -446,7 +447,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id ACCESS-ESM1-5\"'
+commitMessage = '\"Revise source_id AWI-CM-1-1-MR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -866,9 +867,15 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-ESM1-5'
-source_id[key]['institution_id'] = [
- 'CSIRO'
+key = 'AWI-CM-1-1-MR'
+source_id[key]['activity_participation'] = [
+ 'CMIP',
+ 'CORDEX',
+ 'OMIP',
+ 'PAMIP',
+ 'SIMIP',
+ 'ScenarioMIP',
+ 'VIACSAB'
 ]
 
 #============================================

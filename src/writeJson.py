@@ -423,7 +423,8 @@ PJD 22 Oct 2019    - Revise source_id FGOALS-f3-L https://github.com/WCRP-CMIP/C
 PJD 22 Oct 2019    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/817
 PJD 30 Oct 2019    - Revise source_id AWI-CM-1-1-MR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/820
 PJD  5 Nov 2019    - Revise source_id HadGEM3-GC31-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/822
-                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+PJD  7 Nov 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/824
+                  - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
@@ -448,7 +449,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id HadGEM3-GC31-LL\"'
+commitMessage = '\"Revise source_id UKESM1-0-LL\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -868,10 +869,19 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'HadGEM3-GC31-LL'
-source_id[key]['institution_id'] = [
- 'MOHC',
- 'NERC'
+key = 'UKESM1-0-LL'
+source_id[key]['activity_participation'] = [
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'GeoMIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
 ]
 
 #============================================

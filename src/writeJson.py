@@ -424,6 +424,7 @@ PJD 22 Oct 2019    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP
 PJD 30 Oct 2019    - Revise source_id AWI-CM-1-1-MR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/820
 PJD  5 Nov 2019    - Revise source_id HadGEM3-GC31-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/822
 PJD  7 Nov 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/824
+PJD 14 Nov 2019    - Register institution_id UCI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/826
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -449,7 +450,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id UKESM1-0-LL\"'
+commitMessage = '\"Register institution_id UCI\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -772,6 +773,7 @@ institution_id = {
     'SNU': 'Seoul National University, Seoul 08826, Republic of Korea',
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
+    'UCI': 'Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA',
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
     'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
     'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
@@ -869,20 +871,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-0-LL'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'C4MIP',
- 'CDRMIP',
- 'CMIP',
- 'GeoMIP',
- 'LUMIP',
- 'OMIP',
- 'PMIP',
- 'RFMIP',
- 'ScenarioMIP',
- 'VolMIP'
-]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

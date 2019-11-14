@@ -45,18 +45,19 @@
         "SNU":"Seoul National University, Seoul 08826, Republic of Korea",
         "THU":"Department of Earth System Science, Tsinghua University, Beijing 100084, China",
         "UA":"Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA",
+        "UCI":"Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA",
         "UHH":"Universitat Hamburg, Hamburg 20148, Germany",
         "UTAS":"Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia",
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov  7 08:27:11 2019 -0800",
-        "CV_collection_version":"6.2.39.9",
+        "CV_collection_modified":"Thu Nov 14 11:18:04 2019 -0800",
+        "CV_collection_version":"6.2.39.10",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Tue Oct 22 11:36:12 2019 -0700",
-        "institution_id_CV_note":"Revise institution_id CSIRO-ARCCSS-BoM; Update ACCESS* regos",
-        "previous_commit":"ccb94288ad361104b4a110f7abb4fae08934e992",
+        "institution_id_CV_note":"Register institution_id UCI",
+        "previous_commit":"418e61b33377dc364569737b62debc248d352031",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

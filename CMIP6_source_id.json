@@ -857,6 +857,55 @@
             "release_year":"2011",
             "source_id":"CESM1-1-CAM5-CMIP5"
         },
+        "CESM1-WACCM-SC":{
+            "activity_participation":[
+                "PAMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "UCI"
+            ],
+            "label":"CESM1-WACCM-SC",
+            "label_extended":"Community Earth System Model 1, with the Whole Atmosphere Community Climate Model and Specified Chemistry",
+            "model_component":{
+                "aerosol":{
+                    "description":"MOZART-specified (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"WACCM4 (1.9x2.5 finite volume grid; 144 x 96 longitude/latitude; 66 levels; top level 5.9e-06 mb)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"MOZART-specified (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"CLM4.0",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"POP2 (320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"BEC (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE4 (same as grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2011",
+            "source_id":"CESM1-WACCM-SC"
+        },
         "CESM2":{
             "activity_participation":[
                 "AerChemMIP",
@@ -6573,13 +6622,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 14 11:18:04 2019 -0800",
-        "CV_collection_version":"6.2.39.10",
+        "CV_collection_modified":"Thu Nov 14 12:07:44 2019 -0800",
+        "CV_collection_version":"6.2.39.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"418e61b33377dc364569737b62debc248d352031",
+        "previous_commit":"f7ee4f169f99639c95991df6d562a2ba94d9eda0",
         "source_id_CV_modified":"Thu Nov  7 08:27:11 2019 -0800",
-        "source_id_CV_note":"Revise source_id UKESM1-0-LL",
+        "source_id_CV_note":"Register source_id CESM1-WACCM-SC",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -425,6 +425,7 @@ PJD 30 Oct 2019    - Revise source_id AWI-CM-1-1-MR https://github.com/WCRP-CMIP
 PJD  5 Nov 2019    - Revise source_id HadGEM3-GC31-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/822
 PJD  7 Nov 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/824
 PJD 14 Nov 2019    - Register institution_id UCI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/826
+PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/827
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -450,7 +451,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register institution_id UCI\"'
+commitMessage = '\"Register source_id CESM1-WACCM-SC\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -871,6 +872,46 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'CESM1-WACCM-SC'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'PAMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'UCI'
+]
+source_id[key]['label'] = 'CESM1-WACCM-SC'
+source_id[key]['label_extended'] = 'Community Earth System Model 1, with the Whole Atmosphere Community Climate Model and Specified Chemistry'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'MOZART-specified (same grid as atmos)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'WACCM4 (1.9x2.5 finite volume grid; 144 x 96 longitude/latitude; 66 levels; top level 5.9e-06 mb)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'MOZART-specified (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'CLM4.0'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'POP2 (320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'BEC (same grid as ocean)'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same as grid as ocean)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2011'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1061,6 +1102,8 @@ for key in source_id.keys():
             print(key,'OMIP no CMIP required - continue')
         elif 'FAFMIP' in val: # Case FAFMIP only - GFDL-ESM2M
             print(key,'OMIP no CMIP required - continue')
+        elif 'PAMIP' in val: # Case PAMIP only - CESM1-WACCM-sc
+            print(key,'PAMIP no CMIP required - continue')
         else:
             print('Invalid activity_participation for entry:',key,'no CMIP listed - aborting')
             sys.exit()

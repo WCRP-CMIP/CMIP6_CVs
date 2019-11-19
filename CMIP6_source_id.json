@@ -1,5 +1,54 @@
 {
     "source_id":{
+        "4AOP-v1-5":{
+            "activity_participation":[
+                "RFMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"4AOP-v1-5",
+            "label_extended":"Line-By-Line Radiative Transfer Model v1.5, Laboratoire Meteorologie Dynamique, GEISA spectroscopic database",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"4AOP-v1-5"
+        },
         "ACCESS-CM2":{
             "activity_participation":[
                 "CMIP",
@@ -6622,13 +6671,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 14 12:07:44 2019 -0800",
-        "CV_collection_version":"6.2.39.11",
+        "CV_collection_modified":"Tue Nov 19 11:06:20 2019 -0800",
+        "CV_collection_version":"6.2.39.12",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f7ee4f169f99639c95991df6d562a2ba94d9eda0",
-        "source_id_CV_modified":"Thu Nov  7 08:27:11 2019 -0800",
-        "source_id_CV_note":"Register source_id CESM1-WACCM-SC",
+        "previous_commit":"f8e2b32f4d60dfa92c7ad0188fa39b6e1ec87ca8",
+        "source_id_CV_modified":"Thu Nov 14 12:07:44 2019 -0800",
+        "source_id_CV_note":"Register source_id 4AOP",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -878,7 +878,7 @@ key = 'INM-CM4-8'
 source_id[key]['activity_participation'] = [
 'CMIP',
 'PMIP',
-'RFMIP'
+'ScenarioMIP'
 ]
 
 #============================================

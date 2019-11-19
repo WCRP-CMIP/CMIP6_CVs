@@ -4346,7 +4346,7 @@
             "activity_participation":[
                 "CMIP",
                 "PMIP",
-                "RFMIP"
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -6672,11 +6672,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Nov 19 11:14:04 2019 -0800",
+        "CV_collection_modified":"Tue Nov 19 11:15:53 2019 -0800",
         "CV_collection_version":"6.2.39.13",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"044668607828e266a517714d11e60087d47420ad",
+        "previous_commit":"e52f917b47df68ec5ac6d0bd66550b1af195da7b",
         "source_id_CV_modified":"Tue Nov 19 11:06:20 2019 -0800",
         "source_id_CV_note":"Revise source_id INM-CM4-8",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

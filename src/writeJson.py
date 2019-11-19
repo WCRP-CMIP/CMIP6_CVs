@@ -428,6 +428,7 @@ PJD 14 Nov 2019    - Register institution_id UCI https://github.com/WCRP-CMIP/CM
 PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/827
 PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/831
 PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
+PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -453,7 +454,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id INM-CM4-8\"'
+commitMessage = '\"Revise source_id INM-CM5-0\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -874,10 +875,9 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'INM-CM4-8'
+key = 'INM-CM5-0'
 source_id[key]['activity_participation'] = [
 'CMIP',
-'PMIP',
 'ScenarioMIP'
 ]
 

@@ -429,6 +429,7 @@ PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-C
 PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/831
 PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
 PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
+PJD 19 Nov 2019    - Register CMIP5-era experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -454,7 +455,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id INM-CM5-0\"'
+commitMessage = '\"Register CMIP5-era experiment_id entries\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -595,6 +596,108 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+key = 'historical-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['CMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = 'CMIP5 historical experiment, using CMIP5-era forcing that concluded in 2005'
+experiment_id[key]['end_year'] = '2005'
+experiment_id[key]['experiment'] = 'all-forcing simulation of the recent past (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '156'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'piControl-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['CMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = 'DECK: control (CMIP5-era forcing)'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'pre-industrial control (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '500'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'rcp26-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Future scenario with low radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP2.6 global forcing pathway. ',
+                                             'Concentration-driven. (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'rcp45-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Future scenario with low-medium radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP4.5 global forcing pathway. ',
+                                             'Concentration-driven. (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'rcp60-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Future scenario with medium radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP6.0 global forcing pathway. ',
+                                             'Concentration-driven. (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'rcp85-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Future scenario with high radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP8.5 global forcing pathway. ',
+                                             'Concentration-driven. (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
 
 #==============================================================================
 # Example new experiment_id entry

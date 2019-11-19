@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"81f8f7eabd9b8d9b643277edeb2f78dd7cae7b03",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/81f8f7eabd9b8d9b643277edeb2f78dd7cae7b03",
+            "MD5":"da0cef3d130fb451ad192897e59548fa716ee6d2",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/da0cef3d130fb451ad192897e59548fa716ee6d2",
             "commitMessage":"Register CMIP5-era experiment_id entries",
-            "timeStamp":"Tue Nov 19 11:51:14 2019 -0800"
+            "timeStamp":"Tue Nov 19 15:12:11 2019 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",

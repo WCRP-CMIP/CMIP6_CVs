@@ -427,6 +427,7 @@ PJD  7 Nov 2019    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/C
 PJD 14 Nov 2019    - Register institution_id UCI https://github.com/WCRP-CMIP/CMIP6_CVs/issues/826
 PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/827
 PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/831
+PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -452,7 +453,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id 4AOP\"'
+commitMessage = '\"Revise source_id INM-CM4-8\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -873,46 +874,12 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = '4AOP-v1-5'
-source_id[key] = {}
+key = 'INM-CM4-8'
 source_id[key]['activity_participation'] = [
+'CMIP',
+'PMIP',
 'RFMIP'
 ]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'IPSL'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'Line-By-Line Radiative Transfer Model v1.5, Laboratoire Meteorologie Dynamique, GEISA spectroscopic database'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2019'
-source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

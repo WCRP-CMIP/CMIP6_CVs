@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"f8e2b32f4d60dfa92c7ad0188fa39b6e1ec87ca8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f8e2b32f4d60dfa92c7ad0188fa39b6e1ec87ca8",
-            "commitMessage":"Register source_id 4AOP",
-            "timeStamp":"Tue Nov 19 11:06:20 2019 -0800"
+            "MD5":"e52f917b47df68ec5ac6d0bd66550b1af195da7b",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e52f917b47df68ec5ac6d0bd66550b1af195da7b",
+            "commitMessage":"Revise source_id INM-CM4-8",
+            "timeStamp":"Tue Nov 19 11:15:53 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":12,
+            "versionCVCommit":13,
             "versionCVContent":39,
             "versionCVStructure":2,
             "versionMIPEra":6

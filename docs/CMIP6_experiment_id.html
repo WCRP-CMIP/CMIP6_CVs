@@ -1028,6 +1028,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>PA3.2: investigate response to sea ice in Barents and Kara Seas</td>
 </tr>
+<tr><td>hist-aer-cmip5</td>
+<td>DAMIP</td>
+<td>historical anthropogenic aerosols-only run (CMIP5-era forcing)</td>
+<td>3</td>
+<td>none</td>
+<td>piControl-cmip5</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2012</td>
+<td>163</td>
+<td>CMIP</td>
+<td>Historical anthropogenic-aerosols-only run (CMIP5-era forcing)</td>
+</tr>
 <tr><td>volc-long-eq</td>
 <td>VolMIP</td>
 <td>idealized equatorial volcanic eruption emitting 56.2 Tg SO2</td>
@@ -1493,7 +1507,7 @@ $(document).ready( function () {
 <tr><td>rcp85-cmip5</td>
 <td>ScenarioMIP</td>
 <td>future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era forcing)</td>
-<td>2</td>
+<td>3</td>
 <td>none</td>
 <td>historical-cmip5</td>
 <td>AOGCM</td>
@@ -1941,7 +1955,7 @@ $(document).ready( function () {
 <tr><td>rcp45-cmip5</td>
 <td>ScenarioMIP</td>
 <td>future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era forcing)</td>
-<td>2</td>
+<td>3</td>
 <td>none</td>
 <td>historical-cmip5</td>
 <td>AOGCM</td>
@@ -2123,7 +2137,7 @@ $(document).ready( function () {
 <tr><td>rcp26-cmip5</td>
 <td>ScenarioMIP</td>
 <td>future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era forcing)</td>
-<td>2</td>
+<td>3</td>
 <td>none</td>
 <td>historical-cmip5</td>
 <td>AOGCM</td>
@@ -2627,7 +2641,7 @@ $(document).ready( function () {
 <tr><td>rcp60-cmip5</td>
 <td>ScenarioMIP</td>
 <td>future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era forcing)</td>
-<td>2</td>
+<td>3</td>
 <td>none</td>
 <td>historical-cmip5</td>
 <td>AOGCM</td>
@@ -2722,19 +2736,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>PA1.7: investigate response to Antarctic sea ice and its role in polar amplification</td>
 </tr>
-<tr><td>land-crop-noIrrigFert</td>
-<td>LUMIP</td>
-<td>historical land-only with managed crops but with irrigation and fertilization held constant</td>
-<td>2</td>
+<tr><td>hist-nat-cmip5</td>
+<td>DAMIP</td>
+<td>historical natural-only run (CMIP5-era forcing)</td>
+<td>3</td>
 <td>none</td>
-<td>no parent</td>
-<td>LAND BGC</td>
-<td></td>
-<td>1850 or 1700</td>
-<td>2014</td>
-<td>165</td>
-<td>no parent</td>
-<td>Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant</td>
+<td>piControl-cmip5</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2012</td>
+<td>163</td>
+<td>CMIP</td>
+<td>Historical natural-only run (CMIP5-era forcing)</td>
 </tr>
 <tr><td>piClim-lu</td>
 <td>RFMIP</td>
@@ -2890,19 +2904,19 @@ $(document).ready( function () {
 <td>no parent</td>
 <td>Same as amip, but a patterned SST anomaly is applied on top of the monthly-varying amip SSTs. This anomaly is a monthly climatology, taken from each model's own abrupt-4xCO2 run minus piControl (using the mean of years 111-140 of abrupt-4xCO2, and the parallel 30-year section of piControl). CO2 is quadrupled, and the increase in CO2 is seen by both the radiation scheme and vegetation</td>
 </tr>
-<tr><td>pa-futAntSIC-ext</td>
-<td>PAMIP</td>
-<td>Partially-coupled extended simulation with future Antarctic SIC</td>
-<td>3</td>
+<tr><td>land-crop-noIrrigFert</td>
+<td>LUMIP</td>
+<td>historical land-only with managed crops but with irrigation and fertilization held constant</td>
+<td>2</td>
 <td>none</td>
-<td>historical</td>
-<td>AOGCM</td>
-<td>AER CHEM BGC</td>
-<td>2000</td>
-<td>2099</td>
-<td>100</td>
-<td>CMIP</td>
-<td>PA6.3: investigate decadal and longer timescale response to Antarctic sea ice</td>
+<td>no parent</td>
+<td>LAND BGC</td>
+<td></td>
+<td>1850 or 1700</td>
+<td>2014</td>
+<td>165</td>
+<td>no parent</td>
+<td>Same as land-hist except with plants in cropland area utilizing at least some form of crop management (e.g., planting and harvesting) rather than simulating cropland vegetation as a natural grassland. Irrigated area and fertilizer area/use should be held constant</td>
 </tr>
 <tr><td>pa-futArcSIC</td>
 <td>PAMIP</td>
@@ -3225,6 +3239,20 @@ $(document).ready( function () {
 <td>30</td>
 <td>CMIP</td>
 <td>Perturbation from 1850 control using 2014 OC emissions</td>
+</tr>
+<tr><td>hist-GHG-cmip5</td>
+<td>DAMIP</td>
+<td>historical well-mixed GHG-only run (CMIP5-era forcing)</td>
+<td>3</td>
+<td>none</td>
+<td>piControl-cmip5</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>1850</td>
+<td>2012</td>
+<td>163</td>
+<td>CMIP</td>
+<td>Historical well-mixed GHG-only run. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes. This will ensure that ozone is fixed in all these simulations, and simulated responses in models with and without coupled chemistry are comparable. (CMIP5-era forcing)</td>
 </tr>
 <tr><td>pdSST-futOkhotskSIC</td>
 <td>PAMIP</td>
@@ -3827,6 +3855,20 @@ $(document).ready( function () {
 <td>3</td>
 <td>CMIP</td>
 <td>As volc-pinatubo-full, but with prescribed perturbation to the shortwave flux to mimic the attenuation of solar radiation by volcanic aerosols</td>
+</tr>
+<tr><td>pa-futAntSIC-ext</td>
+<td>PAMIP</td>
+<td>Partially-coupled extended simulation with future Antarctic SIC</td>
+<td>3</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2000</td>
+<td>2099</td>
+<td>100</td>
+<td>CMIP</td>
+<td>PA6.3: investigate decadal and longer timescale response to Antarctic sea ice</td>
 </tr>
 <tr><td>a4SSTice</td>
 <td>CFMIP</td>

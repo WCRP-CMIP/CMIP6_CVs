@@ -430,6 +430,7 @@ PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_
 PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
 PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
 PJD 19 Nov 2019    - Register CMIP5-era experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
+PJD 21 Nov 2019    - Added missing DAMIP CMIP5-era experiment id values; Corrected ScenarioMIP tier levels https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -641,6 +642,60 @@ experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = ''
 experiment_id[key]['sub_experiment_id'] = ['none']
 experiment_id[key]['tier'] = '2'
+
+key = 'hist-GHG-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Historical well-mixed GHG-only run. Models with ',
+                                             'interactive chemistry schemes should either turn ',
+                                             'off the chemistry or use a preindustrial climatology ',
+                                             'of stratospheric and tropospheric ozone in their ',
+                                             'radiation schemes. This will ensure that ozone is ',
+                                             'fixed in all these simulations, and simulated ',
+                                             'responses in models with and without coupled ',
+                                             'chemistry are comparable. (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['experiment'] = 'historical well-mixed GHG-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'hist-aer-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Historical anthropogenic-aerosols-only run (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['experiment'] = 'historical anthropogenic aerosols-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'hist-nat-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5-era forcing)'])
+experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['experiment'] = 'historical natural-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+
 key = 'rcp26-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
@@ -658,7 +713,7 @@ experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = '2006'
 experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+experiment_id[key]['tier'] = '3'
 key = 'rcp45-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
@@ -676,7 +731,7 @@ experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = '2006'
 experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+experiment_id[key]['tier'] = '3'
 key = 'rcp60-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
@@ -694,7 +749,7 @@ experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = '2006'
 experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+experiment_id[key]['tier'] = '3'
 key = 'rcp85-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
@@ -712,7 +767,7 @@ experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = '2006'
 experiment_id[key]['sub_experiment_id'] = ['none']
-experiment_id[key]['tier'] = '2'
+experiment_id[key]['tier'] = '3'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -993,11 +1048,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'INM-CM5-0'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'ScenarioMIP'
-]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

@@ -3625,7 +3625,7 @@
             "additional_allowed_model_components":[
                 "AER"
             ],
-            "description":"Coupled integrationswith historic external forcings (as in highresSST-present)",
+            "description":"Coupled integrations with historic external forcings (as in highresSST-present)",
             "end_year":"2014",
             "experiment":"coupled historical 1950-2014",
             "experiment_id":"hist-1950",
@@ -3770,7 +3770,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Historical anthropogenic-Aerosols-only run",
+            "description":"historical anthropogenic aerosols-only run",
             "end_year":"2020",
             "experiment":"historical anthropogenic aerosols-only run",
             "experiment_id":"hist-aer",
@@ -4202,9 +4202,9 @@
                 "AER",
                 "BGC"
             ],
-            "description":"Historical stratospheric-ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the CMIP6 historical simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in the CMIP6 historical simulations should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
+            "description":"Historical stratospheric ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the CMIP6 historical simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in the CMIP6 historical simulations should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2020",
-            "experiment":"historical stratospheric-ozone-only run",
+            "experiment":"historical stratospheric ozone-only run",
             "experiment_id":"hist-stratO3",
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
@@ -4221,6 +4221,34 @@
                 "none"
             ],
             "tier":"2"
+        },
+        "hist-totalO3":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "BGC"
+            ],
+            "description":"Historical total ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D ozone concentrations from the CMIP6 historical simulations should be prescribed through the depth of the atmosphere. In models without coupled chemistry the same ozone prescribed in the CMIP6 historical simulations should be prescribed",
+            "end_year":"2020",
+            "experiment":"historical total ozone-only run",
+            "experiment_id":"hist-totalO3",
+            "min_number_yrs_per_sim":"171",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "piControl"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1850",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
         },
         "hist-volc":{
             "activity_id":[
@@ -8211,9 +8239,9 @@
                 "AER",
                 "BGC"
             ],
-            "description":"Extension of stratospheric-ozone-only run under SSP2-4.5. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
+            "description":"Extension of stratospheric ozone-only run under SSP2-4.5 (ssp245). In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2100",
-            "experiment":"stratospheric-ozone-only SSP2-4.5 run",
+            "experiment":"stratospheric ozone-only SSP2-4.5 (ssp245) run",
             "experiment_id":"ssp245-stratO3",
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
@@ -9077,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Dec  4 12:07:02 2019 -0800",
-        "CV_collection_version":"6.2.40.0",
+        "CV_collection_modified":"Wed Dec  4 13:21:58 2019 -0800",
+        "CV_collection_version":"6.2.43.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Thu Oct  3 10:54:58 2019 -0700",
+        "experiment_id_CV_modified":"Wed Dec  4 12:51:01 2019 -0800",
         "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"8ac88023cc51fbcbeb1d944dd6c9f8655f17f976",
+        "previous_commit":"be0bdbaa85f4230fb017ad9e377d4d31ba598545",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -429,8 +429,10 @@ PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-C
 PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/831
 PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
 PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
-PJD 19 Nov 2019    - Register CMIP5-era experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 21 Nov 2019    - Added missing DAMIP CMIP5-era experiment id values; Corrected ScenarioMIP tier levels https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
+PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/838
+PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
+PJD  4 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -768,7 +770,6 @@ experiment_id[key]['required_model_components'] = ['AOGCM']
 experiment_id[key]['start_year'] = '2006'
 experiment_id[key]['sub_experiment_id'] = ['none']
 experiment_id[key]['tier'] = '3'
-
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

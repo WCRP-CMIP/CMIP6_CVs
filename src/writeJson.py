@@ -637,6 +637,8 @@ experiment_id[key]['description'] = ''.join(['Extension of stratospheric ozone-o
                                              'prescribed. Stratospheric ozone concentrations ',
                                              'will be provided by CCMI'])
 experiment_id[key]['experiment'] = 'stratospheric ozone-only SSP2-4.5 (ssp245) run'
+key = 'hist-1950'
+experiment_id[key]['description'] = ''.join(['Coupled integrations with historic external forcings (as in highresSST-present)'])
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'

@@ -4135,6 +4135,34 @@
             ],
             "tier":"2"
         },
+        "hist-totalO3":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "BGC"
+            ],
+            "description":"Historical total ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D ozone concentrations from the CMIP6 historical simulations should be prescribed through the depth of the atmosphere. In models without coupled chemistry the same ozone prescribed in the CMIP6 historical simulations should be prescribed",
+            "end_year":"2020",
+            "experiment":"historical total ozone-only run",
+            "experiment_id":"hist-totalO3",
+            "min_number_yrs_per_sim":"171",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "piControl"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"1850",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "hist-volc":{
             "activity_id":[
                 "DAMIP"
@@ -8787,13 +8815,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Nov 19 11:20:50 2019 -0800",
-        "CV_collection_version":"6.2.39.14",
+        "CV_collection_modified":"Wed Dec  4 12:20:23 2019 -0800",
+        "CV_collection_version":"6.2.40.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Oct  3 10:54:58 2019 -0700",
-        "experiment_id_CV_note":"Register 3 new FAFMIP experiment_ids",
+        "experiment_id_CV_note":"Register DAMIP experiment_id hist-totalO3",
         "institution_id":"PCMDI",
-        "previous_commit":"27155103722fd532bb99465f080f060d1a3e40a2",
+        "previous_commit":"81f8f7eabd9b8d9b643277edeb2f78dd7cae7b03",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

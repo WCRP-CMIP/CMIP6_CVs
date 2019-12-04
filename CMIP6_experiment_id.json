@@ -3741,7 +3741,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"Historical anthropogenic-Aerosols-only run",
+            "description":"historical anthropogenic aerosols-only run",
             "end_year":"2020",
             "experiment":"historical anthropogenic aerosols-only run",
             "experiment_id":"hist-aer",
@@ -4115,9 +4115,9 @@
                 "AER",
                 "BGC"
             ],
-            "description":"Historical stratospheric-ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the CMIP6 historical simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in the CMIP6 historical simulations should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
+            "description":"Historical stratospheric ozone-only. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the CMIP6 historical simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in the CMIP6 historical simulations should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2020",
-            "experiment":"historical stratospheric-ozone-only run",
+            "experiment":"historical stratospheric ozone-only run",
             "experiment_id":"hist-stratO3",
             "min_number_yrs_per_sim":"171",
             "parent_activity_id":[
@@ -7949,9 +7949,9 @@
                 "AER",
                 "BGC"
             ],
-            "description":"Extension of stratospheric-ozone-only run under SSP2-4.5. In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
+            "description":"Extension of stratospheric ozone-only run under SSP2-4.5 (ssp245). In models with coupled chemistry, the chemistry scheme should be turned off, and the simulated ensemble mean monthly mean 3D stratospheric ozone concentrations from the SSP2-4.5 simulations should be prescribed. Tropospheric ozone should be fixed at 3D long-term monthly mean piControl values, with a value of 100 ppbv ozone concentration in this piControl climatology used to separate the troposphere from the stratosphere. In models without coupled chemistry the same stratospheric ozone prescribed in SSP2-4.5 should be prescribed. Stratospheric ozone concentrations will be provided by CCMI",
             "end_year":"2100",
-            "experiment":"stratospheric-ozone-only SSP2-4.5 run",
+            "experiment":"stratospheric ozone-only SSP2-4.5 (ssp245) run",
             "experiment_id":"ssp245-stratO3",
             "min_number_yrs_per_sim":"80",
             "parent_activity_id":[
@@ -8815,13 +8815,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Dec  4 12:20:23 2019 -0800",
-        "CV_collection_version":"6.2.40.0",
+        "CV_collection_modified":"Wed Dec  4 12:44:57 2019 -0800",
+        "CV_collection_version":"6.2.41.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Thu Oct  3 10:54:58 2019 -0700",
-        "experiment_id_CV_note":"Register DAMIP experiment_id hist-totalO3",
+        "experiment_id_CV_modified":"Wed Dec  4 12:20:23 2019 -0800",
+        "experiment_id_CV_note":"Cleanup experiment_id grammar inconsistencies",
         "institution_id":"PCMDI",
-        "previous_commit":"81f8f7eabd9b8d9b643277edeb2f78dd7cae7b03",
+        "previous_commit":"d6291808ab9b490e34919d36cfe0687dbcbeb492",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

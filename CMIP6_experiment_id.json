@@ -3742,7 +3742,7 @@
                 "BGC"
             ],
             "description":"Historical well-mixed GHG-only run. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes. This will ensure that ozone is fixed in all these simulations, and simulated responses in models with and without coupled chemistry are comparable. (CMIP5-era forcing)",
-            "end_year":"2012",
+            "end_year":"2020",
             "experiment":"historical well-mixed GHG-only run (CMIP5-era forcing)",
             "experiment_id":"hist-GHG-cmip5",
             "min_number_yrs_per_sim":"163",
@@ -3800,7 +3800,7 @@
                 "BGC"
             ],
             "description":"Historical anthropogenic-aerosols-only run (CMIP5-era forcing)",
-            "end_year":"2012",
+            "end_year":"2020",
             "experiment":"historical anthropogenic aerosols-only run (CMIP5-era forcing)",
             "experiment_id":"hist-aer-cmip5",
             "min_number_yrs_per_sim":"163",
@@ -3945,7 +3945,7 @@
                 "BGC"
             ],
             "description":"Historical natural-only run (CMIP5-era forcing)",
-            "end_year":"2012",
+            "end_year":"2020",
             "experiment":"historical natural-only run (CMIP5-era forcing)",
             "experiment_id":"hist-nat-cmip5",
             "min_number_yrs_per_sim":"163",
@@ -9077,13 +9077,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 21 15:47:54 2019 -0800",
+        "CV_collection_modified":"Wed Dec  4 12:07:02 2019 -0800",
         "CV_collection_version":"6.2.40.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Thu Oct  3 10:54:58 2019 -0700",
         "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"c2817a63429532370af39522a2b81c1a48fa2e55",
+        "previous_commit":"8ac88023cc51fbcbeb1d944dd6c9f8655f17f976",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

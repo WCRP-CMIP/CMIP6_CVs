@@ -655,7 +655,7 @@ experiment_id[key]['description'] = ''.join(['Historical well-mixed GHG-only run
                                              'fixed in all these simulations, and simulated ',
                                              'responses in models with and without coupled ',
                                              'chemistry are comparable. (CMIP5-era forcing)'])
-experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical well-mixed GHG-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '163'
@@ -670,7 +670,7 @@ experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['Historical anthropogenic-aerosols-only run (CMIP5-era forcing)'])
-experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical anthropogenic aerosols-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '163'
@@ -685,7 +685,7 @@ experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5-era forcing)'])
-experiment_id[key]['end_year'] = '2012'
+experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical natural-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '163'

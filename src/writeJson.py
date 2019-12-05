@@ -431,6 +431,7 @@ PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMI
 PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
 PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/838
 PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
+PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP/CMIP6_CVs/issues/843
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -456,7 +457,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Cleanup experiment_id grammar inconsistencies\"'
+commitMessage = '\"Revise source_id EC-Earth3-Veg\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -597,48 +598,7 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'hist-aer'
-experiment_id[key]['description'] = 'historical anthropogenic aerosols-only run'
-key = 'hist-stratO3'
-experiment_id[key]['description'] = ''.join(['Historical stratospheric ozone-only. ',
-                                             'In models with coupled chemistry, the ',
-                                             'chemistry scheme should be turned off, ',
-                                             'and the simulated ensemble mean monthly ',
-                                             'mean 3D stratospheric ozone ',
-                                             'concentrations from the CMIP6 historical ',
-                                             'simulations should be prescribed. ',
-                                             'Tropospheric ozone should be fixed at ',
-                                             '3D long-term monthly mean piControl ',
-                                             'values, with a value of 100 ppbv ozone ',
-                                             'concentration in this piControl ',
-                                             'climatology used to separate the ',
-                                             'troposphere from the stratosphere. ',
-                                             'In models without coupled chemistry the ',
-                                             'same stratospheric ozone prescribed in ',
-                                             'the CMIP6 historical simulations should ',
-                                             'be prescribed. Stratospheric ozone ',
-                                             'concentrations will be provided by CCMI'])
-experiment_id[key]['experiment'] = 'historical stratospheric ozone-only run'
-key = 'ssp245-stratO3'
-experiment_id[key]['description'] = ''.join(['Extension of stratospheric ozone-only ',
-                                             'run under SSP2-4.5 (ssp245). In models with ',
-                                             'coupled chemistry, the chemistry scheme should ',
-                                             'be turned off, and the simulated ensemble mean ',
-                                             'monthly mean 3D stratospheric ozone ',
-                                             'concentrations from the SSP2-4.5 simulations ',
-                                             'should be prescribed. Tropospheric ozone ',
-                                             'should be fixed at 3D long-term monthly mean ',
-                                             'piControl values, with a value of 100 ppbv ',
-                                             'ozone concentration in this piControl ',
-                                             'climatology used to separate the troposphere ',
-                                             'from the stratosphere. In models without ',
-                                             'coupled chemistry the same stratospheric ',
-                                             'ozone prescribed in SSP2-4.5 should be ',
-                                             'prescribed. Stratospheric ozone concentrations ',
-                                             'will be provided by CCMI'])
-experiment_id[key]['experiment'] = 'stratospheric ozone-only SSP2-4.5 (ssp245) run'
-key = 'hist-1950'
-experiment_id[key]['description'] = ''.join(['Coupled integrations with historic external forcings (as in highresSST-present)'])
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -918,7 +878,15 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key = 'EC-Earth3-Veg'
+source_id[key]['activity_participation'] = [
+ 'CDRMIP',
+ 'CMIP',
+ 'CORDEX',
+ 'LS3MIP',
+ 'LUMIP',
+ 'ScenarioMIP'
+]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

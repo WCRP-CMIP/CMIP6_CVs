@@ -2453,6 +2453,7 @@
             "activity_participation":[
                 "CDRMIP",
                 "CMIP",
+                "CORDEX",
                 "LS3MIP",
                 "LUMIP",
                 "ScenarioMIP"
@@ -6673,13 +6674,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Dec  4 12:51:01 2019 -0800",
-        "CV_collection_version":"6.2.42.0",
+        "CV_collection_modified":"Wed Dec  4 16:09:47 2019 -0800",
+        "CV_collection_version":"6.2.42.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a25deb11b9984a40397d83c438da59d5fc6ce22f",
+        "previous_commit":"d2cfd60adc3a85e4a0057c912a6425bf5b736551",
         "source_id_CV_modified":"Tue Nov 19 11:20:50 2019 -0800",
-        "source_id_CV_note":"Revise source_id INM-CM5-0",
+        "source_id_CV_note":"Revise source_id EC-Earth3-Veg",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

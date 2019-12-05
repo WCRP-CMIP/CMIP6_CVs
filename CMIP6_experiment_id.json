@@ -9105,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Dec  4 13:21:58 2019 -0800",
+        "CV_collection_modified":"Wed Dec  4 16:15:43 2019 -0800",
         "CV_collection_version":"6.2.43.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Dec  4 12:51:01 2019 -0800",
         "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"be0bdbaa85f4230fb017ad9e377d4d31ba598545",
+        "previous_commit":"2e939aa47a27100b647c267488f61a612f24fb0d",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

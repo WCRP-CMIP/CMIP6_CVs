@@ -1320,7 +1320,44 @@ for key in experiment_id_keys:
             print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
             sys.exit()
 
-del(experiment_id_keys,key,act,val,val1,val2,vals)
+
+
+
+
+    # Validate start/end years
+    excludeList = ['dcppA-historical-niff']
+    if key in excludeList:
+        print('Skipping start/end_year test for:',key)
+        continue
+    print('Start/end_year test for',key)
+    valStart = experiment_id[key]['start_year']
+    valEnd = experiment_id[key]['end_year']
+    minNumYrsSim = experiment_id[key]['min_number_yrs_per_sim']
+    if valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
+        valStart = int(valStart)
+    if valEnd:
+        valEnd = int(valEnd)
+    if minNumYrsSim:
+        minNumYrsSim = int(minNumYrsSim)
+    if valStart and valEnd and minNumYrsSim:
+        pass
+    else:
+        print('Test values failed')
+        sys.exit()
+    print('valStart:',valStart,type(valStart))
+    print('valEnd:',valEnd,type(valEnd))
+    test = (int(valEnd)+1)-int(valStart)
+    if int(minNumYrsSim) != test:
+        print('Invalid start/end_year pair for entry:',key,'- aborting')
+        print('start_year:',valStart)
+        print('end_year:',valEnd)
+        print('min_number_yrs_per_sim:',test,minNumYrsSim)
+        sys.exit()
+
+
+
+
+del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
 #sys.exit() ; # Turn back on to catch errors prior to running commit
 
 #%% Load remote repo versions for comparison - generate version identifier

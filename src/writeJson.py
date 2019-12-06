@@ -433,7 +433,7 @@ PJD 21 Nov 2019    - Added missing DAMIP CMIP5-era experiment id values; Correct
 PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/838
 PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
 PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP/CMIP6_CVs/issues/843
-PJD  4 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
+PJD  5 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -661,7 +661,7 @@ experiment_id[key]['description'] = ''.join(['Historical well-mixed GHG-only run
 experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical well-mixed GHG-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
 experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
@@ -676,7 +676,7 @@ experiment_id[key]['description'] = ''.join(['Historical anthropogenic-aerosols-
 experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical anthropogenic aerosols-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
 experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
@@ -691,7 +691,7 @@ experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5
 experiment_id[key]['end_year'] = '2020'
 experiment_id[key]['experiment'] = 'historical natural-only run (CMIP5-era forcing)'
 experiment_id[key]['experiment_id'] = key
-experiment_id[key]['min_number_yrs_per_sim'] = '163'
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
 experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
 experiment_id[key]['required_model_components'] = ['AOGCM']
@@ -1321,9 +1321,7 @@ for key in experiment_id_keys:
             sys.exit()
 
 
-
-
-
+'''
     # Validate start/end years
     excludeList = ['dcppA-historical-niff']
     if key in excludeList:
@@ -1354,10 +1352,11 @@ for key in experiment_id_keys:
         print('min_number_yrs_per_sim:',test,minNumYrsSim)
         sys.exit()
 
-
-
-
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
+'''
+
+
+del(experiment_id_keys,key,act,val,val1,val2,vals)
 #sys.exit() ; # Turn back on to catch errors prior to running commit
 
 #%% Load remote repo versions for comparison - generate version identifier

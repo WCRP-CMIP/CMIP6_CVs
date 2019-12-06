@@ -434,6 +434,7 @@ PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.co
 PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
 PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP/CMIP6_CVs/issues/843
 PJD  5 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
+PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -1323,7 +1324,75 @@ for key in experiment_id_keys:
 
 '''
     # Validate start/end years
-    excludeList = ['dcppA-historical-niff']
+    excludeList = [
+            'aqua-p4K',
+            'dcppA-assim', # start = before 1961
+            'dcppA-hindcast',
+            'dcppA-hindcast-niff',
+            'dcppA-historical-niff',
+            'dcppB-forecast',
+            'dcppC-amv-neg',
+            'dcppC-atl-pacemaker',
+            'dcppC-atl-spg',
+            'dcppC-forecast-addAgung',
+            'dcppC-forecast-addElChichon',
+            'dcppC-forecast-addPinatubo',
+            'dcppC-hindcast-noAgung',
+            'dcppC-hindcast-noElChichon',
+            'dcppC-hindcast-noPinatubo',
+            'dcppC-ipv-pos',
+            'dcppC-ipv-NexTrop-pos',
+            'dcppC-pac-control',
+            'dcppC-pac-pacemaker',
+            'esm-bell-1000PgC',
+            'esm-bell-2000PgC',
+            'esm-hist-ext', # end_year = present
+            'faf-all',
+            'futSST-pdSIC',
+            'G6SST1', # Should be 2020 start
+            'historical-ext', # end_year present
+            'ism-1pctCO2to4x-self',
+            'ism-piControl-self',
+            'land-cClim',
+            'land-cCO2',
+            'land-crop-grass', # start_year 1850 or 1700
+            'land-crop-noFert',
+            'land-crop-noIrrig',
+            'land-crop-noIrrigFert',
+            'land-hist',
+            'land-hist-altLu1',
+            'land-hist-altLu2',
+            'land-hist-altStartYear',
+            'land-noFire',
+            'land-noLu',
+            'land-noPasture',
+            'land-noShiftCultivate',
+            'land-noWoodHarv',
+            'modelSST-futArcSIC',
+            'modelSST-pdSIC',
+            'pa-futAntSIC',
+            'pa-futArcSIC',
+            'pa-pdSIC',
+            'pa-piArcSIC',
+            'pa-piAntSIC',
+            'pdSST-futAntSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-futArcSIC',
+            'pdSST-futArcSICSIT',
+            'pdSST-futBKSeasSIC',
+            'pdSST-futOkhotskSIC',
+            'pdSST-pdSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-pdSICSIT',
+            'pdSST-piAntSIC',
+            'pdSST-piArcSIC',
+            'piClim-2xDMS',
+            'piClim-NH3',
+            'piControl-spinup-cmip5', # end_year present
+            'piSST-4xCO2',
+            'piSST-4xCO2-solar',
+            'piSST-pdSIC',
+            'piSST-piSIC',
+            'rad-irf'
+            ]
     if key in excludeList:
         print('Skipping start/end_year test for:',key)
         continue
@@ -1331,9 +1400,17 @@ for key in experiment_id_keys:
     valStart = experiment_id[key]['start_year']
     valEnd = experiment_id[key]['end_year']
     minNumYrsSim = experiment_id[key]['min_number_yrs_per_sim']
+    if valStart == '' and valEnd == '':
+        print('Start/end_year blank, skipping for:',key)
+        continue
     if valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
         valStart = int(valStart)
-    if valEnd:
+    # Deal with all sspxxx simulations
+    if valEnd == '2100 or 2300':
+        valEnd = 2100
+        print('sspxxx experiment, skipping')
+        continue
+    elif valEnd:
         valEnd = int(valEnd)
     if minNumYrsSim:
         minNumYrsSim = int(minNumYrsSim)
@@ -1341,6 +1418,9 @@ for key in experiment_id_keys:
         pass
     else:
         print('Test values failed')
+        print('start_year:',valStart)
+        print('end_year:',valEnd)
+        print('min_number_yrs_per_sim:',minNumYrsSim)
         sys.exit()
     print('valStart:',valStart,type(valStart))
     print('valEnd:',valEnd,type(valEnd))
@@ -1356,8 +1436,12 @@ del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,t
 '''
 
 
+
 del(experiment_id_keys,key,act,val,val1,val2,vals)
-#sys.exit() ; # Turn back on to catch errors prior to running commit
+'''
+print('***FINISH***')
+sys.exit() ; # Turn back on to catch errors prior to running commit
+'''
 
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:

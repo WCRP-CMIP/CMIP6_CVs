@@ -7,13 +7,13 @@
         "CMIP6"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Fri Dec  6 16:27:25 2019 -0800",
+        "CV_collection_modified":"Fri Dec  6 16:30:25 2019 -0800",
         "CV_collection_version":"6.2.43.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "mip_era_CV_modified":"Thu Aug 25 17:21:00 2016 -0700",
         "mip_era_CV_note":"Fix #36 - Add CV name to json structure",
-        "previous_commit":"63b0741085e2c4e5a4233e1fa643aae1a9719a19",
+        "previous_commit":"034a78cbba4be7f49c37b56f4fd748e4fc0ec823",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

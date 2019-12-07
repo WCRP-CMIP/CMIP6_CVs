@@ -718,9 +718,9 @@ experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['future scenario with low radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP2.6 global forcing pathway. ',
-                                             'Concentration-driven. (CMIP5-era forcing)'])
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
 experiment_id[key]['end_year'] = '2100 or 2300'
-experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era [2006-2100] forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '95'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
@@ -736,9 +736,9 @@ experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['future scenario with low-medium radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP4.5 global forcing pathway. ',
-                                             'Concentration-driven. (CMIP5-era forcing)'])
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
 experiment_id[key]['end_year'] = '2100 or 2300'
-experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era [2006-2100] forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '95'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
@@ -754,9 +754,9 @@ experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['future scenario with medium radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP6.0 global forcing pathway. ',
-                                             'Concentration-driven. (CMIP5-era forcing)'])
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
 experiment_id[key]['end_year'] = '2100 or 2300'
-experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era [2006-2100] forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '95'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
@@ -772,9 +772,9 @@ experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
 experiment_id[key]['description'] = ''.join(['future scenario with high radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP8.5 global forcing pathway. ',
-                                             'Concentration-driven. (CMIP5-era forcing)'])
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
 experiment_id[key]['end_year'] = '2100 or 2300'
-experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era [2006-2100] forcing)'
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '95'
 experiment_id[key]['parent_activity_id'] = ['CMIP']

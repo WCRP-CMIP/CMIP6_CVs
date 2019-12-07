@@ -7894,9 +7894,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"future scenario with low radiative forcing by the end of century. Following RCP2.6 global forcing pathway. Concentration-driven. (CMIP5-era forcing)",
+            "description":"future scenario with low radiative forcing by the end of century. Following RCP2.6 global forcing pathway. Concentration-driven (CMIP5-era [2006-2100] forcing)",
             "end_year":"2100 or 2300",
-            "experiment":"future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era forcing)",
+            "experiment":"future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era [2006-2100] forcing)",
             "experiment_id":"rcp26-cmip5",
             "min_number_yrs_per_sim":"95",
             "parent_activity_id":[
@@ -7923,9 +7923,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"future scenario with low-medium radiative forcing by the end of century. Following RCP4.5 global forcing pathway. Concentration-driven. (CMIP5-era forcing)",
+            "description":"future scenario with low-medium radiative forcing by the end of century. Following RCP4.5 global forcing pathway. Concentration-driven (CMIP5-era [2006-2100] forcing)",
             "end_year":"2100 or 2300",
-            "experiment":"future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era forcing)",
+            "experiment":"future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era [2006-2100] forcing)",
             "experiment_id":"rcp45-cmip5",
             "min_number_yrs_per_sim":"95",
             "parent_activity_id":[
@@ -7952,9 +7952,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"future scenario with medium radiative forcing by the end of century. Following RCP6.0 global forcing pathway. Concentration-driven. (CMIP5-era forcing)",
+            "description":"future scenario with medium radiative forcing by the end of century. Following RCP6.0 global forcing pathway. Concentration-driven (CMIP5-era [2006-2100] forcing)",
             "end_year":"2100 or 2300",
-            "experiment":"future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era forcing)",
+            "experiment":"future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era [2006-2100] forcing)",
             "experiment_id":"rcp60-cmip5",
             "min_number_yrs_per_sim":"95",
             "parent_activity_id":[
@@ -7981,9 +7981,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"future scenario with high radiative forcing by the end of century. Following RCP8.5 global forcing pathway. Concentration-driven. (CMIP5-era forcing)",
+            "description":"future scenario with high radiative forcing by the end of century. Following RCP8.5 global forcing pathway. Concentration-driven (CMIP5-era [2006-2100] forcing)",
             "end_year":"2100 or 2300",
-            "experiment":"future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era forcing)",
+            "experiment":"future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era [2006-2100] forcing)",
             "experiment_id":"rcp85-cmip5",
             "min_number_yrs_per_sim":"95",
             "parent_activity_id":[
@@ -9105,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Dec  6 16:27:25 2019 -0800",
+        "CV_collection_modified":"Fri Dec  6 16:30:25 2019 -0800",
         "CV_collection_version":"6.2.43.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Dec  4 12:51:01 2019 -0800",
         "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"63b0741085e2c4e5a4233e1fa643aae1a9719a19",
+        "previous_commit":"034a78cbba4be7f49c37b56f4fd748e4fc0ec823",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

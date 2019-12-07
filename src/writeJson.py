@@ -433,8 +433,8 @@ PJD 21 Nov 2019    - Added missing DAMIP CMIP5-era experiment id values; Correct
 PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/838
 PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
 PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP/CMIP6_CVs/issues/843
-PJD  5 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
-PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required
+PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (commented) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
+PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -658,9 +658,11 @@ experiment_id[key]['description'] = ''.join(['Historical well-mixed GHG-only run
                                              'radiation schemes. This will ensure that ozone is ',
                                              'fixed in all these simulations, and simulated ',
                                              'responses in models with and without coupled ',
-                                             'chemistry are comparable. (CMIP5-era forcing)'])
+                                             'chemistry are comparable. (CMIP5-era historical ',
+                                             'and RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['end_year'] = '2020'
-experiment_id[key]['experiment'] = 'historical well-mixed GHG-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = ''.join(['historical well-mixed GHG-only run (CMIP5-era historical and ',
+                                            'RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
@@ -673,9 +675,11 @@ key = 'hist-aer-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Historical anthropogenic-aerosols-only run (CMIP5-era forcing)'])
+experiment_id[key]['description'] = ''.join(['Historical anthropogenic-aerosols-only run (CMIP5-era historical ',
+                                             'and RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['end_year'] = '2020'
-experiment_id[key]['experiment'] = 'historical anthropogenic aerosols-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = ''.join(['historical anthropogenic aerosols-only run (CMIP5-era historical ',
+                                             'and RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']
@@ -688,9 +692,11 @@ key = 'hist-nat-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5-era forcing)'])
+experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5-era historical ',
+                                             'and RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['end_year'] = '2020'
-experiment_id[key]['experiment'] = 'historical natural-only run (CMIP5-era forcing)'
+experiment_id[key]['experiment'] = ''.join(['historical natural-only run (CMIP5-era historical ',
+                                             'and RCP4.5 (2006-2020) forcing)'])
 experiment_id[key]['experiment_id'] = key
 experiment_id[key]['min_number_yrs_per_sim'] = '171'
 experiment_id[key]['parent_activity_id'] = ['CMIP']

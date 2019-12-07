@@ -651,7 +651,7 @@ key = 'hist-GHG-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Historical well-mixed GHG-only run. Models with ',
+experiment_id[key]['description'] = ''.join(['historical well-mixed GHG-only run. Models with ',
                                              'interactive chemistry schemes should either turn ',
                                              'off the chemistry or use a preindustrial climatology ',
                                              'of stratospheric and tropospheric ozone in their ',
@@ -676,7 +676,7 @@ key = 'hist-aer-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Historical anthropogenic aerosols-only run (CMIP5-era ',
+experiment_id[key]['description'] = ''.join(['historical anthropogenic aerosols-only run (CMIP5-era ',
                                              'historical [1850-2005] and RCP4.5 [2006-2020] ',
                                             'forcing)'])
 experiment_id[key]['end_year'] = '2020'
@@ -695,7 +695,7 @@ key = 'hist-nat-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['DAMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Historical natural-only run (CMIP5-era ',
+experiment_id[key]['description'] = ''.join(['historical natural-only run (CMIP5-era ',
                                              'historical [1850-2005] and RCP4.5 [2006-2020] ',
                                             'forcing)'])
 experiment_id[key]['end_year'] = '2020'
@@ -715,7 +715,7 @@ key = 'rcp26-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Future scenario with low radiative ',
+experiment_id[key]['description'] = ''.join(['future scenario with low radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP2.6 global forcing pathway. ',
                                              'Concentration-driven. (CMIP5-era forcing)'])
@@ -733,7 +733,7 @@ key = 'rcp45-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Future scenario with low-medium radiative ',
+experiment_id[key]['description'] = ''.join(['future scenario with low-medium radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP4.5 global forcing pathway. ',
                                              'Concentration-driven. (CMIP5-era forcing)'])
@@ -751,7 +751,7 @@ key = 'rcp60-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Future scenario with medium radiative ',
+experiment_id[key]['description'] = ''.join(['future scenario with medium radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP6.0 global forcing pathway. ',
                                              'Concentration-driven. (CMIP5-era forcing)'])
@@ -769,7 +769,7 @@ key = 'rcp85-cmip5'
 experiment_id[key] = {}
 experiment_id[key]['activity_id'] = ['ScenarioMIP']
 experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
-experiment_id[key]['description'] = ''.join(['Future scenario with high radiative ',
+experiment_id[key]['description'] = ''.join(['future scenario with high radiative ',
                                              'forcing by the end of century. ',
                                              'Following RCP8.5 global forcing pathway. ',
                                              'Concentration-driven. (CMIP5-era forcing)'])

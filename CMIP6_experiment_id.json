@@ -4549,9 +4549,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"CMIP5 historical experiment, using CMIP5-era forcing that concluded in 2005",
+            "description":"CMIP5 historical experiment, using CMIP5-era [1850-2005]",
             "end_year":"2005",
-            "experiment":"all-forcing simulation of the recent past (CMIP5-era forcing)",
+            "experiment":"all-forcing simulation of the recent past (CMIP5-era [1850-2005] forcing)",
             "experiment_id":"historical-cmip5",
             "min_number_yrs_per_sim":"156",
             "parent_activity_id":[
@@ -7552,9 +7552,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"DECK: control (CMIP5-era forcing)",
+            "description":"DECK: control (CMIP5-era [1850-2005] forcing)",
             "end_year":"",
-            "experiment":"pre-industrial control (CMIP5-era forcing)",
+            "experiment":"pre-industrial control (CMIP5-era [1850-2005] forcing)",
             "experiment_id":"piControl-cmip5",
             "min_number_yrs_per_sim":"500",
             "parent_activity_id":[
@@ -7610,9 +7610,9 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"DECK: spin-up portion of the control (CMIP5-era forcing)",
+            "description":"DECK: spin-up portion of the control (CMIP5-era [1850-2005] forcing)",
             "end_year":"",
-            "experiment":"pre-industrial control (spin-up; CMIP5-era forcing)",
+            "experiment":"pre-industrial control (spin-up; CMIP5-era [1850-2005] forcing)",
             "experiment_id":"piControl-spinup-cmip5",
             "min_number_yrs_per_sim":"100",
             "parent_activity_id":[
@@ -9105,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Dec  6 16:30:25 2019 -0800",
+        "CV_collection_modified":"Fri Dec  6 16:32:20 2019 -0800",
         "CV_collection_version":"6.2.43.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Dec  4 12:51:01 2019 -0800",
         "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"034a78cbba4be7f49c37b56f4fd748e4fc0ec823",
+        "previous_commit":"362515b460d51ae4e04fae5469bbdffbb56190d2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

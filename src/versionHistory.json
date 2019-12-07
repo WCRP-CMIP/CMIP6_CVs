@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"a25deb11b9984a40397d83c438da59d5fc6ce22f",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a25deb11b9984a40397d83c438da59d5fc6ce22f",
-            "commitMessage":"Cleanup experiment_id grammar inconsistencies",
-            "timeStamp":"Wed Dec  4 12:51:01 2019 -0800"
+            "MD5":"5852d35005a34b2d5cb95b08da20b9b74b83afdb",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5852d35005a34b2d5cb95b08da20b9b74b83afdb",
+            "commitMessage":"Register CMIP5-era experiment_id entries",
+            "timeStamp":"Fri Dec  6 16:33:14 2019 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":1,
-            "versionCVContent":42,
+            "versionCVCommit":0,
+            "versionCVContent":43,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

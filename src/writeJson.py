@@ -429,9 +429,12 @@ PJD 14 Nov 2019    - Register source_id CESM1-WACCM-SC https://github.com/WCRP-C
 PJD 19 Nov 2019    - Register source_id 4AOP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/831
 PJD 19 Nov 2019    - Revise source_id INM-CM4-8 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/832
 PJD 19 Nov 2019    - Revise source_id INM-CM5-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/833
+PJD 21 Nov 2019    - Added missing DAMIP CMIP5-era experiment id values; Corrected ScenarioMIP tier levels https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD  4 Dec 2019    - Register DAMIP experiment_id hist-totalO3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/838
 PJD  4 Dec 2019    - Cleanup experiment_id grammar inconsistencies https://github.com/WCRP-CMIP/CMIP6_CVs/issues/839
 PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP/CMIP6_CVs/issues/843
+PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (commented) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
+PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -457,7 +460,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id EC-Earth3-Veg\"'
+commitMessage = '\"Register CMIP5-era experiment_id entries\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -598,6 +601,188 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
+key = 'historical-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['CMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = 'CMIP5 historical experiment, using CMIP5-era [1850-2005] forcing'
+experiment_id[key]['end_year'] = '2005'
+experiment_id[key]['experiment'] = 'all-forcing simulation of the recent past (CMIP5-era [1850-2005] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '156'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'piControl-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['CMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = 'DECK: control (CMIP5-era [1850-2005] forcing)'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'pre-industrial control (CMIP5-era [1850-2005] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '500'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-spinup-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'piControl-spinup-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['CMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = 'DECK: spin-up portion of the control (CMIP5-era [1850-2005] forcing)'
+experiment_id[key]['end_year'] = ''
+experiment_id[key]['experiment'] = 'pre-industrial control (spin-up; CMIP5-era [1850-2005] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '100'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['no parent']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = ''
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+
+key = 'hist-GHG-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['historical well-mixed GHG-only run. Models with ',
+                                             'interactive chemistry schemes should either turn ',
+                                             'off the chemistry or use a preindustrial climatology ',
+                                             'of stratospheric and tropospheric ozone in their ',
+                                             'radiation schemes. This will ensure that ozone is ',
+                                             'fixed in all these simulations, and simulated ',
+                                             'responses in models with and without coupled ',
+                                             'chemistry are comparable (CMIP5-era historical ',
+                                             '[1850-2005] and RCP4.5 [2006-2020] forcing)'])
+experiment_id[key]['end_year'] = '2020'
+experiment_id[key]['experiment'] = ''.join(['historical well-mixed GHG-only run (CMIP5-era ',
+                                            'historical [1850-2005] and RCP4.5 [2006-2020] ',
+                                            'forcing)'])
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'hist-aer-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['historical anthropogenic aerosols-only run (CMIP5-era ',
+                                             'historical [1850-2005] and RCP4.5 [2006-2020] ',
+                                            'forcing)'])
+experiment_id[key]['end_year'] = '2020'
+experiment_id[key]['experiment'] = ''.join(['historical anthropogenic aerosols-only run (CMIP5-era ',
+                                             'historical [1850-2005] and RCP4.5 [2006-2020] ',
+                                            'forcing)'])
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'hist-nat-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['DAMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['historical natural-only run (CMIP5-era ',
+                                             'historical [1850-2005] and RCP4.5 [2006-2020] ',
+                                            'forcing)'])
+experiment_id[key]['end_year'] = '2020'
+experiment_id[key]['experiment'] = ''.join(['historical natural-only run (CMIP5-era ',
+                                             'historical [1850-2005] and RCP4.5 [2006-2020] ',
+                                            'forcing)'])
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '171'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['piControl-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+
+key = 'rcp26-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['future scenario with low radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP2.6 global forcing pathway. ',
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP2.6 scenario (CMIP5-era [2006-2100] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'rcp45-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['future scenario with low-medium radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP4.5 global forcing pathway. ',
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP4.5 scenario (CMIP5-era [2006-2100] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'rcp60-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['future scenario with medium radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP6.0 global forcing pathway. ',
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP6.0 scenario (CMIP5-era [2006-2100] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'rcp85-cmip5'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['ScenarioMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['description'] = ''.join(['future scenario with high radiative ',
+                                             'forcing by the end of century. ',
+                                             'Following RCP8.5 global forcing pathway. ',
+                                             'Concentration-driven (CMIP5-era [2006-2100] forcing)'])
+experiment_id[key]['end_year'] = '2100 or 2300'
+experiment_id[key]['experiment'] = 'future projection based on CMIP5-era RCP8.5 scenario (CMIP5-era [2006-2100] forcing)'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '95'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical-cmip5']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '2006'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
 
 #==============================================================================
 # Example new experiment_id entry
@@ -878,15 +1063,7 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'EC-Earth3-Veg'
-source_id[key]['activity_participation'] = [
- 'CDRMIP',
- 'CMIP',
- 'CORDEX',
- 'LS3MIP',
- 'LUMIP',
- 'ScenarioMIP'
-]
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
@@ -1155,8 +1332,127 @@ for key in experiment_id_keys:
             print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
             sys.exit()
 
+
+'''
+    # Validate start/end years
+    excludeList = [
+            'aqua-p4K',
+            'dcppA-assim', # start = before 1961
+            'dcppA-hindcast',
+            'dcppA-hindcast-niff',
+            'dcppA-historical-niff',
+            'dcppB-forecast',
+            'dcppC-amv-neg',
+            'dcppC-atl-pacemaker',
+            'dcppC-atl-spg',
+            'dcppC-forecast-addAgung',
+            'dcppC-forecast-addElChichon',
+            'dcppC-forecast-addPinatubo',
+            'dcppC-hindcast-noAgung',
+            'dcppC-hindcast-noElChichon',
+            'dcppC-hindcast-noPinatubo',
+            'dcppC-ipv-pos',
+            'dcppC-ipv-NexTrop-pos',
+            'dcppC-pac-control',
+            'dcppC-pac-pacemaker',
+            'esm-bell-1000PgC',
+            'esm-bell-2000PgC',
+            'esm-hist-ext', # end_year = present
+            'faf-all',
+            'futSST-pdSIC',
+            'G6SST1', # Should be 2020 start
+            'historical-ext', # end_year present
+            'ism-1pctCO2to4x-self',
+            'ism-piControl-self',
+            'land-cClim',
+            'land-cCO2',
+            'land-crop-grass', # start_year 1850 or 1700
+            'land-crop-noFert',
+            'land-crop-noIrrig',
+            'land-crop-noIrrigFert',
+            'land-hist',
+            'land-hist-altLu1',
+            'land-hist-altLu2',
+            'land-hist-altStartYear',
+            'land-noFire',
+            'land-noLu',
+            'land-noPasture',
+            'land-noShiftCultivate',
+            'land-noWoodHarv',
+            'modelSST-futArcSIC',
+            'modelSST-pdSIC',
+            'pa-futAntSIC',
+            'pa-futArcSIC',
+            'pa-pdSIC',
+            'pa-piArcSIC',
+            'pa-piAntSIC',
+            'pdSST-futAntSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-futArcSIC',
+            'pdSST-futArcSICSIT',
+            'pdSST-futBKSeasSIC',
+            'pdSST-futOkhotskSIC',
+            'pdSST-pdSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-pdSICSIT',
+            'pdSST-piAntSIC',
+            'pdSST-piArcSIC',
+            'piClim-2xDMS',
+            'piClim-NH3',
+            'piControl-spinup-cmip5', # end_year present
+            'piSST-4xCO2',
+            'piSST-4xCO2-solar',
+            'piSST-pdSIC',
+            'piSST-piSIC',
+            'rad-irf'
+            ]
+    if key in excludeList:
+        print('Skipping start/end_year test for:',key)
+        continue
+    print('Start/end_year test for',key)
+    valStart = experiment_id[key]['start_year']
+    valEnd = experiment_id[key]['end_year']
+    minNumYrsSim = experiment_id[key]['min_number_yrs_per_sim']
+    if valStart == '' and valEnd == '':
+        print('Start/end_year blank, skipping for:',key)
+        continue
+    if valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
+        valStart = int(valStart)
+    # Deal with all sspxxx simulations
+    if valEnd == '2100 or 2300':
+        valEnd = 2100
+        print('sspxxx experiment, skipping')
+        continue
+    elif valEnd:
+        valEnd = int(valEnd)
+    if minNumYrsSim:
+        minNumYrsSim = int(minNumYrsSim)
+    if valStart and valEnd and minNumYrsSim:
+        pass
+    else:
+        print('Test values failed')
+        print('start_year:',valStart)
+        print('end_year:',valEnd)
+        print('min_number_yrs_per_sim:',minNumYrsSim)
+        sys.exit()
+    print('valStart:',valStart,type(valStart))
+    print('valEnd:',valEnd,type(valEnd))
+    test = (int(valEnd)+1)-int(valStart)
+    if int(minNumYrsSim) != test:
+        print('Invalid start/end_year pair for entry:',key,'- aborting')
+        print('start_year:',valStart)
+        print('end_year:',valEnd)
+        print('min_number_yrs_per_sim:',test,minNumYrsSim)
+        sys.exit()
+
+del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
+'''
+
+
+
 del(experiment_id_keys,key,act,val,val1,val2,vals)
-#sys.exit() ; # Turn back on to catch errors prior to running commit
+'''
+print('***FINISH***')
+sys.exit() ; # Turn back on to catch errors prior to running commit
+'''
 
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:

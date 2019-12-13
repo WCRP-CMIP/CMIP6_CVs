@@ -1285,7 +1285,8 @@
         "CMCC-CM2-HR4":{
             "activity_participation":[
                 "CMIP",
-                "HighResMIP"
+                "HighResMIP",
+                "OMIP"
             ],
             "cohort":[
                 "Registered"
@@ -1387,6 +1388,7 @@
                 "CMIP",
                 "DCPP",
                 "GMMIP",
+                "OMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -1484,6 +1486,60 @@
             "release_year":"2017",
             "source_id":"CMCC-CM2-VHR4"
         },
+        "CMCC-ESM2":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP",
+                "LS3MIP",
+                "LUMIP",
+                "OMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CMCC"
+            ],
+            "label":"CMCC-ESM2",
+            "label_extended":"CMCC-ESM2",
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM3",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM4.5 (BGC mode)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"BFM5.1",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE4.0",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2017",
+            "source_id":"CMCC-ESM2"
+        },
         "CMCC-ESM2-HR5":{
             "activity_participation":[
                 "CMIP",
@@ -1533,58 +1589,6 @@
             },
             "release_year":"2017",
             "source_id":"CMCC-ESM2-HR5"
-        },
-        "CMCC-ESM2-SR5":{
-            "activity_participation":[
-                "C4MIP",
-                "CMIP",
-                "LS3MIP",
-                "LUMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "CMCC"
-            ],
-            "label":"CMCC-ESM2-SR5",
-            "label_extended":"CMCC-ESM2-SR5",
-            "model_component":{
-                "aerosol":{
-                    "description":"MAM3",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"CLM4.5 (BGC mode)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"NEMO3.6 (ORCA1 tripolar primarly 1 deg lat/lon with meridional refinement down to 1/3 degree in the tropics; 362 x 292 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"BFM5.1",
-                    "native_nominal_resolution":"100 km"
-                },
-                "seaIce":{
-                    "description":"CICE4.0",
-                    "native_nominal_resolution":"100 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"CMCC-ESM2-SR5"
         },
         "CNRM-CM6-1":{
             "activity_participation":[
@@ -6674,13 +6678,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Dec  6 16:33:14 2019 -0800",
-        "CV_collection_version":"6.2.43.0",
+        "CV_collection_modified":"Fri Dec 13 13:44:01 2019 -0800",
+        "CV_collection_version":"6.2.43.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5852d35005a34b2d5cb95b08da20b9b74b83afdb",
+        "previous_commit":"c4a86f94668b17eab364ba52ca84192b7dfe8af3",
         "source_id_CV_modified":"Wed Dec  4 16:09:47 2019 -0800",
-        "source_id_CV_note":"Revise source_id EC-Earth3-Veg",
+        "source_id_CV_note":"Revise multiple CMCC source_id entries",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

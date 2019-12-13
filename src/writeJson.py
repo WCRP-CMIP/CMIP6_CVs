@@ -436,6 +436,7 @@ PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP
 PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (commented) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
 PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
+PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -461,7 +462,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple CMCC source_id entries\"'
+commitMessage = '\"Review all start/end_year pairs for experiments\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -883,36 +884,6 @@ del(tmp)
 
 # Fix issues
 # Update activities
-key = 'CMCC-CM2-HR4'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'HighResMIP',
-'OMIP'
-]
-# Update activities
-key = 'CMCC-CM2-SR5'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'DCPP',
-'GMMIP',
-'OMIP',
-'ScenarioMIP'
-]
-# Rename and update activities
-keyOld = 'CMCC-ESM2-SR5'
-keyNew = 'CMCC-ESM2'
-source_id[keyNew] = source_id.pop(keyOld)
-source_id[keyNew]['activity_participation'] = [
-'C4MIP',
-'CMIP',
-'LS3MIP',
-'LUMIP',
-'OMIP',
-'ScenarioMIP'
-]
-source_id[keyNew]['label'] = keyNew
-source_id[keyNew]['label_extended'] = keyNew
-source_id[keyNew]['source_id'] = keyNew
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1183,7 +1154,6 @@ for key in experiment_id_keys:
             sys.exit()
 
 
-'''
     # Validate start/end years
     excludeList = [
             'aqua-p4K',
@@ -1214,21 +1184,6 @@ for key in experiment_id_keys:
             'historical-ext', # end_year present
             'ism-1pctCO2to4x-self',
             'ism-piControl-self',
-            'land-cClim',
-            'land-cCO2',
-            'land-crop-grass', # start_year 1850 or 1700
-            'land-crop-noFert',
-            'land-crop-noIrrig',
-            'land-crop-noIrrigFert',
-            'land-hist',
-            'land-hist-altLu1',
-            'land-hist-altLu2',
-            'land-hist-altStartYear',
-            'land-noFire',
-            'land-noLu',
-            'land-noPasture',
-            'land-noShiftCultivate',
-            'land-noWoodHarv',
             'modelSST-futArcSIC',
             'modelSST-pdSIC',
             'pa-futAntSIC',
@@ -1254,6 +1209,23 @@ for key in experiment_id_keys:
             'piSST-piSIC',
             'rad-irf'
             ]
+    ''' LUMIP
+            'land-cClim', # start_year 1850 or 1700
+            'land-cCO2',
+            'land-crop-grass',
+            'land-crop-noFert',
+            'land-crop-noIrrig',
+            'land-crop-noIrrigFert',
+            'land-hist',
+            'land-hist-altLu1',
+            'land-hist-altLu2',
+            'land-hist-altStartYear',
+            'land-noFire',
+            'land-noLu',
+            'land-noPasture',
+            'land-noShiftCultivate',
+            'land-noWoodHarv',
+    '''
     if key in excludeList:
         print('Skipping start/end_year test for:',key)
         continue
@@ -1264,13 +1236,16 @@ for key in experiment_id_keys:
     if valStart == '' and valEnd == '':
         print('Start/end_year blank, skipping for:',key)
         continue
-    if valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
+    # Deal with all LUMIP simulations
+    if valStart == '1850 or 1700':
+        valStart = 1850
+        print('land-* experiment identified, continuing')
+    elif valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
         valStart = int(valStart)
     # Deal with all sspxxx simulations
     if valEnd == '2100 or 2300':
         valEnd = 2100
         print('sspxxx experiment, skipping')
-        continue
     elif valEnd:
         valEnd = int(valEnd)
     if minNumYrsSim:
@@ -1279,30 +1254,27 @@ for key in experiment_id_keys:
         pass
     else:
         print('Test values failed')
-        print('start_year:',valStart)
-        print('end_year:',valEnd)
+        print('start_year:',valStart,'end_year:',valEnd)
         print('min_number_yrs_per_sim:',minNumYrsSim)
         sys.exit()
-    print('valStart:',valStart,type(valStart))
-    print('valEnd:',valEnd,type(valEnd))
+    #print('valStart:',valStart,type(valStart))
+    #print('valEnd:',valEnd,type(valEnd))
     test = (int(valEnd)+1)-int(valStart)
     if int(minNumYrsSim) != test:
         print('Invalid start/end_year pair for entry:',key,'- aborting')
-        print('start_year:',valStart)
-        print('end_year:',valEnd)
+        print('start_year:',valStart,'end_year:',valEnd)
         print('min_number_yrs_per_sim:',test,minNumYrsSim)
         sys.exit()
 
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
-'''
 
 
 
-del(experiment_id_keys,key,act,val,val1,val2,vals)
-'''
+###del(experiment_id_keys,key,act,val,val1,val2,vals)
+
 print('***FINISH***')
 sys.exit() ; # Turn back on to catch errors prior to running commit
-'''
+
 
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:

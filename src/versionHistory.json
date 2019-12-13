@@ -61,10 +61,10 @@
             "timeStamp":"Thu Mar 16 12:59:00 2017 -0700"
         },
         "source_id":{
-            "MD5":"d2cfd60adc3a85e4a0057c912a6425bf5b736551",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d2cfd60adc3a85e4a0057c912a6425bf5b736551",
-            "commitMessage":"Revise source_id EC-Earth3-Veg",
-            "timeStamp":"Wed Dec  4 16:09:47 2019 -0800"
+            "MD5":"c4a86f94668b17eab364ba52ca84192b7dfe8af3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c4a86f94668b17eab364ba52ca84192b7dfe8af3",
+            "commitMessage":"Revise multiple CMCC source_id entries",
+            "timeStamp":"Fri Dec 13 13:44:01 2019 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":43,
             "versionCVStructure":2,
             "versionMIPEra":6

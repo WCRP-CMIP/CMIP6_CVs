@@ -436,6 +436,7 @@ PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP
 PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (commented) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
 PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
+PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -461,7 +462,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple CMCC source_id entries\"'
+commitMessage = '\"Deregister multiple CMCC source_id entries\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -882,37 +883,11 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Update activities
-key = 'CMCC-CM2-HR4'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'HighResMIP',
-'OMIP'
-]
-# Update activities
-key = 'CMCC-CM2-SR5'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'DCPP',
-'GMMIP',
-'OMIP',
-'ScenarioMIP'
-]
-# Rename and update activities
-keyOld = 'CMCC-ESM2-SR5'
-keyNew = 'CMCC-ESM2'
-source_id[keyNew] = source_id.pop(keyOld)
-source_id[keyNew]['activity_participation'] = [
-'C4MIP',
-'CMIP',
-'LS3MIP',
-'LUMIP',
-'OMIP',
-'ScenarioMIP'
-]
-source_id[keyNew]['label'] = keyNew
-source_id[keyNew]['label_extended'] = keyNew
-source_id[keyNew]['source_id'] = keyNew
+# Remove
+key1 = 'CMCC-CM2-HR5'
+key2 = 'CMCC-ESM2-HR5'
+source_id.pop(key1)
+source_id.pop(key2)
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

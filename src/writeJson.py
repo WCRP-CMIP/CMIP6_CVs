@@ -436,6 +436,7 @@ PJD  4 Dec 2019    - Revise source_id EC-Earth3-Veg https://github.com/WCRP-CMIP
 PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (commented) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
 PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
+PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -883,7 +884,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Update activities
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1186,28 +1186,26 @@ for key in experiment_id_keys:
             'ism-piControl-self',
             'modelSST-futArcSIC',
             'modelSST-pdSIC',
-            'pa-futAntSIC',
+            'pa-futAntSIC', # PAMIP start/end 2000/2001 should be min_num 2 not 1
             'pa-futArcSIC',
             'pa-pdSIC',
             'pa-piArcSIC',
             'pa-piAntSIC',
-            'pdSST-futAntSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-futAntSIC',
             'pdSST-futArcSIC',
             'pdSST-futArcSICSIT',
             'pdSST-futBKSeasSIC',
             'pdSST-futOkhotskSIC',
-            'pdSST-pdSIC', # start/end 2000/2001 should be min_num 2 not 1
+            'pdSST-pdSIC',
             'pdSST-pdSICSIT',
             'pdSST-piAntSIC',
             'pdSST-piArcSIC',
             'piClim-2xDMS',
             'piClim-NH3',
-            'piControl-spinup-cmip5', # end_year present
             'piSST-4xCO2',
             'piSST-4xCO2-solar',
             'piSST-pdSIC',
-            'piSST-piSIC',
-            'rad-irf'
+            'piSST-piSIC'
             ]
     ''' LUMIP
             'land-cClim', # start_year 1850 or 1700
@@ -1225,11 +1223,15 @@ for key in experiment_id_keys:
             'land-noPasture',
             'land-noShiftCultivate',
             'land-noWoodHarv',
+        Not sure
+            'piControl-spinup-cmip5',
+        No values in 3 fields
+            'rad-irf'
     '''
     if key in excludeList:
         print('Skipping start/end_year test for:',key)
         continue
-    print('Start/end_year test for',key)
+    #print('Start/end_year test for',key)
     valStart = experiment_id[key]['start_year']
     valEnd = experiment_id[key]['end_year']
     minNumYrsSim = experiment_id[key]['min_number_yrs_per_sim']
@@ -1239,13 +1241,13 @@ for key in experiment_id_keys:
     # Deal with all LUMIP simulations
     if valStart == '1850 or 1700':
         valStart = 1850
-        print('land-* experiment identified, continuing')
+        #print('land-* experiment identified, continuing')
     elif valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
         valStart = int(valStart)
     # Deal with all sspxxx simulations
     if valEnd == '2100 or 2300':
         valEnd = 2100
-        print('sspxxx experiment, skipping')
+        #print('sspxxx experiment, skipping')
     elif valEnd:
         valEnd = int(valEnd)
     if minNumYrsSim:
@@ -1254,8 +1256,7 @@ for key in experiment_id_keys:
         pass
     else:
         print('Test values failed')
-        print('start_year:',valStart,'end_year:',valEnd)
-        print('min_number_yrs_per_sim:',minNumYrsSim)
+        print('start_year:',valStart,'end_year:',valEnd,'min_number_yrs_per_sim:',minNumYrsSim)
         sys.exit()
     #print('valStart:',valStart,type(valStart))
     #print('valEnd:',valEnd,type(valEnd))

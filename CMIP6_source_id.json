@@ -1333,56 +1333,6 @@
             "release_year":"2016",
             "source_id":"CMCC-CM2-HR4"
         },
-        "CMCC-CM2-HR5":{
-            "activity_participation":[
-                "CMIP",
-                "OMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "CMCC"
-            ],
-            "label":"CMCC-CM2-HR5",
-            "label_extended":"CMCC-CM2-HR5",
-            "model_component":{
-                "aerosol":{
-                    "description":"MAM3",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"CLM4.5 (BGC mode)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"CICE4.0",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"CMCC-CM2-HR5"
-        },
         "CMCC-CM2-SR5":{
             "activity_participation":[
                 "CMIP",
@@ -1539,56 +1489,6 @@
             },
             "release_year":"2017",
             "source_id":"CMCC-ESM2"
-        },
-        "CMCC-ESM2-HR5":{
-            "activity_participation":[
-                "CMIP",
-                "OMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "CMCC"
-            ],
-            "label":"CMCC-ESM2-HR5",
-            "label_extended":"CMCC-ESM2-HR5",
-            "model_component":{
-                "aerosol":{
-                    "description":"MAM3",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"CAM5.3 (1deg; 288 x 192 longitude/latitude; 30 levels; top at ~2 hPa)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"CLM4.5 (BGC mode)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"NEMO3.6 (ORCA0.25 1/4 deg from the Equator degrading at the poles; 1442 x 1051 longitude/latitude; 50 vertical levels; top grid cell 0-1 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"BFM5.1",
-                    "native_nominal_resolution":"25 km"
-                },
-                "seaIce":{
-                    "description":"CICE4.0",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"CMCC-ESM2-HR5"
         },
         "CNRM-CM6-1":{
             "activity_participation":[
@@ -6678,13 +6578,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Dec 13 13:44:01 2019 -0800",
-        "CV_collection_version":"6.2.43.1",
+        "CV_collection_modified":"Fri Dec 13 15:37:35 2019 -0800",
+        "CV_collection_version":"6.2.43.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c4a86f94668b17eab364ba52ca84192b7dfe8af3",
-        "source_id_CV_modified":"Wed Dec  4 16:09:47 2019 -0800",
-        "source_id_CV_note":"Revise multiple CMCC source_id entries",
+        "previous_commit":"4705e28124103773c0ca23f68cfc56663020f888",
+        "source_id_CV_modified":"Fri Dec 13 13:44:01 2019 -0800",
+        "source_id_CV_note":"Deregister multiple CMCC source_id entries",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

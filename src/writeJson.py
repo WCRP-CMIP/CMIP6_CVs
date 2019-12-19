@@ -437,6 +437,8 @@ PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (
 PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
+PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
+PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
@@ -462,7 +464,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Deregister multiple CMCC source_id entries\"'
+commitMessage = '\"Add external_variables to required_global_attributes\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -848,6 +850,7 @@ required_global_attributes = [
     'data_specs_version',
     'experiment',
     'experiment_id',
+    'external_variables',
     'forcing_index',
     'frequency',
     'further_info_url',
@@ -883,11 +886,6 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Remove
-key1 = 'CMCC-CM2-HR5'
-key2 = 'CMCC-ESM2-HR5'
-source_id.pop(key1)
-source_id.pop(key2)
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1157,7 +1155,6 @@ for key in experiment_id_keys:
             print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
             sys.exit()
 
-
 '''
     # Validate start/end years
     excludeList = [
@@ -1189,9 +1186,34 @@ for key in experiment_id_keys:
             'historical-ext', # end_year present
             'ism-1pctCO2to4x-self',
             'ism-piControl-self',
-            'land-cClim',
+            'modelSST-futArcSIC',
+            'modelSST-pdSIC',
+            'pa-futAntSIC', # PAMIP start/end 2000/2001 should be min_num 2 not 1
+            'pa-futArcSIC',
+            'pa-pdSIC',
+            'pa-piArcSIC',
+            'pa-piAntSIC',
+            'pdSST-futAntSIC',
+            'pdSST-futArcSIC',
+            'pdSST-futArcSICSIT',
+            'pdSST-futBKSeasSIC',
+            'pdSST-futOkhotskSIC',
+            'pdSST-pdSIC',
+            'pdSST-pdSICSIT',
+            'pdSST-piAntSIC',
+            'pdSST-piArcSIC',
+            'piClim-2xDMS',
+            'piClim-NH3',
+            'piSST-4xCO2',
+            'piSST-4xCO2-solar',
+            'piSST-pdSIC',
+            'piSST-piSIC'
+            ]
+'''
+'''     LUMIP
+            'land-cClim', # start_year 1850 or 1700
             'land-cCO2',
-            'land-crop-grass', # start_year 1850 or 1700
+            'land-crop-grass',
             'land-crop-noFert',
             'land-crop-noIrrig',
             'land-crop-noIrrigFert',
@@ -1204,48 +1226,32 @@ for key in experiment_id_keys:
             'land-noPasture',
             'land-noShiftCultivate',
             'land-noWoodHarv',
-            'modelSST-futArcSIC',
-            'modelSST-pdSIC',
-            'pa-futAntSIC',
-            'pa-futArcSIC',
-            'pa-pdSIC',
-            'pa-piArcSIC',
-            'pa-piAntSIC',
-            'pdSST-futAntSIC', # start/end 2000/2001 should be min_num 2 not 1
-            'pdSST-futArcSIC',
-            'pdSST-futArcSICSIT',
-            'pdSST-futBKSeasSIC',
-            'pdSST-futOkhotskSIC',
-            'pdSST-pdSIC', # start/end 2000/2001 should be min_num 2 not 1
-            'pdSST-pdSICSIT',
-            'pdSST-piAntSIC',
-            'pdSST-piArcSIC',
-            'piClim-2xDMS',
-            'piClim-NH3',
-            'piControl-spinup-cmip5', # end_year present
-            'piSST-4xCO2',
-            'piSST-4xCO2-solar',
-            'piSST-pdSIC',
-            'piSST-piSIC',
+        Not sure
+            'piControl-spinup-cmip5',
+        No values in 3 fields
             'rad-irf'
-            ]
+'''
+'''
     if key in excludeList:
         print('Skipping start/end_year test for:',key)
         continue
-    print('Start/end_year test for',key)
+    #print('Start/end_year test for',key)
     valStart = experiment_id[key]['start_year']
     valEnd = experiment_id[key]['end_year']
     minNumYrsSim = experiment_id[key]['min_number_yrs_per_sim']
     if valStart == '' and valEnd == '':
         print('Start/end_year blank, skipping for:',key)
         continue
-    if valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
+    # Deal with all LUMIP simulations
+    if valStart == '1850 or 1700':
+        valStart = 1850
+        #print('land-* experiment identified, continuing')
+    elif valStart: # Falsy test https://stackoverflow.com/questions/9573244/how-to-check-if-the-string-is-empty
         valStart = int(valStart)
     # Deal with all sspxxx simulations
     if valEnd == '2100 or 2300':
         valEnd = 2100
-        print('sspxxx experiment, skipping')
-        continue
+        #print('sspxxx experiment, skipping')
     elif valEnd:
         valEnd = int(valEnd)
     if minNumYrsSim:
@@ -1254,23 +1260,19 @@ for key in experiment_id_keys:
         pass
     else:
         print('Test values failed')
-        print('start_year:',valStart)
-        print('end_year:',valEnd)
-        print('min_number_yrs_per_sim:',minNumYrsSim)
+        print('start_year:',valStart,'end_year:',valEnd,'min_number_yrs_per_sim:',minNumYrsSim)
         sys.exit()
-    print('valStart:',valStart,type(valStart))
-    print('valEnd:',valEnd,type(valEnd))
+    #print('valStart:',valStart,type(valStart))
+    #print('valEnd:',valEnd,type(valEnd))
     test = (int(valEnd)+1)-int(valStart)
     if int(minNumYrsSim) != test:
         print('Invalid start/end_year pair for entry:',key,'- aborting')
-        print('start_year:',valStart)
-        print('end_year:',valEnd)
+        print('start_year:',valStart,'end_year:',valEnd)
         print('min_number_yrs_per_sim:',test,minNumYrsSim)
         sys.exit()
 
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
 '''
-
 
 
 del(experiment_id_keys,key,act,val,val1,val2,vals)

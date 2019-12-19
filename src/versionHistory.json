@@ -55,10 +55,10 @@
             "timeStamp":"Tues Apr 18 12:03:00 2017 -0700"
         },
         "required_global_attributes":{
-            "MD5":"025409222ee6522228ab099d7d599837ff7aa798",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/025409222ee6522228ab099d7d599837ff7aa798",
-            "commitMessage":"Add external_variables to required_global_attributes",
-            "timeStamp":"Thu Dec 19 13:54:50 2019 -0800"
+            "MD5":"6e9971a7fd54489606b15dd2814ac05c7e18dc52",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/6e9971a7fd54489606b15dd2814ac05c7e18dc52",
+            "commitMessage":"Reverting addition of external_variables to required_global_attributes",
+            "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
             "MD5":"4705e28124103773c0ca23f68cfc56663020f888",
@@ -86,7 +86,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":44,
+            "versionCVContent":45,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

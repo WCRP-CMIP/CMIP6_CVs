@@ -437,6 +437,7 @@ PJD  5 Dec 2019    - Added start/end_year validation - a new issue is required (
 PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
+PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -463,7 +464,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Review all start/end_year pairs for experiments\"'
+commitMessage = '\"Add external_variables to required_global_attributes\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -849,6 +850,7 @@ required_global_attributes = [
     'data_specs_version',
     'experiment',
     'experiment_id',
+    'external_variables',
     'forcing_index',
     'frequency',
     'further_info_url',
@@ -1153,7 +1155,7 @@ for key in experiment_id_keys:
             print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
             sys.exit()
 
-
+'''
     # Validate start/end years
     excludeList = [
             'aqua-p4K',
@@ -1207,7 +1209,8 @@ for key in experiment_id_keys:
             'piSST-pdSIC',
             'piSST-piSIC'
             ]
-    ''' LUMIP
+'''
+'''     LUMIP
             'land-cClim', # start_year 1850 or 1700
             'land-cCO2',
             'land-crop-grass',
@@ -1227,7 +1230,8 @@ for key in experiment_id_keys:
             'piControl-spinup-cmip5',
         No values in 3 fields
             'rad-irf'
-    '''
+'''
+'''
     if key in excludeList:
         print('Skipping start/end_year test for:',key)
         continue
@@ -1268,14 +1272,14 @@ for key in experiment_id_keys:
         sys.exit()
 
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
+'''
 
 
-
-###del(experiment_id_keys,key,act,val,val1,val2,vals)
-
+del(experiment_id_keys,key,act,val,val1,val2,vals)
+'''
 print('***FINISH***')
 sys.exit() ; # Turn back on to catch errors prior to running commit
-
+'''
 
 #%% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:

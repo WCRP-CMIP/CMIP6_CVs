@@ -438,6 +438,7 @@ PJD  6 Dec 2019    - Register CMIP5-era experiment_id entries (merge updated) ht
 PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
+PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -464,7 +465,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Add external_variables to required_global_attributes\"'
+commitMessage = '\"Reverting addition of external_variables to required_global_attributes\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -850,7 +851,6 @@ required_global_attributes = [
     'data_specs_version',
     'experiment',
     'experiment_id',
-    'external_variables',
     'forcing_index',
     'frequency',
     'further_info_url',

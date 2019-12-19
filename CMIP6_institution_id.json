@@ -51,13 +51,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Dec 19 13:54:50 2019 -0800",
-        "CV_collection_version":"6.2.44.0",
+        "CV_collection_modified":"Thu Dec 19 15:32:17 2019 -0800",
+        "CV_collection_version":"6.2.45.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Thu Nov 14 11:18:04 2019 -0800",
         "institution_id_CV_note":"Register institution_id UCI",
-        "previous_commit":"025409222ee6522228ab099d7d599837ff7aa798",
+        "previous_commit":"6e9971a7fd54489606b15dd2814ac05c7e18dc52",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

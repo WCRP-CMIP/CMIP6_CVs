@@ -439,6 +439,7 @@ PJD 13 Dec 2019    - Revise multiple CMCC source_id entries https://github.com/W
 PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/846
 PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
+PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/852
 PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -465,7 +466,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Reverting addition of external_variables to required_global_attributes\"'
+commitMessage = '\"Revise source_id CAS-ESM1-0\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -886,6 +887,15 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+keyOld = 'CAS-ESM1-0'
+keyNew = 'CAS-ESM2-0'
+source_id[keyNew] = source_id.pop(keyOld)
+source_id[keyNew]['label'] = 'CAS-ESM 2.0'
+source_id[keyNew]['label_extended'] = 'CAS-ESM 2.0 (Chinese Academy of Sciences Earth System Model version 2.0)'
+source_id[keyNew]['model_component']['atmos']['description'] = 'IAP AGCM 5.0 (Finite difference dynamical core; 256 x 128 longitude/latitude; 35 levels; top level 2.2 hPa)'
+source_id[keyNew]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[keyNew]['release_year'] = '2019'
+source_id[keyNew]['source_id'] = keyNew
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

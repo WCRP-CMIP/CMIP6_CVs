@@ -2856,7 +2856,8 @@
         "FGOALS-f3-H":{
             "activity_participation":[
                 "CMIP",
-                "HighResMIP"
+                "HighResMIP",
+                "OMIP"
             ],
             "cohort":[
                 "Registered"

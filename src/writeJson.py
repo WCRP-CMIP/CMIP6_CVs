@@ -888,12 +888,47 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FGOALS-f3-H'
+key = 'MIROC-ES2H-NB'
+source_id[key] = {}
 source_id[key]['activity_participation'] = [
-'CMIP',
-'HighResMIP',
-'OMIP'
+'AerChemMIP',
+'CMIP'
 ]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'MIROC'
+]
+source_id[key]['label'] = 'MIROC-ES2H-NB'
+source_id[key]['label_extended'] = 'MIROC-ES2H with No BiogenicCycle'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'SPRINTARS6.0'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'MATSIRO6'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'COCO4.9'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

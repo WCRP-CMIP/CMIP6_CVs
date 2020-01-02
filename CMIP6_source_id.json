@@ -3685,7 +3685,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)",
+                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -6579,13 +6579,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan  2 10:11:34 2020 -0800",
-        "CV_collection_version":"6.2.45.2",
+        "CV_collection_modified":"Thu Jan  2 11:58:27 2020 -0800",
+        "CV_collection_version":"6.2.45.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"930c5d2a8fb0dc64e10bd6ca86575b6a312f8849",
-        "source_id_CV_modified":"Fri Dec 27 13:12:56 2019 -0800",
-        "source_id_CV_note":"Revise source_id FGOALS-f3-H",
+        "previous_commit":"59b6eaaa02885cc21de330a393944c43e19c899b",
+        "source_id_CV_modified":"Thu Jan  2 10:11:34 2020 -0800",
+        "source_id_CV_note":"Revise source_id GISS-E2-1-H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -440,6 +440,7 @@ PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.c
 PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/852
+PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
 PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                   - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
@@ -467,7 +468,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id FGOALS-f3-H\"'
+commitMessage = '\"Revise source_id GISS-E2-1-H\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -888,12 +889,9 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'FGOALS-f3-H'
-source_id[key]['activity_participation'] = [
-'CMIP',
-'HighResMIP',
-'OMIP'
-]
+key = 'GISS-E2-1-H'
+source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

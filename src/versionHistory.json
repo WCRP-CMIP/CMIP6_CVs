@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"14a0d9e9315017ebc6fa3fadcf0ecdbab3216d89",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/14a0d9e9315017ebc6fa3fadcf0ecdbab3216d89",
-            "commitMessage":"Revise source_ids MIROC-ES2H-NB, MIROC-ES2H",
-            "timeStamp":"Wed Jan 15 16:10:20 2020 -0800"
+            "MD5":"77894bf0441ae159e3698bd3d68de294ad1dbdf6",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/77894bf0441ae159e3698bd3d68de294ad1dbdf6",
+            "commitMessage":"Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR",
+            "timeStamp":"Wed Jan 15 16:28:38 2020 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":45,
             "versionCVStructure":2,
             "versionMIPEra":6

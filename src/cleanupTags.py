@@ -8,7 +8,8 @@ https://github.com/WCRP-CMIP/CMIP6_CVs/issues/448
 
 PJD 31 Jan 2018     - Started
 PJD 15 Mar 2018     - Updated missing tags 6.2.3.3-6.2.3.5
-PJD 22 Aug 2018     - Updated missing tags 6.2.37.2
+PJD 22 Aug 2018     - Updated missing tag 6.2.37.2
+PJD 15 Jan 2020     - Updated missing tag 6.2.45.4
 
 https://stackoverflow.com/questions/21738647/change-date-of-git-tag-or-github-release-based-on-it
 
@@ -131,6 +132,10 @@ tagList['6.2.37.2'] = {}
 tagList['6.2.37.2']['Comment'] = 'Register source_id IPSL-CM7A-ATM-HR (#769)'
 tagList['6.2.37.2']['MD5'] = 'd0261dc94cdfba37af81e07b8ebc801aa47a7ae7'
 
+# 200115 1617
+tagList['6.2.45.4'] = {}
+tagList['6.2.45.4']['Comment'] = ' Revise source_ids GISS-E2-1-H, GISS-E3-G (#862) '
+tagList['6.2.45.4']['MD5'] = '0597fd970ae4c5186e2376d39f05cb64841e7a1d'
 
 #%% Iterate over dictionary to create new tags and delete existing
 # Should look like

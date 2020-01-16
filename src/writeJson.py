@@ -440,10 +440,11 @@ PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.c
 PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/852
+PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
-PJD  2 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
-PJD 13 Dec 2019    - Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
-                  - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
+                    - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
+                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
@@ -891,10 +892,10 @@ del(tmp)
 # Fix issues
 key = 'GISS-E2-1-H'
 source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2019'
 key = 'GISS-E3-G'
 source_id[key]['release_year'] = '2020'
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

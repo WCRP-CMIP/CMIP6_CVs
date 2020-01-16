@@ -443,6 +443,7 @@ PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CM
 PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
 PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
+PJD 15 Jan 2020    - Revise source_ids MIROC-ES2H-NB, MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/856, 863
                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -469,7 +470,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_ids GISS-E2-1-H, GISS-E3-G\"'
+commitMessage = '\"Revise source_ids MIROC-ES2H-NB, MIROC-ES2H\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -890,11 +891,51 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GISS-E2-1-H'
-source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
+key = 'MIROC-ES2H-NB'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'AerChemMIP',
+'CMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'MIROC'
+]
+source_id[key]['label'] = 'MIROC-ES2H-NB'
+source_id[key]['label_extended'] = 'MIROC-ES2H with No BiogenicCycle'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'SPRINTARS6.0'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'MATSIRO6'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'COCO4.9'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
 source_id[key]['release_year'] = '2019'
-key = 'GISS-E3-G'
-source_id[key]['release_year'] = '2020'
+source_id[key]['source_id'] = key
+
+key = 'MIROC-ES2H'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

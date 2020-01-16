@@ -444,6 +444,7 @@ PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/C
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
 PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD 15 Jan 2020    - Revise source_ids MIROC-ES2H-NB, MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/856, 863
+PJD 15 Jan 2020    - Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -470,7 +471,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_ids MIROC-ES2H-NB, MIROC-ES2H\"'
+commitMessage = '\"Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -891,51 +892,87 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC-ES2H-NB'
+key = 'HiRAM-SIT-HR'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
-'AerChemMIP',
-'CMIP'
+'HighResMIP'
 ]
 source_id[key]['cohort'] = [
 'Registered'
 ]
 source_id[key]['institution_id'] = [
-'MIROC'
+'AS-RCEC'
 ]
-source_id[key]['label'] = 'MIROC-ES2H-NB'
-source_id[key]['label_extended'] = 'MIROC-ES2H with No BiogenicCycle'
+source_id[key]['label'] = 'HiRAM-SIT-HR'
+source_id[key]['label_extended'] = 'HiRAM Coupling 1-D SIT (25 km atmosphere and 25 km ocean)'
 source_id[key]['model_component'] = {}
 source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'SPRINTARS6.0'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-HiRAM (Cubed-sphere (c384) - 0.25 degree nominal horizontal resolution; 1536 x 768 longitude/latitude; 32 levels; top level 1 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
 source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'MATSIRO6'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM3 (same grid as atmos)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '25 km'
 source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'SIT (1-D, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 50 levels with skin layer & 1 m resolution for uppermost 10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'COCO4.9'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2019'
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2018'
 source_id[key]['source_id'] = key
 
-key = 'MIROC-ES2H'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+key = 'HiRAM-SIT-LR'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'HighResMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'AS-RCEC'
+]
+source_id[key]['label'] = 'HiRAM-SIT-LR'
+source_id[key]['label_extended'] = 'HiRAM Coupling 1-D SIT (50 km atmosphere and 25 km ocean)'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'none'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'GFDL-HiRAM (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 768 x 384 longitude/latitude; 32 levels; top level 1 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'GFDL-LM3 (same grid as atmos)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'SIT (1-D, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 50 levels with skin layer & 1 m resolution for uppermost 10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2018'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

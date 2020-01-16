@@ -3685,7 +3685,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 latitude/longitude; 26 levels; top grid cell 0-10 m)",
+                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -3697,7 +3697,7 @@
                     "native_nominal_resolution":"250 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2019",
             "source_id":"GISS-E2-1-H"
         },
         "GISS-E2-2-G":{
@@ -3830,7 +3830,7 @@
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2018",
+            "release_year":"2020",
             "source_id":"GISS-E3-G"
         },
         "HadGEM3-GC31-HH":{
@@ -4831,11 +4831,11 @@
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
-                    "native_nominal_resolution":"250 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "atmosChem":{
                     "description":"CHASER4.0",
-                    "native_nominal_resolution":"250 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "land":{
                     "description":"MATSIRO6.0+VISIT-e ver.1.0",
@@ -4860,6 +4860,56 @@
             },
             "release_year":"2018",
             "source_id":"MIROC-ES2H"
+        },
+        "MIROC-ES2H-NB":{
+            "activity_participation":[
+                "AerChemMIP",
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "MIROC"
+            ],
+            "label":"MIROC-ES2H-NB",
+            "label_extended":"MIROC-ES2H with No BiogenicCycle",
+            "model_component":{
+                "aerosol":{
+                    "description":"SPRINTARS6.0",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"CHASER4.0",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"MATSIRO6",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"COCO4.9",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"MIROC-ES2H-NB"
         },
         "MIROC-ES2L":{
             "activity_participation":[
@@ -6579,13 +6629,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan  2 10:11:34 2020 -0800",
-        "CV_collection_version":"6.2.45.2",
+        "CV_collection_modified":"Wed Jan 15 16:10:20 2020 -0800",
+        "CV_collection_version":"6.2.45.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"930c5d2a8fb0dc64e10bd6ca86575b6a312f8849",
-        "source_id_CV_modified":"Fri Dec 27 13:12:56 2019 -0800",
-        "source_id_CV_note":"Revise source_id FGOALS-f3-H",
+        "previous_commit":"14a0d9e9315017ebc6fa3fadcf0ecdbab3216d89",
+        "source_id_CV_modified":"Wed Jan 15 16:01:46 2020 -0800",
+        "source_id_CV_note":"Revise source_ids MIROC-ES2H-NB, MIROC-ES2H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

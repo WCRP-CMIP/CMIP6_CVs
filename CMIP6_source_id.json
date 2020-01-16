@@ -3697,7 +3697,7 @@
                     "native_nominal_resolution":"250 km"
                 }
             },
-            "release_year":"2016",
+            "release_year":"2019",
             "source_id":"GISS-E2-1-H"
         },
         "GISS-E2-2-G":{
@@ -3830,7 +3830,7 @@
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2018",
+            "release_year":"2020",
             "source_id":"GISS-E3-G"
         },
         "HadGEM3-GC31-HH":{
@@ -6579,13 +6579,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan  2 11:58:27 2020 -0800",
-        "CV_collection_version":"6.2.45.3",
+        "CV_collection_modified":"Wed Jan 15 16:01:46 2020 -0800",
+        "CV_collection_version":"6.2.45.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"59b6eaaa02885cc21de330a393944c43e19c899b",
-        "source_id_CV_modified":"Thu Jan  2 10:11:34 2020 -0800",
-        "source_id_CV_note":"Revise source_id GISS-E2-1-H",
+        "previous_commit":"e4a972c9f313945a7cf3530ec4bb5760e28ed751",
+        "source_id_CV_modified":"Thu Jan  2 11:58:27 2020 -0800",
+        "source_id_CV_note":"Revise source_ids GISS-E2-1-H, GISS-E3-G",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

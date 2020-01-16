@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"59b6eaaa02885cc21de330a393944c43e19c899b",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/59b6eaaa02885cc21de330a393944c43e19c899b",
-            "commitMessage":"Revise source_id GISS-E2-1-H",
-            "timeStamp":"Thu Jan  2 11:58:27 2020 -0800"
+            "MD5":"e4a972c9f313945a7cf3530ec4bb5760e28ed751",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e4a972c9f313945a7cf3530ec4bb5760e28ed751",
+            "commitMessage":"Revise source_ids GISS-E2-1-H, GISS-E3-G",
+            "timeStamp":"Wed Jan 15 16:01:46 2020 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":3,
+            "versionCVCommit":4,
             "versionCVContent":45,
             "versionCVStructure":2,
             "versionMIPEra":6

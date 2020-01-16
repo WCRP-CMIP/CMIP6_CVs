@@ -445,6 +445,7 @@ PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/C
 PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD 15 Jan 2020    - Revise source_ids MIROC-ES2H-NB, MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/856, 863
 PJD 15 Jan 2020    - Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
+PJD 15 Jan 2020    - Revise multiple IPSL-CM* source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -471,7 +472,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR\"'
+commitMessage = '\"Revise multiple IPSL-CM* source_ids\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -892,87 +893,14 @@ source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'HiRAM-SIT-HR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'HighResMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'AS-RCEC'
-]
-source_id[key]['label'] = 'HiRAM-SIT-HR'
-source_id[key]['label_extended'] = 'HiRAM Coupling 1-D SIT (25 km atmosphere and 25 km ocean)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-HiRAM (Cubed-sphere (c384) - 0.25 degree nominal horizontal resolution; 1536 x 768 longitude/latitude; 32 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'GFDL-LM3 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'SIT (1-D, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 50 levels with skin layer & 1 m resolution for uppermost 10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
-
-key = 'HiRAM-SIT-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'HighResMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'AS-RCEC'
-]
-source_id[key]['label'] = 'HiRAM-SIT-LR'
-source_id[key]['label_extended'] = 'HiRAM Coupling 1-D SIT (50 km atmosphere and 25 km ocean)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'GFDL-HiRAM (Cubed-sphere (c192) - 0.5 degree nominal horizontal resolution; 768 x 384 longitude/latitude; 32 levels; top level 1 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '50 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'GFDL-LM3 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '50 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'SIT (1-D, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 50 levels with skin layer & 1 m resolution for uppermost 10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+key = 'IPSL-CM6A-ATM-HR'
+source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 80000 m)'
+key = 'IPSL-CM6A-LR'
+source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
+key = 'IPSL-CM7A-ATM-HR'
+source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 256000-point icosahedral-hexagonal; 79 levels; top level 80000 m)'
+key = 'IPSL-CM7A-ATM-LR'
+source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 80000 m)'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

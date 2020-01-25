@@ -446,8 +446,10 @@ PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com
 PJD 15 Jan 2020    - Revise source_ids MIROC-ES2H-NB, MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/856, 863
 PJD 15 Jan 2020    - Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
 PJD 15 Jan 2020    - Revise multiple IPSL-CM* source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
-                    - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
-                    - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+PJD 24 Jan 2010    - Revise experiment_id histSST-noLu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/868
+                     - TODO" Revise multiple ssp370SST-low* entries
+                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
+                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
@@ -464,7 +466,7 @@ import subprocess
 import sys
 import time
 import urllib
-sys.path.insert(0,'/sync/git/durolib/durolib') ; # trustym
+sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
 #import pyexcel_xlsx as pyx
@@ -472,7 +474,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple IPSL-CM* source_ids\"'
+commitMessage = '\"Revise experiment_id histSST-noLu\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -613,7 +615,9 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-
+key = 'histSST-noLu'
+experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
+experiment_id[key]['required_model_components'] = ['AGCM','AER']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -889,18 +893,10 @@ tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/maste
       ] ;
 source_id = readJsonCreateDict(tmp)
 source_id = source_id.get('source_id')
-source_id = source_id.get('source_id') ; # Fudge to extract duplicate level
+source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM6A-ATM-HR'
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N256; 512 x 360 longitude/latitude; 79 levels; top level 80000 m)'
-key = 'IPSL-CM6A-LR'
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6, N96; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
-key = 'IPSL-CM7A-ATM-HR'
-source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 256000-point icosahedral-hexagonal; 79 levels; top level 80000 m)'
-key = 'IPSL-CM7A-ATM-LR'
-source_id[key]['model_component']['atmos']['description'] = 'DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 80000 m)'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

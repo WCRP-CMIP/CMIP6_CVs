@@ -4342,7 +4342,6 @@
                 "AerChemMIP"
             ],
             "additional_allowed_model_components":[
-                "AER",
                 "CHEM",
                 "BGC"
             ],
@@ -4358,7 +4357,8 @@
                 "piControl"
             ],
             "required_model_components":[
-                "AOGCM"
+                "AGCM",
+                "AER"
             ],
             "start_year":"1850",
             "sub_experiment_id":[
@@ -9105,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 15 16:44:36 2020 -0800",
-        "CV_collection_version":"6.2.45.7",
+        "CV_collection_modified":"Fri Jan 24 19:31:16 2020 -0800",
+        "CV_collection_version":"6.2.46.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Dec  6 16:33:14 2019 -0800",
-        "experiment_id_CV_note":"Register CMIP5-era experiment_id entries",
+        "experiment_id_CV_note":"Revise experiment_id histSST-noLu",
         "institution_id":"PCMDI",
-        "previous_commit":"f07f21c4a1fa5b87a39d1fa51106fd7fad1583b8",
+        "previous_commit":"608c23e85eb211d7c02946a0f1e981076bdda24a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

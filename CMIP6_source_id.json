@@ -6622,6 +6622,56 @@
             "release_year":"2018",
             "source_id":"UKESM1-0-MMh"
         },
+        "UKESM1-ice-LL":{
+            "activity_participation":[
+                "ISMIP6"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "MOHC",
+                "NERC"
+            ],
+            "label":"UKESM1.ice-LL",
+            "label_extended":"UKESM1.ice-N96ORCA1",
+            "model_component":{
+                "aerosol":{
+                    "description":"UKCA-GLOMAP-mode",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JULES-ISMIP6-1.0",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"BISICLES-UKESM-ISMIP6-1.0",
+                    "native_nominal_resolution":"5 km"
+                },
+                "ocean":{
+                    "description":"NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"UKESM1-ice-LL"
+        },
         "UofT-CCSM4":{
             "activity_participation":[
                 "CMIP",
@@ -6727,13 +6777,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jan 24 19:31:16 2020 -0800",
-        "CV_collection_version":"6.2.46.0",
+        "CV_collection_modified":"Mon Jan 27 12:42:00 2020 -0800",
+        "CV_collection_version":"6.2.46.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"608c23e85eb211d7c02946a0f1e981076bdda24a",
+        "previous_commit":"f7a6da0cc8c0f450e5da94b0a9dd1d851a8e9ea9",
         "source_id_CV_modified":"Wed Jan 15 16:44:36 2020 -0800",
-        "source_id_CV_note":"Revise multiple IPSL-CM* source_ids",
+        "source_id_CV_note":"Register source_id UKESM1-ice-LL",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

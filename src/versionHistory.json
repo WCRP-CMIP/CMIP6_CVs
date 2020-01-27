@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"f07f21c4a1fa5b87a39d1fa51106fd7fad1583b8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f07f21c4a1fa5b87a39d1fa51106fd7fad1583b8",
-            "commitMessage":"Revise multiple IPSL-CM* source_ids",
-            "timeStamp":"Wed Jan 15 16:44:36 2020 -0800"
+            "MD5":"f7a6da0cc8c0f450e5da94b0a9dd1d851a8e9ea9",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f7a6da0cc8c0f450e5da94b0a9dd1d851a8e9ea9",
+            "commitMessage":"Register source_id UKESM1-ice-LL",
+            "timeStamp":"Mon Jan 27 12:42:00 2020 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":46,
             "versionCVStructure":2,
             "versionMIPEra":6

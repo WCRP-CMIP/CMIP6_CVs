@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"608c23e85eb211d7c02946a0f1e981076bdda24a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/608c23e85eb211d7c02946a0f1e981076bdda24a",
-            "commitMessage":"Revise experiment_id histSST-noLu",
-            "timeStamp":"Fri Jan 24 19:31:16 2020 -0800"
+            "MD5":"3f8f9c42d91fe3c0127de948730f03132c0922ef",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3f8f9c42d91fe3c0127de948730f03132c0922ef",
+            "commitMessage":"Revise multiple ssp370SST-low* experiment_id values",
+            "timeStamp":"Tue Jan 28 06:46:57 2020 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":1,
-            "versionCVContent":46,
+            "versionCVCommit":0,
+            "versionCVContent":47,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

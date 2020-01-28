@@ -8298,10 +8298,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced NTCF emissions",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, with low NTCF emissions",
             "experiment_id":"ssp370-lowNTCF",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8385,10 +8385,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced aerosol emissions (from ssp370-lowNTCF), prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with low aerosol emissions",
             "experiment_id":"ssp370SST-lowAer",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8414,10 +8414,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced black carbon emissions, prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with low black carbon emissions",
             "experiment_id":"ssp370SST-lowBC",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8442,10 +8442,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced CH4 concentrations, prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with low methane concentrations",
             "experiment_id":"ssp370SST-lowCH4",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8472,10 +8472,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced NTCF emissions, prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with low NTCF emissions",
             "experiment_id":"ssp370SST-lowNTCF",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8500,10 +8500,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with reduced ozone precursor emissions (from ssp370-lowNTCF), prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with low ozone precursor emissions",
             "experiment_id":"ssp370SST-lowO3",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -8530,10 +8530,10 @@
                 "BGC"
             ],
             "description":"Future SSP3-7.0 with low land use change (from ssp126), prescribed SSTs",
-            "end_year":"2055",
+            "end_year":"2100",
             "experiment":"SSP3-7.0, prescribed SSTs, with SSP1-2.6 land use",
             "experiment_id":"ssp370SST-ssp126Lu",
-            "min_number_yrs_per_sim":"41",
+            "min_number_yrs_per_sim":"86",
             "parent_activity_id":[
                 "CMIP"
             ],
@@ -9105,13 +9105,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jan 27 12:42:00 2020 -0800",
-        "CV_collection_version":"6.2.46.1",
+        "CV_collection_modified":"Tue Jan 28 06:46:57 2020 -0800",
+        "CV_collection_version":"6.2.47.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Jan 24 19:31:16 2020 -0800",
-        "experiment_id_CV_note":"Revise experiment_id histSST-noLu",
+        "experiment_id_CV_note":"Revise multiple ssp370SST-low* experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"f7a6da0cc8c0f450e5da94b0a9dd1d851a8e9ea9",
+        "previous_commit":"3f8f9c42d91fe3c0127de948730f03132c0922ef",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

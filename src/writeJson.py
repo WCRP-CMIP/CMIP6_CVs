@@ -448,6 +448,7 @@ PJD 15 Jan 2020    - Register source_ids HiRAM-SIT-HR, HiRAM-SIT-LR https://gith
 PJD 15 Jan 2020    - Revise multiple IPSL-CM* source_ids https://github.com/WCRP-CMIP/CMIP6_CVs/issues/860
 PJD 24 Jan 2020    - Revise experiment_id histSST-noLu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/868
 PJD 27 Jan 2020    - Register source_id UKESM1-ice-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/868
+PJD 28 Jan 2020    - Revise multiple ssp370SST-low* experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/867
                      - TODO" Revise multiple ssp370SST-low* entries
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
@@ -475,7 +476,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id UKESM1-ice-LL\"'
+commitMessage = '\"Revise multiple ssp370SST-low* experiment_id values\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -616,9 +617,14 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'histSST-noLu'
-experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
-experiment_id[key]['required_model_components'] = ['AGCM','AER']
+exps = ['ssp370-lowNTCF','ssp370SST-lowAer','ssp370SST-lowBC',
+        'ssp370SST-lowCH4','ssp370SST-lowNTCF', 'ssp370SST-lowO3',
+        'ssp370SST-ssp126Lu']
+for key in exps:
+    experiment_id[key]['end_year'] = '2100'
+    experiment_id[key]['min_number_yrs_per_sim'] = '86'
+    experiment_id[key]['start_year'] = '2015'
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -898,47 +904,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-ice-LL'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'ISMIP6'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'MOHC',
-'NERC'
-]
-source_id[key]['label'] = 'UKESM1.ice-LL'
-source_id[key]['label_extended'] = 'UKESM1.ice-N96ORCA1'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'UKCA-GLOMAP-mode'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'JULES-ISMIP6-1.0'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'BISICLES-UKESM-ISMIP6-1.0'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = '5 km'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2019'
-source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

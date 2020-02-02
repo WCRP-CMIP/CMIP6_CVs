@@ -5,26 +5,35 @@ Created on Fri Feb 23 13:09:26 2018
 
 PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
 PJD  2 Feb 2020     - Updated for Py3 and code styling
+PJD  2 Feb 2020     - Updated to include getGitInfo and ReadJsonCreateDict
+                      from durolib
 
 @author: durack1
 """
-#%% imports
+# %% imports
+import json
 import re
-from durolib import getGitInfo,readJsonCreateDict
+import os
+import ssl
+import subprocess
+import sys
+from urllib.request import urlopen
 
-#%% Get repo metadata
-def ascertainVersion(testVal_activity_id,testVal_experiment_id,
-                     testVal_frequency,testVal_grid_label,
-                     testVal_institution_id,testVal_license,testVal_mip_era,
-                     testVal_nominal_resolution,testVal_realm,
-                     testVal_required_global_attributes,testVal_source_id,
-                     testVal_source_type,testVal_sub_experiment_id,
-                     testVal_table_id,commitMessage):
+# %% Get repo metadata
+
+
+def ascertainVersion(testVal_activity_id, testVal_experiment_id,
+                     testVal_frequency, testVal_grid_label,
+                     testVal_institution_id, testVal_license, testVal_mip_era,
+                     testVal_nominal_resolution, testVal_realm,
+                     testVal_required_global_attributes, testVal_source_id,
+                     testVal_source_type, testVal_sub_experiment_id,
+                     testVal_table_id, commitMessage):
     # Load current history direct from repo master
     tmp = [['versionHistory',
             ' '.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/',
                       'master/src/versionHistory.json'])]
-      ]
+           ]
     versionHistory = readJsonCreateDict(tmp)
     versionHistory = versionHistory.get('versionHistory')
     # Fudge to extract duplicate level
@@ -46,15 +55,15 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
     # versionCVContent - Incremented when a change to existing content is made
     # other than “source_id” or “institution_id”
-    test1 = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
-            testVal_grid_label,testVal_license,testVal_mip_era,
-            testVal_nominal_resolution,testVal_realm,
-            testVal_required_global_attributes,testVal_source_type,
-            testVal_sub_experiment_id,testVal_table_id]
-    test2 = [testVal_institution_id,testVal_source_id]
+    test1 = [testVal_activity_id, testVal_experiment_id, testVal_frequency,
+             testVal_grid_label, testVal_license, testVal_mip_era,
+             testVal_nominal_resolution, testVal_realm,
+             testVal_required_global_attributes, testVal_source_type,
+             testVal_sub_experiment_id, testVal_table_id]
+    test2 = [testVal_institution_id, testVal_source_id]
     if any(test1):
         versionCVContent = versionHistory['versions'].get('versionCVContent')\
-        + 1
+            + 1
         versionCVCommit = 0
         # Now update versionHistory - can use list entries, as var names
         # aren't locatable
@@ -72,23 +81,23 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,
             versionHistory['mip_era']['commitMessage'] = commitMessage
         if testVal_nominal_resolution:
             versionHistory['nominal_resolution']['commitMessage'] = \
-            commitMessage
+                commitMessage
         if testVal_realm:
             versionHistory['realm']['commitMessage'] = commitMessage
         if testVal_required_global_attributes:
-            versionHistory['required_global_attributes']['commitMessage'] = \
-            commitMessage
+            versionHistory['required_global_attributes']['commitMessage'] =\
+                commitMessage
         if testVal_source_type:
             versionHistory['source_type']['commitMessage'] = commitMessage
         if testVal_sub_experiment_id:
             versionHistory['sub_experiment_id']['commitMessage'] = \
-            commitMessage
+                commitMessage
         if testVal_table_id:
             versionHistory['table_id']['commitMessage'] = commitMessage
     # versionCVCommit - Incremented whenever a new source_id and/or
     # institution_id is added or amended
     elif any(test2):
-        versionCVCommit = versionHistory['versions'].get('versionCVCommit') \
+        versionCVCommit = versionHistory['versions'].get('versionCVCommit')\
             + 1
         # Now update versionHistory - can use list entries, as var names
         # aren't locatable
@@ -102,13 +111,13 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,
     versionHistory['versions']['versionCVStructure'] = versionCVStructure
     versionHistory['versions']['versionCVContent'] = versionCVContent
     versionHistory['versions']['versionCVCommit'] = versionCVCommit
-    versions = '.'.join(str(x) for x in [versionMIPEra,versionCVStructure,
-                                         versionCVContent,versionCVCommit])
+    versions = '.'.join(str(x) for x in [versionMIPEra, versionCVStructure,
+                                         versionCVContent, versionCVCommit])
 
-    return [versionHistory,versions]
+    return [versionHistory, versions]
 
 
-def entryCheck(entry,search=re.compile(r'[^a-zA-Z0-9-]').search):
+def entryCheck(entry, search=re.compile(r'[^a-zA-Z0-9-]').search):
     return not bool(search(entry))
 
 
@@ -119,51 +128,250 @@ def getFileHistory(filePath):
         return None
     else:
         # print results
-        #for count in range(0,len(versionInfo)):
+        # for count in range(0,len(versionInfo)):
         #    print count,versionInfo[count]
         version_metadata = {}
-        version_metadata['author'] = versionInfo[4].replace('author: ','')
-        version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
+        version_metadata['author'] = versionInfo[4].replace('author: ', '')
+        version_metadata['creation_date'] = versionInfo[3].replace(
+            'date: ', '')
         version_metadata['institution_id'] = 'PCMDI'
         version_metadata['latest_tag_point'] = \
-            versionInfo[2].replace('latest_tagPoint: ','')
-        version_metadata['note'] = versionInfo[1].replace('note: ','')
+            versionInfo[2].replace('latest_tagPoint: ', '')
+        version_metadata['note'] = versionInfo[1].replace('note: ', '')
         version_metadata['previous_commit'] = \
-            versionInfo[0].replace('commit: ','')
+            versionInfo[0].replace('commit: ', '')
 
-        #print version_metadata
+        # print version_metadata
         return version_metadata
 
-def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
+
+def getGitInfo(filePath):
+    """
+    Documentation for getGitInfo():
+    -------
+    The getGitInfo() function retrieves latest commit info specified by
+    filePath
+
+    Author: Paul J. Durack : pauldurack@llnl.gov
+
+    Inputs:
+    -----
+
+    |  **filePath** - a fully qualified file which is monitored by git
+
+    Returns:
+    -------
+
+    |  **gitTag[0]** - commit hash
+    |  **gitTag[1]** - commit note
+    |  **gitTag[2]** - commit tag_point (if numeric: x.x.x)
+    |  **gitTag[3]** - commit date and time
+    |  **gitTag[4]** - commit author
+
+    Usage:
+    ------
+        >>> from durolib import getGitInfo
+        >>> gitTag = getGitInfo(filePath)
+
+    Notes:
+    -----
+    * PJD 26 Aug 2016 - Showing tags, see
+                        http://stackoverflow.com/questions/4211604/
+                        show-all-tags-in-git-log
+    * PJD 26 Aug 2016 - Added tag/release info
+    * PJD 31 Aug 2016 - Convert tag info to use describe function
+    * PJD  1 Sep 2016 - Upgrade test logic
+    * PJD 15 Nov 2016 - Broadened error case if not a valid git-tracked file
+    * PJD 28 Nov 2016 - Tweaks to get git tags registering
+    * PJD 17 Jul 2017 - Further work required to deal with tags which include
+                        '-' characters
+    ...
+    """
+    # Test current work dir
+    if os.path.isfile(filePath) or os.path.isdir(filePath):
+        currentWorkingDir = os.path.split(filePath)[0]
+        # os.chdir(currentWorkingDir) ; # Add convert to local dir
+    else:
+        print('filePath invalid, exiting')
+        return ''
+    # Get hash, author, dates and notes
+    p = subprocess.Popen(['git', 'log', '-n1', '--', filePath],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                         cwd=currentWorkingDir)
+    stdout = p.stdout.read()  # Use persistent variables for tests below
+    stderr = p.stderr.read()
+    if stdout == '' and stderr == '':
+        print('filePath not a valid git-tracked file')
+        return
+    elif 'fatal: ' in stderr:
+        print('filePath not a valid git-tracked file')
+        return
+    gitLogFull = stdout  # git full log
+    del(p)
+    gitLog = []
+    for count, gitStr in enumerate(gitLogFull.split('\n')):
+        if gitStr == '':
+            pass
+        else:
+            gitStr = gitStr.replace('   ', ' ')
+            # Trim excess whitespace in date
+            gitStr = gitStr.replace('commit ', 'commit: ')
+            if count < 3:
+                gitStr = gitStr.strip()
+                gitStr = gitStr[:1].lower() + gitStr[1:]
+                gitLog.extend([gitStr])
+                continue
+            gitLog.extend([''.join(['note: ', gitStr.strip()])])
+
+    # Get tag info
+    # p = subprocess.Popen(['git','log','-n1','--no-walk','--tags',
+    #                      '--pretty="%h %d %s"','--decorate=full',filePath],
+    p = subprocess.Popen(['git', 'describe', '--tags'],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                         cwd=currentWorkingDir)
+    gitTag = p.stdout.read()  # git tag log
+    # print 'gitTag',gitTag
+    gitTagErr = p.stderr.read()  # Catch tag-less error
+    # print 'gitTagErr',gitTagErr
+    del(filePath, p)
+    if gitTagErr.strip() == 'fatal: No names found, cannot describe anything.':
+        gitLog.extend(['latest_tagPoint: None'])
+    elif gitTag != '':
+        # Example gitTag='CMOR-3.2.5\n'
+        # https://github.com/WCRP-CMIP/CMIP6_CVs/releases/tag/CMOR-3.2.5
+        # Example gitTag='CMOR-3.2.5-42-gb07f789\n'
+        for count, gitStr in enumerate(gitTag.split('\n')):
+            # print 'count,gitStr',count,gitStr
+            if gitStr == '':
+                continue
+            #hyphInds = []; ind = 0
+            # while ind < len(gitStr):
+            #    hyphInds.append(gitStr.rfind('-',ind))
+            #    ind = gitStr.find('-',ind)
+            tagBits = gitStr.split('-')
+            # print tagBits
+            tag = tagBits[0]  # Doesn't work with 'CMOR-3.2.5\n'
+            # print tag,len(tag)
+            if gitTag.count('-') == 1:  # Case tag point e.g. 'CMOR-3.2.5\n'
+                tagPastCount = '0'
+                tagHash = gitLog[0].replace('commit: ', '')[0:7]
+                tag = gitTag.strip('\n')
+                gitLog.extend([''.join(['latest_tagPoint: ', tag,
+                                        ' (', tagPastCount, '; ', tagHash,
+                                        ')'])])
+            elif gitTag.count('-') == 2:  # Case beyond tag point
+                tagPastCount = tagBits[1]
+                tagHash = tagBits[2]
+                tag = tagBits[0]
+                gitLog.extend([''.join(['latest_tagPoint: ', tag,
+                                        ' (', tagPastCount, '; ', tagHash,
+                                        ')'])])
+            elif gitTag.count('-') == 3:  # Case beyond tag point
+                tagPastCount = tagBits[2]
+                tagHash = tagBits[3]
+                tag = gitTag.split('\n')[0]
+                gitLog.extend([''.join(['latest_tagPoint: ', tag,
+                                        ' (', tagPastCount, '; ', tagHash,
+                                        ')'])])
+            else:
+                gitLog.extend(['latest_tagPoint: ', tag])
+    else:
+        print('Tag retrieval error, exiting')
+        print('gitTag:', gitTag, len(gitTag))
+        print('gitTagErr:', gitTagErr, len(gitTagErr))
+        return ''
+
+    # Order list
+    gitLog = [gitLog[0], gitLog[3], gitLog[4], gitLog[2], gitLog[1]]
+
+    return gitLog
+
+
+def readJsonCreateDict(buildList):
+    """
+    Documentation for readJsonCreateDict(buildList).
+    -------
+    The readJsonCreateDict() function reads web-based json files and writes
+    their contents to a dictionary in memory
+
+    Author: Paul J. Durack : pauldurack@llnl.gov
+
+    The function takes a list argument with two entries. The first is the
+    variable name for the assigned dictionary, and the second is the URL
+    of the json file to be read and loaded into memory. Multiple entries
+    can be included by generating additional embedded lists
+
+    Usage:
+    ------
+        >>> from durolib import readJsonCreateDict
+        >>> tmp = readJsonCreateDict([['Omon',
+        ''.join(['https://raw.githubusercontent.com/PCMDI/',
+        'obs4MIPs-cmor-tables/master/Tables/obs4MIPs_Omon.json'])]])
+        >>> Omon = tmp.get('Omon')
+
+    Notes:
+    -----
+        ...
+    """
+    # Test for list input of length == 2
+    if len(buildList[0]) != 2:
+        print('Invalid inputs, exiting..')
+        sys.exit()
+    # Create urllib2 context to deal with lab/LLNL web certificates
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    # Iterate through buildList and write results to jsonDict
+    jsonDict = {}
+    for table in buildList:
+        # print 'Processing:',table[0]
+        # Read web file
+        jsonOutput = urlopen(table[1], context=ctx)
+        tmp = jsonOutput.read()
+        vars()[table[0]] = tmp
+        jsonOutput.close()
+        # Write local json
+        tmpFile = open('tmp.json', 'w')
+        tmpFile.write(eval(table[0]))
+        tmpFile.close()
+        # Read local json
+        vars()[table[0]] = json.load(open('tmp.json', 'r'))
+        os.remove('tmp.json')
+        jsonDict[table[0]] = eval(table[0])  # Write to dictionary
+
+    return jsonDict
+
+
+def versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory):
     url = 'https://github.com/WCRP-CMIP/CMIP6_CVs/commit/'
-    commitMessage = commitMessage.replace('\"','')  # Wash out extraneous
+    commitMessage = commitMessage.replace('\"', '')  # Wash out extraneous
     # \" characters
     versionHistory[key]['commitMessage'] = commitMessage
     versionHistory[key]['timeStamp'] = timeStamp
-    versionHistory[key]['URL'] = ''.join([url,MD5])
+    versionHistory[key]['URL'] = ''.join([url, MD5])
     versionHistory[key]['MD5'] = MD5
 
     return versionHistory
 
 
-#%% Clean functions
+# %% Clean functions
 def cleanString(string):
-    if isinstance(string,str):
-    # Take a string and clean it for standard errors
+    if isinstance(string, str):
+        # Take a string and clean it for standard errors
         string = string.strip()  # Remove trailing whitespace
         string = string.strip(',.')  # Remove trailing characters
         string = string.replace(' + ', ' and ')  # Replace +
         string = string.replace(' & ', ' and ')  # Replace +
         string = string.replace('   ', ' ')  # Replace '  ', '   '
         string = string.replace('  ', ' ')  # Replace '  ', '   '
-        string = string.replace('None','none')  # Replace None, none
-        string = string.replace('abrupt4xCO2','abrupt-4xCO2')
-        #string = string.replace('(&C', '(and C') # experiment_id html fix
-        #string = string.replace('(& ','(and ') # experiment_id html fix
+        string = string.replace('None', 'none')  # Replace None, none
+        string = string.replace('abrupt4xCO2', 'abrupt-4xCO2')
+        # string = string.replace('(&C', '(and C') # experiment_id html fix
+        # string = string.replace('(& ','(and ') # experiment_id html fix
         #string = string.replace('GHG&ODS','GHG and ODS')
         # experiment_id html fix
-        #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
-        #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
+        # string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
+        # string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
     else:
         print('Non-string argument, aborting..')
         print(string)
@@ -180,13 +388,13 @@ def dictDepth(x):
     return 0
 
 
-#You can walk a nested dictionary using recursion
+# You can walk a nested dictionary using recursion
 def walk_dict(dictionary):
     for key in dictionary:
         if isinstance(dictionary[key], dict):
             walk_dict(dictionary[key])
         else:
-            #do something with dictionary[k]
+            # do something with dictionary[k]
             pass
 
 

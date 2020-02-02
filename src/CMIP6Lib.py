@@ -1,9 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env
 # -*- coding: utf-8 -*-
 """
 Created on Fri Feb 23 13:09:26 2018
 
 PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
+PJD  2 Feb 2020     - Updated for Py3 and code styling
 
 @author: durack1
 """
@@ -12,18 +13,22 @@ import re
 from durolib import getGitInfo,readJsonCreateDict
 
 #%% Get repo metadata
-def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency,
-                     testVal_grid_label,testVal_institution_id,testVal_license,
-                     testVal_mip_era,testVal_nominal_resolution,testVal_realm,
+def ascertainVersion(testVal_activity_id,testVal_experiment_id,
+                     testVal_frequency,testVal_grid_label,
+                     testVal_institution_id,testVal_license,testVal_mip_era,
+                     testVal_nominal_resolution,testVal_realm,
                      testVal_required_global_attributes,testVal_source_id,
-                     testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
-                     commitMessage):
+                     testVal_source_type,testVal_sub_experiment_id,
+                     testVal_table_id,commitMessage):
     # Load current history direct from repo master
-    tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
-      ] ;
+    tmp = [['versionHistory',
+            ' '.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/',
+                      'master/src/versionHistory.json'])]
+      ]
     versionHistory = readJsonCreateDict(tmp)
     versionHistory = versionHistory.get('versionHistory')
-    versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+    # Fudge to extract duplicate level
+    versionHistory = versionHistory.get('versionHistory')
     del(tmp)
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
@@ -31,13 +36,16 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionCVCommit = versionHistory['versions'].get('versionCVCommit')
 
     # Deal with commitMessage formatting
-    commitMessage = commitMessage.replace('\"','')
+    commitMessage = commitMessage.replace('\"', '')
 
-    # versionMIPEra - CMIP6 id - The first integer is “6”, indicating the CV collection is for use in CMIP6
+    # versionMIPEra - CMIP6 id - The first integer is “6”, indicating the CV
+    # collection is for use in CMIP6
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
-    # versionCVStructure - Incremented when the structure/format of CV’s changes or a new CV is added
+    # versionCVStructure - Incremented when the structure/format of CV’s
+    # changes or a new CV is added
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
-    # versionCVContent - Incremented when a change to existing content is made other than “source_id” or “institution_id”
+    # versionCVContent - Incremented when a change to existing content is made
+    # other than “source_id” or “institution_id”
     test1 = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
             testVal_grid_label,testVal_license,testVal_mip_era,
             testVal_nominal_resolution,testVal_realm,
@@ -45,9 +53,11 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
             testVal_sub_experiment_id,testVal_table_id]
     test2 = [testVal_institution_id,testVal_source_id]
     if any(test1):
-        versionCVContent = versionHistory['versions'].get('versionCVContent') + 1
+        versionCVContent = versionHistory['versions'].get('versionCVContent')\
+        + 1
         versionCVCommit = 0
-        # Now update versionHistory - can use list entries, as var names aren't locatable
+        # Now update versionHistory - can use list entries, as var names
+        # aren't locatable
         if testVal_activity_id:
             versionHistory['activity_id']['commitMessage'] = commitMessage
         if testVal_experiment_id:
@@ -61,21 +71,27 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
         if testVal_mip_era:
             versionHistory['mip_era']['commitMessage'] = commitMessage
         if testVal_nominal_resolution:
-            versionHistory['nominal_resolution']['commitMessage'] = commitMessage
+            versionHistory['nominal_resolution']['commitMessage'] = \
+            commitMessage
         if testVal_realm:
             versionHistory['realm']['commitMessage'] = commitMessage
         if testVal_required_global_attributes:
-            versionHistory['required_global_attributes']['commitMessage'] = commitMessage
+            versionHistory['required_global_attributes']['commitMessage'] = \
+            commitMessage
         if testVal_source_type:
             versionHistory['source_type']['commitMessage'] = commitMessage
         if testVal_sub_experiment_id:
-            versionHistory['sub_experiment_id']['commitMessage'] = commitMessage
+            versionHistory['sub_experiment_id']['commitMessage'] = \
+            commitMessage
         if testVal_table_id:
             versionHistory['table_id']['commitMessage'] = commitMessage
-    # versionCVCommit - Incremented whenever a new source_id and/or institution_id is added or amended
+    # versionCVCommit - Incremented whenever a new source_id and/or
+    # institution_id is added or amended
     elif any(test2):
-        versionCVCommit = versionHistory['versions'].get('versionCVCommit') + 1
-        # Now update versionHistory - can use list entries, as var names aren't locatable
+        versionCVCommit = versionHistory['versions'].get('versionCVCommit') \
+            + 1
+        # Now update versionHistory - can use list entries, as var names
+        # aren't locatable
         if testVal_institution_id:
             versionHistory['institution_id']['commitMessage'] = commitMessage
         if testVal_source_id:
@@ -86,7 +102,8 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionHistory['versions']['versionCVStructure'] = versionCVStructure
     versionHistory['versions']['versionCVContent'] = versionCVContent
     versionHistory['versions']['versionCVCommit'] = versionCVCommit
-    versions = '.'.join(str(x) for x in [versionMIPEra,versionCVStructure,versionCVContent,versionCVCommit])
+    versions = '.'.join(str(x) for x in [versionMIPEra,versionCVStructure,
+                                         versionCVContent,versionCVCommit])
 
     return [versionHistory,versions]
 
@@ -104,21 +121,23 @@ def getFileHistory(filePath):
         # print results
         #for count in range(0,len(versionInfo)):
         #    print count,versionInfo[count]
-
         version_metadata = {}
         version_metadata['author'] = versionInfo[4].replace('author: ','')
         version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
         version_metadata['institution_id'] = 'PCMDI'
-        version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
+        version_metadata['latest_tag_point'] = \
+            versionInfo[2].replace('latest_tagPoint: ','')
         version_metadata['note'] = versionInfo[1].replace('note: ','')
-        version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
+        version_metadata['previous_commit'] = \
+            versionInfo[0].replace('commit: ','')
 
         #print version_metadata
         return version_metadata
 
 def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
     url = 'https://github.com/WCRP-CMIP/CMIP6_CVs/commit/'
-    commitMessage = commitMessage.replace('\"','') ; # Wash out extraneous\" characters
+    commitMessage = commitMessage.replace('\"','')  # Wash out extraneous
+    # \" characters
     versionHistory[key]['commitMessage'] = commitMessage
     versionHistory[key]['timeStamp'] = timeStamp
     versionHistory[key]['URL'] = ''.join([url,MD5])
@@ -129,7 +148,7 @@ def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
 
 #%% Clean functions
 def cleanString(string):
-    if isinstance(string,str) or isinstance(string,unicode):
+    if isinstance(string,str):
     # Take a string and clean it for standard errors
         string = string.strip()  # Remove trailing whitespace
         string = string.strip(',.')  # Remove trailing characters
@@ -141,12 +160,13 @@ def cleanString(string):
         string = string.replace('abrupt4xCO2','abrupt-4xCO2')
         #string = string.replace('(&C', '(and C') # experiment_id html fix
         #string = string.replace('(& ','(and ') # experiment_id html fix
-        #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
+        #string = string.replace('GHG&ODS','GHG and ODS')
+        # experiment_id html fix
         #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
         #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
     else:
-        print 'Non-string argument, aborting..'
-        print string
+        print('Non-string argument, aborting..')
+        print(string)
         return string
 
     return string
@@ -164,16 +184,19 @@ def dictDepth(x):
 def walk_dict(dictionary):
     for key in dictionary:
         if isinstance(dictionary[key], dict):
-           walk_dict(dictionary[key])
+            walk_dict(dictionary[key])
         else:
-           #do something with dictionary[k]
-           pass
+            #do something with dictionary[k]
+            pass
 
 
-''' Notes
+'''
+Notes
 
-#import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'), pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
-# pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and unidecode ('conda install unidecode')
+#import pyexcel_xlsx as pyx ; # requires openpyxl ('pip install openpyxl'),
+# pyexcel-io ('git clone https://github.com/pyexcel/pyexcel-io')
+# pyexcel-xlsx ('git clone https://github.com/pyexcel/pyexcel-xlsx'), and
+# unidecode ('conda install unidecode')
 #from string import replace
 #from unidecode import unidecode
 #import pdb
@@ -226,23 +249,27 @@ for count in range(4,len(data)):
             elif value == 'no parent':
                 pass
             elif 'no parent,' in value:
-                value = ['no parent',replace(value,'no parent,','').strip()] ; # deal with multiple entries (including 'no parent')
+                value = ['no parent',replace(value,'no parent,','').strip()]
+                # deal with multiple entries (including 'no parent')
                 pass
             else:
                 value = replace(value,',','') ; # remove ','
                 value = value.split() ; # Change type to list
                 #print value
         if type(value) == long:
-            experiment_id[key][entry] = str(value) ; #replace(str(value),' ','')
+            experiment_id[key][entry] = str(value)
+            #replace(str(value),' ','')
         elif type(value) == list:
             experiment_id[key][entry] = value
         elif value == None:
-            experiment_id[key][entry] = '' ; # changed from none to preserve blank entries
+            experiment_id[key][entry] = '' ;
+            # changed from none to preserve blank entries
         else:
             value = replace(value,'    ',' ') ; # replace whitespace
             value = replace(value,'   ',' ') ; # replace whitespace
             value = replace(value,'  ',' ') ; # replace whitespace
-            experiment_id[key][entry] = unidecode(value) ; #replace(unidecode(value),' ','')
+            experiment_id[key][entry] = unidecode(value)
+            #replace(unidecode(value),' ','')
             try:
                 unidecode(value)
             except:

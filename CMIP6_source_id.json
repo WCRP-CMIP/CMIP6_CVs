@@ -4925,19 +4925,19 @@
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"CHASER4.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"500 km"
                 },
                 "land":{
                     "description":"MATSIRO6.0+VISIT-e ver.1.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -4975,19 +4975,19 @@
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
                     "description":"CHASER4.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"500 km"
                 },
                 "land":{
                     "description":"MATSIRO6",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -5034,7 +5034,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
-                    "native_nominal_resolution":"250 km"
+                    "native_nominal_resolution":"500 km"
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)",
@@ -5046,7 +5046,7 @@
                 },
                 "land":{
                     "description":"MATSIRO6.0+VISIT-e ver.1.0",
-                    "native_nominal_resolution":"250 km"
+                    "native_nominal_resolution":"500 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -5098,7 +5098,7 @@
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
                     "description":"CCSR AGCM (T85; 256 x 128 longitude/latitude; 81 levels; top level 0.004 hPa)",
@@ -5110,7 +5110,7 @@
                 },
                 "land":{
                     "description":"MATSIRO6.0",
-                    "native_nominal_resolution":"100 km"
+                    "native_nominal_resolution":"250 km"
                 },
                 "landIce":{
                     "description":"none",
@@ -6777,13 +6777,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Sun Feb  2 17:09:44 2020 -0800",
-        "CV_collection_version":"6.2.48.0",
+        "CV_collection_modified":"Sun Feb  2 17:21:05 2020 -0800",
+        "CV_collection_version":"6.2.48.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c6d80f0eda1cb9074068e66877b5c52f56b89b91",
+        "previous_commit":"99b8845a4ae5130db9fd3f06aa0ad964dfe61d05",
         "source_id_CV_modified":"Mon Jan 27 12:42:00 2020 -0800",
-        "source_id_CV_note":"Register source_id UKESM1-ice-LL",
+        "source_id_CV_note":"Revise multiple MIROC source_id entries",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

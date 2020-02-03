@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"3f8f9c42d91fe3c0127de948730f03132c0922ef",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3f8f9c42d91fe3c0127de948730f03132c0922ef",
-            "commitMessage":"Revise multiple ssp370SST-low* experiment_id values",
-            "timeStamp":"Tue Jan 28 06:46:57 2020 -0800"
+            "MD5":"c6d80f0eda1cb9074068e66877b5c52f56b89b91",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c6d80f0eda1cb9074068e66877b5c52f56b89b91",
+            "commitMessage":"Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4",
+            "timeStamp":"Sun Feb  2 17:09:44 2020 -0800"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -86,7 +86,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":47,
+            "versionCVContent":48,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

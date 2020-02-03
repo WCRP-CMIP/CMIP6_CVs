@@ -8318,6 +8318,35 @@
             ],
             "tier":"1"
         },
+        "ssp370-lowNTCFCH4":{
+            "activity_id":[
+                "AerChemMIP"
+            ],
+            "additional_allowed_model_components":[
+                "CHEM",
+                "BGC"
+            ],
+            "description":"This experiment is identical to ssp370-lowNTCF except that the methane concentrations also follow the \"low\" scenario from SSP3-7.0_lowNTCF",
+            "end_year":"2100",
+            "experiment":"SSP3-7.0, with low NTCF emissions and methane concentrations",
+            "experiment_id":"ssp370-lowNTCFCH4",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AGCM",
+                "AER"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "ssp370-ssp126Lu":{
             "activity_id":[
                 "LUMIP"
@@ -8491,6 +8520,35 @@
                 "none"
             ],
             "tier":"1"
+        },
+        "ssp370SST-lowNTCFCH4":{
+            "activity_id":[
+                "AerChemMIP"
+            ],
+            "additional_allowed_model_components":[
+                "CHEM",
+                "BGC"
+            ],
+            "description":"This experiment is identical to ssp370SST-lowNTCF except that the methane concentrations also follow the \"low\" scenario from SSP3-7.0_lowNTCF",
+            "end_year":"2100",
+            "experiment":"SSP3-7.0, prescribed SSTs, with low NTCF emissions and methane concentrations",
+            "experiment_id":"ssp370SST-lowNTCFCH4",
+            "min_number_yrs_per_sim":"86",
+            "parent_activity_id":[
+                "CMIP"
+            ],
+            "parent_experiment_id":[
+                "historical"
+            ],
+            "required_model_components":[
+                "AGCM",
+                "AER"
+            ],
+            "start_year":"2015",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
         },
         "ssp370SST-lowO3":{
             "activity_id":[
@@ -9105,13 +9163,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 28 06:46:57 2020 -0800",
-        "CV_collection_version":"6.2.47.0",
+        "CV_collection_modified":"Sun Feb  2 17:09:44 2020 -0800",
+        "CV_collection_version":"6.2.48.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Fri Jan 24 19:31:16 2020 -0800",
-        "experiment_id_CV_note":"Revise multiple ssp370SST-low* experiment_id values",
+        "experiment_id_CV_modified":"Tue Jan 28 06:46:57 2020 -0800",
+        "experiment_id_CV_note":"Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4",
         "institution_id":"PCMDI",
-        "previous_commit":"3f8f9c42d91fe3c0127de948730f03132c0922ef",
+        "previous_commit":"c6d80f0eda1cb9074068e66877b5c52f56b89b91",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -8,7 +8,8 @@ PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
 @author: durack1
 """
 #%% imports
-import re
+import re, sys
+sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
 from durolib import getGitInfo,readJsonCreateDict
 
 #%% Get repo metadata

@@ -449,7 +449,7 @@ PJD 15 Jan 2020    - Revise multiple IPSL-CM* source_ids https://github.com/WCRP
 PJD 24 Jan 2020    - Revise experiment_id histSST-noLu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/868
 PJD 27 Jan 2020    - Register source_id UKESM1-ice-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/868
 PJD 28 Jan 2020    - Revise multiple ssp370SST-low* experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/867
-                     - TODO" Revise multiple ssp370SST-low* entries
+PJD  2 Feb 2020    - Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/873
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -476,7 +476,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple ssp370SST-low* experiment_id values\"'
+commitMessage = '\"Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -617,13 +617,36 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-exps = ['ssp370-lowNTCF','ssp370SST-lowAer','ssp370SST-lowBC',
-        'ssp370SST-lowCH4','ssp370SST-lowNTCF', 'ssp370SST-lowO3',
-        'ssp370SST-ssp126Lu']
-for key in exps:
-    experiment_id[key]['end_year'] = '2100'
-    experiment_id[key]['min_number_yrs_per_sim'] = '86'
-    experiment_id[key]['start_year'] = '2015'
+key = 'ssp370-lowNTCFCH4'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['AerChemMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
+experiment_id[key]['description'] = 'This experiment is identical to ssp370-lowNTCF except that the methane concentrations also follow the "low" scenario from SSP3-7.0_lowNTCF'
+experiment_id[key]['end_year'] = '2100'
+experiment_id[key]['experiment'] = 'SSP3-7.0, with low NTCF emissions and methane concentrations'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical']
+experiment_id[key]['required_model_components'] = ['AGCM','AER']
+experiment_id[key]['start_year'] = '2015'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'ssp370SST-lowNTCFCH4'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['AerChemMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['CHEM','BGC']
+experiment_id[key]['description'] = 'This experiment is identical to ssp370SST-lowNTCF except that the methane concentrations also follow the "low" scenario from SSP3-7.0_lowNTCF'
+experiment_id[key]['end_year'] = '2100'
+experiment_id[key]['experiment'] = 'SSP3-7.0, prescribed SSTs, with low NTCF emissions and methane concentrations'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '86'
+experiment_id[key]['parent_activity_id'] = ['CMIP']
+experiment_id[key]['parent_experiment_id'] = ['historical']
+experiment_id[key]['required_model_components'] = ['AGCM','AER']
+experiment_id[key]['start_year'] = '2015'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
 
 #==============================================================================
 # Example new experiment_id entry

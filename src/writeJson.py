@@ -451,6 +451,7 @@ PJD 27 Jan 2020    - Register source_id UKESM1-ice-LL https://github.com/WCRP-CM
 PJD 28 Jan 2020    - Revise multiple ssp370SST-low* experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/867
 PJD  2 Feb 2020    - Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/873
 PJD  2 Feb 2020    - Revise multiple MIROC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/874
+PJD  4 Mar 2020    - Revise source_id MIROC-ES2H-NB https://github.com/WCRP-CMIP/CMIP6_CVs/issues/880
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -477,7 +478,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise multiple MIROC source_id entries\"'
+commitMessage = '\"Revise source_id MIROC-ES2H-NB\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -898,22 +899,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC-ES2H'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
 key = 'MIROC-ES2H-NB'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-key = 'MIROC-ES2L'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '500 km'
-key = 'MIROC6'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0 (T42; 128 x 64 longitude/latitude; 81 levels; top level 0.004 hPa)'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

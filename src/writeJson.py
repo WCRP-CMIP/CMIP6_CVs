@@ -452,6 +452,7 @@ PJD 28 Jan 2020    - Revise multiple ssp370SST-low* experiment_id values https:/
 PJD  2 Feb 2020    - Register AerChemMIP experiment_id values ssp370-lowNTCFCH4, ssp370SST-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/873
 PJD  2 Feb 2020    - Revise multiple MIROC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/874
 PJD  4 Mar 2020    - Revise source_id MIROC-ES2H-NB https://github.com/WCRP-CMIP/CMIP6_CVs/issues/880
+PJD  4 Mar 2020    - Register source_id IPSL-CM6A-LR-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/882
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -478,7 +479,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MIROC-ES2H-NB\"'
+commitMessage = '\"Register source_id IPSL-CM6A-LR-INCA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -899,9 +900,89 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC-ES2H-NB'
-source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0 (T42; 128 x 64 longitude/latitude; 81 levels; top level 0.004 hPa)'
+'''
+key = 'IPSL-CM5A2-INCA'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'AerChemMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'IPSL'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'INCA v6 NMHC-AER-S'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'LMDZ (APv5; 96 x 96 longitude/latitude; 39 levels; top level 80000 m)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '500 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'INCA v6 NMHC-AER-S'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '500 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (IPSLCM5A2.1, Water/Carbon/Energy mode)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '500 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (v3.6, ORCA2 curvilinear grid; 2 degrees up to 0.5deg tropics; 31 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES v2.0'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM v2'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
+'''
 
+key = 'IPSL-CM6A-LR-INCA'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'AerChemMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'IPSL'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'INCA v6 AER'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'none'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.0, Water/Carbon/Energy mode)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM3'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2019'
+source_id[key]['source_id'] = key
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
@@ -1086,6 +1167,8 @@ for key in source_id.keys():
     if 'CMIP' not in val:
         if key in RFMIPOnlyList:
             print(key,'RFMIP only - continue')
+        elif 'AerChemMIP' in val: # Case AerChemMIP only - IPSL-CM6A-LR-INCA
+            print(key,'AerChemMIP no CMIP required - continue')
         elif 'FAFMIP' in val: # Case FAFMIP only - GFDL-ESM2M
             print(key,'OMIP no CMIP required - continue')
         elif 'HighResMIP' in val: # Case HighResMIP only

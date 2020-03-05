@@ -4496,6 +4496,55 @@
             "release_year":"2016",
             "source_id":"INM-CM5-H"
         },
+        "IPSL-CM5A2-INCA":{
+            "activity_participation":[
+                "AerChemMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"IPSL-CM5A2-INCA",
+            "label_extended":"IPSL-CM5A2-INCA",
+            "model_component":{
+                "aerosol":{
+                    "description":"INCA v6 NMHC-AER-S",
+                    "native_nominal_resolution":"500 km"
+                },
+                "atmos":{
+                    "description":"LMDZ (APv5; 96 x 96 longitude/latitude; 39 levels; top level 80000 m)",
+                    "native_nominal_resolution":"500 km"
+                },
+                "atmosChem":{
+                    "description":"INCA v6 NMHC-AER-S",
+                    "native_nominal_resolution":"500 km"
+                },
+                "land":{
+                    "description":"ORCHIDEE (IPSLCM5A2.1, Water/Carbon/Energy mode)",
+                    "native_nominal_resolution":"500 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"NEMO-OPA (v3.6, ORCA2 tripolar primarily 2deg; 182 x 149 longitude/latitude; 31 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "ocnBgchem":{
+                    "description":"NEMO-PISCES",
+                    "native_nominal_resolution":"250 km"
+                },
+                "seaIce":{
+                    "description":"NEMO-LIM2",
+                    "native_nominal_resolution":"250 km"
+                }
+            },
+            "release_year":"2019",
+            "source_id":"IPSL-CM5A2-INCA"
+        },
         "IPSL-CM6A-ATM-HR":{
             "activity_participation":[
                 "HighResMIP"
@@ -6826,13 +6875,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Mar  4 15:07:05 2020 -0800",
-        "CV_collection_version":"6.2.48.3",
+        "CV_collection_modified":"Thu Mar  5 15:50:04 2020 -0800",
+        "CV_collection_version":"6.2.48.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"85ad73423edd7dc1fe87b57f4501703d2d4b5a46",
-        "source_id_CV_modified":"Wed Mar  4 14:41:44 2020 -0800",
-        "source_id_CV_note":"Register source_id IPSL-CM6A-LR-INCA",
+        "previous_commit":"beb8eef9c9bab552efca5be2be6424dad49bcace",
+        "source_id_CV_modified":"Wed Mar  4 15:07:05 2020 -0800",
+        "source_id_CV_note":"Register source_id IPSL-CM5A2-INCA",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

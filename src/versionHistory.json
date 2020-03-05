@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"85ad73423edd7dc1fe87b57f4501703d2d4b5a46",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/85ad73423edd7dc1fe87b57f4501703d2d4b5a46",
-            "commitMessage":"Register source_id IPSL-CM6A-LR-INCA",
-            "timeStamp":"Wed Mar  4 15:07:05 2020 -0800"
+            "MD5":"beb8eef9c9bab552efca5be2be6424dad49bcace",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/beb8eef9c9bab552efca5be2be6424dad49bcace",
+            "commitMessage":"Register source_id IPSL-CM5A2-INCA",
+            "timeStamp":"Thu Mar  5 15:50:04 2020 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":3,
+            "versionCVCommit":4,
             "versionCVContent":48,
             "versionCVStructure":2,
             "versionMIPEra":6

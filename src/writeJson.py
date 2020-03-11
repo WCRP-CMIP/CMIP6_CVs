@@ -454,6 +454,7 @@ PJD  2 Feb 2020    - Revise multiple MIROC source_id entries https://github.com/
 PJD  4 Mar 2020    - Revise source_id MIROC-ES2H-NB https://github.com/WCRP-CMIP/CMIP6_CVs/issues/880
 PJD  4 Mar 2020    - Register source_id IPSL-CM6A-LR-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/882
 PJD  4 Mar 2020    - Register source_id IPSL-CM5A2-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/881
+PJD 11 Mar 2020    - Revise experiment_id histSST-noLu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/739
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -480,7 +481,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id IPSL-CM5A2-INCA\"'
+commitMessage = '\"Revise experiment_id histSST-noLu\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -621,7 +622,9 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-
+key = 'histSST-noLu'
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM','BGC']
+experiment_id[key]['required_model_components'] = ['AGCM']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -901,46 +904,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM5A2-INCA'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'AerChemMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'IPSL'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'INCA v6 NMHC-AER-S'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (APv5; 96 x 96 longitude/latitude; 39 levels; top level 80000 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'INCA v6 NMHC-AER-S'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (IPSLCM5A2.1, Water/Carbon/Energy mode)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '500 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (v3.6, ORCA2 tripolar primarily 2deg; 182 x 149 longitude/latitude; 31 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM2'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
-source_id[key]['release_year'] = '2019'
-source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

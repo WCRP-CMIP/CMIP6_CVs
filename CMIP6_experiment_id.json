@@ -7552,7 +7552,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"DECK: control (CMIP5-era [1850-2005] forcing)",
+            "description":"DECK: control (CMIP5-era pre-industrial forcing)",
             "end_year":"",
             "experiment":"pre-industrial control (CMIP5-era [1850-2005] forcing)",
             "experiment_id":"piControl-cmip5",
@@ -7610,7 +7610,7 @@
                 "CHEM",
                 "BGC"
             ],
-            "description":"DECK: spin-up portion of the control (CMIP5-era [1850-2005] forcing)",
+            "description":"DECK: spin-up portion of the control (CMIP5-era pre-industrial forcing)",
             "end_year":"",
             "experiment":"pre-industrial control (spin-up; CMIP5-era [1850-2005] forcing)",
             "experiment_id":"piControl-spinup-cmip5",
@@ -9163,13 +9163,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 19 19:31:26 2020 -0700",
-        "CV_collection_version":"6.2.49.2",
+        "CV_collection_modified":"Thu Mar 19 19:39:28 2020 -0700",
+        "CV_collection_version":"6.2.50.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed Mar 11 15:21:42 2020 -0700",
-        "experiment_id_CV_note":"Revise experiment_id histSST-noLu",
+        "experiment_id_CV_note":"Revise *-cmip5 experiment_id values",
         "institution_id":"PCMDI",
-        "previous_commit":"2c8c56496ec61c55c085faf27cbdfc142a5ba7d1",
+        "previous_commit":"cde29df994eebac66193311a61479da4c58ca0ce",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

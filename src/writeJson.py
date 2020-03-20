@@ -455,6 +455,7 @@ PJD  4 Mar 2020    - Revise source_id MIROC-ES2H-NB https://github.com/WCRP-CMIP
 PJD  4 Mar 2020    - Register source_id IPSL-CM6A-LR-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/882
 PJD  4 Mar 2020    - Register source_id IPSL-CM5A2-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/881
 PJD 11 Mar 2020    - Revise experiment_id histSST-noLu https://github.com/WCRP-CMIP/CMIP6_CVs/issues/739
+PJD 19 Mar 2020    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/889
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -481,7 +482,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id histSST-noLu\"'
+commitMessage = '\"Revise source_id ACCESS-ESM1-5\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -904,7 +905,16 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key = 'ACCESS-ESM1-5'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP'
+]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

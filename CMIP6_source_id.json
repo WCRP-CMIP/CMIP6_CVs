@@ -5031,7 +5031,7 @@
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
-                    "description":"CHASER4.0",
+                    "description":"CHASER4.0 (T42; 128 x 64 longitude/latitude; 81 levels; top level 0.004 hPa)",
                     "native_nominal_resolution":"500 km"
                 },
                 "land":{
@@ -6879,13 +6879,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 19 19:39:28 2020 -0700",
-        "CV_collection_version":"6.2.50.0",
+        "CV_collection_modified":"Fri Apr  3 16:52:58 2020 -0700",
+        "CV_collection_version":"6.2.50.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"cde29df994eebac66193311a61479da4c58ca0ce",
+        "previous_commit":"8cb260bc160000fe42d6f0de65d526d66f123023",
         "source_id_CV_modified":"Thu Mar 19 19:31:26 2020 -0700",
-        "source_id_CV_note":"Revise source_id NorESM2-LM",
+        "source_id_CV_note":"Revise source_id MIROC-ES2H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

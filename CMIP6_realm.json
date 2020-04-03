@@ -10,8 +10,8 @@
         "seaIce":"Sea Ice"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr  3 16:52:40 2020 -0700",
-        "CV_collection_version":"6.2.50.0",
+        "CV_collection_modified":"Fri Apr  3 16:52:58 2020 -0700",
+        "CV_collection_version":"6.2.50.1",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"8cb260bc160000fe42d6f0de65d526d66f123023",

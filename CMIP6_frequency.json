@@ -18,13 +18,13 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr  3 16:52:58 2020 -0700",
-        "CV_collection_version":"6.2.50.1",
+        "CV_collection_modified":"Wed Apr 22 16:34:45 2020 -0700",
+        "CV_collection_version":"6.2.50.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "frequency_CV_modified":"Fri Oct 27 14:03:00 2017 -0700",
         "frequency_CV_note":"Issue414 durack1 revise frequency 1hrCM definition (#418)",
         "institution_id":"PCMDI",
-        "previous_commit":"8cb260bc160000fe42d6f0de65d526d66f123023",
+        "previous_commit":"c8afb29d50737d1073ee8a3c64ee89d92946cb9a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

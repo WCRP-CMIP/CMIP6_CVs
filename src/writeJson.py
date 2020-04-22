@@ -459,6 +459,7 @@ PJD 19 Mar 2020    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP
 PJD 19 Mar 2020    - Revise source_id NorESM2-LM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/890
 PJD 19 Mar 2020    - Revise *-cmip5 experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD  3 Apr 2020    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/896
+PJD 22 Apr 2020    - Revise source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/901
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -485,7 +486,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MIROC-ES2H\"'
+commitMessage = '\"Revise source_id IPSL-CM6A-LR\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -909,8 +910,25 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MIROC-ES2H'
-source_id[key]['model_component']['atmosChem']['description'] = 'CHASER4.0 (T42; 128 x 64 longitude/latitude; 81 levels; top level 0.004 hPa)'
+key = 'IPSL-CM6A-LR'
+source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'DCPP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PAMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
+]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

@@ -460,6 +460,7 @@ PJD 19 Mar 2020    - Revise source_id NorESM2-LM https://github.com/WCRP-CMIP/CM
 PJD 19 Mar 2020    - Revise *-cmip5 experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/805
 PJD  3 Apr 2020    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/896
 PJD 22 Apr 2020    - Revise source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/901
+PJD 23 Apr 2020    - Revise source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/901
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -920,6 +921,7 @@ source_id[key]['activity_participation'] = [
  'FAFMIP',
  'GMMIP',
  'GeoMIP',
+ 'HighResMIP',
  'LS3MIP',
  'LUMIP',
  'OMIP',

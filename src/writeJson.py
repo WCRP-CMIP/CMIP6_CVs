@@ -920,7 +920,6 @@ source_id[key]['activity_participation'] = [
  'CMIP',
  'OMIP',
  'PAMIP',
- 'HighResMIP',
  'SIMIP',
  'ScenarioMIP'
 ]

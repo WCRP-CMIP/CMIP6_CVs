@@ -3656,7 +3656,6 @@
                 "CMIP",
                 "OMIP",
                 "PAMIP",
-                "HighResMIP",
                 "SIMIP",
                 "ScenarioMIP"
             ],
@@ -6889,11 +6888,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Apr 28 11:37:09 2020 -0700",
+        "CV_collection_modified":"Tue Apr 28 11:38:47 2020 -0700",
         "CV_collection_version":"6.2.50.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a8de06f5a62bce6710d4dd366df5614163deba0f",
+        "previous_commit":"cde52243349da9f2f8fd31ded6f66a64b29ab79b",
         "source_id_CV_modified":"Fri Apr 24 06:33:08 2020 -0700",
         "source_id_CV_note":"Revise source_id GISS-E2-1-H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

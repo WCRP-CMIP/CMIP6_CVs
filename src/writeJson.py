@@ -464,6 +464,7 @@ PJD 23 Apr 2020    - Revise source_id IPSL-CM6A-LR https://github.com/WCRP-CMIP/
 PJD 23 Apr 2020    - Revise source_id MCM-UA-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/907
 PJD 24 Apr 2020    - Revise multiple CNRM- source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/903
 PJD 28 Apr 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/905
+PJD 28 Apr 2020    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/902
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -490,7 +491,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id GISS-E2-1-H\"'
+commitMessage = '\"Revise source_id CanESM5\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -914,14 +915,29 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GISS-E2-1-H'
+key = 'CanESM5'
 source_id[key]['activity_participation'] = [
+ 'C4MIP',
+ 'CDRMIP',
  'CFMIP',
  'CMIP',
+ 'CORDEX',
+ 'DAMIP',
+ 'DCPP',
+ 'DynVarMIP',
+ 'FAFMIP',
+ 'GMMIP',
+ 'GeoMIP',
+ 'ISMIP6',
+ 'LS3MIP',
+ 'LUMIP',
  'OMIP',
  'PAMIP',
+ 'RFMIP',
  'SIMIP',
- 'ScenarioMIP'
+ 'ScenarioMIP',
+ 'VIACSAB',
+ 'VolMIP'
 ]
 
 #============================================

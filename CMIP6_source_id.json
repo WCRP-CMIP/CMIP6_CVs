@@ -3652,6 +3652,7 @@
         },
         "GISS-E2-1-H":{
             "activity_participation":[
+                "CFMIP",
                 "CMIP",
                 "OMIP",
                 "PAMIP",
@@ -6887,13 +6888,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 24 06:33:08 2020 -0700",
-        "CV_collection_version":"6.2.50.5",
+        "CV_collection_modified":"Tue Apr 28 11:38:47 2020 -0700",
+        "CV_collection_version":"6.2.50.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"297c1f4f1fa0288a78d3ca2963768f3d0b731011",
-        "source_id_CV_modified":"Thu Apr 23 15:23:42 2020 -0700",
-        "source_id_CV_note":"Revise multiple CNRM- source_id entries",
+        "previous_commit":"cde52243349da9f2f8fd31ded6f66a64b29ab79b",
+        "source_id_CV_modified":"Fri Apr 24 06:33:08 2020 -0700",
+        "source_id_CV_note":"Revise source_id GISS-E2-1-H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

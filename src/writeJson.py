@@ -465,6 +465,7 @@ PJD 23 Apr 2020    - Revise source_id MCM-UA-1-0 https://github.com/WCRP-CMIP/CM
 PJD 24 Apr 2020    - Revise multiple CNRM- source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/903
 PJD 28 Apr 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/905
 PJD 28 Apr 2020    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/902
+PJD 30 Apr 2020    - Register institution_id PNNL-WACCEM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/912
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -491,7 +492,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CanESM5\"'
+commitMessage = '\"Register institution_id PNNL-WACCEM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -806,6 +807,7 @@ institution_id = {
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
+    'PNNL-WACCEM': 'PNNL (Pacific Northwest National Laboratory), Richland, WA 99352, USA',
     'RTE-RRTMGP-Consortium': ''.join(['AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, ',
                               'Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA']),
     'RUBISCO': ''.join(['ORNL (Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA); ANL (Argonne National Laboratory, Argonne, IL 60439, USA); ',

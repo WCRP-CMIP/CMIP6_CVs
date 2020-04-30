@@ -12,6 +12,12 @@ PJD 31 Jul 2018    - Update to include version info in html head
 PJD  7 Aug 2018    - Update version format
 PJD 25 Apr 2019    - Updated sources to latest 1.10.13 -> 1.10.18; 3.2.1 -> 3.3.1
 PJD 25 Sep 2019    - Updated to redirect contents from rawgit.com to github pages (https://wcrp-cmip.github.io/CMIP6_CVs/)
+PJD 30 Apr 2020    - Updated to deal with security advisories about jquery https://github.com/WCRP-CMIP/CMIP6_CVs/issues/916
+PJD 30 Apr 2020    - Download file from https://jquery.com/download/ - select "Download the compressed, production jQuery 3.5.0 slim build"
+PJD 30 Apr 2020    - Download files from https://datatables.net/download/ [jQuery 3 and dataTables selected, minified];
+                     copy css/jquery.dataTables.min.css and js/jquery.dataTables.min.js (updating dataTables -> dataTables-1.10.20)
+PJD 30 Apr 2020    - Update jquery.dataTables-1.10.20.min.js line 156 update ,aLengthMenu:[10,25,50,100], ->
+                     ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350,400], (use jquery.dataTables.js for lookup [non-minified])
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -25,9 +31,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="../src/jquery.dataTables-1.10.18.min.css" />
-<script type="text/javascript" charset="UTF-8" src="../src/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" charset="UTF-8" src="../src/jquery.dataTables-1.10.18.min.js"></script>
+<link rel="stylesheet" type="text/css" charset="UTF-8" href="../src/jquery.dataTables-1.10.20.min.css" />
+<script type="text/javascript" charset="UTF-8" src="../src/jquery-3.5.0.slim.min.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../src/jquery.dataTables-1.10.20.min.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {

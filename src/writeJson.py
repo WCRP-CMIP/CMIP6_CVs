@@ -467,6 +467,7 @@ PJD 28 Apr 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/C
 PJD 28 Apr 2020    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/902
 PJD 30 Apr 2020    - Register institution_id PNNL-WACCEM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/912
 PJD 30 Apr 2020    - Register source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
+PJD 30 Apr 2020    - Address jquery security advisories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/916
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -493,7 +494,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id CAM-MPAS\"'
+commitMessage = '\"Address jquery security advisories\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

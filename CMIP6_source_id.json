@@ -737,7 +737,7 @@
             "release_year":"2016",
             "source_id":"BNU-ESM-1-1"
         },
-        "CAM-MPAS":{
+        "CAM-MPAS-HR":{
             "activity_participation":[
                 "HighResMIP"
             ],
@@ -751,7 +751,7 @@
             "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
             "model_component":{
                 "aerosol":{
-                    "description":"none",
+                    "description":"none, prescribed MACv2-SP",
                     "native_nominal_resolution":"none"
                 },
                 "atmos":{
@@ -784,7 +784,7 @@
                 }
             },
             "release_year":"2018",
-            "source_id":"CAM-MPAS"
+            "source_id":"CAM-MPAS-HR"
         },
         "CAMS-CSM1-0":{
             "activity_participation":[
@@ -6938,13 +6938,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Apr 30 12:32:16 2020 -0700",
-        "CV_collection_version":"6.2.50.9",
+        "CV_collection_modified":"Thu Apr 30 13:07:31 2020 -0700",
+        "CV_collection_version":"6.2.50.10",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"dd3fd4ac1f495347a2b524efdd541190412a6bdd",
+        "previous_commit":"cb7f26c87d43804c25b31223e0acde4eeb36c41b",
         "source_id_CV_modified":"Thu Apr 30 11:37:02 2020 -0700",
-        "source_id_CV_note":"Register source_id CAM-MPAS",
+        "source_id_CV_note":"Revise source_id CAM-MPAS",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

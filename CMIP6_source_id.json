@@ -737,6 +737,55 @@
             "release_year":"2016",
             "source_id":"BNU-ESM-1-1"
         },
+        "CAM-MPAS":{
+            "activity_participation":[
+                "HighResMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "PNNL-WACCEM"
+            ],
+            "label":"CAM-MPAS",
+            "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"CAM-MPAS (CAMv5.4 with Grell-Freitas deep convection; MPASv4, C-grid staggered centroidal Voronoi tesselation atmosphere 30 km mesh with 655362 cells and 1966080 edges; 32 levels, top level 40363 m)",
+                    "native_nominal_resolution":"25 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"CLM (v4.0, same grid as atmos), River Transport Model (v1.0)",
+                    "native_nominal_resolution":"25 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2018",
+            "source_id":"CAM-MPAS"
+        },
         "CAMS-CSM1-0":{
             "activity_participation":[
                 "CFMIP",
@@ -6889,13 +6938,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Apr 30 11:21:34 2020 -0700",
-        "CV_collection_version":"6.2.50.8",
+        "CV_collection_modified":"Thu Apr 30 11:37:02 2020 -0700",
+        "CV_collection_version":"6.2.50.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"0a07db62701e0423e8813472733e8f6458719943",
+        "previous_commit":"c82a6679f5d058a1d6a4c8f9a8046def6a13af89",
         "source_id_CV_modified":"Tue Apr 28 14:53:53 2020 -0700",
-        "source_id_CV_note":"Revise source_id CanESM5",
+        "source_id_CV_note":"Register source_id CAM-MPAS",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

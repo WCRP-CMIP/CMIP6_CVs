@@ -468,6 +468,7 @@ PJD 28 Apr 2020    - Revise source_id CanESM5 https://github.com/WCRP-CMIP/CMIP6
 PJD 30 Apr 2020    - Register institution_id PNNL-WACCEM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/912
 PJD 30 Apr 2020    - Register source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
 PJD 30 Apr 2020    - Address jquery security advisories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/916
+PJD 30 Apr 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -494,7 +495,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Address jquery security advisories\"'
+commitMessage = '\"Revise source_id CAM-MPAS\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -916,46 +917,11 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CAM-MPAS'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'HighResMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'PNNL-WACCEM'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM-MPAS (CAMv5.4 with Grell-Freitas deep convection; MPASv4, C-grid staggered centroidal Voronoi tesselation atmosphere 30 km mesh with 655362 cells and 1966080 edges; 32 levels, top level 40363 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM (v4.0, same grid as atmos), River Transport Model (v1.0)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
+key1 = 'CAM-MPAS'
+key2 = 'CAM-MPAS-HR'
+source_id[key2] = source_id.pop(key1)
+source_id[key2]['source_id'] = key2
+source_id[key2]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

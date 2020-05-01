@@ -469,6 +469,7 @@ PJD 30 Apr 2020    - Register institution_id PNNL-WACCEM https://github.com/WCRP
 PJD 30 Apr 2020    - Register source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
 PJD 30 Apr 2020    - Address jquery security advisories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/916
 PJD 30 Apr 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
+PJD  1 May 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -917,11 +918,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key1 = 'CAM-MPAS'
-key2 = 'CAM-MPAS-HR'
-source_id[key2] = source_id.pop(key1)
-source_id[key2]['source_id'] = key2
-source_id[key2]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
+key = 'CAM-MPAS-HR'
+source_id[key]['label'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

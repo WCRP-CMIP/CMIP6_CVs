@@ -470,6 +470,7 @@ PJD 30 Apr 2020    - Register source_id CAM-MPAS https://github.com/WCRP-CMIP/CM
 PJD 30 Apr 2020    - Address jquery security advisories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/916
 PJD 30 Apr 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
 PJD  1 May 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/913
+PJD  4 May 2020    - Revise source_id INM-CM5-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/906
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -496,7 +497,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CAM-MPAS\"'
+commitMessage = '\"Revise source_id INM-CM5-H\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -918,8 +919,11 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CAM-MPAS-HR'
-source_id[key]['label'] = key
+key = 'INM-CM5-H'
+source_id[key]['activity_participation'] = [
+'CMIP',
+'HighResMIP'
+]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

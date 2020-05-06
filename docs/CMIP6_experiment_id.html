@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.50.14</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.51.0</p>
 <table id="table_id" class="display">
 <thead><tr><th>experiment_id</th>
 <th>activity id</th>
@@ -61,6 +61,20 @@ $(document).ready( function () {
 <td>80</td>
 <td>DAMIP</td>
 <td>Extension of well-mixed GHG-only run under SSP2-4.5. Models with interactive chemistry schemes should either turn off the chemistry or use a preindustrial climatology of stratospheric and tropospheric ozone in their radiation schemes</td>
+</tr>
+<tr><td>past1000-volconly</td>
+<td>PMIP</td>
+<td>last two millennia experiment</td>
+<td>2</td>
+<td>none</td>
+<td>no parent</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>850</td>
+<td>1849</td>
+<td>1000</td>
+<td>no parent</td>
+<td>Parallel experiment to past1000. Instead of the complete forcing set, only volcanic forcing is considered</td>
 </tr>
 <tr><td>dcppA-historical-niff</td>
 <td>DCPP</td>
@@ -187,6 +201,20 @@ $(document).ready( function () {
 <td>145</td>
 <td>no parent</td>
 <td>Extended AMIP run that covers 1870-2014. All natural and anthropogenic historical forcings as used in CMIP6 Historical Simulation will be included. AGCM resolution as CMIP6 Historical Simulation. The HadISST data will be used</td>
+</tr>
+<tr><td>past1000-solaronly</td>
+<td>PMIP</td>
+<td>last two millennia experiment</td>
+<td>2</td>
+<td>none</td>
+<td>no parent</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>850</td>
+<td>1849</td>
+<td>1000</td>
+<td>no parent</td>
+<td>Parallel experiment to past1000. Instead of the complete forcing set, only solar (TSI, SSI) forcing is considered</td>
 </tr>
 <tr><td>esm-bell-2000PgC</td>
 <td>C4MIP CDRMIP</td>
@@ -1840,6 +1868,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>1xCO2 experiment, parallel to piControl, forced over the ocean by surface net freshwater flux anomalies obtained from the CMIP5 ensemble mean of 1pctCO2 experiments at the time of 2xCO2</td>
 </tr>
+<tr><td>esm-past1000</td>
+<td>PMIP</td>
+<td>last millennium experiment with interactive carbon cycle</td>
+<td>3</td>
+<td>none</td>
+<td>no parent</td>
+<td>AOGCM BGC</td>
+<td>AER CHEM</td>
+<td>850</td>
+<td>1849</td>
+<td>1000</td>
+<td>no parent</td>
+<td>Parallel experiment to past1000, but for model set-ups with interactive carbon cycle. Main forcings: trace gases, volcanoes, solar variability, land-use</td>
+</tr>
 <tr><td>ism-historical-self</td>
 <td>ISMIP6</td>
 <td>offline ice sheet forced by ISM's own AOGCM historical output</td>
@@ -1979,6 +2021,20 @@ $(document).ready( function () {
 <td>95</td>
 <td>CMIP</td>
 <td>future scenario with low-medium radiative forcing by the end of century. Following RCP4.5 global forcing pathway. Concentration-driven (CMIP5-era [2006-2100] forcing)</td>
+</tr>
+<tr><td>ssp370SST-lowNTCF</td>
+<td>AerChemMIP</td>
+<td>SSP3-7.0, prescribed SSTs, with low NTCF emissions</td>
+<td>1</td>
+<td>none</td>
+<td>historical</td>
+<td>AGCM AER</td>
+<td>CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Future SSP3-7.0 with reduced NTCF emissions, prescribed SSTs</td>
 </tr>
 <tr><td>dcppA-hindcast-niff</td>
 <td>DCPP</td>
@@ -3002,19 +3058,19 @@ $(document).ready( function () {
 <td>ISMIP6</td>
 <td>Idealized 1%/yr CO2 increase to 4xC02 over 140yrs and kept constant at 4xCO2 for an additional 200 to 400 yrs simulation with ice sheets forced "offline" with DECK 1pctCO2 using a standard forcing</td>
 </tr>
-<tr><td>ssp370SST-lowNTCF</td>
-<td>AerChemMIP</td>
-<td>SSP3-7.0, prescribed SSTs, with low NTCF emissions</td>
-<td>1</td>
-<td>none</td>
-<td>historical</td>
-<td>AGCM AER</td>
-<td>CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
+<tr><td>piControl-spinup-cmip5</td>
 <td>CMIP</td>
-<td>Future SSP3-7.0 with reduced NTCF emissions, prescribed SSTs</td>
+<td>pre-industrial control (spin-up; CMIP5-era [1850-2005] forcing)</td>
+<td>2</td>
+<td>none</td>
+<td>no parent</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>100</td>
+<td>CMIP</td>
+<td>DECK: spin-up portion of the control (CMIP5-era pre-industrial forcing)</td>
 </tr>
 <tr><td>esm-bell-750PgC</td>
 <td>C4MIP CDRMIP</td>
@@ -3716,19 +3772,19 @@ $(document).ready( function () {
 <td>no parent</td>
 <td>Forced global atmosphere-land simulations using daily 1/4 degree SST and sea-ice forcings, and aerosol optical properties (not emissions) to constrain model spread</td>
 </tr>
-<tr><td>piControl-spinup-cmip5</td>
-<td>CMIP</td>
-<td>pre-industrial control (spin-up; CMIP5-era [1850-2005] forcing)</td>
-<td>2</td>
+<tr><td>past2k</td>
+<td>PMIP</td>
+<td>last two millennia experiment</td>
+<td>3</td>
 <td>none</td>
 <td>no parent</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
-<td></td>
-<td></td>
-<td>100</td>
-<td>CMIP</td>
-<td>DECK: spin-up portion of the control (CMIP5-era pre-industrial forcing)</td>
+<td>1</td>
+<td>1849</td>
+<td>1849</td>
+<td>no parent</td>
+<td>Experiment extending the past1000 simulation back in time to include the first millennium CE. Main forcings: trace gases, volcanoes, solar variability, land-use. past1000 forcings data sets include the first millennium, except for land-use. For the latter, a linear ramp-up to 850CE values is recommended</td>
 </tr>
 <tr><td>historical-ext</td>
 <td>CMIP</td>

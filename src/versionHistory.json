@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"cde29df994eebac66193311a61479da4c58ca0ce",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/cde29df994eebac66193311a61479da4c58ca0ce",
-            "commitMessage":"Revise *-cmip5 experiment_id values",
-            "timeStamp":"Thu Mar 19 19:39:28 2020 -0700"
+            "MD5":"409932e9235c3f83df083d28d6fc77853e0c86e5",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/409932e9235c3f83df083d28d6fc77853e0c86e5",
+            "commitMessage":"Register additional PMIP experiment_id entries",
+            "timeStamp":"Wed May  6 16:54:45 2020 -0700"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":14,
-            "versionCVContent":50,
+            "versionCVCommit":0,
+            "versionCVContent":51,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

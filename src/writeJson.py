@@ -473,6 +473,7 @@ PJD  1 May 2020    - Revise source_id CAM-MPAS https://github.com/WCRP-CMIP/CMIP
 PJD  4 May 2020    - Revise source_id INM-CM5-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/906
 PJD  5 May 2020    - Revise source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/924
 PJD  5 May 2020    - Revise source_id CESM2-WACCM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/925
+PJD  6 May 2020    - Register additional PMIP experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/898
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -499,7 +500,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id CESM2-WACCM\"'
+commitMessage = '\"Register additional PMIP experiment_id entries\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -556,6 +557,83 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
+key = 'esm-past1000'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['PMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM']
+experiment_id[key]['description'] = ''.join(['Parallel experiment to past1000, ',
+                                             'but for model set-ups with interactive ',
+                                             'carbon cycle. Main forcings: trace ',
+                                             'gases, volcanoes, solar variability, ',
+                                             'land-use'])
+experiment_id[key]['end_year'] = '1849'
+experiment_id[key]['experiment'] = 'last millennium experiment with interactive carbon cycle'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '1000'
+experiment_id[key]['parent_activity_id'] = ['no parent']
+experiment_id[key]['parent_experiment_id'] = ['no parent']
+experiment_id[key]['required_model_components'] = ['AOGCM','BGC']
+experiment_id[key]['start_year'] = '850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'past2k'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['PMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM', 'BGC']
+experiment_id[key]['description'] = ''.join(['Experiment extending the past1000 ',
+                                             'simulation back in time to include ',
+                                             'the first millennium CE. Main forcings: ',
+                                             'trace gases, volcanoes, solar variability, ',
+                                             'land-use. past1000 forcings data ',
+                                             'sets include the first millennium, ',
+                                             'except for land-use. For the latter, ',
+                                             'a linear ramp-up to 850CE values ',
+                                             'is recommended'])
+experiment_id[key]['end_year'] = '1849'
+experiment_id[key]['experiment'] = 'last two millennia experiment'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '1849'
+experiment_id[key]['parent_activity_id'] = ['no parent']
+experiment_id[key]['parent_experiment_id'] = ['no parent']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '1'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '3'
+key = 'past1000-solaronly'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['PMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM', 'BGC']
+experiment_id[key]['description'] = ''.join(['Parallel experiment to past1000. ',
+                                             'Instead of the complete forcing set, ',
+                                             'only solar (TSI, SSI) forcing is ',
+                                             'considered'])
+experiment_id[key]['end_year'] = '1849'
+experiment_id[key]['experiment'] = 'last two millennia experiment'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '1000'
+experiment_id[key]['parent_activity_id'] = ['no parent']
+experiment_id[key]['parent_experiment_id'] = ['no parent']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
+key = 'past1000-volconly'
+experiment_id[key] = {}
+experiment_id[key]['activity_id'] = ['PMIP']
+experiment_id[key]['additional_allowed_model_components'] = ['AER','CHEM', 'BGC']
+experiment_id[key]['description'] = ''.join(['Parallel experiment to past1000. ',
+                                             'Instead of the complete forcing set, ',
+                                             'only volcanic forcing is considered'])
+experiment_id[key]['end_year'] = '1849'
+experiment_id[key]['experiment'] = 'last two millennia experiment'
+experiment_id[key]['experiment_id'] = key
+experiment_id[key]['min_number_yrs_per_sim'] = '1000'
+experiment_id[key]['parent_activity_id'] = ['no parent']
+experiment_id[key]['parent_experiment_id'] = ['no parent']
+experiment_id[key]['required_model_components'] = ['AOGCM']
+experiment_id[key]['start_year'] = '850'
+experiment_id[key]['sub_experiment_id'] = ['none']
+experiment_id[key]['tier'] = '2'
 '''
 # xlsx import
 # Fields
@@ -921,14 +999,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CESM2-WACCM'
-source_id[key]['activity_participation'] = [
- 'AerChemMIP',
- 'CMIP',
- 'GeoMIP',
- 'RFMIP',
- 'ScenarioMIP'
-]
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

@@ -6402,7 +6402,7 @@
             ],
             "description":"Parallel experiment to past1000. Instead of the complete forcing set, only solar (TSI, SSI) forcing is considered",
             "end_year":"1849",
-            "experiment":"last two millennia experiment",
+            "experiment":"last millennium experiment using only solar forcing",
             "experiment_id":"past1000-solaronly",
             "min_number_yrs_per_sim":"1000",
             "parent_activity_id":[
@@ -6431,7 +6431,7 @@
             ],
             "description":"Parallel experiment to past1000. Instead of the complete forcing set, only volcanic forcing is considered",
             "end_year":"1849",
-            "experiment":"last two millennia experiment",
+            "experiment":"last millennium experiment using only volcanic forcing",
             "experiment_id":"past1000-volconly",
             "min_number_yrs_per_sim":"1000",
             "parent_activity_id":[
@@ -9279,13 +9279,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May  6 16:54:45 2020 -0700",
-        "CV_collection_version":"6.2.51.0",
+        "CV_collection_modified":"Thu May  7 09:08:24 2020 -0700",
+        "CV_collection_version":"6.2.52.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
-        "experiment_id_CV_modified":"Thu Mar 19 19:39:28 2020 -0700",
-        "experiment_id_CV_note":"Register additional PMIP experiment_id entries",
+        "experiment_id_CV_modified":"Wed May  6 16:54:45 2020 -0700",
+        "experiment_id_CV_note":"Revise PMIP experiment_id entries",
         "institution_id":"PCMDI",
-        "previous_commit":"409932e9235c3f83df083d28d6fc77853e0c86e5",
+        "previous_commit":"5056f854780e32d8920f61f3d13beea5d3ece16d",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

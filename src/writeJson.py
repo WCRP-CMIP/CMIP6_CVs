@@ -502,7 +502,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise PMIP experiment_id entries\"'
+commitMessage = '\"Validate source/institution_id entry lengths\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [

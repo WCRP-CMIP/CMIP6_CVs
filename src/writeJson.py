@@ -475,6 +475,7 @@ PJD  5 May 2020    - Revise source_id CESM2 https://github.com/WCRP-CMIP/CMIP6_C
 PJD  5 May 2020    - Revise source_id CESM2-WACCM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/925
 PJD  6 May 2020    - Register additional PMIP experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/898
 PJD  7 May 2020    - Revise PMIP experiment_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/898
+PJD 11 May 2020    - Validate source/institution_id entry lengths https://github.com/WCRP-CMIP/CMIP6_CVs/issues/933
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -501,7 +502,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise PMIP experiment_id entries\"'
+commitMessage = '\"Validate source/institution_id entry lengths\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -558,10 +559,6 @@ experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicat
 del(tmp)
 
 # Fix issues
-key = 'past1000-solaronly'
-experiment_id[key]['experiment'] = 'last millennium experiment using only solar forcing'
-key = 'past1000-volconly'
-experiment_id[key]['experiment'] = 'last millennium experiment using only volcanic forcing'
 
 '''
 # xlsx import
@@ -1107,6 +1104,12 @@ for key in source_id.keys():
     if not entryCheck(key):
         print('Invalid source_id format for entry:',key,'- aborting')
         sys.exit()
+    if len(key) > 16:
+        if key == 'CESM1-1-CAM5-CMIP5':
+            print(key,'skipped checks - continue')
+            break
+        print('Invalid source_id format for entry (too many chars):',key,'- aborting')
+        sys.exit()
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
     #print key,val
@@ -1137,6 +1140,9 @@ for key in source_id.keys():
     for val in vals:
         if val not in institution_id:
             print('Invalid institution_id for entry:',key,';',val,'- aborting')
+            sys.exit()
+        if len(val) > 21:
+            print('Invalid institution_id format for entry (too many chars):',key,'- aborting')
             sys.exit()
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()

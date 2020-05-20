@@ -478,6 +478,7 @@ PJD  7 May 2020    - Revise PMIP experiment_id entries https://github.com/WCRP-C
 PJD 11 May 2020    - Validate source/institution_id entry lengths https://github.com/WCRP-CMIP/CMIP6_CVs/issues/933
 PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/932
 PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/931
+PJD 20 May 2020    - Revise experiment_id ssp370-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/938
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -504,7 +505,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id CESM1-CAM5-SE-LR\"'
+commitMessage = '\"Revise experiment_id ssp370-lowNTCFCH4\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -646,7 +647,8 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-
+key = 'ssp370-lowNTCFCH4'
+experiment_id[key]['required_model_components'] = ['AOGCM', 'AER']
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -927,46 +929,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CESM1-CAM5-SE-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'HighResMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'NCAR'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, lo res'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'MAM3 (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'CAM5.2 (1 degree spectral element; 48602 cells; 30 levels; top level 2.25 mb)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'MAM3 (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = '"BEC (same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2012'
-source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

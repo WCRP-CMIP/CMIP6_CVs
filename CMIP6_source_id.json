@@ -7040,12 +7040,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon May 11 10:40:58 2020 -0700",
-        "CV_collection_version":"6.2.52.2",
+        "CV_collection_modified":"Wed May 20 16:39:54 2020 -0700",
+        "CV_collection_version":"6.2.53.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"bd084727251f316c3f25f4c070f8da24ff72ddf0",
-        "source_id_CV_modified":"Mon May 11 10:34:42 2020 -0700",
+        "previous_commit":"284fc5e798e19f44d3c81682f1719c5fa462ad86",
+        "source_id_CV_modified":"Mon May 11 10:40:58 2020 -0700",
         "source_id_CV_note":"Register source_id CESM1-CAM5-SE-LR",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

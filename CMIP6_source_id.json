@@ -6770,6 +6770,56 @@
             "release_year":"2018",
             "source_id":"TaiESM1"
         },
+        "TaiESM1-TIMCOM":{
+            "activity_participation":[
+                "CMIP",
+                "OMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NTU"
+            ],
+            "label":"TaiESM1-TIMCOM",
+            "label_extended":"Taiwan Earth System Model 1.0 using TIMCOM ocean model",
+            "model_component":{
+                "aerosol":{
+                    "description":"SNAP (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"SNAP (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"CLM4.0 (same grid as atmos)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"TIMCOM(TIMCOMv1.7, primarily 1deg; 360 x 288 longitude/latitude; 45 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"CICE4",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2020",
+            "source_id":"TaiESM1-TIMCOM"
+        },
         "UKESM1-0-LL":{
             "activity_participation":[
                 "AerChemMIP",
@@ -7040,13 +7090,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun  4 07:08:46 2020 -0700",
-        "CV_collection_version":"6.2.53.1",
+        "CV_collection_modified":"Thu Jun  4 07:17:11 2020 -0700",
+        "CV_collection_version":"6.2.53.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3ca595b382a97d8a64900fcb3620504d8587072c",
+        "previous_commit":"292fc5318e5c23f62d843aa0be7c85c504b52ea8",
         "source_id_CV_modified":"Mon May 11 10:40:58 2020 -0700",
-        "source_id_CV_note":"Register source_id CESM1-CAM5-SE-LR",
+        "source_id_CV_note":"Register source_id TaiESM1-TIMCOM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

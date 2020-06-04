@@ -479,6 +479,7 @@ PJD 11 May 2020    - Validate source/institution_id entry lengths https://github
 PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/932
 PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/931
 PJD 20 May 2020    - Revise experiment_id ssp370-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/938
+PJD  4 Jun 2020    - Register institution_id NTU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/942
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -505,7 +506,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise experiment_id ssp370-lowNTCFCH4\"'
+commitMessage = '\"Register institution_id NTU\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -817,6 +818,7 @@ institution_id = {
     'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
     'NIWA': 'National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
+    'NTU': 'National Taiwan University, Taipei 10650, Taiwan',
     'NUIST': 'Nanjing University of Information Science and Technology, Nanjing, 210044, China',
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'PNNL-WACCEM': 'PNNL (Pacific Northwest National Laboratory), Richland, WA 99352, USA',

@@ -480,6 +480,7 @@ PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-HR https://github.com/WCRP
 PJD 11 May 2020    - Register source_id CESM1-CAM5-SE-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/931
 PJD 20 May 2020    - Revise experiment_id ssp370-lowNTCFCH4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/938
 PJD  4 Jun 2020    - Register institution_id NTU https://github.com/WCRP-CMIP/CMIP6_CVs/issues/942
+PJD  4 Jun 2020    - Register source_id TaiESM1-TIMCOM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/941
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -506,7 +507,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register institution_id NTU\"'
+commitMessage = '\"Register source_id TaiESM1-TIMCOM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -931,7 +932,47 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key = 'TaiESM1-TIMCOM'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'CMIP',
+'OMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'NTU'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = 'Taiwan Earth System Model 1.0 using TIMCOM ocean model'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'SNAP (same grid as atmos)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'SNAP (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'CLM4.0 (same grid as atmos)'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'TIMCOM (TIMCOMv1.7, primarily 1deg; 360 x 288 longitude/latitude; 45 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'CICE4'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2020'
+source_id[key]['source_id'] = key
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

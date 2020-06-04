@@ -6805,7 +6805,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"TIMCOM(TIMCOMv1.7, primarily 1deg; 360 x 288 longitude/latitude; 45 levels; top grid cell 0-10 m)",
+                    "description":"TIMCOM (TIMCOMv1.7, primarily 1deg; 360 x 288 longitude/latitude; 45 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
@@ -7090,11 +7090,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun  4 07:17:11 2020 -0700",
+        "CV_collection_modified":"Thu Jun  4 07:19:00 2020 -0700",
         "CV_collection_version":"6.2.53.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"292fc5318e5c23f62d843aa0be7c85c504b52ea8",
+        "previous_commit":"d60b9d79f75f8ee3a79ced6a4965364a4deb6787",
         "source_id_CV_modified":"Mon May 11 10:40:58 2020 -0700",
         "source_id_CV_note":"Register source_id TaiESM1-TIMCOM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

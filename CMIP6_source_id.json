@@ -52,6 +52,7 @@
         "ACCESS-CM2":{
             "activity_participation":[
                 "CMIP",
+                "DAMIP",
                 "FAFMIP",
                 "OMIP",
                 "RFMIP",
@@ -7092,13 +7093,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun 18 11:01:02 2020 -0700",
-        "CV_collection_version":"6.2.53.4",
+        "CV_collection_modified":"Thu Jun 18 11:07:42 2020 -0700",
+        "CV_collection_version":"6.2.53.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"985d121e693f8c448373803b00bcdc01b5229910",
-        "source_id_CV_modified":"Thu Jun 18 10:49:51 2020 -0700",
-        "source_id_CV_note":"Revise source_id ACCESS-ESM1-5",
+        "previous_commit":"79f2a86bbd5348a5981dbc668615c20dcec1ee72",
+        "source_id_CV_modified":"Thu Jun 18 11:01:02 2020 -0700",
+        "source_id_CV_note":"Revise source_id ACCESS-CM2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

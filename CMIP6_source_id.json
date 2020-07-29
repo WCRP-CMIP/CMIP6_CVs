@@ -4099,6 +4099,8 @@
                 "DAMIP",
                 "FAFMIP",
                 "HighResMIP",
+                "LS3MIP",
+                "LUMIP",
                 "PMIP",
                 "RFMIP",
                 "ScenarioMIP"
@@ -6830,6 +6832,7 @@
                 "CDRMIP",
                 "CMIP",
                 "GeoMIP",
+                "LS3MIP",
                 "LUMIP",
                 "OMIP",
                 "PMIP",
@@ -7093,13 +7096,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun 18 11:07:42 2020 -0700",
-        "CV_collection_version":"6.2.53.5",
+        "CV_collection_modified":"Wed Jul 29 12:59:55 2020 -0700",
+        "CV_collection_version":"6.2.53.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"79f2a86bbd5348a5981dbc668615c20dcec1ee72",
-        "source_id_CV_modified":"Thu Jun 18 11:01:02 2020 -0700",
-        "source_id_CV_note":"Revise source_id ACCESS-CM2",
+        "previous_commit":"a282248a634ed876b383d48bd73c678386edd674",
+        "source_id_CV_modified":"Thu Jun 18 11:07:42 2020 -0700",
+        "source_id_CV_note":"Revise source_ids UKESM1-0-LL, HadGEM3-GC31-LL",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

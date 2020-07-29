@@ -484,6 +484,7 @@ PJD  4 Jun 2020    - Register source_id TaiESM1-TIMCOM https://github.com/WCRP-C
 PJD 17 Jun 2020    - Revise source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/937
 PJD 17 Jun 2020    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/946
 PJD 17 Jun 2020    - Revise source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/947
+PJD 29 Jul 2020    - Revise source_ids UKESM1-0-LL, HadGEM3-GC31-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/953
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -510,7 +511,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id ACCESS-CM2\"'
+commitMessage = '\"Revise source_ids UKESM1-0-LL, HadGEM3-GC31-LL\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -652,8 +653,7 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-key = 'ssp370-lowNTCFCH4'
-experiment_id[key]['required_model_components'] = ['AOGCM', 'AER']
+
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -935,16 +935,35 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-CM2'
+key = 'UKESM1-0-LL'
 source_id[key]['activity_participation'] = [
-    'CMIP',
-    'DAMIP',
-    'FAFMIP',
-    'OMIP',
-    'RFMIP',
-    'SIMIP',
-    'ScenarioMIP'
+ 'AerChemMIP',
+ 'C4MIP',
+ 'CDRMIP',
+ 'CMIP',
+ 'GeoMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'OMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP',
+ 'VolMIP'
 ]
+key = 'HadGEM3-GC31-LL'
+source_id[key]['activity_participation'] = [
+ 'CFMIP',
+ 'CMIP',
+ 'DAMIP',
+ 'FAFMIP',
+ 'HighResMIP',
+ 'LS3MIP',
+ 'LUMIP',
+ 'PMIP',
+ 'RFMIP',
+ 'ScenarioMIP'
+]
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

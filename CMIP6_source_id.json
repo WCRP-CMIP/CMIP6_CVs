@@ -4821,7 +4821,8 @@
         },
         "IPSL-CM6A-LR-INCA":{
             "activity_participation":[
-                "AerChemMIP"
+                "AerChemMIP",
+                "RFMIP"
             ],
             "cohort":[
                 "Registered"
@@ -7096,13 +7097,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 29 12:59:55 2020 -0700",
-        "CV_collection_version":"6.2.53.6",
+        "CV_collection_modified":"Fri Aug 28 10:26:45 2020 -0700",
+        "CV_collection_version":"6.2.53.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a282248a634ed876b383d48bd73c678386edd674",
-        "source_id_CV_modified":"Thu Jun 18 11:07:42 2020 -0700",
-        "source_id_CV_note":"Revise source_ids UKESM1-0-LL, HadGEM3-GC31-LL",
+        "previous_commit":"13920afe8faaceac1dcd150f9afd5a8245d98fc1",
+        "source_id_CV_modified":"Wed Jul 29 12:59:55 2020 -0700",
+        "source_id_CV_note":"Revise source_id IPSL-CM6A-LR-INCA",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

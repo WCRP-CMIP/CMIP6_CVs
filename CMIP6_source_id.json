@@ -4259,6 +4259,7 @@
                 "HighResMIP",
                 "LS3MIP",
                 "OMIP",
+                "PAMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -7097,13 +7098,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 28 10:26:45 2020 -0700",
-        "CV_collection_version":"6.2.53.7",
+        "CV_collection_modified":"Thu Sep 24 15:43:00 2020 -0700",
+        "CV_collection_version":"6.2.53.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"13920afe8faaceac1dcd150f9afd5a8245d98fc1",
-        "source_id_CV_modified":"Wed Jul 29 12:59:55 2020 -0700",
-        "source_id_CV_note":"Revise source_id IPSL-CM6A-LR-INCA",
+        "previous_commit":"b6895c9acce2b748eac1ca714d2af0cd210e75c7",
+        "source_id_CV_modified":"Fri Aug 28 10:26:45 2020 -0700",
+        "source_id_CV_note":"Revise source_id HadGEM3-GC31-MM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

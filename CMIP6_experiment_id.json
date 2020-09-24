@@ -9279,13 +9279,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 28 10:26:45 2020 -0700",
-        "CV_collection_version":"6.2.53.7",
+        "CV_collection_modified":"Thu Sep 24 15:43:00 2020 -0700",
+        "CV_collection_version":"6.2.53.8",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Wed May 20 16:39:54 2020 -0700",
         "experiment_id_CV_note":"Revise experiment_id ssp370-lowNTCFCH4",
         "institution_id":"PCMDI",
-        "previous_commit":"13920afe8faaceac1dcd150f9afd5a8245d98fc1",
+        "previous_commit":"b6895c9acce2b748eac1ca714d2af0cd210e75c7",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

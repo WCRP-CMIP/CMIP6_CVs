@@ -768,7 +768,7 @@ institution_id = {
                                 'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
     'CSIRO-ARCCSS': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia),',
-                              'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science)',
+                              'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science).',
                               'Mailing address: CSIRO, c/o Simon J. Marsland,',
                               '107-121 Station Street, Aspendale, Victoria 3195, Australia']),
     'CSIRO-COSIMA': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Australia),'

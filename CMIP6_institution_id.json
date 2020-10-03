@@ -13,7 +13,7 @@
         "CNRM-CERFACS":"CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
         "CSIR-Wits-CSIRO":"CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), Wits (University of the Witwatersrand - Global Change Institute, Johannesburg 2050, South Africa), CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa",
         "CSIRO":"Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia",
-        "CSIRO-ARCCSS":"CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia), ARCCSS (Australian Research Council Centre of Excellence for Climate System Science) Mailing address: CSIRO, c/o Simon J. Marsland, 107-121 Station Street, Aspendale, Victoria 3195, Australia",
+        "CSIRO-ARCCSS":"CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia), ARCCSS (Australian Research Council Centre of Excellence for Climate System Science). Mailing address: CSIRO, c/o Simon J. Marsland, 107-121 Station Street, Aspendale, Victoria 3195, Australia",
         "CSIRO-COSIMA":"CSIRO (Commonwealth Scientific and Industrial Research Organisation, Australia),COSIMA (Consortium for Ocean-Sea Ice Modelling in Australia). Mailing address: CSIRO, c/o Simon J. Marsland, 107-121 Station Street, Aspendale, Victoria 3195, Australia",
         "DKRZ":"Deutsches Klimarechenzentrum, Hamburg 20146, Germany",
         "DWD":"Deutscher Wetterdienst, Offenbach am Main 63067, Germany",
@@ -54,13 +54,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  2 17:42:44 2020 -0700",
+        "CV_collection_modified":"Fri Oct  2 17:44:55 2020 -0700",
         "CV_collection_version":"6.2.53.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Thu Jun  4 07:08:46 2020 -0700",
         "institution_id_CV_note":"Register institution_id CSIRO-COSIMA",
-        "previous_commit":"63ee0750fb35bd6ca99bd3bff4651866f9af1eb2",
+        "previous_commit":"7ebbded0e59169542533773baf2051aed94886cd",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

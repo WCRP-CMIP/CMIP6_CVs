@@ -209,6 +209,55 @@
             "release_year":"2020",
             "source_id":"ACCESS-OM2"
         },
+        "ACCESS-OM2-025":{
+            "activity_participation":[
+                "OMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CSIRO-COSIMA"
+            ],
+            "label":"ACCESS-OM2-025",
+            "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2 quarter degree",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"ACCESS-OM2 (MOM5, tripolar primarily 1/4 deg; 1440 x 1080 longitude/latitude; 50 levels; top grid cell 0-2.3 m)",
+                    "native_nominal_resolution":"25 km"
+                },
+                "ocnBgchem":{
+                    "description":"WOMBAT (same grid as ocean)",
+                    "native_nominal_resolution":"25 km"
+                },
+                "seaIce":{
+                    "description":"CICE5.1.2 (same grid as ocean)",
+                    "native_nominal_resolution":"25 km"
+                }
+            },
+            "release_year":"2020",
+            "source_id":"ACCESS-OM2-025"
+        },
         "ARTS-2-3":{
             "activity_participation":[
                 "RFMIP"
@@ -7147,13 +7196,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  2 21:59:05 2020 -0700",
-        "CV_collection_version":"6.2.53.10",
+        "CV_collection_modified":"Fri Oct  2 22:05:31 2020 -0700",
+        "CV_collection_version":"6.2.53.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5ecfcf731b6de746b7081cf8da6f318fce3f4cd8",
-        "source_id_CV_modified":"Thu Sep 24 15:43:00 2020 -0700",
-        "source_id_CV_note":"Register source_id ACCESS-OM2",
+        "previous_commit":"0d623d1c55c6ebf934ceb49234df427138449198",
+        "source_id_CV_modified":"Fri Oct  2 21:59:05 2020 -0700",
+        "source_id_CV_note":"Register source_id ACCESS-OM2-025",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

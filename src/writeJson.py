@@ -491,6 +491,7 @@ PJD  2 Oct 2020    - Register institution_id CSIRO-COSIMA https://github.com/WCR
 PJD  2 Oct 2020    - Register source_id ACCESS-OM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/962
 PJD  2 Oct 2020    - Register source_id ACCESS-OM2-025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/963
 PJD  2 Oct 2020    - Revise source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/965
+PJD  3 Oct 2020    - Revise source_ids EC-Earth3 and IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/964
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -517,7 +518,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id MPI-ESM-1-2-HAM\"'
+commitMessage = '\"Revise source_ids EC-Earth3 and IITM-ESM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -947,8 +948,12 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM-1-2-HAM'
-source_id[key]['activity_participation'].append('RFMIP')
+key = 'EC-Earth3'
+source_id[key]['activity_participation'].append('OMIP')
+source_id[key]['activity_participation'].append('DAMIP')
+source_id[key]['activity_participation'].sort()
+key = 'IITM-ESM'
+source_id[key]['activity_participation'].append('ScenarioMIP')
 source_id[key]['activity_participation'].sort()
 
 #============================================

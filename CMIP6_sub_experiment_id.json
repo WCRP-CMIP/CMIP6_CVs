@@ -76,11 +76,11 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  2 22:05:31 2020 -0700",
-        "CV_collection_version":"6.2.53.11",
+        "CV_collection_modified":"Fri Oct  2 22:21:53 2020 -0700",
+        "CV_collection_version":"6.2.53.12",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"0d623d1c55c6ebf934ceb49234df427138449198",
+        "previous_commit":"febcd109a33cbfd3b3dbf13f4bb08bbabc61a882",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "sub_experiment_id_CV_modified":"Mon Jun 17 11:01:51 2019 -0700",
         "sub_experiment_id_CV_note":"Revise sub_experiment_id values"

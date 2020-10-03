@@ -490,6 +490,7 @@ PJD 24 Sep 2020    - Revise source_id HadGEM3-GC31-MM https://github.com/WCRP-CM
 PJD  2 Oct 2020    - Register institution_id CSIRO-COSIMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/961
 PJD  2 Oct 2020    - Register source_id ACCESS-OM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/962
 PJD  2 Oct 2020    - Register source_id ACCESS-OM2-025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/963
+PJD  2 Oct 2020    - Revise source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/965
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -516,7 +517,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Register source_id ACCESS-OM2-025\"'
+commitMessage = '\"Revise source_id MPI-ESM-1-2-HAM\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -946,46 +947,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-OM2-025'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'OMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'CSIRO-COSIMA'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'Australian Community Climate and Earth System Simulator Ocean Model Version 2 quarter degree'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'none'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'ACCESS-OM2 (MOM5, tripolar primarily 1/4 deg; 1440 x 1080 longitude/latitude; 50 levels; top grid cell 0-2.3 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'WOMBAT (same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE5.1.2 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2020'
-source_id[key]['source_id'] = key
+key = 'MPI-ESM-1-2-HAM'
+source_id[key]['activity_participation'].append('RFMIP')
+source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

@@ -160,6 +160,55 @@
             "release_year":"2019",
             "source_id":"ACCESS-ESM1-5"
         },
+        "ACCESS-OM2":{
+            "activity_participation":[
+                "OMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "CSIRO-COSIMA"
+            ],
+            "label":"ACCESS-OM2",
+            "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2",
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-2.3 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"WOMBAT (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "seaIce":{
+                    "description":"CICE5.1.2 (same grid as ocean)",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2020",
+            "source_id":"ACCESS-OM2"
+        },
         "ARTS-2-3":{
             "activity_participation":[
                 "RFMIP"
@@ -7098,13 +7147,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  2 17:46:08 2020 -0700",
-        "CV_collection_version":"6.2.53.9",
+        "CV_collection_modified":"Fri Oct  2 21:59:05 2020 -0700",
+        "CV_collection_version":"6.2.53.10",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5b2ba32e888938aaadc27f1d83a555a065132c14",
+        "previous_commit":"5ecfcf731b6de746b7081cf8da6f318fce3f4cd8",
         "source_id_CV_modified":"Thu Sep 24 15:43:00 2020 -0700",
-        "source_id_CV_note":"Revise source_id HadGEM3-GC31-MM",
+        "source_id_CV_note":"Register source_id ACCESS-OM2",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

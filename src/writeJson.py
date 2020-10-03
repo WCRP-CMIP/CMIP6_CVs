@@ -487,6 +487,7 @@ PJD 17 Jun 2020    - Revise source_id ACCESS-CM2 https://github.com/WCRP-CMIP/CM
 PJD 29 Jul 2020    - Revise source_ids UKESM1-0-LL, HadGEM3-GC31-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/953
 PJD 28 Aug 2020    - Revise source_id IPSL-CM6A-LR-INCA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/955
 PJD 24 Sep 2020    - Revise source_id HadGEM3-GC31-MM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/959
+PJD  2 Oct 2020    - Register institution_id CSIRO-COSIMA https://github.com/WCRP-CMIP/CMIP6_CVs/issues/961
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -513,7 +514,7 @@ from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHi
 #from unidecode import unidecode
 
 #%% Set commit message
-commitMessage = '\"Revise source_id HadGEM3-GC31-MM\"'
+commitMessage = '\"Register institution_id CSIRO-COSIMA\"'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -766,8 +767,14 @@ institution_id = {
                                 'CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)',
                                 'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
-    'CSIRO-ARCCSS': ''.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia), ',
-                                 'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science)']),
+    'CSIRO-ARCCSS': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia),',
+                              'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science).',
+                              'Mailing address: CSIRO, c/o Simon J. Marsland,',
+                              '107-121 Station Street, Aspendale, Victoria 3195, Australia']),
+    'CSIRO-COSIMA': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Australia),',
+                              'COSIMA (Consortium for Ocean-Sea Ice Modelling in Australia).',
+                              'Mailing address: CSIRO, c/o Simon J. Marsland,',
+                              '107-121 Station Street, Aspendale, Victoria 3195, Australia']),
     'DKRZ': 'Deutsches Klimarechenzentrum, Hamburg 20146, Germany',
     'DWD': 'Deutscher Wetterdienst, Offenbach am Main 63067, Germany',
     'E3SM-Project': ''.join(['LLNL (Lawrence Livermore National Laboratory, Livermore, CA 94550, USA); ',
@@ -937,9 +944,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'HadGEM3-GC31-MM'
-source_id[key]['activity_participation'].append('PAMIP')
-source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

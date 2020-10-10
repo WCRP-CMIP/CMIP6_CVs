@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 source_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.53.13</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.53.14</p>
 <table id="table_id" class="display">
 <thead><tr><th>source_id</th>
 <th>institution id</th>
@@ -494,25 +494,6 @@ $(document).ready( function () {
 <td>unnamed</td>
 <td>none</td>
 <td>unnamed (same grid as atmosphere)</td>
-</tr>
-<tr><td>CESM1-CAM5-SE-LR</td>
-<td>NCAR</td>
-<td>2012</td>
-<td>HighResMIP</td>
-<td>Registered</td>
-<td>CESM1-CAM5-SE-LR</td>
-<td>CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, lo res</td>
-<td>CAM5.2 (1 degree spectral element; 48602 cells; 30 levels; top level 2.25 mb)</td>
-<td>100 km</td>
-<td>POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
-<td>100 km</td>
-<td>none</td>
-<td>none</td>
-<td>MAM3 (same grid as atmos)</td>
-<td>MAM3 (same grid as atmos)</td>
-<td>CLM4 (same grid as atmos)</td>
-<td>"BEC (same grid as ocean)</td>
-<td>CICE4 (same grid as ocean)</td>
 </tr>
 <tr><td>MIROC6</td>
 <td>MIROC</td>
@@ -1027,6 +1008,25 @@ $(document).ready( function () {
 <td>none</td>
 <td>LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</td>
 </tr>
+<tr><td>CAM-MPAS-LR</td>
+<td>PNNL-WACCEM</td>
+<td>2018</td>
+<td>HighResMIP</td>
+<td>Registered</td>
+<td>CAM-MPAS-LR</td>
+<td>CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)</td>
+<td>CAM-MPAS (CAMv5.4 with Grell-Freitas deep convection; MPASv4, C-grid staggered centroidal Voronoi tesselation atmosphere 120 km mesh with 40962 cells and 122880 edges; 32 vertical levels, model top 40363 m)</td>
+<td>100 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none, prescribed MACv2-SP</td>
+<td>none</td>
+<td>CLM (v4.0, same grid as atmos), River Transport Model (v1.0)</td>
+<td>none</td>
+<td>none</td>
+</tr>
 <tr><td>NorESM2-MH</td>
 <td>NCC</td>
 <td>2017</td>
@@ -1103,24 +1103,24 @@ $(document).ready( function () {
 <td>GFDL-BLINGv2</td>
 <td>GFDL-SIM4p25 (GFDL-SIS2.0, tripolar - nominal 0.25 deg; 1440 x 1080 longitude/latitude; 5 layers; 5 thickness categories)</td>
 </tr>
-<tr><td>AWI-CM-1-1-LR</td>
-<td>AWI</td>
-<td>2018</td>
-<td>CMIP CORDEX HighResMIP OMIP SIMIP ScenarioMIP VIACSAB</td>
+<tr><td>CESM1-CAM5-SE-LR</td>
+<td>NCAR</td>
+<td>2012</td>
+<td>HighResMIP</td>
 <td>Registered</td>
-<td>AWI-CM 1.1 LR</td>
-<td>AWI-CM 1.1 LR</td>
-<td>ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)</td>
-<td>250 km</td>
-<td>FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)</td>
-<td>50 km</td>
+<td>CESM1-CAM5-SE-LR</td>
+<td>CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, lo res</td>
+<td>CAM5.2 (1 degree spectral element; 48602 cells; 30 levels; top level 2.25 mb)</td>
+<td>100 km</td>
+<td>POP2 (320x384 longitude/latitude; 60 levels; top grid cell 0-10 m)</td>
+<td>100 km</td>
 <td>none</td>
 <td>none</td>
-<td>none</td>
-<td>none</td>
-<td>JSBACH 3.20</td>
-<td>none</td>
-<td>FESOM 1.4</td>
+<td>MAM3 (same grid as atmos)</td>
+<td>MAM3 (same grid as atmos)</td>
+<td>CLM4 (same grid as atmos)</td>
+<td>"BEC (same grid as ocean)</td>
+<td>CICE4 (same grid as ocean)</td>
 </tr>
 <tr><td>ACCESS-CM2</td>
 <td>CSIRO-ARCCSS</td>
@@ -2546,6 +2546,25 @@ $(document).ready( function () {
 <td>CLM5 (same grid as atmos)</td>
 <td>MARBL (same grid as ocean)</td>
 <td>CICE5.1 (same grid as ocean)</td>
+</tr>
+<tr><td>AWI-CM-1-1-LR</td>
+<td>AWI</td>
+<td>2018</td>
+<td>CMIP CORDEX HighResMIP OMIP SIMIP ScenarioMIP VIACSAB</td>
+<td>Registered</td>
+<td>AWI-CM 1.1 LR</td>
+<td>AWI-CM 1.1 LR</td>
+<td>ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)</td>
+<td>250 km</td>
+<td>FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)</td>
+<td>50 km</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>none</td>
+<td>JSBACH 3.20</td>
+<td>none</td>
+<td>FESOM 1.4</td>
 </tr>
 <tr><td>RRTMG-SW-4-02</td>
 <td>AER</td>

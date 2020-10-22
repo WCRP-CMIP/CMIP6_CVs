@@ -18,13 +18,13 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  9 17:40:35 2020 -0700",
-        "CV_collection_version":"6.2.53.14",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "CV_collection_modified":"Thu Oct 22 14:31:58 2020 00100",
+        "CV_collection_version":"6.2.54.0",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "frequency_CV_modified":"Fri Oct 27 14:03:00 2017 -0700",
         "frequency_CV_note":"Issue414 durack1 revise frequency 1hrCM definition (#418)",
-        "institution_id":"PCMDI",
-        "previous_commit":"cbc5fbc95eff4fcab4c1ec31e3ac3778bec1b286",
+        "institution_id":"MOHC",
+        "previous_commit":"fc9310b4528e94157515217c42505c5dde900877",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

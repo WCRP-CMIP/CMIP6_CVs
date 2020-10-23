@@ -7,10 +7,10 @@
             "timeStamp":"Mon Mar  5 16:39:09 2018 -0800"
         },
         "experiment_id":{
-            "MD5":"fc9310b4528e94157515217c42505c5dde900877",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/fc9310b4528e94157515217c42505c5dde900877",
+            "MD5":"8641917d309aafc3cc00ab982353a0fef473292e",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8641917d309aafc3cc00ab982353a0fef473292e",
             "commitMessage":"Register experiment_ids for CovidMIP (#973)",
-            "timeStamp":"Thu Oct 22 14:31:58 2020 00100"
+            "timeStamp":"Fri Oct 23 09:25:49 2020 00100"
         },
         "frequency":{
             "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",

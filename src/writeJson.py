@@ -741,7 +741,7 @@ ssp245covghg.update({
   'description': 'Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven',
   'end_year': '2024 or 2050',
   'experiment': '2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245',
-  'experiment_id': 'ssp245-cov-ghg',
+  'experiment_id': 'ssp245-cov-GHG',
   'min_number_yrs_per_sim': '5',
   'start_year': '2020',
   'tier': '3',

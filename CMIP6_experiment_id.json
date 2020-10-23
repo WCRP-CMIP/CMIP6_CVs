@@ -8318,6 +8318,35 @@
             ],
             "tier":"3"
         },
+        "ssp245-cov-GHG":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2024 or 2050",
+            "experiment":"2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245",
+            "experiment_id":"ssp245-cov-GHG",
+            "min_number_yrs_per_sim":"5",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
         "ssp245-cov-aer":{
             "activity_id":[
                 "DAMIP"
@@ -8361,35 +8390,6 @@
             "experiment":"2-year Covid-19 emissions blip followed by increased emissions due to a fossil-fuel based recovery, based upon ssp245",
             "experiment_id":"ssp245-cov-fossil",
             "min_number_yrs_per_sim":"31",
-            "parent_activity_id":[
-                "ScenarioMIP"
-            ],
-            "parent_experiment_id":[
-                "ssp245"
-            ],
-            "required_model_components":[
-                "AOGCM"
-            ],
-            "start_year":"2020",
-            "sub_experiment_id":[
-                "none"
-            ],
-            "tier":"3"
-        },
-        "ssp245-cov-ghg":{
-            "activity_id":[
-                "DAMIP"
-            ],
-            "additional_allowed_model_components":[
-                "AER",
-                "CHEM",
-                "BGC"
-            ],
-            "description":"Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven",
-            "end_year":"2024 or 2050",
-            "experiment":"2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245",
-            "experiment_id":"ssp245-cov-ghg",
-            "min_number_yrs_per_sim":"5",
             "parent_activity_id":[
                 "ScenarioMIP"
             ],
@@ -9453,13 +9453,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Oct 22 14:31:58 2020 00100",
+        "CV_collection_modified":"Fri Oct 23 09:25:49 2020 00100",
         "CV_collection_version":"6.2.54.0",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "experiment_id_CV_modified":"Wed May 20 16:39:54 2020 -0700",
         "experiment_id_CV_note":"Register experiment_ids for CovidMIP (#973)",
         "institution_id":"MOHC",
-        "previous_commit":"fc9310b4528e94157515217c42505c5dde900877",
+        "previous_commit":"8641917d309aafc3cc00ab982353a0fef473292e",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

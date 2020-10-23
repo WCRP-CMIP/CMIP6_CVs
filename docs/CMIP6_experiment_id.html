@@ -18,7 +18,7 @@ $(document).ready( function () {
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
-<p>WCRP-CMIP CMIP6_CVs version: 6.2.53.14</p>
+<p>WCRP-CMIP CMIP6_CVs version: 6.2.54.0</p>
 <table id="table_id" class="display">
 <thead><tr><th>experiment_id</th>
 <th>activity id</th>
@@ -89,6 +89,20 @@ $(document).ready( function () {
 <td>5</td>
 <td>CMIP</td>
 <td>A4.2 Hindcasts initialized from historical climate simulations as in DCPP-A2.2, but with no information from the future. First full hindcast year follows start year (e.g., for s1960, first full hindcast year is 1961)</td>
+</tr>
+<tr><td>ssp370-lowNTCF</td>
+<td>AerChemMIP</td>
+<td>SSP3-7.0, with low NTCF emissions</td>
+<td>1</td>
+<td>none</td>
+<td>historical</td>
+<td>AOGCM AER</td>
+<td>CHEM BGC</td>
+<td>2015</td>
+<td>2100</td>
+<td>86</td>
+<td>CMIP</td>
+<td>Future SSP3-7.0 with reduced NTCF emissions</td>
 </tr>
 <tr><td>piClim-NH3</td>
 <td>AerChemMIP</td>
@@ -369,6 +383,20 @@ $(document).ready( function () {
 <td></td>
 <td>no parent</td>
 <td>Offline radiation calculations</td>
+</tr>
+<tr><td>ssp245-cov-aer</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip including anthropogenic aerosols only, based upon ssp245</td>
+<td>3</td>
+<td>none</td>
+<td>ssp245</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2020</td>
+<td>2024 or 2050</td>
+<td>5</td>
+<td>ScenarioMIP</td>
+<td>Detection and attribution experiment: aerosol-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven</td>
 </tr>
 <tr><td>dcppC-pac-control</td>
 <td>DCPP</td>
@@ -734,19 +762,19 @@ $(document).ready( function () {
 <td>HighResMIP</td>
 <td>Coupled integrations with constant 1950"s forcing</td>
 </tr>
-<tr><td>ssp370-lowNTCF</td>
-<td>AerChemMIP</td>
-<td>SSP3-7.0, with low NTCF emissions</td>
-<td>1</td>
+<tr><td>ssp245-cov-strgreen</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip followed by strong-green stimulus recovery, based upon ssp245</td>
+<td>2</td>
 <td>none</td>
-<td>historical</td>
-<td>AOGCM AER</td>
-<td>CHEM BGC</td>
-<td>2015</td>
-<td>2100</td>
-<td>86</td>
-<td>CMIP</td>
-<td>Future SSP3-7.0 with reduced NTCF emissions</td>
+<td>ssp245</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2020</td>
+<td>2050</td>
+<td>31</td>
+<td>ScenarioMIP</td>
+<td>Future scenario based on ssp245, but following a path of reduced emissions due to a strong-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven</td>
 </tr>
 <tr><td>piSST-4xCO2-rad</td>
 <td>CFMIP</td>
@@ -2638,6 +2666,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>PA6.2: investigate decadal and longer timescale response to Arctic sea ice</td>
 </tr>
+<tr><td>ssp245-covid</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip based upon ssp245</td>
+<td>2</td>
+<td>none</td>
+<td>ssp245</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2020</td>
+<td>2024 or 2050</td>
+<td>5</td>
+<td>ScenarioMIP</td>
+<td>Future scenario based on ssp245, but with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Emissions revert to ssp245 after this. Concentration-driven</td>
+</tr>
 <tr><td>highresSST-smoothed</td>
 <td>HighResMIP</td>
 <td>smoothed SST version of highresSST-present</td>
@@ -2945,6 +2987,20 @@ $(document).ready( function () {
 <td>165</td>
 <td>no parent</td>
 <td>Land only simulations</td>
+</tr>
+<tr><td>volc-pinatubo-full</td>
+<td>VolMIP</td>
+<td>Pinatubo experiment</td>
+<td>1</td>
+<td>none</td>
+<td>piControl</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>CMIP</td>
+<td>1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability</td>
 </tr>
 <tr><td>lgm</td>
 <td>PMIP</td>
@@ -3449,6 +3505,20 @@ $(document).ready( function () {
 <td>10</td>
 <td>no parent</td>
 <td>Extended version of CMIP5/CFMIP-2 aquaControl experiment. Aquaplanet (no land) experiment with no seasonal cycle forced with specified zonally symmetric SSTs</td>
+</tr>
+<tr><td>ssp245-cov-fossil</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip followed by increased emissions due to a fossil-fuel based recovery, based upon ssp245</td>
+<td>3</td>
+<td>none</td>
+<td>ssp245</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2020</td>
+<td>2050</td>
+<td>31</td>
+<td>ScenarioMIP</td>
+<td>Future scenario based on ssp245, but following a path of increased emissions due to a fossil-fuel rebound economic recovery from the Covid-19 pandemic restrictions. Concentration-driven</td>
 </tr>
 <tr><td>volc-cluster-ctrl</td>
 <td>VolMIP</td>
@@ -4136,6 +4206,20 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>Branch from beginning of year 2010 of the historical simulation with CO2 concentration and all other forcing held fixed at 2010 level (part of the CDR-yr2010-pulse experiment to diagnose CO2 emissions)</td>
 </tr>
+<tr><td>ssp245-cov-modgreen</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip followed by moderate-green stimulus recovery, based upon ssp245</td>
+<td>3</td>
+<td>none</td>
+<td>ssp245</td>
+<td>AOGCM</td>
+<td>AER CHEM BGC</td>
+<td>2020</td>
+<td>2050</td>
+<td>31</td>
+<td>ScenarioMIP</td>
+<td>Future scenario based on ssp245, but following a path of reduced emissions due to a moderate-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven</td>
+</tr>
 <tr><td>land-noFire</td>
 <td>LUMIP</td>
 <td>historical land-only with no human fire management</td>
@@ -4430,19 +4514,19 @@ $(document).ready( function () {
 <td>CMIP</td>
 <td>branched from 1pctCO2 run at year 140 and run with CO2 fixed at 4x pre-industrial concentration</td>
 </tr>
-<tr><td>volc-pinatubo-full</td>
-<td>VolMIP</td>
-<td>Pinatubo experiment</td>
-<td>1</td>
+<tr><td>ssp245-cov-GHG</td>
+<td>DAMIP</td>
+<td>2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245</td>
+<td>3</td>
 <td>none</td>
-<td>piControl</td>
+<td>ssp245</td>
 <td>AOGCM</td>
 <td>AER CHEM BGC</td>
-<td></td>
-<td></td>
-<td>3</td>
-<td>CMIP</td>
-<td>1991 Pinatubo forcing as used in the CMIP6 historical simulations. Requires special diagnostics of radiative and latent heating rates. A large number of ensemble members is required to address internal atmospheric variability</td>
+<td>2020</td>
+<td>2024 or 2050</td>
+<td>5</td>
+<td>ScenarioMIP</td>
+<td>Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven</td>
 </tr>
 <tr><td>amip</td>
 <td>CMIP</td>

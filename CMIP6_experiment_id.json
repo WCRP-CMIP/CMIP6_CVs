@@ -8318,6 +8318,180 @@
             ],
             "tier":"3"
         },
+        "ssp245-cov-GHG":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2024 or 2050",
+            "experiment":"2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245",
+            "experiment_id":"ssp245-cov-GHG",
+            "min_number_yrs_per_sim":"5",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "ssp245-cov-aer":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Detection and attribution experiment: aerosol-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2024 or 2050",
+            "experiment":"2-year Covid-19 emissions blip including anthropogenic aerosols only, based upon ssp245",
+            "experiment_id":"ssp245-cov-aer",
+            "min_number_yrs_per_sim":"5",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "ssp245-cov-fossil":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Future scenario based on ssp245, but following a path of increased emissions due to a fossil-fuel rebound economic recovery from the Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2050",
+            "experiment":"2-year Covid-19 emissions blip followed by increased emissions due to a fossil-fuel based recovery, based upon ssp245",
+            "experiment_id":"ssp245-cov-fossil",
+            "min_number_yrs_per_sim":"31",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "ssp245-cov-modgreen":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Future scenario based on ssp245, but following a path of reduced emissions due to a moderate-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2050",
+            "experiment":"2-year Covid-19 emissions blip followed by moderate-green stimulus recovery, based upon ssp245",
+            "experiment_id":"ssp245-cov-modgreen",
+            "min_number_yrs_per_sim":"31",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"3"
+        },
+        "ssp245-cov-strgreen":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Future scenario based on ssp245, but following a path of reduced emissions due to a strong-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven",
+            "end_year":"2050",
+            "experiment":"2-year Covid-19 emissions blip followed by strong-green stimulus recovery, based upon ssp245",
+            "experiment_id":"ssp245-cov-strgreen",
+            "min_number_yrs_per_sim":"31",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
+        "ssp245-covid":{
+            "activity_id":[
+                "DAMIP"
+            ],
+            "additional_allowed_model_components":[
+                "AER",
+                "CHEM",
+                "BGC"
+            ],
+            "description":"Future scenario based on ssp245, but with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Emissions revert to ssp245 after this. Concentration-driven",
+            "end_year":"2024 or 2050",
+            "experiment":"2-year Covid-19 emissions blip based upon ssp245",
+            "experiment_id":"ssp245-covid",
+            "min_number_yrs_per_sim":"5",
+            "parent_activity_id":[
+                "ScenarioMIP"
+            ],
+            "parent_experiment_id":[
+                "ssp245"
+            ],
+            "required_model_components":[
+                "AOGCM"
+            ],
+            "start_year":"2020",
+            "sub_experiment_id":[
+                "none"
+            ],
+            "tier":"2"
+        },
         "ssp245-nat":{
             "activity_id":[
                 "DAMIP"
@@ -9279,13 +9453,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct  9 17:40:35 2020 -0700",
-        "CV_collection_version":"6.2.53.14",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "CV_collection_modified":"Fri Oct 23 15:16:35 2020 -0700",
+        "CV_collection_version":"6.2.54.0",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "experiment_id_CV_modified":"Wed May 20 16:39:54 2020 -0700",
-        "experiment_id_CV_note":"Revise experiment_id ssp370-lowNTCFCH4",
-        "institution_id":"PCMDI",
-        "previous_commit":"cbc5fbc95eff4fcab4c1ec31e3ac3778bec1b286",
+        "experiment_id_CV_note":"Register experiment_ids for CovidMIP (#973)",
+        "institution_id":"MOHC",
+        "previous_commit":"6d11b9508fd918d49a9a657f288e31930597408b",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

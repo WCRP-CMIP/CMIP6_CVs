@@ -493,9 +493,9 @@ PJD  2 Oct 2020    - Register source_id ACCESS-OM2-025 https://github.com/WCRP-C
 PJD  2 Oct 2020    - Revise source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/965
 PJD  3 Oct 2020    - Revise source_ids EC-Earth3 and IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/964
 PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/971
+MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
-MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 
 @author: durack1
 """
@@ -517,19 +517,19 @@ except ImportError:
     import urllib
 sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
 from durolib import readJsonCreateDict
-from CMIP6Lib import ascertainVersion,cleanString,dictDepth,entryCheck,getFileHistory,versionHistoryUpdate
+from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
+                     getFileHistory, versionHistoryUpdate
 #import pyexcel_xlsx as pyx
 #from string import replace
 #from unidecode import unidecode
 
-#%% Set commit message
+#%% Set commit message and author info
 commitMessage = '\"Register experiment_ids for CovidMIP (#973)\"'
 author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 author_institution_id = 'MOHC'
 
 # author = 'Paul J. Durack <durack1@llnl.gov>'
 # author_institution_id = 'PCMDI'
-
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -578,7 +578,8 @@ activity_id = {
 }
 
 #%% Experiments
-tmp = [['experiment_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
+tmp = [['experiment_id', \
+        'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
       ] ;
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
@@ -1047,50 +1048,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CAM-MPAS-LR'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'HighResMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'PNNL-WACCEM'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = 'CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none, prescribed MACv2-SP'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = ' '.join(['CAM-MPAS (CAMv5.4 with Grell-Freitas deep convection;',
-                                                            'MPASv4, C-grid staggered centroidal Voronoi',
-                                                            'tesselation atmosphere 120 km mesh with 40962',
-                                                            'cells and 122880 edges; 32 vertical levels,',
-                                                            'model top 40363 m)'])
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM (v4.0, same grid as atmos), River Transport Model (v1.0)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2018'
-source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1492,7 +1449,6 @@ for key in experiment_id_keys:
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
 '''
 
-
 del(experiment_id_keys,key,act,val,val1,val2,vals)
 '''
 print('***FINISH***')
@@ -1628,46 +1584,46 @@ MD5 = versionInfo1.get('previous_commit')
 # Now update versionHistory - can use list entries, as var names aren't locatable
 if testVal_activity_id:
     key = 'activity_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_experiment_id:
     key = 'experiment_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_frequency:
     key = 'frequency'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_grid_label:
     key = 'grid_label'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_license:
     key = 'license'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_mip_era:
     key = 'mip_era'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_nominal_resolution:
     key = 'nominal_resolution'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_realm:
     key = 'realm'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_required_global_attributes:
     key = 'required_global_attributes'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_source_type:
     key = 'source_type'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_sub_experiment_id:
     key = 'sub_experiment_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_table_id:
     key = 'table_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_institution_id:
     key = 'institution_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_source_id:
     key = 'source_id'
-    versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory)
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 # Test for changes and report
 test = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
         testVal_grid_label,testVal_license,testVal_mip_era,

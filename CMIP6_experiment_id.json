@@ -9453,13 +9453,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Oct 23 09:25:49 2020 00100",
+        "CV_collection_modified":"Fri Oct 23 15:16:35 2020 -0700",
         "CV_collection_version":"6.2.54.0",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "experiment_id_CV_modified":"Wed May 20 16:39:54 2020 -0700",
         "experiment_id_CV_note":"Register experiment_ids for CovidMIP (#973)",
         "institution_id":"MOHC",
-        "previous_commit":"8641917d309aafc3cc00ab982353a0fef473292e",
+        "previous_commit":"6d11b9508fd918d49a9a657f288e31930597408b",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

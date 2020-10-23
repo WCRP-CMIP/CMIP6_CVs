@@ -494,6 +494,7 @@ PJD  2 Oct 2020    - Revise source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CM
 PJD  3 Oct 2020    - Revise source_ids EC-Earth3 and IITM-ESM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/964
 PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/971
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
+PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -524,12 +525,12 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register experiment_ids for CovidMIP (#973)\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
+commitMessage = '\"Revise source_id UKESM1-0-LL\"'
+# author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+# author_institution_id = 'MOHC'
 
-# author = 'Paul J. Durack <durack1@llnl.gov>'
-# author_institution_id = 'PCMDI'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -672,95 +673,7 @@ for inFile in inFiles:
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
 # Fix issues
-# Issue 973
-template = {
-  'activity_id' : ['DAMIP'],
-  'additional_allowed_model_components' : ['AER', 'CHEM', 'BGC'],
-  'parent_activity_id': ['ScenarioMIP'],
-  'parent_experiment_id': ['ssp245'],
-  'required_model_components': ['AOGCM'],
-  'sub_experiment_id': ['none'],
-}
 
-ssp245covid = template.copy()
-ssp245covid.update({
-  'description': 'Future scenario based on ssp245, but with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Emissions revert to ssp245 after this. Concentration-driven',
-  'end_year': '2024 or 2050',
-  'experiment': '2-year Covid-19 emissions blip based upon ssp245',
-  'experiment_id': 'ssp245-covid',
-  'min_number_yrs_per_sim': '5',
-  'start_year': '2020',
-  'tier': '2',
-})
-
-ssp245covstrgreen = template.copy()
-ssp245covstrgreen.update({
-  'description': 'Future scenario based on ssp245, but following a path of reduced emissions due to a strong-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven',
-  'end_year': '2050',
-  'experiment': '2-year Covid-19 emissions blip followed by strong-green stimulus recovery, based upon ssp245',
-  'experiment_id': 'ssp245-cov-strgreen',
-  'min_number_yrs_per_sim': '31',
-  'start_year': '2020',
-  'tier': '2',
-})
-
-ssp245covmodgreen = template.copy()
-ssp245covmodgreen.update({
-  'description': 'Future scenario based on ssp245, but following a path of reduced emissions due to a moderate-green stimulus economic recovery from the Covid-19 pandemic restrictions. Concentration-driven',
-  'end_year': '2050',
-  'experiment': '2-year Covid-19 emissions blip followed by moderate-green stimulus recovery, based upon ssp245',
-  'experiment_id': 'ssp245-cov-modgreen',
-  'min_number_yrs_per_sim': '31',
-  'start_year': '2020',
-  'tier': '3',
-})
-
-ssp245covfossil = template.copy()
-ssp245covfossil.update({
-  'description': 'Future scenario based on ssp245, but following a path of increased emissions due to a fossil-fuel rebound economic recovery from the Covid-19 pandemic restrictions. Concentration-driven',
-  'end_year': '2050',
-  'experiment': '2-year Covid-19 emissions blip followed by increased emissions due to a fossil-fuel based recovery, based upon ssp245',
-  'experiment_id': 'ssp245-cov-fossil',
-  'min_number_yrs_per_sim': '31',
-  'start_year': '2020',
-  'tier': '3',
-})
-
-ssp245covaer = template.copy()
-ssp245covaer.update({
-  'description': 'Detection and attribution experiment: aerosol-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven',
-  'end_year': '2024 or 2050',
-  'experiment': '2-year Covid-19 emissions blip including anthropogenic aerosols only, based upon ssp245',
-  'experiment_id': 'ssp245-cov-aer',
-  'min_number_yrs_per_sim': '5',
-  'start_year': '2020',
-  'tier': '3',
-})
-
-ssp245covghg = template.copy()
-ssp245covghg.update({
-  'description': 'Detection and attribution experiment: well-mixed GHG-only run based on ssp245-covid, with 2-year perturbation to emissions for 2020 and 2021 due to Covid-19 pandemic restrictions. Concentration-driven',
-  'end_year': '2024 or 2050',
-  'experiment': '2-year Covid-19 emissions blip including well mixed GHG only, based upon ssp245',
-  'experiment_id': 'ssp245-cov-GHG',
-  'min_number_yrs_per_sim': '5',
-  'start_year': '2020',
-  'tier': '3',
-})
-
-experiments_to_add = [
-    ssp245covid, ssp245covstrgreen, ssp245covmodgreen, ssp245covfossil,
-    ssp245covaer, ssp245covghg
-]
-
-for experiment_dict in experiments_to_add:
-    key = experiment_dict['experiment_id']
-    experiment_id[key] = experiment_dict
-
-# tidy up
-del(template, experiments_to_add, experiment_dict, ssp245covid,
-    ssp245covstrgreen, ssp245covmodgreen, ssp245covfossil, ssp245covaer,
-    ssp245covghg)
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -1048,6 +961,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'UKESM1-0-LL'
+source_id[key]['activity_participation'].append('DAMIP')
+source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

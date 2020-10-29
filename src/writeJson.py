@@ -495,6 +495,7 @@ PJD  3 Oct 2020    - Revise source_ids EC-Earth3 and IITM-ESM https://github.com
 PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/971
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
+PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -525,7 +526,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id UKESM1-0-LL\"'
+commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 
@@ -961,7 +962,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-0-LL'
+key = 'MPI-ESM1-2-LR'
 source_id[key]['activity_participation'].append('DAMIP')
 source_id[key]['activity_participation'].sort()
 

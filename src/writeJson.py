@@ -1396,8 +1396,14 @@ for jsonName in masterTargets:
     # Test for updates
     print(eval(target))
     print(eval(jsonName))
+    print('---')
+    print('---')
+    print('---')
+    print('---')    
     print(cmp(eval(target),eval(jsonName)))
     vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
+    print(eval(target) == eval(jsonName))
+    print('---')
     #vars()[testVal] = eval(target) == eval(jsonName) # Py3
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)

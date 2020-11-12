@@ -1098,8 +1098,10 @@ table_id = [
 for jsonName in ['experiment_id','source_id']:
     if jsonName in ['experiment_id','source_id']:
         dictToClean = eval(jsonName)
-        for key, value in dictToClean.iteritems():
-            for values in value.iteritems(): # values is a tuple
+        #for key, value in dictToClean.iteritems(): # Py2
+        for key, value in iter(dictToClean.items()): # Py3
+            #for values in value.iteritems(): # values is a tuple # Py2
+            for values in iter(value.items()): # values is a tuple # Py3
                 # test for dictionary
                 if type(values[1]) is list:
                     new = []
@@ -1122,7 +1124,8 @@ for jsonName in ['experiment_id','source_id']:
                             string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
-                elif type(values[0]) in [str,unicode]:
+                #elif type(values[0]) in [str,unicode]: # Py2
+                elif type(values[0]) == str: # Py3
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
@@ -1391,7 +1394,11 @@ for jsonName in masterTargets:
     vars()[target] = eval(target).get(jsonName)
     vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
     # Test for updates
-    vars()[testVal] = cmp(eval(target),eval(jsonName))
+    print(eval(target))
+    print(eval(jsonName))
+    print(cmp(eval(target),eval(jsonName)))
+    vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
+    #vars()[testVal] = eval(target) == eval(jsonName) # Py3
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)
 # Use binary test output to generate

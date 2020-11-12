@@ -496,6 +496,7 @@ PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
+PJD 11 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -526,7 +527,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
+commitMessage = '\"Register institution_id LLNL\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 
@@ -824,6 +825,10 @@ institution_id = {
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
+    'LLNL': ' '.join(['Lawrence Livermore National Laboratory, Livermore,',
+                      'CA 94550, USA. Mailing address: LLNL Climate Program,',
+                      'c/o Stephen A. Klein, Principal Investigator, L-103,',
+                      '7000 East Avenue, Livermore, CA 94550, USA']),
     'MESSy-Consortium': ''.join(['The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, ',
                                  'Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany']),
     'MIROC': ''.join(['JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), ',

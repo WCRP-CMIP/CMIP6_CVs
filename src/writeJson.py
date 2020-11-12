@@ -1394,8 +1394,8 @@ for jsonName in masterTargets:
     vars()[target] = eval(target).get(jsonName)
     vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
     # Test for updates
-    print(eval(target))
-    print(eval(jsonName))
+    #print(eval(target))
+    #print(eval(jsonName))
     print('---')
     print('---')
     print('---')

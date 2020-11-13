@@ -1406,9 +1406,9 @@ for jsonName in masterTargets:
         print(platform.python_version())
     elif platform.python_version().split('.')[0] == '3':
         print('enter py3')
-        vars()[testVal] = eval(target) == eval(jsonName) # Py3
+        vars()[testVal] = not(eval(target) == eval(jsonName)) # Py3
         print(platform.python_version())
-    print(eval(target) == eval(jsonName))
+    print(not(eval(target) == eval(jsonName)))
     print('---')
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)
@@ -1431,30 +1431,58 @@ for jsonName in masterTargets:
     testDict = eval(jsonName)
     print(jsonName,type(testDict))
     try:
-        if type(testDict) is list:
-            print('enter list')
-            ''.join(testDict).decode('utf-8')
-        else:
-            for key1,val1 in testDict.items():
-                key1.decode('utf-8')
-                if type(val1) is dict:
-                    for key2,val2 in val1.items():
-                        key2.decode('utf-8')
-                        if type(val2) is list:
-                            ''.join(val2).decode('utf-8') ; # Deal with list types
-                        elif type(val2) is dict:
-                            for key3,val3 in val2.items():
-                                if type(val3) is list:
-                                    ''.join(val3).decode('utf-8') ; # Deal with list types
-                                elif type(val3) is dict:
-                                    for key4,val4 in val3.items():
-                                        val4.decode('utf-8')
-                                else:
-                                    val3.decode('utf-8')
-                        else:
-                            val2.decode('utf-8')
-                else:
-                    val1.decode('utf-8')
+        if platform.python_version().split('.')[0] == '2':
+            if type(testDict) is list:
+                #print('enter list')
+                ''.join(testDict).decode('utf-8')
+            else:
+                for key1,val1 in testDict.items():
+                    #print('type key1:',type(key1))
+                    key1.decode('utf-8')
+                    if type(val1) is dict:
+                        for key2,val2 in val1.items():
+                            key2.decode('utf-8')
+                            if type(val2) is list:
+                                ''.join(val2).decode('utf-8') # Deal with list types
+                            elif type(val2) is dict:
+                                for key3,val3 in val2.items():
+                                    if type(val3) is list:
+                                        ''.join(val3).decode('utf-8') # Deal with list types
+                                    elif type(val3) is dict:
+                                        for key4,val4 in val3.items():
+                                            val4.decode('utf-8')
+                                    else:
+                                        val3.decode('utf-8')
+                            else:
+                                val2.decode('utf-8')
+                    else:
+                        val1.decode('utf-8')
+        elif platform.python_version().split('.')[0] == '3':
+            if type(testDict) is list:
+                #print('enter list')
+                ''.join(testDict).encode('utf-8')
+            else:
+                for key1,val1 in testDict.items():
+                    #print('type key1:',type(key1))
+                    key1.encode('utf-8')
+                    if type(val1) is dict:
+                        for key2,val2 in val1.items():
+                            key2.encode('utf-8')
+                            if type(val2) is list:
+                                ''.join(val2).encode('utf-8') # Deal with list types
+                            elif type(val2) is dict:
+                                for key3,val3 in val2.items():
+                                    if type(val3) is list:
+                                        ''.join(val3).encode('utf-8') # Deal with list types
+                                    elif type(val3) is dict:
+                                        for key4,val4 in val3.items():
+                                            val4.encode('utf-8')
+                                    else:
+                                        val3.encode('utf-8')
+                            else:
+                                val2.encode('utf-8')
+                    else:
+                        val1.encode('utf-8')
     except UnicodeEncodeError:
         # If left as UnicodeDecodeError - prints traceback
         print('UTF-8 failure for:',jsonName, 'exiting')
@@ -1463,7 +1491,8 @@ for jsonName in masterTargets:
 #%% Write variables to files
 timeNow = datetime.datetime.now().strftime('%c')
 offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
-offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes
+#offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes # Py2
+offset = ''.join(['{:03d}'.format(int(offset)),'00']) # Pad with 00 minutes # Py3
 timeStamp = ''.join([timeNow,' ',offset])
 del(timeNow,offset)
 
@@ -1476,6 +1505,7 @@ for jsonName in masterTargets:
     # Get repo version/metadata - from src/writeJson.py
 
     # Extract last recorded commit for src/writeJson.py
+    print(os.path.realpath(__file__))
     versionInfo1 = getFileHistory(os.path.realpath(__file__))
     versionInfo = {}
     versionInfo['author'] = author

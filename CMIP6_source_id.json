@@ -5667,7 +5667,6 @@
                 "CFMIP",
                 "CMIP",
                 "DAMIP",
-                "DAMIP",
                 "DCPP",
                 "DynVarMIP",
                 "FAFMIP",
@@ -7252,13 +7251,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 12 15:37:21 2020 -0800",
+        "CV_collection_modified":"Fri Nov 13 13:06:07 2020 -0800",
         "CV_collection_version":"6.2.54.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"abd39da72d334772a667529a5545f9c9059d2a82",
+        "previous_commit":"edf4c08f5211eef95eb961e40ae4712c58e16ddd",
         "source_id_CV_modified":"Wed Oct 28 17:40:37 2020 -0700",
-        "source_id_CV_note":"Register institution_id LLNL",
+        "source_id_CV_note":"Revise source_id MPI-ESM1-2-LR",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

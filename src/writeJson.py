@@ -967,9 +967,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM1-2-LR'
-source_id[key]['activity_participation'].append('DAMIP')
-source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'
@@ -1396,8 +1393,6 @@ for jsonName in masterTargets:
     # Test for updates
     #print(eval(target))
     #print(eval(jsonName))
-    print('---')
-    print('---')
     print('---')
     print('---')    
     print(cmp(eval(target),eval(jsonName)))

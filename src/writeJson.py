@@ -496,7 +496,8 @@ PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
-PJD 11 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
+PJD 13 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
+PJD 13 Nov 2020    - Update for Py2/3
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -510,6 +511,7 @@ import datetime
 import gc
 import json
 import os
+import platform
 import shlex
 import subprocess
 import sys
@@ -1394,12 +1396,20 @@ for jsonName in masterTargets:
     #print(eval(target))
     #print(eval(jsonName))
     print('---')
-    print('---')    
-    print(cmp(eval(target),eval(jsonName)))
-    vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
+    print('---')
+    print(platform.python_version())
+    print(platform.python_version().split('.')[0])
+    if platform.python_version().split('.')[0] == '2':
+        print('enter py2')
+        print(cmp(eval(target),eval(jsonName)))
+        vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
+        print(platform.python_version())
+    elif platform.python_version().split('.')[0] == '3':
+        print('enter py3')
+        vars()[testVal] = eval(target) == eval(jsonName) # Py3
+        print(platform.python_version())
     print(eval(target) == eval(jsonName))
     print('---')
-    #vars()[testVal] = eval(target) == eval(jsonName) # Py3
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)
 # Use binary test output to generate

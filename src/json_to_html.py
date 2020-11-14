@@ -94,7 +94,7 @@ fo = open(fout, 'w')
 
 fo.write(''.join([header, """\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""]))
+<table id="table_id" class="display">\n"""]))
 
 dictOrder = [
 'experiment_id','activity_id','description','start_year','end_year','parent_experiment_id',
@@ -115,7 +115,7 @@ for exp in dict1.keys():
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>experiment_id</th>" % hf
-            fo.write("<%s><tr><th>experiment_id</th>\n" % hf)
+            fo.write("<%s><tr>\n<th>experiment_id</th>\n" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i

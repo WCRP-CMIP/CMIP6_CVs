@@ -497,7 +497,7 @@ MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/W
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
 PJD 13 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
-PJD 13 Nov 2020    - Update for Py2/3
+PJD 13 Nov 2020    - Updated for Py2/3
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -517,9 +517,9 @@ import subprocess
 import sys
 import time
 try:
-    import urllib2 as urllib
+    from urllib2 import urlopen # py2
 except ImportError:
-    import urllib
+    from urllib.request import urlopen # py3
 sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
@@ -853,7 +853,10 @@ institution_id = {
                     'and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway, ',
                     'Henrik Mohns plass 1, Oslo 0313, Norway']),
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
-    'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
+    'NIMS-KMA': ' '.join(['National Institute of Meteorological Sciences/Korea',
+                          'Meteorological Administration, Climate Research',
+                          'Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568,',
+                          'Republic of Korea']),
     'NIWA': 'National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NTU': 'National Taiwan University, Taipei 10650, Taiwan',
@@ -1373,7 +1376,7 @@ for key in experiment_id_keys:
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
 '''
 
-del(experiment_id_keys,key,act,val,val1,val2,vals)
+del(experiment_id_keys, key, act, val, val1, val2, vals)
 '''
 print('***FINISH***')
 sys.exit() ; # Turn back on to catch errors prior to running commit
@@ -1395,21 +1398,21 @@ for jsonName in masterTargets:
     # Test for updates
     #print(eval(target))
     #print(eval(jsonName))
-    print('---')
-    print('---')
-    print(platform.python_version())
-    print(platform.python_version().split('.')[0])
+    #print('---')
+    #print('---')
+    #print(platform.python_version())
+    #print(platform.python_version().split('.')[0])
     if platform.python_version().split('.')[0] == '2':
-        print('enter py2')
-        print(cmp(eval(target),eval(jsonName)))
+        #print('enter py2')
+        #print(cmp(eval(target),eval(jsonName)))
         vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
-        print(platform.python_version())
+        #print(platform.python_version())
     elif platform.python_version().split('.')[0] == '3':
-        print('enter py3')
+        #print('enter py3')
         vars()[testVal] = not(eval(target) == eval(jsonName)) # Py3
-        print(platform.python_version())
-    print(not(eval(target) == eval(jsonName)))
-    print('---')
+        #print(platform.python_version())
+    #print(not(eval(target) == eval(jsonName)))
+    #print('---')
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)
 # Use binary test output to generate
@@ -1429,7 +1432,7 @@ print('Version:',versionId)
 #%% Validate UTF-8 encoding - catch omip2 error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
 for jsonName in masterTargets:
     testDict = eval(jsonName)
-    print(jsonName,type(testDict))
+    #print(jsonName,type(testDict))
     try:
         if platform.python_version().split('.')[0] == '2':
             if type(testDict) is list:
@@ -1505,7 +1508,7 @@ for jsonName in masterTargets:
     # Get repo version/metadata - from src/writeJson.py
 
     # Extract last recorded commit for src/writeJson.py
-    print(os.path.realpath(__file__))
+    #print(os.path.realpath(__file__))
     versionInfo1 = getFileHistory(os.path.realpath(__file__))
     versionInfo = {}
     versionInfo['author'] = author
@@ -1528,16 +1531,27 @@ for jsonName in masterTargets:
     # Append repo version/metadata
     jsonDict['version_metadata'] = versionInfo
     fH = open(outFile, 'w')
-    json.dump(
-        jsonDict,
-        fH,
-        ensure_ascii=True,
-        sort_keys=True,
-        indent=4,
-        separators=(
-            ',',
-            ':'),
-        encoding="utf-8")
+    if platform.python_version().split('.')[0] == '2':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'),
+            encoding="utf-8")
+    elif platform.python_version().split('.')[0] == '3':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'))
     fH.close()
 
 # Cleanup
@@ -1609,16 +1623,27 @@ if any(test):
     if os.path.exists(outFile):
         os.remove(outFile)
     fH = open(outFile, 'w')
-    json.dump(
-        jsonDict,
-        fH,
-        ensure_ascii=True,
-        sort_keys=True,
-        indent=4,
-        separators=(
-            ',',
-            ':'),
-        encoding="utf-8")
+    if platform.python_version().split('.')[0] == '2':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'),
+            encoding="utf-8")
+    elif platform.python_version().split('.')[0] == '3':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'))
     fH.close()
     print('versionHistory.json updated')
 # Cleanup anyway
@@ -1636,7 +1661,8 @@ stdOut,stdErr = p.communicate()
 print('Returncode:',p.returncode) ; # If not 0 there was an issue
 print('stdOut:',stdOut)
 print('stdErr:',stdErr)
-if 'Traceback' in stdErr:
+#if 'Traceback' in stdErr: # Py2
+if b'Traceback' in stdErr: # Py3
     print('json_to_html failure:')
     print('Exiting..')
     sys.exit()
@@ -1646,7 +1672,7 @@ gc.collect()
 #%% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo
 tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
-  ] ;
+  ]
 versionHistory = readJsonCreateDict(tmp)
 versionHistory = versionHistory.get('versionHistory')
 versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
@@ -1660,7 +1686,8 @@ del(versionHistory)
 if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
-    txt = urllib.urlopen(target_url).read()
+    #txt = urllib.urlopen(target_url).read() # Py2
+    txt = urlopen(target_url).read().decode('utf-8') # Py3
     txt = txt.replace(versionOld,versionId)
     # Now delete existing file and write back to repo
     readmeH = '../README.md'

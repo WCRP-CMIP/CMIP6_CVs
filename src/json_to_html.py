@@ -19,6 +19,7 @@ PJD 30 Apr 2020    - Updated jquery 3.3.1 -> 3.5.0, dataTables 1.10.18 -> 1.10.2
                      copy css/jquery.dataTables.min.css and js/jquery.dataTables.min.js (updating *dataTables* -> *dataTables-1.10.20*)
                    - Update jquery.dataTables-1.10.20.min.js line 156 update ,aLengthMenu:[10,25,50,100], ->
                      ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350,400], (use jquery.dataTables.js for location lookup [non-minified])
+PJD 13 Nov 2020    - Updated for Py3
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -64,9 +65,9 @@ parser.add_argument('ver',metavar='str',type=str,help='For e.g. \'6.2.11.2\' as 
 args = parser.parse_args()
 if re.search(verTest,args.ver):
    version = args.ver ; # 1 = make files
-   print "** HTML Write mode - ",version," will be written **"
+   print('** HTML Write mode - ",version," will be written **')
 else:
-    print "** Version: ",version," invalid, exiting"
+    print('** Version: ",version," invalid, exiting')
     sys.exit()
 
 #%% Set global arguments
@@ -78,10 +79,10 @@ f = open(infile)
 dict = json.load(f)
 dict1 = dict.get('experiment_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
-print dict2
-#print dict.keys()
-fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
-print "processing",fout
+print(dict2)
+#print(dict.keys())
+fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
+print('processing', fout)
 #fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
@@ -90,12 +91,12 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-print >> fo, ''.join([header, """
+fo.write(''.join([header, """
 <title>CMIP6 experiment_id values</title>
 </head>
 <body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""])
+<table id="table_id" class="display">"""]))
 
 dictOrder = [
 'experiment_id','activity_id','description','start_year','end_year','parent_experiment_id',
@@ -115,26 +116,31 @@ for exp in dict1.keys():
         #ids = exp_dict.keys()
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
-            print >> fo, "<%s><tr><th>experiment_id</th>" % hf
+            #print >> fo, "<%s><tr><th>experiment_id</th>" % hf
+            fo.write("<%s><tr><th>experiment_id</th>" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
-                print >>fo, "<th>%s</th>" % i
-            print >> fo, "</tr></%s>" % hf
+                #print >>fo, "<th>%s</th>" % i
+                fo.write("<th>%s</th>" % i)
+            #print >> fo, "</tr></%s>" % hf
+            fo.write("</tr></%s>" % hf)
     first_row = True
-    print >> fo, "<tr><td>%s</td>" % exp
+    #print >> fo, "<tr><td>%s</td>" % exp
+    fo.write("<tr><td>%s</td>" % exp)
     for k in ids:
         st = exp_dict[k]
         #print st
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
-        print >> fo, "<td>%s</td>" % st
-    print >> fo, "</tr>"
-print >> fo, "</table>"
+        #print >> fo, "<td>%s</td>" % st
+        fo.write("<td>%s</td>" % st)
+    #print >> fo, "</tr>"
+    fo.write("</tr>")
+#print >> fo, "</table>"
+fo.write("</table>")
 
-print >> fo, """
-</body>
-</html>
-"""
+#print >> fo, """
+fo.write("""\n</body>\n</html>\n""")
 
 #%% Process institution_id
 infile = '../CMIP6_institution_id.json'
@@ -142,19 +148,20 @@ f = open(infile)
 dict = json.load(f)
 dict1 = dict.get('institution_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
-print dict2
-#print dict.keys()
+print(dict2)
+#print(dict.keys())
 fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
-print "processing",fout
+print('processing', fout)
 #fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, ''.join([header, """
+#print >> fo, ''.join([header, """
+fo.write(''.join([header, """
 <title>CMIP6 institution_id values</title>
 </head>
 <body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""])
+<table id="table_id" class="display">"""]))
 
 dictOrder = [
 'institution_id'
@@ -166,20 +173,25 @@ for exp in dict1.keys():
     if not first_row:
         ids = dictOrder ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
-            print >> fo, "<%s><tr><th>institution_id</th>" % hf
+            #print >> fo, "<%s><tr><th>institution_id</th>" % hf
+            fo.write("<%s><tr><th>institution_id</th>" % hf)
             for i in ids:
-                print >>fo, "<th>Description</th>"
-            print >> fo, "</tr></%s>" % hf
+                #print >>fo, "<th>Description</th>"
+                fo.write("<th>Description</th>")
+            #print >> fo, "</tr></%s>" % hf
+            fo.write("</tr></%s>" % hf)
     first_row = True
-    print >> fo, "<tr><td>%s</td>" % exp
-    print >> fo, "<td>%s</td>" % exp_dict
-    print >> fo, "</tr>"
-print >> fo, "</table>"
+    #print >> fo, "<tr><td>%s</td>" % exp
+    fo.write("<tr><td>%s</td>" % exp)
+    #print >> fo, "<td>%s</td>" % exp_dict
+    fo.write("<td>%s</td>" % exp_dict)
+    #print >> fo, "</tr>"
+    fo.write("</tr>")
+#print >> fo, "</table>"
+fo.write("</table>")
 
-print >> fo, """
-</body>
-</html>
-"""
+#print >> fo, """
+fo.write("""\n</body>\n</html>\n""")
 
 #%% Process source_id
 infile = '../CMIP6_source_id.json'
@@ -187,19 +199,20 @@ f = open(infile)
 dict = json.load(f)
 dict1 = dict.get('source_id') ; # Fudge to extract duplicate level
 dict2 = dict.get('version')
-print dict2
-#print dict.keys()
+print(dict2)
+#print(dict.keys())
 fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
-print "processing",fout
+print("processing",fout)
 #fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-print >> fo, ''.join([header, """
+#print >> fo, ''.join([header, """
+fo.write(''.join([header, """
 <title>CMIP6 source_id values</title>
 </head>
 <body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""])
+<table id="table_id" class="display">"""]))
 
 dictOrder = [
 'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
@@ -227,13 +240,17 @@ for exp in dict1.keys():
     if not first_row:
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
-            print >> fo, "<%s><tr><th>source_id</th>" % hf
+            #print >> fo, "<%s><tr><th>source_id</th>" % hf
+            fo.write("<%s><tr><th>source_id</th>" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
-                print >>fo, "<th>%s</th>" % i
-            print >> fo, "</tr></%s>" % hf
+                #print >>fo, "<th>%s</th>" % i
+                fo.write("<th>%s</th>" % i)
+            #print >> fo, "</tr></%s>" % hf
+            fo.write("</tr></%s>" % hf)
     first_row = True
-    print >> fo, "<tr><td>%s</td>" % exp
+    #print >> fo, "<tr><td>%s</td>" % exp
+    fo.write("<tr><td>%s</td>" % exp)
     # Fill columns with values
     for k in ids:
         # Deal with embeds
@@ -246,10 +263,11 @@ for exp in dict1.keys():
             st = exp_dict[k]
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
-        print >> fo, "<td>%s</td>" % st
-    print >> fo, "</tr>"
-print >> fo, "</table>"
-print >> fo, """
-</body>
-</html>
-"""
+        #print >> fo, "<td>%s</td>" % st
+        fo.write("<td>%s</td>" % st)
+    #print >> fo, "</tr>"
+    fo.write("</tr>")
+#print >> fo, "</table>"
+fo.write("</table>")
+#print >> fo, """
+fo.write("""\n</body>\n</html>\n""")

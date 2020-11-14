@@ -4,7 +4,7 @@
 Created on Fri Feb 23 13:09:26 2018
 
 PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
-PJD 11 Nov 2020     - Updated to deal with py3
+PJD 13 Nov 2020     - Updated for Py3
 
 @author: durack1
 """

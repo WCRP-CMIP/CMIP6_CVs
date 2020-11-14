@@ -20,6 +20,7 @@ PJD 30 Apr 2020    - Updated jquery 3.3.1 -> 3.5.0, dataTables 1.10.18 -> 1.10.2
                    - Update jquery.dataTables-1.10.20.min.js line 156 update ,aLengthMenu:[10,25,50,100], ->
                      ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350,400], (use jquery.dataTables.js for location lookup [non-minified])
 PJD 13 Nov 2020    - Updated for Py3
+PJD 13 Nov 2020    - Updated to include line breaks experiment_id
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -91,11 +92,11 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-fo.write(''.join([header, """
-<title>CMIP6 experiment_id values</title>
-</head>
-<body>
-<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
+fo.write(''.join([header, """\n
+<title>CMIP6 experiment_id values</title>\n
+</head>\n
+<body>\n
+<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>\n
 <table id="table_id" class="display">"""]))
 
 dictOrder = [
@@ -117,27 +118,27 @@ for exp in dict1.keys():
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>experiment_id</th>" % hf
-            fo.write("<%s><tr><th>experiment_id</th>" % hf)
+            fo.write("<%s><tr><th>experiment_id</th>\n" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i
-                fo.write("<th>%s</th>" % i)
+                fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>" % hf)
+            fo.write("</tr></%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
-    fo.write("<tr><td>%s</td>" % exp)
+    fo.write("<tr><td>%s</td>\n" % exp)
     for k in ids:
         st = exp_dict[k]
         #print st
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         #print >> fo, "<td>%s</td>" % st
-        fo.write("<td>%s</td>" % st)
+        fo.write("<td>%s</td>\n" % st)
     #print >> fo, "</tr>"
-    fo.write("</tr>")
+    fo.write("</tr>\n")
 #print >> fo, "</table>"
-fo.write("</table>")
+fo.write("</table>\n")
 
 #print >> fo, """
 fo.write("""\n</body>\n</html>\n""")

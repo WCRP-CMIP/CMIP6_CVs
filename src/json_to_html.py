@@ -92,10 +92,7 @@ fo = open(fout, 'w')
 #<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 #<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-fo.write(''.join([header, """\n
-<title>CMIP6 experiment_id values</title>\n
-</head>\n
-<body>\n
+fo.write(''.join([header, """\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>\n
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>\n
 <table id="table_id" class="display">"""]))
 

@@ -119,7 +119,7 @@ for exp in dict1.keys():
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>experiment_id</th>" % hf
-            fo.write("<%s><tr>\n<th>experiment_id</th>\n" % hf)
+            fo.write("<%s>\n<tr>\n<th>experiment_id</th>\n" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i
@@ -174,7 +174,7 @@ for exp in dict1.keys():
         ids = dictOrder ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>institution_id</th>" % hf
-            fo.write("<%s><tr>\n<th>institution_id</th>\n" % hf)
+            fo.write("<%s>\n<tr>\n<th>institution_id</th>\n" % hf)
             for i in ids:
                 #print >>fo, "<th>Description</th>"
                 fo.write("<th>Description</th>\n")
@@ -208,11 +208,9 @@ fo = open(fout, 'w')
 
 #print >> fo, ''.join([header, """
 fo.write(''.join([header, """
-<title>CMIP6 source_id values</title>
-</head>
-<body>
+<title>CMIP6 source_id values</title>\n</head>\m<body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""]))
+<table id="table_id" class="display">\n"""]))
 
 dictOrder = [
 'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
@@ -241,16 +239,16 @@ for exp in dict1.keys():
         ids = dictOrderK ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>source_id</th>" % hf
-            fo.write("<%s><tr><th>source_id</th>" % hf)
+            fo.write("<%s>\n<tr>\n<th>source_id</th>\n" % hf)
             for i in ids:
                 i = i.replace('_',' ') ; # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i
-                fo.write("<th>%s</th>" % i)
+                fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>" % hf)
+            fo.write("</tr></%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
-    fo.write("<tr><td>%s</td>" % exp)
+    fo.write("<tr>\n<td>%s</td>\n" % exp)
     # Fill columns with values
     for k in ids:
         # Deal with embeds
@@ -264,9 +262,9 @@ for exp in dict1.keys():
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         #print >> fo, "<td>%s</td>" % st
-        fo.write("<td>%s</td>" % st)
+        fo.write("<td>%s</td>\n" % st)
     #print >> fo, "</tr>"
-    fo.write("</tr>")
+    fo.write("</tr>\n")
 #print >> fo, "</table>"
 fo.write("</table>")
 #print >> fo, """

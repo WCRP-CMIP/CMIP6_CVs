@@ -975,10 +975,10 @@ del(tmp)
 key = 'MCM-UA-1-0'
 source_id[key]['model_component']['aerosol']['description'] = \
 ' '.join(['Modifies surface albedoes (Haywood et al. 1997,',
-          'doi: 10.1175/1520-0442(1997)010&lt1562:GCMCOT&gt2.0.CO;2)'])
+          'doi: 10.1175/1520-0442(1997)010&lt;1562:GCMCOT&gt;2.0.CO;2)'])
 source_id[key]['model_component']['land']['description'] = \
 ' '.join(['Standard Manabe bucket hydrology scheme (Manabe 1969,',
-          'doi: 10.1175/1520-0493(1969)097&lt0739:CATOC&gt2.3.CO;2)'])
+          'doi: 10.1175/1520-0493(1969)097&lt;0739:CATOC&gt;2.3.CO;2)'])
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

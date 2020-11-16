@@ -496,6 +496,10 @@ PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
+PJD 16 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
+PJD 16 Nov 2020    - Updated for Py2/3
+PJD 16 Nov 2020    - Updated institution_id KIOST to exclude ampersand character (html problems)
+PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html problems)
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -509,14 +513,15 @@ import datetime
 import gc
 import json
 import os
+import platform
 import shlex
 import subprocess
 import sys
 import time
 try:
-    import urllib2 as urllib
+    from urllib2 import urlopen # py2
 except ImportError:
-    import urllib
+    from urllib.request import urlopen # py3
 sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
@@ -526,7 +531,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
+commitMessage = '\"Register institution_id LLNL; Py3 cleanup\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 
@@ -673,8 +678,6 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
-# Fix issues
-
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -823,7 +826,11 @@ institution_id = {
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
-    'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
+    'KIOST': 'Korea Institute of Ocean Science and Technology, Busan 49111, Republic of Korea',
+    'LLNL': ' '.join(['Lawrence Livermore National Laboratory, Livermore,',
+                      'CA 94550, USA. Mailing address: LLNL Climate Program,',
+                      'c/o Stephen A. Klein, Principal Investigator, L-103,',
+                      '7000 East Avenue, Livermore, CA 94550, USA']),
     'MESSy-Consortium': ''.join(['The Modular Earth Submodel System (MESSy) Consortium, represented by the Institute for Physics of the Atmosphere, ',
                                  'Deutsches Zentrum fur Luft- und Raumfahrt (DLR), Wessling, Bavaria 82234, Germany']),
     'MIROC': ''.join(['JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), ',
@@ -846,7 +853,10 @@ institution_id = {
                     'and UNI (Uni Research, Bergen 5008), Norway. Mailing address: NCC, c/o MET-Norway, ',
                     'Henrik Mohns plass 1, Oslo 0313, Norway']),
     'NERC': 'Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK',
-    'NIMS-KMA': 'National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea',
+    'NIMS-KMA': ' '.join(['National Institute of Meteorological Sciences/Korea',
+                          'Meteorological Administration, Climate Research',
+                          'Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568,',
+                          'Republic of Korea']),
     'NIWA': 'National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand',
     'NOAA-GFDL': 'National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA',
     'NTU': 'National Taiwan University, Taipei 10650, Taiwan',
@@ -962,10 +972,13 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM1-2-LR'
-source_id[key]['activity_participation'].append('DAMIP')
-source_id[key]['activity_participation'].sort()
-
+key = 'MCM-UA-1-0'
+source_id[key]['model_component']['aerosol']['description'] = \
+' '.join(['Modifies surface albedoes (Haywood et al. 1997,',
+          'doi: 10.1175/1520-0442(1997)010&lt;1562:GCMCOT&gt;2.0.CO;2)'])
+source_id[key]['model_component']['land']['description'] = \
+' '.join(['Standard Manabe bucket hydrology scheme (Manabe 1969,',
+          'doi: 10.1175/1520-0493(1969)097&lt;0739:CATOC&gt;2.3.CO;2)'])
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}
@@ -1093,8 +1106,10 @@ table_id = [
 for jsonName in ['experiment_id','source_id']:
     if jsonName in ['experiment_id','source_id']:
         dictToClean = eval(jsonName)
-        for key, value in dictToClean.iteritems():
-            for values in value.iteritems(): # values is a tuple
+        #for key, value in dictToClean.iteritems(): # Py2
+        for key, value in iter(dictToClean.items()): # Py3
+            #for values in value.iteritems(): # values is a tuple # Py2
+            for values in iter(value.items()): # values is a tuple # Py3
                 # test for dictionary
                 if type(values[1]) is list:
                     new = []
@@ -1117,7 +1132,8 @@ for jsonName in ['experiment_id','source_id']:
                             string = dictToClean[key][keyInd][d1Key][d2Key]
                             string = cleanString(string) ; # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
-                elif type(values[0]) in [str,unicode]:
+                #elif type(values[0]) in [str,unicode]: # Py2
+                elif type(values[0]) == str: # Py3
                     string = dictToClean[key][values[0]]
                     string = cleanString(string) ; # Clean string
                     dictToClean[key][values[0]] = string
@@ -1366,7 +1382,7 @@ for key in experiment_id_keys:
 del(experiment_id_keys,key,act,val,val1,val2,vals,valStart,valEnd,minNumYrsSim,test)
 '''
 
-del(experiment_id_keys,key,act,val,val1,val2,vals)
+del(experiment_id_keys, key, act, val, val1, val2, vals)
 '''
 print('***FINISH***')
 sys.exit() ; # Turn back on to catch errors prior to running commit
@@ -1386,7 +1402,23 @@ for jsonName in masterTargets:
     vars()[target] = eval(target).get(jsonName)
     vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
     # Test for updates
-    vars()[testVal] = cmp(eval(target),eval(jsonName))
+    #print(eval(target))
+    #print(eval(jsonName))
+    #print('---')
+    #print('---')
+    #print(platform.python_version())
+    #print(platform.python_version().split('.')[0])
+    if platform.python_version().split('.')[0] == '2':
+        #print('enter py2')
+        #print(cmp(eval(target),eval(jsonName)))
+        vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
+        #print(platform.python_version())
+    elif platform.python_version().split('.')[0] == '3':
+        #print('enter py3')
+        vars()[testVal] = not(eval(target) == eval(jsonName)) # Py3
+        #print(platform.python_version())
+    #print(not(eval(target) == eval(jsonName)))
+    #print('---')
     del(vars()[target],target,testVal,url,tmp)
 del(jsonName)
 # Use binary test output to generate
@@ -1406,32 +1438,60 @@ print('Version:',versionId)
 #%% Validate UTF-8 encoding - catch omip2 error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
 for jsonName in masterTargets:
     testDict = eval(jsonName)
-    print(jsonName,type(testDict))
+    #print(jsonName,type(testDict))
     try:
-        if type(testDict) is list:
-            print('enter list')
-            ''.join(testDict).decode('utf-8')
-        else:
-            for key1,val1 in testDict.items():
-                key1.decode('utf-8')
-                if type(val1) is dict:
-                    for key2,val2 in val1.items():
-                        key2.decode('utf-8')
-                        if type(val2) is list:
-                            ''.join(val2).decode('utf-8') ; # Deal with list types
-                        elif type(val2) is dict:
-                            for key3,val3 in val2.items():
-                                if type(val3) is list:
-                                    ''.join(val3).decode('utf-8') ; # Deal with list types
-                                elif type(val3) is dict:
-                                    for key4,val4 in val3.items():
-                                        val4.decode('utf-8')
-                                else:
-                                    val3.decode('utf-8')
-                        else:
-                            val2.decode('utf-8')
-                else:
-                    val1.decode('utf-8')
+        if platform.python_version().split('.')[0] == '2':
+            if type(testDict) is list:
+                #print('enter list')
+                ''.join(testDict).decode('utf-8')
+            else:
+                for key1,val1 in testDict.items():
+                    #print('type key1:',type(key1))
+                    key1.decode('utf-8')
+                    if type(val1) is dict:
+                        for key2,val2 in val1.items():
+                            key2.decode('utf-8')
+                            if type(val2) is list:
+                                ''.join(val2).decode('utf-8') # Deal with list types
+                            elif type(val2) is dict:
+                                for key3,val3 in val2.items():
+                                    if type(val3) is list:
+                                        ''.join(val3).decode('utf-8') # Deal with list types
+                                    elif type(val3) is dict:
+                                        for key4,val4 in val3.items():
+                                            val4.decode('utf-8')
+                                    else:
+                                        val3.decode('utf-8')
+                            else:
+                                val2.decode('utf-8')
+                    else:
+                        val1.decode('utf-8')
+        elif platform.python_version().split('.')[0] == '3':
+            if type(testDict) is list:
+                #print('enter list')
+                ''.join(testDict).encode('utf-8')
+            else:
+                for key1,val1 in testDict.items():
+                    #print('type key1:',type(key1))
+                    key1.encode('utf-8')
+                    if type(val1) is dict:
+                        for key2,val2 in val1.items():
+                            key2.encode('utf-8')
+                            if type(val2) is list:
+                                ''.join(val2).encode('utf-8') # Deal with list types
+                            elif type(val2) is dict:
+                                for key3,val3 in val2.items():
+                                    if type(val3) is list:
+                                        ''.join(val3).encode('utf-8') # Deal with list types
+                                    elif type(val3) is dict:
+                                        for key4,val4 in val3.items():
+                                            val4.encode('utf-8')
+                                    else:
+                                        val3.encode('utf-8')
+                            else:
+                                val2.encode('utf-8')
+                    else:
+                        val1.encode('utf-8')
     except UnicodeEncodeError:
         # If left as UnicodeDecodeError - prints traceback
         print('UTF-8 failure for:',jsonName, 'exiting')
@@ -1440,7 +1500,8 @@ for jsonName in masterTargets:
 #%% Write variables to files
 timeNow = datetime.datetime.now().strftime('%c')
 offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
-offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes
+#offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes # Py2
+offset = ''.join(['{:03d}'.format(int(offset)),'00']) # Pad with 00 minutes # Py3
 timeStamp = ''.join([timeNow,' ',offset])
 del(timeNow,offset)
 
@@ -1453,6 +1514,7 @@ for jsonName in masterTargets:
     # Get repo version/metadata - from src/writeJson.py
 
     # Extract last recorded commit for src/writeJson.py
+    #print(os.path.realpath(__file__))
     versionInfo1 = getFileHistory(os.path.realpath(__file__))
     versionInfo = {}
     versionInfo['author'] = author
@@ -1475,16 +1537,27 @@ for jsonName in masterTargets:
     # Append repo version/metadata
     jsonDict['version_metadata'] = versionInfo
     fH = open(outFile, 'w')
-    json.dump(
-        jsonDict,
-        fH,
-        ensure_ascii=True,
-        sort_keys=True,
-        indent=4,
-        separators=(
-            ',',
-            ':'),
-        encoding="utf-8")
+    if platform.python_version().split('.')[0] == '2':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'),
+            encoding="utf-8")
+    elif platform.python_version().split('.')[0] == '3':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'))
     fH.close()
 
 # Cleanup
@@ -1556,16 +1629,27 @@ if any(test):
     if os.path.exists(outFile):
         os.remove(outFile)
     fH = open(outFile, 'w')
-    json.dump(
-        jsonDict,
-        fH,
-        ensure_ascii=True,
-        sort_keys=True,
-        indent=4,
-        separators=(
-            ',',
-            ':'),
-        encoding="utf-8")
+    if platform.python_version().split('.')[0] == '2':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'),
+            encoding="utf-8")
+    elif platform.python_version().split('.')[0] == '3':
+        json.dump(
+            jsonDict,
+            fH,
+            ensure_ascii=True,
+            sort_keys=True,
+            indent=4,
+            separators=(
+                ',',
+                ':'))
     fH.close()
     print('versionHistory.json updated')
 # Cleanup anyway
@@ -1583,7 +1667,8 @@ stdOut,stdErr = p.communicate()
 print('Returncode:',p.returncode) ; # If not 0 there was an issue
 print('stdOut:',stdOut)
 print('stdErr:',stdErr)
-if 'Traceback' in stdErr:
+#if 'Traceback' in stdErr: # Py2
+if b'Traceback' in stdErr: # Py3
     print('json_to_html failure:')
     print('Exiting..')
     sys.exit()
@@ -1593,7 +1678,7 @@ gc.collect()
 #%% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo
 tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
-  ] ;
+  ]
 versionHistory = readJsonCreateDict(tmp)
 versionHistory = versionHistory.get('versionHistory')
 versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
@@ -1607,7 +1692,8 @@ del(versionHistory)
 if versionId != versionOld:
     #%% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
-    txt = urllib.urlopen(target_url).read()
+    #txt = urllib.urlopen(target_url).read() # Py2
+    txt = urlopen(target_url).read().decode('utf-8') # Py3
     txt = txt.replace(versionOld,versionId)
     # Now delete existing file and write back to repo
     readmeH = '../README.md'

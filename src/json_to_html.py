@@ -208,7 +208,7 @@ fo = open(fout, 'w')
 
 #print >> fo, ''.join([header, """
 fo.write(''.join([header, """
-<title>CMIP6 source_id values</title>\n</head>\m<body>
+<title>CMIP6 source_id values</title>\n</head>\n<body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
 <table id="table_id" class="display">\n"""]))
 

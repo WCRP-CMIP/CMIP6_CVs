@@ -498,7 +498,8 @@ PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/C
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
 PJD 16 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
 PJD 16 Nov 2020    - Updated for Py2/3
-PJD 16 Nov 2020    - Updated KIOST to exclude ampersand character (html problems)
+PJD 16 Nov 2020    - Updated institution_id KIOST to exclude ampersand character (html problems)
+PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html problems)
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -677,8 +678,6 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
-# Fix issues
-
 #==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
@@ -973,7 +972,13 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
+key = 'MCM-UA-1-0'
+source_id[key]['model_component']['aerosol']['description'] = \
+' '.join(['Modifies surface albedoes (Haywood et al. 1997,',
+          'doi: 10.1175/1520-0442(1997)010&lt1562:GCMCOT&gt2.0.CO;2)'])
+source_id[key]['model_component']['land']['description'] = \
+' '.join(['Standard Manabe bucket hydrology scheme (Manabe 1969,',
+          'doi: 10.1175/1520-0493(1969)097&lt0739:CATOC&gt2.3.CO;2)'])
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

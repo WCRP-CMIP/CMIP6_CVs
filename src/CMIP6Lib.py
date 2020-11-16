@@ -4,7 +4,7 @@
 Created on Fri Feb 23 13:09:26 2018
 
 PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
-PJD 13 Nov 2020     - Updated for Py3
+PJD 16 Nov 2020     - Updated for Py3; durolib updates alongside
 
 @author: durack1
 """

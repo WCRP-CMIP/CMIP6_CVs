@@ -22,6 +22,7 @@ PJD 30 Apr 2020    - Updated jquery 3.3.1 -> 3.5.0, dataTables 1.10.18 -> 1.10.2
 PJD 13 Nov 2020    - Updated for Py3
 PJD 13 Nov 2020    - Updated to include line breaks experiment_id
 PJD 14 Nov 2020    - Further tweaks to meet strict HTML format conventions
+PJD 16 Nov 2020    - Further updates to CMIP6_CVs content to meet strict html standards
                     https://www.w3.org/International/questions/qa-html-encoding-declarations
                     https://validator.w3.org/check
                    - TODO: Update default page lengths

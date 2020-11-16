@@ -22,6 +22,8 @@ PJD 30 Apr 2020    - Updated jquery 3.3.1 -> 3.5.0, dataTables 1.10.18 -> 1.10.2
 PJD 13 Nov 2020    - Updated for Py3
 PJD 13 Nov 2020    - Updated to include line breaks experiment_id
 PJD 14 Nov 2020    - Further tweaks to meet strict HTML format conventions
+                    https://www.w3.org/International/questions/qa-html-encoding-declarations
+                    https://validator.w3.org/check
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -39,9 +41,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="../src/jquery.dataTables-1.10.20.min.css" />
-<script type="text/javascript" charset="UTF-8" src="../src/jquery-3.5.0.slim.min.js"></script>
-<script type="text/javascript" charset="UTF-8" src="../src/jquery.dataTables-1.10.20.min.js"></script>
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.10.20.min.css" />
+<script type="text/javascript" charset="utf-8" src="../src/jquery-3.5.0.slim.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.10.20.min.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
@@ -157,11 +159,9 @@ fo = open(fout, 'w')
 
 #print >> fo, ''.join([header, """
 fo.write(''.join([header, """
-<title>CMIP6 institution_id values</title>
-</head>
-<body>
+<title>CMIP6 institution_id values</title>\n</head>\n<body>
 <p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">"""]))
+<table id="table_id" class="display">\n"""]))
 
 dictOrder = [
 'institution_id'
@@ -174,19 +174,19 @@ for exp in dict1.keys():
         ids = dictOrder ; # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>institution_id</th>" % hf
-            fo.write("<%s><tr><th>institution_id</th>" % hf)
+            fo.write("<%s><tr>\n<th>institution_id</th>\n" % hf)
             for i in ids:
                 #print >>fo, "<th>Description</th>"
-                fo.write("<th>Description</th>")
+                fo.write("<th>Description</th>\n")
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>" % hf)
+            fo.write("</tr></%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
-    fo.write("<tr><td>%s</td>" % exp)
+    fo.write("<tr>\n<td>%s</td>\n" % exp)
     #print >> fo, "<td>%s</td>" % exp_dict
-    fo.write("<td>%s</td>" % exp_dict)
+    fo.write("<td>%s</td>\n" % exp_dict)
     #print >> fo, "</tr>"
-    fo.write("</tr>")
+    fo.write("</tr>\n")
 #print >> fo, "</table>"
 fo.write("</table>")
 

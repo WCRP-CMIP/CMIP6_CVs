@@ -501,6 +501,7 @@ PJD 16 Nov 2020    - Updated for Py2/3
 PJD 16 Nov 2020    - Updated institution_id KIOST to exclude ampersand character (html problems)
 PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html problems)
 PJD 16 Nov 2020    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/984
+PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/981
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -532,7 +533,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id E3SM-1-0\"'
+commitMessage = '\"Revise source_id CESM1-WACCM-SC\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -972,15 +973,12 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'E3SM-1-0'
+key = 'CESM1-WACCM-SC'
 source_id[key]['institution_id'] = [
-'E3SM-Project',
-'LLNL'
+'UCI',
+'NCAR'
 ]
-source_id[key]['activity_participation'] = [
-'CFMIP',
-'CMIP'
-]
+
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

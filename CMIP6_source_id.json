@@ -1211,7 +1211,8 @@
                 "Registered"
             ],
             "institution_id":[
-                "UCI"
+                "UCI",
+                "NCAR"
             ],
             "label":"CESM1-WACCM-SC",
             "label_extended":"Community Earth System Model 1, with the Whole Atmosphere Community Climate Model and Specified Chemistry",
@@ -7253,13 +7254,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Nov 16 11:25:10 2020 -0800",
-        "CV_collection_version":"6.2.54.4",
+        "CV_collection_modified":"Mon Nov 16 11:34:20 2020 -0800",
+        "CV_collection_version":"6.2.54.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"fd4f978bc78d9fb94c51e17d53b3a1fb82ff5c51",
-        "source_id_CV_modified":"Mon Nov 16 11:16:39 2020 -0800",
-        "source_id_CV_note":"Revise source_id E3SM-1-0",
+        "previous_commit":"3f71d190105f7a210c2a9f4df86d1847f03dfb6f",
+        "source_id_CV_modified":"Mon Nov 16 11:25:10 2020 -0800",
+        "source_id_CV_note":"Revise source_id CESM1-WACCM-SC",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

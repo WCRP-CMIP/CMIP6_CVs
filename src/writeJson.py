@@ -500,6 +500,7 @@ PJD 16 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/C
 PJD 16 Nov 2020    - Updated for Py2/3
 PJD 16 Nov 2020    - Updated institution_id KIOST to exclude ampersand character (html problems)
 PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html problems)
+PJD 16 Nov 2020    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/984
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -531,10 +532,9 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register institution_id LLNL; Py3 cleanup\"'
+commitMessage = '\"Revise source_id E3SM-1-0\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
-
 author = 'Paul J. Durack <durack1@llnl.gov>'
 author_institution_id = 'PCMDI'
 
@@ -972,13 +972,15 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MCM-UA-1-0'
-source_id[key]['model_component']['aerosol']['description'] = \
-' '.join(['Modifies surface albedoes (Haywood et al. 1997,',
-          'doi: 10.1175/1520-0442(1997)010&lt;1562:GCMCOT&gt;2.0.CO;2)'])
-source_id[key]['model_component']['land']['description'] = \
-' '.join(['Standard Manabe bucket hydrology scheme (Manabe 1969,',
-          'doi: 10.1175/1520-0493(1969)097&lt;0739:CATOC&gt;2.3.CO;2)'])
+key = 'E3SM-1-0'
+source_id[key]['institution_id'] = [
+'E3SM-Project',
+'LLNL'
+]
+source_id[key]['activity_participation'] = [
+'CFMIP',
+'CMIP'
+]
 #============================================
 #key = 'AWI-ESM-1-1-LR'
 #source_id[key] = {}

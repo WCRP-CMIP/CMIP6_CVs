@@ -496,8 +496,9 @@ PJD  9 Oct 2020    - Register source_id CAM-MPAS-LR https://github.com/WCRP-CMIP
 MSM 22 Oct 2020    - Register experiment_ids for "CovidMIP" https://github.com/WCRP-CMIP/CMIP6_CVs/issues/973
 PJD 23 Oct 2020    - Revise source_id UKESM1-0-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/975
 PJD 28 Oct 2020    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/978
-PJD 13 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
-PJD 13 Nov 2020    - Updated for Py2/3
+PJD 16 Nov 2020    - Register institution_id LLNL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/983
+PJD 16 Nov 2020    - Updated for Py2/3
+PJD 16 Nov 2020    - Updated KIOST to exclude ampersand character (html problems)
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -826,7 +827,7 @@ institution_id = {
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
     'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
-    'KIOST': 'Korea Institute of Ocean Science & Technology, Busan 49111, Republic of Korea',
+    'KIOST': 'Korea Institute of Ocean Science and Technology, Busan 49111, Republic of Korea',
     'LLNL': ' '.join(['Lawrence Livermore National Laboratory, Livermore,',
                       'CA 94550, USA. Mailing address: LLNL Climate Program,',
                       'c/o Stephen A. Klein, Principal Investigator, L-103,',

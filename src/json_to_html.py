@@ -125,7 +125,7 @@ for exp in dict1.keys():
                 #print >>fo, "<th>%s</th>" % i
                 fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>\n" % hf)
+            fo.write("</tr>\n</%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
     fo.write("<tr><td>%s</td>\n" % exp)
@@ -179,7 +179,7 @@ for exp in dict1.keys():
                 #print >>fo, "<th>Description</th>"
                 fo.write("<th>Description</th>\n")
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>\n" % hf)
+            fo.write("</tr>\n</%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
     fo.write("<tr>\n<td>%s</td>\n" % exp)
@@ -245,7 +245,7 @@ for exp in dict1.keys():
                 #print >>fo, "<th>%s</th>" % i
                 fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
-            fo.write("</tr></%s>\n" % hf)
+            fo.write("</tr>\n</%s>\n" % hf)
     first_row = True
     #print >> fo, "<tr><td>%s</td>" % exp
     fo.write("<tr>\n<td>%s</td>\n" % exp)

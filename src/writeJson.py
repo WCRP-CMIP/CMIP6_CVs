@@ -515,6 +515,7 @@ PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html 
 PJD 16 Nov 2020    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/984
 PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/981
 PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/988
+PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/989
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -545,7 +546,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id TaiESM1\"'
+commitMessage = '\"Revise multiple E3SM source_id entries\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -985,9 +986,10 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'TaiESM1'
-source_id[key]['activity_participation'].append('PAMIP')
-source_id[key]['activity_participation'].sort()
+mods = ['E3SM-1-0', 'E3SM-1-1', 'E3SM-1-1-ECA']
+for count,key in enumerate(mods):
+    source_id[key]['activity_participation'].append('ScenarioMIP')
+    source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

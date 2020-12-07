@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"82fe7578349caabca6aed78a56d5636a1e172f02",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/82fe7578349caabca6aed78a56d5636a1e172f02",
-            "commitMessage":"Revise source_id TaiESM1",
-            "timeStamp":"Mon Dec  7 09:56:55 2020 -0800"
+            "MD5":"e6b66239831b1ca3f7b49a38bcf87c8e19c706b2",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e6b66239831b1ca3f7b49a38bcf87c8e19c706b2",
+            "commitMessage":"Revise multiple E3SM source_id entries",
+            "timeStamp":"Mon Dec  7 10:06:30 2020 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":6,
+            "versionCVCommit":7,
             "versionCVContent":54,
             "versionCVStructure":2,
             "versionMIPEra":6

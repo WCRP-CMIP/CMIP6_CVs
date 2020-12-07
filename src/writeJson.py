@@ -1,12 +1,16 @@
 #!/bin/env python
 # -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
 """
 Created on Mon Jul 11 14:12:21 2016
 
 Paul J. Durack 11th July 2016
 
 This script generates all controlled vocabulary (CV) json files residing this this subdirectory
-
+"""
+"""
 PJD 11 Jul 2016    - Started
 PJD 12 Jul 2016    - Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
 PJD 12 Jul 2016    - Format tweaks and typo corrections
@@ -98,6 +102,8 @@ PJD  7 Dec 2016    - Add experiment_id 1pctCO2-4xext https://github.com/WCRP-CMI
 PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_CVs/issues/172
 PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
 PJD 14 Dec 2016    - Add source_id GISS-E2-1 variants https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+"""
+"""
 PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/183
 PJD  3 Jan 2017    - Update source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
 PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/94
@@ -232,6 +238,8 @@ PJD  7 Dec 2017    - Revise THU source_id CIESM https://github.com/WCRP-CMIP/CMI
 PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/442
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
 PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
+"""
+"""
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
 PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
@@ -331,6 +339,8 @@ PJD 29 Nov 2018    - Register institution_id AS-RCEC https://github.com/WCRP-CMI
 PJD 29 Nov 2018    - Register source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/626
 PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https://github.com/WCRP-CMIP/CMIP6_CVs/issues/623
 PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
+"""
+"""
 PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
 PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
@@ -440,6 +450,8 @@ PJD 13 Dec 2019    - Deregister multiple CMCC source_id entries https://github.c
 PJD 19 Dec 2019    - Add external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/852
+"""
+"""
 PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
 PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
@@ -502,6 +514,7 @@ PJD 16 Nov 2020    - Updated institution_id KIOST to exclude ampersand character
 PJD 16 Nov 2020    - Updated source_id MCM-UA-1-0to exclude <> characters (html problems)
 PJD 16 Nov 2020    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/984
 PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/981
+PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/988
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -509,7 +522,6 @@ PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMI
 """
 
 #%% Import statements
-from __future__ import print_function
 import calendar
 import datetime
 import gc
@@ -533,7 +545,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id CESM1-WACCM-SC\"'
+commitMessage = '\"Revise source_id TaiESM1\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -973,11 +985,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CESM1-WACCM-SC'
-source_id[key]['institution_id'] = [
-'UCI',
-'NCAR'
-]
+key = 'TaiESM1'
+source_id[key]['activity_participation'].append('PAMIP')
+source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

@@ -6884,6 +6884,7 @@
                 "CMIP",
                 "GMMIP",
                 "LUMIP",
+                "PAMIP",
                 "PMIP",
                 "ScenarioMIP"
             ],
@@ -7254,13 +7255,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Nov 16 11:34:20 2020 -0800",
-        "CV_collection_version":"6.2.54.5",
+        "CV_collection_modified":"Mon Dec  7 09:56:55 2020 -0800",
+        "CV_collection_version":"6.2.54.6",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3f71d190105f7a210c2a9f4df86d1847f03dfb6f",
-        "source_id_CV_modified":"Mon Nov 16 11:25:10 2020 -0800",
-        "source_id_CV_note":"Revise source_id CESM1-WACCM-SC",
+        "previous_commit":"82fe7578349caabca6aed78a56d5636a1e172f02",
+        "source_id_CV_modified":"Mon Nov 16 11:34:20 2020 -0800",
+        "source_id_CV_note":"Revise source_id TaiESM1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

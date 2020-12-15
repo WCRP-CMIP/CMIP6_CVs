@@ -517,6 +517,7 @@ PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMI
 PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/988
 PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/989
 PJD 15 Dec 2020    - Revise experiment_id historical parent experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/957
+PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/993
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -547,7 +548,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise experiment_id historical parent experiments\"'
+commitMessage = '\"Revise source_id MIROC-ES2L\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -609,10 +610,6 @@ experiment_id = experiment_id.get('experiment_id')  # Fudge to extract duplicate
 del(tmp)
 
 # Fix issues
-key = 'historical'
-experiment_id[key]['parent_activity_id'].append('PMIP')
-experiment_id[key]['parent_experiment_id'].append('past1000')
-experiment_id[key]['parent_experiment_id'].append('past2k')
 
 '''
 # xlsx import
@@ -991,6 +988,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'MIROC-ES2L'
+source_id[key]['activity_participation'].append('DAMIP')
+source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

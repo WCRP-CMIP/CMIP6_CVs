@@ -4555,10 +4555,13 @@
             "experiment_id":"historical",
             "min_number_yrs_per_sim":"165",
             "parent_activity_id":[
-                "CMIP"
+                "CMIP",
+                "PMIP"
             ],
             "parent_experiment_id":[
-                "piControl"
+                "piControl",
+                "past1000",
+                "past2k"
             ],
             "required_model_components":[
                 "AOGCM"
@@ -9453,13 +9456,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Dec  7 10:06:30 2020 -0800",
-        "CV_collection_version":"6.2.54.7",
+        "CV_collection_modified":"Tue Dec 15 12:25:59 2020 -0800",
+        "CV_collection_version":"6.2.55.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "experiment_id_CV_modified":"Fri Oct 23 15:16:35 2020 -0700",
-        "experiment_id_CV_note":"Register experiment_ids for CovidMIP (#973)",
+        "experiment_id_CV_note":"Revise experiment_id historical parent experiments",
         "institution_id":"PCMDI",
-        "previous_commit":"e6b66239831b1ca3f7b49a38bcf87c8e19c706b2",
+        "previous_commit":"c33f7088d1340a8e0b245fc75c4eed73dfea4cd7",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

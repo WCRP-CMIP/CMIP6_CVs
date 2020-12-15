@@ -516,6 +516,7 @@ PJD 16 Nov 2020    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP
 PJD 16 Nov 2020    - Revise source_id CESM1-WACCM-SC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/981
 PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/988
 PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/989
+PJD 15 Dec 2020    - Revise experiment_id historical parent experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/957
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -546,7 +547,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise multiple E3SM source_id entries\"'
+commitMessage = '\"Revise experiment_id historical parent experiments\"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -601,13 +602,17 @@ activity_id = {
 #%% Experiments
 tmp = [['experiment_id', \
         'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
-      ] ;
+      ]
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
-experiment_id = experiment_id.get('experiment_id') ; # Fudge to extract duplicate level
+experiment_id = experiment_id.get('experiment_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+key = 'historical'
+experiment_id[key]['parent_activity_id'].append('PMIP')
+experiment_id[key]['parent_experiment_id'].append('past1000')
+experiment_id[key]['parent_experiment_id'].append('past2k')
 
 '''
 # xlsx import
@@ -986,10 +991,6 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-mods = ['E3SM-1-0', 'E3SM-1-1', 'E3SM-1-1-ECA']
-for count,key in enumerate(mods):
-    source_id[key]['activity_participation'].append('ScenarioMIP')
-    source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

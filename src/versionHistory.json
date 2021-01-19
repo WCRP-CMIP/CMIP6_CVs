@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"b1c65bc19f426e01c2a0596b2ffb811c503440e3",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/b1c65bc19f426e01c2a0596b2ffb811c503440e3",
+            "MD5":"3ae4e3d4999af80c9bb90c23f31288498d65b162",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3ae4e3d4999af80c9bb90c23f31288498d65b162",
             "commitMessage":"Revise source_id MPI-ESM1-2-HR",
-            "timeStamp":"Fri Jan 15 17:45:43 2021 00000"
+            "timeStamp":"Tue Jan 19 16:16:44 2021 00000"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":3,
             "versionCVContent":55,
             "versionCVStructure":2,
             "versionMIPEra":6

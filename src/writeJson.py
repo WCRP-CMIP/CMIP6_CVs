@@ -521,6 +521,7 @@ PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CM
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 MSM 15 Jan 2021    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/998
+MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1000
 
 @author: durack1
 """
@@ -989,9 +990,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM1-2-HR'
-source_id[key]['activity_participation'].append('GeoMIP')
-source_id[key]['activity_participation'].sort()
+key = 'MPI-ESM1-2-LR'
+source_id[key]['institution_id'].append('DKRZ')
+#source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

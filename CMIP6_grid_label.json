@@ -47,13 +47,13 @@
         "grz":"regridded zonal mean data reported on the data provider's preferred latitude target grid"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 19 16:16:44 2021 00000",
+        "CV_collection_modified":"Tue Jan 19 15:31:29 2021 -0800",
         "CV_collection_version":"6.2.55.3",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "grid_label_CV_modified":"Fri Sep 8 18:12:00 2017 -0700",
         "grid_label_CV_note":"Issue395 durack1 augment grid_label with description (#401)",
         "institution_id":"MOHC",
-        "previous_commit":"3ae4e3d4999af80c9bb90c23f31288498d65b162",
+        "previous_commit":"e19a4832418c941d2872d158ec55a07bc2568e0f",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

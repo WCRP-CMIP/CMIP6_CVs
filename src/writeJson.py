@@ -550,7 +550,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id MPI-ESM1-2-HR\"'
+commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
 author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 author_institution_id = 'MOHC'
 # author = 'Paul J. Durack <durack1@llnl.gov>'

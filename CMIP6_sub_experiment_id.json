@@ -76,11 +76,11 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 19 15:31:29 2021 -0800",
-        "CV_collection_version":"6.2.55.3",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
-        "previous_commit":"e19a4832418c941d2872d158ec55a07bc2568e0f",
+        "CV_collection_modified":"Wed Jan 20 21:18:10 2021 -0800",
+        "CV_collection_version":"6.2.55.4",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
+        "previous_commit":"18a4884d9f0e65395f1fafc3f760f0f9f1c4c7a8",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "sub_experiment_id_CV_modified":"Mon Jun 17 11:01:51 2019 -0700",
         "sub_experiment_id_CV_note":"Revise sub_experiment_id values"

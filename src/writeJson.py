@@ -518,11 +518,13 @@ PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6
 PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/989
 PJD 15 Dec 2020    - Revise experiment_id historical parent experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/957
 PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/993
-                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
-                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 MSM 15 Jan 2021    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/998
 MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1000
 PJD 20 Jan 2021    - Revise multiple EC-Earth source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1002
+PJD 20 Jan 2021    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1003
+
+                     - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
+                     - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
@@ -551,7 +553,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise multiple EC-Earth source_id entries\"'
+commitMessage = '\"Revise source_id MIROC-ES2H\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -991,10 +993,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'EC-Earth3-AerChem'
-source_id[key]['activity_participation'].append('RFMIP')
-source_id[key]['activity_participation'].sort()
-key = 'EC-Earth3-CC'
+key = 'MIROC-ES2H'
+source_id[key]['activity_participation'].append('C4MIP')
 source_id[key]['activity_participation'].append('ScenarioMIP')
 source_id[key]['activity_participation'].sort()
 

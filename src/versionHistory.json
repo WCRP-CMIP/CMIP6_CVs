@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"18a4884d9f0e65395f1fafc3f760f0f9f1c4c7a8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/18a4884d9f0e65395f1fafc3f760f0f9f1c4c7a8",
-            "commitMessage":"Revise multiple EC-Earth source_id entries",
-            "timeStamp":"Wed Jan 20 21:18:10 2021 -0800"
+            "MD5":"e2f5e4835ec19db23f5bb6c2628af1a24546f401",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e2f5e4835ec19db23f5bb6c2628af1a24546f401",
+            "commitMessage":"Revise source_id MIROC-ES2H",
+            "timeStamp":"Wed Jan 20 21:26:19 2021 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":4,
+            "versionCVCommit":5,
             "versionCVContent":55,
             "versionCVStructure":2,
             "versionMIPEra":6

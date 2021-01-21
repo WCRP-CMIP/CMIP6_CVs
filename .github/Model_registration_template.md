@@ -1,3 +1,5 @@
+** Note: registered content can be updated after 31st January 2021, but these changes may not be reflected by the CMIP6 citation service, see http://bit.ly/CMIP6_Citation_Search **
+
 To register (or edit) information about your model, please title your issue "source_id registration of [acronym for your model]" and  provide the following information:
 
 'label' -- A short acronym that uniquely identifies your model (and distinguishes it from other versions of your model used in CMIP6).
@@ -37,10 +39,10 @@ Example:
     nominal_resolution = none
     land:
     description = MOSES2.2
-    nominal_resolution = 100 km    
+    nominal_resolution = 100 km
     landIce:
     description = none
-    nominal_resolution = none 
+    nominal_resolution = none
     ocean:
     description = ACCESS-OM (MOM4p1, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)
     nominal_resolution = 100 km

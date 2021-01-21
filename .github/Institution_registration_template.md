@@ -1,3 +1,5 @@
+** Note: registered content can be updated after 31st January 2021, but these changes may not be reflected by the CMIP6 citation service, see http://bit.ly/CMIP6_Citation_Search **
+
 To register (or edit) information about your institution, please title your issue "institution_id registration of [acronym for your institution]" and  provide the following information:
 
 'institution_id'  -- a short acronym suitable for search interfaces and sub-directory names (should limit the characters used to the following set: a-z, A-Z, 0-9, and "-")
@@ -8,9 +10,9 @@ Example 1:
 
     institution_id = PCMDI
     institution = Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA
-    
+
 Example 2:
 [title your issue "institution_id registration of NASA-GISS"]
 
     institution_id = NASA-GISS
-    institution = NASA Goddard Institute for Space Studies, New York, NY 10025, USA 
+    institution = NASA Goddard Institute for Space Studies, New York, NY 10025, USA

@@ -522,6 +522,7 @@ PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CM
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 MSM 15 Jan 2021    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/998
 MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1000
+PJD 20 Jan 2021    - Revise multiple EC-Earth source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1002
 
 @author: durack1
 """
@@ -550,11 +551,11 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-# author = 'Paul J. Durack <durack1@llnl.gov>'
-# author_institution_id = 'PCMDI'
+commitMessage = '\"Revise multiple EC-Earth source_id entries\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -990,9 +991,12 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'MPI-ESM1-2-LR'
-source_id[key]['institution_id'].append('DKRZ')
-#source_id[key]['activity_participation'].sort()
+key = 'EC-Earth3-AerChem'
+source_id[key]['activity_participation'].append('RFMIP')
+source_id[key]['activity_participation'].sort()
+key = 'EC-Earth3-CC'
+source_id[key]['activity_participation'].append('ScenarioMIP')
+source_id[key]['activity_participation'].sort()
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

@@ -5333,9 +5333,11 @@
         "MIROC-ES2H":{
             "activity_participation":[
                 "AerChemMIP",
+                "C4MIP",
                 "CMIP",
                 "DynVarMIP",
                 "GeoMIP",
+                "ScenarioMIP",
                 "VIACSAB"
             ],
             "cohort":[
@@ -7263,13 +7265,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 20 21:18:10 2021 -0800",
-        "CV_collection_version":"6.2.55.4",
+        "CV_collection_modified":"Wed Jan 20 21:26:19 2021 -0800",
+        "CV_collection_version":"6.2.55.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"18a4884d9f0e65395f1fafc3f760f0f9f1c4c7a8",
-        "source_id_CV_modified":"Tue Jan 19 15:31:29 2021 -0800",
-        "source_id_CV_note":"Revise multiple EC-Earth source_id entries",
+        "previous_commit":"e2f5e4835ec19db23f5bb6c2628af1a24546f401",
+        "source_id_CV_modified":"Wed Jan 20 21:18:10 2021 -0800",
+        "source_id_CV_note":"Revise source_id MIROC-ES2H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

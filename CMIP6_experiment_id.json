@@ -9456,13 +9456,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 26 10:16:57 2021 -0800",
-        "CV_collection_version":"6.2.55.6",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "CV_collection_modified":"Wed Jan 27 09:01:23 2021 00000",
+        "CV_collection_version":"6.2.55.7",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "experiment_id_CV_modified":"Tue Dec 15 12:25:59 2020 -0800",
         "experiment_id_CV_note":"Revise experiment_id historical parent experiments",
-        "institution_id":"PCMDI",
-        "previous_commit":"c2f02e315bc97798b2a47964f29c0f9fec36fa63",
+        "institution_id":"MOHC",
+        "previous_commit":"5ce82f3bf6d53e822429a776e24cee1dc7e393b5",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -523,6 +523,7 @@ MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP
 PJD 20 Jan 2021    - Revise multiple EC-Earth source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1002
 PJD 20 Jan 2021    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1003
 PJD 26 Jan 2021    - Revise source_ids IPSL-CM5A2-INCA, IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1008
+MSM 27 Jan 2021    - Revise source_ids GFDL-ESM4, GFDL-CM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1010
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -553,11 +554,11 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_ids IPSL-CM5A2-INCA, IPSL-CM6A-LR\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Revise source_ids GFDL-ESM4, GFDL-CM4\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -993,12 +994,11 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'IPSL-CM5A2-INCA'
-source_id[key]['activity_participation'].append('LUMIP')
-source_id[key]['activity_participation'].append('ScenarioMIP')
+key = 'GFDL-ESM4'
+source_id[key]['activity_participation'].append('FAFMIP')
 source_id[key]['activity_participation'].sort()
-key = 'IPSL-CM6A-LR'
-source_id[key]['activity_participation'].append('CDRMIP')
+key = 'GFDL-CM4'
+source_id[key]['activity_participation'].append('FAFMIP')
 source_id[key]['activity_participation'].sort()
 
 #============================================

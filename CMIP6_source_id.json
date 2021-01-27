@@ -3442,6 +3442,7 @@
                 "CMIP",
                 "DAMIP",
                 "DynVarMIP",
+                "FAFMIP",
                 "GMMIP",
                 "OMIP",
                 "RFMIP",
@@ -3598,6 +3599,7 @@
                 "CMIP",
                 "DAMIP",
                 "DynVarMIP",
+                "FAFMIP",
                 "LUMIP",
                 "RFMIP",
                 "ScenarioMIP"
@@ -7268,13 +7270,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 26 10:16:57 2021 -0800",
-        "CV_collection_version":"6.2.55.6",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "institution_id":"PCMDI",
-        "previous_commit":"c2f02e315bc97798b2a47964f29c0f9fec36fa63",
-        "source_id_CV_modified":"Wed Jan 20 21:26:19 2021 -0800",
-        "source_id_CV_note":"Revise source_ids IPSL-CM5A2-INCA, IPSL-CM6A-LR",
+        "CV_collection_modified":"Wed Jan 27 09:01:23 2021 00000",
+        "CV_collection_version":"6.2.55.7",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "institution_id":"MOHC",
+        "previous_commit":"5ce82f3bf6d53e822429a776e24cee1dc7e393b5",
+        "source_id_CV_modified":"Tue Jan 26 10:16:57 2021 -0800",
+        "source_id_CV_note":"Revise source_ids GFDL-ESM4, GFDL-CM4",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

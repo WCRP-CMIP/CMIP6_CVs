@@ -518,12 +518,15 @@ PJD  7 Dec 2020    - Revise source_id TaiESM1 https://github.com/WCRP-CMIP/CMIP6
 PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/WCRP-CMIP/CMIP6_CVs/issues/989
 PJD 15 Dec 2020    - Revise experiment_id historical parent experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/957
 PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/993
+"""
+"""
 MSM 15 Jan 2021    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/998
 MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1000
 PJD 20 Jan 2021    - Revise multiple EC-Earth source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1002
 PJD 20 Jan 2021    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1003
 PJD 26 Jan 2021    - Revise source_ids IPSL-CM5A2-INCA, IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1008
 MSM 27 Jan 2021    - Revise source_ids GFDL-ESM4, GFDL-CM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1010
+PJD  4 Feb 2021    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1012
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -554,11 +557,11 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_ids GFDL-ESM4, GFDL-CM4\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Revise source_id ACCESS-ESM1-5\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -994,11 +997,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'GFDL-ESM4'
-source_id[key]['activity_participation'].append('FAFMIP')
-source_id[key]['activity_participation'].sort()
-key = 'GFDL-CM4'
-source_id[key]['activity_participation'].append('FAFMIP')
+key = 'ACCESS-ESM1-5'
+source_id[key]['activity_participation'].append('LUMIP')
 source_id[key]['activity_participation'].sort()
 
 #============================================

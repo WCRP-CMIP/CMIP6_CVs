@@ -45,11 +45,11 @@
         "fx"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 27 09:01:23 2021 00000",
-        "CV_collection_version":"6.2.55.7",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
-        "previous_commit":"5ce82f3bf6d53e822429a776e24cee1dc7e393b5",
+        "CV_collection_modified":"Thu Feb  4 11:18:09 2021 -0800",
+        "CV_collection_version":"6.2.55.8",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
+        "previous_commit":"ae90ff945327159780cc0ccef93d4f7e6c2e902a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "table_id_CV_modified":"Fri Jan 13 09:27:00 2017 -0700",
         "table_id_CV_note":"Issue199 durack1 update table_id to Data Request v1.0 (#200)"

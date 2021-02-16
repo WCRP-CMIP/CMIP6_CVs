@@ -63,8 +63,8 @@
         "source_id":{
             "MD5":"8143019a5b4d1b1964f8cebcd7c1b18ee6c56a9e",
             "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8143019a5b4d1b1964f8cebcd7c1b18ee6c56a9e",
-            "commitMessage":"Revise source_id ACCESS-ESM1-5",
-            "timeStamp":"Tue Feb 16 10:43:44 2021 -0800"
+            "commitMessage":"Revise source_id E3SM-1-1",
+            "timeStamp":"Tue Feb 16 10:44:59 2021 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

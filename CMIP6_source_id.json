@@ -111,7 +111,6 @@
                 "CMIP",
                 "DAMIP",
                 "LUMIP",
-                "LUMIP",
                 "OMIP",
                 "PMIP",
                 "RFMIP",
@@ -2248,6 +2247,7 @@
             "activity_participation":[
                 "C4MIP",
                 "CMIP",
+                "DAMIP",
                 "LS3MIP",
                 "ScenarioMIP"
             ],
@@ -7272,13 +7272,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 16 10:43:44 2021 -0800",
+        "CV_collection_modified":"Tue Feb 16 10:44:59 2021 -0800",
         "CV_collection_version":"6.2.55.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"8143019a5b4d1b1964f8cebcd7c1b18ee6c56a9e",
         "source_id_CV_modified":"Thu Feb  4 11:18:09 2021 -0800",
-        "source_id_CV_note":"Revise source_id ACCESS-ESM1-5",
+        "source_id_CV_note":"Revise source_id E3SM-1-1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

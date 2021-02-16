@@ -527,6 +527,7 @@ PJD 20 Jan 2021    - Revise source_id MIROC-ES2H https://github.com/WCRP-CMIP/CM
 PJD 26 Jan 2021    - Revise source_ids IPSL-CM5A2-INCA, IPSL-CM6A-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1008
 MSM 27 Jan 2021    - Revise source_ids GFDL-ESM4, GFDL-CM4 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1010
 PJD  4 Feb 2021    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1012
+PJD 16 Feb 2021    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1014
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -557,7 +558,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id ACCESS-ESM1-5\"'
+commitMessage = '\"Revise source_id E3SM-1-1\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -997,8 +998,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'ACCESS-ESM1-5'
-source_id[key]['activity_participation'].append('LUMIP')
+key = 'E3SM-1-1'
+source_id[key]['activity_participation'].append('DAMIP')
 source_id[key]['activity_participation'].sort()
 
 #============================================

@@ -1,4 +1,4 @@
-# CMIP6_CVs [![stable version](https://img.shields.io/badge/Current%20version-6.2.55.9-brightgreen.svg)](https://github.com/WCRP-CMIP/CMIP6_CVs/releases/tag/6.2.55.9)
+# CMIP6_CVs [![stable version](https://img.shields.io/badge/Current%20version-6.2.55.10-brightgreen.svg)](https://github.com/WCRP-CMIP/CMIP6_CVs/releases/tag/6.2.55.10)
 
 Core Controlled Vocabularies (CVs) for use in CMIP6
 

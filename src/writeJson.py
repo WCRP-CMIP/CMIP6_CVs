@@ -1004,7 +1004,7 @@ key = 'GISS-E2-2-H'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
 'CMIP',
-'SIMIP'
+'SIMIP',
 'ScenarioMIP'
 ]
 source_id[key]['cohort'] = [

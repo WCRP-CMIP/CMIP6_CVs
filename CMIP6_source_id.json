@@ -4087,7 +4087,8 @@
         "GISS-E2-2-H":{
             "activity_participation":[
                 "CMIP",
-                "SIMIPScenarioMIP"
+                "SIMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Registered"
@@ -7322,11 +7323,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 30 11:42:40 2021 -0700",
+        "CV_collection_modified":"Fri Apr 30 11:44:51 2021 -0700",
         "CV_collection_version":"6.2.55.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"20ef5bb121bdf50fc00ba5b2520298fd4766ffa9",
+        "previous_commit":"644ab9d2b67e574c5c12d60a27bc6eaf04108f85",
         "source_id_CV_modified":"Tue Mar  9 11:08:57 2021 -0800",
         "source_id_CV_note":"Register source_id GISS-E2-2-H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

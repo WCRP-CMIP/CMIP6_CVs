@@ -529,6 +529,7 @@ MSM 27 Jan 2021    - Revise source_ids GFDL-ESM4, GFDL-CM4 https://github.com/WC
 PJD  4 Feb 2021    - Revise source_id ACCESS-ESM1-5 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1012
 PJD 16 Feb 2021    - Revise source_id E3SM-1-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1014
 PJD  9 Mar 2021    - Revise source_id CMCC-ESM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1016
+PJD 30 Apr 2021    - Register source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -559,7 +560,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id CMCC-ESM2\"'
+commitMessage = '\"Register source_id GISS-E2-2-H\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -999,9 +1000,48 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'CMCC-ESM2'
-source_id[key]['model_component']['ocnBgchem']['description'] = 'BFM5.2'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+key = 'GISS-E2-2-H'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+'CMIP',
+'SIMIP'
+'ScenarioMIP'
+]
+source_id[key]['cohort'] = [
+'Registered'
+]
+source_id[key]['institution_id'] = [
+'NASA-GISS'
+]
+source_id[key]['label'] = 'GISS-E2.2H'
+source_id[key]['label_extended'] = 'GISS-E2.2H'
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.2 (High Top, 2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'GISS LSM'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['release_year'] = '2021'
+source_id[key]['source_id'] = key
 
 #============================================
 #key = 'AWI-ESM-1-1-LR'

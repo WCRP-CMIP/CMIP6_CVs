@@ -4084,6 +4084,56 @@
             "release_year":"2019",
             "source_id":"GISS-E2-2-G"
         },
+        "GISS-E2-2-H":{
+            "activity_participation":[
+                "CMIP",
+                "SIMIPScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "NASA-GISS"
+            ],
+            "label":"GISS-E2.2H",
+            "label_extended":"GISS-E2.2H",
+            "model_component":{
+                "aerosol":{
+                    "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"GISS-E2.2 (High Top, 2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"GISS LSM",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"GISS SI",
+                    "native_nominal_resolution":"100 km"
+                }
+            },
+            "release_year":"2021",
+            "source_id":"GISS-E2-2-H"
+        },
         "GISS-E3-G":{
             "activity_participation":[
                 "AerChemMIP",
@@ -7272,13 +7322,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Mar  9 11:08:57 2021 -0800",
-        "CV_collection_version":"6.2.55.10",
+        "CV_collection_modified":"Fri Apr 30 11:42:40 2021 -0700",
+        "CV_collection_version":"6.2.55.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"beb5c86f29724e40b3c8fc9755f321cf236230bd",
-        "source_id_CV_modified":"Tue Feb 16 10:44:59 2021 -0800",
-        "source_id_CV_note":"Revise source_id CMCC-ESM2",
+        "previous_commit":"20ef5bb121bdf50fc00ba5b2520298fd4766ffa9",
+        "source_id_CV_modified":"Tue Mar  9 11:08:57 2021 -0800",
+        "source_id_CV_note":"Register source_id GISS-E2-2-H",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

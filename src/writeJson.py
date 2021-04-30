@@ -1038,8 +1038,8 @@ source_id[key]['model_component']['ocnBgchem'] = {}
 source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
 source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'GISS SI'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['description'] = 'GISS SI (same grid as atmos)'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
 source_id[key]['release_year'] = '2021'
 source_id[key]['source_id'] = key
 

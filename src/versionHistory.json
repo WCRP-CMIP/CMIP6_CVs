@@ -13,10 +13,10 @@
             "timeStamp":"Tue Dec 15 12:25:59 2020 -0800"
         },
         "frequency":{
-            "MD5":"62129c480e970cf22a5ca31b169bca2e21cb2b9d",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/62129c480e970cf22a5ca31b169bca2e21cb2b9d",
-            "commitMessage":"Issue414 durack1 revise frequency 1hrCM definition (#418)",
-            "timeStamp":"Fri Oct 27 14:03:00 2017 -0700"
+            "MD5":"20ef5bb121bdf50fc00ba5b2520298fd4766ffa9",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/20ef5bb121bdf50fc00ba5b2520298fd4766ffa9",
+            "commitMessage":"Update description of 3hr and 6hr frequencies",
+            "timeStamp":"Mon May 24 13:35:23 2021 00100"
         },
         "grid_label":{
             "MD5":"d5ab3b13221bad7abe52def13689062886366b9b",
@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"beb5c86f29724e40b3c8fc9755f321cf236230bd",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/beb5c86f29724e40b3c8fc9755f321cf236230bd",
-            "commitMessage":"Revise source_id CMCC-ESM2",
-            "timeStamp":"Tue Mar  9 11:08:57 2021 -0800"
+            "MD5":"646881962d046f53e8a81cf78083ac9073eabf1c",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/646881962d046f53e8a81cf78083ac9073eabf1c",
+            "commitMessage":"Register source_id GISS-E2-2-H",
+            "timeStamp":"Fri Apr 30 14:11:32 2021 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":10,
-            "versionCVContent":55,
+            "versionCVCommit":0,
+            "versionCVContent":56,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

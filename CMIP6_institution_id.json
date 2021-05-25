@@ -55,13 +55,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Apr 30 14:11:32 2021 -0700",
-        "CV_collection_version":"6.2.55.11",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "institution_id":"PCMDI",
+        "CV_collection_modified":"Mon May 24 13:48:15 2021 00100",
+        "CV_collection_version":"6.2.56.0",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "institution_id":"MOHC",
         "institution_id_CV_modified":"Mon Nov 16 11:16:39 2020 -0800",
         "institution_id_CV_note":"Register institution_id LLNL; Py3 cleanup",
-        "previous_commit":"646881962d046f53e8a81cf78083ac9073eabf1c",
+        "previous_commit":"ef9167f2b9517c2879be1835cf4dfcfb988e9669",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

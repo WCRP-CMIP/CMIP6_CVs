@@ -532,6 +532,7 @@ PJD  9 Mar 2021    - Revise source_id CMCC-ESM2 https://github.com/WCRP-CMIP/CMI
 PJD 30 Apr 2021    - Register source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
 MSM 24 May 2021    - Alter description for 3hr and 6hr frequencies
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1023
+PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1024
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -561,7 +562,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register source_id IPSL-CM6A-MR1\"'
+commitMessage = '\"Register source_id IPSL-CM6A-MR025\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1000,7 +1001,7 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'IPSL-CM6A-MR1'
+key = 'IPSL-CM6A-MR025'
 source_id[key] = {}
 source_id[key]['activity_participation'] = [
 'CMIP'
@@ -1030,14 +1031,14 @@ source_id[key]['model_component']['landIce'] = {}
 source_id[key]['model_component']['landIce']['description'] = 'none'
 source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (eORCA1.3, tripolar primarily 1deg; 362 x 332 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (eORCA025, tripolar primarily 0.25deg; 1442 x 1207 longitude/latitude; 75 levels; top grid cell 0-2 m)'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
 source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'NEMO-PISCES (same grid as ocean)'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
 source_id[key]['model_component']['seaIce'] = {}
 source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM3 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '25 km'
 source_id[key]['release_year'] = '2021'
 source_id[key]['source_id'] = key
 

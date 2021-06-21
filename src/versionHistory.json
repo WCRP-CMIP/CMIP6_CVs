@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"646881962d046f53e8a81cf78083ac9073eabf1c",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/646881962d046f53e8a81cf78083ac9073eabf1c",
-            "commitMessage":"Register source_id GISS-E2-2-H",
-            "timeStamp":"Fri Apr 30 14:11:32 2021 -0700"
+            "MD5":"3d4482155b39ee4d7a5a91e14ab08c0177ef7c2a",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3d4482155b39ee4d7a5a91e14ab08c0177ef7c2a",
+            "commitMessage":"Register source_id IPSL-CM6A-MR1",
+            "timeStamp":"Mon Jun 21 11:06:44 2021 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":0,
+            "versionCVCommit":1,
             "versionCVContent":56,
             "versionCVStructure":2,
             "versionMIPEra":6

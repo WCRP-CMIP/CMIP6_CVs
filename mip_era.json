@@ -7,13 +7,13 @@
         "CMIP6"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Mon May 24 13:48:15 2021 00100",
-        "CV_collection_version":"6.2.56.0",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
+        "CV_collection_modified":"Mon Jun 21 11:06:44 2021 -0700",
+        "CV_collection_version":"6.2.56.1",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
         "mip_era_CV_modified":"Thu Aug 25 17:21:00 2016 -0700",
         "mip_era_CV_note":"Fix #36 - Add CV name to json structure",
-        "previous_commit":"ef9167f2b9517c2879be1835cf4dfcfb988e9669",
+        "previous_commit":"3d4482155b39ee4d7a5a91e14ab08c0177ef7c2a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

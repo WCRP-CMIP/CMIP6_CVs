@@ -533,6 +533,7 @@ PJD 30 Apr 2021    - Register source_id GISS-E2-2-H https://github.com/WCRP-CMIP
 MSM 24 May 2021    - Alter description for 3hr and 6hr frequencies
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1023
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1024
+PJD 22 Jul 2021    - Revise source_id E3SM-1-0 add PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1030
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -562,7 +563,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register source_id IPSL-CM6A-MR025\"'
+commitMessage = '\"Revise source_id E3SM-1-0 add PAMIP\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1001,47 +1002,13 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'IPSL-CM6A-MR025'
-source_id[key] = {}
+key = 'E3SM-1-0'
 source_id[key]['activity_participation'] = [
-'CMIP'
+    'CFMIP',
+    'CMIP',
+    'PAMIP',
+    'ScenarioMIP'
 ]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'IPSL'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'none'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'LMDZ (NPv6; 256 x 256 longitude/latitude; 79 levels; top level 80000 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'none'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'ORCHIDEE (v2.2, Water/Carbon/Energy mode; same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'NEMO-OPA (eORCA025, tripolar primarily 0.25deg; 1442 x 1207 longitude/latitude; 75 levels; top grid cell 0-2 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '25 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'NEMO-LIM3 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '25 km'
-source_id[key]['release_year'] = '2021'
-source_id[key]['source_id'] = key
-
 
 # Fix issues
 # key = 'GISS-E2-2-H'

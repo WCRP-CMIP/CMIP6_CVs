@@ -18,8 +18,8 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun 21 11:28:21 2021 -0700",
-        "CV_collection_version":"6.2.56.2",
+        "CV_collection_modified":"Thu Jul 22 11:35:33 2021 -0700",
+        "CV_collection_version":"6.2.56.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "frequency_CV_modified":"Mon May 24 13:48:15 2021 00100",
         "frequency_CV_note":"Update description of 3hr and 6hr frequencies",

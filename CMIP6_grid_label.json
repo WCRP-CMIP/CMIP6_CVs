@@ -47,8 +47,8 @@
         "grz":"regridded zonal mean data reported on the data provider's preferred latitude target grid"
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun 21 11:28:21 2021 -0700",
-        "CV_collection_version":"6.2.56.2",
+        "CV_collection_modified":"Thu Jul 22 11:35:33 2021 -0700",
+        "CV_collection_version":"6.2.56.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "grid_label_CV_modified":"Fri Sep 8 18:12:00 2017 -0700",
         "grid_label_CV_note":"Issue395 durack1 augment grid_label with description (#401)",

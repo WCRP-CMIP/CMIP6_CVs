@@ -534,6 +534,7 @@ MSM 24 May 2021    - Alter description for 3hr and 6hr frequencies
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1023
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1024
 PJD 22 Jul 2021    - Revise source_id E3SM-1-0 add PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1030
+PJD 26 Jul 2021    - Revise source_id ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1034
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -563,7 +564,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id E3SM-1-0 add PAMIP\"'
+commitMessage = '\"Revise source_id ICON-ESM-LR\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1002,13 +1003,8 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'E3SM-1-0'
-source_id[key]['activity_participation'] = [
-    'CFMIP',
-    'CMIP',
-    'PAMIP',
-    'ScenarioMIP'
-]
+key = 'ICON-ESM-LR'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
 
 # Fix issues
 # key = 'GISS-E2-2-H'

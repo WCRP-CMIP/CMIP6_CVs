@@ -25,6 +25,7 @@ PJD 14 Nov 2020    - Further tweaks to meet strict HTML format conventions
 PJD 16 Nov 2020    - Further updates to CMIP6_CVs content to meet strict html standards
                     https://www.w3.org/International/questions/qa-html-encoding-declarations
                     https://validator.w3.org/check
+PJD 29 Sep 2021    - Add googleAnalyticsTag.js call
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -45,6 +46,8 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.10.20.min.css" />
 <script type="text/javascript" charset="utf-8" src="../src/jquery-3.5.0.slim.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.10.20.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" charset="utf-8" src="../src/googleAnalyticsTag.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {

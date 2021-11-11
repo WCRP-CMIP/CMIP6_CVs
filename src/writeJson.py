@@ -535,6 +535,7 @@ PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR1 https://github.com/WCRP-CM
 PJD 21 Jun 2021    - Register source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1024
 PJD 22 Jul 2021    - Revise source_id E3SM-1-0 add PAMIP https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1030
 PJD 26 Jul 2021    - Revise source_id ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1034
+PJD 10 Nov 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -555,7 +556,7 @@ try:
     from urllib2 import urlopen # py2
 except ImportError:
     from urllib.request import urlopen # py3
-sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
+sys.path.insert(0,'~/sync/git/durolib/durolib')  # trustym
 from durolib import readJsonCreateDict
 from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
                      getFileHistory, versionHistoryUpdate
@@ -564,7 +565,7 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Revise source_id ICON-ESM-LR\"'
+commitMessage = '\"Revise source_id MPI-ESM1-2-LR\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1003,9 +1004,13 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'ICON-ESM-LR'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-
+key = 'MPI-ESM1-2-LR'
+source_id[key]['institution_id'] = [
+    'MPI-M',
+    'AWI',
+    'DKRZ',
+    'DWD'
+]
 # Fix issues
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}

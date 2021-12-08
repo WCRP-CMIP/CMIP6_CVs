@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"c76821b165b3dfa3e9021d8548832cf2f9256e31",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c76821b165b3dfa3e9021d8548832cf2f9256e31",
-            "commitMessage":"Revise source_id MPI-ESM1-2-LR",
-            "timeStamp":"Thu Nov 11 08:36:03 2021 -0800"
+            "MD5":"76d57018548b1e970e21d7426ff96d615b1569d3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/76d57018548b1e970e21d7426ff96d615b1569d3",
+            "commitMessage":"Register source_id TaiESM1-TIMCOM2",
+            "timeStamp":"Tue Dec  7 22:13:33 2021 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":56,
             "versionCVStructure":2,
             "versionMIPEra":6

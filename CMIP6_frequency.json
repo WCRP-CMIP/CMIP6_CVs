@@ -18,13 +18,13 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Dec  7 22:13:33 2021 -0800",
-        "CV_collection_version":"6.2.56.6",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "CV_collection_modified":"Wed Jan 19 16:48:00 2022 00000",
+        "CV_collection_version":"6.2.56.7",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "frequency_CV_modified":"Mon May 24 13:48:15 2021 00100",
         "frequency_CV_note":"Update description of 3hr and 6hr frequencies",
-        "institution_id":"PCMDI",
-        "previous_commit":"76d57018548b1e970e21d7426ff96d615b1569d3",
+        "institution_id":"MOHC",
+        "previous_commit":"0d11ab0b5c745f9a6824f63ef317458d62d7df53",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

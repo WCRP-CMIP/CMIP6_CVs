@@ -566,11 +566,11 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register source_id TaiESM1-TIMCOM2\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Register source_id IPSL-CM6A-ATM-ICO series\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1005,48 +1005,80 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'TaiESM1-TIMCOM2'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-'CMIP',
-'OMIP'
-]
-source_id[key]['cohort'] = [
-'Registered'
-]
-source_id[key]['institution_id'] = [
-'NTU'
-]
-source_id[key]['label'] = 'TaiESM1-TIMCOM2'
-source_id[key]['label_extended'] = 'Taiwan Earth System Model 1.0 using TIMCOM ocean model 2.0'
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol']['description'] = 'SNAP (same grid as atmos)'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos']['description'] = 'TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem']['description'] = 'SNAP (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'CLM4.0 (same grid as atmos)'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'TIMCOM (TIMCOMv2.2, primarily 1deg; 320 x 288 longitude/latitude; 55 levels; top grid cell 0-10 m)'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-source_id[key]['release_year'] = '2021'
-source_id[key]['source_id'] = key
+# Add set of new icosahedral IPSL models
+points = {'LR': 16000, 'MR': 64000, 'HR': 256000, 'VHR': 1024000}
+nom_resolution = {'LR': 250, 'MR': 100, 'HR': 50, 'VHR': 25}
+for resolution in ['LR', 'MR', 'HR', 'VHR']:
+    new_source_id = 'IPSL-CM6A-ATM-ICO-{}'.format(resolution)
+    new_source_id_info = {
+        'activity_participation' : ['HighResMIP'],
+        'cohort': 'Registered',
+        'institution_id': ['IPSL'],
+        'label' : new_source_id,
+        'label_extended': new_source_id,
+        'model_component': {
+            'aerosol': {'description': 'none', 'native_nominal_resolution': 'none'},
+            'atmos': {
+                'description': 'DYNAMICO-LMDZ (NPv6; {}-point icosahedral-hexagonal; 79 levels; top level 80000 m)'.format(points[resolution]),
+                'native_nominal_resolution': '{} km'.format(nom_resolution[resolution])
+                },
+            'atmosChem': {'description': 'none', 'native_nominal_resolution': 'none'},
+            'land': {
+                'description': 'ORCHIDEE (v2.2, Water/Carbon/Energy mode)',
+                'native_nominal_resolution': '{} km'.format(nom_resolution[resolution])
+                },
+            'landIce': {'description': 'none', 'native_nominal_resolution': 'none'},
+            'ocean': {'description': 'none', 'native_nominal_resolution': 'none'},
+            'ocnBgchem': {'description': 'none', 'native_nominal_resolution': 'none'},
+            'seaIce': {'description': 'none', 'native_ominal_resolution': 'none'},
+        },
+        'release_year': '2021',
+        'source_id': new_source_id
+    }
+    source_id[new_source_id] = new_source_id_info
 
+# key = 'IPSL-CM6A-ATM-ICO-'
+# source_id[key] = {}
+# source_id[key]['activity_participation'] = [
+# 'CMIP',
+# 'OMIP'
+# ]
+# source_id[key]['cohort'] = [
+# 'Registered'
+# ]
+# source_id[key]['institution_id'] = [
+# 'NTU'
+# ]
+# source_id[key]['label'] = 'TaiESM1-TIMCOM2'
+# source_id[key]['label_extended'] = 'Taiwan Earth System Model 1.0 using TIMCOM ocean model 2.0'
+# source_id[key]['model_component'] = {}
+# source_id[key]['model_component']['aerosol'] = {}
+# source_id[key]['model_component']['aerosol']['description'] = 'SNAP (same grid as atmos)'
+# source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
+# source_id[key]['model_component']['atmos'] = {}
+# source_id[key]['model_component']['atmos']['description'] = 'TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)'
+# source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
+# source_id[key]['model_component']['atmosChem'] = {}
+# source_id[key]['model_component']['atmosChem']['description'] = 'SNAP (same grid as atmos)'
+# source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
+# source_id[key]['model_component']['land'] = {}
+# source_id[key]['model_component']['land']['description'] = 'CLM4.0 (same grid as atmos)'
+# source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
+# source_id[key]['model_component']['landIce'] = {}
+# source_id[key]['model_component']['landIce']['description'] = 'none'
+# source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+# source_id[key]['model_component']['ocean'] = {}
+# source_id[key]['model_component']['ocean']['description'] = 'TIMCOM (TIMCOMv2.2, primarily 1deg; 320 x 288 longitude/latitude; 55 levels; top grid cell 0-10 m)'
+# source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
+# source_id[key]['model_component']['ocnBgchem'] = {}
+# source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+# source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+# source_id[key]['model_component']['seaIce'] = {}
+# source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
+# source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
+# source_id[key]['release_year'] = '2021'
+# source_id[key]['source_id'] = key
+#
 # Fix issues
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}

@@ -537,6 +537,8 @@ PJD 22 Jul 2021    - Revise source_id E3SM-1-0 add PAMIP https://github.com/WCRP
 PJD 26 Jul 2021    - Revise source_id ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1034
 PJD 10 Nov 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 PJD  7 Dec 2021    - Register source_id TaiESM1-TIMCOM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1040
+MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
+PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -566,11 +568,11 @@ from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
 #from unidecode import unidecode
 
 #%% Set commit message and author info
-commitMessage = '\"Register source_id IPSL-CM6A-ATM-ICO series\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Revise source_id E3SM-1-0\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 #%% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1005,37 +1007,12 @@ source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-# Add set of new icosahedral IPSL models
-points = {'LR': 16000, 'MR': 64000, 'HR': 256000, 'VHR': 1024000}
-nom_resolution = {'LR': 250, 'MR': 100, 'HR': 50, 'VHR': 25}
-for resolution in ['LR', 'MR', 'HR', 'VHR']:
-    new_source_id = 'IPSL-CM6A-ATM-ICO-{}'.format(resolution)
-    new_source_id_info = {
-        'activity_participation' : ['HighResMIP'],
-        'cohort': 'Registered',
-        'institution_id': ['IPSL'],
-        'label' : new_source_id,
-        'label_extended': new_source_id,
-        'model_component': {
-            'aerosol': {'description': 'none', 'native_nominal_resolution': 'none'},
-            'atmos': {
-                'description': 'DYNAMICO-LMDZ (NPv6; {}-point icosahedral-hexagonal; 79 levels; top level 80000 m)'.format(points[resolution]),
-                'native_nominal_resolution': '{} km'.format(nom_resolution[resolution])
-                },
-            'atmosChem': {'description': 'none', 'native_nominal_resolution': 'none'},
-            'land': {
-                'description': 'ORCHIDEE (v2.2, Water/Carbon/Energy mode)',
-                'native_nominal_resolution': '{} km'.format(nom_resolution[resolution])
-                },
-            'landIce': {'description': 'none', 'native_nominal_resolution': 'none'},
-            'ocean': {'description': 'none', 'native_nominal_resolution': 'none'},
-            'ocnBgchem': {'description': 'none', 'native_nominal_resolution': 'none'},
-            'seaIce': {'description': 'none', 'native_ominal_resolution': 'none'},
-        },
-        'release_year': '2021',
-        'source_id': new_source_id
-    }
-    source_id[new_source_id] = new_source_id_info
+key = 'E3SM-1-0'
+source_id[key]['institution_id'] = [
+'E3SM-Project',
+'LLNL',
+'UCI'
+]
 
 # key = 'IPSL-CM6A-ATM-ICO-'
 # source_id[key] = {}

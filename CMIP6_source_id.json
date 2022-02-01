@@ -2203,7 +2203,8 @@
             ],
             "institution_id":[
                 "E3SM-Project",
-                "LLNL"
+                "LLNL",
+                "UCI"
             ],
             "label":"E3SM 1.0",
             "label_extended":"E3SM 1.0 (Energy Exascale Earth System Model)",
@@ -7661,13 +7662,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 19 16:48:00 2022 00000",
-        "CV_collection_version":"6.2.56.7",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
-        "previous_commit":"0d11ab0b5c745f9a6824f63ef317458d62d7df53",
-        "source_id_CV_modified":"Tue Dec  7 22:13:33 2021 -0800",
-        "source_id_CV_note":"Register source_id IPSL-CM6A-ATM-ICO series",
+        "CV_collection_modified":"Mon Jan 31 17:40:32 2022 -0800",
+        "CV_collection_version":"6.2.56.8",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
+        "previous_commit":"d7f05719bd9199b2a1fe05f83aaeb39442895f5d",
+        "source_id_CV_modified":"Wed Jan 19 16:48:00 2022 00000",
+        "source_id_CV_note":"Revise source_id E3SM-1-0",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

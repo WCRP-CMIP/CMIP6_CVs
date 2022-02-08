@@ -6,7 +6,7 @@ To register (or edit) information about your model, please title your issue "sou
 
 'label_extended' -- An extended identifier for more verbose model identifying information
 
-'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-").  The source_id will appear in the ESGF search interface and in filenames a subdirectory names. Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-". There is a limitation of 16 characters for this field.
+'source_id' -- An identifier that should be identical to "label" but with forbidden characters either removed or replaced by a hyphen ("-").  The source_id will appear in the ESGF search interface and in filenames a subdirectory names. Restrict characters used in source_id to the following set:  a-z, A-Z, 0-9, and "-". There is a limitation of 25 characters for this field.
 
 'institution_id' -- list all institutions (by institution_id) who are responsible for one or more CMIP6 simulations with this model version. Additional institutions can be added to the list as needed, but only institutions registered (see above) may be included.
 
@@ -30,25 +30,25 @@ Example:
 
     aerosol:
     description = CLASSIC (v1.0)
-    nominal_resolution = 100 km
+    native_nominal_resolution = 100 km
     atmos:
     description = HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)
-    nominal_resolution = 100 km
+    native_nominal_resolution = 100 km
     atmosChem:
     description = none
-    nominal_resolution = none
+    native_nominal_resolution = none
     land:
     description = MOSES2.2
-    nominal_resolution = 100 km
+    native_nominal_resolution = 100 km
     landIce:
     description = none
-    nominal_resolution = none
+    native_nominal_resolution = none
     ocean:
     description = ACCESS-OM (MOM4p1, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)
-    nominal_resolution = 100 km
+    native_nominal_resolution = 100 km
     ocnBgchem:
     description = none
-    nominal_resolution = none
+    native_nominal_resolution = none
     seaIce:
     description = CICE4.1
-    nominal_resolution = 100 km
+    native_nominal_resolution = 100 km

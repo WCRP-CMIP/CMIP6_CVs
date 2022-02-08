@@ -1,0 +1,355 @@
+PROJECT_ACRONYM;MODEL_ACRONYM;LENGTH(MODEL_ACRONYM);MODEL_LABEL;RIGHTS;RIGHTS_URI;RIGHTS_IDENTIFIER
+-------------------------------;--------------------------------------------------------------------------------;---------------------;--------------------------------------------------------------------------------;--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------;--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------;-------------------------------
+CMIP6_input4MIPs;ACCESS1-3-rcp85-1-0;19;ACCESS1-3-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI;4;CCMI;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-nat-1-0;17;CCMI-hist-nat-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-nat-1-1;17;CCMI-hist-nat-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-sol-1-0;17;CCMI-hist-sol-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-sol-1-1;17;CCMI-hist-sol-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-stratO3-1-0;21;CCMI-hist-stratO3-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-volc-1-0;18;CCMI-hist-volc-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-hist-volc-1-1;18;CCMI-hist-volc-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-ssp245-nat-1-0;19;CCMI-ssp245-nat-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-ssp245-sol-1-0;19;CCMI-ssp245-sol-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-ssp245-stratO3-1-0;23;CCMI-ssp245-stratO3-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCMI-ssp245-volc-1-0;20;CCMI-ssp245-volc-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCSM4-rcp26-1-0;15;CCSM4-rcp26-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CCSM4-rcp85-1-0;15;CCSM4-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CEDS;4;CEDS;unknown;;
+CMIP6_input4MIPs;CEDS-2016-06-18;15;CEDS-2016-06-18;unknown;;
+CMIP6_input4MIPs;CEDS-2016-06-18-sectorDimV2;27;CEDS-2016-06-18-sectorDimV2;unknown;;
+CMIP6_input4MIPs;CEDS-2016-06-18-supplemental-data;33;CEDS-2016-06-18-supplemental-data;unknown;;
+CMIP6_input4MIPs;CEDS-2016-07-26;15;CEDS-2016-07-26;unknown;;
+CMIP6_input4MIPs;CEDS-2016-07-26-sectorDim;25;CEDS-2016-07-26-sectorDim;unknown;;
+CMIP6_input4MIPs;CEDS-2016-07-26-sectorDim-supplemental-data;43;CEDS-2016-07-26-sectorDim-supplemental-data;unknown;;
+CMIP6_input4MIPs;CEDS-2017-05-18;15;CEDS-2017-05-18;unknown;;
+CMIP6_input4MIPs;CEDS-2017-05-18-supplemental-data;33;CEDS-2017-05-18-supplemental-data;unknown;;
+CMIP6_input4MIPs;CEDS-2017-08-30;15;CEDS-2017-08-30;unknown;;
+CMIP6_input4MIPs;CEDS-2017-08-30-supplemental-data;33;CEDS-2017-08-30-supplemental-data;unknown;;
+CMIP6_input4MIPs;CEDS-2017-10-05;15;CEDS-2017-10-05;unknown;;
+CMIP6_input4MIPs;CESM2-ssp585-1-0;16;CESM2-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CNRM-CM6-1-ssp126-1-0;21;CNRM-CM6-1-ssp126-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CNRM-CM6-1-ssp585-1-0;21;CNRM-CM6-1-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CNRM-ESM2-1-ssp585-1-0;22;CNRM-ESM2-1-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;CSIRO-MK3-6-0-rcp85-1-0;23;CSIRO-MK3-6-0-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;DCPP-C;6;DCPP-C;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;DCPP-C-amv-1-1;14;DCPP-C-amv-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;DCPP-C-ipv-1-1;14;DCPP-C-ipv-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;HadGEM2-ES-rcp85-1-0;20;HadGEM2-ES-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IACETH-SAGE3lambda;18;IACETH-SAGE3lambda;unknown;;
+CMIP6_input4MIPs;IACETH-SAGE3lambda-2-1-0;24;IACETH-SAGE3lambda-2-1-0;unknown;;
+CMIP6_input4MIPs;IACETH-SAGE3lambda-3-0-0;24;IACETH-SAGE3lambda-3-0-0;unknown;;
+CMIP6_input4MIPs;IAMC;4;IAMC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-AIM-ssp370-1-0;19;IAMC-AIM-ssp370-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-AIM-ssp370-1-1;19;IAMC-AIM-ssp370-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-AIM-ssp370-1-1-supplemental-data;37;IAMC-AIM-ssp370-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-AIM-ssp370-lowNTCF-1-1;27;IAMC-AIM-ssp370-lowNTCF-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-AIM-ssp370-lowNTCF-1-1-supplemental-data;45;IAMC-AIM-ssp370-lowNTCF-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp434-1-0;21;IAMC-GCAM4-ssp434-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp434-1-1;21;IAMC-GCAM4-ssp434-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp434-1-1-supplemental-data;39;IAMC-GCAM4-ssp434-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp460-1-0;21;IAMC-GCAM4-ssp460-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp460-1-1;21;IAMC-GCAM4-ssp460-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-GCAM4-ssp460-1-1-supplemental-data;39;IAMC-GCAM4-ssp460-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp119-1-0;21;IAMC-IMAGE-ssp119-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp119-1-1;21;IAMC-IMAGE-ssp119-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp119-1-1-supplemental-data;39;IAMC-IMAGE-ssp119-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp126-1-0;21;IAMC-IMAGE-ssp126-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp126-1-1;21;IAMC-IMAGE-ssp126-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-IMAGE-ssp126-1-1-supplemental-data;39;IAMC-IMAGE-ssp126-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-MESSAGE-GLOBIOM-ssp245-1-0;31;IAMC-MESSAGE-GLOBIOM-ssp245-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-MESSAGE-GLOBIOM-ssp245-1-1;31;IAMC-MESSAGE-GLOBIOM-ssp245-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-MESSAGE-GLOBIOM-ssp245-1-1-supplemental-data;49;IAMC-MESSAGE-GLOBIOM-ssp245-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp534-over-1-0;34;IAMC-REMIND-MAGPIE-ssp534-over-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp534-over-1-1;34;IAMC-REMIND-MAGPIE-ssp534-over-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp534-over-1-1-supplemental-data;52;IAMC-REMIND-MAGPIE-ssp534-over-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp585-1-0;29;IAMC-REMIND-MAGPIE-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp585-1-1;29;IAMC-REMIND-MAGPIE-ssp585-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IAMC-REMIND-MAGPIE-ssp585-1-1-supplemental-data;47;IAMC-REMIND-MAGPIE-ssp585-1-1-supplemental-data;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IPSL-CM5A-MR-rcp26-1-0;22;IPSL-CM5A-MR-rcp26-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;IPSL-CM5A-MR-rcp85-1-0;22;IPSL-CM5A-MR-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege;15;ImperialCollege;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-1-0;19;ImperialCollege-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-1-1;19;ImperialCollege-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-2-0;19;ImperialCollege-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-AIM-ssp370-1-0;30;ImperialCollege-AIM-ssp370-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-GLOBIOM-ssp245-1-0;34;ImperialCollege-GLOBIOM-ssp245-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-IMAGE-ssp119-1-0;32;ImperialCollege-IMAGE-ssp119-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-IMAGE-ssp126-1-0;32;ImperialCollege-IMAGE-ssp126-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-REMIND-MAGPIE-ssp534os-1-0;42;ImperialCollege-REMIND-MAGPIE-ssp534os-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-REMIND-MAGPIE-ssp585-1-0;40;ImperialCollege-REMIND-MAGPIE-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;ImperialCollege-ssp245-covid-4-8-1;34;ImperialCollege-ssp245-covid-4-8-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MIROC-ESM-CHEM-rcp26-1-0;24;MIROC-ESM-CHEM-rcp26-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MIROC-ESM-CHEM-rcp85-1-0;24;MIROC-ESM-CHEM-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MIROC5-rcp26-1-0;16;MIROC5-rcp26-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MIROC5-rcp85-1-0;16;MIROC5-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MOHC-HadISST-2-2-0-0-0;22;MOHC-HadISST-2-2-0-0-0;Crown copyright protection;;
+CMIP6_input4MIPs;MOHC-SST;8;MOHC-SST;Crown copyright protection;;
+CMIP6_input4MIPs;MOHC-highresSST-future-1-0-0;28;MOHC-highresSST-future-1-0-0;Crown copyright protection;;
+CMIP6_input4MIPs;MOHC-highresSST-future-1-0-1;28;MOHC-highresSST-future-1-0-1;Crown copyright protection;;
+CMIP6_input4MIPs;MPI-B-1pctNdep;14;MPI-B-1pctNdep;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MPI-B-1pctNdep-1-0;18;MPI-B-1pctNdep-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;MPI-M-MACv2;11;MPI-M-MACv2;Creative Commons Attribution 3.0 International License (CC BY 3.0);http://creativecommons.org/licenses/by/3.0/;CC BY 3.0
+CMIP6_input4MIPs;MPI-M-MACv2-SP-1-0;18;MPI-M-MACv2-SP-1-0;Creative Commons Attribution 3.0 International License (CC BY 3.0);http://creativecommons.org/licenses/by/3.0/;CC BY 3.0
+CMIP6_input4MIPs;MRI-JRA55-do;12;MRI-JRA55-do;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;MRI-JRA55-do-1-3;16;MRI-JRA55-do-1-3;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;MRI-JRA55-do-1-3-2;18;MRI-JRA55-do-1-3-2;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;MRI-JRA55-do-1-4-0;18;MRI-JRA55-do-1-4-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;MRI-JRA55-do-1-5-0;18;MRI-JRA55-do-1-5-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NASA-GFSC;9;NASA-GSFC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI;9;NCAR-CCMI;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-1-0;13;NCAR-CCMI-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-2-0;13;NCAR-CCMI-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp119-1-0;20;NCAR-CCMI-ssp119-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp126-1-0;20;NCAR-CCMI-ssp126-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp126-2-0;20;NCAR-CCMI-ssp126-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp245-1-0;20;NCAR-CCMI-ssp245-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp245-2-0;20;NCAR-CCMI-ssp245-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp370-1-0;20;NCAR-CCMI-ssp370-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp370-2-0;20;NCAR-CCMI-ssp370-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp434-1-0;20;NCAR-CCMI-ssp434-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp460-1-0;20;NCAR-CCMI-ssp460-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp534os-1-0;22;NCAR-CCMI-ssp534os-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp585-1-0;20;NCAR-CCMI-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAR-CCMI-ssp585-2-0;20;NCAR-CCMI-ssp585-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NCAS;4;NCAS;unknown;;
+CMIP6_input4MIPs;NCAS-2-1-0;10;NCAS-2-1-0;unknown;;
+CMIP6_input4MIPs;NorESM1-M-rcp26-1-0;19;NorESM1-M-rcp26-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;NorESM1-M-rcp85-1-0;19;NorESM1-M-rcp85-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP;10;PCMDI-AMIP;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-0;16;PCMDI-AMIP-1-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-1;16;PCMDI-AMIP-1-1-1;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-2;16;PCMDI-AMIP-1-1-2;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-3;16;PCMDI-AMIP-1-1-3;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-4;16;PCMDI-AMIP-1-1-4;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-5;16;PCMDI-AMIP-1-1-5;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-6;16;PCMDI-AMIP-1-1-6;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;PCMDI-AMIP-1-1-7;16;PCMDI-AMIP-1-1-7;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;SOLARIS-HEPPA;13;SOLARIS-HEPPA;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;SOLARIS-HEPPA-3-2;17;SOLARIS-HEPPA-3-2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UCI;3;UCI;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fu-prArctic-prAntarctic-1-0;31;UCI-fu-prArctic-prAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fut2CAntarctic-1-0;22;UCI-fut2CAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fut2CArctic-1-0;19;UCI-fut2CArctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fut2CArctic-2mAntarctic-1-0;31;UCI-fut2CArctic-2mAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fut2CBKSeas-1-0;19;UCI-fut2CBKSeas-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-fut2COkhotsk-1-0;20;UCI-fut2COkhotsk-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-pi-prArctic-prAntarctic-1-0;31;UCI-pi-prArctic-prAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-pi-prArctic-prAntarctic-1-1;31;UCI-pi-prArctic-prAntarctic-1-1;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-piAntarctic-1-0;19;UCI-piAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-piArctic-1-0;16;UCI-piArctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-preindustrial-1-0;21;UCI-preindustrial-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-present-1-0;15;UCI-present-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-present-197901-201412-Arctic-Antarctic-1-0;46;UCI-present-197901-201412-Arctic-Antarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-present-197901-201412-clim-Arctic-Antarctic-1-0;51;UCI-present-197901-201412-clim-Arctic-Antarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UCI-present-2mAntarctic-1-0;27;UCI-present-2mAntarctic-1-0;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+CMIP6_input4MIPs;UColorado-RFMIP;15;UColorado-RFMIP;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UColorado-RFMIP-0-4;19;UColorado-RFMIP-0-4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UColorado-RFMIP-1-0;19;UColorado-RFMIP-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UColorado-RFMIP-1-1;19;UColorado-RFMIP-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UColorado-RFMIP-1-2;19;UColorado-RFMIP-1-2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UKESM1-0-LL-ssp585-1-0;22;UKESM1-0-LL-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI;13;UReading-CCMI;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-1-0;17;UReading-CCMI-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp119-1-0;24;UReading-CCMI-ssp119-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp119-1-1;24;UReading-CCMI-ssp119-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp126-1-0;24;UReading-CCMI-ssp126-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp245-1-0;24;UReading-CCMI-ssp245-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp370-1-0;24;UReading-CCMI-ssp370-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp434-1-0;24;UReading-CCMI-ssp434-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp434-1-1;24;UReading-CCMI-ssp434-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp460-1-0;24;UReading-CCMI-ssp460-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp460-1-1;24;UReading-CCMI-ssp460-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp534os-1-0;26;UReading-CCMI-ssp534os-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp534os-1-1;26;UReading-CCMI-ssp534os-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UReading-CCMI-ssp585-1-0;24;UReading-CCMI-ssp585-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM;3;UoM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-AIM-ssp370-1-2-0;20;UoM-AIM-ssp370-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-AIM-ssp370-1-2-1;20;UoM-AIM-ssp370-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-AIM-ssp370-lowNTCF-1-2-0;28;UoM-AIM-ssp370-lowNTCF-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-AIM-ssp370-lowNTCF-1-2-1;28;UoM-AIM-ssp370-lowNTCF-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-CMIP-1-2-0;14;UoM-CMIP-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-GCAM4-ssp434-1-2-0;22;UoM-GCAM4-ssp434-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-GCAM4-ssp434-1-2-1;22;UoM-GCAM4-ssp434-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-GCAM4-ssp460-1-2-0;22;UoM-GCAM4-ssp460-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-GCAM4-ssp460-1-2-1;22;UoM-GCAM4-ssp460-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-IMAGE-ssp119-1-2-0;22;UoM-IMAGE-ssp119-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-IMAGE-ssp119-1-2-1;22;UoM-IMAGE-ssp119-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-IMAGE-ssp126-1-2-0;22;UoM-IMAGE-ssp126-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-IMAGE-ssp126-1-2-1;22;UoM-IMAGE-ssp126-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-MESSAGE-GLOBIOM-ssp245-1-2-0;32;UoM-MESSAGE-GLOBIOM-ssp245-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-MESSAGE-GLOBIOM-ssp245-1-2-1;32;UoM-MESSAGE-GLOBIOM-ssp245-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-REMIND-MAGPIE-ssp534-over-1-2-0;35;UoM-REMIND-MAGPIE-ssp534-over-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-REMIND-MAGPIE-ssp534-over-1-2-1;35;UoM-REMIND-MAGPIE-ssp534-over-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-REMIND-MAGPIE-ssp585-1-2-0;30;UoM-REMIND-MAGPIE-ssp585-1-2-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-REMIND-MAGPIE-ssp585-1-2-1;30;UoM-REMIND-MAGPIE-ssp585-1-2-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UoM-ssp126-1-1-0;16;UoM-ssp126-1-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState;15;UofMD-landState;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-2-1-h;21;UofMD-landState-2-1-h;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-AIM-ssp370-2-1-f;32;UofMD-landState-AIM-ssp370-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-GCAM-ssp434-2-1-f;33;UofMD-landState-GCAM-ssp434-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-GCAM-ssp460-2-1-f;33;UofMD-landState-GCAM-ssp460-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-IMAGE-ssp119-2-1-f;34;UofMD-landState-IMAGE-ssp119-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-IMAGE-ssp126-2-1-e;34;UofMD-landState-IMAGE-ssp126-2-1-e;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-IMAGE-ssp126-2-1-f;34;UofMD-landState-IMAGE-ssp126-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-MAGPIE-ssp534-2-1-e;35;UofMD-landState-MAGPIE-ssp534-2-1-e;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-MAGPIE-ssp534-2-1-f;35;UofMD-landState-MAGPIE-ssp534-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-MAGPIE-ssp585-2-1-e;35;UofMD-landState-MAGPIE-ssp585-2-1-e;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-MAGPIE-ssp585-2-1-f;35;UofMD-landState-MAGPIE-ssp585-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-MESSAGE-ssp245-2-1-f;36;UofMD-landState-MESSAGE-ssp245-2-1-f;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-high-2-1-h;26;UofMD-landState-high-2-1-h;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;UofMD-landState-low-2-1-h;25;UofMD-landState-low-2-1-h;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;VUA-CMIP-BB4CMIP6;17;VUA-CMIP-BB4CMIP6;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;VUA-CMIP-BB4CMIP6-1-0;21;VUA-CMIP-BB4CMIP6-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;VUA-CMIP-BB4CMIP6-1-1;21;VUA-CMIP-BB4CMIP6-1-1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+CMIP6_input4MIPs;VUA-CMIP-BB4CMIP6-1-2;21;VUA-CMIP-BB4CMIP6-1-2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;4AOP-v1-5;9;4AOP-v1-5;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;ACCESS-CM2;10;ACCESS-CM2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ACCESS-ESM1-5;13;ACCESS-ESM1.5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ACCESS-OM2;10;ACCESS-OM2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ACCESS-OM2-025;14;ACCESS-OM2-025;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ARTS-2-3;8;ARTS 2.3;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;AWI-CM-1-1-HR;13;AWI-CM 1.1 HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;AWI-CM-1-1-LR;13;AWI-CM 1.1 LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;AWI-CM-1-1-MR;13;AWI-CM 1.1 MR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;AWI-ESM-1-1-LR;14;AWI-ESM 1.1 LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;AWI-ESM-2-1-LR;14;AWI-ESM 2.1 LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;BCC-CSM2-HR;11;BCC-CSM 2 HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;BCC-CSM2-MR;11;BCC-CSM 2 MR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;BCC-ESM1;8;BCC-ESM 1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;BESM-2-9;8;BESM 2.9;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;BNU-ESM-1-1;11;BNU-ESM 1.1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CAM-MPAS-HR;11;CAM-MPAS-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CAM-MPAS-LR;11;CAM-MPAS-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CAMS-CSM1-0;11;CAMS-CSM 1.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CAS-ESM2-0;10;CAS-ESM 2.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM1-1-CAM5-CMIP5;18;CESM1-1-CAM5-CMIP5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM1-CAM5-SE-HR;16;CESM1-CAM5-SE-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM1-CAM5-SE-LR;16;CESM1-CAM5-SE-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM1-WACCM-SC;14;CESM1-WACCM-SC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM2;5;CESM2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM2-FV2;9;CESM2-FV2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM2-SE;8;CESM2-SE;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM2-WACCM;11;CESM2-WACCM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CESM2-WACCM-FV2;15;CESM2-WACCM-FV2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CIESM;5;CIESM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-CM2-HR4;12;CMCC-CM2-HR4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-CM2-HR5;12;CMCC-CM2-HR5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-CM2-SR5;12;CMCC-CM2-SR5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-CM2-VHR4;13;CMCC-CM2-VHR4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-ESM2;9;CMCC-ESM2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-ESM2-HR5;13;CMCC-ESM2-HR5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CMCC-ESM2-SR5;13;CMCC-ESM2-SR5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CNRM-CM6-1;10;CNRM-CM6-1;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;CNRM-CM6-1-HR;13;CNRM-CM6-1-HR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;CNRM-ESM2-1;11;CNRM-ESM2-1;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;CNRM-ESM2-1-HR;14;CNRM-ESM2-1-HR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;CSIRO-Mk3L-1-3;14;CSIRO Mk3L 1.3;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CanESM5;7;CanESM5;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;CanESM5-CanOE;13;CanESM5-CanOE;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;E3SM-1-0;8;E3SM 1.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;E3SM-1-1;8;E3SM 1.1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;E3SM-1-1-ECA;12;E3SM 1.1 ECA;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3;9;EC-Earth3;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-AerChem;17;EC-Earth3-AerChem;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-CC;12;EC-Earth3-CC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-GrIS;14;EC-Earth3-GrIS;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-HR;12;EC-Earth3-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-LR;12;EC-Earth3-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-Veg;13;EC-Earth3-Veg;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3-Veg-LR;16;EC-Earth3-Veg-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3P;10;EC-Earth3P;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3P-HR;13;EC-Earth3P-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EC-Earth3P-VHR;14;EC-Earth3P-VHR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ECMWF-IFS-HR;12;ECMWF-IFS-HR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;ECMWF-IFS-LR;12;ECMWF-IFS-LR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;ECMWF-IFS-MR;12;ECMWF-IFS-MR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;EMAC-2-53-Vol;13;EMAC-2-53-Vol;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;EMAC-2-54-AerChem;17;EMAC-2-54-AerChem;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;FGOALS-f3-H;11;FGOALS-f3-H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;FGOALS-f3-L;11;FGOALS-f3-L;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;FGOALS-g3;9;FGOALS-g3;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;FIO-ESM-2-0;11;FIO-ESM 2.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-AM4;8;GFDL-AM4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-CM4;8;GFDL-CM4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-CM4C192;12;GFDL-CM4C192;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-ESM2M;10;GFDL-ESM2M;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-ESM4;9;GFDL-ESM4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-GLOBAL-LBL;15;GFDL-GLOBAL-LBL;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-GRTCODE;12;GFDL-GRTCODE;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-OM4p5B;11;GFDL-OM4p5B;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GFDL-RFM-DISORT;15;GFDL-RFM-DISORT;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E2-1-G;11;GISS-E2.1G;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E2-1-G-CC;14;GISS-E2-1-G-CC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E2-1-H;11;GISS-E2.1H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E2-2-G;11;GISS-E2-2-G;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E2-2-H;11;GISS-E2.2H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;GISS-E3-G;9;GISS-E3-G;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-HH;15;HadGEM3-GC31-HH;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-HM;15;HadGEM3-GC31-HM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-LL;15;HadGEM3-GC31-LL;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-LM;15;HadGEM3-GC31-LM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-MH;15;HadGEM3-GC31-MH;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HadGEM3-GC31-MM;15;HadGEM3-GC31-MM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HiRAM-SIT-HR;12;HiRAM-SIT-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;HiRAM-SIT-LR;12;HiRAM-SIT-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;ICON-ESM-LR;11;ICON-ESM-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IITM-ESM;8;IITM-ESM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;INM-CM4-8;9;INM-CM4-8;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;INM-CM5-0;9;INM-CM5-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;INM-CM5-H;9;INM-CM5-H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM5A2-INCA;15;IPSL-CM5A2-INCA;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-ATM-HR;16;IPSL-CM6A-ATM-HR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-ATM-ICO-HR;20;IPSL-CM6A-ATM-ICO-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-ATM-ICO-LR;20;IPSL-CM6A-ATM-ICO-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-ATM-ICO-MR;20;IPSL-CM6A-ATM-ICO-MR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-ATM-ICO-VHR;21;IPSL-CM6A-ATM-ICO-VHR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-LR;12;IPSL-CM6A-LR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-LR-INCA;17;IPSL-CM6A-LR-INCA;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-MR025;15;IPSL-CM6A-MR025;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM6A-MR1;13;IPSL-CM6A-MR1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM7A-ATM-HR;16;IPSL-CM7A-ATM-HR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;IPSL-CM7A-ATM-LR;16;IPSL-CM7A-ATM-LR;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;KACE-1-0-G;10;KACE1.0-G;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;KIOST-ESM;9;KIOST-ESM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;LBLRTM-12-8;11;LBLRTM 12.8;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;MCM-UA-1-0;10;MCM-UA-1-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MIROC-ES2H;10;MIROC-ES2H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MIROC-ES2H-NB;13;MIROC-ES2H-NB;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MIROC-ES2L;10;MIROC-ES2L;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MIROC6;6;MIROC6;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MPI-ESM-1-2-HAM;15;MPI-ESM1.2-HAM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MPI-ESM1-2-HR;13;MPI-ESM1.2-HR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MPI-ESM1-2-LR;13;MPI-ESM1.2-LR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MPI-ESM1-2-XR;13;MPI-ESM1.2-XR;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MRI-AGCM3-2-H;13;MRI-AGCM3-2-H;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MRI-AGCM3-2-S;13;MRI-AGCM3-2-S;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;MRI-ESM2-0;10;MRI-ESM2.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NESM3;5;NESM v3;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NICAM16-7S;10;NICAM16-7S;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NICAM16-8S;10;NICAM16-8S;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NICAM16-9D-L78;14;NICAM16-9D-L78;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NICAM16-9S;10;NICAM16-9S;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorCPM1;7;NorCPM1;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM1-F;9;NorESM1-F;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-HH;10;NorESM2-HH;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-LM;10;NorESM2-LM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-LME;11;NorESM2-LME;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-LMEC;12;NorESM2-LMEC;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-MH;10;NorESM2-MH;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;NorESM2-MM;10;NorESM2-MM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;PCMDI-test-1-0;14;PCMDI-test 1.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;RRTMG-LW-4-91;13;RRTMG-LW 4.91;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;RRTMG-SW-4-02;13;RRTMG-SW 4.02;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;RTE-RRTMGP-181204;17;RTE+RRTMGP (2018-12-04 full-resolution);Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0);http://creativecommons.org/licenses/by-nc-sa/4.0/;CC BY-NC-SA 4.0
+IPCC-AR6_CMIP6;SAM0-UNICON;11;SAM0-UNICON;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;TaiESM1;7;TaiESM 1.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;TaiESM1-TIMCOM;14;TaiESM1-TIMCOM;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;TaiESM1-TIMCOM2;15;TaiESM1-TIMCOM2;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;UKESM1-0-LL;11;UKESM1.0-LL;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;UKESM1-0-MMh;12;UKESM1.0-MMh;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;UKESM1-ice-LL;13;UKESM1.ice-LL;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;UofT-CCSM4;10;UofT-CCSM4;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+IPCC-AR6_CMIP6;VRESM-1-0;9;VRESM 1.0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
+;;;;;;
+351 rows selected.;;;;;;

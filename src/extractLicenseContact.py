@@ -8,6 +8,7 @@ Paul J. Durack 8th February 2022
 This script polls all CMIP6 data and extracts license and contact information
 
 PJD  9 Feb 2022     - Updated to validate and catch inconsistencies
+PJD  9 Feb 2022     - Updated to get alertError working
 
 @author: durack1
 """
@@ -33,23 +34,18 @@ def alertError():
         https://stackoverflow.com/questions/28328222/smtplib-of-python-not-working
 
     """
-    import smtplib, ssl
+    import smtplib
 
-    port = 587  # 25  # 465  # 587  # For starttls
-    smtp_server = "smtp.gmail.com"
-    sender_email = "error@gmail.com"
-    receiver_email = "pauldurack@gmail.com"
-    password = input("Type your password and press enter:")
-    message = """\
-    Subject: extractLicenseContact.py error
+    smtp_server = "nospam.llnl.gov"
+    sender_email = "error@extractLicenseContact.py"
+    receivers_email = ["pauldurack@gmail.com", "pauldurack@llnl.gov"]
+    to = ", ".join(receivers_email)
+    message = """Subject: extractLicenseContact.py error\n
 
     This message is sent from Python."""
 
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL(smtp_server, port) as server:
-        server.starttls(context=context)
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message)
+    with smtplib.SMTP(smtp_server) as server:
+        server.sendmail(sender_email, to, message)
 
 
 def compareDicts(dict1, dict2):

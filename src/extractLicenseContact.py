@@ -22,7 +22,8 @@ import datetime
 import json
 import numpy as np
 import os
-import pdb
+
+# import pdb
 from os import scandir
 
 # %% function defs
@@ -100,7 +101,7 @@ def compareDicts(dict1, dict2, count, filePath):
             print(
                 "Key: {}, Value 1: {}, Value 2: {}".format(key, dict1[key], dict2[key])
             )
-            pdb.set_trace()
+            # pdb.set_trace()
             # 25509 /p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/epcalc100/gn/v20190429/epcalc100_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc
             # set(globalAtts).difference(chkGlobalAtts)
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}

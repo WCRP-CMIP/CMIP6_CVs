@@ -11,6 +11,7 @@ PJD  9 Feb 2022     - Updated to validate and catch inconsistencies
 PJD  9 Feb 2022     - Updated to get alertError working
 PJD  9 Feb 2022     - Added incremental saving
 PJD  9 Feb 2022     - Added np.ndarray washing to list
+PJD  9 Feb 2022     - Updated to deal with nested dictionaries of errors
 
 @author: durack1
 """
@@ -27,7 +28,7 @@ from os import scandir
 # %% function defs
 
 
-def alertError(count):
+def alertError(count, filePath, key2):
     """
     alertError()
 
@@ -46,12 +47,14 @@ def alertError(count):
     to = ", ".join(receivers_email)
     subject = "extractLicenseContact.py error"
     body = "This message is sent from Python"
-    message = "Subject: {}\ncount: {}\n\n\n{}".format(subject, count, body)
+    message = "Subject: {}\ncount: {}\nfilePath: {}\nkey2: {}\n\n{}".format(
+        subject, count, filePath, key2, body
+    )
     with smtplib.SMTP(smtp_server) as server:
         server.sendmail(sender_email, to, message)
 
 
-def compareDicts(dict1, dict2, count):
+def compareDicts(dict1, dict2, count, filePath):
     """
     compareDicts(dict1, dict2, count)
 
@@ -98,15 +101,21 @@ def compareDicts(dict1, dict2, count):
                 "Key: {}, Value 1: {}, Value 2: {}".format(key, dict1[key], dict2[key])
             )
             pdb.set_trace()
+            # 25509 /p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/epcalc100/gn/v20190429/epcalc100_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc
             # set(globalAtts).difference(chkGlobalAtts)
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
             tmp = dict1[key]
-            dict1[key] = {}
-            dict1[key]["original"] = tmp
+            if isinstance(tmp, dict):
+                # reassign existing entries before adding more
+                for key3 in tmp.keys():
+                    dict1[key][key3] = tmp[key]
+            else:
+                dict1[key] = {}
+                dict1[key]["original"] = tmp
             dict1[key][key2] = dict2[key]
             update = True
-            alertError(count)
+            alertError(count, filePath, key2)
         else:
             update = False
 
@@ -219,7 +228,7 @@ def getGlobalAtts(filePath):
             val = ""
         tmp[globalAtt] = val
     # add list of non-queried globalAtts
-    tmp["unvalidated"] = list(set(fH.attributes).difference(globalAtts))
+    tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
     fH.close()
 
     return tmp
@@ -276,7 +285,7 @@ for cnt, filePath in enumerate(x):
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             dic1 = cmip[key]
-            update, newDic = compareDicts(dic1, dic2, cnt)
+            update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
             # if difference found, update new entry
             if update:
                 cmip[key] = newDic

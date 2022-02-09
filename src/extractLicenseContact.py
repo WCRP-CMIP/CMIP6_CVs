@@ -97,6 +97,9 @@ def compareDicts(dict1, dict2):
             # set(globalAtts).difference(chkGlobalAtts)
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
+            tmp = dict1[key]
+            dict1[key] = {}
+            dict1[key]["original"] = tmp
             dict1[key][key2] = dict2[key]
             update = True
         else:

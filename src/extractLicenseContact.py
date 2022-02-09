@@ -21,6 +21,8 @@ import pdb
 from os import scandir
 
 # %% function defs
+
+
 def alertError():
     """
     alertError()
@@ -43,6 +45,8 @@ def alertError():
     message = "Subject: {}\n\n{}".format(subject, body)
     with smtplib.SMTP(smtp_server) as server:
         server.sendmail(sender_email, to, message)
+
+
 def compareDicts(dict1, dict2):
     """
     compareDicts(dict1, dict2)

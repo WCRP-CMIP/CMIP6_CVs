@@ -37,13 +37,12 @@ def alertError():
     import smtplib
 
     smtp_server = "nospam.llnl.gov"
-    sender_email = "error@extractLicenseContact.py"
+    sender_email = "error@durack1.llnl.gov"
     receivers_email = ["pauldurack@gmail.com", "pauldurack@llnl.gov"]
     to = ", ".join(receivers_email)
-    message = """Subject: extractLicenseContact.py error\n
-
-    This message is sent from Python."""
-
+    subject = "extractLicenseContact.py error"
+    body = "This message is sent from Python"
+    message = "Subject: {}\n\n{}".format(subject, body)
     with smtplib.SMTP(smtp_server) as server:
         server.sendmail(sender_email, to, message)
 

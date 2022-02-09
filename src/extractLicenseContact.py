@@ -10,6 +10,7 @@ This script polls all CMIP6 data and extracts license and contact information
 PJD  9 Feb 2022     - Updated to validate and catch inconsistencies
 PJD  9 Feb 2022     - Updated to get alertError working
 PJD  9 Feb 2022     - Added incremental saving
+PJD  9 Feb 2022     - Added np.ndarray washing to list
 
 @author: durack1
 """
@@ -18,6 +19,7 @@ PJD  9 Feb 2022     - Added incremental saving
 import cdms2
 import datetime
 import json
+import numpy as np
 import os
 import pdb
 from os import scandir
@@ -208,6 +210,8 @@ def getGlobalAtts(filePath):
     for cnt, globalAtt in enumerate(globalAtts):
         try:
             val = eval("".join(["fH.", globalAtt]))
+            if isinstance(val, np.ndarray):
+                val = val.tolist()
             print("get:", globalAtt, val)
         except:
             print("No entry:", globalAtt)
@@ -253,6 +257,8 @@ testPath = (
 x = scantree(testPath)
 cmip = {}
 cmip["version_metadata"] = {}
+cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
+cmip["version_metadata"]["institution_id"] = "PCMDI"
 startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
@@ -283,7 +289,7 @@ for cnt, filePath in enumerate(x):
         # print('dupe files, skipping')
 
     # %% iteratively write out results to local file
-    if not cnt % 10:
+    if not cnt % 1000:
         if os.path.exists("*CMIP6-metaData.json"):
             os.remove("*CMIP6-metaData.json")
         # get time
@@ -291,9 +297,14 @@ for cnt, filePath in enumerate(x):
         timeFormat = timeNow.strftime("%Y-%m-%d")
         timeFormatDir = timeNow.strftime("%y%m%d")
         endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        cmip["version_metadata"]["end_time"] = endTime
+        cmip["version_metadata"]["end_time  "] = endTime
         # Write output
+        print("")
         outFile = "_".join([timeFormatDir, "CMIP6-metaData.json"])
+        print(
+            "writing:",
+        )
+        print("")
         fH = open(outFile, "w")
         json.dump(
             cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
@@ -306,7 +317,7 @@ timeNow = datetime.datetime.now()
 timeFormat = timeNow.strftime("%Y-%m-%d")
 timeFormatDir = timeNow.strftime("%y%m%d")
 endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-cmip["version_metadata"]["end_time"] = endTime
+cmip["version_metadata"]["end_time  "] = endTime
 # Write output
 outFile = "_".join([timeFormatDir, "CMIP6-metaData.json"])
 fH = open(outFile, "w")

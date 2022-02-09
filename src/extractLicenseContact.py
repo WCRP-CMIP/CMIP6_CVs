@@ -27,7 +27,7 @@ from os import scandir
 # %% function defs
 
 
-def alertError():
+def alertError(count):
     """
     alertError()
 
@@ -46,14 +46,14 @@ def alertError():
     to = ", ".join(receivers_email)
     subject = "extractLicenseContact.py error"
     body = "This message is sent from Python"
-    message = "Subject: {}\n\n{}".format(subject, body)
+    message = "Subject: {}\ncount: {}\n\n\n{}".format(subject, count, body)
     with smtplib.SMTP(smtp_server) as server:
         server.sendmail(sender_email, to, message)
 
 
-def compareDicts(dict1, dict2):
+def compareDicts(dict1, dict2, count):
     """
-    compareDicts(dict1, dict2)
+    compareDicts(dict1, dict2, count)
 
     Compares entries in two dictionaries using key:value lookups, and returns
     inconsistencies
@@ -106,6 +106,7 @@ def compareDicts(dict1, dict2):
             dict1[key]["original"] = tmp
             dict1[key][key2] = dict2[key]
             update = True
+            alertError(count)
         else:
             update = False
 
@@ -275,7 +276,7 @@ for cnt, filePath in enumerate(x):
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             dic1 = cmip[key]
-            update, newDic = compareDicts(dic1, dic2)
+            update, newDic = compareDicts(dic1, dic2, cnt)
             # if difference found, update new entry
             if update:
                 cmip[key] = newDic

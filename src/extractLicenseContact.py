@@ -21,8 +21,6 @@ import pdb
 from os import scandir
 
 # %% function defs
-
-
 def alertError():
     """
     alertError()
@@ -37,7 +35,7 @@ def alertError():
     import smtplib
 
     smtp_server = "nospam.llnl.gov"
-    sender_email = "error@durack1.llnl.gov"
+    sender_email = "error@durack1"
     receivers_email = ["pauldurack@gmail.com", "pauldurack@llnl.gov"]
     to = ", ".join(receivers_email)
     subject = "extractLicenseContact.py error"
@@ -45,8 +43,6 @@ def alertError():
     message = "Subject: {}\n\n{}".format(subject, body)
     with smtplib.SMTP(smtp_server) as server:
         server.sendmail(sender_email, to, message)
-
-
 def compareDicts(dict1, dict2):
     """
     compareDicts(dict1, dict2)

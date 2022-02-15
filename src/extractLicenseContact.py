@@ -14,7 +14,8 @@ PJD  9 Feb 2022     - Added np.ndarray washing to list
 PJD  9 Feb 2022     - Updated to deal with nested dictionaries of errors
 PJD  9 Feb 2022     - Debugging nested errors CanESM5
 PJD 14 Feb 2022     - Updated to deal with multiple nominal_resolution entries per realm
-                     - TODO: add lat/lon/depth/height scour (release year) - getGlobalAtts
+PJD 15 Feb 2022     - Added lat/lon/depth/height scour
+PJD 15 Feb 2022     - Extended debugging to ascertain valid grid (lat/lon pairs)
 
 @author: durack1
 """
@@ -153,6 +154,109 @@ def compareDicts(dict1, dict2, count, filePath):
     return update, dict1
 
 
+def getAxes(var):
+    """
+    getAxes(var)
+
+    Extracts grid info dependent on input
+    """
+    # preallocate
+    latLen, lat0, latN = ["x" for _ in range(3)]
+    lonLen, lon0, lonN = ["x" for _ in range(3)]
+    heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
+
+    try:
+        print("enter try")
+        if len(var.shape) == 1:
+            print("no valid grid")
+            latLen, lat0, latN = ["x" for _ in range(3)]
+            lonLen, lon0, lonN = ["x" for _ in range(3)]
+            heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
+        elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
+            print("hit ice-sheet grid, exiting")
+            pass
+        else:
+            lat = var.getLatitude()
+            lon = var.getLongitude()
+            # create strings
+            latLen = str(len(lat))
+            lat0 = str(np.min(lat))  # str(lat[0])
+            latN = str(np.max(lat))  # str(lat[-1])
+            if len(lon.shape) == 2:
+                lonLen = str(lon.shape[1])
+            else:
+                lonLen = str(len(lon))
+            lon0 = str(np.min(lon))  # str(lon[0])
+            lonN = str(np.max(lon))  # str(lon[-1])
+            # get height conditional on shape
+            if len(var.shape) > 3 and "height" in var.getAxisIds():
+                heightVar = var.getLevel()
+                heightLen = str(len(heightVar))
+                height0 = str(heightVar[0])
+                heightN = str(heightVar[-1])
+                heightUnit = heightVar.units
+            else:
+                heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
+
+    # deal with i,j index grids
+    except (AttributeError):
+        print("enter except")
+        axes = var.getAxisList()
+        # test for var shape
+        if axes[0].id == "time" and var.shape == 3:
+            # assume time, lat, lon
+            axInd = 1
+        elif len(var.shape) == 4:
+            # assume time, height, lat, lon
+            axInd = 2
+        elif len(var.shape) == 2:
+            # assume lat, lon (fx field)
+            axInd = 0
+        try:
+            print("enter try2")
+            latLen = str(len(axes[axInd]))
+            latVar = var.getLatitude()  # fH["latitude"]
+            lat0 = str(np.min(latVar))
+            print("lat0")
+            print(lat0)
+            latN = str(np.max(latVar))
+            lon = str(len(axes[axInd + 1]))
+            lonVar = var.getLongitude()  # fH["longitude"]
+            lon0 = str(np.min(lonVar))
+            lonN = str(np.max(lonVar))
+            if len(var.shape) == 4:
+                heightLen = str(len(axes[1]))
+                heightVar = var.getLevel()
+                height0 = str(heightVar[0])
+                heightN = str(heightVar[-1])
+                heightUnit = heightVar.units
+            else:
+                heightLen, height0, heightN = ["x" for _ in range(3)]
+        except:
+            print("no valid dims")
+
+    # create grid_info dictionary
+    tmp = {}
+    tmp["lat"] = " ".join(["len:", latLen, "first:", lat0, "last:", latN])
+    tmp["lon"] = " ".join(["len:", lonLen, "first:", lon0, "last:", lonN])
+    tmp["height"] = " ".join(
+        [
+            "len:",
+            heightLen,
+            "first:",
+            height0,
+            "last:",
+            heightN,
+            "units:",
+            heightUnit,
+        ]
+    )
+    print("tmp")
+    print(tmp)
+
+    return tmp
+
+
 def getDrs(path):
     """
     getDrs(path)
@@ -256,7 +360,37 @@ def getGlobalAtts(filePath):
         "ocnBgchem": "Ocean Biogeochemistry",
         "seaIce": "Sea Ice",
     }
-    fileVars = ["time_bnds", "lat_bnds", "lon_bnds"]
+    excludeVars = [
+        "a",
+        "a_bnds",
+        "b",
+        "b_bnds",
+        "basin",
+        "bnds",
+        "d2",
+        "depth",
+        "depth_bnds",
+        "landuse",
+        "lat",
+        "lat_bnds",
+        "latitude",
+        "lev",
+        "lev_bnds",
+        "lon",
+        "lon_bnds",
+        "longitude",
+        "height",
+        "height_bnds",
+        "hist_interval",
+        "p0",
+        "ps",
+        "sector",
+        "strlen",
+        "time_bnds",
+        "type",
+        "ygre",
+        "xgre",
+    ]
 
     tmp = {}
     fH = cdms2.open(filePath)
@@ -277,35 +411,35 @@ def getGlobalAtts(filePath):
         tmp["nominal_resolution"][realmVal] = ""
     tmp["nominal_resolution"][tmp["realm"]] = val
     # get grid info
+    # debug start
+    if (
+        filePath
+        == ""
+        # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r5i9p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r5i9p1f1_gn_808301-808512.nc"  # 5646
+        # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r8i2p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r8i2p1f1_gn_824801-825012.nc"  # 5480
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/clw/gn/v20180906/clw_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5320
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/ps/gn/v20180906/ps_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5286
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/vas/gn/v20180906/vas_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5248
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5184
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Omon/sltovgyre/gn/v20180906/sltovgyre_Omon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  #4981
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/IfxGre/hfgeoubed/gn/v20210513/hfgeoubed_IfxGre_CESM2_ssp585-withism_r1i1p1f1_gn.nc"
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Emon/nwdFracLut/gn/v20210513/nwdFracLut_Emon_CESM2_ssp585-withism_r1i1p1f1_gn_224901-229912.nc"
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/thetaoga/gn/v20210513/thetaoga_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_201501-206412.nc"
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/thetaoga/gn/v20210513/thetaoga_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_201501-206412.nc"
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/areacello/gr/v20191120/areacello_Ofx_CESM2_ssp585-withism_r1i1p1f1_gr.nc"
+        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/sftof/gn/v20210513/sftof_Ofx_CESM2_ssp585-withism_r1i1p1f1_gn.nc"
+    ):
+        pdb.set_trace()
+    # debug close
     varNames = fH.variables
-    varName = "".join(set(varNames) - set(fileVars))
+    # deal with ps var
+    if "/Amon/ps" in filePath:
+        excludeVars.remove("ps")
+    varName = "".join(set(varNames) - set(excludeVars))
     var = fH[varName]
-    try:
-        lat = var.getLatitude()
-        lon = var.getLongitude()
-        tmp["grid_info"] = {}
-        tmp["grid_info"]["lat"] = " ".join(
-            ["len:", str(lat.shape[0]), "first:", str(lat[0]), "last:", str(lat[-1])]
-        )
-        tmp["grid_info"]["lon"] = " ".join(
-            ["len:", str(lon.shape[0]), "first:", str(lon[0]), "last:", str(lon[-1])]
-        )
-        # get height conditional on shape
-        if len(var.shape) > 3:
-            height = var.getHeight()
-            tmp["grid_info"]["height"] = " ".join(
-                [
-                    "len:",
-                    str(height.shape[0]),
-                    "first:",
-                    str(height[0]),
-                    "last:",
-                    str(height[-1]),
-                ]
-            )
-    except (AttributeError):
-        print("no valid dims")
-    # pdb.set_trace()
+    tmp["grid_info"] = getAxes(var)
+    # print("grid_info")
+    # print(tmp["grid_info"])
 
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
@@ -340,6 +474,7 @@ testPath = (
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1/Omon"
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1"
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical"
+    # "/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-f3-L/lig127k/r1i1p1f1/SImon/"  # i, j index checks
     "/p/css03/esgf_publish/CMIP6"
 )
 
@@ -352,6 +487,13 @@ cmip["version_metadata"]["institution_id"] = "PCMDI"
 startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
+    # debug start
+    indStart = -1
+    if cnt < indStart:
+        continue
+    elif cnt == indStart:
+        firstPath = "/".join(filePath.path.split("/")[0:-1])
+    # debug end
     # deal with multiple files - e.g. Omon
     if cnt == 0:
         firstPath = "/".join(filePath.path.split("/")[0:-1])

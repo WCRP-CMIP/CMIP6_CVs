@@ -13,7 +13,8 @@ PJD  9 Feb 2022     - Added incremental saving
 PJD  9 Feb 2022     - Added np.ndarray washing to list
 PJD  9 Feb 2022     - Updated to deal with nested dictionaries of errors
 PJD  9 Feb 2022     - Debugging nested errors CanESM5
-                     - TODO: add lat/lon/depth/height scour (release year)
+PJD 14 Feb 2022     - Updated to deal with multiple nominal_resolution entries per realm
+                     - TODO: add lat/lon/depth/height scour (release year) - getGlobalAtts
 
 @author: durack1
 """
@@ -255,6 +256,7 @@ def getGlobalAtts(filePath):
         "ocnBgchem": "Ocean Biogeochemistry",
         "seaIce": "Sea Ice",
     }
+    fileVars = ["time_bnds", "lat_bnds", "lon_bnds"]
 
     tmp = {}
     fH = cdms2.open(filePath)
@@ -274,6 +276,37 @@ def getGlobalAtts(filePath):
     for realmVal in realms:
         tmp["nominal_resolution"][realmVal] = ""
     tmp["nominal_resolution"][tmp["realm"]] = val
+    # get grid info
+    varNames = fH.variables
+    varName = "".join(set(varNames) - set(fileVars))
+    var = fH[varName]
+    try:
+        lat = var.getLatitude()
+        lon = var.getLongitude()
+        tmp["grid_info"] = {}
+        tmp["grid_info"]["lat"] = " ".join(
+            ["len:", str(lat.shape[0]), "first:", str(lat[0]), "last:", str(lat[-1])]
+        )
+        tmp["grid_info"]["lon"] = " ".join(
+            ["len:", str(lon.shape[0]), "first:", str(lon[0]), "last:", str(lon[-1])]
+        )
+        # get height conditional on shape
+        if len(var.shape) > 3:
+            height = var.getHeight()
+            tmp["grid_info"]["height"] = " ".join(
+                [
+                    "len:",
+                    str(height.shape[0]),
+                    "first:",
+                    str(height[0]),
+                    "last:",
+                    str(height[-1]),
+                ]
+            )
+    except (AttributeError):
+        print("no valid dims")
+    # pdb.set_trace()
+
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
     fH.close()

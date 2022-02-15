@@ -12,6 +12,8 @@ PJD  9 Feb 2022     - Updated to get alertError working
 PJD  9 Feb 2022     - Added incremental saving
 PJD  9 Feb 2022     - Added np.ndarray washing to list
 PJD  9 Feb 2022     - Updated to deal with nested dictionaries of errors
+PJD  9 Feb 2022     - Debugging nested errors CanESM5
+                     - TODO: add lat/lon/depth/height scour (release year)
 
 @author: durack1
 """
@@ -22,8 +24,7 @@ import datetime
 import json
 import numpy as np
 import os
-
-# import pdb
+import pdb
 from os import scandir
 
 # %% function defs
@@ -99,22 +100,50 @@ def compareDicts(dict1, dict2, count, filePath):
     for key in sharedKeys:
         if dict1[key] != dict2[key] and key in chkGlobalAtts:
             print(
-                "Key: {}, Value 1: {}, Value 2: {}".format(key, dict1[key], dict2[key])
+                "Key: {},\nValue 1: {},\nValue 2: {}".format(
+                    key, dict1[key], dict2[key]
+                )
             )
-            # pdb.set_trace()
             # 25509 /p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/epcalc100/gn/v20190429/epcalc100_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc
+            # 25510 /p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/tos/gn/v20190429/tos_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc
             # set(globalAtts).difference(chkGlobalAtts)
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
-            tmp = dict1[key]
-            if isinstance(tmp, dict):
-                # reassign existing entries before adding more
-                for key3 in tmp.keys():
-                    dict1[key][key3] = tmp[key]
+            tmp1 = dict1[key]
+            tmp2 = dict2[key]
+            # deal with nominal_resolution nested dictionary
+            if key == "nominal_resolution":
+                # extract nominal_resolution keys
+                dict1Realm = tmp1[dict1["realm"]]
+                dict2Realm = dict2["realm"]
+                # check for match, if no match write
+                if dict1Realm != dict2Realm:
+                    tmp1[dict2Realm] = tmp2[dict2Realm]
+                # if match, create dictionary and append
+                elif dict1Realm == dict2Realm and not isinstance(dict1Realm, dict):
+                    val1 = tmp1[dict1Realm]
+                    tmp1[dict1Realm] = {}
+                    tmp1[dict1Realm]["original"] = val1
+                    tmp1[dict1Realm][key2] = tmp2[dict2Realm]
+                # if match, and dictionary, deal with secondary case, append only
+                elif dict1Realm == dict2Realm and isinstance(dict1Realm, dict):
+                    tmp1[dict1Realm][key2] = tmp2[dict2Realm]
+                # assign new tmp1 dictionary to key
+                dict1[key] = tmp1
+            # deal with all other entries
             else:
-                dict1[key] = {}
-                dict1[key]["original"] = tmp
-            dict1[key][key2] = dict2[key]
+                print("new key:", key)
+                # if tmp1 != tmp2 and not dictionary
+                if not isinstance(tmp1, dict):
+                    val1 = tmp1[key]
+                    tmp1[key] = {}
+                    tmp1["original"] = val1
+                    tmp1[key2] = tmp2
+                elif isinstance(tmp1, dict):
+                    tmp1[key2] = tmp2
+                # assign new tmp1 dictionary to key
+                dict1[key] = tmp1
+                pdb.set_trace()
             update = True
             alertError(count, filePath, key2)
         else:
@@ -216,6 +245,17 @@ def getGlobalAtts(filePath):
         "tracking_id",
         "license",
     ]
+    realms = {
+        "aerosol": "Aerosol",
+        "atmos": "Atmosphere",
+        "atmosChem": "Atmospheric Chemistry",
+        "land": "Land Surface",
+        "landIce": "Land Ice",
+        "ocean": "Ocean",
+        "ocnBgchem": "Ocean Biogeochemistry",
+        "seaIce": "Sea Ice",
+    }
+
     tmp = {}
     fH = cdms2.open(filePath)
     for cnt, globalAtt in enumerate(globalAtts):
@@ -223,11 +263,17 @@ def getGlobalAtts(filePath):
             val = eval("".join(["fH.", globalAtt]))
             if isinstance(val, np.ndarray):
                 val = val.tolist()
-            print("get:", globalAtt, val)
+            ###print("get:", globalAtt, val)
         except:
-            print("No entry:", globalAtt)
+            ###print("No entry:", globalAtt)
             val = ""
         tmp[globalAtt] = val
+    # assign nominal resolution per realm
+    val = tmp["nominal_resolution"]
+    tmp["nominal_resolution"] = {}
+    for realmVal in realms:
+        tmp["nominal_resolution"][realmVal] = ""
+    tmp["nominal_resolution"][tmp["realm"]] = val
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
     fH.close()

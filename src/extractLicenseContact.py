@@ -16,6 +16,11 @@ PJD  9 Feb 2022     - Debugging nested errors CanESM5
 PJD 14 Feb 2022     - Updated to deal with multiple nominal_resolution entries per realm
 PJD 15 Feb 2022     - Added lat/lon/depth/height scour
 PJD 15 Feb 2022     - Extended debugging to ascertain valid grid (lat/lon pairs)
+PJD 15 Feb 2022     - Update alertError output
+PJD 15 Feb 2022     - Added try wrap to deal with nospam.llnl.gov timeouts
+PJD 15 Feb 2022     - Update to run for CMIP6/CMIP (complete archive later)
+PJD 16 Feb 2022     - Updated getGlobalAtts to deal with cdms2.open error - see https://github.com/CDAT/cdms/issues/442
+                     TODO: update compareDicts to truncate duplicate values
 
 @author: durack1
 """
@@ -43,6 +48,7 @@ def alertError(count, filePath, key2):
         https://stackoverflow.com/questions/28328222/smtplib-of-python-not-working
 
     """
+    # pdb.set_trace()
     import smtplib
 
     smtp_server = "nospam.llnl.gov"
@@ -51,11 +57,22 @@ def alertError(count, filePath, key2):
     to = ", ".join(receivers_email)
     subject = "extractLicenseContact.py error"
     body = "This message is sent from Python"
-    message = "Subject: {}\ncount: {}\nfilePath: {}\nkey2: {}\n\n{}".format(
-        subject, count, filePath, key2, body
+    body = "count   : {}\nfilePath: {}\nkey2    : {}\n\n{}".format(
+        count, filePath, key2, body
     )
-    with smtplib.SMTP(smtp_server) as server:
-        server.sendmail(sender_email, to, message)
+    # print("body:")
+    # print(body)
+    message = "Subject: {}\n\n{}".format(subject, body)
+    # print("message:")
+    # print(message)
+    # pdb.set_trace()
+    try:
+        with smtplib.SMTP(smtp_server) as server:
+            server.sendmail(sender_email, to, message)
+    except (ConnectionResetError):
+        print("")
+        print("nospam.llnl.gov blocked connection")
+        print("")
 
 
 def compareDicts(dict1, dict2, count, filePath):
@@ -113,6 +130,8 @@ def compareDicts(dict1, dict2, count, filePath):
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
             tmp1 = dict1[key]
             tmp2 = dict2[key]
+            # check if value already logged
+            # if any([True for k,v in word_freq.items() if v == value]):
             # deal with nominal_resolution nested dictionary
             if key == "nominal_resolution":
                 # extract nominal_resolution keys
@@ -137,15 +156,15 @@ def compareDicts(dict1, dict2, count, filePath):
                 print("new key:", key)
                 # if tmp1 != tmp2 and not dictionary
                 if not isinstance(tmp1, dict):
-                    val1 = tmp1[key]
-                    tmp1[key] = {}
+                    val1 = tmp1
+                    tmp1 = {}
                     tmp1["original"] = val1
                     tmp1[key2] = tmp2
                 elif isinstance(tmp1, dict):
                     tmp1[key2] = tmp2
                 # assign new tmp1 dictionary to key
                 dict1[key] = tmp1
-                pdb.set_trace()
+                # pdb.set_trace()
             update = True
             alertError(count, filePath, key2)
         else:
@@ -178,6 +197,9 @@ def getAxes(var):
         else:
             lat = var.getLatitude()
             lon = var.getLongitude()
+            # test for None
+            if lat == None and lon == None:
+                raise Exception("Attribute Error")
             # create strings
             latLen = str(len(lat))
             lat0 = str(np.min(lat))  # str(lat[0])
@@ -199,8 +221,8 @@ def getAxes(var):
                 heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
 
     # deal with i,j index grids
-    except (AttributeError):
-        print("enter except")
+    except Exception as error:
+        print("enter except", error)
         axes = var.getAxisList()
         # test for var shape
         if axes[0].id == "time" and var.shape == 3:
@@ -363,37 +385,90 @@ def getGlobalAtts(filePath):
     excludeVars = [
         "a",
         "a_bnds",
+        "alt40_bnds",
+        "alt40_bounds",
+        "ap",
+        "ap_bnds",
         "b",
         "b_bnds",
         "basin",
         "bnds",
+        "bounds_lat",
+        "bounds_latitude",
+        "bounds_lon",
+        "bounds_longitude",
         "d2",
         "depth",
         "depth_bnds",
+        "depth_bounds",
+        "depth_layer",
         "landuse",
         "lat",
         "lat_bnds",
+        "lat_bounds",
         "latitude",
         "lev",
         "lev_bnds",
+        "lev_bounds",
         "lon",
         "lon_bnds",
+        "lon_bounds",
         "longitude",
         "height",
         "height_bnds",
+        "height_bounds",
         "hist_interval",
         "p0",
+        "pfttype",
+        "plev",
+        "plev_bnds",
+        "plev_bounds",
+        "plev7_bnds",
+        "plev7_bounds",
         "ps",
+        "rlat",
+        "rlat_bnds",
+        "rlat_bounds",
+        "rlon",
+        "rlon_bnds",
+        "rlon_bounds",
+        "sdepth",
+        "sdepth_bnds",
+        "sdepth_bounds",
         "sector",
         "strlen",
+        "sza_bnds",
+        "sza_bounds",
+        "tau_bnds",
+        "tau_bounds",
         "time_bnds",
+        "time_bounds",
         "type",
+        "vertices_latitude",
+        "vertices_longitude",
+        "y",
+        "y_bnds",
+        "y_bounds",
         "ygre",
+        "x",
+        "x_bnds",
+        "x_bounds",
         "xgre",
     ]
 
     tmp = {}
-    fH = cdms2.open(filePath)
+    # deal with SystemError - CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2 data
+    # https://github.com/CDAT/cdms/issues/442
+    try:
+        fH = cdms2.open(filePath)
+    except (SystemError):
+        print("")
+        print("")
+        print("badFile:", filePath)
+        print("")
+        print("")
+        return {}
+    # deal with SystemError
     for cnt, globalAtt in enumerate(globalAtts):
         try:
             val = eval("".join(["fH.", globalAtt]))
@@ -414,7 +489,21 @@ def getGlobalAtts(filePath):
     # debug start
     if (
         filePath
-        == ""
+        ==
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/CFmon/clisccp/gr/v20180705/clisccp_CFmon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14134 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/CFmon/clcalipso/gr/v20180705/clcalipso_CFmon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14128 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-18591231.nc"  # 13589 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/amip/r1i1p1f2/Emon/mrsol/gr/v20191202/mrsol_Emon_CNRM-CM6-1-HR_amip_r1i1p1f2_gr_197901-201412.nc"  # 12166 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/6hrPlevPt/zg500/gr/v20191021/zg500_6hrPlevPt_CNRM-CM6-1-HR_historical_r1i1p1f2_gr_196001010600-197001010000.nc"  # 8009 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/basin/gn/v20191021/basin_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5777 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/masscello/gn/v20191021/masscello_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5775 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/areacello/gn/v20191021/areacello_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5774 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/Amon/hur/gr/v20200417/hur_Amon_CIESM_abrupt-4xCO2_r1i1p1f1_gr_000101-015012.nc"  # 3040 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/SImon/sispeed/gn/v20200420/sispeed_SImon_CIESM_abrupt-4xCO2_r1i1p1f1_gn_010101-015012.nc"  # 2977 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/SImon/siflsenstop/gn/v20200420/siflsenstop_SImon_CIESM_abrupt-4xCO2_r1i1p1f1_gn_005101-010012.nc"  # 2860 CMIP
+        # "/p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Ofx/sftof/gn/v20210118/sftof_Ofx_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn.nc"  # 41746 complete
+        # "/p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Amon/cl/gn/v20190429/cl_Amon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc"  # 25636
+        # "/p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/epcalc100/gn/v20190429/epcalc100_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc"  # 25509
         # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r5i9p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r5i9p1f1_gn_808301-808512.nc"  # 5646
         # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r8i2p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r8i2p1f1_gn_824801-825012.nc"  # 5480
         # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/clw/gn/v20180906/clw_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5320
@@ -428,18 +517,23 @@ def getGlobalAtts(filePath):
         # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/thetaoga/gn/v20210513/thetaoga_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_201501-206412.nc"
         # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/areacello/gr/v20191120/areacello_Ofx_CESM2_ssp585-withism_r1i1p1f1_gr.nc"
         # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/sftof/gn/v20210513/sftof_Ofx_CESM2_ssp585-withism_r1i1p1f1_gn.nc"
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/cropFracC4/gr/v20180705/cropFracC4_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14439 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/thetaot/gn/v20180705/thetaot_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_185001-194912.nc"  # 14451 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/CFsubhr/prc/gn/v20190125/prc_CFsubhr_CNRM-CM6-1_historical_r3i1p1f2_gn_18500101003000-20150101000000.nc"  # 17588 CMIP
+        "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/Emon/parasolRefl/gr/v20190125/parasolRefl_Emon_CNRM-CM6-1_historical_r3i1p1f2_gr_185001-200912.nc"  # 18897 CMIP
     ):
         pdb.set_trace()
     # debug close
     varNames = fH.variables
     # deal with ps var
-    if "/Amon/ps" in filePath:
+    if all(x in filePath for x in ["/ps/", "/ps"]):
         excludeVars.remove("ps")
+    # deal with basin var
+    if all(x in filePath for x in ["/basin/", "/basin"]):
+        excludeVars.remove("basin")
     varName = "".join(set(varNames) - set(excludeVars))
     var = fH[varName]
     tmp["grid_info"] = getAxes(var)
-    # print("grid_info")
-    # print(tmp["grid_info"])
 
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
@@ -475,7 +569,27 @@ testPath = (
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1"
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical"
     # "/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-f3-L/lig127k/r1i1p1f1/SImon/"  # i, j index checks
-    "/p/css03/esgf_publish/CMIP6"
+    # "/p/css03/esgf_publish/CMIP6"
+    "/p/css03/esgf_publish/CMIP6/CMIP"
+)
+
+# define bad files
+cdmsBadFiles = (
+    "badFilesAreHere",
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-1859123.nc",
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-18591231.nc",
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_185005-185912.nc",
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn.nc",  # 13681 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r4i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r4i1p1f2_gn_18500701-18591231.nc",  # 13874 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r4i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r4i1p1f2_gn_185007-185912.nc",  # 13966 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r4i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r4i1p1f2_gn.nc",  # 13967 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # 14307 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # 14308 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/wtd/gn/v20180705/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_185001-199912.nc",  # 14476 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/fx/areacellr/gn/v20180705/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn.nc",  # 14477 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_18500901-18591231.nc",  # 14824 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_185009-185912.nc",  # 14916 CMIP + more try/except added
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn.nc",  # 14917 CMIP
 )
 
 # %% loop over files and build index
@@ -488,12 +602,16 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = -1
+    indStart = 18896  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
     # debug end
+    # check for bad file
+    if filePath.path in cdmsBadFiles:
+        print("bad file identified, skipping")
+        continue
     # deal with multiple files - e.g. Omon
     if cnt == 0:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
@@ -506,6 +624,9 @@ for cnt, filePath in enumerate(x):
         if key in cmip:
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
+            # catch file open error
+            if dic2 == {}:
+                continue
             dic1 = cmip[key]
             update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
             # if difference found, update new entry
@@ -530,9 +651,13 @@ for cnt, filePath in enumerate(x):
         timeFormatDir = timeNow.strftime("%y%m%d")
         endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         cmip["version_metadata"]["end_time  "] = endTime
+        # get path
+        pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
+        # get count
+        cmip["version_metadata"]["file_processed_count"] = str(cnt)
         # Write output
         print("")
-        outFile = "_".join([timeFormatDir, "CMIP6-metaData.json"])
+        outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
         print(
             "writing:",
         )
@@ -550,8 +675,12 @@ timeFormat = timeNow.strftime("%Y-%m-%d")
 timeFormatDir = timeNow.strftime("%y%m%d")
 endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["end_time  "] = endTime
+# get path
+pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
+# get count
+cmip["version_metadata"]["file_processed_count"] = str(cnt)
 # Write output
-outFile = "_".join([timeFormatDir, "CMIP6-metaData.json"])
+outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
 fH = open(outFile, "w")
 json.dump(
     cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")

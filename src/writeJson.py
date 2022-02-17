@@ -1148,6 +1148,20 @@ source_id[key]['institution_id'] = [
 #source_id.pop(key1)
 
 '''
+Apply a check on the length of source ids. Raise a RuntimeError if any are found.
+'''
+MAX_SOURCE_ID_LENGTH = 25
+MAX_SOURCE_ID_MSG_TEMPLATE = 'Source id "{}" is {} characters long which is above the limit of {}'
+# Check all source ids for length
+long_source_ids = [i for i in source_id if len(i) > MAX_SOURCE_ID_LENGTH]
+errors = [MAX_SOURCE_ID_MSG_TEMPLATE.format(i, len(i), MAX_SOURCE_ID_LENGTH) for i in long_source_ids]
+# Raise exception if any found
+if errors:
+    raise RuntimeError('. '.join(errors))
+
+del(long_source_ids, errors)
+
+'''
 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
 Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114
 '''

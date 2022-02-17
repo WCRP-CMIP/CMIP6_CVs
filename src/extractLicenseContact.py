@@ -22,7 +22,9 @@ PJD 15 Feb 2022     - Update to run for CMIP6/CMIP (complete archive later)
 PJD 16 Feb 2022     - Updated getGlobalAtts to deal with cdms2.open error - see https://github.com/CDAT/cdms/issues/442
 PJD 16 Feb 2022     - Updated compareDicts so that "original" key is updated to $table_id_$variable_id
 PJD 16 Feb 2022     - Updated getAxes to remove get* calls in second tier
-                     TODO: update compareDicts to truncate duplicate values
+                     TODO: pull out calendar attribute (attached to time coordinate)
+                     TODO: switch getAxes to using variable_id key
+                     TODO: update compareDicts to truncate duplicate values, adding a counter for times returned
 
 @author: durack1
 """
@@ -430,6 +432,8 @@ def getGlobalAtts(filePath):
         "lev",
         "lev_bnds",
         "lev_bounds",
+        "lev_partial_bnds",
+        "lev_partial_bounds",
         "lon",
         "lon_bnds",
         "lon_bounds",
@@ -438,6 +442,7 @@ def getGlobalAtts(filePath):
         "height_bnds",
         "height_bounds",
         "hist_interval",
+        "orog",
         "p0",
         "pfttype",
         "plev",
@@ -446,6 +451,7 @@ def getGlobalAtts(filePath):
         "plev7_bnds",
         "plev7_bounds",
         "ps",
+        "ptop",
         "rlat",
         "rlat_bnds",
         "rlat_bounds",
@@ -549,18 +555,25 @@ def getGlobalAtts(filePath):
         # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/E3hrPt/jpdftaureicemodis/gr/v20181203/jpdftaureicemodis_E3hrPt_CNRM-CM6-1_amip_r1i1p1f2_gr_200801010300-200901010000.nc"  # 46048 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/SImon/siitdconc/gn/v20190611/siitdconc_SImon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-200012.nc"  # 78614 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/Amon/o3/gn/v20190613/o3_Amon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-185012-clim.nc"  # 78745 CMIP
-        "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/NCAR/CESM2-WACCM/abrupt-4xCO2/r1i1p1f1/Omon/zooc/gr/v20190425/zooc_Omon_CESM2-WACCM_abrupt-4xCO2_r1i1p1f1_gr_005001-009912.nc"  # 91678 CMIP
+        "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/UKESM1-0-LL/abrupt-4xCO2/r1i1p1f2/CFmon/clwc/gn/v20190406/clwc_CFmon_UKESM1-0-LL_abrupt-4xCO2_r1i1p1f2_gn_190001-194912.nc"  # 405162 CMIP
     ):
         pdb.set_trace()
     # debug close
     varNames = fH.variables
-    # deal with ps var
-    if all(x in filePath for x in ["/ps/", "/ps"]):
-        excludeVars.remove("ps")
     # deal with basin var
     if all(x in filePath for x in ["/basin/", "/basin"]):
         excludeVars.remove("basin")
+    # deal with orog var
+    if all(x in filePath for x in ["/orog/", "/orog"]):
+        excludeVars.remove("orog")
+    # deal with ps var
+    if all(x in filePath for x in ["/ps/", "/ps"]):
+        excludeVars.remove("ps")
     varName = "".join(set(varNames) - set(excludeVars))
+    # compare variable_id with varName
+    print("variable_id:", tmp["variable_id"], "varName:", varName)
     var = fH[varName]
     tmp["grid_info"] = getAxes(var)
 
@@ -631,7 +644,7 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = 79751  # -1  # 25635 (complete archive)
+    indStart = 405161  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:

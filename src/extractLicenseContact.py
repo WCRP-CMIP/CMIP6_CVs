@@ -20,6 +20,8 @@ PJD 15 Feb 2022     - Update alertError output
 PJD 15 Feb 2022     - Added try wrap to deal with nospam.llnl.gov timeouts
 PJD 15 Feb 2022     - Update to run for CMIP6/CMIP (complete archive later)
 PJD 16 Feb 2022     - Updated getGlobalAtts to deal with cdms2.open error - see https://github.com/CDAT/cdms/issues/442
+PJD 16 Feb 2022     - Updated compareDicts so that "original" key is updated to $table_id_$variable_id
+PJD 16 Feb 2022     - Updated getAxes to remove get* calls in second tier
                      TODO: update compareDicts to truncate duplicate values
 
 @author: durack1
@@ -127,6 +129,7 @@ def compareDicts(dict1, dict2, count, filePath):
             # 25510 /p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/tos/gn/v20190429/tos_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc
             # set(globalAtts).difference(chkGlobalAtts)
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}
+            key1 = ".".join([dict1["table_id"], dict1["variable_id"]])
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
             tmp1 = dict1[key]
             tmp2 = dict2[key]
@@ -144,7 +147,7 @@ def compareDicts(dict1, dict2, count, filePath):
                 elif dict1Realm == dict2Realm and not isinstance(dict1Realm, dict):
                     val1 = tmp1[dict1Realm]
                     tmp1[dict1Realm] = {}
-                    tmp1[dict1Realm]["original"] = val1
+                    tmp1[dict1Realm][key1] = val1  # updated from "original"
                     tmp1[dict1Realm][key2] = tmp2[dict2Realm]
                 # if match, and dictionary, deal with secondary case, append only
                 elif dict1Realm == dict2Realm and isinstance(dict1Realm, dict):
@@ -237,18 +240,18 @@ def getAxes(var):
         try:
             print("enter try2")
             latLen = str(len(axes[axInd]))
-            latVar = var.getLatitude()  # fH["latitude"]
+            latVar = fH[axes[axInd]]
             lat0 = str(np.min(latVar))
             print("lat0")
             print(lat0)
             latN = str(np.max(latVar))
             lon = str(len(axes[axInd + 1]))
-            lonVar = var.getLongitude()  # fH["longitude"]
+            lonVar = fH[axes[axInd + 1]]
             lon0 = str(np.min(lonVar))
             lonN = str(np.max(lonVar))
             if len(var.shape) == 4:
                 heightLen = str(len(axes[1]))
-                heightVar = var.getLevel()
+                heightVar = fH[axes[1]]
                 height0 = str(heightVar[0])
                 heightN = str(heightVar[-1])
                 heightUnit = heightVar.units
@@ -385,6 +388,10 @@ def getGlobalAtts(filePath):
     excludeVars = [
         "a",
         "a_bnds",
+        "alt16",
+        "alt16_bnds",
+        "alt16_bounds",
+        "alt40",
         "alt40_bnds",
         "alt40_bounds",
         "ap",
@@ -397,11 +404,24 @@ def getGlobalAtts(filePath):
         "bounds_latitude",
         "bounds_lon",
         "bounds_longitude",
+        "climatology_bnds",
+        "climatology_bounds",
         "d2",
+        "dbze",
+        "dbze_bnds",
+        "dbze_bounds",
         "depth",
         "depth_bnds",
         "depth_bounds",
         "depth_layer",
+        "effectRadIc",
+        "effectRadIc_bnds",
+        "effectRadIc_bounds",
+        "effectRadLi",
+        "effectRadLi_bnds",
+        "effectRadLi_bounds",
+        "iceband_bnds",
+        "iceband_bounds",
         "landuse",
         "lat",
         "lat_bnds",
@@ -432,6 +452,9 @@ def getGlobalAtts(filePath):
         "rlon",
         "rlon_bnds",
         "rlon_bounds",
+        "scatratio",
+        "scatratio_bnds",
+        "scatratio_bounds",
         "sdepth",
         "sdepth_bnds",
         "sdepth_bounds",
@@ -446,6 +469,7 @@ def getGlobalAtts(filePath):
         "type",
         "vertices_latitude",
         "vertices_longitude",
+        "wavelength",
         "y",
         "y_bnds",
         "y_bounds",
@@ -520,7 +544,12 @@ def getGlobalAtts(filePath):
         # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/cropFracC4/gr/v20180705/cropFracC4_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14439 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/thetaot/gn/v20180705/thetaot_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_185001-194912.nc"  # 14451 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/CFsubhr/prc/gn/v20190125/prc_CFsubhr_CNRM-CM6-1_historical_r3i1p1f2_gn_18500101003000-20150101000000.nc"  # 17588 CMIP
-        "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/Emon/parasolRefl/gr/v20190125/parasolRefl_Emon_CNRM-CM6-1_historical_r3i1p1f2_gr_185001-200912.nc"  # 18897 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/Emon/parasolRefl/gr/v20190125/parasolRefl_Emon_CNRM-CM6-1_historical_r3i1p1f2_gr_185001-200912.nc"  # 18897 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/E3hrPt/clmisr/gr/v20181203/clmisr_E3hrPt_CNRM-CM6-1_amip_r1i1p1f2_gr_200801010300-200901010000.nc"  # 45899 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/E3hrPt/jpdftaureicemodis/gr/v20181203/jpdftaureicemodis_E3hrPt_CNRM-CM6-1_amip_r1i1p1f2_gr_200801010300-200901010000.nc"  # 46048 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/SImon/siitdconc/gn/v20190611/siitdconc_SImon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-200012.nc"  # 78614 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/Amon/o3/gn/v20190613/o3_Amon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-185012-clim.nc"  # 78745 CMIP
+        "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
     ):
         pdb.set_trace()
     # debug close
@@ -602,7 +631,7 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = 18896  # -1  # 25635 (complete archive)
+    indStart = 79751  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:
@@ -643,8 +672,6 @@ for cnt, filePath in enumerate(x):
 
     # %% iteratively write out results to local file
     if not cnt % 1000:
-        if os.path.exists("*CMIP6-metaData.json"):
-            os.remove("*CMIP6-metaData.json")
         # get time
         timeNow = datetime.datetime.now()
         timeFormat = timeNow.strftime("%Y-%m-%d")
@@ -658,9 +685,9 @@ for cnt, filePath in enumerate(x):
         # Write output
         print("")
         outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
-        print(
-            "writing:",
-        )
+        if os.path.exists(outFile):
+            os.remove(outFile)
+        print("writing:")
         print("")
         fH = open(outFile, "w")
         json.dump(

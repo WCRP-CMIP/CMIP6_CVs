@@ -22,6 +22,7 @@ PJD 15 Feb 2022     - Update to run for CMIP6/CMIP (complete archive later)
 PJD 16 Feb 2022     - Updated getGlobalAtts to deal with cdms2.open error - see https://github.com/CDAT/cdms/issues/442
 PJD 16 Feb 2022     - Updated compareDicts so that "original" key is updated to $table_id_$variable_id
 PJD 16 Feb 2022     - Updated getAxes to remove get* calls in second tier
+PJD 17 Feb 2022     - Turned off alertError reporting
                      TODO: pull out calendar attribute (attached to time coordinate)
                      TODO: switch getAxes to using variable_id key
                      TODO: update compareDicts to truncate duplicate values, adding a counter for times returned
@@ -171,7 +172,7 @@ def compareDicts(dict1, dict2, count, filePath):
                 dict1[key] = tmp1
                 # pdb.set_trace()
             update = True
-            alertError(count, filePath, key2)
+            # alertError(count, filePath, key2)
         else:
             update = False
 
@@ -632,6 +633,7 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_18500901-18591231.nc",  # 14824 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_185009-185912.nc",  # 14916 CMIP + more try/except added
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn.nc",  # 14917 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/CFday/clivi/gn/v20191207/clivi_CFday_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_19200101-19241230.nc",  # 513159 CMIP
 )
 
 # %% loop over files and build index
@@ -644,7 +646,7 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = 405161  # -1  # 25635 (complete archive)
+    indStart = 513158  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:

@@ -5160,6 +5160,55 @@
             "release_year":"2021",
             "source_id":"IPSL-CM6A-ATM-ICO-VHR"
         },
+        "IPSL-CM6A-ATM-LR-REPROBUS":{
+            "activity_participation":[
+                "AerChemMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "IPSL"
+            ],
+            "label":"IPSL-CM6A-ATM-LR-REPROBUS",
+            "label_extended":"IPSL-CM6A-ATM-LR-REPROBUS",
+            "model_component":{
+                "aerosol":{
+                    "description":"LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmos":{
+                    "description":"LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"REPROBUS v6 (same grid as atmos)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "land":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                }
+            },
+            "release_year":"2021",
+            "source_id":"IPSL-CM6A-ATM-LR-REPROBUS"
+        },
         "IPSL-CM6A-LR":{
             "activity_participation":[
                 "C4MIP",
@@ -5373,104 +5422,6 @@
             },
             "release_year":"2021",
             "source_id":"IPSL-CM6A-MR1"
-        },
-        "IPSL-CM7A-ATM-HR":{
-            "activity_participation":[
-                "HighResMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "IPSL"
-            ],
-            "label":"IPSL-CM7A-ATM-HR",
-            "label_extended":"IPSL-CM7A-ATM-HR",
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"DYNAMICO-LMDZ (NPv6; 256000-point icosahedral-hexagonal; 79 levels; top level 80000 m)",
-                    "native_nominal_resolution":"50 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"ORCHIDEE (v2.2, Water/Carbon/Energy mode)",
-                    "native_nominal_resolution":"50 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"IPSL-CM7A-ATM-HR"
-        },
-        "IPSL-CM7A-ATM-LR":{
-            "activity_participation":[
-                "HighResMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "IPSL"
-            ],
-            "label":"IPSL-CM7A-ATM-LR",
-            "label_extended":"IPSL-CM7A-ATM-LR",
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"DYNAMICO-LMDZ (NPv6; 16000-point icosahedral-hexagonal; 79 levels; top level 80000 m)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"ORCHIDEE (v2.2, Water/Carbon/Energy mode)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"IPSL-CM7A-ATM-LR"
         },
         "KACE-1-0-G":{
             "activity_participation":[
@@ -7662,13 +7613,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jan 31 17:40:32 2022 -0800",
-        "CV_collection_version":"6.2.56.8",
+        "CV_collection_modified":"Fri Feb 18 10:30:58 2022 -0800",
+        "CV_collection_version":"6.2.56.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d7f05719bd9199b2a1fe05f83aaeb39442895f5d",
-        "source_id_CV_modified":"Wed Jan 19 16:48:00 2022 00000",
-        "source_id_CV_note":"Revise source_id E3SM-1-0",
+        "previous_commit":"a3022f831c469732c58bc9eed35b9f7edb92c85d",
+        "source_id_CV_modified":"Mon Jan 31 17:40:32 2022 -0800",
+        "source_id_CV_note":"Update IPSL source_ids; remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

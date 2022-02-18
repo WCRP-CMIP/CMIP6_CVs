@@ -539,6 +539,8 @@ PJD 10 Nov 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP
 PJD  7 Dec 2021    - Register source_id TaiESM1-TIMCOM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1040
 MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
 PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
+MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
+PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -1795,7 +1797,7 @@ del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_lab
 
 #%% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
 #json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split(''.join(['python ./json_to_html.py ',versionId]))
+args = shlex.split(''.join(['python ./jsonToHtml.py ',versionId]))
 #print(args)
 p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
 stdOut,stdErr = p.communicate()

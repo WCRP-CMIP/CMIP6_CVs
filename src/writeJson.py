@@ -2,6 +2,19 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
+    getFileHistory, versionHistoryUpdate
+from durolib import readJsonCreateDict
+import time
+import sys
+import subprocess
+import shlex
+import platform
+import os
+import json
+import gc
+import datetime
+import calendar
 
 """
 Created on Mon Jul 11 14:12:21 2016
@@ -541,42 +554,32 @@ MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https
 PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
 PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
+PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
+PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+                     - TODO: will need to incorporate new "rights" entry in versionHistory.json and versionHistoryUpdate function
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
-#%% Import statements
-import calendar
-import datetime
-import gc
-import json
-import os
-import platform
-import shlex
-import subprocess
-import sys
-import time
+# %% additional import statements
 try:
-    from urllib2 import urlopen # py2
+    from urllib2 import urlopen  # py2
 except ImportError:
-    from urllib.request import urlopen # py3
-sys.path.insert(0,'~/sync/git/durolib/durolib')  # trustym
-from durolib import readJsonCreateDict
-from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
-                     getFileHistory, versionHistoryUpdate
+    from urllib.request import urlopen  # py3
+sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #import pyexcel_xlsx as pyx
 #from string import replace
 #from unidecode import unidecode
 
-#%% Set commit message and author info
-commitMessage = '\"Revise source_id E3SM-1-0\"'
+# %% Set commit message and author info
+commitMessage = '\"Update IPSL source_ids; remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
 author_institution_id = 'PCMDI'
 
-#%% List target controlled vocabularies (CVs)
+# %% List target controlled vocabularies (CVs)
 masterTargets = [
     'activity_id',
     'experiment_id',
@@ -588,13 +591,14 @@ masterTargets = [
     'nominal_resolution',
     'realm',
     'required_global_attributes',
+    'rights',
     'source_id',
     'source_type',
     'sub_experiment_id',
     'table_id'
 ]
 
-#%% Activities
+# %% Activities
 activity_id = {
     'AerChemMIP': 'Aerosols and Chemistry Model Intercomparison Project',
     'C4MIP': 'Coupled Climate Carbon Cycle Model Intercomparison Project',
@@ -622,13 +626,14 @@ activity_id = {
     'VolMIP': 'Volcanic Forcings Model Intercomparison Project'
 }
 
-#%% Experiments
-tmp = [['experiment_id', \
+# %% Experiments
+tmp = [['experiment_id',
         'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json']
-      ]
+       ]
 experiment_id = readJsonCreateDict(tmp)
 experiment_id = experiment_id.get('experiment_id')
-experiment_id = experiment_id.get('experiment_id')  # Fudge to extract duplicate level
+# Fudge to extract duplicate level
+experiment_id = experiment_id.get('experiment_id')
 del(tmp)
 
 # Fix issues
@@ -716,7 +721,7 @@ for inFile in inFiles:
                 experiment_id[key][entry] = list([value])
     del(inFile,data,headers,count,row,key,entry,value) ; gc.collect()
 '''
-#==============================================================================
+# ==============================================================================
 # Example new experiment_id entry
 #key = 'ssp119'
 #experiment_id[key] = {}
@@ -736,9 +741,9 @@ for inFile in inFiles:
 # Rename
 #experiment_id['land-noShiftCultivate'] = experiment_id.pop('land-noShiftcultivate')
 # Remove
-#experiment_id.pop('land-noShiftcultivate')
+# experiment_id.pop('land-noShiftcultivate')
 
-#%% Frequencies
+# %% Frequencies
 frequency = {
     '1hr': 'sampled hourly',
     '1hrCM': 'monthly-mean diurnal cycle resolving each day into 1-hour means',
@@ -758,7 +763,7 @@ frequency = {
     'yrPt': 'sampled yearly, at specified time point within the time period'
 }
 
-#%% Grid labels
+# %% Grid labels
 grid_label = {
     'gm': 'global mean data',
     'gn': 'data reported on a model\'s native grid',
@@ -807,7 +812,7 @@ grid_label = {
     'grz': 'regridded zonal mean data reported on the data provider\'s preferred latitude target grid'
 }
 
-#%% Institutions
+# %% Institutions
 institution_id = {
     'AER': 'Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA',
     'AS-RCEC': 'Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan',
@@ -902,7 +907,7 @@ institution_id = {
     'PCMDI': 'Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA',
     'PNNL-WACCEM': 'PNNL (Pacific Northwest National Laboratory), Richland, WA 99352, USA',
     'RTE-RRTMGP-Consortium': ''.join(['AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, ',
-                              'Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA']),
+                                      'Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA']),
     'RUBISCO': ''.join(['ORNL (Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA); ANL (Argonne National Laboratory, Argonne, IL 60439, USA); ',
                         'BNL (Brookhaven National Laboratory, Upton, NY 11973, USA); LANL (Los Alamos National Laboratory, Los Alamos, NM 87545); ',
                         'LBNL (Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA); NAU (Northern Arizona University, Flagstaff, AZ 86011, USA); ',
@@ -918,7 +923,7 @@ institution_id = {
     'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
 }
 
-#%% CMIP6 License
+# %% CMIP6 License
 license = [
     ''.join(['CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons ',
              'Attribution-[NonCommercial-]ShareAlike 4.0 International License ',
@@ -933,10 +938,30 @@ license = [
              'to the fullest extent permitted by law.'])
 ]
 
-#%% MIP eras
+# %% CMIP6 rights
+rights = {}
+rights["CC0 1.0"] = {}
+rights["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+rights["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+rights["CC BY 3.0"] = {}
+rights["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
+rights["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
+rights["CC BY 4.0"] = {}
+rights["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
+rights["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
+rights["CC BY-SA 4.0"] = {}
+rights["CC BY-SA 4.0"]["id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+rights["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+rights["CC BY-NC-SA 4.0"] = {}
+rights["CC BY-NC-SA 4.0"]["id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+rights["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+print('"rights" no incorporated into versionHistory.json or versionHistoryUpdate function, exiting')
+os.exit()
+
+# %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']
 
-#%% Nominal resolutions
+# %% Nominal resolutions
 nominal_resolution = [
     '0.5 km',
     '1 km',
@@ -955,7 +980,7 @@ nominal_resolution = [
     '5000 km'
 ]
 
-#%% Realms
+# %% Realms
 realm = {
     'aerosol': 'Aerosol',
     'atmos': 'Atmosphere',
@@ -967,7 +992,7 @@ realm = {
     'seaIce': 'Sea Ice'
 }
 
-#%% Required global attributes
+# %% Required global attributes
 required_global_attributes = [
     'Conventions',
     'activity_id',
@@ -1001,64 +1026,64 @@ required_global_attributes = [
     'variant_label'
 ]
 
-#%% Source identifiers
-tmp = [['source_id','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_source_id.json']
-      ] ;
+# %% Source identifiers
+tmp = [['source_id', 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_source_id.json']
+       ]
 source_id = readJsonCreateDict(tmp)
 source_id = source_id.get('source_id')
 source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
-key = 'E3SM-1-0'
-source_id[key]['institution_id'] = [
-'E3SM-Project',
-'LLNL',
-'UCI'
-]
-
-# key = 'IPSL-CM6A-ATM-ICO-'
-# source_id[key] = {}
-# source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'OMIP'
-# ]
-# source_id[key]['cohort'] = [
-# 'Registered'
-# ]
-# source_id[key]['institution_id'] = [
-# 'NTU'
-# ]
-# source_id[key]['label'] = 'TaiESM1-TIMCOM2'
-# source_id[key]['label_extended'] = 'Taiwan Earth System Model 1.0 using TIMCOM ocean model 2.0'
-# source_id[key]['model_component'] = {}
-# source_id[key]['model_component']['aerosol'] = {}
-# source_id[key]['model_component']['aerosol']['description'] = 'SNAP (same grid as atmos)'
-# source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['atmos'] = {}
-# source_id[key]['model_component']['atmos']['description'] = 'TaiAM1 (0.9x1.25 degree; 288 x 192 longitude/latitude; 30 levels; top level ~2 hPa)'
-# source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['atmosChem'] = {}
-# source_id[key]['model_component']['atmosChem']['description'] = 'SNAP (same grid as atmos)'
-# source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['land'] = {}
-# source_id[key]['model_component']['land']['description'] = 'CLM4.0 (same grid as atmos)'
-# source_id[key]['model_component']['land']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['landIce'] = {}
-# source_id[key]['model_component']['landIce']['description'] = 'none'
-# source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['ocean'] = {}
-# source_id[key]['model_component']['ocean']['description'] = 'TIMCOM (TIMCOMv2.2, primarily 1deg; 320 x 288 longitude/latitude; 55 levels; top grid cell 0-10 m)'
-# source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['ocnBgchem'] = {}
-# source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-# source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['seaIce'] = {}
-# source_id[key]['model_component']['seaIce']['description'] = 'CICE4 (same grid as ocean)'
-# source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '100 km'
-# source_id[key]['release_year'] = '2021'
-# source_id[key]['source_id'] = key
-#
 # Fix issues
+keys = ["IPSL-CM7A-ATM-HR", "IPSL-CM7A-ATM-LR"]
+for key in keys:
+    source_id.pop(key)
+
+key = 'IPSL-CM6A-ATM-LR-REPROBUS'
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+    'AerChemMIP'
+]
+source_id[key]['cohort'] = [
+    'Registered'
+]
+source_id[key]['institution_id'] = [
+    'IPSL'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = key
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol'][
+    'description'] = 'LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos'][
+    'description'] = 'LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem'][
+    'description'] = 'REPROBUS v6 (same grid as atmos)'
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = 'none'
+source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = 'none'
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = 'none'
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = 'none'
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
+source_id[key]['release_year'] = '2021'
+source_id[key]['source_id'] = key
+
+# Example
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}
 # source_id[key]['activity_participation'] = [
@@ -1102,52 +1127,10 @@ source_id[key]['institution_id'] = [
 # source_id[key]['release_year'] = '2021'
 # source_id[key]['source_id'] = key
 
-#============================================
-#key = 'AWI-ESM-1-1-LR'
-#source_id[key] = {}
-#source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'PMIP'
-#]
-#source_id[key]['cohort'] = [
-# 'Registered'
-#]
-#source_id[key]['institution_id'] = [
-# 'AWI'
-#]
-#source_id[key]['label'] = 'AWI-ESM 1.1 LR'
-#source_id[key]['label_extended'] = 'AWI-ESM 1.1 LR'
-#source_id[key]['model_component'] = {}
-#source_id[key]['model_component']['aerosol'] = {}
-#source_id[key]['model_component']['aerosol']['description'] = 'none'
-#source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['atmos'] = {}
-#source_id[key]['model_component']['atmos']['description'] = 'ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)'
-#source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-#source_id[key]['model_component']['atmosChem'] = {}
-#source_id[key]['model_component']['atmosChem']['description'] = 'none'
-#source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['land'] = {}
-#source_id[key]['model_component']['land']['description'] = 'JSBACH 3.20 with dynamic vegetation'
-#source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-#source_id[key]['model_component']['landIce'] = {}
-#source_id[key]['model_component']['landIce']['description'] = 'none'
-#source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['ocean'] = {}
-#source_id[key]['model_component']['ocean']['description'] = 'FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)'
-#source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '50 km'
-#source_id[key]['model_component']['ocnBgchem'] = {}
-#source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-#source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-#source_id[key]['model_component']['seaIce'] = {}
-#source_id[key]['model_component']['seaIce']['description'] = 'FESOM 1.4'
-#source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '50 km'
-#source_id[key]['release_year'] = '2018'
-#source_id[key]['source_id'] = key
 # Rename
 #source_id[key2] = source_id.pop(key1)
 # Remove
-#source_id.pop(key1)
+# source_id.pop(key1)
 
 '''
 Apply a check on the length of source ids. Raise a RuntimeError if any are found.
@@ -1156,7 +1139,8 @@ MAX_SOURCE_ID_LENGTH = 25
 MAX_SOURCE_ID_MSG_TEMPLATE = 'Source id "{}" is {} characters long which is above the limit of {}'
 # Check all source ids for length
 long_source_ids = [i for i in source_id if len(i) > MAX_SOURCE_ID_LENGTH]
-errors = [MAX_SOURCE_ID_MSG_TEMPLATE.format(i, len(i), MAX_SOURCE_ID_LENGTH) for i in long_source_ids]
+errors = [MAX_SOURCE_ID_MSG_TEMPLATE.format(
+    i, len(i), MAX_SOURCE_ID_LENGTH) for i in long_source_ids]
 # Raise exception if any found
 if errors:
     raise RuntimeError('. '.join(errors))
@@ -1164,11 +1148,11 @@ if errors:
 del(long_source_ids, errors)
 
 '''
-Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
-Information above can be found in AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114
+CMIP5 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
+Format defined following AR5 Table 9.A.1 http://www.climatechange2013.org/images/report/WG1AR5_Chapter09_FINAL.pdf#page=114
 '''
 
-#%% Source types
+# %% Source types
 source_type = {
     'AER': 'aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)',
     'AGCM': 'atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface',
@@ -1182,17 +1166,18 @@ source_type = {
     'SLAB': 'slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system'
 }
 
-#%% Sub experiment ids
+# %% Sub experiment ids
 sub_experiment_id = {}
 sub_experiment_id['none'] = 'none'
 sub_experiment_id['s1910'] = 'initialized near end of year 1910'
 sub_experiment_id['s1920'] = 'initialized near end of year 1920'
 sub_experiment_id['s1950'] = 'initialized near end of year 1950'
-for yr in range(1960,2030):
-    sub_experiment_id[''.join(['s',str(yr)])] = ' '.join(['initialized near end of year',str(yr)])
+for yr in range(1960, 2030):
+    sub_experiment_id[''.join(['s', str(yr)])] = ' '.join(
+        ['initialized near end of year', str(yr)])
 del(yr)
 
-#%% Table ids
+# %% Table ids
 table_id = [
     '3hr',
     '6hrLev',
@@ -1239,24 +1224,24 @@ table_id = [
     'fx'
 ]
 
-#%% Prepare experiment_id and source_id for comparison
-for jsonName in ['experiment_id','source_id']:
-    if jsonName in ['experiment_id','source_id']:
+# %% Prepare experiment_id and source_id for comparison
+for jsonName in ['experiment_id', 'source_id']:
+    if jsonName in ['experiment_id', 'source_id']:
         dictToClean = eval(jsonName)
-        #for key, value in dictToClean.iteritems(): # Py2
-        for key, value in iter(dictToClean.items()): # Py3
-            #for values in value.iteritems(): # values is a tuple # Py2
-            for values in iter(value.items()): # values is a tuple # Py3
+        # for key, value in dictToClean.iteritems(): # Py2
+        for key, value in iter(dictToClean.items()):  # Py3
+            # for values in value.iteritems(): # values is a tuple # Py2
+            for values in iter(value.items()):  # values is a tuple # Py3
                 # test for dictionary
                 if type(values[1]) is list:
                     new = []
-                    for count in range(0,len(values[1])):
+                    for count in range(0, len(values[1])):
                         string = values[1][count]
-                        string = cleanString(string) ; # Clean string
+                        string = cleanString(string)  # Clean string
                         new += [string]
-                    #print 'new',new
-                    #new.sort() ; # Sort all lists - not experiment_id model components
-                    #print 'sort',new
+                    # print 'new',new
+                    # new.sort() ; # Sort all lists - not experiment_id model components
+                    # print 'sort',new
                     dictToClean[key][values[0]] = new
                 elif type(values[1]) is dict:
                     # determine dict depth
@@ -1267,75 +1252,80 @@ for jsonName in ['experiment_id','source_id']:
                         keys2 = values[1][d1Key].keys()
                         for d2Key in keys2:
                             string = dictToClean[key][keyInd][d1Key][d2Key]
-                            string = cleanString(string) ; # Clean string
+                            string = cleanString(string)  # Clean string
                             dictToClean[key][keyInd][d1Key][d2Key] = string
-                #elif type(values[0]) in [str,unicode]: # Py2
-                elif type(values[0]) == str: # Py3
+                # elif type(values[0]) in [str,unicode]: # Py2
+                elif type(values[0]) == str:  # Py3
                     string = dictToClean[key][values[0]]
-                    string = cleanString(string) ; # Clean string
+                    string = cleanString(string)  # Clean string
                     dictToClean[key][values[0]] = string
         vars()[jsonName] = dictToClean
-del(jsonName,dictToClean,key,value,values,new,count,string,pdepth,keyInd,keys1,
-    d1Key,keys2,d2Key)
+del(jsonName, dictToClean, key, value, values, new, count, string, pdepth, keyInd, keys1,
+    d1Key, keys2, d2Key)
 
-#%% Validate source_id and experiment_id entries
+# %% Validate source_id and experiment_id entries
 RFMIPOnlyList = [
-        '4AOP-v1-5',
-        'ARTS-2-3',
-        'GFDL-GLOBAL-LBL',
-        'GFDL-GRTCODE',
-        'GFDL-RFM-DISORT',
-        'LBLRTM-12-8',
-        'RRTMG-LW-4-91',
-        'RRTMG-SW-4-02',
-        'RTE-RRTMGP-181204'
-        ]
+    '4AOP-v1-5',
+    'ARTS-2-3',
+    'GFDL-GLOBAL-LBL',
+    'GFDL-GRTCODE',
+    'GFDL-RFM-DISORT',
+    'LBLRTM-12-8',
+    'RRTMG-LW-4-91',
+    'RRTMG-SW-4-02',
+    'RTE-RRTMGP-181204'
+]
 
 # source_id
 for key in source_id.keys():
     # Validate source_id format
     if not entryCheck(key):
-        print('Invalid source_id format for entry:',key,'- aborting')
+        print('Invalid source_id format for entry:', key, '- aborting')
         sys.exit()
     if len(key) > 16:
         if key == 'CESM1-1-CAM5-CMIP5':
-            print(key,'skipped checks - continue')
+            print(key, 'skipped checks - continue')
             break
-        print('Invalid source_id format for entry (too many chars):',key,'- aborting')
+        print('Invalid source_id format for entry (too many chars):',
+              key, '- aborting')
         sys.exit()
     # Validate activity_participation/activity_id
     val = source_id[key]['activity_participation']
-    #print key,val
+    # print key,val
     if 'CMIP' not in val:
         if key in RFMIPOnlyList:
-            print(key,'RFMIP only - continue')
-        elif 'AerChemMIP' in val: # Case AerChemMIP only - IPSL-CM6A-LR-INCA, IPSL-CM5A2-INCA
-            print(key,'AerChemMIP no CMIP required - continue')
-        elif 'FAFMIP' in val: # Case FAFMIP only - GFDL-ESM2M
-            print(key,'OMIP no CMIP required - continue')
-        elif 'HighResMIP' in val: # Case HighResMIP only
-            print(key,'HighResMIP no CMIP required - continue')
-        elif 'ISMIP6' in val: # Case ISMIP6 only
-            print(key,'ISMIP6 no CMIP required - continue')
-        elif 'OMIP' in val: # Case OMIP only
-            print(key,'OMIP no CMIP required - continue')
-        elif 'PAMIP' in val: # Case PAMIP only - CESM1-WACCM-sc
-            print(key,'PAMIP no CMIP required - continue')
+            print(key, 'RFMIP only - continue')
+        elif 'AerChemMIP' in val:  # Case AerChemMIP only - IPSL-CM6A-LR-INCA, IPSL-CM5A2-INCA
+            print(key, 'AerChemMIP no CMIP required - continue')
+        elif 'FAFMIP' in val:  # Case FAFMIP only - GFDL-ESM2M
+            print(key, 'OMIP no CMIP required - continue')
+        elif 'HighResMIP' in val:  # Case HighResMIP only
+            print(key, 'HighResMIP no CMIP required - continue')
+        elif 'ISMIP6' in val:  # Case ISMIP6 only
+            print(key, 'ISMIP6 no CMIP required - continue')
+        elif 'OMIP' in val:  # Case OMIP only
+            print(key, 'OMIP no CMIP required - continue')
+        elif 'PAMIP' in val:  # Case PAMIP only - CESM1-WACCM-sc
+            print(key, 'PAMIP no CMIP required - continue')
         else:
-            print('Invalid activity_participation for entry:',key,'no CMIP listed - aborting')
+            print('Invalid activity_participation for entry:',
+                  key, 'no CMIP listed - aborting')
             sys.exit()
     for act in val:
         if act not in activity_id:
-            print('Invalid activity_participation for entry:',key,':',act,'- aborting')
+            print('Invalid activity_participation for entry:',
+                  key, ':', act, '- aborting')
             sys.exit()
     # Validate institution_id
     vals = source_id[key]['institution_id']
     for val in vals:
         if val not in institution_id:
-            print('Invalid institution_id for entry:',key,';',val,'- aborting')
+            print('Invalid institution_id for entry:',
+                  key, ';', val, '- aborting')
             sys.exit()
         if len(val) > 21:
-            print('Invalid institution_id format for entry (too many chars):',key,'- aborting')
+            print(
+                'Invalid institution_id format for entry (too many chars):', key, '- aborting')
             sys.exit()
     # Validate nominal resolution
     vals = source_id[key]['model_component'].keys()
@@ -1344,30 +1334,33 @@ for key in source_id.keys():
         if val2 == 'none':
             pass
         elif val2 not in nominal_resolution:
-            print('Invalid native_nominal_resolution for entry:',key,val1,val2,'- aborting')
+            print('Invalid native_nominal_resolution for entry:',
+                  key, val1, val2, '- aborting')
             sys.exit()
     # Validate source_id
     val = source_id[key]['source_id']
     if key != val:
-            print('Invalid source_id for entry:',val,'not equal',key,'- aborting')
-            sys.exit()
+        print('Invalid source_id for entry:',
+              val, 'not equal', key, '- aborting')
+        sys.exit()
 # experiment_ids
 experiment_id_keys = experiment_id.keys()
 for key in experiment_id_keys:
     # Validate source_id format
     if not entryCheck(key):
-        print('Invalid experiment_id format for entry:',key,'- aborting')
+        print('Invalid experiment_id format for entry:', key, '- aborting')
         sys.exit()
     # Validate internal key
     val = experiment_id[key]['experiment_id']
     if not val == key:
-        print('Invalid experiment_id for entry:',key,'- aborting')
+        print('Invalid experiment_id for entry:', key, '- aborting')
         sys.exit()
     # Validate activity_id
     val = experiment_id[key]['activity_id']
     for act in val:
         if act not in activity_id:
-            print('Invalid activity_participation for entry:',key,act,'- aborting')
+            print('Invalid activity_participation for entry:',
+                  key, act, '- aborting')
             sys.exit()
     # Validate additional_allowed_model_components
     vals = experiment_id[key]['additional_allowed_model_components']
@@ -1375,13 +1368,15 @@ for key in experiment_id_keys:
         if val == '':
             pass
         elif val not in source_type:
-            print('Invalid additional_allowed_model_components for entry:',key,val,'- aborting')
+            print('Invalid additional_allowed_model_components for entry:',
+                  key, val, '- aborting')
             sys.exit()
     # Validate required_model_components
     vals = experiment_id[key]['required_model_components']
     for val in vals:
         if val not in source_type:
-            print('Invalid required_model_components for entry:',key,val,'- aborting')
+            print('Invalid required_model_components for entry:',
+                  key, val, '- aborting')
             sys.exit()
     # Validate parent_activity_id
     vals = experiment_id[key]['parent_activity_id']
@@ -1389,7 +1384,7 @@ for key in experiment_id_keys:
         if val == 'no parent':
             pass
         elif val not in activity_id:
-            print('Invalid parent_activity_id for entry:',key,val,'- aborting')
+            print('Invalid parent_activity_id for entry:', key, val, '- aborting')
             sys.exit()
     # Validate parent_experiment_id
     vals = experiment_id[key]['parent_experiment_id']
@@ -1397,7 +1392,7 @@ for key in experiment_id_keys:
         if val == 'no parent':
             pass
         elif val not in experiment_id_keys:
-            print('Invalid experiment_id_keys for entry:',key,val,'- aborting')
+            print('Invalid experiment_id_keys for entry:', key, val, '- aborting')
             sys.exit()
 
 '''
@@ -1525,77 +1520,82 @@ print('***FINISH***')
 sys.exit() ; # Turn back on to catch errors prior to running commit
 '''
 
-#%% Load remote repo versions for comparison - generate version identifier
+# %% Load remote repo versions for comparison - generate version identifier
 for jsonName in masterTargets:
-    target = ''.join(['test',jsonName])
-    testVal = ''.join(['testVal_',jsonName])
+    target = ''.join(['test', jsonName])
+    testVal = ''.join(['testVal_', jsonName])
     if jsonName == 'mip_era':
-        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/',jsonName,'.json'])
+        url = ''.join(
+            ['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/', jsonName, '.json'])
     else:
-        url = ''.join(['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_',jsonName,'.json'])
+        url = ''.join(
+            ['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_', jsonName, '.json'])
     # Create input list and load from web
-    tmp = [[jsonName,url]] ;
+    tmp = [[jsonName, url]]
     vars()[target] = readJsonCreateDict(tmp)
     vars()[target] = eval(target).get(jsonName)
-    vars()[target] = eval(target).get(jsonName) ; # Fudge to extract duplicate level
+    # Fudge to extract duplicate level
+    vars()[target] = eval(target).get(jsonName)
     # Test for updates
-    #print(eval(target))
-    #print(eval(jsonName))
-    #print('---')
-    #print('---')
-    #print(platform.python_version())
-    #print(platform.python_version().split('.')[0])
+    # print(eval(target))
+    # print(eval(jsonName))
+    # print('---')
+    # print('---')
+    # print(platform.python_version())
+    # print(platform.python_version().split('.')[0])
     if platform.python_version().split('.')[0] == '2':
         #print('enter py2')
-        #print(cmp(eval(target),eval(jsonName)))
-        vars()[testVal] = cmp(eval(target),eval(jsonName)) # Py2
-        #print(platform.python_version())
+        # print(cmp(eval(target),eval(jsonName)))
+        vars()[testVal] = cmp(eval(target), eval(jsonName))  # Py2
+        # print(platform.python_version())
     elif platform.python_version().split('.')[0] == '3':
         #print('enter py3')
-        vars()[testVal] = not(eval(target) == eval(jsonName)) # Py3
-        #print(platform.python_version())
+        vars()[testVal] = not(eval(target) == eval(jsonName))  # Py3
+        # print(platform.python_version())
     #print(not(eval(target) == eval(jsonName)))
-    #print('---')
-    del(vars()[target],target,testVal,url,tmp)
+    # print('---')
+    del(vars()[target], target, testVal, url, tmp)
 del(jsonName)
 # Use binary test output to generate
-versionId = ascertainVersion(testVal_activity_id,testVal_experiment_id,
-                             testVal_frequency,testVal_grid_label,
-                             testVal_institution_id,testVal_license,
-                             testVal_mip_era,testVal_nominal_resolution,
-                             testVal_realm,testVal_required_global_attributes,
-                             testVal_source_id,testVal_source_type,
-                             testVal_sub_experiment_id,testVal_table_id,
+versionId = ascertainVersion(testVal_activity_id, testVal_experiment_id,
+                             testVal_frequency, testVal_grid_label,
+                             testVal_institution_id, testVal_license,
+                             testVal_mip_era, testVal_nominal_resolution,
+                             testVal_realm, testVal_required_global_attributes,
+                             testVal_source_id, testVal_source_type,
+                             testVal_sub_experiment_id, testVal_table_id,
                              commitMessage)
 versionHistory = versionId[0]
 versionId = versionId[1]
-print('Version:',versionId)
-#sys.exit() ; # Use to evaluate changes
+print('Version:', versionId)
+# sys.exit() ; # Use to evaluate changes
 
-#%% Validate UTF-8 encoding - catch omip2 error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
+# %% Validate UTF-8 encoding - catch omip2 error https://github.com/WCRP-CMIP/CMIP6_CVs/issues/726
 for jsonName in masterTargets:
     testDict = eval(jsonName)
-    #print(jsonName,type(testDict))
+    # print(jsonName,type(testDict))
     try:
         if platform.python_version().split('.')[0] == '2':
             if type(testDict) is list:
                 #print('enter list')
                 ''.join(testDict).decode('utf-8')
             else:
-                for key1,val1 in testDict.items():
+                for key1, val1 in testDict.items():
                     #print('type key1:',type(key1))
                     key1.decode('utf-8')
                     if type(val1) is dict:
-                        for key2,val2 in val1.items():
+                        for key2, val2 in val1.items():
                             key2.decode('utf-8')
                             if type(val2) is list:
-                                ''.join(val2).decode('utf-8') # Deal with list types
+                                # Deal with list types
+                                ''.join(val2).decode('utf-8')
                             elif type(val2) is dict:
-                                for key3,val3 in val2.items():
+                                for key3, val3 in val2.items():
                                     if type(val3) is list:
-                                        ''.join(val3).decode('utf-8') # Deal with list types
+                                        # Deal with list types
+                                        ''.join(val3).decode('utf-8')
                                     elif type(val3) is dict:
-                                        for key4,val4 in val3.items():
+                                        for key4, val4 in val3.items():
                                             val4.decode('utf-8')
                                     else:
                                         val3.decode('utf-8')
@@ -1608,20 +1608,22 @@ for jsonName in masterTargets:
                 #print('enter list')
                 ''.join(testDict).encode('utf-8')
             else:
-                for key1,val1 in testDict.items():
+                for key1, val1 in testDict.items():
                     #print('type key1:',type(key1))
                     key1.encode('utf-8')
                     if type(val1) is dict:
-                        for key2,val2 in val1.items():
+                        for key2, val2 in val1.items():
                             key2.encode('utf-8')
                             if type(val2) is list:
-                                ''.join(val2).encode('utf-8') # Deal with list types
+                                # Deal with list types
+                                ''.join(val2).encode('utf-8')
                             elif type(val2) is dict:
-                                for key3,val3 in val2.items():
+                                for key3, val3 in val2.items():
                                     if type(val3) is list:
-                                        ''.join(val3).encode('utf-8') # Deal with list types
+                                        # Deal with list types
+                                        ''.join(val3).encode('utf-8')
                                     elif type(val3) is dict:
-                                        for key4,val4 in val3.items():
+                                        for key4, val4 in val3.items():
                                             val4.encode('utf-8')
                                     else:
                                         val3.encode('utf-8')
@@ -1631,16 +1633,18 @@ for jsonName in masterTargets:
                         val1.encode('utf-8')
     except UnicodeEncodeError:
         # If left as UnicodeDecodeError - prints traceback
-        print('UTF-8 failure for:',jsonName, 'exiting')
+        print('UTF-8 failure for:', jsonName, 'exiting')
         sys.exit()
 
-#%% Write variables to files
+# %% Write variables to files
 timeNow = datetime.datetime.now().strftime('%c')
-offset = (calendar.timegm(time.localtime()) - calendar.timegm(time.gmtime()))/60/60 ; # Convert seconds to hrs
-#offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes # Py2
-offset = ''.join(['{:03d}'.format(int(offset)),'00']) # Pad with 00 minutes # Py3
-timeStamp = ''.join([timeNow,' ',offset])
-del(timeNow,offset)
+offset = (calendar.timegm(time.localtime()) -
+          calendar.timegm(time.gmtime()))/60/60  # Convert seconds to hrs
+# offset = ''.join(['{:03d}'.format(offset),'00']) # Pad with 00 minutes # Py2
+offset = ''.join(['{:03d}'.format(int(offset)), '00']
+                 )  # Pad with 00 minutes # Py3
+timeStamp = ''.join([timeNow, ' ', offset])
+del(timeNow, offset)
 
 for jsonName in masterTargets:
     # Write file
@@ -1651,15 +1655,17 @@ for jsonName in masterTargets:
     # Get repo version/metadata - from src/writeJson.py
 
     # Extract last recorded commit for src/writeJson.py
-    #print(os.path.realpath(__file__))
+    # print(os.path.realpath(__file__))
     versionInfo1 = getFileHistory(os.path.realpath(__file__))
     versionInfo = {}
     versionInfo['author'] = author
     versionInfo['institution_id'] = author_institution_id
     versionInfo['CV_collection_modified'] = timeStamp
     versionInfo['CV_collection_version'] = versionId
-    versionInfo['_'.join([jsonName,'CV_modified'])] = versionHistory[jsonName]['timeStamp']
-    versionInfo['_'.join([jsonName,'CV_note'])] = versionHistory[jsonName]['commitMessage']
+    versionInfo['_'.join([jsonName, 'CV_modified'])
+                ] = versionHistory[jsonName]['timeStamp']
+    versionInfo['_'.join([jsonName, 'CV_note'])
+                ] = versionHistory[jsonName]['commitMessage']
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
     versionInfo['specs_doc'] = 'v6.2.7 (10th September 2018; https://goo.gl/v1drZl)'
     del(versionInfo1)
@@ -1698,13 +1704,13 @@ for jsonName in masterTargets:
     fH.close()
 
 # Cleanup
-del(jsonName,jsonDict,outFile)
-del(activity_id,experiment_id,frequency,grid_label,institution_id,license,
-    masterTargets,mip_era,nominal_resolution,realm,required_global_attributes,
-    source_id,source_type,sub_experiment_id,table_id)
+del(jsonName, jsonDict, outFile)
+del(activity_id, experiment_id, frequency, grid_label, institution_id, license,
+    masterTargets, mip_era, nominal_resolution, realm, required_global_attributes,
+    source_id, source_type, sub_experiment_id, table_id)
 gc.collect()
 
-#%% Update version info from new file/commit history
+# %% Update version info from new file/commit history
 # Extract fresh recorded commit for src/writeJson.py
 versionInfo1 = getFileHistory(os.path.realpath(__file__))
 MD5 = versionInfo1.get('previous_commit')
@@ -1752,11 +1758,11 @@ if testVal_source_id:
     key = 'source_id'
     versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 # Test for changes and report
-test = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
-        testVal_grid_label,testVal_license,testVal_mip_era,
-        testVal_nominal_resolution,testVal_realm,
-        testVal_required_global_attributes,testVal_source_type,
-        testVal_sub_experiment_id,testVal_table_id,testVal_institution_id,
+test = [testVal_activity_id, testVal_experiment_id, testVal_frequency,
+        testVal_grid_label, testVal_license, testVal_mip_era,
+        testVal_nominal_resolution, testVal_realm,
+        testVal_required_global_attributes, testVal_source_type,
+        testVal_sub_experiment_id, testVal_table_id, testVal_institution_id,
         testVal_source_id]
 if any(test):
     # Create host dictionary
@@ -1790,60 +1796,63 @@ if any(test):
     fH.close()
     print('versionHistory.json updated')
 # Cleanup anyway
-del(testVal_activity_id,testVal_experiment_id,testVal_frequency,testVal_grid_label,
-    testVal_institution_id,testVal_license,testVal_mip_era,testVal_nominal_resolution,
-    testVal_realm,testVal_required_global_attributes,testVal_source_id,
-    testVal_source_type,testVal_sub_experiment_id,testVal_table_id)
+del(testVal_activity_id, testVal_experiment_id, testVal_frequency, testVal_grid_label,
+    testVal_institution_id, testVal_license, testVal_mip_era, testVal_nominal_resolution,
+    testVal_realm, testVal_required_global_attributes, testVal_source_id,
+    testVal_source_type, testVal_sub_experiment_id, testVal_table_id)
 
-#%% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
-#json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split(''.join(['python ./jsonToHtml.py ',versionId]))
-#print(args)
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
-stdOut,stdErr = p.communicate()
-print('Returncode:',p.returncode) ; # If not 0 there was an issue
-print('stdOut:',stdOut)
-print('stdErr:',stdErr)
-#if 'Traceback' in stdErr: # Py2
-if b'Traceback' in stdErr: # Py3
+# %% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
+# json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
+args = shlex.split(''.join(['python ./jsonToHtml.py ', versionId]))
+# print(args)
+p = subprocess.Popen(args, stdout=subprocess.PIPE,
+                     stderr=subprocess.PIPE, cwd='./')
+stdOut, stdErr = p.communicate()
+print('Returncode:', p.returncode)  # If not 0 there was an issue
+print('stdOut:', stdOut)
+print('stdErr:', stdErr)
+# if 'Traceback' in stdErr: # Py2
+if b'Traceback' in stdErr:  # Py3
     print('json_to_html failure:')
     print('Exiting..')
     sys.exit()
-del(args,p)
+del(args, p)
 gc.collect()
 
-#%% Now all file changes are complete, update README.md, commit and tag
+# %% Now all file changes are complete, update README.md, commit and tag
 # Load master history direct from repo
-tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
-  ]
+tmp = [['versionHistory', 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
+       ]
 versionHistory = readJsonCreateDict(tmp)
 versionHistory = versionHistory.get('versionHistory')
-versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+# Fudge to extract duplicate level
+versionHistory = versionHistory.get('versionHistory')
 del(tmp)
 # Test for version change and push tag
 versions = versionHistory['versions']
-versionOld = '.'.join([str(versions['versionMIPEra']),str(versions['versionCVStructure']),
-                       str(versions['versionCVContent']),str(versions['versionCVCommit'])])
+versionOld = '.'.join([str(versions['versionMIPEra']), str(versions['versionCVStructure']),
+                       str(versions['versionCVContent']), str(versions['versionCVCommit'])])
 del(versionHistory)
 
 if versionId != versionOld:
-    #%% Now update Readme.md
+    # %% Now update Readme.md
     target_url = 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md'
-    #txt = urllib.urlopen(target_url).read() # Py2
-    txt = urlopen(target_url).read().decode('utf-8') # Py3
-    txt = txt.replace(versionOld,versionId)
+    # txt = urllib.urlopen(target_url).read() # Py2
+    txt = urlopen(target_url).read().decode('utf-8')  # Py3
+    txt = txt.replace(versionOld, versionId)
     # Now delete existing file and write back to repo
     readmeH = '../README.md'
     os.remove(readmeH)
-    fH = open(readmeH,'w')
+    fH = open(readmeH, 'w')
     fH.write(txt)
     fH.close()
     print('README.md updated')
-    del(target_url,txt,readmeH,fH)
+    del(target_url, txt, readmeH, fH)
 
 # Commit all changes
-args = shlex.split(''.join(['git commit -am ',commitMessage]))
-p = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='./')
+args = shlex.split(''.join(['git commit -am ', commitMessage]))
+p = subprocess.Popen(args, stdout=subprocess.PIPE,
+                     stderr=subprocess.PIPE, cwd='./')
 
 '''
 # Merging branches changes the checksum, so the below doesn't work, UNLESS it's a direct master push

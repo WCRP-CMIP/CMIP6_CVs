@@ -26,6 +26,18 @@ PJD 16 Nov 2020    - Further updates to CMIP6_CVs content to meet strict html st
                     https://www.w3.org/International/questions/qa-html-encoding-declarations
                     https://validator.w3.org/check
 PJD 29 Sep 2021    - Add googleAnalyticsTag.js call
+PJD 17 Feb 2022    - Updated sources to latest 1.10.20 -> 1.11.4; 3.5.0 -> 3.6.0
+                   - Update jquery.dataTables-1.11.4.min.js line 163-164 update
+                   ,aLengthMenu:[10,
+                                 25,50,100], ->
+                   ,aLengthMenu:[5,10,25,50,100,150,
+                                 200,250,300,350,400],
+                   - macOS update files to remove
+                   extended attributes "$ xattr -c jquery-3.6.0.slim.min.js", "$ xattr -c jquery.dataTables-1.11*"
+                   file permissions "$ chmod 644 jquery.dataTables-1.11*"
+                   - Update dataTables styling
+                   <table id="table_id" class="display"> ->
+                   <table id="table_id" class="display compact" style="width:100%">
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -34,7 +46,7 @@ import json
 import re
 import sys
 
-#%% Create generic header
+# %% Create generic header
 header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -43,9 +55,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.10.20.min.css" />
-<script type="text/javascript" charset="utf-8" src="../src/jquery-3.5.0.slim.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.10.20.min.js"></script>
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.11.4.min.css" />
+<script type="text/javascript" charset="utf-8" src="../src/jquery-3.6.0.slim.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.11.4.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" charset="utf-8" src="../src/googleAnalyticsTag.js"></script>
 <script type="text/javascript">
@@ -57,62 +69,64 @@ $(document).ready( function () {
 </script>"""
 
 # 190425 Updates below fail
-#<script type="text/javascript">
-#//<![CDATA[
-#$(document).ready( function () {
+# <script type="text/javascript">
+# //<![CDATA[
+# $(document).ready( function () {
 #    $('#table_id').DataTable( {
 #      "pageLength": 50,
 #      "lengthMenu": [ [5,10,25,50,100,150,200,250,300,-1], [5,10,25,50,100,150,200,250,300,"All"] ]
 #    } );
-#//]]>
-#</script>"""
+# //]]>
+# </script>"""
 
-#%% Argparse extract
-verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+') ; # Matching version format 6.2.11.2
+# %% Argparse extract
+# Matching version format 6.2.11.2
+verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
 parser = argparse.ArgumentParser()
-parser.add_argument('ver',metavar='str',type=str,help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')
+parser.add_argument('ver', metavar='str', type=str,
+                    help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')
 args = parser.parse_args()
-if re.search(verTest,args.ver):
-   version = args.ver ; # 1 = make files
-   print('** HTML Write mode - ",version," will be written **')
+if re.search(verTest, args.ver):
+    version = args.ver  # 1 = make files
+    print('** HTML Write mode - ",version," will be written **')
 else:
     print('** Version: ",version," invalid, exiting')
     sys.exit()
 
-#%% Set global arguments
+# %% Set global arguments
 destDir = '../docs/'
 
-#%% Process experiment_id
+# %% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
 f = open(infile)
 dict = json.load(f)
-dict1 = dict.get('experiment_id') ; # Fudge to extract duplicate level
+dict1 = dict.get('experiment_id')  # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print(dict2)
-#print(dict.keys())
+# print(dict.keys())
 fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
 print('processing', fout)
-#fout = fout.split('/')[-1] ; # Write to local directory
+# fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
 # Old remote references
-#<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
-#<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
-#<script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
+# <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+# <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+# <script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
 fo.write(''.join([header, """\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">\n"""]))
+<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
+<table id="table_id" class="display compact" style="width:100%">\n"""]))
 
 dictOrder = [
-'experiment_id','activity_id','description','start_year','end_year','parent_experiment_id',
-'parent_activity_id','experiment','additional_allowed_model_components','required_model_components','tier',
-'min_number_yrs_per_sim','sub_experiment_id'
+    'experiment_id', 'activity_id', 'description', 'start_year', 'end_year', 'parent_experiment_id',
+    'parent_activity_id', 'experiment', 'additional_allowed_model_components', 'required_model_components', 'tier',
+    'min_number_yrs_per_sim', 'sub_experiment_id'
 ]
 dictOrderK = [
-'activity_id','experiment','tier','sub_experiment_id','parent_experiment_id',
-'required_model_components','additional_allowed_model_components','start_year','end_year',
-'min_number_yrs_per_sim','parent_activity_id','description'
+    'activity_id', 'experiment', 'tier', 'sub_experiment_id', 'parent_experiment_id',
+    'required_model_components', 'additional_allowed_model_components', 'start_year', 'end_year',
+    'min_number_yrs_per_sim', 'parent_activity_id', 'description'
 ]
 
 first_row = False
@@ -120,12 +134,12 @@ for exp in dict1.keys():
     exp_dict = dict1[exp]
     if not first_row:
         #ids = exp_dict.keys()
-        ids = dictOrderK ; # Overwrite ordering
+        ids = dictOrderK  # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>experiment_id</th>" % hf
             fo.write("<%s>\n<tr>\n<th>experiment_id</th>\n" % hf)
             for i in ids:
-                i = i.replace('_',' ') ; # Remove '_' from table titles
+                i = i.replace('_', ' ')  # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i
                 fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
@@ -135,7 +149,7 @@ for exp in dict1.keys():
     fo.write("<tr><td>%s</td>\n" % exp)
     for k in ids:
         st = exp_dict[k]
-        #print st
+        # print st
         if isinstance(st, (list, tuple)):
             st = " ".join(st)
         #print >> fo, "<td>%s</td>" % st
@@ -145,37 +159,37 @@ for exp in dict1.keys():
 #print >> fo, "</table>"
 fo.write("</table>")
 
-#print >> fo, """
+# print >> fo, """
 fo.write("""\n</body>\n</html>\n""")
 
-#%% Process institution_id
+# %% Process institution_id
 infile = '../CMIP6_institution_id.json'
 f = open(infile)
 dict = json.load(f)
-dict1 = dict.get('institution_id') ; # Fudge to extract duplicate level
+dict1 = dict.get('institution_id')  # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print(dict2)
-#print(dict.keys())
-fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
+# print(dict.keys())
+fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
 print('processing', fout)
-#fout = fout.split('/')[-1] ; # Write to local directory
+# fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-#print >> fo, ''.join([header, """
+# print >> fo, ''.join([header, """
 fo.write(''.join([header, """
 <title>CMIP6 institution_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">\n"""]))
+<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
+<table id="table_id" class="display compact" style="width:100%">\n"""]))
 
 dictOrder = [
-'institution_id'
+    'institution_id'
 ]
 
 first_row = False
 for exp in dict1.keys():
     exp_dict = dict1[exp]
     if not first_row:
-        ids = dictOrder ; # Overwrite ordering
+        ids = dictOrder  # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>institution_id</th>" % hf
             fo.write("<%s>\n<tr>\n<th>institution_id</th>\n" % hf)
@@ -194,58 +208,58 @@ for exp in dict1.keys():
 #print >> fo, "</table>"
 fo.write("</table>")
 
-#print >> fo, """
+# print >> fo, """
 fo.write("""\n</body>\n</html>\n""")
 
-#%% Process source_id
+# %% Process source_id
 infile = '../CMIP6_source_id.json'
 f = open(infile)
 dict = json.load(f)
-dict1 = dict.get('source_id') ; # Fudge to extract duplicate level
+dict1 = dict.get('source_id')  # Fudge to extract duplicate level
 dict2 = dict.get('version')
 print(dict2)
-#print(dict.keys())
-fout = ''.join([destDir,infile[:-4].replace('../',''),'html'])
-print("processing",fout)
-#fout = fout.split('/')[-1] ; # Write to local directory
+# print(dict.keys())
+fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
+print("processing", fout)
+# fout = fout.split('/')[-1] ; # Write to local directory
 fo = open(fout, 'w')
 
-#print >> fo, ''.join([header, """
+# print >> fo, ''.join([header, """
 fo.write(''.join([header, """
 <title>CMIP6 source_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """,version,"""</p>
-<table id="table_id" class="display">\n"""]))
+<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
+<table id="table_id" class="display compact" style="width:100%">\n"""]))
 
 dictOrder = [
-'label_extended','atmospheric_chemistry','atmosphere','ocean_biogeochemistry',
-'release_year','cohort','sea_ice','label','institution_id','land_surface',
-'aerosol','source_id','ocean','land_ice','activity_participation',
-'native_nominal_resolution_atmos','native_nominal_resolution_landIce',
-'native_nominal_resolution_ocean']
+    'label_extended', 'atmospheric_chemistry', 'atmosphere', 'ocean_biogeochemistry',
+    'release_year', 'cohort', 'sea_ice', 'label', 'institution_id', 'land_surface',
+    'aerosol', 'source_id', 'ocean', 'land_ice', 'activity_participation',
+    'native_nominal_resolution_atmos', 'native_nominal_resolution_landIce',
+    'native_nominal_resolution_ocean']
 dictOrderKold = [
-'institution_id','release_year','activity_participation','atmosphere',
-'nominal_resolution_atmos','ocean','nominal_resolution_ocean','aerosol',
-'atmospheric_chemistry','cohort','label','label_extended','land_ice',
-'nominal_resolution_landIce','land_surface','ocean_biogeochemistry','sea_ice']
+    'institution_id', 'release_year', 'activity_participation', 'atmosphere',
+    'nominal_resolution_atmos', 'ocean', 'nominal_resolution_ocean', 'aerosol',
+    'atmospheric_chemistry', 'cohort', 'label', 'label_extended', 'land_ice',
+    'nominal_resolution_landIce', 'land_surface', 'ocean_biogeochemistry', 'sea_ice']
 dictOrderK = [
-'institution_id','release_year','activity_participation','cohort','label',
-'label_extended','atmos','natNomRes_atmos','ocean','natNomRes_ocean','landIce',
-'natNomRes_landIce','aerosol','atmosChem','land','ocnBgchem','seaIce']
+    'institution_id', 'release_year', 'activity_participation', 'cohort', 'label',
+    'label_extended', 'atmos', 'natNomRes_atmos', 'ocean', 'natNomRes_ocean', 'landIce',
+    'natNomRes_landIce', 'aerosol', 'atmosChem', 'land', 'ocnBgchem', 'seaIce']
 dictRealmKeys = [
-'atmos','ocean','aerosol','landIce','atmosChem','land','ocnBgchem','seaIce']
-dictNomResKeys = ['natNomRes_atmos','natNomRes_ocean','natNomRes_landIce']
+    'atmos', 'ocean', 'aerosol', 'landIce', 'atmosChem', 'land', 'ocnBgchem', 'seaIce']
+dictNomResKeys = ['natNomRes_atmos', 'natNomRes_ocean', 'natNomRes_landIce']
 
 first_row = False
 for exp in dict1.keys():
     exp_dict = dict1[exp]
     # Create table columns
     if not first_row:
-        ids = dictOrderK ; # Overwrite ordering
+        ids = dictOrderK  # Overwrite ordering
         for hf in ["thead", "tfoot"]:
             #print >> fo, "<%s><tr><th>source_id</th>" % hf
             fo.write("<%s>\n<tr>\n<th>source_id</th>\n" % hf)
             for i in ids:
-                i = i.replace('_',' ') ; # Remove '_' from table titles
+                i = i.replace('_', ' ')  # Remove '_' from table titles
                 #print >>fo, "<th>%s</th>" % i
                 fo.write("<th>%s</th>\n" % i)
             #print >> fo, "</tr></%s>" % hf
@@ -259,7 +273,7 @@ for exp in dict1.keys():
         if k in dictRealmKeys:
             st = exp_dict['model_component'][k]['description']
         elif k in dictNomResKeys:
-            keyVal = k.replace('natNomRes_','')
+            keyVal = k.replace('natNomRes_', '')
             st = exp_dict['model_component'][keyVal]['native_nominal_resolution']
         else:
             st = exp_dict[k]
@@ -271,5 +285,5 @@ for exp in dict1.keys():
     fo.write("</tr>\n")
 #print >> fo, "</table>"
 fo.write("</table>")
-#print >> fo, """
+# print >> fo, """
 fo.write("""\n</body>\n</html>\n""")

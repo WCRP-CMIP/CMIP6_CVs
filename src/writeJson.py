@@ -555,12 +555,14 @@ PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
 PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
 PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
+PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+                     - TODO: will need to incorporate new "rights" entry in versionHistory.json and versionHistoryUpdate function
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
-# %% Import statements
+# %% additional import statements
 try:
     from urllib2 import urlopen  # py2
 except ImportError:
@@ -589,6 +591,7 @@ masterTargets = [
     'nominal_resolution',
     'realm',
     'required_global_attributes',
+    'rights',
     'source_id',
     'source_type',
     'sub_experiment_id',
@@ -934,6 +937,26 @@ license = [
              'supply of the information (including any liability arising in negligence) are excluded ',
              'to the fullest extent permitted by law.'])
 ]
+
+# %% CMIP6 rights
+rights = {}
+rights["CC0 1.0"] = {}
+rights["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+rights["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+rights["CC BY 3.0"] = {}
+rights["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
+rights["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
+rights["CC BY 4.0"] = {}
+rights["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
+rights["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
+rights["CC BY-SA 4.0"] = {}
+rights["CC BY-SA 4.0"]["id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+rights["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+rights["CC BY-NC-SA 4.0"] = {}
+rights["CC BY-NC-SA 4.0"]["id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+rights["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+print('"rights" no incorporated into versionHistory.json or versionHistoryUpdate function, exiting')
+os.exit()
 
 # %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']

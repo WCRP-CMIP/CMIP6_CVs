@@ -399,6 +399,9 @@ def getGlobalAtts(filePath):
         "alt40_bounds",
         "ap",
         "ap_bnds",
+        "average_DT",
+        "average_T1",
+        "average_T2",
         "b",
         "b_bnds",
         "basin",
@@ -423,6 +426,10 @@ def getGlobalAtts(filePath):
         "effectRadLi",
         "effectRadLi_bnds",
         "effectRadLi_bounds",
+        "geolat",
+        "GEOLAT",
+        "geolon",
+        "GEOLON",
         "iceband_bnds",
         "iceband_bounds",
         "landuse",
@@ -435,6 +442,8 @@ def getGlobalAtts(filePath):
         "lev_bounds",
         "lev_partial_bnds",
         "lev_partial_bounds",
+        "lev7c_bnds",
+        "lev7c_bounds",
         "lon",
         "lon_bnds",
         "lon_bounds",
@@ -445,14 +454,20 @@ def getGlobalAtts(filePath):
         "hist_interval",
         "orog",
         "p0",
+        "p500",
+        "p700",
+        "p850",
         "pfttype",
         "plev",
         "plev_bnds",
         "plev_bounds",
         "plev7_bnds",
         "plev7_bounds",
+        "plev7c_bnds",
+        "plev7c_bounds",
         "ps",
         "ptop",
+        "region",
         "rlat",
         "rlat_bnds",
         "rlat_bounds",
@@ -466,6 +481,7 @@ def getGlobalAtts(filePath):
         "sdepth_bnds",
         "sdepth_bounds",
         "sector",
+        "strait",
         "strlen",
         "sza_bnds",
         "sza_bounds",
@@ -558,7 +574,8 @@ def getGlobalAtts(filePath):
         # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/Amon/o3/gn/v20190613/o3_Amon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-185012-clim.nc"  # 78745 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/NCAR/CESM2-WACCM/abrupt-4xCO2/r1i1p1f1/Omon/zooc/gr/v20190425/zooc_Omon_CESM2-WACCM_abrupt-4xCO2_r1i1p1f1_gr_005001-009912.nc"  # 91678 CMIP
-        "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/UKESM1-0-LL/abrupt-4xCO2/r1i1p1f2/CFmon/clwc/gn/v20190406/clwc_CFmon_UKESM1-0-LL_abrupt-4xCO2_r1i1p1f2_gn_190001-194912.nc"  # 405162 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/UKESM1-0-LL/abrupt-4xCO2/r1i1p1f2/CFmon/clwc/gn/v20190406/clwc_CFmon_UKESM1-0-LL_abrupt-4xCO2_r1i1p1f2_gn_190001-194912.nc"  # 405162 CMIP
+        "/p/css03/esgf_publish/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/abrupt-4xCO2/r1i1p1f1/Omon/msftyz/gn/v20180701/msftyz_Omon_GFDL-ESM4_abrupt-4xCO2_r1i1p1f1_gn_006101-008012.nc"  # 811631 CMIP
     ):
         pdb.set_trace()
     # debug close
@@ -575,7 +592,7 @@ def getGlobalAtts(filePath):
     varName = "".join(set(varNames) - set(excludeVars))
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
-    var = fH[varName]
+    var = fH[tmp["variable_id"]]  # varName]
     tmp["grid_info"] = getAxes(var)
 
     # add list of non-queried globalAtts
@@ -646,7 +663,7 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = 513158  # -1  # 25635 (complete archive)
+    indStart = 836743  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:

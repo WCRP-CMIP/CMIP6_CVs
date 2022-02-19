@@ -23,8 +23,10 @@ PJD 16 Feb 2022     - Updated getGlobalAtts to deal with cdms2.open error - see 
 PJD 16 Feb 2022     - Updated compareDicts so that "original" key is updated to $table_id_$variable_id
 PJD 16 Feb 2022     - Updated getAxes to remove get* calls in second tier
 PJD 17 Feb 2022     - Turned off alertError reporting
+PJD 18 Feb 2022     - Switched getGlobalAtts to using variable_id key (CMIP6)
+                     TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
+                     TODO: update getDrs for CMIP5 and CMIP3
                      TODO: pull out calendar attribute (attached to time coordinate)
-                     TODO: switch getAxes to using variable_id key
                      TODO: update compareDicts to truncate duplicate values, adding a counter for times returned
 
 @author: durack1
@@ -399,6 +401,7 @@ def getGlobalAtts(filePath):
         "alt40_bounds",
         "ap",
         "ap_bnds",
+        "area",
         "average_DT",
         "average_T1",
         "average_T2",
@@ -410,6 +413,8 @@ def getGlobalAtts(filePath):
         "bounds_latitude",
         "bounds_lon",
         "bounds_longitude",
+        "bounds_nav_lat",
+        "bounds_nav_lon",
         "climatology_bnds",
         "climatology_bounds",
         "d2",
@@ -452,6 +457,8 @@ def getGlobalAtts(filePath):
         "height_bnds",
         "height_bounds",
         "hist_interval",
+        "nav_lat",
+        "nav_lon",
         "orog",
         "p0",
         "p500",
@@ -663,7 +670,7 @@ startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
     # debug start
-    indStart = 836743  # -1  # 25635 (complete archive)
+    indStart = 6917312  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:

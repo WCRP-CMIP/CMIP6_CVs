@@ -555,6 +555,7 @@ PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
 PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
 PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
+PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1058
 PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: will need to incorporate new "rights" entry in versionHistory.json and versionHistoryUpdate function
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
@@ -573,7 +574,7 @@ sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Update IPSL source_ids; remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS\"'
+commitMessage = '\"Revise source_id E3SM-1-0\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1035,53 +1036,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-keys = ["IPSL-CM7A-ATM-HR", "IPSL-CM7A-ATM-LR"]
-for key in keys:
-    source_id.pop(key)
-
-key = 'IPSL-CM6A-ATM-LR-REPROBUS'
-source_id[key] = {}
-source_id[key]['activity_participation'] = [
-    'AerChemMIP'
-]
-source_id[key]['cohort'] = [
-    'Registered'
-]
-source_id[key]['institution_id'] = [
-    'IPSL'
-]
-source_id[key]['label'] = key
-source_id[key]['label_extended'] = key
-source_id[key]['model_component'] = {}
-source_id[key]['model_component']['aerosol'] = {}
-source_id[key]['model_component']['aerosol'][
-    'description'] = 'LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
-source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmos'] = {}
-source_id[key]['model_component']['atmos'][
-    'description'] = 'LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)'
-source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['atmosChem'] = {}
-source_id[key]['model_component']['atmosChem'][
-    'description'] = 'REPROBUS v6 (same grid as atmos)'
-source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
-source_id[key]['model_component']['land'] = {}
-source_id[key]['model_component']['land']['description'] = 'none'
-source_id[key]['model_component']['land']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['landIce'] = {}
-source_id[key]['model_component']['landIce']['description'] = 'none'
-source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocean'] = {}
-source_id[key]['model_component']['ocean']['description'] = 'none'
-source_id[key]['model_component']['ocean']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['ocnBgchem'] = {}
-source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-source_id[key]['model_component']['seaIce'] = {}
-source_id[key]['model_component']['seaIce']['description'] = 'none'
-source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = 'none'
-source_id[key]['release_year'] = '2021'
-source_id[key]['source_id'] = key
+key = "E3SM-1-0"
+source_id[key]['activity_participation'].append("DAMIP")
+source_id[key]['activity_participation'].sort()
 
 # Example
 # key = 'GISS-E2-2-H'

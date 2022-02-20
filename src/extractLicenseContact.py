@@ -24,6 +24,8 @@ PJD 16 Feb 2022     - Updated compareDicts so that "original" key is updated to 
 PJD 16 Feb 2022     - Updated getAxes to remove get* calls in second tier
 PJD 17 Feb 2022     - Turned off alertError reporting
 PJD 18 Feb 2022     - Switched getGlobalAtts to using variable_id key (CMIP6)
+PJD 19 Feb 2022     - Add loop timer to gauge slowdowns
+PJD 19 Feb 2022     - Added to cdmsBadFiles
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs for CMIP5 and CMIP3
                      TODO: pull out calendar attribute (attached to time coordinate)
@@ -40,6 +42,7 @@ import numpy as np
 import os
 import pdb
 from os import scandir
+import time
 
 # %% function defs
 
@@ -459,6 +462,8 @@ def getGlobalAtts(filePath):
         "hist_interval",
         "nav_lat",
         "nav_lon",
+        "olevel_bnds",
+        "olevel_bounds",
         "orog",
         "p0",
         "p500",
@@ -658,6 +663,7 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_185009-185912.nc",  # 14916 CMIP + more try/except added
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn.nc",  # 14917 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/CFday/clivi/gn/v20191207/clivi_CFday_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_19200101-19241230.nc",  # 513159 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc",  # 7176050 CMIP, netcdf fail
 )
 
 # %% loop over files and build index
@@ -669,8 +675,10 @@ cmip["version_metadata"]["institution_id"] = "PCMDI"
 startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
+    # start timer
+    startTime = time.time()
     # debug start
-    indStart = 6917312  # -1  # 25635 (complete archive)
+    indStart = 7176049  # -1  # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:
@@ -733,6 +741,11 @@ for cnt, filePath in enumerate(x):
             cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
         )
         fH.close()
+
+    # end timer
+    endTime = time.time()
+    timeTaken = "{:07.3f}".format(endTime - startTime)
+    print("cnt:", cnt, "time:", timeTaken)
 
 # %% and write out final file
 # get time

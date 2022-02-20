@@ -26,10 +26,11 @@ PJD 17 Feb 2022     - Turned off alertError reporting
 PJD 18 Feb 2022     - Switched getGlobalAtts to using variable_id key (CMIP6)
 PJD 19 Feb 2022     - Add loop timer to gauge slowdowns
 PJD 19 Feb 2022     - Added to cdmsBadFiles
+PJD 20 Feb 2022     - Added getCalendar
+PJD 20 Feb 2022     - Update getAxes with fileHandle additional arg
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs for CMIP5 and CMIP3
-                     TODO: pull out calendar attribute (attached to time coordinate)
-                     TODO: update compareDicts to truncate duplicate values, adding a counter for times returned
+                     TODO: update duplicateEntry - compareDicts to truncate duplicate values, adding a counter for times returned
 
 @author: durack1
 """
@@ -169,7 +170,7 @@ def compareDicts(dict1, dict2, count, filePath):
                 if not isinstance(tmp1, dict):
                     val1 = tmp1
                     tmp1 = {}
-                    tmp1["original"] = val1
+                    tmp1[key1] = val1
                     tmp1[key2] = tmp2
                 elif isinstance(tmp1, dict):
                     tmp1[key2] = tmp2
@@ -184,9 +185,20 @@ def compareDicts(dict1, dict2, count, filePath):
     return update, dict1
 
 
-def getAxes(var):
+def duplicateEntry(dic, entry):
     """
-    getAxes(var)
+    duplicateEntry(dic, entry)
+
+    Checks first argument to find second argument
+    """
+    for key, val in dic.items():  # dic.values()
+        pass
+        # convert value to dict, increment counter
+
+
+def getAxes(var, fileHandle):
+    """
+    getAxes(var, fileHandle)
 
     Extracts grid info dependent on input
     """
@@ -248,18 +260,18 @@ def getAxes(var):
         try:
             print("enter try2")
             latLen = str(len(axes[axInd]))
-            latVar = fH[axes[axInd]]
+            latVar = fileHandle[axes[axInd]]
             lat0 = str(np.min(latVar))
             print("lat0")
             print(lat0)
             latN = str(np.max(latVar))
             lon = str(len(axes[axInd + 1]))
-            lonVar = fH[axes[axInd + 1]]
+            lonVar = fileHandle[axes[axInd + 1]]
             lon0 = str(np.min(lonVar))
             lonN = str(np.max(lonVar))
             if len(var.shape) == 4:
                 heightLen = str(len(axes[1]))
-                heightVar = fH[axes[1]]
+                heightVar = fileHandle[axes[1]]
                 height0 = str(heightVar[0])
                 heightN = str(heightVar[-1])
                 heightUnit = heightVar.units
@@ -288,6 +300,22 @@ def getAxes(var):
     print(tmp)
 
     return tmp
+
+
+def getCalendar(var):
+    """
+    getCalendar(var)
+
+    Extracts calendar info from variable time axis
+    """
+    axisIds = var.getAxisList()
+    if "time" in axisIds:
+        timeAx = var.getTime()
+        calendar = timeAx.calendar
+    else:
+        calendar = ""
+
+    return calendar
 
 
 def getDrs(path):
@@ -587,7 +615,9 @@ def getGlobalAtts(filePath):
         # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/NCAR/CESM2-WACCM/abrupt-4xCO2/r1i1p1f1/Omon/zooc/gr/v20190425/zooc_Omon_CESM2-WACCM_abrupt-4xCO2_r1i1p1f1_gr_005001-009912.nc"  # 91678 CMIP
         # "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/UKESM1-0-LL/abrupt-4xCO2/r1i1p1f2/CFmon/clwc/gn/v20190406/clwc_CFmon_UKESM1-0-LL_abrupt-4xCO2_r1i1p1f2_gn_190001-194912.nc"  # 405162 CMIP
-        "/p/css03/esgf_publish/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/abrupt-4xCO2/r1i1p1f1/Omon/msftyz/gn/v20180701/msftyz_Omon_GFDL-ESM4_abrupt-4xCO2_r1i1p1f1_gn_006101-008012.nc"  # 811631 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/abrupt-4xCO2/r1i1p1f1/Omon/msftyz/gn/v20180701/msftyz_Omon_GFDL-ESM4_abrupt-4xCO2_r1i1p1f1_gn_006101-008012.nc"  # 811631 CMIP
+        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"  # 47438 CMIP
+        ""
     ):
         pdb.set_trace()
     # debug close
@@ -605,7 +635,8 @@ def getGlobalAtts(filePath):
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
     var = fH[tmp["variable_id"]]  # varName]
-    tmp["grid_info"] = getAxes(var)
+    tmp["grid_info"] = getAxes(var, fH)
+    tmp["calendar"] = getCalendar(var)
 
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
@@ -632,6 +663,34 @@ def scantree(path):
             yield from scantree(entry.path)
         else:
             yield entry
+
+
+def writeJson(dic, testPath, count, endTime):
+    """
+    writeJson(dic, testPath, count)
+
+    Takes dictionary, path and count and writes out to json file
+    """
+    # get time info
+    timeNow = datetime.datetime.now()
+    timeFormatDir = timeNow.strftime("%y%m%d")
+    cmip["version_metadata"]["end_time  "] = endTime
+    # get path
+    pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
+    # get count
+    cmip["version_metadata"]["file_processed_count"] = str(count)
+    # Write output
+    print("")
+    outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
+    if os.path.exists(outFile):
+        os.remove(outFile)
+    print("writing:")
+    print("")
+    fH = open(outFile, "w")
+    json.dump(
+        cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
+    )
+    fH.close()
 
 
 # %% define path
@@ -678,7 +737,11 @@ for cnt, filePath in enumerate(x):
     # start timer
     startTime = time.time()
     # debug start
-    indStart = 7176049  # -1  # 25635 (complete archive)
+    indStart = -1  # 47435  # -1  # 47437  # 723495 # 25635 (complete archive)
+    if cnt == 47437:
+        writeJson(cmip, testPath, cnt)
+        print("catching dictionary, pre-crash")
+        pdb.set_trace()
     if cnt < indStart:
         continue
     elif cnt == indStart:
@@ -718,50 +781,13 @@ for cnt, filePath in enumerate(x):
         # print('dupe files, skipping')
 
     # %% iteratively write out results to local file
-    if not cnt % 1000:
-        # get time
-        timeNow = datetime.datetime.now()
-        timeFormat = timeNow.strftime("%Y-%m-%d")
-        timeFormatDir = timeNow.strftime("%y%m%d")
-        endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        cmip["version_metadata"]["end_time  "] = endTime
-        # get path
-        pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
-        # get count
-        cmip["version_metadata"]["file_processed_count"] = str(cnt)
-        # Write output
-        print("")
-        outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
-        if os.path.exists(outFile):
-            os.remove(outFile)
-        print("writing:")
-        print("")
-        fH = open(outFile, "w")
-        json.dump(
-            cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
-        )
-        fH.close()
-
     # end timer
     endTime = time.time()
     timeTaken = "{:07.3f}".format(endTime - startTime)
     print("cnt:", cnt, "time:", timeTaken)
 
+    if not cnt % 1000:
+        writeJson(cmip, testPath, cnt, timeTaken)
+
 # %% and write out final file
-# get time
-timeNow = datetime.datetime.now()
-timeFormat = timeNow.strftime("%Y-%m-%d")
-timeFormatDir = timeNow.strftime("%y%m%d")
-endTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-cmip["version_metadata"]["end_time  "] = endTime
-# get path
-pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
-# get count
-cmip["version_metadata"]["file_processed_count"] = str(cnt)
-# Write output
-outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
-fH = open(outFile, "w")
-json.dump(
-    cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
-)  # , encoding="utf-8")
-fH.close()
+writeJson(cmip, testPath, cnt, timeTaken)

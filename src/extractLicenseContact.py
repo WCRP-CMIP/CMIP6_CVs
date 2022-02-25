@@ -28,6 +28,10 @@ PJD 19 Feb 2022     - Add loop timer to gauge slowdowns
 PJD 19 Feb 2022     - Added to cdmsBadFiles
 PJD 20 Feb 2022     - Added getCalendar
 PJD 20 Feb 2022     - Update getAxes with fileHandle additional arg
+PJD 23 Feb 2022     - Updated getAxes to deal with site axes - now returns empty dictionary
+PJD 23 Feb 2022     - Updated getGlobalAtts to try both varname and tmp["variable_name"]
+PJD 25 Feb 2022     - Added to badFiles CMIP 47148
+PJD 25 Feb 2022     - Tweak getGlobalAtts to deal with cdms2.open SystemError
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs for CMIP5 and CMIP3
                      TODO: update duplicateEntry - compareDicts to truncate duplicate values, adding a counter for times returned
@@ -125,7 +129,7 @@ def compareDicts(dict1, dict2, count, filePath):
         "cmor_version",
         "license",
     ]
-
+    # pdb.set_trace()
     sharedKeys = set(dict1.keys()).intersection(dict2.keys())
     for key in sharedKeys:
         if dict1[key] != dict2[key] and key in chkGlobalAtts:
@@ -196,6 +200,11 @@ def duplicateEntry(dic, entry):
         # convert value to dict, increment counter
 
 
+# f = "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"
+# fH = cdm.open(f)
+# var = fH["prc"]
+
+
 def getAxes(var, fileHandle):
     """
     getAxes(var, fileHandle)
@@ -206,6 +215,22 @@ def getAxes(var, fileHandle):
     latLen, lat0, latN = ["x" for _ in range(3)]
     lonLen, lon0, lonN = ["x" for _ in range(3)]
     heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
+    # create placeholder grid_info dictionary
+    tmp = {}
+    tmp["lat"] = " ".join(["len:", latLen, "first:", lat0, "last:", latN])
+    tmp["lon"] = " ".join(["len:", lonLen, "first:", lon0, "last:", lonN])
+    tmp["height"] = " ".join(
+        [
+            "len:",
+            heightLen,
+            "first:",
+            height0,
+            "last:",
+            heightN,
+            "units:",
+            heightUnit,
+        ]
+    )
 
     try:
         print("enter try")
@@ -221,7 +246,7 @@ def getAxes(var, fileHandle):
             lat = var.getLatitude()
             lon = var.getLongitude()
             # test for None
-            if lat == None and lon == None:
+            if not [x for x in (lat, lon) if x is None]:
                 raise Exception("Attribute Error")
             # create strings
             latLen = str(len(lat))
@@ -246,9 +271,13 @@ def getAxes(var, fileHandle):
     # deal with i,j index grids
     except Exception as error:
         print("enter except", error)
-        axes = var.getAxisList()
+        axes = var.getAxisIds()
         # test for var shape
-        if axes[0].id == "time" and var.shape == 3:
+        if "site" in axes:
+            # assume a time, site variable (no lat/lon)
+            return tmp
+            raise Exception("site variable, skipping")
+        elif axes[0] == "time" and var.shape == 3:
             # assume time, lat, lon
             axInd = 1
         elif len(var.shape) == 4:
@@ -259,6 +288,7 @@ def getAxes(var, fileHandle):
             axInd = 0
         try:
             print("enter try2")
+            # pdb.set_trace()
             latLen = str(len(axes[axInd]))
             latVar = fileHandle[axes[axInd]]
             lat0 = str(np.min(latVar))
@@ -280,7 +310,7 @@ def getAxes(var, fileHandle):
         except:
             print("no valid dims")
 
-    # create grid_info dictionary
+    # update grid_info dictionary
     tmp = {}
     tmp["lat"] = " ".join(["len:", latLen, "first:", lat0, "last:", latN])
     tmp["lon"] = " ".join(["len:", lonLen, "first:", lon0, "last:", lonN])
@@ -554,17 +584,20 @@ def getGlobalAtts(filePath):
         print("badFile:", filePath)
         print("")
         print("")
+        # pdb.set_trace()
         return {}
     # deal with SystemError
     for cnt, globalAtt in enumerate(globalAtts):
         try:
             val = eval("".join(["fH.", globalAtt]))
+            # print("val", val)
             if isinstance(val, np.ndarray):
                 val = val.tolist()
-            ###print("get:", globalAtt, val)
-        except:
-            ###print("No entry:", globalAtt)
+            # print("get:", globalAtt, val)
+        except Exception as error:
+            print("No entry:", globalAtt, error)
             val = ""
+        # print("allocate", val, "<- val")
         tmp[globalAtt] = val
     # assign nominal resolution per realm
     val = tmp["nominal_resolution"]
@@ -634,9 +667,16 @@ def getGlobalAtts(filePath):
     varName = "".join(set(varNames) - set(excludeVars))
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
-    var = fH[tmp["variable_id"]]  # varName]
-    tmp["grid_info"] = getAxes(var, fH)
-    tmp["calendar"] = getCalendar(var)
+    # pdb.set_trace()
+    var = fH[tmp["variable_id"]]
+    if var is None:
+        var = fH[varName]
+    if var is None:
+        tmp["grid_info"] = "x"
+        tmp["calendar"] = "x"
+    else:
+        tmp["grid_info"] = getAxes(var, fH)
+        tmp["calendar"] = getCalendar(var)
 
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
@@ -723,6 +763,12 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn.nc",  # 14917 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/CFday/clivi/gn/v20191207/clivi_CFday_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_19200101-19241230.nc",  # 513159 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc",  # 7176050 CMIP, netcdf fail
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/Eday/rivo/gn/v20181203/rivo_Eday_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101-20141231.nc",  # 47148 CMIP, cdms.open fail utf-8 decode
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19000101-19491231.nc",  # 14308 CMIP, cdms open fail utf-8
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_18500101-18991231.nc",  # 14309 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # Proactive
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_18500301-18591231.nc",  # 15108 CMIP
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_185003-185912.nc",  # 15201 CMIP
 )
 
 # %% loop over files and build index
@@ -737,44 +783,51 @@ for cnt, filePath in enumerate(x):
     # start timer
     startTime = time.time()
     # debug start
-    indStart = -1  # 47435  # -1  # 47437  # 723495 # 25635 (complete archive)
-    if cnt == 47437:
-        writeJson(cmip, testPath, cnt)
+    if cnt == "none":
+        endTime = time.time()
+        timeTaken = "{:07.3f}".format(endTime - startTime)
+        # writeJson(cmip, testPath, cnt, timeTaken)
+        # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
         print("catching dictionary, pre-crash")
         pdb.set_trace()
+    indStart = -1  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
     if cnt < indStart:
         continue
     elif cnt == indStart:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
+        cmip = json.load(open("dupe.json"))
     # debug end
     # check for bad file
     if filePath.path in cdmsBadFiles:
         print("bad file identified, skipping")
-        continue
+        continue  # skip file, proceed to next in loop
     # deal with multiple files - e.g. Omon
     if cnt == 0:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
     if firstPath not in filePath.path:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
-        # print(count, filePath.name)  # filename only
         print(cnt, filePath.path)  # path and filename complete
         # build DRS institution_id.source_id.activity_id.experiment_id.variant_label
         key = getDrs(filePath.path)
         if key in cmip:
+            print("if key in cmip")
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             # catch file open error
             if dic2 == {}:
-                continue
+                continue  # skip file, proceed to next in loop
             dic1 = cmip[key]
+            print("call compareDicts")
             update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
             # if difference found, update new entry
             if update:
                 cmip[key] = newDic
         else:
             # pull global atts for new entry
-            cmip[key] = {}
             tmp = getGlobalAtts(filePath.path)
+            if tmp == {}:
+                print("if key in cmip - else")
+                continue  # skip file, proceed to next in loop
             cmip[key] = tmp
     elif firstPath in filePath.path:
         pass

@@ -32,14 +32,20 @@ PJD 23 Feb 2022     - Updated getAxes to deal with site axes - now returns empty
 PJD 23 Feb 2022     - Updated getGlobalAtts to try both varname and tmp["variable_name"]
 PJD 25 Feb 2022     - Added to badFiles CMIP 47148
 PJD 25 Feb 2022     - Tweak getGlobalAtts to deal with cdms2.open SystemError
+PJD 26 Feb 2022     - Updated getGlobalAtts to only return valid calendar; updated getCalendar getAxisList -> getAxisIds
+PJD 28 Feb 2022     - Added argparse for activity_id/path scan
+PJD 28 Feb 2022     - Updated compareDicts to truncate duplicate values, adding a counter for times returned
+                     TODO: convert compareDicts test block to dealWithDuplicateEntry
+                     TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs for CMIP5 and CMIP3
-                     TODO: update duplicateEntry - compareDicts to truncate duplicate values, adding a counter for times returned
+
 
 @author: durack1
 """
 
 # %% imports
+import argparse
 import cdms2
 import datetime
 import json
@@ -47,6 +53,7 @@ import numpy as np
 import os
 import pdb
 from os import scandir
+import sys
 import time
 
 # %% function defs
@@ -144,9 +151,11 @@ def compareDicts(dict1, dict2, count, filePath):
             # {'frequency', 'realm', 'table_id', 'tracking_id', 'variable_id'}
             key1 = ".".join([dict1["table_id"], dict1["variable_id"]])
             key2 = ".".join([dict2["table_id"], dict2["variable_id"]])
-            tmp1 = dict1[key]
-            tmp2 = dict2[key]
+            tmp1 = dict1[key]  # value for dict1
+            tmp2 = dict2[key]  # value for dict2
             # check if value already logged
+
+            # convert block below to dealWithDuplicateEntry function
             # if any([True for k,v in word_freq.items() if v == value]):
             # deal with nominal_resolution nested dictionary
             if key == "nominal_resolution":
@@ -172,32 +181,52 @@ def compareDicts(dict1, dict2, count, filePath):
                 print("new key:", key)
                 # if tmp1 != tmp2 and not dictionary
                 if not isinstance(tmp1, dict):
+                    # catch new entry in new dictionary
+                    print("catch new entry in new dictionary")
                     val1 = tmp1
                     tmp1 = {}
-                    tmp1[key1] = val1
-                    tmp1[key2] = tmp2
+                    tmp1[val1] = {}
+                    tmp1[val1]["keys"] = []
+                    tmp1[val1]["keys"].append(key1)
+                    tmp1[val1]["count"] = 1
+                    tmp1[tmp2] = {}
+                    tmp1[tmp2]["keys"] = []
+                    tmp1[tmp2]["keys"].append(key2)
+                    tmp1[tmp2]["count"] = 1
                 elif isinstance(tmp1, dict):
-                    tmp1[key2] = tmp2
+                    print("catch new entry in existing dictionary")
+                    # if key already exists append
+                    if tmp2 in list(tmp1.keys()):
+                        # print("tmp2 == key"); pdb.set_trace()
+                        tmp1[tmp2]["keys"].append(key2)
+                        tmp1[tmp2]["count"] = tmp1[tmp2]["count"] + 1
+                    # if key doesn't exist add new
+                    else:
+                        # print("else"); pdb.set_trace()
+                        tmp1[tmp2] = {}
+                        tmp1[tmp2]["keys"] = [key2]
+                        tmp1[tmp2]["count"] = 1
+                else:
+                    # catch case unmatched
+                    print("catch case unmatched")
+                    pdb.set_trace()
                 # assign new tmp1 dictionary to key
                 dict1[key] = tmp1
-                # pdb.set_trace()
             update = True
             # alertError(count, filePath, key2)
+
         else:
             update = False
 
     return update, dict1
 
 
-def duplicateEntry(dic, entry):
+def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
     """
-    duplicateEntry(dic, entry)
+    dealWithDuplicateEntry(key, dic1, id1, dic2, id2):
 
     Checks first argument to find second argument
     """
-    for key, val in dic.items():  # dic.values()
-        pass
-        # convert value to dict, increment counter
 
 
 # f = "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"
@@ -338,7 +367,7 @@ def getCalendar(var):
 
     Extracts calendar info from variable time axis
     """
-    axisIds = var.getAxisList()
+    axisIds = var.getAxisIds()
     if "time" in axisIds:
         timeAx = var.getTime()
         calendar = timeAx.calendar
@@ -590,14 +619,12 @@ def getGlobalAtts(filePath):
     for cnt, globalAtt in enumerate(globalAtts):
         try:
             val = eval("".join(["fH.", globalAtt]))
-            # print("val", val)
-            if isinstance(val, np.ndarray):
-                val = val.tolist()
-            # print("get:", globalAtt, val)
+            # catch case of numpy branch info
+            if isinstance(val, np.ndarray) and len(val) == 1:
+                val = str(val.tolist()[0])
         except Exception as error:
             print("No entry:", globalAtt, error)
             val = ""
-        # print("allocate", val, "<- val")
         tmp[globalAtt] = val
     # assign nominal resolution per realm
     val = tmp["nominal_resolution"]
@@ -676,7 +703,9 @@ def getGlobalAtts(filePath):
         tmp["calendar"] = "x"
     else:
         tmp["grid_info"] = getAxes(var, fH)
-        tmp["calendar"] = getCalendar(var)
+        calendar = getCalendar(var)
+        if calendar != "":
+            tmp["calendar"] = calendar
 
     # add list of non-queried globalAtts
     tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
@@ -740,8 +769,9 @@ testPath = (
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1"
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical"
     # "/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-f3-L/lig127k/r1i1p1f1/SImon/"  # i, j index checks
-    # "/p/css03/esgf_publish/CMIP6"
-    "/p/css03/esgf_publish/CMIP6/CMIP"
+    "/p/css03/esgf_publish/CMIP6"
+    # "/p/css03/esgf_publish/CMIP6/CMIP"
+    # "/p/css03/esgf_publish/CMIP6/ScenarioMIP"
 )
 
 # define bad files
@@ -769,9 +799,26 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # Proactive
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_18500301-18591231.nc",  # 15108 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_185003-185912.nc",  # 15201 CMIP
+    # "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
 )
 
 # %% loop over files and build index
+parser = argparse.ArgumentParser(description="Process some CMIPx data")
+parser.add_argument(
+    "activityId", metavar="S", type=str, help="an activity_id to build the search from"
+)
+args = parser.parse_args()
+if args.activityId in ["CMIP", "ScenarioMIP"]:
+    actId = args.activityId
+else:
+    print("Invalid path, ", args.activityId, "exiting")
+    sys.exit()
+
+# create testpath
+testPath = os.path.join(testPath, actId)
+print("Processing testPath:", testPath)
+
+# use iterator to start scan
 x = scantree(testPath)
 cmip = {}
 cmip["version_metadata"] = {}
@@ -792,10 +839,11 @@ for cnt, filePath in enumerate(x):
         pdb.set_trace()
     indStart = -1  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
     if cnt < indStart:
+        print(cnt, filePath.path)
         continue
     elif cnt == indStart:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
-        cmip = json.load(open("dupe.json"))
+    #    cmip = json.load(open("dupe.json"))
     # debug end
     # check for bad file
     if filePath.path in cdmsBadFiles:
@@ -807,7 +855,7 @@ for cnt, filePath in enumerate(x):
     if firstPath not in filePath.path:
         firstPath = "/".join(filePath.path.split("/")[0:-1])
         print(cnt, filePath.path)  # path and filename complete
-        # build DRS institution_id.source_id.activity_id.experiment_id.variant_label
+        # build DRS institution_id.source_id.activity_id.experiment_id.variant_label.grid_label.version
         key = getDrs(filePath.path)
         if key in cmip:
             print("if key in cmip")

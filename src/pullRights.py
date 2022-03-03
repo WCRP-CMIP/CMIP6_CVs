@@ -10,6 +10,8 @@ for source_id entries
 
 PJD  2 Mar 2022     - started
 PJD  2 Mar 2022     - awaiting CMIP6/CMIP metadata scour to complete
+PJD  2 Mar 2022     - started logic to extract info from metadata; added platform independent paths
+                     TODO: finish extract netcdf-harvested info
 
 @author: durack1
 """
@@ -19,9 +21,14 @@ PJD  2 Mar 2022     - awaiting CMIP6/CMIP metadata scour to complete
 import csv
 import json
 import os
+import pdb
+import platform
 
 # %% set start dir
-os.chdir("/Volumes/durack1ml/Users/durack1/sync/git/CMIP6_CVs/src")
+if "macOS" in platform.platform():
+    os.chdir("~/sync/git/CMIP6_CVs/src")
+elif "Linux" in platform.platform():
+    os.chdir("~/git/CMIP6_CVs/src")
 
 # %% create output dictionary
 out = {}
@@ -35,7 +42,7 @@ out = {}
 '''
 
 # %% create default entries in dictionary
-with open("/Volumes/durack1ml/Users/durack1/sync/git/CMIP6_CVs/CMIP6_source_id.json") as jsonFile:
+with open("../CMIP6_source_id.json") as jsonFile:
     tmp = json.load(jsonFile)
     for count, key in enumerate(tmp["source_id"].keys()):
         print()
@@ -65,17 +72,44 @@ with open("220208_MartinaStockhause_source_id_license_20220208.csv", newline="")
 del(martina, row, csvFile)
 
 # %% extract netcdf-harvested info
-with open("/Volumes/durack1ml/Users/durack1/sync/git/CMIP6_CVs/src/220302_CMIP6-CMIP_metaData.json") as jsonFile:
+with open("220302_CMIP6-CMIP_metaData.json") as jsonFile:
     tmp = json.load(jsonFile)
     for count, key in enumerate(tmp.keys()):
         # deal with version_info
         if key == "version_metadata":
             continue
-        pass
-        # source_id
-        # all versions
-        # all contacts
-        # all licenses
+        keyBits = key.split(".")
+        instId = keyBits[1]
+        srcId = keyBits[2]
+        ver = keyBits[7]
+        contact = tmp[key]["contact"]
+        if isinstance(contact, dict):
+            print("contact dict")
+            pdb.set_trace()
+        licInfo = tmp[key]["license"]
+        strStart = "licensed under a "
+        strStartLen = len(strStart)
+        strEnd = (" (https://creativecommons.org/licenses). Consult " +
+                  "https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use " +
+                  "governing CMIP6 output, including citation requirements " +
+                  "and proper acknowledgment.")
+        if isinstance(licInfo, dict):
+            print("licInfo dict")
+            pdb.set_trace()
+        else:
+            rightsStartInd = licInfo.find(strStart) + len(strStart)
+            rightsEndInd = licInfo.find(strEnd)
+            licExt = licInfo[rightsStartInd:rightsEndInd]
+            print("licExt:", licExt)
+
+        # Drop values into dictionary
+        if key not in out.keys():
+            out[srcId]["contact"] = []
+            out[srcId]["license"] = []
+            out[srcId]["versions"] = []
+        else:
+            out[srcId]["versions"].append(ver)
+
 
 # %% populate netcdf-harvested info
 for src in out.keys():

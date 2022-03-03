@@ -35,6 +35,7 @@ PJD 25 Feb 2022     - Tweak getGlobalAtts to deal with cdms2.open SystemError
 PJD 26 Feb 2022     - Updated getGlobalAtts to only return valid calendar; updated getCalendar getAxisList -> getAxisIds
 PJD 28 Feb 2022     - Added argparse for activity_id/path scan
 PJD 28 Feb 2022     - Updated compareDicts to truncate duplicate values, adding a counter for times returned
+                     TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads

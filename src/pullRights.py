@@ -78,8 +78,24 @@ with open("/Volumes/durack1ml/Users/durack1/sync/git/CMIP6_CVs/src/220302_CMIP6-
         # all licenses
 
 # %% populate netcdf-harvested info
-out[key]["version"] = ""
-out[key]["rights"] = ""
-out[key]["contact"] = ""
+for src in out.keys():
+    # standard identifier (make sure DKRZ == metadata, if not query Martina on date)
+    out[src]["rights_identifier"] = ""
+    out[src]["rights"] = ""  # standard string
+    out[src]["rights_info"] = ""  # standard url
+    out[src]["exceptions_contact"] = ""  # contact info
+    out[src]["source_specific_info"] = ""  # likely empty to start
+    # first version date: initially published under CC BY-SA 4.0 (CMOR3 default is most common)
+    out[src]["history"] = ""
+
+# %% populate UKESM1-0* provided input
+for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-0-ice-LL"]:
+    out[src]["rights_identifier"] = "CC BY 4.0"
+    out[src][
+        "rights"] = "Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
+    out[src]["rights_info"] = "https://creativecommons.org/licenses/by/4.0/"
+    out[src]["exceptions_contact"] = "@metoffice.gov.uk <-cmip6.ukesm1"
+    out[src]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+    out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
 
 # %% write json

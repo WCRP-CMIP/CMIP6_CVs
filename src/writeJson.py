@@ -959,6 +959,17 @@ rights["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-s
 print('"rights" no incorporated into versionHistory.json or versionHistoryUpdate function, exiting')
 os.exit()
 
+'''
+"license":{
+      "rights_identifier":"CC BY 4.0",
+      "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)",
+      "rights_info":"https://creativecommons.org/licenses/by/4.0/",
+      "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+      "source-specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+      "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
+},
+'''
+
 # %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']
 

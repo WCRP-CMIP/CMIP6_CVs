@@ -11,6 +11,8 @@ for source_id entries
 PJD  2 Mar 2022     - started
 PJD  2 Mar 2022     - awaiting CMIP6/CMIP metadata scour to complete
 PJD  2 Mar 2022     - started logic to extract info from metadata; added platform independent paths
+PJD  3 Mar 2022     - added pathlib Path call
+PJD  4 Mar 2022     - first pass at merging info
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -19,16 +21,47 @@ PJD  2 Mar 2022     - started logic to extract info from metadata; added platfor
 # %% imports
 
 import csv
+import datetime
 import json
 import os
 import pdb
 import platform
+import time
+from pathlib import Path
+
+# %% define functions
+
+
+def findRightsTxt(licStr):
+    """
+    findRightsTxt(licStr)
+
+    Extracts license rights info assuming standard blurb is followed
+    """
+    strStart = "licensed under a "
+    strEnd = (" (https://creativecommons.org/licenses")
+    #strEnd = (" (https://creativecommons.org/licenses). Consult ")
+    # strEnd = (" (https://creativecommons.org/licenses). Consult " +
+    #          "https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use " +
+    #          "governing CMIP6 output, including citation requirements " +
+    #          "and proper acknowledgment.")
+    rightsStartInd = licStr.find(strStart) + len(strStart)
+    rightsEndInd = licStr.find(strEnd)
+    licExt = licStr[rightsStartInd:rightsEndInd]
+
+    # fudge typos
+    if licExt == 'Creative Commons Attribution ShareAlike 4.0 International License':
+        licExt = licExt.replace('tion Share', 'tion-Share')
+
+    return licExt
+
 
 # %% set start dir
+homePath = str(Path.home())
 if "macOS" in platform.platform():
-    os.chdir("~/sync/git/CMIP6_CVs/src")
+    os.chdir(os.path.join(homePath, "sync/git/CMIP6_CVs/src"))
 elif "Linux" in platform.platform():
-    os.chdir("~/git/CMIP6_CVs/src")
+    os.chdir(os.path.join(homePath, "git/CMIP6_CVs/src"))
 
 # %% create output dictionary
 out = {}
@@ -42,15 +75,18 @@ out = {}
 '''
 
 # %% create default entries in dictionary
+print("get list of registered source_id entries from CMIP6_CVs...")
+time.sleep(1)
 with open("../CMIP6_source_id.json") as jsonFile:
     tmp = json.load(jsonFile)
     for count, key in enumerate(tmp["source_id"].keys()):
-        print()
         print("count:", count, "source_id:", key)
         out[key] = {}
 del(tmp, count, key, jsonFile)
 
 # %% read Martina's info
+print("read license info from Martina's citation service entries...")
+time.sleep(1)
 # IPCC-AR6_CMIP6;INM-CM5-0;9;INM-CM5-0;Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0);http://creativecommons.org/licenses/by-sa/4.0/;CC BY-SA 4.0
 with open("220208_MartinaStockhause_source_id_license_20220208.csv", newline="") as csvFile:
     martina = csv.reader(csvFile, delimiter=";")
@@ -65,65 +101,101 @@ with open("220208_MartinaStockhause_source_id_license_20220208.csv", newline="")
         if row[1] in ["CMCC-CM2-HR5", "CMCC-ESM2-HR5", "CMCC-ESM2-SR5", "IPSL-CM7A-ATM-HR", "IPSL-CM7A-ATM-LR"]:
             # IPSL-CM6A-ATM-LR-REPROBUS missing
             continue
-        print()
         print("source_id:", row[1], "license:", row[6])
         # out[row[1]] = {}  # create source_id entry
         out[row[1]]['dkrz'] = row[6]
 del(martina, row, csvFile)
 
 # %% extract netcdf-harvested info
+print("process netcdf-file harvested info...")
+time.sleep(1)
 with open("220302_CMIP6-CMIP_metaData.json") as jsonFile:
-    tmp = json.load(jsonFile)
-    for count, key in enumerate(tmp.keys()):
+    tmp1 = json.load(jsonFile)
+    for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info
-        if key == "version_metadata":
+        if key1 == "version_metadata":
             continue
-        keyBits = key.split(".")
+        keyBits = key1.split(".")
         instId = keyBits[1]
         srcId = keyBits[2]
         ver = keyBits[7]
-        contact = tmp[key]["contact"]
+        contact = tmp1[key1]["contact"]
+        # cleanup blank entries
+        if isinstance(contact, list):
+            print(key1, "contact is list")
+            pdb.set_trace()
+            contact.remove("")
+        # validate and process contact
         if isinstance(contact, dict):
-            print("contact dict")
-            pdb.set_trace()
-        licInfo = tmp[key]["license"]
-        strStart = "licensed under a "
-        strStartLen = len(strStart)
-        strEnd = (" (https://creativecommons.org/licenses). Consult " +
-                  "https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use " +
-                  "governing CMIP6 output, including citation requirements " +
-                  "and proper acknowledgment.")
+            contact = list(set(contact.keys()))
+        # validate and process license
+        licInfo = tmp1[key1]["license"]
         if isinstance(licInfo, dict):
-            print("licInfo dict")
-            pdb.set_trace()
+            tmp3 = []
+            for count, key2 in enumerate(licInfo.keys()):
+                licExt = findRightsTxt(key2)
+                tmp3.append(licExt)
+            if len(set(tmp3)) == 1:
+                licExt = tmp3[0]
+            else:
+                print("more than one unique value")
+                pdb.set_trace()
         else:
-            rightsStartInd = licInfo.find(strStart) + len(strStart)
-            rightsEndInd = licInfo.find(strEnd)
-            licExt = licInfo[rightsStartInd:rightsEndInd]
-            print("licExt:", licExt)
-
+            licExt = findRightsTxt(licInfo)
         # Drop values into dictionary
-        if key not in out.keys():
+        if srcId not in out.keys():
+            out[srcId] = {}
             out[srcId]["contact"] = []
             out[srcId]["license"] = []
             out[srcId]["versions"] = []
-        else:
-            out[srcId]["versions"].append(ver)
+        elif srcId in out.keys() and "versions" not in out[srcId].keys():
+            out[srcId]["contact"] = []
+            out[srcId]["license"] = []
+            out[srcId]["versions"] = []
+        # add info
+        out[srcId]["license"].append(licExt)  # assume license doesn't change
+        out[srcId]["versions"].append(ver)
+        # and cleanup contact
+        if contact != "" and not isinstance(contact, list):
+            out[srcId]["contact"].append(contact)
+        elif isinstance(contact, list) and "" in contact:
+            contact.remove("")
+            if len(contact) == 1:
+                out[srcId]["contact"].append(contact[0])
 
-
-# %% populate netcdf-harvested info
-for src in out.keys():
-    # standard identifier (make sure DKRZ == metadata, if not query Martina on date)
-    out[src]["rights_identifier"] = ""
-    out[src]["rights"] = ""  # standard string
-    out[src]["rights_info"] = ""  # standard url
-    out[src]["exceptions_contact"] = ""  # contact info
-    out[src]["source_specific_info"] = ""  # likely empty to start
-    # first version date: initially published under CC BY-SA 4.0 (CMOR3 default is most common)
-    out[src]["history"] = ""
+# cleanup versions using sets
+for key in out.keys():
+    print("cleanup:", key)
+    if "versions" in out[key].keys():
+        tmp = out[key]["versions"]
+        print("in ver:", len(tmp))
+        tmp = list(set(tmp))
+        tmp.sort()
+        print("out ver:", len(tmp))
+        out[key]["versions"] = [tmp[0], tmp[-1], len(tmp)]
+    else:
+        print("no version info:", key)
+    if "license" in out[key].keys():
+        tmp = out[key]["license"]
+        print("in license:", len(tmp))
+        tmp = list(set(tmp))
+        tmp.sort()
+        print("out license:", len(tmp))
+        out[key]["license"] = tmp
+    else:
+        print("no license info:", key)
+    if "contact" in out[key].keys():
+        tmp = out[key]["contact"]
+        print("in contact:", len(tmp))
+        tmp = list(set(tmp))
+        tmp.sort()
+        print("out contact:", len(tmp))
+        out[key]["contact"] = tmp
+    else:
+        print("no contact info:", key)
 
 # %% populate UKESM1-0* provided input
-for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-0-ice-LL"]:
+for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
     out[src]["rights_identifier"] = "CC BY 4.0"
     out[src][
         "rights"] = "Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
@@ -133,3 +205,39 @@ for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-0-ice-LL"]:
     out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
 
 # %% write json
+timeNow = datetime.datetime.now()
+timeFormatDir = timeNow.strftime('%y%m%d')
+outFile = '_'.join([timeFormatDir, 'CMIP6-CMIP_mergedMetadata.json'])
+if os.path.exists(outFile):
+    os.remove(outFile)
+with open(outFile, "w") as jsonFile:
+    json.dump(
+        out, jsonFile, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
+    )
+
+# %% populate netcdf-harvested info
+"""
+for src in out.keys():
+    # standard identifier (make sure DKRZ == metadata, if not query Martina on date)
+    out[src]["rights_identifier"] = ""
+    out[src]["rights"] = ""  # standard string
+    out[src]["rights_info"] = ""  # standard url
+    out[src]["exceptions_contact"] = ""  # contact info
+    out[src]["source_specific_info"] = ""  # likely empty to start
+    # first version date: initially published under CC BY-SA 4.0 (CMOR3 default is most common)
+    out[src]["history"] = ""
+"""
+
+# %% compare strings
+"""
+cases = [(first, second)]
+for a, b in cases:
+    print('{} => {}'.format(a, b))
+    for i, s in enumerate(difflib.ndiff(first, second)):
+        if s[0] == ' ':
+            continue
+        elif s[0] == '-':
+            print(u'Delete "{}" from position {}'.format(s[-1], i))
+        elif s[0] == '+':
+            print(u'Add "{}" to position {}'.format(s[-1], i))
+"""

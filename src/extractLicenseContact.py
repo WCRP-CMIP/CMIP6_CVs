@@ -230,11 +230,6 @@ def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
     """
 
 
-# f = "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"
-# fH = cdm.open(f)
-# var = fH["prc"]
-
-
 def getAxes(var, fileHandle):
     """
     getAxes(var, fileHandle)

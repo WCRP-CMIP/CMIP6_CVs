@@ -1,0 +1,1212 @@
+{
+    "4AOP-v1-5":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "ACCESS-CM2":{
+        "contact":[
+            "access_csiro@csiro.au"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191108",
+            "v20210921",
+            22
+        ]
+    },
+    "ACCESS-ESM1-5":{
+        "contact":[
+            "access_csiro@csiro.au"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191112",
+            "v20211213",
+            24
+        ]
+    },
+    "ACCESS-OM2":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "ACCESS-OM2-025":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "ARTS-2-3":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "AWI-CM-1-1-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "AWI-CM-1-1-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "AWI-CM-1-1-MR":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20181218",
+            "v20200720",
+            4
+        ]
+    },
+    "AWI-ESM-1-1-LR":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200212",
+            "v20200909",
+            4
+        ]
+    },
+    "AWI-ESM-2-1-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "BCC-CSM2-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "BCC-CSM2-MR":{
+        "contact":[
+            "Dr. Tongwen Wu (twwu@cma.gov.cn)",
+            "Dr. Tongwen Wu(twwu@cma.gov.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20181009",
+            "v20201019",
+            49
+        ]
+    },
+    "BCC-ESM1":{
+        "contact":[
+            "Dr. Tongwen Wu (twwu@cma.gov.cn)",
+            "Dr. Tongwen Wu(twwu@cma.gov.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20181114",
+            "v20200917",
+            42
+        ]
+    },
+    "BESM-2-9":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "BNU-ESM-1-1":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CAM-MPAS-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CAM-MPAS-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CAMS-CSM1-0":{
+        "contact":[
+            "Dr. Xinyao Rong (rongxy@cma.gov.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v1",
+            "v20201204",
+            17
+        ]
+    },
+    "CAS-ESM2-0":{
+        "contact":[
+            "He Zhang (zhanghe@mail.iap.ac.cn)",
+            "He Zhang(zhanghe@mail.iap.ac.cn)",
+            "Zhang He (zhanghe@mail.iap.ac.cn)",
+            "Zhang He(zhanghe@mail.iap.ac.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200301",
+            "v20210315",
+            33
+        ]
+    },
+    "CESM1-1-CAM5-CMIP5":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CESM1-CAM5-SE-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CESM1-CAM5-SE-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CESM1-WACCM-SC":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CESM2":{
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190218",
+            "v20200226",
+            27
+        ]
+    },
+    "CESM2-FV2":{
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20200811",
+            6
+        ]
+    },
+    "CESM2-SE":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CESM2-WACCM":{
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190220",
+            "v20210816",
+            19
+        ]
+    },
+    "CESM2-WACCM-FV2":{
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20200731",
+            6
+        ]
+    },
+    "CIESM":{
+        "contact":[
+            "Python Coder (coder@a.b.c.com)",
+            "yanluan@tsinghua.edu.cn"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191202",
+            "v20200806",
+            6
+        ]
+    },
+    "CMCC-CM2-HR4":{
+        "contact":[
+            "T. Lovato"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200904",
+            "v20210720",
+            7
+        ]
+    },
+    "CMCC-CM2-SR5":{
+        "contact":[
+            "R. Henin",
+            "T. Lovato"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200616",
+            "v20220112",
+            8
+        ]
+    },
+    "CMCC-CM2-VHR4":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CMCC-ESM2":{
+        "contact":[
+            "T. Lovato"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20210114",
+            "v20210720",
+            8
+        ]
+    },
+    "CNRM-CM6-1":{
+        "contact":[
+            "contact.cmip@meteo.fr"
+        ],
+        "dkrz":"CC BY-NC-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180626",
+            "v20210212",
+            12
+        ]
+    },
+    "CNRM-CM6-1-HR":{
+        "contact":[
+            "contact.cmip@meteo.fr"
+        ],
+        "dkrz":"CC BY-NC-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191021",
+            "v20191202",
+            2
+        ]
+    },
+    "CNRM-ESM2-1":{
+        "contact":[
+            "contact.cmip@meteo.fr"
+        ],
+        "dkrz":"CC BY-NC-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180914",
+            "v20200715",
+            18
+        ]
+    },
+    "CNRM-ESM2-1-HR":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "CSIRO-Mk3L-1-3":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "CanESM5":{
+        "contact":[
+            "ec.cccma.info-info.ccmac.ec@canada.ca"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190306",
+            "v20190429",
+            3
+        ]
+    },
+    "CanESM5-CanOE":{
+        "contact":[
+            "ec.cccma.info-info.ccmac.ec@canada.ca"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190429",
+            "v20190429",
+            1
+        ]
+    },
+    "E3SM-1-0":{
+        "contact":[
+            "Dave Bader (bader2@llnl.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190206",
+            "v20191220",
+            13
+        ]
+    },
+    "E3SM-1-1":{
+        "contact":[
+            "Dave Bader (bader2@llnl.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191029",
+            "v20201130",
+            4
+        ]
+    },
+    "E3SM-1-1-ECA":{
+        "contact":[
+            "Dave Bader (bader2@llnl.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191216",
+            "v20201001",
+            5
+        ]
+    },
+    "EC-Earth3":{
+        "contact":[
+            "cmip6-data@ec-earth.org"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190405",
+            "v20210915",
+            75
+        ]
+    },
+    "EC-Earth3-AerChem":{
+        "contact":[
+            "cmip6-data@ec-earth.org"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200622",
+            "v20220128",
+            11
+        ]
+    },
+    "EC-Earth3-CC":{
+        "contact":[
+            "cmip6-data@ec-earth.org"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20201229",
+            "v20210616",
+            15
+        ]
+    },
+    "EC-Earth3-GrIS":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "EC-Earth3-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "EC-Earth3-LR":{
+        "contact":[
+            "cmip6-data@ec-earth.org",
+            "pierre-antoine.bretonniere@bsc.es arthur.amaral@bsc.es"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190103",
+            "v20201122",
+            5
+        ]
+    },
+    "EC-Earth3-Veg":{
+        "contact":[
+            "cmip6-data@ec-earth.org"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190605",
+            "v20211207",
+            25
+        ]
+    },
+    "EC-Earth3-Veg-LR":{
+        "contact":[
+            "cmip6-data@ec-earth.org"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200213",
+            "v20201122",
+            7
+        ]
+    },
+    "EC-Earth3P":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "EC-Earth3P-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "EC-Earth3P-VHR":{
+        "contact":[
+            "pierre-antoine.bretonniere@bsc.es"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20201007",
+            "v20201007",
+            1
+        ]
+    },
+    "ECMWF-IFS-HR":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "ECMWF-IFS-LR":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "ECMWF-IFS-MR":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "EMAC-2-53-Vol":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "EMAC-2-54-AerChem":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "FGOALS-f3-H":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "FGOALS-f3-L":{
+        "contact":[
+            "Bian He(heb@lasg.iap.ac.cn)",
+            "Qing Bao(qbao@lasg.iap.ac.cn),Bian He(heb@lasg.iap.ac.cn)",
+            "Yongqiang Yu (yyq@lasg.iap.ac.cn);Bian He(heb@lasg.iap.ac.cn)",
+            "Yongqiang Yu(yyq@lasg.iap.ac.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20181108",
+            "v20201204",
+            36
+        ]
+    },
+    "FGOALS-g3":{
+        "contact":[
+            "Lijuan Li (ljli@mail.iap.ac.cn)",
+            "Lijuan Li(ljli@mail.iap.ac.cn)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190818",
+            "v20210615",
+            58
+        ]
+    },
+    "FIO-ESM-2-0":{
+        "contact":[
+            "songroy@fio.org.cn",
+            "songroy@fio.org.cn (coder@a.b.c.com)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190910",
+            "v20201017",
+            58
+        ]
+    },
+    "GFDL-AM4":{
+        "contact":[
+            "gfdl.climate.model.info@noaa.gov"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180301",
+            "v20180807",
+            2
+        ]
+    },
+    "GFDL-CM4":{
+        "contact":[
+            "gfdl.climate.model.info@noaa.gov"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180301",
+            "v20190920",
+            5
+        ]
+    },
+    "GFDL-CM4C192":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GFDL-ESM2M":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GFDL-ESM4":{
+        "contact":[
+            "gfdl.climate.model.info@noaa.gov"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180701",
+            "v20190920",
+            3
+        ]
+    },
+    "GFDL-GLOBAL-LBL":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GFDL-GRTCODE":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GFDL-OM4p5B":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GFDL-RFM-DISORT":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "GISS-E2-1-G":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180824",
+            "v20200206",
+            26
+        ]
+    },
+    "GISS-E2-1-G-CC":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190325",
+            "v20190815",
+            2
+        ]
+    },
+    "GISS-E2-1-H":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180824",
+            "v20191010",
+            6
+        ]
+    },
+    "GISS-E2-2-G":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20191120",
+            1
+        ]
+    },
+    "GISS-E2-2-H":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20200115",
+            2
+        ]
+    },
+    "GISS-E3-G":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HadGEM3-GC31-HH":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HadGEM3-GC31-HM":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HadGEM3-GC31-LL":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190614",
+            "v20211217",
+            47
+        ]
+    },
+    "HadGEM3-GC31-LM":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HadGEM3-GC31-MH":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HadGEM3-GC31-MM":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190903",
+            "v20201113",
+            25
+        ]
+    },
+    "HiRAM-SIT-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "HiRAM-SIT-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "ICON-ESM-LR":{
+        "contact":[
+            "cmip6-mpi-esm@dkrz.de"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20210215",
+            "v20210215",
+            1
+        ]
+    },
+    "IITM-ESM":{
+        "contact":[
+            "iitm-esm@tropmet.res.in"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190719",
+            "v20210831",
+            8
+        ]
+    },
+    "INM-CM4-8":{
+        "contact":[
+            "Evgeny Volodin (volodinev@gmail.com)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190528",
+            "v20201105",
+            10
+        ]
+    },
+    "INM-CM5-0":{
+        "contact":[
+            "Evgeny Volodin (volodinev@gmail.com)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190610",
+            "v20201029",
+            12
+        ]
+    },
+    "INM-CM5-H":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM5A2-INCA":{
+        "contact":[
+            "ipsl-cmip6@listes.ipsl.fr"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20200729",
+            "v20210216",
+            3
+        ]
+    },
+    "IPSL-CM6A-ATM-HR":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "IPSL-CM6A-ATM-ICO-HR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM6A-ATM-ICO-LR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM6A-ATM-ICO-MR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM6A-ATM-ICO-VHR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM6A-ATM-LR-REPROBUS":{},
+    "IPSL-CM6A-LR":{
+        "contact":[
+            "cmip6@ipsl.fr",
+            "contact.cmip6@ipsl.fr",
+            "ipsl-cmip6@listes.ipsl.fr"
+        ],
+        "dkrz":"CC BY-NC-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180314",
+            "v20211229",
+            26
+        ]
+    },
+    "IPSL-CM6A-LR-INCA":{
+        "contact":[
+            "ipsl-cmip6@listes.ipsl.fr"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20210113",
+            "v20210216",
+            2
+        ]
+    },
+    "IPSL-CM6A-MR025":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "IPSL-CM6A-MR1":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "KACE-1-0-G":{
+        "contact":[
+            "Hyun Min, Sung (sunghm122@korea.kr)",
+            "Yoon-Jin Lim (yoonjin.lim@korea.kr)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190813",
+            "v20210112",
+            32
+        ]
+    },
+    "KIOST-ESM":{
+        "contact":[
+            "Prof. Young Ho Kim (yhokim@pknu.ac.kr)",
+            "Prof.Young Ho Kim (yhokim@pknu.ac.kr)",
+            "Young Ho Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)",
+            "YoungHo Kim (yhkim@pknu.ac.kr & yhkimstar@gmail.com)",
+            "YoungHo Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191104",
+            "v20210928",
+            40
+        ]
+    },
+    "LBLRTM-12-8":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "MCM-UA-1-0":{
+        "contact":[
+            "GEOS-CMIP@email.arizona.edu           "
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[*]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190731",
+            "v20191017",
+            2
+        ]
+    },
+    "MIROC-ES2H":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20210125",
+            "v20210125",
+            1
+        ]
+    },
+    "MIROC-ES2H-NB":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "MIROC-ES2L":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190823",
+            "v20210317",
+            13
+        ]
+    },
+    "MIROC6":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20181212",
+            "v20220222",
+            24
+        ]
+    },
+    "MPI-ESM-1-2-HAM":{
+        "contact":[
+            "david.neubauer@env.ethz.ch"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190627",
+            "v20210201",
+            8
+        ]
+    },
+    "MPI-ESM1-2-HR":{
+        "contact":[
+            "cmip6-mpi-esm@dkrz.de"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190710",
+            "v20200909",
+            3
+        ]
+    },
+    "MPI-ESM1-2-LR":{
+        "contact":[
+            "cmip6-mpi-esm@dkrz.de"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190710",
+            "v20210901",
+            5
+        ]
+    },
+    "MPI-ESM1-2-XR":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "MRI-AGCM3-2-H":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "MRI-AGCM3-2-S":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "MRI-ESM2-0":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190222",
+            "v20210921",
+            30
+        ]
+    },
+    "NESM3":{
+        "contact":[
+            "esmc@nuist.edu.cn"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190625",
+            "v20190830",
+            23
+        ]
+    },
+    "NICAM16-7S":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NICAM16-8S":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NICAM16-9D-L78":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NICAM16-9S":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NorCPM1":{
+        "contact":[
+            "Please send any requests or bug reports to norcpm@uib.no"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190914",
+            "v20200724",
+            4
+        ]
+    },
+    "NorESM1-F":{
+        "contact":[
+            "Please send any requests or bug reports to noresm-ncc@met.no."
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190920",
+            "v20191108",
+            2
+        ]
+    },
+    "NorESM2-HH":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NorESM2-LM":{
+        "contact":[
+            "Please send any requests or bug reports to noresm-ncc@met.no."
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190815",
+            "v20210908",
+            14
+        ]
+    },
+    "NorESM2-LME":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NorESM2-LMEC":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NorESM2-MH":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "NorESM2-MM":{
+        "contact":[
+            "Please send any requests or bug reports to noresm-ncc@met.no."
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191108",
+            "v20210908",
+            8
+        ]
+    },
+    "PCMDI-test-1-0":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "RRTMG-LW-4-91":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "RRTMG-SW-4-02":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "RTE-RRTMGP-181204":{
+        "dkrz":"CC BY-NC-SA 4.0"
+    },
+    "SAM0-UNICON":{
+        "contact":[
+            "Sungsu Park (sungsup@snu.ac.kr), Jihoon Shin (sjh11556@snu.ac.kr)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190323",
+            "v20190910",
+            2
+        ]
+    },
+    "TaiESM1":{
+        "contact":[
+            "Dr. Wei-Liang Lee (leelupin@gate.sinica.edu.tw)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191225",
+            "v20211026",
+            30
+        ]
+    },
+    "TaiESM1-TIMCOM":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "TaiESM1-TIMCOM2":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "UKESM1-0-LL":{
+        "contact":[],
+        "dkrz":"CC BY-SA 4.0",
+        "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+        "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)",
+        "rights_identifier":"CC BY 4.0",
+        "rights_info":"https://creativecommons.org/licenses/by/4.0/",
+        "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+        "versions":[
+            "v20190404",
+            "v20210817",
+            78
+        ]
+    },
+    "UKESM1-0-MMh":{
+        "dkrz":"CC BY-SA 4.0",
+        "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+        "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+        "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)",
+        "rights_identifier":"CC BY 4.0",
+        "rights_info":"https://creativecommons.org/licenses/by/4.0/",
+        "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+    },
+    "UKESM1-ice-LL":{
+        "dkrz":"CC BY-SA 4.0",
+        "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+        "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+        "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)",
+        "rights_identifier":"CC BY 4.0",
+        "rights_info":"https://creativecommons.org/licenses/by/4.0/",
+        "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+    },
+    "UofT-CCSM4":{
+        "dkrz":"CC BY-SA 4.0"
+    },
+    "VRESM-1-0":{
+        "dkrz":"CC BY-SA 4.0"
+    }
+}

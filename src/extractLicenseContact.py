@@ -35,6 +35,10 @@ PJD 25 Feb 2022     - Tweak getGlobalAtts to deal with cdms2.open SystemError
 PJD 26 Feb 2022     - Updated getGlobalAtts to only return valid calendar; updated getCalendar getAxisList -> getAxisIds
 PJD 28 Feb 2022     - Added argparse for activity_id/path scan
 PJD 28 Feb 2022     - Updated compareDicts to truncate duplicate values, adding a counter for times returned
+PJD  5 Mar 2022     - Added OMIP to activity list
+PJD  7 Mar 2022     - Added RFMIP to activity list
+PJD  7 Mar 2022     - Added to badFiles ScenarioMIP 527759
+PJD  7 Mar 2022     - Added CMIP6 search option - all MIPs
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -230,9 +234,10 @@ def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
     """
 
 
+# f = "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc"  # 527759
 # f = "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"
 # fH = cdm.open(f)
-# var = fH["prc"]
+# var = fH["tauvo"]
 
 
 def getAxes(var, fileHandle):
@@ -800,7 +805,7 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # Proactive
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_18500301-18591231.nc",  # 15108 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_185003-185912.nc",  # 15201 CMIP
-    # "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
+    "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
 )
 
 # %% loop over files and build index
@@ -809,8 +814,10 @@ parser.add_argument(
     "activityId", metavar="S", type=str, help="an activity_id to build the search from"
 )
 args = parser.parse_args()
-if args.activityId in ["CMIP", "ScenarioMIP"]:
+if args.activityId in ["CMIP", "OMIP", "RFMIP", "ScenarioMIP"]:
     actId = args.activityId
+elif args.activityId == "CMIP6":
+    actId = ""
 else:
     print("Invalid path, ", args.activityId, "exiting")
     sys.exit()

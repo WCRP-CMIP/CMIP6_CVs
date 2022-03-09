@@ -39,6 +39,7 @@ PJD  5 Mar 2022     - Added OMIP to activity list
 PJD  7 Mar 2022     - Added RFMIP to activity list
 PJD  7 Mar 2022     - Added to badFiles ScenarioMIP 527759
 PJD  7 Mar 2022     - Added CMIP6 search option - all MIPs
+PJD  8 Mar 2022     - Added to badFiles CMIP6 669356
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -806,6 +807,7 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_18500301-18591231.nc",  # 15108 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_185003-185912.nc",  # 15201 CMIP
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
+    "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669356 CMIP6
 )
 
 # %% loop over files and build index

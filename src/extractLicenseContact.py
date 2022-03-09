@@ -879,7 +879,7 @@ for cnt, filePath in enumerate(x):
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             # catch file open error
-            if type(dic2, str):
+            if isinstance(dic2, str):
                 badFileList.append(dic2)
             elif dic2 == {}:
                 continue  # skip file, proceed to next in loop

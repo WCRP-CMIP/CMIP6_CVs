@@ -40,6 +40,8 @@ PJD  7 Mar 2022     - Added RFMIP to activity list
 PJD  7 Mar 2022     - Added to badFiles ScenarioMIP 527759
 PJD  7 Mar 2022     - Added CMIP6 search option - all MIPs
 PJD  8 Mar 2022     - Added to badFiles CMIP6 669356
+PJD  9 Mar 2022     - Added to badFiles ScenarioMIP 5543227
+PJD  9 Mar 2022     - Updated getGlobalAtt to catch OSError and report file as string
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -614,14 +616,13 @@ def getGlobalAtts(filePath):
     # https://github.com/CDAT/cdms/issues/442
     try:
         fH = cdms2.open(filePath)
-    except (SystemError):
+    except OSError as error:
         print("")
         print("")
         print("badFile:", filePath)
+        print("OSError:", error)
         print("")
-        print("")
-        # pdb.set_trace()
-        return {}
+        return filePath
     # deal with SystemError
     for cnt, globalAtt in enumerate(globalAtts):
         try:
@@ -808,6 +809,7 @@ cdmsBadFiles = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_185003-185912.nc",  # 15201 CMIP
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
     "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669356 CMIP6
+    "/p/css03/esgf_publish/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp119/r5i1p1f1/Emon/cldnci/gn/v20210907/cldnci_Emon_MRI-ESM2-0_ssp119_r5i1p1f1_gn_201501-210012.nc",  # 5543227 ScenarioMIP
 )
 
 # %% loop over files and build index
@@ -828,6 +830,9 @@ else:
 testPath = os.path.join(testPath, actId)
 print("Processing testPath:", testPath)
 
+# create variable to catch bad files
+badFileList = []
+
 # use iterator to start scan
 x = scantree(testPath)
 cmip = {}
@@ -847,7 +852,9 @@ for cnt, filePath in enumerate(x):
         # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
         print("catching dictionary, pre-crash")
         pdb.set_trace()
-    indStart = -1  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
+    indStart = (
+        -1
+    )  # 5543220  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
     if cnt < indStart:
         print(cnt, filePath.path)
         continue
@@ -872,7 +879,9 @@ for cnt, filePath in enumerate(x):
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             # catch file open error
-            if dic2 == {}:
+            if type(dic2, str):
+                badFileList.append(dic2)
+            elif dic2 == {}:
                 continue  # skip file, proceed to next in loop
             dic1 = cmip[key]
             print("call compareDicts")
@@ -902,3 +911,6 @@ for cnt, filePath in enumerate(x):
 
 # %% and write out final file
 writeJson(cmip, testPath, cnt, timeTaken)
+print("badFileList:")
+for count, filename in enumerate(badFileList):
+    print("{:04d}".format(count), badFileList[count])

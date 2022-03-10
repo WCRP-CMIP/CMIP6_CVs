@@ -616,13 +616,13 @@ def getGlobalAtts(filePath):
     # https://github.com/CDAT/cdms/issues/442
     try:
         fH = cdms2.open(filePath)
-    except OSError as error:
+    except (OSError, UnicodeDecodeError) as error:
         print("")
         print("")
         print("badFile:", filePath)
         print("OSError:", error)
         print("")
-        return filePath
+        return [filePath, error]
     # deal with SystemError
     for cnt, globalAtt in enumerate(globalAtts):
         try:
@@ -879,7 +879,7 @@ for cnt, filePath in enumerate(x):
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
             # catch file open error
-            if isinstance(dic2, str):
+            if isinstance(dic2, list):
                 badFileList.append(dic2)
             elif dic2 == {}:
                 continue  # skip file, proceed to next in loop

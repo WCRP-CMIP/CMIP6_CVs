@@ -42,6 +42,7 @@ PJD  7 Mar 2022     - Added CMIP6 search option - all MIPs
 PJD  8 Mar 2022     - Added to badFiles CMIP6 669356
 PJD  9 Mar 2022     - Added to badFiles ScenarioMIP 5543227
 PJD  9 Mar 2022     - Updated getGlobalAtt to catch OSError and report file as string
+PJD 10 Mar 2022     - Updated getGlobalAtt to catch SystemError ("UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 11: invalid start byte")
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -616,7 +617,7 @@ def getGlobalAtts(filePath):
     # https://github.com/CDAT/cdms/issues/442
     try:
         fH = cdms2.open(filePath)
-    except (OSError, UnicodeDecodeError) as error:
+    except (OSError, SystemError, UnicodeDecodeError) as error:
         print("")
         print("")
         print("badFile:", filePath)

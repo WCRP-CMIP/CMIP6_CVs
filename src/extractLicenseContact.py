@@ -43,6 +43,7 @@ PJD  8 Mar 2022     - Added to badFiles CMIP6 669356
 PJD  9 Mar 2022     - Added to badFiles ScenarioMIP 5543227
 PJD  9 Mar 2022     - Updated getGlobalAtt to catch OSError and report file as string
 PJD 10 Mar 2022     - Updated getGlobalAtt to catch SystemError ("UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 11: invalid start byte")
+PJD 10 Mar 2022     - Update to remove cdmsBadFiles list - update filename
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -236,12 +237,6 @@ def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
 
     Checks first argument to find second argument
     """
-
-
-# f = "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc"  # 527759
-# f = "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"
-# fH = cdm.open(f)
-# var = fH["tauvo"]
 
 
 def getAxes(var, fileHandle):
@@ -745,9 +740,9 @@ def scantree(path):
 
 def writeJson(dic, testPath, count, endTime):
     """
-    writeJson(dic, testPath, count)
+    writeJson(dic, testPath, count, endTime)
 
-    Takes dictionary, path and count and writes out to json file
+    Takes dictionary, path, count and endTime and writes out to json file
     """
     # get time info
     timeNow = datetime.datetime.now()
@@ -755,6 +750,8 @@ def writeJson(dic, testPath, count, endTime):
     cmip["version_metadata"]["end_time  "] = endTime
     # get path
     pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
+    if pathInfo == "CMIP6-":
+        pathInfo = "CMIP6-no-cdmsBadFiles"
     # get count
     cmip["version_metadata"]["file_processed_count"] = str(count)
     # Write output
@@ -784,7 +781,8 @@ testPath = (
 )
 
 # define bad files
-cdmsBadFiles = (
+cdmsBadFiles = ()
+cdmsBadFiles2 = (
     "badFilesAreHere",
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-1859123.nc",
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-18591231.nc",
@@ -854,6 +852,7 @@ for cnt, filePath in enumerate(x):
         print("catching dictionary, pre-crash")
         pdb.set_trace()
     indStart = (
+        # 6547960 ScenarioMIP
         -1
     )  # 5543220  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
     if cnt < indStart:

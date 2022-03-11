@@ -616,7 +616,7 @@ def getGlobalAtts(filePath):
         print("")
         print("")
         print("badFile:", filePath)
-        print("OSError:", error)
+        print("Error:", error)
         print("")
         return [filePath, error]
     # deal with SystemError
@@ -881,6 +881,7 @@ for cnt, filePath in enumerate(x):
             # catch file open error
             if isinstance(dic2, list):
                 badFileList.append(dic2)
+                continue  # skip file, proceed to next in loop
             elif dic2 == {}:
                 continue  # skip file, proceed to next in loop
             dic1 = cmip[key]

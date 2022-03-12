@@ -304,7 +304,7 @@ def getAxes(var, fileHandle):
 
     # deal with i,j index grids
     except Exception as error:
-        print("enter except", error)
+        print("getAxes: enter except", error)
         axes = var.getAxisIds()
         # test for var shape
         if "site" in axes:
@@ -341,8 +341,8 @@ def getAxes(var, fileHandle):
                 heightUnit = heightVar.units
             else:
                 heightLen, height0, heightN = ["x" for _ in range(3)]
-        except:
-            print("no valid dims")
+        except Exception as error:
+            print("getAxes: try2, no valid dims", error)
 
     # update grid_info dictionary
     tmp = {}
@@ -614,8 +614,7 @@ def getGlobalAtts(filePath):
         fH = cdms2.open(filePath)
     except (OSError, SystemError, UnicodeDecodeError) as error:
         print("")
-        print("")
-        print("badFile:", filePath)
+        print("getGlobalAtts: badFile:", filePath)
         print("Error:", error)
         print("")
         return [filePath, error]
@@ -627,7 +626,7 @@ def getGlobalAtts(filePath):
             if isinstance(val, np.ndarray) and len(val) == 1:
                 val = str(val.tolist()[0])
         except Exception as error:
-            print("No entry:", globalAtt, error)
+            print("getGlobalAtts: No entry:", globalAtt, error)
             val = ""
         tmp[globalAtt] = val
     # assign nominal resolution per realm

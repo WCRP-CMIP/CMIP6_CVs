@@ -862,10 +862,10 @@ for cnt, filePath in enumerate(x):
         firstPath = "/".join(filePath.path.split("/")[0:-1])
     #    cmip = json.load(open("dupe.json"))
     # debug end
-    # check for bad file
-    if filePath.path in cdmsBadFiles:
-        print("bad file identified, skipping")
-        continue  # skip file, proceed to next in loop
+    # check for bad file - deprecated by try in getGlobalAtts
+    # if filePath.path in cdmsBadFiles:
+    #    print("bad file identified, skipping")
+    #    continue  # skip file, proceed to next in loop
     # deal with multiple files - e.g. Omon
     if cnt == 0:
         firstPath = "/".join(filePath.path.split("/")[0:-1])

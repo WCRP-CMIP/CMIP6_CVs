@@ -44,6 +44,8 @@ PJD  9 Mar 2022     - Added to badFiles ScenarioMIP 5543227
 PJD  9 Mar 2022     - Updated getGlobalAtt to catch OSError and report file as string
 PJD 10 Mar 2022     - Updated getGlobalAtt to catch SystemError ("UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 11: invalid start byte")
 PJD 10 Mar 2022     - Update to remove cdmsBadFiles list - update filename
+PJD 14 Mar 2022     - Update getGlobalAtt to catch edge case of OSError/cdms read fail
+PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -774,9 +776,11 @@ testPath = (
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1"
     # "/p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical"
     # "/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-f3-L/lig127k/r1i1p1f1/SImon/"  # i, j index checks
-    "/p/css03/esgf_publish/CMIP6"
     # "/p/css03/esgf_publish/CMIP6/CMIP"
     # "/p/css03/esgf_publish/CMIP6/ScenarioMIP"
+    # "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/"
+    # "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future"
+    "/p/css03/esgf_publish/CMIP6"
 )
 
 # define bad files
@@ -808,6 +812,7 @@ cdmsBadFiles2 = (
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp126/r5i1p1f1/Omon/tauvo/gn/v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
     "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669356 CMIP6
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp119/r5i1p1f1/Emon/cldnci/gn/v20210907/cldnci_Emon_MRI-ESM2-0_ssp119_r5i1p1f1_gn_201501-210012.nc",  # 5543227 ScenarioMIP
+    "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669xxx
 )
 
 # %% loop over files and build index
@@ -851,9 +856,10 @@ for cnt, filePath in enumerate(x):
         print("catching dictionary, pre-crash")
         pdb.set_trace()
     indStart = (
+        # 669000  # HighResMIP
         # 6547960 ScenarioMIP
         -1
-    )  # 5543220  # 47437  # -1  # 47437  # 723495 # 25635 (complete archive)
+    )
     if cnt < indStart:
         print(cnt, filePath.path)
         continue
@@ -877,6 +883,7 @@ for cnt, filePath in enumerate(x):
             print("if key in cmip")
             # pull global atts and compare, note if different
             dic2 = getGlobalAtts(filePath.path)
+            print("dic2:", dic2)
             # catch file open error
             if isinstance(dic2, list):
                 badFileList.append(dic2)
@@ -892,7 +899,10 @@ for cnt, filePath in enumerate(x):
         else:
             # pull global atts for new entry
             tmp = getGlobalAtts(filePath.path)
-            if tmp == {}:
+            if isinstance(tmp, list):
+                badFileList.append(tmp)
+                continue  # skip file, proceed to next in loop
+            elif tmp == {}:
                 print("if key in cmip - else")
                 continue  # skip file, proceed to next in loop
             cmip[key] = tmp
@@ -905,12 +915,43 @@ for cnt, filePath in enumerate(x):
     endTime = time.time()
     timeTaken = "{:07.3f}".format(endTime - startTime)
     print("cnt:", cnt, "time:", timeTaken)
-
     if not cnt % 1000:
         writeJson(cmip, testPath, cnt, timeTaken)
 
 # %% and write out final file
+# end timer
+endTime = time.time()
+timeTaken = "{:07.3f}".format(endTime - startTime)
+print("cnt:", cnt, "time:", timeTaken)
 writeJson(cmip, testPath, cnt, timeTaken)
 print("badFileList:")
 for count, filename in enumerate(badFileList):
     print("{:04d}".format(count), badFileList[count])
+
+
+# %% Notes
+"""
+(cdms315) bash-4.2$ python extractLicenseContact.py RFMIP
+badFileList:
+0000 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-ghg/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-ghg_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0001 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-ghg/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-CM6-1_piClim-ghg_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0002 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-control/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-control_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0003 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-control/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-CM6-1_piClim-control_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0004 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-anthro/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-anthro_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0005 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-anthro/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-CM6-1_piClim-anthro_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0006 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-4xCO2/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-4xCO2_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0007 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-4xCO2/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-CM6-1_piClim-4xCO2_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0008 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-aer/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-aer_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0009 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-aer/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-CM6-1_piClim-aer_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0010 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-lu/r1i1p1f2/Eday/rivo/gn/v20190219/rivo_Eday_CNRM-ESM2-1_piClim-lu_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0011 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-lu/r1i1p1f2/Emon/wtd/gn/v20190219/wtd_Emon_CNRM-ESM2-1_piClim-lu_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0012 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-ghg/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-ESM2-1_piClim-ghg_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0013 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-ghg/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-ESM2-1_piClim-ghg_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0014 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-control/r1i1p1f2/Eday/rivo/gn/v20190219/rivo_Eday_CNRM-ESM2-1_piClim-control_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0015 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-control/r1i1p1f2/Emon/wtd/gn/v20190219/wtd_Emon_CNRM-ESM2-1_piClim-control_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0016 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-anthro/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-ESM2-1_piClim-anthro_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0017 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-4xCO2/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-ESM2-1_piClim-4xCO2_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0018 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-4xCO2/r1i1p1f2/Emon/wtd/gn/v20190621/wtd_Emon_CNRM-ESM2-1_piClim-4xCO2_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0019 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-aer/r1i1p1f2/Eday/rivo/gn/v20190219/rivo_Eday_CNRM-ESM2-1_piClim-aer_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+0020 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-ESM2-1/piClim-aer/r1i1p1f2/Emon/wtd/gn/v20190219/wtd_Emon_CNRM-ESM2-1_piClim-aer_r1i1p1f2_gn_185001-187912.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]
+"""

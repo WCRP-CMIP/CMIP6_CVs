@@ -47,6 +47,7 @@ PJD 10 Mar 2022     - Update to remove cdmsBadFiles list - update filename
 PJD 14 Mar 2022     - Update getGlobalAtt to catch edge case of OSError/cdms read fail
 PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
 PJD 16 Mar 2022     - Rewrote IO around xarray data = dataset.open_dataset(f) - getGlobalAtt/getCalendar
+PJD 17 Mar 2022     - Update to finalize xarray IO; Add new ValueError to open try statement (new for xarray)
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -632,7 +633,7 @@ def getGlobalAtts(filePath):
     try:
         ###fH = cdms2.open(filePath)
         fH = dataset.open_dataset(filePath)
-    except (OSError, SystemError, UnicodeDecodeError) as error:
+    except (OSError, SystemError, UnicodeDecodeError, ValueError) as error:
         print("")
         print("getGlobalAtts: badFile:", filePath)
         print("Error:", error)

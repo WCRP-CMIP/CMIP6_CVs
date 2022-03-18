@@ -46,6 +46,7 @@ PJD 10 Mar 2022     - Updated getGlobalAtt to catch SystemError ("UnicodeDecodeE
 PJD 10 Mar 2022     - Update to remove cdmsBadFiles list - update filename
 PJD 14 Mar 2022     - Update getGlobalAtt to catch edge case of OSError/cdms read fail
 PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
+PJD 16 Mar 2022     - Rewrote IO around xarray data = dataset.open_dataset(f) - getGlobalAtt/getCalendar
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -58,7 +59,8 @@ PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
 
 # %% imports
 import argparse
-import cdms2
+
+# import cdms2
 import datetime
 import json
 import numpy as np
@@ -67,6 +69,7 @@ import pdb
 from os import scandir
 import sys
 import time
+from xcdat import dataset
 
 # %% function defs
 
@@ -241,9 +244,10 @@ def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
     """
 
 
-def getAxes(var, fileHandle):
+def getAxes(d, varName):
     """
-    getAxes(var, fileHandle)
+    ###getAxes(var, fileHandle)
+    getAxes(d, varName)
 
     Extracts grid info dependent on input
     """
@@ -268,19 +272,28 @@ def getAxes(var, fileHandle):
         ]
     )
 
+    # get coord dict
+    axisIds = list(d._coord_names)
+    varShape = eval(".".join(["d", varName, "shape"]))
+    heightVarName = d._coord_names - set(
+        ["time", "lat", "latitude", "lon", "longitude"]
+    )
     try:
         print("enter try")
-        if len(var.shape) == 1:
+        if len(varShape) == 1:
             print("no valid grid")
             latLen, lat0, latN = ["x" for _ in range(3)]
             lonLen, lon0, lonN = ["x" for _ in range(3)]
             heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
-        elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
+        ###elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
+        elif axisIds in [["ygre", "xgre"], ["yant", "xant"]]:
             print("hit ice-sheet grid, exiting")
             pass
         else:
-            lat = var.getLatitude()
-            lon = var.getLongitude()
+            ###lat = var.getLatitude()
+            lat = d.lat.data
+            ###lon = var.getLongitude()
+            lon = d.lon.data
             # test for None
             if not [x for x in (lat, lon) if x is None]:
                 raise Exception("Attribute Error")
@@ -295,8 +308,9 @@ def getAxes(var, fileHandle):
             lon0 = str(np.min(lon))  # str(lon[0])
             lonN = str(np.max(lon))  # str(lon[-1])
             # get height conditional on shape
-            if len(var.shape) > 3 and "height" in var.getAxisIds():
-                heightVar = var.getLevel()
+            ###if len(var.shape) > 3 and "height" in var.getAxisIds():
+            if len(varShape) > 3 and "height" in axisIds:
+                heightVar = eval(".".join(["d", heightVarName, "data"]))
                 heightLen = str(len(heightVar))
                 height0 = str(heightVar[0])
                 heightN = str(heightVar[-1])
@@ -307,37 +321,37 @@ def getAxes(var, fileHandle):
     # deal with i,j index grids
     except Exception as error:
         print("getAxes: enter except", error)
-        axes = var.getAxisIds()
+        ###axes = var.getAxisIds()
         # test for var shape
-        if "site" in axes:
+        if "site" in axisIds:
             # assume a time, site variable (no lat/lon)
             return tmp
             raise Exception("site variable, skipping")
-        elif axes[0] == "time" and var.shape == 3:
+        elif axisIds[0] == "time" and varShape == 3:
             # assume time, lat, lon
             axInd = 1
-        elif len(var.shape) == 4:
+        elif len(varShape) == 4:
             # assume time, height, lat, lon
             axInd = 2
-        elif len(var.shape) == 2:
+        elif len(varShape) == 2:
             # assume lat, lon (fx field)
             axInd = 0
         try:
             print("enter try2")
             # pdb.set_trace()
-            latLen = str(len(axes[axInd]))
-            latVar = fileHandle[axes[axInd]]
+            latVar = d.lat.data
+            latLen = str(len(latVar))
             lat0 = str(np.min(latVar))
             print("lat0")
             print(lat0)
             latN = str(np.max(latVar))
-            lon = str(len(axes[axInd + 1]))
-            lonVar = fileHandle[axes[axInd + 1]]
+            lonVar = d.lon.data
+            lon = str(len(lonVar))
             lon0 = str(np.min(lonVar))
             lonN = str(np.max(lonVar))
-            if len(var.shape) == 4:
-                heightLen = str(len(axes[1]))
-                heightVar = fileHandle[axes[1]]
+            if len(varShape) == 4:
+                heightVar = eval(".".join(["d", heightVarName, "data"]))
+                heightLen = str(len(heightVar))
                 height0 = str(heightVar[0])
                 heightN = str(heightVar[-1])
                 heightUnit = heightVar.units
@@ -374,10 +388,13 @@ def getCalendar(var):
 
     Extracts calendar info from variable time axis
     """
-    axisIds = var.getAxisIds()
+    ###axisIds = var.getAxisIds()
+    axisIds = var._coord_names
     if "time" in axisIds:
-        timeAx = var.getTime()
-        calendar = timeAx.calendar
+        ###timeAx = var.getTime()
+        ###calendar = timeAx.calendar
+        if "calendar" in var.time.encoding.keys():
+            calendar = var.time.encoding["calendar"]
     else:
         calendar = ""
 
@@ -613,17 +630,20 @@ def getGlobalAtts(filePath):
     # deal with SystemError - CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2 data
     # https://github.com/CDAT/cdms/issues/442
     try:
-        fH = cdms2.open(filePath)
+        ###fH = cdms2.open(filePath)
+        fH = dataset.open_dataset(filePath)
     except (OSError, SystemError, UnicodeDecodeError) as error:
         print("")
         print("getGlobalAtts: badFile:", filePath)
         print("Error:", error)
         print("")
         return [filePath, error]
-    # deal with SystemError
+    # extract globalAtts
+    globalAttDic = fH.attrs
     for cnt, globalAtt in enumerate(globalAtts):
         try:
-            val = eval("".join(["fH.", globalAtt]))
+            ###val = eval("".join(["fH.", globalAtt]))
+            val = globalAttDic[globalAtt]
             # catch case of numpy branch info
             if isinstance(val, np.ndarray) and len(val) == 1:
                 val = str(val.tolist()[0])
@@ -686,7 +706,10 @@ def getGlobalAtts(filePath):
     ):
         pdb.set_trace()
     # debug close
-    varNames = fH.variables
+    ###varNames = fH.variables
+    varNames = []
+    for a, b in enumerate(fH.data_vars.keys()):
+        varNames.append(b)
     # deal with basin var
     if all(x in filePath for x in ["/basin/", "/basin"]):
         excludeVars.remove("basin")
@@ -700,20 +723,23 @@ def getGlobalAtts(filePath):
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
     # pdb.set_trace()
-    var = fH[tmp["variable_id"]]
+    var = eval(".".join(["fH", varName, "data"]))
     if var is None:
-        var = fH[varName]
+        ###var = fH[varName]
+        var = eval("fH.", varName, ".data")
     if var is None:
         tmp["grid_info"] = "x"
         tmp["calendar"] = "x"
     else:
-        tmp["grid_info"] = getAxes(var, fH)
-        calendar = getCalendar(var)
+        tmp["grid_info"] = getAxes(fH, varName)
+        ###calendar = getCalendar(var)
+        calendar = getCalendar(fH)
         if calendar != "":
             tmp["calendar"] = calendar
 
     # add list of non-queried globalAtts
-    tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
+    ###tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
+    tmp["||_unvalidated"] = list(set(fH.attrs).difference(globalAtts))
     fH.close()
 
     return tmp

@@ -75,6 +75,21 @@ from xcdat import dataset
 # %% function defs
 
 
+class numpyEncoder(json.JSONEncoder):
+    """
+    After https://stackoverflow.com/questions/50916422/python-typeerror-object-of-type-int64-is-not-json-serializable
+    """
+
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super(numpyEncoder, self).default(obj)
+
+
 def alertError(count, filePath, key2):
     """
     alertError()
@@ -631,8 +646,8 @@ def getGlobalAtts(filePath):
     # deal with SystemError - CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2 data
     # https://github.com/CDAT/cdms/issues/442
     try:
-        ###fH = cdms2.open(filePath)
-        fH = dataset.open_dataset(filePath)
+        ###fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
+        fH = dataset.open_dataset(filePath)  # ValueError
     except (OSError, SystemError, UnicodeDecodeError, ValueError) as error:
         print("")
         print("getGlobalAtts: badFile:", filePath)
@@ -791,7 +806,13 @@ def writeJson(dic, testPath, count, endTime):
     print("")
     fH = open(outFile, "w")
     json.dump(
-        cmip, fH, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
+        cmip,
+        fH,
+        ensure_ascii=True,
+        sort_keys=True,
+        indent=4,
+        separators=(",", ":"),
+        cls=numpyEncoder,
     )
     fH.close()
 
@@ -958,6 +979,29 @@ for count, filename in enumerate(badFileList):
 
 # %% Notes
 """
+Steve joblib demo
+
+# imports
+from joblib import Parallel, delayed
+from tqdm import tqdm
+
+# worker function
+def paul(fn):
+    . . .
+    key = getDrs(filepath.path)
+    tmp = getGlobalAtts(fn.path)
+    return key, tmp
+
+# call worker function in parallel
+results = Parallel(n_jobs=5)(delayed(paul)(fn) for fn in tqdm(filelist))
+
+# put results into a dictionary based on some rules
+for row in result:
+    if …:
+        cmip[key] = tmp
+    elif …:
+        cmip[key] = tmp
+
 (cdms315) bash-4.2$ python extractLicenseContact.py RFMIP
 badFileList:
 0000 ['/p/css03/esgf_publish/CMIP6/RFMIP/CNRM-CERFACS/CNRM-CM6-1/piClim-ghg/r1i1p1f2/Eday/rivo/gn/v20190621/rivo_Eday_CNRM-CM6-1_piClim-ghg_r1i1p1f2_gn_18500101-18791231.nc', SystemError('<built-in function CdunifFile> returned a result with an error set')]

@@ -922,8 +922,8 @@ for cnt, filePath in enumerate(x):
     indStart = (
         # 669000  # HighResMIP
         # 6547960 ScenarioMIP
-        42345  # CMIP6 42348
-        # -1
+        # 42345  # CMIP6 42348
+        -1
     )
     if cnt < indStart:
         print(cnt, filePath.path)

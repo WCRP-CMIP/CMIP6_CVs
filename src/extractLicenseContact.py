@@ -48,6 +48,7 @@ PJD 14 Mar 2022     - Update getGlobalAtt to catch edge case of OSError/cdms rea
 PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
 PJD 16 Mar 2022     - Rewrote IO around xarray data = dataset.open_dataset(f) - getGlobalAtt/getCalendar
 PJD 17 Mar 2022     - Update to finalize xarray IO; Add new ValueError to open try statement (new for xarray)
+PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add AttributeError to try
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
@@ -552,6 +553,7 @@ def getGlobalAtts(filePath):
         "dbze_bnds",
         "dbze_bounds",
         "depth",
+        "depth_c",
         "depth_bnds",
         "depth_bounds",
         "depth_layer",
@@ -561,6 +563,7 @@ def getGlobalAtts(filePath):
         "effectRadLi",
         "effectRadLi_bnds",
         "effectRadLi_bounds",
+        "eta",
         "geolat",
         "GEOLAT",
         "geolon",
@@ -589,6 +592,7 @@ def getGlobalAtts(filePath):
         "hist_interval",
         "nav_lat",
         "nav_lon",
+        "nsigma",
         "olevel_bnds",
         "olevel_bounds",
         "orog",
@@ -620,6 +624,8 @@ def getGlobalAtts(filePath):
         "sdepth_bnds",
         "sdepth_bounds",
         "sector",
+        "sigma",
+        "sigma_bnds",
         "strait",
         "strlen",
         "sza_bnds",
@@ -640,6 +646,8 @@ def getGlobalAtts(filePath):
         "x_bnds",
         "x_bounds",
         "xgre",
+        "zlev",
+        "zlev_bnds",
     ]
 
     tmp = {}
@@ -647,8 +655,14 @@ def getGlobalAtts(filePath):
     # https://github.com/CDAT/cdms/issues/442
     try:
         ###fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
-        fH = dataset.open_dataset(filePath)  # ValueError
-    except (OSError, SystemError, UnicodeDecodeError, ValueError) as error:
+        fH = dataset.open_dataset(filePath)  # Attribute, ValueError
+    except (
+        AttributeError,
+        OSError,
+        SystemError,
+        UnicodeDecodeError,
+        ValueError,
+    ) as error:
         print("")
         print("getGlobalAtts: badFile:", filePath)
         print("Error:", error)
@@ -739,10 +753,11 @@ def getGlobalAtts(filePath):
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
     # pdb.set_trace()
-    var = eval(".".join(["fH", varName, "data"]))
+    var = eval(".".join(["fH", tmp["variable_id"], "data"]))
     if var is None:
+        # if variable_id not set, try loading ascertained varName
         ###var = fH[varName]
-        var = eval("fH.", varName, ".data")
+        var = eval(".".join(["fH", varName, "data"]))
     if var is None:
         tmp["grid_info"] = "x"
         tmp["calendar"] = "x"
@@ -861,6 +876,7 @@ cdmsBadFiles2 = (
     "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669356 CMIP6
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp119/r5i1p1f1/Emon/cldnci/gn/v20210907/cldnci_Emon_MRI-ESM2-0_ssp119_r5i1p1f1_gn_201501-210012.nc",  # 5543227 ScenarioMIP
     "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669xxx
+    "/p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Omon/zooc/gn/v20210118/zooc_Omon_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn_185006-185312.nc",  # CMIP6 42348, AttributeError
 )
 
 # %% loop over files and build index
@@ -906,7 +922,8 @@ for cnt, filePath in enumerate(x):
     indStart = (
         # 669000  # HighResMIP
         # 6547960 ScenarioMIP
-        -1
+        42345  # CMIP6 42348
+        # -1
     )
     if cnt < indStart:
         print(cnt, filePath.path)

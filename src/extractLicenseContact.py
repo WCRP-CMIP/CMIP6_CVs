@@ -49,6 +49,7 @@ PJD 15 Mar 2022     - Add RFMIP badFileList output to file end
 PJD 16 Mar 2022     - Rewrote IO around xarray data = dataset.open_dataset(f) - getGlobalAtt/getCalendar
 PJD 17 Mar 2022     - Update to finalize xarray IO; Add new ValueError to open try statement (new for xarray)
 PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add AttributeError to try
+PJD 24 Mar 2022     - Started work on readData to abstract open calls to function, so library used can be tweaked in one place
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
@@ -63,16 +64,17 @@ PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add Attr
 # %% imports
 import argparse
 
-# import cdms2
+import cdms2
 import datetime
 import json
 import numpy as np
 import os
 import pdb
 from os import scandir
+import subprocess
 import sys
 import time
-from xcdat import dataset
+from xcdat import open_dataset
 
 # %% function defs
 
@@ -658,6 +660,7 @@ def getGlobalAtts(filePath):
         ###fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
         fH = dataset.open_dataset(filePath)  # Attribute, ValueError
     except (
+        np.core._exceptions._UFuncBinaryResolutionError,
         AttributeError,
         OSError,
         SystemError,
@@ -775,6 +778,75 @@ def getGlobalAtts(filePath):
     fH.close()
 
     return tmp
+
+
+def readData(filePath, varName):
+    """
+    read netcdf file using xarray or cdms2 and return file and coordinate
+    attributes
+
+    102799 /p/css03/esgf_publish/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400/r1i1p1f1/SImon/sistremax/gn/v20200110/sistremax_SImon_CESM2_midPliocene-eoi400_r1i1p1f1_gn_115101-120012.nc
+    https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
+
+    """
+    # read data - validate with ncdump that valid data, then try open and read
+    cmd = subprocess.Popen(
+        ["ncdump", "-h", filePath],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    output, errors = cmd.communicate()
+    cmd.wait()
+    if errors != b"":
+        print("output:", output)
+        print("errors:", errors)
+        err = [filePath, errors]
+        # try xarray read
+        try:
+            fH = open_dataset(filePath)
+            # Extract stuff
+            attDic = fH.attrs
+            calendar = fH.time.encoding["calendar"]
+            lev = fH[fH.cf.axes["Z"]].z.data
+            lat = fH[fH.cf.axes["Y"]].y.data
+            lon = fH[fH.cf.axes["X"]].x.data
+        except (
+            np.core._exceptions._UFuncBinaryResolutionError,
+            AttributeError,
+            ValueError,
+        ) as error:
+            print("")
+            print("readData: badFile xarray:", filePath)
+            print("Error:", error)
+            print("")
+            err = [filePath, error]
+            # try cdms2
+            try:
+                fH = cdms2.open(filePath)
+                # Extract stuff
+                attDic = fH.attributes
+                d = fH(varName, time=slice(0, 1))
+                calendar = d.getTime().calendar
+                lev = d.getLevel().getData()
+                lat = d.getLatitude().data
+                lon = d.getLongitude().data
+                fH.close()
+            except (
+                OSError,
+                SystemError,
+                UnicodeDecodeError,
+            ) as error:
+                print("")
+                print("readData: badFile cdms2:", filePath)
+                print("Error:", error)
+                print("")
+                err = [filePath, error]
+        finally:
+            if err == None:
+                return attDic, calendar, lev, lat, lon
+            else:
+                return err
 
 
 def scantree(path):

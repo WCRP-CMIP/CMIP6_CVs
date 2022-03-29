@@ -50,6 +50,7 @@ PJD 16 Mar 2022     - Rewrote IO around xarray data = dataset.open_dataset(f) - 
 PJD 17 Mar 2022     - Update to finalize xarray IO; Add new ValueError to open try statement (new for xarray)
 PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add AttributeError to try
 PJD 24 Mar 2022     - Started work on readData to abstract open calls to function, so library used can be tweaked in one place
+PJD 29 Mar 2022     - readData working
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
@@ -305,7 +306,7 @@ def getAxes(d, varName):
             latLen, lat0, latN = ["x" for _ in range(3)]
             lonLen, lon0, lonN = ["x" for _ in range(3)]
             heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
-        ###elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
+        # elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
         elif axisIds in [["ygre", "xgre"], ["yant", "xant"]]:
             print("hit ice-sheet grid, exiting")
             pass
@@ -328,7 +329,7 @@ def getAxes(d, varName):
             lon0 = str(np.min(lon))  # str(lon[0])
             lonN = str(np.max(lon))  # str(lon[-1])
             # get height conditional on shape
-            ###if len(var.shape) > 3 and "height" in var.getAxisIds():
+            # if len(var.shape) > 3 and "height" in var.getAxisIds():
             if len(varShape) > 3 and "height" in axisIds:
                 heightVar = eval(".".join(["d", heightVarName, "data"]))
                 heightLen = str(len(heightVar))
@@ -336,7 +337,8 @@ def getAxes(d, varName):
                 heightN = str(heightVar[-1])
                 heightUnit = heightVar.units
             else:
-                heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
+                heightLen, height0, heightN, heightUnit = [
+                    "x" for _ in range(4)]
 
     # deal with i,j index grids
     except Exception as error:
@@ -657,7 +659,7 @@ def getGlobalAtts(filePath):
     # deal with SystemError - CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2 data
     # https://github.com/CDAT/cdms/issues/442
     try:
-        ###fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
+        # fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
         fH = dataset.open_dataset(filePath)  # Attribute, ValueError
     except (
         np.core._exceptions._UFuncBinaryResolutionError,
@@ -786,6 +788,8 @@ def readData(filePath, varName):
     attributes
 
     102799 /p/css03/esgf_publish/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400/r1i1p1f1/SImon/sistremax/gn/v20200110/sistremax_SImon_CESM2_midPliocene-eoi400_r1i1p1f1_gn_115101-120012.nc
+    good /p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Omon/zooc/gn/v20210118/zooc_Omon_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn_185006-185312.nc
+    bad /p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -797,13 +801,16 @@ def readData(filePath, varName):
         stderr=subprocess.PIPE,
     )
     output, errors = cmd.communicate()
+    print("output, errors")
     cmd.wait()
-    if errors != b"":
-        print("output:", output)
-        print("errors:", errors)
-        err = [filePath, errors]
+    print("output")
+    print(output)
+    print("errors")
+    print(errors)
+    if errors == b'':
         # try xarray read
         try:
+            errX = None
             fH = open_dataset(filePath)
             # Extract stuff
             attDic = fH.attrs
@@ -811,6 +818,7 @@ def readData(filePath, varName):
             lev = fH[fH.cf.axes["Z"]].z.data
             lat = fH[fH.cf.axes["Y"]].y.data
             lon = fH[fH.cf.axes["X"]].x.data
+            print("xarray load complete")
         except (
             np.core._exceptions._UFuncBinaryResolutionError,
             AttributeError,
@@ -820,11 +828,13 @@ def readData(filePath, varName):
             print("readData: badFile xarray:", filePath)
             print("Error:", error)
             print("")
-            err = [filePath, error]
+            errX = [filePath, error]
             # try cdms2
             try:
+                errC = None
                 fH = cdms2.open(filePath)
                 # Extract stuff
+                print('trying cdms2')
                 attDic = fH.attributes
                 d = fH(varName, time=slice(0, 1))
                 calendar = d.getTime().calendar
@@ -832,6 +842,7 @@ def readData(filePath, varName):
                 lat = d.getLatitude().data
                 lon = d.getLongitude().data
                 fH.close()
+                print('cdms successful')
             except (
                 OSError,
                 SystemError,
@@ -841,12 +852,17 @@ def readData(filePath, varName):
                 print("readData: badFile cdms2:", filePath)
                 print("Error:", error)
                 print("")
-                err = [filePath, error]
+                errC = [filePath, error]
         finally:
-            if err == None:
+            if errX == None or errC == None:
                 return attDic, calendar, lev, lat, lon
-            else:
-                return err
+            elif errX != None:
+                return errX
+            elif errC != None:
+                return errC
+    else:
+        print("errors else triggered")
+        return [filePath, errors], None, None, None, None
 
 
 def scantree(path):
@@ -935,12 +951,15 @@ cdmsBadFiles2 = (
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/wtd/gn/v20180705/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_185001-199912.nc",  # 14476 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/fx/areacellr/gn/v20180705/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn.nc",  # 14477 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_18500901-18591231.nc",  # 14824 CMIP
-    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_185009-185912.nc",  # 14916 CMIP + more try/except added
+    # 14916 CMIP + more try/except added
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/Emon/wtd/gn/v20181012/wtd_Emon_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn_185009-185912.nc",
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r5i1p1f2/fx/areacellr/gn/v20181012/areacellr_fx_CNRM-CM6-1_abrupt-4xCO2_r5i1p1f2_gn.nc",  # 14917 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/CFday/clivi/gn/v20191207/clivi_CFday_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_19200101-19241230.nc",  # 513159 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc",  # 7176050 CMIP, netcdf fail
-    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/Eday/rivo/gn/v20181203/rivo_Eday_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101-20141231.nc",  # 47148 CMIP, cdms.open fail utf-8 decode
-    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19000101-19491231.nc",  # 14308 CMIP, cdms open fail utf-8
+    # 47148 CMIP, cdms.open fail utf-8 decode
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/Eday/rivo/gn/v20181203/rivo_Eday_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101-20141231.nc",
+    # 14308 CMIP, cdms open fail utf-8
+    "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19000101-19491231.nc",
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_18500101-18991231.nc",  # 14309 CMIP
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Eday/rivo/gn/v20180705/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_19500101-19991231.nc",  # Proactive
     "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r2i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r2i1p1f2_gn_18500301-18591231.nc",  # 15108 CMIP

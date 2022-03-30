@@ -55,6 +55,7 @@ PJD 30 Mar 2022     - writeJson debugging, as np.int64 types not caught by numpy
 PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are all str types
                       TypeError: '>' not supported between instances of 'numpy.ndarray' and 'str'
 PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error (5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc)
+PJD 30 Mar 2022     - Augmented readData to capture errX and errC and save these to badFileList for trapping
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -686,13 +687,12 @@ def readData(filePath, varName):
             print("readData: badFile xarray:", filePath)
             print("Error:", error)
             print("")
-            errX = [filePath, error]
+            errX = ['xarray', filePath, error]
             # try cdms2
             try:
                 errC = None
                 fH = cdm.open(filePath)
                 # Extract stuff
-                print('trying cdms2')
                 globalAttDic = fH.attributes
                 calendar, lev, levUnits, lat, lon = [None for _ in range(5)]
                 d = fH(varName, time=slice(0, 1))
@@ -708,7 +708,7 @@ def readData(filePath, varName):
                 for a, b in enumerate(fH.variables.keys()):
                     varList.append(b)
                 fH.close()
-                print('cdms successful')
+                print('cdms2 load complete')
             except (
                 OSError,
                 SystemError,
@@ -721,17 +721,17 @@ def readData(filePath, varName):
                 print("readData: badFile cdms2:", filePath)
                 print("Error:", error)
                 print("")
-                errC = [filePath, error]
+                errC = ['cdms2', filePath, error]
         finally:
             if errX == None or errC == None:
-                return globalAttDic, calendar, lev, levUnits, lat, lon, varList
+                return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
             elif errX != None:
                 return errX
             elif errC != None:
                 return errC
     else:
         print("errors else triggered")
-        return [filePath, errors], None, None, None, None, None, None
+        return [filePath, errors], None, None, None, None, None, None, errX, errC,
 
 
 def scantree(path):
@@ -981,11 +981,15 @@ for cnt, filePath in enumerate(x):
         if key in cmip:
             #print("if key in cmip", key)
             # pull global atts and compare, note if different
-            globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
+            globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
                 filePath.path, varName)
             # catch file open error
             if isinstance(globalAttDic, list):
                 badFileList.append(globalAttDic)
+                if isinstance(errX, list):
+                    badFileList.append(errX)
+                if isinstance(errC, list):
+                    badFileList.append(errC)
                 continue  # skip file, proceed to next in loop
             dic2 = getGlobalAtts(globalAttDic, calendar,
                                  lon, lat, lev, levUnits)
@@ -1001,11 +1005,15 @@ for cnt, filePath in enumerate(x):
                 cmip[key] = newDic
         else:
             # pull global atts for new entry
-            globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
+            globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
                 filePath.path, varName)
             # catch file open error
             if isinstance(globalAttDic, list):
                 badFileList.append(globalAttDic)
+                if isinstance(errX, list):
+                    badFileList.append(errX)
+                if isinstance(errC, list):
+                    badFileList.append(errC)
                 continue  # skip file, proceed to next in loop
             tmp = getGlobalAtts(globalAttDic, calendar,
                                 lon, lat, lev, levUnits)

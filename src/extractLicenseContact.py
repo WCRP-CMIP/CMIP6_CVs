@@ -655,9 +655,9 @@ def readData(filePath, varName):
     # print("errors")
     # print(errors)
     if errors == b'':
+        errX, errC = [None for _ in range(2)]
         # try xarray read
         try:
-            errX = None
             fH = open_dataset(filePath)
             # Extract stuff
             globalAttDic = fH.attrs
@@ -690,7 +690,6 @@ def readData(filePath, varName):
             errX = ['xarray', filePath, error]
             # try cdms2
             try:
-                errC = None
                 fH = cdm.open(filePath)
                 # Extract stuff
                 globalAttDic = fH.attributes

@@ -265,10 +265,9 @@ def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
     """
 
 
-def getAxes(d, varName):
+def getAxes(lev, levUnits, lat, lon):
     """
-    ###getAxes(var, fileHandle)
-    getAxes(d, varName)
+    getAxes(lev, levUnits, lat, lon)
 
     Extracts grid info dependent on input
     """
@@ -293,94 +292,21 @@ def getAxes(d, varName):
         ]
     )
 
-    # get coord dict
-    axisIds = list(d._coord_names)
-    varShape = eval(".".join(["d", varName, "shape"]))
-    heightVarName = d._coord_names - set(
-        ["time", "lat", "latitude", "lon", "longitude"]
-    )
-    try:
-        print("enter try")
-        if len(varShape) == 1:
-            print("no valid grid")
-            latLen, lat0, latN = ["x" for _ in range(3)]
-            lonLen, lon0, lonN = ["x" for _ in range(3)]
-            heightLen, height0, heightN, heightUnit = ["x" for _ in range(4)]
-        # elif var.getAxisIds() in [["ygre", "xgre"], ["yant", "xant"]]:
-        elif axisIds in [["ygre", "xgre"], ["yant", "xant"]]:
-            print("hit ice-sheet grid, exiting")
-            pass
-        else:
-            ###lat = var.getLatitude()
-            lat = d.lat.data
-            ###lon = var.getLongitude()
-            lon = d.lon.data
-            # test for None
-            if not [x for x in (lat, lon) if x is None]:
-                raise Exception("Attribute Error")
-            # create strings
-            latLen = str(len(lat))
-            lat0 = str(np.min(lat))  # str(lat[0])
-            latN = str(np.max(lat))  # str(lat[-1])
-            if len(lon.shape) == 2:
-                lonLen = str(lon.shape[1])
-            else:
-                lonLen = str(len(lon))
-            lon0 = str(np.min(lon))  # str(lon[0])
-            lonN = str(np.max(lon))  # str(lon[-1])
-            # get height conditional on shape
-            # if len(var.shape) > 3 and "height" in var.getAxisIds():
-            if len(varShape) > 3 and "height" in axisIds:
-                heightVar = eval(".".join(["d", heightVarName, "data"]))
-                heightLen = str(len(heightVar))
-                height0 = str(heightVar[0])
-                heightN = str(heightVar[-1])
-                heightUnit = heightVar.units
-            else:
-                heightLen, height0, heightN, heightUnit = [
-                    "x" for _ in range(4)]
-
-    # deal with i,j index grids
-    except Exception as error:
-        print("getAxes: enter except", error)
-        ###axes = var.getAxisIds()
-        # test for var shape
-        if "site" in axisIds:
-            # assume a time, site variable (no lat/lon)
-            return tmp
-            raise Exception("site variable, skipping")
-        elif axisIds[0] == "time" and varShape == 3:
-            # assume time, lat, lon
-            axInd = 1
-        elif len(varShape) == 4:
-            # assume time, height, lat, lon
-            axInd = 2
-        elif len(varShape) == 2:
-            # assume lat, lon (fx field)
-            axInd = 0
-        try:
-            print("enter try2")
-            # pdb.set_trace()
-            latVar = d.lat.data
-            latLen = str(len(latVar))
-            lat0 = str(np.min(latVar))
-            print("lat0")
-            print(lat0)
-            latN = str(np.max(latVar))
-            lonVar = d.lon.data
-            lon = str(len(lonVar))
-            lon0 = str(np.min(lonVar))
-            lonN = str(np.max(lonVar))
-            if len(varShape) == 4:
-                heightVar = eval(".".join(["d", heightVarName, "data"]))
-                heightLen = str(len(heightVar))
-                height0 = str(heightVar[0])
-                heightN = str(heightVar[-1])
-                heightUnit = heightVar.units
-            else:
-                heightLen, height0, heightN = ["x" for _ in range(3)]
-        except Exception as error:
-            print("getAxes: try2, no valid dims", error)
+    # create strings
+    if lat is not None:
+        latLen = str(lat.shape)
+        lat0 = str(np.min(np.min(lat)))
+        latN = str(np.max(np.max(lat)))
+    if lon is not None:
+        lonLen = str(lon.shape)
+        lon0 = str(np.min(np.min(lon)))
+        lonN = str(np.max(np.max(lon)))
+    if lev is not None:
+        heightLen = str(lev.shape)
+        height0 = str(lev[0])
+        heightN = str(lev[-1])
+        if levUnits is not None:
+            heightUnit = levUnits
 
     # update grid_info dictionary
     tmp = {}
@@ -475,9 +401,9 @@ def getDrs(path):
         return ".".join(["CMIP6", instId, srcId, actId, expId, ripfId, gridId, verId])
 
 
-def getGlobalAtts(filePath):
+def getGlobalAtts(globalAttDic, calendar, lon, lat, lev, levUnits):
     """
-    getGlobalAtts(filePath)
+    getGlobalAtts(globalAttDic, calendar, lev, levUnits, lat, lon)
 
     Attempts to extract a list of global attributes from a netcdf file and returns
     this as a dictionary key: value pairs
@@ -526,6 +452,47 @@ def getGlobalAtts(filePath):
         "ocnBgchem": "Ocean Biogeochemistry",
         "seaIce": "Sea Ice",
     }
+
+    tmp = {}
+    # iterate through global attribute dictionary
+    for cnt, globalAtt in enumerate(globalAttDic):
+        try:
+            val = globalAttDic[globalAtt]
+            # catch case of numpy branch info
+            if isinstance(val, np.ndarray) and len(val) == 1:
+                val = str(val.tolist()[0])
+        except Exception as error:
+            print("getGlobalAtts: No entry:", globalAtt, error)
+            val = ""
+        tmp[globalAtt] = val
+    # assign nominal resolution per realm
+    val = tmp["nominal_resolution"]
+    tmp["nominal_resolution"] = {}
+    for realmVal in realms:
+        tmp["nominal_resolution"][realmVal] = ""
+    tmp["nominal_resolution"][tmp["realm"]] = val
+
+    # get grid_info
+    gridInfo = getAxes(lev, levUnits, lat, lon)
+    if gridInfo != None:
+        tmp["grid_info"] = gridInfo
+    else:
+        tmp["grid_info"] = ""
+
+    # get calendar
+    if calendar != None:
+        tmp["calendar"] = calendar
+    else:
+        tmp["calendar"] = ""
+
+    # add list of non-queried globalAtts
+    ###tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
+    tmp["||_unvalidated"] = list(set(globalAttDic).difference(globalAtts))
+
+    return tmp
+
+
+def getVarName(varList):
     excludeVars = [
         "a",
         "a_bnds",
@@ -655,96 +622,9 @@ def getGlobalAtts(filePath):
         "zlev_bnds",
     ]
 
-    tmp = {}
-    # deal with SystemError - CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2 data
-    # https://github.com/CDAT/cdms/issues/442
-    try:
-        # fH = cdms2.open(filePath) # OSError, SystemError, UnicodeDecodeError,
-        fH = dataset.open_dataset(filePath)  # Attribute, ValueError
-    except (
-        np.core._exceptions._UFuncBinaryResolutionError,
-        AttributeError,
-        OSError,
-        SystemError,
-        UnicodeDecodeError,
-        ValueError,
-    ) as error:
-        print("")
-        print("getGlobalAtts: badFile:", filePath)
-        print("Error:", error)
-        print("")
-        return [filePath, error]
-    # extract globalAtts
-    globalAttDic = fH.attrs
-    for cnt, globalAtt in enumerate(globalAtts):
-        try:
-            ###val = eval("".join(["fH.", globalAtt]))
-            val = globalAttDic[globalAtt]
-            # catch case of numpy branch info
-            if isinstance(val, np.ndarray) and len(val) == 1:
-                val = str(val.tolist()[0])
-        except Exception as error:
-            print("getGlobalAtts: No entry:", globalAtt, error)
-            val = ""
-        tmp[globalAtt] = val
-    # assign nominal resolution per realm
-    val = tmp["nominal_resolution"]
-    tmp["nominal_resolution"] = {}
-    for realmVal in realms:
-        tmp["nominal_resolution"][realmVal] = ""
-    tmp["nominal_resolution"][tmp["realm"]] = val
-    # get grid info
-    # debug start
-    if (
-        filePath
-        ==
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/CFmon/clisccp/gr/v20180705/clisccp_CFmon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14134 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/CFmon/clcalipso/gr/v20180705/clcalipso_CFmon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14128 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r3i1p1f2/Eday/rivo/gn/v20181012/rivo_Eday_CNRM-CM6-1_abrupt-4xCO2_r3i1p1f2_gn_18500501-18591231.nc"  # 13589 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/amip/r1i1p1f2/Emon/mrsol/gr/v20191202/mrsol_Emon_CNRM-CM6-1-HR_amip_r1i1p1f2_gr_197901-201412.nc"  # 12166 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/6hrPlevPt/zg500/gr/v20191021/zg500_6hrPlevPt_CNRM-CM6-1-HR_historical_r1i1p1f2_gr_196001010600-197001010000.nc"  # 8009 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/basin/gn/v20191021/basin_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5777 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/masscello/gn/v20191021/masscello_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5775 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/abrupt-4xCO2/r1i1p1f2/Ofx/areacello/gn/v20191021/areacello_Ofx_CNRM-CM6-1-HR_abrupt-4xCO2_r1i1p1f2_gn.nc"  # 5774 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/Amon/hur/gr/v20200417/hur_Amon_CIESM_abrupt-4xCO2_r1i1p1f1_gr_000101-015012.nc"  # 3040 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/SImon/sispeed/gn/v20200420/sispeed_SImon_CIESM_abrupt-4xCO2_r1i1p1f1_gn_010101-015012.nc"  # 2977 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/THU/CIESM/abrupt-4xCO2/r1i1p1f1/SImon/siflsenstop/gn/v20200420/siflsenstop_SImon_CIESM_abrupt-4xCO2_r1i1p1f1_gn_005101-010012.nc"  # 2860 CMIP
-        # "/p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Ofx/sftof/gn/v20210118/sftof_Ofx_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn.nc"  # 41746 complete
-        # "/p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Amon/cl/gn/v20190429/cl_Amon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc"  # 25636
-        # "/p/css03/esgf_publish/CMIP6/VolMIP/CCCma/CanESM5/volc-long-eq/r29i1p2f1/Omon/epcalc100/gn/v20190429/epcalc100_Omon_CanESM5_volc-long-eq_r29i1p2f1_gn_181504-187003.nc"  # 25509
-        # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r5i9p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r5i9p1f1_gn_808301-808512.nc"  # 5646
-        # "/p/css03/esgf_publish/CMIP6/VolMIP/NASA-GISS/GISS-E2-1-G/volc-pinatubo-full/r8i2p1f1/Amon/ps/gn/v20190903/ps_Amon_GISS-E2-1-G_volc-pinatubo-full_r8i2p1f1_gn_824801-825012.nc"  # 5480
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/clw/gn/v20180906/clw_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5320
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/ps/gn/v20180906/ps_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5286
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Amon/vas/gn/v20180906/vas_Amon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5248
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  # 5184
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Omon/sltovgyre/gn/v20180906/sltovgyre_Omon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc"  #4981
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/IfxGre/hfgeoubed/gn/v20210513/hfgeoubed_IfxGre_CESM2_ssp585-withism_r1i1p1f1_gn.nc"
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Emon/nwdFracLut/gn/v20210513/nwdFracLut_Emon_CESM2_ssp585-withism_r1i1p1f1_gn_224901-229912.nc"
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/thetaoga/gn/v20210513/thetaoga_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_201501-206412.nc"
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/thetaoga/gn/v20210513/thetaoga_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_201501-206412.nc"
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/areacello/gr/v20191120/areacello_Ofx_CESM2_ssp585-withism_r1i1p1f1_gr.nc"
-        # "/p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Ofx/sftof/gn/v20210513/sftof_Ofx_CESM2_ssp585-withism_r1i1p1f1_gn.nc"
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/cropFracC4/gr/v20180705/cropFracC4_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gr_185001-199912.nc"  # 14439 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/abrupt-4xCO2/r1i1p1f2/Emon/thetaot/gn/v20180705/thetaot_Emon_CNRM-CM6-1_abrupt-4xCO2_r1i1p1f2_gn_185001-194912.nc"  # 14451 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/CFsubhr/prc/gn/v20190125/prc_CFsubhr_CNRM-CM6-1_historical_r3i1p1f2_gn_18500101003000-20150101000000.nc"  # 17588 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r3i1p1f2/Emon/parasolRefl/gr/v20190125/parasolRefl_Emon_CNRM-CM6-1_historical_r3i1p1f2_gr_185001-200912.nc"  # 18897 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/E3hrPt/clmisr/gr/v20181203/clmisr_E3hrPt_CNRM-CM6-1_amip_r1i1p1f2_gr_200801010300-200901010000.nc"  # 45899 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/E3hrPt/jpdftaureicemodis/gr/v20181203/jpdftaureicemodis_E3hrPt_CNRM-CM6-1_amip_r1i1p1f2_gr_200801010300-200901010000.nc"  # 46048 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/SImon/siitdconc/gn/v20190611/siitdconc_SImon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-200012.nc"  # 78614 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/abrupt-4xCO2/r1i1p1f1/Amon/o3/gn/v20190613/o3_Amon_BCC-ESM1_abrupt-4xCO2_r1i1p1f1_gn_185001-185012-clim.nc"  # 78745 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/AERmon/od550so4/gn/v20190918/od550so4_AERmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc"  # 79752 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/NCAR/CESM2-WACCM/abrupt-4xCO2/r1i1p1f1/Omon/zooc/gr/v20190425/zooc_Omon_CESM2-WACCM_abrupt-4xCO2_r1i1p1f1_gr_005001-009912.nc"  # 91678 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/MOHC/UKESM1-0-LL/abrupt-4xCO2/r1i1p1f2/CFmon/clwc/gn/v20190406/clwc_CFmon_UKESM1-0-LL_abrupt-4xCO2_r1i1p1f2_gn_190001-194912.nc"  # 405162 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/NOAA-GFDL/GFDL-ESM4/abrupt-4xCO2/r1i1p1f1/Omon/msftyz/gn/v20180701/msftyz_Omon_GFDL-ESM4_abrupt-4xCO2_r1i1p1f1_gn_006101-008012.nc"  # 811631 CMIP
-        # "/p/css03/esgf_publish/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/amip/r1i1p1f2/CFsubhr/prc/gn/v20181203/prc_CFsubhr_CNRM-CM6-1_amip_r1i1p1f2_gn_19790101003000-20150101000000.nc"  # 47438 CMIP
-        ""
-    ):
-        pdb.set_trace()
-    # debug close
-    ###varNames = fH.variables
+    # deal with variables - for cmip5/3
     varNames = []
-    for a, b in enumerate(fH.data_vars.keys()):
+    for a, b in enumerate(varList):
         varNames.append(b)
     # deal with basin var
     if all(x in filePath for x in ["/basin/", "/basin"]):
@@ -758,28 +638,11 @@ def getGlobalAtts(filePath):
     varName = "".join(set(varNames) - set(excludeVars))
     # compare variable_id with varName
     print("variable_id:", tmp["variable_id"], "varName:", varName)
-    # pdb.set_trace()
-    var = eval(".".join(["fH", tmp["variable_id"], "data"]))
-    if var is None:
-        # if variable_id not set, try loading ascertained varName
-        ###var = fH[varName]
-        var = eval(".".join(["fH", varName, "data"]))
-    if var is None:
-        tmp["grid_info"] = "x"
-        tmp["calendar"] = "x"
-    else:
-        tmp["grid_info"] = getAxes(fH, varName)
-        ###calendar = getCalendar(var)
-        calendar = getCalendar(fH)
-        if calendar != "":
-            tmp["calendar"] = calendar
+    if tmp["variable_id"] is None:
+        # if variable_id not set, use varName
+        var = varName
 
-    # add list of non-queried globalAtts
-    ###tmp["||_unvalidated"] = list(set(fH.attributes).difference(globalAtts))
-    tmp["||_unvalidated"] = list(set(fH.attrs).difference(globalAtts))
-    fH.close()
-
-    return tmp
+    return var
 
 
 def readData(filePath, varName):
@@ -787,9 +650,11 @@ def readData(filePath, varName):
     read netcdf file using xarray or cdms2 and return file and coordinate
     attributes
 
-    102799 /p/css03/esgf_publish/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400/r1i1p1f1/SImon/sistremax/gn/v20200110/sistremax_SImon_CESM2_midPliocene-eoi400_r1i1p1f1_gn_115101-120012.nc
+    good /p/css03/esgf_publish/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400/r1i1p1f1/SImon/sistremax/gn/v20200110/sistremax_SImon_CESM2_midPliocene-eoi400_r1i1p1f1_gn_115101-120012.nc
     good /p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Omon/zooc/gn/v20210118/zooc_Omon_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn_185006-185312.nc
     bad /p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc
+    good sites /p/css03/esgf_publish/CMIP6/RFMIP/MOHC/HadGEM3-GC31-LL/rad-irf/r1i1p1f2/Efx/rld/gn/v20190605/rld_Efx_HadGEM3-GC31-LL_rad-irf_r1i1p1f2_gn.nc
+    good no Z /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/ImonGre/hfls/gn/v20191120/hfls_ImonGre_CESM2_ssp585-withism_r1i1p1f1_gn_206501-209912.nc
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -801,23 +666,34 @@ def readData(filePath, varName):
         stderr=subprocess.PIPE,
     )
     output, errors = cmd.communicate()
-    print("output, errors")
     cmd.wait()
-    print("output")
-    print(output)
-    print("errors")
-    print(errors)
+    # print("output")
+    # print(output)
+    # print("errors")
+    # print(errors)
     if errors == b'':
         # try xarray read
         try:
             errX = None
             fH = open_dataset(filePath)
             # Extract stuff
-            attDic = fH.attrs
-            calendar = fH.time.encoding["calendar"]
-            lev = fH[fH.cf.axes["Z"]].z.data
-            lat = fH[fH.cf.axes["Y"]].y.data
-            lon = fH[fH.cf.axes["X"]].x.data
+            globalAttDic = fH.attrs
+            calendar, lev, levUnits, lat, lon = [None for _ in range(5)]
+            axisList = fH.cf.axes.keys()
+            if "T" in axisList:
+                calendar = fH.time.encoding["calendar"]
+            if "Z" in axisList:
+                lev = fH[fH.cf.axes["Z"][0]].data
+                if "units" in fH[[fH.cf.axes["Z"][0]]].attrs.keys():
+                    levUnits = fH[[fH.cf.axes["Z"][0]]].units
+            if "Y" in axisList:
+                lat = fH[fH.cf.axes["Y"][0]].data
+            if "X" in axisList:
+                lon = fH[fH.cf.axes["X"][0]].data
+            varList = []
+            for a, b in enumerate(fH.data_vars.keys()):
+                varList.append(b)
+            fH.close()
             print("xarray load complete")
         except (
             np.core._exceptions._UFuncBinaryResolutionError,
@@ -835,12 +711,20 @@ def readData(filePath, varName):
                 fH = cdms2.open(filePath)
                 # Extract stuff
                 print('trying cdms2')
-                attDic = fH.attributes
+                globalAttDic = fH.attributes
+                calendar, lev, levUnits, lat, lon = [None for _ in range(5)]
                 d = fH(varName, time=slice(0, 1))
-                calendar = d.getTime().calendar
-                lev = d.getLevel().getData()
-                lat = d.getLatitude().data
-                lon = d.getLongitude().data
+                if d.getTime() is not None:
+                    calendar = d.getTime().calendar
+                if d.getLevel() is not None:
+                    lev = d.getLevel().getData()
+                    if "units" in d.getLevel().attributes():
+                        levUnits = d.getLevel().units
+                lat = d.getLatitude()._data_  # works with sites data RFMIP
+                lon = d.getLongitude()._data_
+                varList = []
+                for a, b in enumerate(fH.variables.keys()):
+                    varList.append(b)
                 fH.close()
                 print('cdms successful')
             except (
@@ -855,14 +739,14 @@ def readData(filePath, varName):
                 errC = [filePath, error]
         finally:
             if errX == None or errC == None:
-                return attDic, calendar, lev, lat, lon
+                return globalAttDic, calendar, lev, levUnits, lat, lon, varList
             elif errX != None:
                 return errX
             elif errC != None:
                 return errC
     else:
         print("errors else triggered")
-        return [filePath, errors], None, None, None, None
+        return [filePath, errors], None, None, None, None, None, None
 
 
 def scantree(path):
@@ -969,6 +853,8 @@ cdmsBadFiles2 = (
     "/p/css03/esgf_publish/CMIP6/ScenarioMIP/MRI/MRI-ESM2-0/ssp119/r5i1p1f1/Emon/cldnci/gn/v20210907/cldnci_Emon_MRI-ESM2-0_ssp119_r5i1p1f1_gn_201501-210012.nc",  # 5543227 ScenarioMIP
     "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc",  # 669xxx
     "/p/css03/esgf_publish/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat/r3i1p1f2/Omon/zooc/gn/v20210118/zooc_Omon_MIROC-ES2L_volc-pinatubo-strat_r3i1p1f2_gn_185006-185312.nc",  # CMIP6 42348, AttributeError
+    # 102799 xarray numpy.core._exceptions._UFuncBinaryResolutionError
+    "/p/css03/esgf_publish/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400/r1i1p1f1/SImon/sistremax/gn/v20200110/sistremax_SImon_CESM2_midPliocene-eoi400_r1i1p1f1_gn_115101-120012.nc",
 )
 
 # %% loop over files and build index
@@ -1036,10 +922,16 @@ for cnt, filePath in enumerate(x):
         print(cnt, filePath.path)  # path and filename complete
         # build DRS institution_id.source_id.activity_id.experiment_id.variant_label.grid_label.version
         key = getDrs(filePath.path)
+        pathBits = filePath.path.split("/")
+        cmipInd = pathBits.index("CMIP6")
+        varName = pathBits[cmipInd + 7]
         if key in cmip:
             print("if key in cmip")
             # pull global atts and compare, note if different
-            dic2 = getGlobalAtts(filePath.path)
+            globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
+                filePath.path, varName)
+            dic2 = getGlobalAtts(globalAttDic, calendar,
+                                 lon, lat, lev, levUnits)
             print("dic2:", dic2)
             # catch file open error
             if isinstance(dic2, list):
@@ -1055,7 +947,10 @@ for cnt, filePath in enumerate(x):
                 cmip[key] = newDic
         else:
             # pull global atts for new entry
-            tmp = getGlobalAtts(filePath.path)
+            globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
+                filePath.path, varName)
+            tmp = getGlobalAtts(globalAttDic, calendar,
+                                lon, lat, lev, levUnits)
             if isinstance(tmp, list):
                 badFileList.append(tmp)
                 continue  # skip file, proceed to next in loop

@@ -655,6 +655,7 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/CMIP/NCC/NorESM2-MM/historical/r3i1p1f1/SImon/siarean/gn/v20200702/siarean_SImon_NorESM2-MM_historical_r3i1p1f1_gn_186001-186912.nc
     good sites /p/css03/esgf_publish/CMIP6/RFMIP/MOHC/HadGEM3-GC31-LL/rad-irf/r1i1p1f2/Efx/rld/gn/v20190605/rld_Efx_HadGEM3-GC31-LL_rad-irf_r1i1p1f2_gn.nc
     good no Z /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/ImonGre/hfls/gn/v20191120/hfls_ImonGre_CESM2_ssp585-withism_r1i1p1f1_gn_206501-209912.nc
+    bad /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/vo/gn/v20210513/vo_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_215001-219912.nc cdms unboundLocalError, TypeError, ValueError
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -718,10 +719,10 @@ def readData(filePath, varName):
                     calendar = d.getTime().calendar
                 if d.getLevel() is not None:
                     lev = d.getLevel().getData()
-                    if "units" in d.getLevel().attributes():
+                    if "units" in d.getLevel().attributes:
                         levUnits = d.getLevel().units
-                lat = d.getLatitude()._data_  # works with sites data RFMIP
-                lon = d.getLongitude()._data_
+                lat = d.getLatitude()._data
+                lon = d.getLongitude()._data
                 varList = []
                 for a, b in enumerate(fH.variables.keys()):
                     varList.append(b)
@@ -730,7 +731,10 @@ def readData(filePath, varName):
             except (
                 OSError,
                 SystemError,
+                TypeError,
+                UnboundLocalError,
                 UnicodeDecodeError,
+                ValueError,
             ) as error:
                 print("")
                 print("readData: badFile cdms2:", filePath)

@@ -51,6 +51,11 @@ PJD 17 Mar 2022     - Update to finalize xarray IO; Add new ValueError to open t
 PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add AttributeError to try
 PJD 24 Mar 2022     - Started work on readData to abstract open calls to function, so library used can be tweaked in one place
 PJD 29 Mar 2022     - readData working
+PJD 30 Mar 2022     - writeJson debugging, as np.int64 types not caught by numpyEncoder class
+PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are all str types
+                      TypeError: '>' not supported between instances of 'numpy.ndarray' and 'str'
+PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error (5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc)
+                     TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
@@ -65,16 +70,16 @@ PJD 29 Mar 2022     - readData working
 # %% imports
 import argparse
 
-import cdms2
+import cdms2 as cdm
 import datetime
 import json
 import numpy as np
 import os
 import pdb
-from os import scandir
 import subprocess
 import sys
 import time
+from os import scandir
 from xcdat import open_dataset
 
 # %% function defs
@@ -219,29 +224,31 @@ def compareDicts(dict1, dict2, count, filePath):
                 if not isinstance(tmp1, dict):
                     # catch new entry in new dictionary
                     print("catch new entry in new dictionary")
-                    val1 = tmp1
+                    val1 = str(washTypes(tmp1))
                     tmp1 = {}
                     tmp1[val1] = {}
                     tmp1[val1]["keys"] = []
                     tmp1[val1]["keys"].append(key1)
                     tmp1[val1]["count"] = 1
-                    tmp1[tmp2] = {}
-                    tmp1[tmp2]["keys"] = []
-                    tmp1[tmp2]["keys"].append(key2)
-                    tmp1[tmp2]["count"] = 1
+                    val2 = str(washTypes(tmp2))
+                    tmp1[val2] = {}
+                    tmp1[val2]["keys"] = []
+                    tmp1[val2]["keys"].append(key2)
+                    tmp1[val2]["count"] = 1
                 elif isinstance(tmp1, dict):
                     print("catch new entry in existing dictionary")
                     # if key already exists append
+                    val2 = str(washTypes(tmp2))
                     if tmp2 in list(tmp1.keys()):
                         # print("tmp2 == key"); pdb.set_trace()
-                        tmp1[tmp2]["keys"].append(key2)
-                        tmp1[tmp2]["count"] = tmp1[tmp2]["count"] + 1
+                        tmp1[val2]["keys"].append(key2)
+                        tmp1[val2]["count"] = tmp1[tmp2]["count"] + 1
                     # if key doesn't exist add new
                     else:
                         # print("else"); pdb.set_trace()
-                        tmp1[tmp2] = {}
-                        tmp1[tmp2]["keys"] = [key2]
-                        tmp1[tmp2]["count"] = 1
+                        tmp1[val2] = {}
+                        tmp1[val2]["keys"] = [key2]
+                        tmp1[val2]["count"] = 1
                 else:
                     # catch case unmatched
                     print("catch case unmatched")
@@ -255,14 +262,6 @@ def compareDicts(dict1, dict2, count, filePath):
             update = False
 
     return update, dict1
-
-
-def dealWithDuplicateEntry(key, dict1, val1, id1, dict2, val2, id2):
-    """
-    dealWithDuplicateEntry(key, dic1, id1, dic2, id2):
-
-    Checks first argument to find second argument
-    """
 
 
 def getAxes(lev, levUnits, lat, lon):
@@ -301,7 +300,7 @@ def getAxes(lev, levUnits, lat, lon):
         lonLen = str(lon.shape)
         lon0 = str(np.min(np.min(lon)))
         lonN = str(np.max(np.max(lon)))
-    if lev is not None:
+    if (lev is not None) and (lev.shape != ()):
         heightLen = str(lev.shape)
         height0 = str(lev[0])
         heightN = str(lev[-1])
@@ -328,25 +327,6 @@ def getAxes(lev, levUnits, lat, lon):
     print(tmp)
 
     return tmp
-
-
-def getCalendar(var):
-    """
-    getCalendar(var)
-
-    Extracts calendar info from variable time axis
-    """
-    ###axisIds = var.getAxisIds()
-    axisIds = var._coord_names
-    if "time" in axisIds:
-        ###timeAx = var.getTime()
-        ###calendar = timeAx.calendar
-        if "calendar" in var.time.encoding.keys():
-            calendar = var.time.encoding["calendar"]
-    else:
-        calendar = ""
-
-    return calendar
 
 
 def getDrs(path):
@@ -656,6 +636,7 @@ def readData(filePath, varName):
     good sites /p/css03/esgf_publish/CMIP6/RFMIP/MOHC/HadGEM3-GC31-LL/rad-irf/r1i1p1f2/Efx/rld/gn/v20190605/rld_Efx_HadGEM3-GC31-LL_rad-irf_r1i1p1f2_gn.nc
     good no Z /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/ImonGre/hfls/gn/v20191120/hfls_ImonGre_CESM2_ssp585-withism_r1i1p1f1_gn_206501-209912.nc
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/vo/gn/v20210513/vo_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_215001-219912.nc cdms unboundLocalError, TypeError, ValueError
+    bad /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc 5184 CMIP6 lev.shape == ()
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -709,7 +690,7 @@ def readData(filePath, varName):
             # try cdms2
             try:
                 errC = None
-                fH = cdms2.open(filePath)
+                fH = cdm.open(filePath)
                 # Extract stuff
                 print('trying cdms2')
                 globalAttDic = fH.attributes
@@ -773,6 +754,73 @@ def scantree(path):
             yield entry
 
 
+def walkWashDicList(dicOrList):
+    """
+
+    """
+    # work on dictionaries
+    if isinstance(dicOrList, dict):
+        for dicKey1, dicVal1 in dicOrList.items():
+            if isinstance(dicVal1, dict):
+                for dicKey2, dicVal2 in dicVal1.items():
+                    if isinstance(dicVal2, dict):
+                        for dicKey3, dicVal3 in dicVal2.items():
+                            if isinstance(dicVal3, dict):
+                                for dicKey4, dicVal4 in dicVal3.items():
+                                    if isinstance(dicVal4, dict):
+                                        for dicKey5, dicVal5 in dicVal4.items():
+                                            dicOrList[dicKey1][dicKey2][dicKey3][dicKey4][dicKey5] = washTypes(
+                                                dicVal5)
+                                    else:
+                                        dicOrList[dicKey1][dicKey2][dicKey3][dicKey4] = washTypes(
+                                            dicVal4)
+                            else:
+                                dicOrList[dicKey1][dicKey2][dicKey3] = washTypes(
+                                    dicVal3)
+                    else:
+                        dicOrList[dicKey1][dicKey2] = washTypes(dicVal2)
+            else:
+                dicOrList[dicKey1] = washTypes(dicVal1)
+
+    # work on lists
+    elif isinstance(dicOrList, list):
+        if any(isinstance(i1, list) for i1 in dicOrList):
+            print("walkWashDicList 1")
+            pdb.set_trace()
+            for cnt1, val1 in enumerate(dicOrList):
+                if any(isinstance(i2, list) for i2 in val1):
+                    print("walkWashDicList 2")
+                    pdb.set_trace()
+                    for cnt2, val2 in enumerate(val1):
+                        if any(isinstance(i3, list) for i3 in val2):
+                            print("walkWashDicList 3")
+                            pdb.set_trace()
+                            for cnt3, val3 in enumerate(val2):
+                                dicOrList[cnt1][cnt2][cnt3] = washTypes(val3)
+                        else:
+                            dicOrList[cnt1][cnt2] = washTypes(val2)
+                else:
+                    dicOrList[cnt1] = washTypes(val1)
+        else:
+            dicOrList = washTypes(dicOrList)
+
+    return dicOrList
+
+
+def washTypes(val):
+    """
+
+    """
+    if isinstance(val, np.integer):
+        val = int(val)
+    if isinstance(val, np.floating):
+        val = str(float(val))
+    if isinstance(val, np.ndarray):
+        val = val.tolist()
+
+    return val
+
+
 def writeJson(dic, testPath, count, endTime):
     """
     writeJson(dic, testPath, count, endTime)
@@ -789,6 +837,7 @@ def writeJson(dic, testPath, count, endTime):
         pathInfo = "CMIP6-no-cdmsBadFiles"
     # get count
     cmip["version_metadata"]["file_processed_count"] = str(count)
+
     # Write output
     print("")
     outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
@@ -899,7 +948,7 @@ for cnt, filePath in enumerate(x):
         timeTaken = "{:07.3f}".format(endTime - startTime)
         # writeJson(cmip, testPath, cnt, timeTaken)
         # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
-        print("catching dictionary, pre-crash")
+        #print("catching dictionary, pre-crash")
         pdb.set_trace()
     indStart = (
         # 669000  # HighResMIP
@@ -930,22 +979,23 @@ for cnt, filePath in enumerate(x):
         cmipInd = pathBits.index("CMIP6")
         varName = pathBits[cmipInd + 7]
         if key in cmip:
-            print("if key in cmip")
+            #print("if key in cmip", key)
             # pull global atts and compare, note if different
             globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
                 filePath.path, varName)
+            # catch file open error
+            if isinstance(globalAttDic, list):
+                badFileList.append(globalAttDic)
+                continue  # skip file, proceed to next in loop
             dic2 = getGlobalAtts(globalAttDic, calendar,
                                  lon, lat, lev, levUnits)
-            print("dic2:", dic2)
-            # catch file open error
-            if isinstance(dic2, list):
-                badFileList.append(dic2)
-                continue  # skip file, proceed to next in loop
-            elif dic2 == {}:
+            if dic2 == {}:
                 continue  # skip file, proceed to next in loop
             dic1 = cmip[key]
-            print("call compareDicts")
             update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
+            # wash types
+            newDic = walkWashDicList(newDic)
+
             # if difference found, update new entry
             if update:
                 cmip[key] = newDic
@@ -953,18 +1003,19 @@ for cnt, filePath in enumerate(x):
             # pull global atts for new entry
             globalAttDic, calendar, lev, levUnits, lat, lon, varList = readData(
                 filePath.path, varName)
+            # catch file open error
+            if isinstance(globalAttDic, list):
+                badFileList.append(globalAttDic)
+                continue  # skip file, proceed to next in loop
             tmp = getGlobalAtts(globalAttDic, calendar,
                                 lon, lat, lev, levUnits)
-            if isinstance(tmp, list):
-                badFileList.append(tmp)
+            if tmp == {}:
                 continue  # skip file, proceed to next in loop
-            elif tmp == {}:
-                print("if key in cmip - else")
-                continue  # skip file, proceed to next in loop
+            # wash types
+            tmp = walkWashDicList(tmp)
             cmip[key] = tmp
     elif firstPath in filePath.path:
         pass
-        # print('dupe files, skipping')
 
     # %% iteratively write out results to local file
     # end timer

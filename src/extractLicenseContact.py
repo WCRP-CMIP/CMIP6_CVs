@@ -56,9 +56,9 @@ PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are al
                       TypeError: '>' not supported between instances of 'numpy.ndarray' and 'str'
 PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error
                      5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc
-PJD 30 Mar 2022     - Augmented readData to capture errX and errC and save these to badFileList for trapping
-PJD 31 Mar 2022     - Augmented readData to deal with additional xarray open_dataset read error; tweaked cdm.getLatitude()._data_ call to try
-                     /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
+PJD 30 Mar 2022     - Updated readData to capture errX and errC and save these to badFileList for trapping
+PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLatitude()._data call to try - numpy.core._exceptions._UFuncBinaryResolutionError: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
+                     122915 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc - KeyError no T axis
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution

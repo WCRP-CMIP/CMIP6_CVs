@@ -65,7 +65,7 @@ PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read err
                      TODO: convert compareDicts test block to dealWithDuplicateEntry
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
-                     TODO: update getDrs for CMIP5 and CMIP3
+                     TODO: update getDrs and getGlobalAtts for CMIP5 and CMIP3
 
 @author: durack1
 """

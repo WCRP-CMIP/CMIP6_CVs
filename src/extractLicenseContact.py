@@ -54,8 +54,11 @@ PJD 29 Mar 2022     - readData working
 PJD 30 Mar 2022     - writeJson debugging, as np.int64 types not caught by numpyEncoder class
 PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are all str types
                       TypeError: '>' not supported between instances of 'numpy.ndarray' and 'str'
-PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error (5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc)
+PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error
+                     5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc
 PJD 30 Mar 2022     - Augmented readData to capture errX and errC and save these to badFileList for trapping
+PJD 31 Mar 2022     - Augmented readData to deal with additional xarray open_dataset read error; tweaked cdm.getLatitude()._data_ call to try
+                     /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -63,7 +66,6 @@ PJD 30 Mar 2022     - Augmented readData to capture errX and errC and save these
                      TODO: debug ScenarioMIP seg fault - reproducible? v20190306/tauvo_Omon_CanESM5_ssp126_r5i1p1f1_gn_201501-210012.nc",  # 527759 ScenarioMIP
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs for CMIP5 and CMIP3
-
 
 @author: durack1
 """
@@ -638,6 +640,7 @@ def readData(filePath, varName):
     good no Z /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/ImonGre/hfls/gn/v20191120/hfls_ImonGre_CESM2_ssp585-withism_r1i1p1f1_gn_206501-209912.nc
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/vo/gn/v20210513/vo_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_215001-219912.nc cdms unboundLocalError, TypeError, ValueError
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc 5184 CMIP6 lev.shape == ()
+    bad /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -650,10 +653,6 @@ def readData(filePath, varName):
     )
     output, errors = cmd.communicate()
     cmd.wait()
-    # print("output")
-    # print(output)
-    # print("errors")
-    # print(errors)
     if errors == b'':
         errX, errC = [None for _ in range(2)]
         # try xarray read
@@ -680,8 +679,11 @@ def readData(filePath, varName):
             print("xarray load complete")
         except (
             np.core._exceptions._UFuncBinaryResolutionError,
+            np.core._exceptions.UFuncTypeError,
             AttributeError,
+            KeyError,
             ValueError,
+            UnboundLocalError,
         ) as error:
             print("")
             print("readData: badFile xarray:", filePath)
@@ -701,8 +703,13 @@ def readData(filePath, varName):
                     lev = d.getLevel().getData()
                     if "units" in d.getLevel().attributes:
                         levUnits = d.getLevel().units
-                lat = d.getLatitude()._data
-                lon = d.getLongitude()._data
+                try:
+                    lat = d.getLatitude()._data
+                    lon = d.getLongitude()._data
+                except:
+                    # 122916 CMIP6 '/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc'
+                    lat = d.getLatitude()._data_
+                    lon = d.getLongitude()._data_
                 varList = []
                 for a, b in enumerate(fH.variables.keys()):
                     varList.append(b)
@@ -721,13 +728,17 @@ def readData(filePath, varName):
                 print("Error:", error)
                 print("")
                 errC = ['cdms2', filePath, error]
-        finally:
-            if errX == None or errC == None:
-                return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
-            elif errX != None:
-                return errX
-            elif errC != None:
-                return errC
+        # return file attributes
+        if errX == None:
+            return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
+        elif errC == None:
+            return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
+        elif errX != None and errC != None:
+            return errX, errC
+        elif errX != None:
+            return errX
+        elif errC != None:
+            return errC
     else:
         print("errors else triggered")
         return [filePath, errors], None, None, None, None, None, None, errX, errC,
@@ -931,6 +942,17 @@ print("Processing testPath:", testPath)
 badFileList = []
 
 # use iterator to start scan
+# startTime = time.time()
+# print('Create test path iterator')
+# x = scantree(testPath)
+# print('Iterator created, processing...')
+# for fileCount, filePath in enumerate(x):
+#     pass
+# print('testPath:', testPath)
+# print('fileCount:', fileCount)
+# endTime = time.time()
+# print('time taken:', "{:07.3f}".format(endTime - startTime))
+# sys.exit()
 x = scantree(testPath)
 cmip = {}
 cmip["version_metadata"] = {}
@@ -954,6 +976,7 @@ for cnt, filePath in enumerate(x):
         # 6547960 ScenarioMIP
         # 42345  # CMIP6 42348
         -1
+        # 122910  # CMIP6 122915
     )
     if cnt < indStart:
         print(cnt, filePath.path)

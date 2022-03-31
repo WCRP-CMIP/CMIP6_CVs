@@ -52,7 +52,7 @@ PJD 19 Mar 2022     - Updated getGlobalAtt with additional excludeVars, add Attr
 PJD 24 Mar 2022     - Started work on readData to abstract open calls to function, so library used can be tweaked in one place
 PJD 29 Mar 2022     - readData working
 PJD 30 Mar 2022     - writeJson debugging, as np.int64 types not caught by numpyEncoder class
-PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are all str types
+PJD 30 Mar 2022     - Updated compareDicts to ensure that dictionary keys are all str types (not np.ndarray or np.int64 types)
                       TypeError: '>' not supported between instances of 'numpy.ndarray' and 'str'
 PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error
                      5184 CMIP6 /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc

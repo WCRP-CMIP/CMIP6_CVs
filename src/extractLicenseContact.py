@@ -59,6 +59,9 @@ PJD 30 Mar 2022     - Update getAxes to deal with lev.shape == () error
 PJD 30 Mar 2022     - Updated readData to capture errX and errC and save these to badFileList for trapping
 PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLatitude()._data call to try - numpy.core._exceptions._UFuncBinaryResolutionError: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
                      122915 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc - KeyError no T axis
+PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLat/Lon calls to check they exist
+                     452910 /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc - KeyError: "No results found for 'Y'."
+                     TODO: wrap for x loop in try and except - alertError
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -641,6 +644,7 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NCAR/CESM2/ssp585-withism/r1i1p1f1/Omon/vo/gn/v20210513/vo_Omon_CESM2_ssp585-withism_r1i1p1f1_gn_215001-219912.nc cdms unboundLocalError, TypeError, ValueError
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc 5184 CMIP6 lev.shape == ()
     bad /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
+    bad /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc Error: 'units'
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
@@ -668,6 +672,8 @@ def readData(filePath, varName):
                 lev = fH[fH.cf.axes["Z"][0]].data
                 if "units" in fH[[fH.cf.axes["Z"][0]]].attrs.keys():
                     levUnits = fH[[fH.cf.axes["Z"][0]]].units
+            #print("xc: next Y")
+            # pdb.set_trace()
             if "Y" in axisList:
                 lat = fH[fH.cf.axes["Y"][0]].data
             if "X" in axisList:
@@ -703,13 +709,20 @@ def readData(filePath, varName):
                     lev = d.getLevel().getData()
                     if "units" in d.getLevel().attributes:
                         levUnits = d.getLevel().units
+                #print("xcd next lat/lon")
+                # pdb.set_trace()
                 try:
-                    lat = d.getLatitude()._data
-                    lon = d.getLongitude()._data
+                    if d.getLatitude() is not None:
+                        lat = d.getLatitude()._data
+                    if d.getLongitude() is not None:
+                        lon = d.getLongitude()._data
                 except:
                     # 122916 CMIP6 '/p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc'
-                    lat = d.getLatitude()._data_
-                    lon = d.getLongitude()._data_
+                    # 452910 CMIP6 '/p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc'
+                    if d.getLatitude() is not None:
+                        lat = d.getLatitude()._data_
+                    if d.getLongitude() is not None:
+                        lon = d.getLongitude()._data_
                 varList = []
                 for a, b in enumerate(fH.variables.keys()):
                     varList.append(b)
@@ -757,11 +770,16 @@ def scantree(path):
     """
 
     for entry in scandir(path):
-        # yield directory if there are any files in it
-        if entry.is_dir(follow_symlinks=False):
-            yield from scantree(entry.path)
-        else:
-            yield entry
+        # wrap function to catch permissionError
+        try:
+            # yield directory if there are any files in it
+            if entry.is_dir(follow_symlinks=False):
+                yield from scantree(entry.path)
+            else:
+                yield entry
+        except (PermissionError) as error:
+            print("scandir: Error, skipping..", error)
+            continue
 
 
 def walkWashDicList(dicOrList):
@@ -831,7 +849,7 @@ def washTypes(val):
     return val
 
 
-def writeJson(dic, testPath, count, endTime):
+def writeJson(dic, testPath, count, endTime, fileNameAdd):
     """
     writeJson(dic, testPath, count, endTime)
 
@@ -849,10 +867,14 @@ def writeJson(dic, testPath, count, endTime):
     cmip["version_metadata"]["file_processed_count"] = str(count)
 
     # Write output
-    print("")
-    outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
+    if fileNameAdd:
+        outFile = "_".join(
+            [timeFormatDir, pathInfo, "metaData", fileNameAdd, ".json"])
+    else:
+        outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
     if os.path.exists(outFile):
         os.remove(outFile)
+    print("")
     print("writing:")
     print("")
     fH = open(outFile, "w")
@@ -923,9 +945,13 @@ cdmsBadFiles2 = (
 # %% loop over files and build index
 parser = argparse.ArgumentParser(description="Process some CMIPx data")
 parser.add_argument(
-    "activityId", metavar="S", type=str, help="an activity_id to build the search from"
+    "activityId", metavar="S", type=str, help="an activity_id to build the search from",
+)
+parser.add_argument(
+    "fileNameAdd", nargs="?", default="", type=str, help="optional identifier to file testing",
 )
 args = parser.parse_args()
+# Deal with MIP scan
 if args.activityId in ["CMIP", "OMIP", "RFMIP", "ScenarioMIP"]:
     actId = args.activityId
 elif args.activityId == "CMIP6":
@@ -933,6 +959,11 @@ elif args.activityId == "CMIP6":
 else:
     print("Invalid path, ", args.activityId, "exiting")
     sys.exit()
+# Deal with fileNameAdd
+if args.fileNameAdd != '':
+    fileNameAdd = args.fileNameAdd
+else:
+    fileNameAdd = ''
 
 # create testpath
 testPath = os.path.join(testPath, actId)
@@ -961,6 +992,10 @@ cmip["version_metadata"]["institution_id"] = "PCMDI"
 startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 cmip["version_metadata"]["start_time"] = startTime
 for cnt, filePath in enumerate(x):
+    # catch case that scratch dir is encountered
+    if "/scratch" in filePath.path:
+        print("/scratch perms a problem, skipping..")
+        continue
     # start timer
     startTime = time.time()
     # debug start
@@ -977,6 +1012,7 @@ for cnt, filePath in enumerate(x):
         # 42345  # CMIP6 42348
         -1
         # 122910  # CMIP6 122915
+        # 452909  # CMIP6 452910
     )
     if cnt < indStart:
         print(cnt, filePath.path)
@@ -1055,14 +1091,14 @@ for cnt, filePath in enumerate(x):
     print("cnt:", cnt, "time:", timeTaken)
     # cnt records every file, only interrogates the first in a single directory
     if not cnt % 1000:
-        writeJson(cmip, testPath, cnt, timeTaken)
+        writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
 
 # %% and write out final file
 # end timer
 endTime = time.time()
 timeTaken = "{:07.3f}".format(endTime - startTime)
 print("cnt:", cnt, "time:", timeTaken)
-writeJson(cmip, testPath, cnt, timeTaken)
+writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
 print("badFileList:")
 for count, filename in enumerate(badFileList):
     print("{:04d}".format(count), badFileList[count])

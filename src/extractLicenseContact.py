@@ -61,6 +61,7 @@ PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read err
                      122915 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc - KeyError no T axis
 PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLat/Lon calls to check they exist
                      452910 /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc - KeyError: "No results found for 'Y'."
+                     TODO: check readData error catching - number of return args
                      TODO: wrap for x loop in try and except - alertError
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
@@ -753,7 +754,7 @@ def readData(filePath, varName):
         elif errC != None:
             return errC
     else:
-        print("errors else triggered")
+        print("readData: badFile ncdump error:", filePath, errors)
         return [filePath, errors], None, None, None, None, None, None, errX, errC,
 
 

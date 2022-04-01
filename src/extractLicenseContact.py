@@ -1045,6 +1045,7 @@ for cnt, filePath in enumerate(x):
             tmp = walkWashDicList(tmp)
             cmip[key] = tmp
     elif firstPath in filePath.path:
+        # query a single file per directory
         pass
 
     # %% iteratively write out results to local file
@@ -1052,6 +1053,7 @@ for cnt, filePath in enumerate(x):
     endTime = time.time()
     timeTaken = "{:07.3f}".format(endTime - startTime)
     print("cnt:", cnt, "time:", timeTaken)
+    # cnt records every file, only interrogates the first in a single directory
     if not cnt % 1000:
         writeJson(cmip, testPath, cnt, timeTaken)
 

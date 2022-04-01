@@ -13,6 +13,7 @@ PJD  2 Mar 2022     - awaiting CMIP6/CMIP metadata scour to complete
 PJD  2 Mar 2022     - started logic to extract info from metadata; added platform independent paths
 PJD  3 Mar 2022     - added pathlib Path call
 PJD  4 Mar 2022     - first pass at merging info
+PJD 31 Mar 2022     - Updated input 220302_CMIP6-CMIP_metaData -> 220315_CMIP6-no-cdmsBadFiles_metaData
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -109,7 +110,7 @@ del(martina, row, csvFile)
 # %% extract netcdf-harvested info
 print("process netcdf-file harvested info...")
 time.sleep(1)
-with open("220302_CMIP6-CMIP_metaData.json") as jsonFile:
+with open("220315_CMIP6-no-cdmsBadFiles_metaData.json") as jsonFile:
     tmp1 = json.load(jsonFile)
     for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info

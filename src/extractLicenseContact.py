@@ -64,6 +64,7 @@ PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read err
 PJD  1 Apr 2022     - Wrapped for x loop in try and except - alertError; updated readData to preallocate errors in case of ncdump error
 PJD  1 Apr 2022     - Found DRS vs fileName variable error - leads to numpy.core._exceptions._UFuncBinaryResolutionError, <class 'cdms2.error.CDMSError'>
                      717815 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc
+                     TODO: add logfile to script args, so restarts can occur
                      TODO: convert badFileList to dict and write alongside cmip
                      TODO: check readData error catching - number of return args
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4

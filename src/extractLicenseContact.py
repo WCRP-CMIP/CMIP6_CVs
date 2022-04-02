@@ -60,8 +60,11 @@ PJD 30 Mar 2022     - Updated readData to capture errX and errC and save these t
 PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLatitude()._data call to try - numpy.core._exceptions._UFuncBinaryResolutionError: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
                      122915 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc - KeyError no T axis
 PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLat/Lon calls to check they exist
-                     452910 /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc - KeyError: "No results found for 'Y'."
+                     452910 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc - KeyError: "No results found for 'Y'."
 PJD  1 Apr 2022     - Wrapped for x loop in try and except - alertError; updated readData to preallocate errors in case of ncdump error
+PJD  1 Apr 2022     - Found DRS vs fileName variable error - leads to numpy.core._exceptions._UFuncBinaryResolutionError, <class 'cdms2.error.CDMSError'>
+                     717815 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc
+                     TODO: convert badFileList to dict and write alongside cmip
                      TODO: check readData error catching - number of return args
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
@@ -647,6 +650,7 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
     bad /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc Error: 'units'
     bad /p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc 669991 CMIP6 NetCDF: Unknown file format
+    bad /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc 717815 CMIP6 Error: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
 
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
@@ -952,6 +956,9 @@ parser.add_argument(
     "activityId", metavar="S", type=str, help="an activity_id to build the search from",
 )
 parser.add_argument(
+    "startInd", nargs="?", default=-1, type=int, help="optional index to start for loop",
+)
+parser.add_argument(
     "fileNameAdd", nargs="?", default="", type=str, help="optional identifier to file testing",
 )
 args = parser.parse_args()
@@ -963,11 +970,20 @@ elif args.activityId == "CMIP6":
 else:
     print("Invalid path, ", args.activityId, "exiting")
     sys.exit()
+# Deal with indStart
+if args.startInd != -1:
+    startInd = args.startInd
+else:
+    startInd = -1
 # Deal with fileNameAdd
 if args.fileNameAdd != '':
     fileNameAdd = args.fileNameAdd
 else:
     fileNameAdd = ''
+# print("actId:", actId)
+# print("startInd:", startInd)
+# print("fileNameAdd:", fileNameAdd)
+# sys.exit()
 
 # create testpath
 testPath = os.path.join(testPath, actId)
@@ -1014,13 +1030,14 @@ try:
             #print("catching dictionary, pre-crash")
             pdb.set_trace()
         indStart = (
-            -1
+            startInd
             # 669000  # HighResMIP
             # 6547960 ScenarioMIP
             # 42345  # CMIP6 42348
             # 122910  # CMIP6 122915
             # 452909  # CMIP6 452910
             # 669990  # CMIP6 669991
+            # 717814  # 717815 CMIP6
         )
         if cnt < indStart:
             print(cnt, filePath.path)
@@ -1043,7 +1060,11 @@ try:
             key = getDrs(filePath.path)
             pathBits = filePath.path.split("/")
             cmipInd = pathBits.index("CMIP6")
-            varName = pathBits[cmipInd + 7]
+            varName = pathBits[cmipInd + 7]  # DRS
+            varName2 = pathBits[-1].split('_')[0]  # filename
+            if varName != varName2:
+                badFileList.append(['DRSError variable error', filePath])
+                varName = varName2
             if key in cmip:
                 #print("if key in cmip", key)
                 # pull global atts and compare, note if different

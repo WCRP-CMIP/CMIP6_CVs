@@ -61,8 +61,8 @@ PJD 31 Mar 2022     - Updated readData to deal with xarray open_dataset read err
                      122915 CMIP6 /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc - KeyError no T axis
 PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read error; tweaked cdm.getLat/Lon calls to check they exist
                      452910 /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc - KeyError: "No results found for 'Y'."
+PJD  1 Apr 2022     - Wrapped for x loop in try and except - alertError; updated readData to preallocate errors in case of ncdump error
                      TODO: check readData error catching - number of return args
-                     TODO: wrap for x loop in try and except - alertError
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -646,9 +646,13 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/ISMIP6/NASA-GISS/GISS-E2-1-G/1pctCO2-4xext/r1i1p1f1/Emon/cSoilAbove1m/gn/v20181022/cSoilAbove1m_Emon_GISS-E2-1-G_1pctCO2-4xext_r1i1p1f1_gn_192001-195012.nc 5184 CMIP6 lev.shape == ()
     bad /p/css03/esgf_publish/CMIP6/PMIP/CAS/FGOALS-g3/lig127k/r1i1p1f1/Amon/phalf/gn/v20191030/phalf_Amon_FGOALS-g3_lig127k_r1i1p1f1_gn_076001-076912-clim.nc 122915 KeyError no T axis
     bad /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc Error: 'units'
+    bad /p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc 669991 CMIP6 NetCDF: Unknown file format
+
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
     """
+    # preallocate error codes
+    errX, errC = [None for _ in range(2)]
     # read data - validate with ncdump that valid data, then try open and read
     cmd = subprocess.Popen(
         ["ncdump", "-h", filePath],
@@ -659,7 +663,6 @@ def readData(filePath, varName):
     output, errors = cmd.communicate()
     cmd.wait()
     if errors == b'':
-        errX, errC = [None for _ in range(2)]
         # try xarray read
         try:
             fH = open_dataset(filePath)
@@ -985,125 +988,133 @@ badFileList = []
 # endTime = time.time()
 # print('time taken:', "{:07.3f}".format(endTime - startTime))
 # sys.exit()
-x = scantree(testPath)
-cmip = {}
-cmip["version_metadata"] = {}
-cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
-cmip["version_metadata"]["institution_id"] = "PCMDI"
-startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-cmip["version_metadata"]["start_time"] = startTime
-for cnt, filePath in enumerate(x):
-    # catch case that scratch dir is encountered
-    if "/scratch" in filePath.path:
-        print("/scratch perms a problem, skipping..")
-        continue
-    # start timer
-    startTime = time.time()
-    # debug start
-    if cnt == "none":
+
+# wrap operation in try
+try:
+    x = scantree(testPath)
+    cmip = {}
+    cmip["version_metadata"] = {}
+    cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
+    cmip["version_metadata"]["institution_id"] = "PCMDI"
+    startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    cmip["version_metadata"]["start_time"] = startTime
+    for cnt, filePath in enumerate(x):
+        # catch case that scratch dir is encountered
+        if "/scratch" in filePath.path:
+            print("/scratch perms a problem, skipping..")
+            continue
+        # start timer
+        startTime = time.time()
+        # debug start
+        if cnt == "none":
+            endTime = time.time()
+            timeTaken = "{:07.3f}".format(endTime - startTime)
+            # writeJson(cmip, testPath, cnt, timeTaken)
+            # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
+            #print("catching dictionary, pre-crash")
+            pdb.set_trace()
+        indStart = (
+            -1
+            # 669000  # HighResMIP
+            # 6547960 ScenarioMIP
+            # 42345  # CMIP6 42348
+            # 122910  # CMIP6 122915
+            # 452909  # CMIP6 452910
+            # 669990  # CMIP6 669991
+        )
+        if cnt < indStart:
+            print(cnt, filePath.path)
+            continue
+        elif cnt == indStart:
+            firstPath = "/".join(filePath.path.split("/")[0:-1])
+        #    cmip = json.load(open("dupe.json"))
+        # debug end
+        # check for bad file - deprecated by try in getGlobalAtts
+        # if filePath.path in cdmsBadFiles:
+        #    print("bad file identified, skipping")
+        #    continue  # skip file, proceed to next in loop
+        # deal with multiple files - e.g. Omon
+        if cnt == 0:
+            firstPath = "/".join(filePath.path.split("/")[0:-1])
+        if firstPath not in filePath.path:
+            firstPath = "/".join(filePath.path.split("/")[0:-1])
+            print(cnt, filePath.path)  # path and filename complete
+            # build DRS institution_id.source_id.activity_id.experiment_id.variant_label.grid_label.version
+            key = getDrs(filePath.path)
+            pathBits = filePath.path.split("/")
+            cmipInd = pathBits.index("CMIP6")
+            varName = pathBits[cmipInd + 7]
+            if key in cmip:
+                #print("if key in cmip", key)
+                # pull global atts and compare, note if different
+                globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
+                    filePath.path, varName)
+                # catch file open error
+                if isinstance(globalAttDic, list):
+                    badFileList.append(globalAttDic)
+                    if isinstance(errX, list):
+                        badFileList.append(errX)
+                    if isinstance(errC, list):
+                        badFileList.append(errC)
+                    continue  # skip file, proceed to next in loop
+                dic2 = getGlobalAtts(globalAttDic, calendar,
+                                     lon, lat, lev, levUnits)
+                if dic2 == {}:
+                    continue  # skip file, proceed to next in loop
+                dic1 = cmip[key]
+                update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
+                # wash types
+                newDic = walkWashDicList(newDic)
+
+                # if difference found, update new entry
+                if update:
+                    cmip[key] = newDic
+            else:
+                # pull global atts for new entry
+                globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
+                    filePath.path, varName)
+                # catch file open error
+                if isinstance(globalAttDic, list):
+                    badFileList.append(globalAttDic)
+                    if isinstance(errX, list):
+                        badFileList.append(errX)
+                    if isinstance(errC, list):
+                        badFileList.append(errC)
+                    continue  # skip file, proceed to next in loop
+                tmp = getGlobalAtts(globalAttDic, calendar,
+                                    lon, lat, lev, levUnits)
+                if tmp == {}:
+                    continue  # skip file, proceed to next in loop
+                # wash types
+                tmp = walkWashDicList(tmp)
+                cmip[key] = tmp
+        elif firstPath in filePath.path:
+            # query a single file per directory
+            pass
+
+        # %% iteratively write out results to local file
+        # end timer
         endTime = time.time()
         timeTaken = "{:07.3f}".format(endTime - startTime)
-        # writeJson(cmip, testPath, cnt, timeTaken)
-        # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
-        #print("catching dictionary, pre-crash")
-        pdb.set_trace()
-    indStart = (
-        # 669000  # HighResMIP
-        # 6547960 ScenarioMIP
-        # 42345  # CMIP6 42348
-        -1
-        # 122910  # CMIP6 122915
-        # 452909  # CMIP6 452910
-    )
-    if cnt < indStart:
-        print(cnt, filePath.path)
-        continue
-    elif cnt == indStart:
-        firstPath = "/".join(filePath.path.split("/")[0:-1])
-    #    cmip = json.load(open("dupe.json"))
-    # debug end
-    # check for bad file - deprecated by try in getGlobalAtts
-    # if filePath.path in cdmsBadFiles:
-    #    print("bad file identified, skipping")
-    #    continue  # skip file, proceed to next in loop
-    # deal with multiple files - e.g. Omon
-    if cnt == 0:
-        firstPath = "/".join(filePath.path.split("/")[0:-1])
-    if firstPath not in filePath.path:
-        firstPath = "/".join(filePath.path.split("/")[0:-1])
-        print(cnt, filePath.path)  # path and filename complete
-        # build DRS institution_id.source_id.activity_id.experiment_id.variant_label.grid_label.version
-        key = getDrs(filePath.path)
-        pathBits = filePath.path.split("/")
-        cmipInd = pathBits.index("CMIP6")
-        varName = pathBits[cmipInd + 7]
-        if key in cmip:
-            #print("if key in cmip", key)
-            # pull global atts and compare, note if different
-            globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
-                filePath.path, varName)
-            # catch file open error
-            if isinstance(globalAttDic, list):
-                badFileList.append(globalAttDic)
-                if isinstance(errX, list):
-                    badFileList.append(errX)
-                if isinstance(errC, list):
-                    badFileList.append(errC)
-                continue  # skip file, proceed to next in loop
-            dic2 = getGlobalAtts(globalAttDic, calendar,
-                                 lon, lat, lev, levUnits)
-            if dic2 == {}:
-                continue  # skip file, proceed to next in loop
-            dic1 = cmip[key]
-            update, newDic = compareDicts(dic1, dic2, cnt, filePath.path)
-            # wash types
-            newDic = walkWashDicList(newDic)
+        print("cnt:", cnt, "time:", timeTaken)
+        # cnt records every file, only interrogates the first in a single directory
+        if not cnt % 1000:
+            writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
 
-            # if difference found, update new entry
-            if update:
-                cmip[key] = newDic
-        else:
-            # pull global atts for new entry
-            globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC = readData(
-                filePath.path, varName)
-            # catch file open error
-            if isinstance(globalAttDic, list):
-                badFileList.append(globalAttDic)
-                if isinstance(errX, list):
-                    badFileList.append(errX)
-                if isinstance(errC, list):
-                    badFileList.append(errC)
-                continue  # skip file, proceed to next in loop
-            tmp = getGlobalAtts(globalAttDic, calendar,
-                                lon, lat, lev, levUnits)
-            if tmp == {}:
-                continue  # skip file, proceed to next in loop
-            # wash types
-            tmp = walkWashDicList(tmp)
-            cmip[key] = tmp
-    elif firstPath in filePath.path:
-        # query a single file per directory
-        pass
-
-    # %% iteratively write out results to local file
+    # %% and write out final file
     # end timer
     endTime = time.time()
     timeTaken = "{:07.3f}".format(endTime - startTime)
     print("cnt:", cnt, "time:", timeTaken)
-    # cnt records every file, only interrogates the first in a single directory
-    if not cnt % 1000:
-        writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
+    writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
+    print("badFileList:")
+    for count, filename in enumerate(badFileList):
+        print("{:04d}".format(count), badFileList[count])
 
-# %% and write out final file
-# end timer
-endTime = time.time()
-timeTaken = "{:07.3f}".format(endTime - startTime)
-print("cnt:", cnt, "time:", timeTaken)
-writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
-print("badFileList:")
-for count, filename in enumerate(badFileList):
-    print("{:04d}".format(count), badFileList[count])
-
+except:
+    # catch error and send email alert
+    print("Caught unexpected error:", sys.exc_info()[0])
+    alertError("count", "filePath", sys.exc_info()[0])
 
 # %% Notes
 """

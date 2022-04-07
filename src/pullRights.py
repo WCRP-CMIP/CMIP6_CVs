@@ -14,6 +14,7 @@ PJD  2 Mar 2022     - started logic to extract info from metadata; added platfor
 PJD  3 Mar 2022     - added pathlib Path call
 PJD  4 Mar 2022     - first pass at merging info
 PJD 31 Mar 2022     - Updated input 220302_CMIP6-CMIP_metaData -> 220315_CMIP6-no-cdmsBadFiles_metaData
+PJD  5 Apr 2022     - Updated input 220315 -> 220405_CMIP6-no-cdmsBadFiles_metadata
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -110,7 +111,7 @@ del(martina, row, csvFile)
 # %% extract netcdf-harvested info
 print("process netcdf-file harvested info...")
 time.sleep(1)
-with open("220315_CMIP6-no-cdmsBadFiles_metaData.json") as jsonFile:
+with open("220405_CMIP6-no-cdmsBadFiles_metaData.json") as jsonFile:
     tmp1 = json.load(jsonFile)
     for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info
@@ -120,7 +121,10 @@ with open("220315_CMIP6-no-cdmsBadFiles_metaData.json") as jsonFile:
         instId = keyBits[1]
         srcId = keyBits[2]
         ver = keyBits[7]
-        contact = tmp1[key1]["contact"]
+        if "contact" in tmp1[key1].keys():
+            contact = tmp1[key1]["contact"]
+        else:
+            contact = ""
         # cleanup blank entries
         if isinstance(contact, list):
             print(key1, "contact is list")

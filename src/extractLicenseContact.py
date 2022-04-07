@@ -64,8 +64,10 @@ PJD  1 Apr 2022     - Updated readData to deal with xarray open_dataset read err
 PJD  1 Apr 2022     - Wrapped for x loop in try and except - alertError; updated readData to preallocate errors in case of ncdump error
 PJD  1 Apr 2022     - Found DRS vs fileName variable error - leads to numpy.core._exceptions._UFuncBinaryResolutionError, <class 'cdms2.error.CDMSError'>
                      717815 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc
-                     TODO: add logfile to script args, so restarts can occur
-                     TODO: convert badFileList to dict and write alongside cmip
+PJD  6 Apr 2022     - Updated readData to deal with xarray RuntimeError
+                     4512180 CMIP6 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc
+PJD  6 Apr 2022     - Added restartLog input argument to allow a restart from the last saved state; updated writeJson for shorter output filename
+                     TODO: convert badFileList to dict and write alongside cmip - restarts
                      TODO: check readData error catching - number of return args
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
@@ -652,6 +654,7 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/PMIP/IPSL/IPSL-CM6A-LR/midPliocene-eoi400/r1i1p1f1/AERmonZ/o3/grz/v20190118/o3_AERmonZ_IPSL-CM6A-LR_midPliocene-eoi400_r1i1p1f1_grz_185001-204912.nc Error: 'units'
     bad /p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc 669991 CMIP6 NetCDF: Unknown file format
     bad /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc 717815 CMIP6 Error: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
+    bad /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc 4512180 Caught unexpected error: <class 'RuntimeError'>
 
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 
@@ -697,6 +700,7 @@ def readData(filePath, varName):
             np.core._exceptions.UFuncTypeError,
             AttributeError,
             KeyError,
+            RuntimeError,
             ValueError,
             UnboundLocalError,
         ) as error:
@@ -870,8 +874,6 @@ def writeJson(dic, testPath, count, endTime, fileNameAdd):
     cmip["version_metadata"]["end_time  "] = endTime
     # get path
     pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
-    if pathInfo == "CMIP6-":
-        pathInfo = "CMIP6-no-cdmsBadFiles"
     # get count
     cmip["version_metadata"]["file_processed_count"] = str(count)
 
@@ -957,10 +959,13 @@ parser.add_argument(
     "activityId", metavar="S", type=str, help="an activity_id to build the search from",
 )
 parser.add_argument(
-    "startInd", nargs="?", default=-1, type=int, help="optional index to start for loop",
+    "fileNameAdd", nargs="?", default="", type=str, help="optional identifier to file testing",
 )
 parser.add_argument(
-    "fileNameAdd", nargs="?", default="", type=str, help="optional identifier to file testing",
+    "restartLog", nargs="?", default="", type=str, help="optional logfile to restart from",
+)
+parser.add_argument(
+    "startInd", nargs="?", default=-1, type=int, help="optional index to start for loop",
 )
 args = parser.parse_args()
 # Deal with MIP scan
@@ -971,27 +976,36 @@ elif args.activityId == "CMIP6":
 else:
     print("Invalid path, ", args.activityId, "exiting")
     sys.exit()
-# Deal with indStart
-if args.startInd != -1:
-    startInd = args.startInd
-else:
-    startInd = -1
 # Deal with fileNameAdd
 if args.fileNameAdd != '':
     fileNameAdd = args.fileNameAdd
 else:
     fileNameAdd = ''
-# print("actId:", actId)
-# print("startInd:", startInd)
-# print("fileNameAdd:", fileNameAdd)
-# sys.exit()
+# Deal with restartLog
+if args.restartLog != "":
+    restartLog = args.restartLog
+    # test to see if file exists
+    if os.path.exists(restartLog):
+        # load json
+        with open(restartLog) as f:
+            cmip = json.load(f)
+            startInd = int(cmip["version_metadata"]["file_processed_count"])
+            fileNameAdd = ''.join(['restartedInd-', str(startInd)])
+            startIndSet = True
+if not startIndSet:
+    # Deal with startInd
+    if args.startInd != -1:
+        startInd = args.startInd
+    else:
+        startInd = -1
+print("actId:", actId)
+print("restartLog:", restartLog)
+print("startInd:", startInd)
+print("fileNameAdd:", fileNameAdd)
 
 # create testpath
 testPath = os.path.join(testPath, actId)
 print("Processing testPath:", testPath)
-
-# create variable to catch bad files
-badFileList = []
 
 # use iterator to start scan
 # startTime = time.time()
@@ -1006,13 +1020,20 @@ badFileList = []
 # print('time taken:', "{:07.3f}".format(endTime - startTime))
 # sys.exit()
 
+# create dictionary to catch bad files
+badFileList = []  # convert to dictionary add to json
 # wrap operation in try
 try:
     x = scantree(testPath)
-    cmip = {}
-    cmip["version_metadata"] = {}
-    cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
-    cmip["version_metadata"]["institution_id"] = "PCMDI"
+    if 'cmip' in locals():
+        print('cmip dictionary loaded..')
+        cmip["version_metadata"]["restart_index"] = startInd
+        cmip["version_metadata"]["restart_start_time"] = cmip["version_metadata"]["start_time"]
+    else:
+        cmip = {}
+        cmip["version_metadata"] = {}
+        cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
+        cmip["version_metadata"]["institution_id"] = "PCMDI"
     startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     cmip["version_metadata"]["start_time"] = startTime
     for cnt, filePath in enumerate(x):

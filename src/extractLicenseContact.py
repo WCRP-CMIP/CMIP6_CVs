@@ -67,8 +67,10 @@ PJD  1 Apr 2022     - Found DRS vs fileName variable error - leads to numpy.core
 PJD  6 Apr 2022     - Updated readData to deal with xarray RuntimeError
                      4512180 CMIP6 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc
 PJD  6 Apr 2022     - Added restartLog input argument to allow a restart from the last saved state; updated writeJson for shorter output filename
-                     TODO: convert badFileList to dict and write alongside cmip - restarts
-                     TODO: check readData error catching - number of return args
+PJD  7 Apr 2022     - Updated readData to correct output args on error
+                     4512180 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc - Caught unexpected error: <class 'ValueError'>
+PJD  7 Apr 2022     - Converted badFileList to cmip[dict] - persist error logs through restarts
+PJD  7 Apr 2022     - Updated readData errX and errC to wash error types class -> str
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -701,14 +703,14 @@ def readData(filePath, varName):
             AttributeError,
             KeyError,
             RuntimeError,
-            ValueError,
             UnboundLocalError,
+            ValueError,
         ) as error:
             print("")
             print("readData: badFile xarray:", filePath)
             print("Error:", error)
             print("")
-            errX = ['xarray', filePath, error]
+            errX = ['xarray', filePath, str(error)]
             # try cdms2
             try:
                 fH = cdm.open(filePath)
@@ -753,18 +755,20 @@ def readData(filePath, varName):
                 print("readData: badFile cdms2:", filePath)
                 print("Error:", error)
                 print("")
-                errC = ['cdms2', filePath, error]
+                errC = ['cdms2', filePath, str(error)]
+        #print("bomb twice")
+        # pdb.set_trace()
         # return file attributes
         if errX == None:
             return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
         elif errC == None:
             return globalAttDic, calendar, lev, levUnits, lat, lon, varList, errX, errC
         elif errX != None and errC != None:
-            return errX, errC
+            return errX, errC, None, None, None, None, None, None, None
         elif errX != None:
-            return errX
+            return errX, None, None, None, None, None, None, None, None
         elif errC != None:
-            return errC
+            return errC, None, None, None, None, None, None, None, None
     else:
         print("readData: badFile ncdump error:", filePath, errors)
         return [filePath, errors], None, None, None, None, None, None, errX, errC,
@@ -912,6 +916,8 @@ testPath = (
     # "/p/css03/esgf_publish/CMIP6/ScenarioMIP"
     # "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/"
     # "/p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future"
+    # "/p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon"
+    # "/p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1"
     "/p/css03/esgf_publish/CMIP6"
 )
 
@@ -982,6 +988,8 @@ if args.fileNameAdd != '':
 else:
     fileNameAdd = ''
 # Deal with restartLog
+startIndSet = False
+restartLog = "blank"
 if args.restartLog != "":
     restartLog = args.restartLog
     # test to see if file exists
@@ -1003,9 +1011,10 @@ print("restartLog:", restartLog)
 print("startInd:", startInd)
 print("fileNameAdd:", fileNameAdd)
 
-# create testpath
+# create testpath and reset startInd for testing
 testPath = os.path.join(testPath, actId)
 print("Processing testPath:", testPath)
+###startInd = -1
 
 # use iterator to start scan
 # startTime = time.time()
@@ -1021,7 +1030,7 @@ print("Processing testPath:", testPath)
 # sys.exit()
 
 # create dictionary to catch bad files
-badFileList = []  # convert to dictionary add to json
+# badFileList = []  # convert to dictionary add to json
 # wrap operation in try
 try:
     x = scantree(testPath)
@@ -1029,11 +1038,17 @@ try:
         print('cmip dictionary loaded..')
         cmip["version_metadata"]["restart_index"] = startInd
         cmip["version_metadata"]["restart_start_time"] = cmip["version_metadata"]["start_time"]
+        # first run
+        cmip["_badFileList"] = {}
+        # subsequent run
+        #cmip["restart_badFileList"] = cmip["_badFileList"]
+        #cmip["_badFileList"] = cmip["_badFileList"]
     else:
         cmip = {}
         cmip["version_metadata"] = {}
         cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
         cmip["version_metadata"]["institution_id"] = "PCMDI"
+        cmip["_badFileList"] = {}
     startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     cmip["version_metadata"]["start_time"] = startTime
     for cnt, filePath in enumerate(x):
@@ -1085,7 +1100,9 @@ try:
             varName = pathBits[cmipInd + 7]  # DRS
             varName2 = pathBits[-1].split('_')[0]  # filename
             if varName != varName2:
-                badFileList.append(['DRSError variable error', filePath])
+                #badFileList.append(['DRSError variable error', filePath])
+                cmip["_badFileList"][str(cnt)] = [
+                    'DRSError variable error', filePath]
                 varName = varName2
             if key in cmip:
                 #print("if key in cmip", key)
@@ -1094,11 +1111,14 @@ try:
                     filePath.path, varName)
                 # catch file open error
                 if isinstance(globalAttDic, list):
-                    badFileList.append(globalAttDic)
+                    # badFileList.append(globalAttDic)
+                    cmip["_badFileList"][str(cnt)] = globalAttDic
                     if isinstance(errX, list):
-                        badFileList.append(errX)
+                        # badFileList.append(errX)
+                        cmip["_badFileList"][str(cnt)] = errX
                     if isinstance(errC, list):
-                        badFileList.append(errC)
+                        # badFileList.append(errC)
+                        cmip["_badFileList"][str(cnt)] = errC
                     continue  # skip file, proceed to next in loop
                 dic2 = getGlobalAtts(globalAttDic, calendar,
                                      lon, lat, lev, levUnits)
@@ -1118,11 +1138,14 @@ try:
                     filePath.path, varName)
                 # catch file open error
                 if isinstance(globalAttDic, list):
-                    badFileList.append(globalAttDic)
+                    # badFileList.append(globalAttDic)
+                    cmip["_badFileList"][str(cnt)] = globalAttDic
                     if isinstance(errX, list):
-                        badFileList.append(errX)
+                        # badFileList.append(errX)
+                        cmip["_badFileList"][str(cnt)] = errX
                     if isinstance(errC, list):
-                        badFileList.append(errC)
+                        # badFileList.append(errC)
+                        cmip["_badFileList"][str(cnt)] = errC
                     continue  # skip file, proceed to next in loop
                 tmp = getGlobalAtts(globalAttDic, calendar,
                                     lon, lat, lev, levUnits)
@@ -1150,9 +1173,9 @@ try:
     timeTaken = "{:07.3f}".format(endTime - startTime)
     print("cnt:", cnt, "time:", timeTaken)
     writeJson(cmip, testPath, cnt, timeTaken, fileNameAdd)
-    print("badFileList:")
-    for count, filename in enumerate(badFileList):
-        print("{:04d}".format(count), badFileList[count])
+    # print("badFileList:")
+    # for count, filename in enumerate(badFileList):
+    #    print("{:04d}".format(count), badFileList[count])
 
 except:
     # catch error and send email alert

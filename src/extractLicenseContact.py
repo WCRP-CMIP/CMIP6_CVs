@@ -68,9 +68,12 @@ PJD  6 Apr 2022     - Updated readData to deal with xarray RuntimeError
                      4512180 CMIP6 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc
 PJD  6 Apr 2022     - Added restartLog input argument to allow a restart from the last saved state; updated writeJson for shorter output filename
 PJD  7 Apr 2022     - Updated readData to correct output args on error
-                     4512180 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc - Caught unexpected error: <class 'ValueError'>
+                     4512180 CMIP6 /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc - Caught unexpected error: <class 'ValueError'>
 PJD  7 Apr 2022     - Converted badFileList to cmip[dict] - persist error logs through restarts
 PJD  7 Apr 2022     - Updated readData errX and errC to wash error types class -> str
+
+578998 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/CNRM-CERFACS/CNRM-CM6-1-HR/highresSST-present/r1i1p1f2/Amon/ta/gr/v20190311/ta_Amon_CNRM-CM6-1-HR_highresSST-present_r1i1p1f2_gr_199001-199912.nc - Caught unexpected error: <class 'TypeError'>
+
                      TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
                      TODO: add iterator counter to version_data/writeJson to indicate completion stats
                      TODO: grid_info also needs to have realms - ala nominal_resolution
@@ -771,7 +774,7 @@ def readData(filePath, varName):
             return errC, None, None, None, None, None, None, None, None
     else:
         print("readData: badFile ncdump error:", filePath, errors)
-        return [filePath, errors], None, None, None, None, None, None, errX, errC,
+        return [filePath, str(errors)], None, None, None, None, None, None, errX, errC,
 
 
 def scantree(path):

@@ -879,7 +879,7 @@ def writeJson(dic, testPath, count, endTime, fileNameAdd):
     cmip["version_metadata"]["end_time  "] = endTime
     # get path
     pathInfo = testPath.replace("/p/css03/esgf_publish/", "")
-    if pathInfo == "CMIP6":
+    if pathInfo == "CMIP6/":
         pathInfo = pathInfo.replace("/", "")
     else:
         pathInfo = pathInfo.replace("/", "-")

@@ -878,14 +878,19 @@ def writeJson(dic, testPath, count, endTime, fileNameAdd):
     timeFormatDir = timeNow.strftime("%y%m%d")
     cmip["version_metadata"]["end_time  "] = endTime
     # get path
-    pathInfo = testPath.replace("/p/css03/esgf_publish/", "").replace("/", "-")
+    pathInfo = testPath.replace("/p/css03/esgf_publish/", "")
+    if pathInfo == "CMIP6":
+        pathInfo = pathInfo.replace("/", "")
+    else:
+        pathInfo = pathInfo.replace("/", "-")
     # get count
     cmip["version_metadata"]["file_processed_count"] = str(count)
 
     # Write output
     if fileNameAdd:
         outFile = "_".join(
-            [timeFormatDir, pathInfo, "metaData", fileNameAdd, ".json"])
+            [timeFormatDir, pathInfo, "metaData", fileNameAdd])
+        outFile = "".join([outFile, ".json"])
     else:
         outFile = "_".join([timeFormatDir, pathInfo, "metaData.json"])
     if os.path.exists(outFile):

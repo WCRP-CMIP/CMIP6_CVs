@@ -73,9 +73,9 @@ PJD  7 Apr 2022     - Converted badFileList to cmip[dict] - persist error logs t
 PJD  7 Apr 2022     - Updated readData errX and errC to wash error types class -> str
 PJD  8 Apr 2022     - Correct type DRSError variable error filePath -> filePath.path
                      578998 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/CNRM-CERFACS/CNRM-CM6-1-HR/highresSST-present/r1i1p1f2/Amon/ta/gr/v20190311/ta_Amon_CNRM-CM6-1-HR_highresSST-present_r1i1p1f2_gr_199001-199912.nc - Caught unexpected error: <class 'TypeError'>
+PJD  9 Apr 2022     - Updated 'DRSError variable error' to list [file, error] to match other error formats
 
-                     TODO: check is numpyEncoder failure occurs with py3.9 or <py3.10.4
-                     TODO: add iterator counter to version_data/writeJson to indicate completion stats
+                     TODO: deal with multiple restart_ entries, use append to add info if it already exists
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs and getGlobalAtts for CMIP5 and CMIP3
@@ -1042,18 +1042,22 @@ try:
     x = scantree(testPath)
     if 'cmip' in locals():
         print('cmip dictionary loaded..')
+        # reallocate to restart variables
         cmip["version_metadata"]["restart_index"] = startInd
         cmip["version_metadata"]["restart_start_time"] = cmip["version_metadata"]["start_time"]
+        cmip["version_metadata"]["restart_testPath"] = cmip["version_metadata"]["testPath"]
+        cmip["restart_badFileList"] = cmip["_badFileList"]
         # first run
-        cmip["_badFileList"] = {}
+        #cmip["_badFileList"] = {}
         # subsequent run
-        #cmip["restart_badFileList"] = cmip["_badFileList"]
-        #cmip["_badFileList"] = cmip["_badFileList"]
+        cmip["_badFileList"] = cmip["_badFileList"]
+        cmip["version_metadata"]["testPath"] = testPath
     else:
         cmip = {}
         cmip["version_metadata"] = {}
         cmip["version_metadata"]["author"] = "Paul J. Durack <durack1@llnl.gov>"
         cmip["version_metadata"]["institution_id"] = "PCMDI"
+        cmip["version_metadata"]["testPath"] = testPath
         cmip["_badFileList"] = {}
     startTime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     cmip["version_metadata"]["start_time"] = startTime
@@ -1108,7 +1112,7 @@ try:
             if varName != varName2:
                 #badFileList.append(['DRSError variable error', filePath])
                 cmip["_badFileList"][str(cnt)] = [
-                    'DRSError variable error', filePath.path]
+                    filePath.path, 'DRSError variable error']
                 varName = varName2
             if key in cmip:
                 #print("if key in cmip", key)

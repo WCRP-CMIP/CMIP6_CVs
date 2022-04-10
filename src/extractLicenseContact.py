@@ -658,6 +658,7 @@ def readData(filePath, varName):
     bad /p/css03/esgf_publish/CMIP6/HighResMIP/CAS/FGOALS-f3-H/highres-future/r1i1p1f1/Omon/tosga/gn/v20201225/tosga_Omon_FGOALS-f3-H_highres-future_r1i1p1f1_gn_201501-205012.nc 669991 CMIP6 NetCDF: Unknown file format
     bad /p/css03/esgf_publish/CMIP6/HighResMIP/MOHC/HadGEM3-GC31-HM/highresSST-present/r1i1p1f1/6hrPlevPt/wbptemp7h/gn/v20170831/wbptemp_6hrPlevPt_HadGEM3-GC31-HM_highresSST-present_r1i1p1f1_gn_199307010000-199309301800.nc 717815 CMIP6 Error: ufunc 'subtract' cannot use operands with types dtype('O') and dtype('<m8[ns]')
     bad /p/css03/esgf_publish/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp245/r3i1p1f1/SImon/siu/gn/v20210517/siu_SImon_EC-Earth3_ssp245_r3i1p1f1_gn_203301-203312.nc 4512180 Caught unexpected error: <class 'RuntimeError'>
+    timeProblem /p/css03/esgf_publish/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp534-over/r1i1p1f1/Omon/vmo/gn/v20190909/vmo_Omon_IPSL-CM6A-LR_ssp534-over_r1i1p1f1_gn_220101-230012.nc 8794418 CMIP6 lib/python3.10/site-packages/xarray/coding/times.py:673: SerializationWarning: Unable to decode time axis into full numpy.datetime64 objects, continuing using cftime.datetime objects instead, reason: dates out of range
 
     https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
 

@@ -15,6 +15,7 @@ PJD  3 Mar 2022     - added pathlib Path call
 PJD  4 Mar 2022     - first pass at merging info
 PJD 31 Mar 2022     - Updated input 220302_CMIP6-CMIP_metaData -> 220315_CMIP6-no-cdmsBadFiles_metaData
 PJD  5 Apr 2022     - Updated input 220315 -> 220405_CMIP6-no-cdmsBadFiles_metadata
+PJD 12 Apr 2022     - Updated input 220405 -> 220412_CMIP6_metaData_restartedInd-8243000
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -111,11 +112,11 @@ del(martina, row, csvFile)
 # %% extract netcdf-harvested info
 print("process netcdf-file harvested info...")
 time.sleep(1)
-with open("220405_CMIP6-no-cdmsBadFiles_metaData.json") as jsonFile:
+with open("220412_CMIP6_metaData_restartedInd-8243000.json") as jsonFile:
     tmp1 = json.load(jsonFile)
     for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info
-        if key1 == "version_metadata":
+        if key1 in ["_badFileList", "version_metadata"]:
             continue
         keyBits = key1.split(".")
         instId = keyBits[1]
@@ -199,7 +200,7 @@ for key in out.keys():
     else:
         print("no contact info:", key)
 
-# %% populate UKESM1-0* provided input
+# %% populate MOHC UKESM1-0* provided input
 for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
     out[src]["rights_identifier"] = "CC BY 4.0"
     out[src][
@@ -208,6 +209,16 @@ for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
     out[src]["exceptions_contact"] = "@metoffice.gov.uk <-cmip6.ukesm1"
     out[src]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
     out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
+
+# %% populate NASA-GISS provided input
+for src in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
+    out[src]["rights_identifier"] = "CC0"
+    out[src][
+        "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)"
+    out[src]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+    out[src]["exceptions_contact"] = "@lists.nasa.gov <-cmip-giss-l"
+    out[src]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+    out[src]["history"] = "XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0"
 
 # %% write json
 timeNow = datetime.datetime.now()

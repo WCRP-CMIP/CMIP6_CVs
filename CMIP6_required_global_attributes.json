@@ -32,11 +32,11 @@
         "variant_label"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 18 16:16:09 2022 -0800",
-        "CV_collection_version":"6.2.56.10",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "institution_id":"PCMDI",
-        "previous_commit":"ba0173c3a83bb3df5034bf2c5739cc0eb3237622",
+        "CV_collection_modified":"Wed Apr 13 13:21:31 2022 00100",
+        "CV_collection_version":"6.2.56.11",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "institution_id":"MOHC",
+        "previous_commit":"451e55b674be3fbab62dd8241840bbae237943bd",
         "required_global_attributes_CV_modified":"Thu Dec 19 15:32:17 2019 -0800",
         "required_global_attributes_CV_note":"Reverting addition of external_variables to required_global_attributes",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

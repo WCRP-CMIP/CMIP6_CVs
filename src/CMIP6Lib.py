@@ -131,7 +131,7 @@ def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
 
 #%% Clean functions
 def cleanString(string):
-    if isinstance(string,str) or isinstance(string,unicode):
+    if isinstance(string,str): # or isinstance(string,unicode):
     # Take a string and clean it for standard errors
         string = string.strip()  # Remove trailing whitespace
         string = string.strip(',.')  # Remove trailing characters

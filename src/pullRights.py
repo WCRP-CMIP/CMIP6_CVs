@@ -17,6 +17,7 @@ PJD 31 Mar 2022     - Updated input 220302_CMIP6-CMIP_metaData -> 220315_CMIP6-n
 PJD  5 Apr 2022     - Updated input 220315 -> 220405_CMIP6-no-cdmsBadFiles_metadata
 PJD 12 Apr 2022     - Updated input 220405 -> 220412_CMIP6_metaData_restartedInd-8243000
 PJD 14 Apr 2022     - Updated input 220412 -> 220414_CMIP6_metaData_restartedInd-8243000 (1053)
+PJD 20 Apr 2022     - Updated input 220414 -> 220420_CMIP6_metaData_restartedInd-8243000 (1230)
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -113,7 +114,7 @@ del(martina, row, csvFile)
 # %% extract netcdf-harvested info
 print("process netcdf-file harvested info...")
 time.sleep(1)
-with open("220414_CMIP6_metaData_restartedInd-8243000.json") as jsonFile:
+with open("220420_CMIP6_metaData_restartedInd-8243000.json") as jsonFile:
     tmp1 = json.load(jsonFile)
     for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info

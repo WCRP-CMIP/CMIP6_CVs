@@ -294,6 +294,7 @@
     },
     "CIESM":{
         "contact":[
+            "Python Coder (coder@a.b.c.com)",
             "yanluan@tsinghua.edu.cn"
         ],
         "dkrz":"CC BY-SA 4.0",
@@ -301,9 +302,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20191228",
+            "v20191202",
             "v20200806",
-            6
+            7
         ]
     },
     "CMCC-CM2-HR4":{
@@ -373,9 +374,9 @@
             "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190214",
+            "v20180705",
             "v20201217",
-            25
+            33
         ]
     },
     "CNRM-CM6-1-HR":{
@@ -390,7 +391,7 @@
         "versions":[
             "v20190221",
             "v20210412",
-            10
+            11
         ]
     },
     "CNRM-ESM2-1":{
@@ -1178,8 +1179,10 @@
     },
     "KIOST-ESM":{
         "contact":[
+            "Prof. Young Ho Kim (yhokim@pknu.ac.kr)",
             "Prof.Young Ho Kim (yhokim@pknu.ac.kr)",
             "Young Ho Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)",
+            "YoungHo Kim (yhkim@pknu.ac.kr & yhkimstar@gmail.com)",
             "YoungHo Kim (yhkimstar@gmail.com)",
             "YoungHo Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)"
         ],
@@ -1190,7 +1193,7 @@
         "versions":[
             "v20191104",
             "v20210928",
-            32
+            47
         ]
     },
     "LBLRTM-12-8":{
@@ -1293,7 +1296,7 @@
         "versions":[
             "v20171003",
             "v20211011",
-            12
+            97
         ]
     },
     "MPI-ESM1-2-LR":{
@@ -1416,7 +1419,18 @@
         ]
     },
     "NorCPM1":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "Please send any requests or bug reports to norcpm@uib.no"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190914",
+            "v20191029",
+            3
+        ]
     },
     "NorESM1-F":{
         "contact":[

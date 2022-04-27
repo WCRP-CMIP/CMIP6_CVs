@@ -120,7 +120,7 @@
         "versions":[
             "v20200212",
             "v20200909",
-            2
+            4
         ]
     },
     "AWI-ESM-2-1-LR":{
@@ -150,13 +150,14 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190308",
+            "v20181009",
             "v20201021",
-            54
+            97
         ]
     },
     "BCC-ESM1":{
         "contact":[
+            "Dr. Tongwen Wu (twwu@cma.gov.cn)",
             "Dr. Tongwen Wu(twwu@cma.gov.cn)"
         ],
         "dkrz":"CC BY-SA 4.0",
@@ -164,9 +165,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190531",
+            "v20181114",
             "v20210119",
-            45
+            79
         ]
     },
     "BESM-2-9":{
@@ -197,17 +198,20 @@
     },
     "CAS-ESM2-0":{
         "contact":[
+            "He Zhang (zhanghe@mail.iap.ac.cn)",
             "He Zhang(zhanghe@mail.iap.ac.cn)",
-            "Jiangbo Jin(jinjiangbo@mail.iap.ac.cn)"
+            "Jiangbo Jin(jinjiangbo@mail.iap.ac.cn)",
+            "Zhang He (zhanghe@mail.iap.ac.cn)",
+            "Zhang He(zhanghe@mail.iap.ac.cn)"
         ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200520",
+            "v20200301",
             "v20210422",
-            10
+            38
         ]
     },
     "CESM1-1-CAM5-CMIP5":{
@@ -264,13 +268,24 @@
             "Creative Commons Attribution-[]ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190724",
+            "v20190218",
             "v20210816",
-            26
+            47
         ]
     },
     "CESM2-FV2":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20200811",
+            6
+        ]
     },
     "CESM2-SE":{
         "dkrz":"CC BY-SA 4.0"
@@ -284,13 +299,24 @@
             "Creative Commons Attribution-[]ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190531",
-            "v20210417",
-            29
+            "v20190220",
+            "v20210816",
+            43
         ]
     },
     "CESM2-WACCM-FV2":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191120",
+            "v20200731",
+            6
+        ]
     },
     "CIESM":{
         "contact":[
@@ -374,9 +400,9 @@
             "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20180705",
-            "v20201217",
-            33
+            "v20180626",
+            "v20210212",
+            37
         ]
     },
     "CNRM-CM6-1-HR":{
@@ -403,9 +429,9 @@
             "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20181109",
+            "v20180914",
             "v20201208",
-            12
+            28
         ]
     },
     "CNRM-ESM2-1-HR":{
@@ -667,7 +693,9 @@
     },
     "FGOALS-f3-L":{
         "contact":[
+            "Bian He(heb@lasg.iap.ac.cn)",
             "Pengfei Lin(linpf@mail.iap.ac.cn)",
+            "Qing Bao(qbao@lasg.iap.ac.cn),Bian He(heb@lasg.iap.ac.cn)",
             "Qing Bao(qbao@lasg.iap.ac.cn); Bian He (heb@lasg.iap.ac.cn)",
             "Weipeng Zheng (zhengwp@mail.iap.ac.cn)",
             "Wu Bo (wubo@mail.iap.ac.cn)",
@@ -680,9 +708,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190723",
+            "v20181108",
             "v20220215",
-            56
+            81
         ]
     },
     "FGOALS-g3":{
@@ -699,7 +727,7 @@
         "versions":[
             "v20190818",
             "v20211113",
-            45
+            88
         ]
     },
     "FIO-ESM-2-0":{
@@ -717,15 +745,18 @@
         ]
     },
     "GFDL-AM4":{
-        "contact":[],
+        "contact":[
+            "gfdl.climate.model.info@noaa.gov"
+        ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
-            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20180701",
-            "v20180701",
-            1
+            "v20180301",
+            "v20180807",
+            3
         ]
     },
     "GFDL-CM4":{
@@ -738,9 +769,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20180701",
-            "v20180701",
-            1
+            "v20180301",
+            "v20190920",
+            5
         ]
     },
     "GFDL-CM4C192":{
@@ -771,7 +802,7 @@
         "versions":[
             "v20180701",
             "v20190920",
-            2
+            3
         ]
     },
     "GFDL-GLOBAL-LBL":{
@@ -832,9 +863,9 @@
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
         "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
         "versions":[
-            "v20180906",
+            "v20180824",
             "v20220115",
-            15
+            36
         ]
     },
     "GISS-E2-1-G-CC":{
@@ -853,9 +884,9 @@
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
         "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
         "versions":[
-            "v20190815",
+            "v20190325",
             "v20220115",
-            3
+            4
         ]
     },
     "GISS-E2-1-H":{
@@ -873,28 +904,50 @@
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
         "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
         "versions":[
-            "v20200115",
+            "v20180824",
             "v20201215",
-            2
+            8
         ]
     },
     "GISS-E2-2-G":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
         "dkrz":"CC BY-SA 4.0",
         "exceptions_contact":"@lists.nasa.gov <-cmip-giss-l",
         "history":"XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
         "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)",
         "rights_identifier":"CC0",
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-        "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+        "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+        "versions":[
+            "v20191120",
+            "v20191120",
+            1
+        ]
     },
     "GISS-E2-2-H":{
+        "contact":[
+            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+        ],
         "dkrz":"CC BY-SA 4.0",
         "exceptions_contact":"@lists.nasa.gov <-cmip-giss-l",
         "history":"XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
         "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)",
         "rights_identifier":"CC0",
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-        "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+        "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+        "versions":[
+            "v20191120",
+            "v20200115",
+            2
+        ]
     },
     "GISS-E3-G":{
         "contact":[],
@@ -953,8 +1006,8 @@
         ],
         "versions":[
             "v20170921",
-            "v20211130",
-            41
+            "v20211217",
+            83
         ]
     },
     "HadGEM3-GC31-LM":{
@@ -996,7 +1049,7 @@
         "versions":[
             "v20170818",
             "v20220327",
-            21
+            44
         ]
     },
     "HiRAM-SIT-HR":{
@@ -1039,9 +1092,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200915",
-            "v20201112",
-            2
+            "v20190719",
+            "v20210831",
+            9
         ]
     },
     "INM-CM4-8":{
@@ -1526,7 +1579,18 @@
         ]
     },
     "SAM0-UNICON":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "Sungsu Park (sungsup@snu.ac.kr), Jihoon Shin (sjh11556@snu.ac.kr)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190323",
+            "v20190910",
+            2
+        ]
     },
     "TaiESM1":{
         "contact":[
@@ -1583,9 +1647,9 @@
         "rights_info":"https://creativecommons.org/licenses/by/4.0/",
         "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
         "versions":[
-            "v20190503",
+            "v20190404",
             "v20211202",
-            199
+            236
         ]
     },
     "UKESM1-0-MMh":{

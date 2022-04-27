@@ -574,11 +574,11 @@ sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Revise source_id E3SM-1-0\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Add source_id UKESM1-1-LL\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1047,10 +1047,14 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "E3SM-1-0"
-source_id[key]['activity_participation'].append("DAMIP")
-source_id[key]['activity_participation'].sort()
-
+key = 'UKESM1-1-LL'
+from copy import copy
+source_id[key] = copy(source_id['UKESM1-0-LL'])
+source_id[key]['activity_participation'] = ['CMIP', 'ScenarioMIP']
+source_id[key]['label'] = 'UKESM1.1-LL'
+source_id[key]['label_extended'] = 'UKESM1.1-N96ORCA1'
+source_id[key]['release_year'] = '2021'
+source_id[key]['source_id'] = 'UKESM1-1-LL'
 # Example
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}

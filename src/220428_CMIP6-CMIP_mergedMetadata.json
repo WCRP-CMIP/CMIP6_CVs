@@ -34,9 +34,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20191115",
+            "v20191112",
             "v20211213",
-            35
+            48
         ]
     },
     "ACCESS-OM2":{
@@ -335,22 +335,6 @@
     },
     "CMCC-CM2-HR4":{
         "contact":[
-            "Pier Giuseppe Fogli (piergiuseppe.fogli@cmcc.it)"
-        ],
-        "dkrz":"CC BY-SA 4.0",
-        "license":[
-            "Creative Commons Attribution-ShareAlike 4.0 International License"
-        ],
-        "versions":[
-            "v20170706",
-            "v20210330",
-            14
-        ]
-    },
-    "CMCC-CM2-SR5":{
-        "contact":[
-            "A. Bellucci",
-            "P. Athanasiadis",
             "Pier Giuseppe Fogli (piergiuseppe.fogli@cmcc.it)",
             "T. Lovato"
         ],
@@ -359,9 +343,27 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
+            "v20170706",
+            "v20210720",
+            21
+        ]
+    },
+    "CMCC-CM2-SR5":{
+        "contact":[
+            "A. Bellucci",
+            "P. Athanasiadis",
+            "Pier Giuseppe Fogli (piergiuseppe.fogli@cmcc.it)",
+            "R. Henin",
+            "T. Lovato"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
             "v20200226",
-            "v20220318",
-            22
+            "v20220401",
+            29
         ]
     },
     "CMCC-CM2-VHR4":{
@@ -387,7 +389,7 @@
         "versions":[
             "v20210107",
             "v20220314",
-            13
+            15
         ]
     },
     "CNRM-CM6-1":{
@@ -522,7 +524,7 @@
         "versions":[
             "v20190405",
             "v20220202",
-            110
+            123
         ]
     },
     "EC-Earth3-AerChem":{
@@ -534,9 +536,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200624",
-            "v20220102",
-            18
+            "v20200622",
+            "v20220314",
+            29
         ]
     },
     "EC-Earth3-CC":{
@@ -584,8 +586,8 @@
         ],
         "versions":[
             "v20190410",
-            "v20210616",
-            19
+            "v20211207",
+            34
         ]
     },
     "EC-Earth3-Veg-LR":{
@@ -1438,7 +1440,7 @@
         "versions":[
             "v20190222",
             "v20210921",
-            62
+            63
         ]
     },
     "NESM3":{

@@ -191,9 +191,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190708",
+            "v1",
             "v20210111",
-            10
+            24
         ]
     },
     "CAS-ESM2-0":{
@@ -470,7 +470,18 @@
         ]
     },
     "E3SM-1-0":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "Dave Bader (bader2@llnl.gov)"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20190206",
+            "v20191220",
+            13
+        ]
     },
     "E3SM-1-1":{
         "contact":[
@@ -481,9 +492,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20191205",
-            "v20201124",
-            4
+            "v20191029",
+            "v20201130",
+            8
         ]
     },
     "E3SM-1-1-ECA":{
@@ -495,9 +506,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200116",
+            "v20191216",
             "v20201211",
-            4
+            9
         ]
     },
     "EC-Earth3":{
@@ -509,9 +520,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190629",
+            "v20190405",
             "v20220202",
-            82
+            110
         ]
     },
     "EC-Earth3-AerChem":{
@@ -538,8 +549,8 @@
         ],
         "versions":[
             "v20201229",
-            "v20210427",
-            5
+            "v20220314",
+            24
         ]
     },
     "EC-Earth3-GrIS":{
@@ -550,16 +561,17 @@
     },
     "EC-Earth3-LR":{
         "contact":[
-            "cmip6-data@ec-earth.org"
+            "cmip6-data@ec-earth.org",
+            "pierre-antoine.bretonniere@bsc.es arthur.amaral@bsc.es"
         ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200322",
+            "v20190103",
             "v20210401",
-            6
+            7
         ]
     },
     "EC-Earth3-Veg":{
@@ -585,9 +597,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200423",
+            "v20200213",
             "v20201201",
-            5
+            10
         ]
     },
     "EC-Earth3P":{
@@ -623,7 +635,18 @@
         ]
     },
     "EC-Earth3P-VHR":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "pierre-antoine.bretonniere@bsc.es"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20201007",
+            "v20201007",
+            1
+        ]
     },
     "ECMWF-IFS-HR":{
         "contact":[
@@ -1106,9 +1129,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190603",
+            "v20190528",
             "v20201112",
-            7
+            13
         ]
     },
     "INM-CM5-0":{
@@ -1120,9 +1143,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190618",
-            "v20190724",
-            7
+            "v20190610",
+            "v20201029",
+            17
         ]
     },
     "INM-CM5-H":{
@@ -1225,9 +1248,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190920",
+            "v20190813",
             "v20210113",
-            38
+            54
         ]
     },
     "KIOST-ESM":{
@@ -1271,8 +1294,8 @@
         ],
         "versions":[
             "v20190731",
-            "v20190731",
-            1
+            "v20191017",
+            2
         ]
     },
     "MIROC-ES2H":{
@@ -1334,8 +1357,8 @@
         ],
         "versions":[
             "v20190627",
-            "v20210120",
-            7
+            "v20210201",
+            8
         ]
     },
     "MPI-ESM1-2-HR":{
@@ -1601,9 +1624,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20200309",
+            "v20191225",
             "v20220103",
-            25
+            48
         ]
     },
     "TaiESM1-TIMCOM":{
@@ -1649,7 +1672,7 @@
         "versions":[
             "v20190404",
             "v20211202",
-            236
+            240
         ]
     },
     "UKESM1-0-MMh":{
@@ -1661,6 +1684,7 @@
         "rights_info":"https://creativecommons.org/licenses/by/4.0/",
         "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
     },
+    "UKESM1-1-LL":{},
     "UKESM1-ice-LL":{
         "contact":[],
         "dkrz":"CC BY-SA 4.0",

@@ -23,7 +23,7 @@ PJD 22 Apr 2022     - Updated input 220421 -> 220422_CMIP6_metaData_restartedInd
 PJD 23 Apr 2022     - Updated input 220422 -> 220423_CMIP6_metaData_restartedInd-8243000 (0926)
 PJD 25 Apr 2022     - Updated input 220423 -> 220425_CMIP6_metaData_restartedInd-8243000 (1109)
 PJD 26 Apr 2022     - Updated input 220425 -> 220426_CMIP6_metaData_restartedInd-8243000 (2015)
-PJD 27 Apr 2022     - Updated input 220426 -> 220427_CMIP6_metaData_restartedInd-8243000 (0849)
+PJD 27 Apr 2022     - Updated input 220426 -> 220427_CMIP6_metaData_restartedInd-8243000 (0849, 2051)
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1

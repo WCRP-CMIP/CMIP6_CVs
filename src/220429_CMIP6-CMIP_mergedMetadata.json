@@ -22,7 +22,7 @@
         "versions":[
             "v20191108",
             "v20210928",
-            13
+            27
         ]
     },
     "ACCESS-ESM1-5":{
@@ -1215,9 +1215,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20180729",
+            "v20180727",
             "v20211229",
-            43
+            48
         ]
     },
     "IPSL-CM6A-LR-INCA":{
@@ -1308,8 +1308,8 @@
         ],
         "versions":[
             "v20210125",
-            "v20210125",
-            1
+            "v20220322",
+            2
         ]
     },
     "MIROC-ES2H-NB":{
@@ -1333,7 +1333,7 @@
         "versions":[
             "v20190823",
             "v20220204",
-            18
+            19
         ]
     },
     "MIROC6":{
@@ -1344,9 +1344,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190627",
+            "v20181212",
             "v20220222",
-            28
+            38
         ]
     },
     "MPI-ESM-1-2-HAM":{
@@ -1440,7 +1440,7 @@
         "versions":[
             "v20190222",
             "v20210921",
-            63
+            66
         ]
     },
     "NESM3":{
@@ -1452,9 +1452,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20190728",
+            "v20190625",
             "v20190928",
-            21
+            39
         ]
     },
     "NICAM16-7S":{

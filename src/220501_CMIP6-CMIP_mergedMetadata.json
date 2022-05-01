@@ -1207,6 +1207,7 @@
     "IPSL-CM6A-ATM-LR-REPROBUS":{},
     "IPSL-CM6A-LR":{
         "contact":[
+            "contact.cmip6@ipsl.fr",
             "ipsl-cmip6@listes.ipsl.fr"
         ],
         "dkrz":"CC BY-NC-SA 4.0",
@@ -1215,9 +1216,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20180727",
+            "v20180314",
             "v20211229",
-            48
+            53
         ]
     },
     "IPSL-CM6A-LR-INCA":{

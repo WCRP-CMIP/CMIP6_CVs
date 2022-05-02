@@ -151,8 +151,8 @@
         ],
         "versions":[
             "v20181009",
-            "v20201021",
-            97
+            "v20210112",
+            108
         ]
     },
     "BCC-ESM1":{
@@ -404,7 +404,7 @@
         "versions":[
             "v20180626",
             "v20210212",
-            37
+            43
         ]
     },
     "CNRM-CM6-1-HR":{
@@ -757,16 +757,17 @@
     },
     "FIO-ESM-2-0":{
         "contact":[
-            "songroy@fio.org.cn"
+            "songroy@fio.org.cn",
+            "songroy@fio.org.cn (coder@a.b.c.com)"
         ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20191226",
-            "v20200928",
-            25
+            "v20190910",
+            "v20201017",
+            75
         ]
     },
     "GFDL-AM4":{
@@ -1106,7 +1107,18 @@
         ]
     },
     "ICON-ESM-LR":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "cmip6-mpi-esm@dkrz.de"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20210215",
+            "v20210215",
+            1
+        ]
     },
     "IITM-ESM":{
         "contact":[
@@ -1232,8 +1244,8 @@
         ],
         "versions":[
             "v20200717",
-            "v20210113",
-            2
+            "v20210216",
+            3
         ]
     },
     "IPSL-CM6A-MR025":{
@@ -1508,8 +1520,8 @@
         ],
         "versions":[
             "v20190914",
-            "v20191029",
-            3
+            "v20200724",
+            5
         ]
     },
     "NorESM1-F":{
@@ -1540,7 +1552,7 @@
         "versions":[
             "v20190815",
             "v20210908",
-            17
+            18
         ]
     },
     "NorESM2-LME":{
@@ -1563,7 +1575,7 @@
         "versions":[
             "v20191108",
             "v20210908",
-            8
+            9
         ]
     },
     "PCMDI-test-1-0":{

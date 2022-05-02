@@ -1173,9 +1173,9 @@
             "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20201218",
+            "v20200729",
             "v20220105",
-            4
+            6
         ]
     },
     "IPSL-CM6A-ATM-HR":{
@@ -1207,6 +1207,7 @@
     "IPSL-CM6A-ATM-LR-REPROBUS":{},
     "IPSL-CM6A-LR":{
         "contact":[
+            "cmip6@ipsl.fr",
             "contact.cmip6@ipsl.fr",
             "ipsl-cmip6@listes.ipsl.fr"
         ],
@@ -1218,7 +1219,7 @@
         "versions":[
             "v20180314",
             "v20211229",
-            53
+            55
         ]
     },
     "IPSL-CM6A-LR-INCA":{
@@ -1231,8 +1232,8 @@
         ],
         "versions":[
             "v20200717",
-            "v20200717",
-            1
+            "v20210113",
+            2
         ]
     },
     "IPSL-CM6A-MR025":{

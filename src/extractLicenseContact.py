@@ -74,11 +74,33 @@ PJD  7 Apr 2022     - Updated readData errX and errC to wash error types class -
 PJD  8 Apr 2022     - Correct type DRSError variable error filePath -> filePath.path
                      578998 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/CNRM-CERFACS/CNRM-CM6-1-HR/highresSST-present/r1i1p1f2/Amon/ta/gr/v20190311/ta_Amon_CNRM-CM6-1-HR_highresSST-present_r1i1p1f2_gr_199001-199912.nc - Caught unexpected error: <class 'TypeError'>
 PJD  9 Apr 2022     - Updated 'DRSError variable error' to list [file, error] to match other error formats
+PJD  3 May 2022     - Added input4MIPs, test (and scatch) to CMIP6 subdir exclusion list
 
                      TODO: deal with multiple restart_ entries, use append to add info if it already exists
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
                      TODO: update getDrs and getGlobalAtts for CMIP5 and CMIP3
+                     
+                     
+22706354 /p/css03/esgf_publish/CMIP6/LUMIP/MPI-M/MPI-ESM1-2-LR/land-hist-altLu2/r1i1p1f1/Amon/tasmax/gn/v20190815/tasmax_Amon_MPI-ESM1-2-LR_land-hist-altLu2_r1i1p1f1_gn_193001-194912.nc
+xarray load complete
+tmp
+{'lat': 'len: (96,) first: -88.57216851400727 last: 88.57216851400727', 'lon': 'len: (192,) first: 0.0 last: 358.125', 'height': 'len: x first: x last: x units: x'}
+Key: nominal_resolution,
+Value 1: {'aerosol': '', 'atmos': '250 km', 'atmosChem': '', 'land': '250 km', 'landIce': '', 'ocean': '', 'ocnBgchem': '', 'seaIce': ''},
+Value 2: {'aerosol': '', 'atmos': '250 km', 'atmosChem': '', 'land': '', 'landIce': '', 'ocean': '', 'ocnBgchem': '', 'seaIce': ''}
+cnt: 22706354 time: 000.138
+cnt: 22706355 time: 000.000
+cnt: 22706356 time: 000.000
+cnt: 22706357 time: 000.000
+cnt: 22706358 time: 000.000
+cnt: 22706359 time: 000.000
+cnt: 22706360 time: 000.000
+cnt: 22706361 time: 000.000
+cnt: 22706362 time: 000.000
+22706363 /p/css03/esgf_publish/CMIP6/input4MIPs/UofMD/UofMD-landState-MAGPIE-ssp585-2-1-f/yr/multiple-transitions/gn/v20171019/multiple-transitions_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc
+Caught unexpected error: <class 'IndexError'>
+                     
 
 @author: durack1
 """
@@ -1046,7 +1068,7 @@ try:
         # reallocate to restart variables
         cmip["version_metadata"]["restart_index"] = startInd
         cmip["version_metadata"]["restart_start_time"] = cmip["version_metadata"]["start_time"]
-        cmip["version_metadata"]["restart_testPath"] = cmip["version_metadata"]["testPath"]
+        #cmip["version_metadata"]["restart_testPath"] = cmip["version_metadata"]["testPath"]
         cmip["restart_badFileList"] = cmip["_badFileList"]
         # first run
         #cmip["_badFileList"] = {}
@@ -1064,8 +1086,14 @@ try:
     cmip["version_metadata"]["start_time"] = startTime
     for cnt, filePath in enumerate(x):
         # catch case that scratch dir is encountered
+        if "/input4MIPs" in filePath.path:
+            print("/input4MIPs path invalid, skipping..")
+            continue
         if "/scratch" in filePath.path:
             print("/scratch perms a problem, skipping..")
+            continue
+        if "/test" in filePath.path:
+            print("/test path invalid, skipping")
             continue
         # start timer
         startTime = time.time()

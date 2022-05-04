@@ -36,7 +36,7 @@
         "versions":[
             "v20191112",
             "v20211213",
-            48
+            49
         ]
     },
     "ACCESS-OM2":{
@@ -152,7 +152,7 @@
         "versions":[
             "v20181009",
             "v20210112",
-            108
+            115
         ]
     },
     "BCC-ESM1":{
@@ -270,7 +270,7 @@
         "versions":[
             "v20190218",
             "v20210816",
-            59
+            63
         ]
     },
     "CESM2-FV2":{
@@ -387,9 +387,20 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20210107",
+            "v20200203",
             "v20220314",
-            15
+            17
+        ]
+    },
+    "CMCC-ESM2-SR5":{
+        "contact":[],
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20191105",
+            "v20200121",
+            4
         ]
     },
     "CNRM-CM6-1":{
@@ -588,7 +599,7 @@
         "versions":[
             "v20190410",
             "v20211207",
-            34
+            39
         ]
     },
     "EC-Earth3-Veg-LR":{
@@ -875,7 +886,8 @@
     },
     "GISS-E2-1-G":{
         "contact":[
-            "Kenneth Lo (cdkkl@giss.nasa.gov)"
+            "Kenneth Lo (cdkkl@giss.nasa.gov)",
+            "Kenneth Lo (cdkkl@giss.nasa.gov), Sonali McDermid (sps246@nyu.edu>)"
         ],
         "dkrz":"CC BY-SA 4.0",
         "exceptions_contact":"@lists.nasa.gov <-cmip-giss-l",
@@ -892,7 +904,7 @@
         "versions":[
             "v20180824",
             "v20220115",
-            38
+            41
         ]
     },
     "GISS-E2-1-G-CC":{
@@ -1034,7 +1046,7 @@
         "versions":[
             "v20170921",
             "v20211217",
-            91
+            92
         ]
     },
     "HadGEM3-GC31-LM":{
@@ -1232,7 +1244,7 @@
         "versions":[
             "v20180314",
             "v20211229",
-            62
+            64
         ]
     },
     "IPSL-CM6A-LR-INCA":{
@@ -1689,7 +1701,7 @@
         "versions":[
             "v20190404",
             "v20211202",
-            240
+            250
         ]
     },
     "UKESM1-0-MMh":{

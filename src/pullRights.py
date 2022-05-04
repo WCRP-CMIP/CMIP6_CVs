@@ -30,6 +30,7 @@ PJD 30 Apr 2022     - Updated input 220429 -> 220430_CMIP6_metaData_restartedInd
 PJD  1 May 2022     - Updated input 220430 -> 220501_CMIP6_metaData_restartedInd-8243000 (0817)
 PJD  2 May 2022     - Updated input 220501 -> 220502_CMIP6_metaData_restartedInd-8243000 (1034)
 PJD  3 May 2022     - Updated input 220502 -> 220503_CMIP6_metaData_restartedInd-8243000 (1034)
+PJD  4 May 2022     - Updated fileDate -> fileName; 220503 -> 220504 (restarted; 0849)
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -47,7 +48,7 @@ import time
 from pathlib import Path
 
 # %%
-fileDate = "220503"
+fileName = "220504_CMIP6_metaData_restartedInd-22706000.json"
 
 # %% define functions
 
@@ -129,12 +130,13 @@ del(martina, row, csvFile)
 # %% extract netcdf-harvested info
 print("process netcdf-file harvested info...")
 time.sleep(1)
-with open("_".join([fileDate, "CMIP6_metaData_restartedInd-8243000.json"])) as jsonFile:
+with open(fileName) as jsonFile:
     tmp1 = json.load(jsonFile)
     for count, key1 in enumerate(tmp1.keys()):
         # deal with version_info
-        if key1 in ["_badFileList", "version_metadata"]:
+        if key1 in ["_badFileList", "version_metadata", "restart_badFileList"]:
             continue
+        #print('key1:', key1)
         keyBits = key1.split(".")
         instId = keyBits[1]
         srcId = keyBits[2]

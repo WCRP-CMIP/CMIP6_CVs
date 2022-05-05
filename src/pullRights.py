@@ -31,6 +31,7 @@ PJD  1 May 2022     - Updated input 220430 -> 220501_CMIP6_metaData_restartedInd
 PJD  2 May 2022     - Updated input 220501 -> 220502_CMIP6_metaData_restartedInd-8243000 (1034)
 PJD  3 May 2022     - Updated input 220502 -> 220503_CMIP6_metaData_restartedInd-8243000 (1034)
 PJD  4 May 2022     - Updated fileDate -> fileName; 220503 -> 220504 (restarted; 0849, 1915)
+PJD  5 May 2022     - Updated input 220504 -> 220505_CMIP6_metaData_restartedInd-8243000 (0919)
                      TODO: finish extract netcdf-harvested info
 
 @author: durack1
@@ -48,7 +49,7 @@ import time
 from pathlib import Path
 
 # %%
-fileName = "220504_CMIP6_metaData_restartedInd-22706000.json"
+fileName = "220505_CMIP6_metaData_restartedInd-22706000.json"
 
 # %% define functions
 

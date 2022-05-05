@@ -281,7 +281,7 @@
         "versions":[
             "v20190218",
             "v20210816",
-            65
+            69
         ]
     },
     "CESM2-FV2":{
@@ -742,6 +742,7 @@
     "FGOALS-f3-L":{
         "contact":[
             "Bian He(heb@lasg.iap.ac.cn)",
+            "Bian He(heb@lasg.iap.ac.cn); Anmin Duan(amduan@lasg.iap.ac.cn)",
             "Pengfei Lin(linpf@mail.iap.ac.cn)",
             "Qing Bao(qbao@lasg.iap.ac.cn),Bian He(heb@lasg.iap.ac.cn)",
             "Qing Bao(qbao@lasg.iap.ac.cn); Bian He (heb@lasg.iap.ac.cn)",
@@ -761,7 +762,7 @@
         "versions":[
             "v20181108",
             "v20220215",
-            98
+            106
         ]
     },
     "FGOALS-g3":{
@@ -1102,7 +1103,7 @@
         "versions":[
             "v20170818",
             "v20220327",
-            44
+            45
         ]
     },
     "HiRAM-SIT-HR":{

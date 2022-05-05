@@ -257,7 +257,18 @@
         ]
     },
     "CESM1-WACCM-SC":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "cesm_cmip6@ucar.edu"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-[]ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20201012",
+            "v20210701",
+            3
+        ]
     },
     "CESM2":{
         "contact":[
@@ -270,7 +281,7 @@
         "versions":[
             "v20190218",
             "v20210816",
-            64
+            65
         ]
     },
     "CESM2-FV2":{
@@ -414,8 +425,8 @@
         ],
         "versions":[
             "v20180626",
-            "v20220317",
-            48
+            "v20220405",
+            54
         ]
     },
     "CNRM-CM6-1-HR":{

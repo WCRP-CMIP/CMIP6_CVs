@@ -1068,7 +1068,7 @@ try:
         # reallocate to restart variables
         cmip["version_metadata"]["restart_index"] = startInd
         cmip["version_metadata"]["restart_start_time"] = cmip["version_metadata"]["start_time"]
-        #cmip["version_metadata"]["restart_testPath"] = cmip["version_metadata"]["testPath"]
+        cmip["version_metadata"]["restart_testPath"] = cmip["version_metadata"]["testPath"]
         cmip["restart_badFileList"] = cmip["_badFileList"]
         # first run
         #cmip["_badFileList"] = {}

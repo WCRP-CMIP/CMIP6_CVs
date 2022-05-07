@@ -1086,14 +1086,9 @@ try:
     cmip["version_metadata"]["start_time"] = startTime
     for cnt, filePath in enumerate(x):
         # catch case that scratch dir is encountered
-        if "/input4MIPs" in filePath.path:
-            print("/input4MIPs path invalid, skipping..")
-            continue
-        if "/scratch" in filePath.path:
-            print("/scratch perms a problem, skipping..")
-            continue
-        if "/test" in filePath.path:
-            print("/test path invalid, skipping")
+        badDirs = ["/input4MIPs", "/scratch", "/test"]
+        if any(x in filePath.path for x in badDirs):
+            print("path invalid, skipping..")
             continue
         # start timer
         startTime = time.time()
@@ -1105,20 +1100,10 @@ try:
             # os.system("cp 220220_CMIP6-CMIP_metaData.json dupe.json")
             #print("catching dictionary, pre-crash")
             pdb.set_trace()
-        indStart = (
-            startInd
-            # 669000  # HighResMIP
-            # 6547960 ScenarioMIP
-            # 42345  # CMIP6 42348
-            # 122910  # CMIP6 122915
-            # 452909  # CMIP6 452910
-            # 669990  # CMIP6 669991
-            # 717814  # 717815 CMIP6
-        )
-        if cnt < indStart:
+        if cnt < startInd:
             print(cnt, filePath.path)
             continue
-        elif cnt == indStart:
+        elif cnt == startInd:
             firstPath = "/".join(filePath.path.split("/")[0:-1])
         #    cmip = json.load(open("dupe.json"))
         # debug end

@@ -3,13 +3,13 @@
         "CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file)[ and at <some URL maintained by modeling group>]. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
     ],
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr 13 13:21:31 2022 00100",
-        "CV_collection_version":"6.2.56.11",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
+        "CV_collection_modified":"Mon May  9 11:03:31 2022 -0700",
+        "CV_collection_version":"6.2.56.12",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
         "license_CV_modified":"Mon Feb 27 10:30:00 2017 -0700",
         "license_CV_note":"Issue225 durack1 add institution_id THU (#232)",
-        "previous_commit":"451e55b674be3fbab62dd8241840bbae237943bd",
+        "previous_commit":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

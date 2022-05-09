@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+#import pdb
 from CMIP6Lib import ascertainVersion, cleanString, dictDepth, entryCheck, \
     getFileHistory, versionHistoryUpdate
 from durolib import readJsonCreateDict
@@ -556,6 +557,7 @@ MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP
 PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
 PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
 PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1058
+PJD  9 May 2022    - Revise source_id EC-Earth3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1063
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -572,11 +574,11 @@ sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Add source_id UKESM1-1-LL\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Revise source_id EC-Earth3-CC\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1013,14 +1015,10 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-1-LL'
-from copy import copy
-source_id[key] = copy(source_id['UKESM1-0-LL'])
-source_id[key]['activity_participation'] = ['CMIP', 'ScenarioMIP']
-source_id[key]['label'] = 'UKESM1.1-LL'
-source_id[key]['label_extended'] = 'UKESM1.1-N96ORCA1'
-source_id[key]['release_year'] = '2021'
-source_id[key]['source_id'] = 'UKESM1-1-LL'
+key = 'EC-Earth3-CC'
+source_id[key]['activity_participation'].append('DCPP')
+source_id[key]['activity_participation'].sort()
+
 # Example
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}

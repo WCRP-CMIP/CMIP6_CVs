@@ -108,7 +108,7 @@
         "versions":[
             "v20181218",
             "v20200720",
-            5
+            6
         ]
     },
     "AWI-ESM-1-1-LR":{
@@ -496,6 +496,7 @@
     "E3SM-1-0":{
         "contact":[
             "Dave Bader (bader2@llnl.gov)",
+            "Yannick Peings (ypeings@uci.edu)",
             "Yi Qin (qin4@llnl.gov); Stephen A Klein (klein21@llnl.gov)"
         ],
         "dkrz":"CC BY-SA 4.0",
@@ -504,8 +505,8 @@
         ],
         "versions":[
             "v20190206",
-            "v20210303",
-            15
+            "v20220118",
+            32
         ]
     },
     "E3SM-1-1":{
@@ -547,7 +548,7 @@
         "versions":[
             "v20190405",
             "v20220202",
-            123
+            127
         ]
     },
     "EC-Earth3-AerChem":{
@@ -1259,7 +1260,7 @@
         "versions":[
             "v20180314",
             "v20211229",
-            66
+            67
         ]
     },
     "IPSL-CM6A-LR-INCA":{
@@ -1388,7 +1389,7 @@
         "versions":[
             "v20181212",
             "v20220222",
-            42
+            43
         ]
     },
     "MPI-ESM-1-2-HAM":{
@@ -1580,7 +1581,7 @@
         "versions":[
             "v20190815",
             "v20210908",
-            19
+            21
         ]
     },
     "NorESM2-LME":{
@@ -1670,7 +1671,7 @@
         "versions":[
             "v20191225",
             "v20220103",
-            64
+            73
         ]
     },
     "TaiESM1-TIMCOM":{

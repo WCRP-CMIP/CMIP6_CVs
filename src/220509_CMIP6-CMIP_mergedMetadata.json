@@ -22,7 +22,7 @@
         "versions":[
             "v20191108",
             "v20210928",
-            27
+            30
         ]
     },
     "ACCESS-ESM1-5":{
@@ -210,8 +210,8 @@
         ],
         "versions":[
             "v20200301",
-            "v20210422",
-            38
+            "v20220217",
+            43
         ]
     },
     "CESM1-1-CAM5-CMIP5":{
@@ -281,7 +281,7 @@
         "versions":[
             "v20190218",
             "v20210816",
-            69
+            72
         ]
     },
     "CESM2-FV2":{
@@ -770,6 +770,7 @@
         "contact":[
             "Lijuan Li (ljli@mail.iap.ac.cn)",
             "Lijuan Li(ljli@mail.iap.ac.cn)",
+            "Pengfei Lin(linpf@mail.iap.ac.cn)",
             "Weipeng Zheng (zhengwp@mail.iap.ac.cn)",
             "zhengwp@mail.iap.ac.cn"
         ],
@@ -780,7 +781,7 @@
         "versions":[
             "v20190818",
             "v20211113",
-            88
+            93
         ]
     },
     "FIO-ESM-2-0":{
@@ -843,7 +844,18 @@
         ]
     },
     "GFDL-ESM2M":{
-        "dkrz":"CC BY-SA 4.0"
+        "contact":[
+            "gfdl.climate.model.info@noaa.gov"
+        ],
+        "dkrz":"CC BY-SA 4.0",
+        "license":[
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ],
+        "versions":[
+            "v20180701",
+            "v20190920",
+            2
+        ]
     },
     "GFDL-ESM4":{
         "contact":[
@@ -1062,7 +1074,7 @@
         "versions":[
             "v20170921",
             "v20211217",
-            92
+            97
         ]
     },
     "HadGEM3-GC31-LM":{
@@ -1389,7 +1401,7 @@
         "versions":[
             "v20181212",
             "v20220222",
-            43
+            44
         ]
     },
     "MPI-ESM-1-2-HAM":{
@@ -1483,7 +1495,7 @@
         "versions":[
             "v20190222",
             "v20210921",
-            70
+            72
         ]
     },
     "NESM3":{

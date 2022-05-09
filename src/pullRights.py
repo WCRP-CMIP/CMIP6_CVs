@@ -256,8 +256,12 @@ with open(outFile, "w") as jsonFile:
 
 # %% Check for missing entries
 counter = 1
+print('------ Missing models ------')
 for count, mod in enumerate(out.keys()):
     if len(out[mod]) == 1:
+        if mod == "PCMDI-test-1-0":
+            print("PCMDI-test-1-0 found skipping")
+            continue
         print(counter, mod)
         counter = counter + 1
 

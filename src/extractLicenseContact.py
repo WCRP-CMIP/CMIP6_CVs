@@ -75,6 +75,7 @@ PJD  8 Apr 2022     - Correct type DRSError variable error filePath -> filePath.
                      578998 CMIP6 /p/css03/esgf_publish/CMIP6/HighResMIP/CNRM-CERFACS/CNRM-CM6-1-HR/highresSST-present/r1i1p1f2/Amon/ta/gr/v20190311/ta_Amon_CNRM-CM6-1-HR_highresSST-present_r1i1p1f2_gr_199001-199912.nc - Caught unexpected error: <class 'TypeError'>
 PJD  9 Apr 2022     - Updated 'DRSError variable error' to list [file, error] to match other error formats
 PJD  3 May 2022     - Added input4MIPs, test (and scatch) to CMIP6 subdir exclusion list
+PJD  9 May 2022     - Added cdms2.error.CDMSError to readData function
 
                      TODO: Add file timestamp info - harvest for CMIP3, 5 and 6
                      TODO: deal with multiple restart_ entries, use append to add info if it already exists
@@ -769,6 +770,7 @@ def readData(filePath, varName):
                 fH.close()
                 print('cdms2 load complete')
             except (
+                cdm.error.CDMSError,
                 OSError,
                 SystemError,
                 TypeError,

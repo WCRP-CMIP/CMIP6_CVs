@@ -76,6 +76,7 @@ PJD  8 Apr 2022     - Correct type DRSError variable error filePath -> filePath.
 PJD  9 Apr 2022     - Updated 'DRSError variable error' to list [file, error] to match other error formats
 PJD  3 May 2022     - Added input4MIPs, test (and scatch) to CMIP6 subdir exclusion list
 
+                     TODO: Add file timestamp info - harvest for CMIP3, 5 and 6
                      TODO: deal with multiple restart_ entries, use append to add info if it already exists
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads

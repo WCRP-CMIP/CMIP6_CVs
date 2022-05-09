@@ -47,13 +47,13 @@
         "grz":"regridded zonal mean data reported on the data provider's preferred latitude target grid"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Apr 13 13:21:31 2022 00100",
-        "CV_collection_version":"6.2.56.11",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "CV_collection_modified":"Mon May  9 11:03:31 2022 -0700",
+        "CV_collection_version":"6.2.56.12",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
         "grid_label_CV_modified":"Fri Sep 8 18:12:00 2017 -0700",
         "grid_label_CV_note":"Issue395 durack1 augment grid_label with description (#401)",
-        "institution_id":"MOHC",
-        "previous_commit":"451e55b674be3fbab62dd8241840bbae237943bd",
+        "institution_id":"PCMDI",
+        "previous_commit":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

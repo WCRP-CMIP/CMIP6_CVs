@@ -152,7 +152,7 @@
         "versions":[
             "v20181009",
             "v20210112",
-            124
+            138
         ]
     },
     "BCC-ESM1":{
@@ -280,8 +280,8 @@
         ],
         "versions":[
             "v20190218",
-            "v20210816",
-            72
+            "v20210921",
+            73
         ]
     },
     "CESM2-FV2":{
@@ -426,7 +426,7 @@
         "versions":[
             "v20180626",
             "v20220405",
-            54
+            56
         ]
     },
     "CNRM-CM6-1-HR":{
@@ -781,7 +781,7 @@
         "versions":[
             "v20190818",
             "v20211113",
-            93
+            102
         ]
     },
     "FIO-ESM-2-0":{
@@ -930,9 +930,9 @@
         "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
         "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
         "versions":[
-            "v20180824",
+            "v20180821",
             "v20220115",
-            41
+            52
         ]
     },
     "GISS-E2-1-G-CC":{
@@ -984,6 +984,7 @@
         "exceptions_contact":"@lists.nasa.gov <-cmip-giss-l",
         "history":"XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0",
         "license":[
+            " produced by NASA Goddard Institute for Space Studies is released with a Creative Commons Zero Universal (CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/) and has no restrictions on its use. Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for more general terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law",
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)",
@@ -992,8 +993,8 @@
         "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
         "versions":[
             "v20191120",
-            "v20191120",
-            1
+            "v20210911",
+            2
         ]
     },
     "GISS-E2-2-H":{
@@ -1073,8 +1074,8 @@
         ],
         "versions":[
             "v20170921",
-            "v20211217",
-            97
+            "v20211220",
+            116
         ]
     },
     "HadGEM3-GC31-LM":{
@@ -1429,7 +1430,7 @@
         "versions":[
             "v20171003",
             "v20211011",
-            97
+            99
         ]
     },
     "MPI-ESM1-2-LR":{
@@ -1729,7 +1730,7 @@
         "versions":[
             "v20190404",
             "v20211202",
-            250
+            258
         ]
     },
     "UKESM1-0-MMh":{

@@ -35,7 +35,14 @@ PJD  5 May 2022     - Updated input 220504 -> 220505_CMIP6_metaData_restartedInd
 PJD  7 May 2022     - Updated 220505 -> 220507_CMIP6_metaData_restartedInd-23634000.json (0837)
 PJD  8 May 2022     - Updated 220507 -> 220507_8MIP6_metaData_restartedInd-23634000.json (0837)
 PJD  9 May 2022     - Updated 220508 -> 220509_8MIP6_metaData_restartedInd-23634000.json (0913)
-                     TODO: finish extract netcdf-harvested info
+PJD 10 May 2022     - Updated 220509 -> 220510_CMIP6_metaData_restartedInd-24949000.json (1615)
+PJD 11 May 2022     - Updated 220510 -> 220511_CMIP6_metaData_restartedInd-24949000.json (1130)
+                    TODO: add code to extract pieces that will be pulled into the CMIP6_CVs
+                        email/contact
+                        license
+                        versions, first and last (if multiple licenses exist - e.g. NASA-GISS, MOHC)
+                    TODO: finish extract netcdf-harvested info
+                     
 
 @author: durack1
 """
@@ -52,7 +59,7 @@ import time
 from pathlib import Path
 
 # %%
-fileName = "220509_CMIP6_metaData_restartedInd-23634000.json"
+fileName = "220511_CMIP6_metaData_restartedInd-24949000.json"
 
 # %% define functions
 
@@ -265,7 +272,7 @@ for count, mod in enumerate(out.keys()):
         print(counter, mod)
         counter = counter + 1
 
-# GFDL-ESM2M remains - FAFMIP
+# %% Generate direct inputs for CMIP6_CVs
 
 # %% populate netcdf-harvested info
 """

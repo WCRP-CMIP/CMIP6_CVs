@@ -37,6 +37,7 @@ PJD  8 May 2022     - Updated 220507 -> 220507_8MIP6_metaData_restartedInd-23634
 PJD  9 May 2022     - Updated 220508 -> 220509_8MIP6_metaData_restartedInd-23634000.json (0913)
 PJD 10 May 2022     - Updated 220509 -> 220510_CMIP6_metaData_restartedInd-24949000.json (1615)
 PJD 11 May 2022     - Updated 220510 -> 220511_CMIP6_metaData_restartedInd-24949000.json (1130, 1700, 2147)
+PJD 11 May 2022     - Updated 220511 -> 220512_CMIP6_metaData_restartedInd-24949000.json (0718)
                     TODO: add code to extract pieces that will be pulled into the CMIP6_CVs
                         email/contact
                         license
@@ -59,7 +60,7 @@ import time
 from pathlib import Path
 
 # %%
-fileName = "220511_CMIP6_metaData_restartedInd-24949000.json"
+fileName = "220512_CMIP6_metaData_restartedInd-24949000.json"
 
 # %% define functions
 

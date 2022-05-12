@@ -36,7 +36,7 @@ PJD  7 May 2022     - Updated 220505 -> 220507_CMIP6_metaData_restartedInd-23634
 PJD  8 May 2022     - Updated 220507 -> 220507_8MIP6_metaData_restartedInd-23634000.json (0837)
 PJD  9 May 2022     - Updated 220508 -> 220509_8MIP6_metaData_restartedInd-23634000.json (0913)
 PJD 10 May 2022     - Updated 220509 -> 220510_CMIP6_metaData_restartedInd-24949000.json (1615)
-PJD 11 May 2022     - Updated 220510 -> 220511_CMIP6_metaData_restartedInd-24949000.json (1130)
+PJD 11 May 2022     - Updated 220510 -> 220511_CMIP6_metaData_restartedInd-24949000.json (1130, 1700, 2147)
                     TODO: add code to extract pieces that will be pulled into the CMIP6_CVs
                         email/contact
                         license

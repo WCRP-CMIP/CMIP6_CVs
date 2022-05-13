@@ -77,8 +77,8 @@ PJD  9 Apr 2022     - Updated 'DRSError variable error' to list [file, error] to
 PJD  3 May 2022     - Added input4MIPs, test (and scatch) to CMIP6 subdir exclusion list
 PJD  9 May 2022     - Added cdms2.error.CDMSError to readData function
                      249xxxxx CMIP6 /p/css03/esgf_publish/CMIP6/FAFMIP/MPI-M/MPI-ESM1-2-LR/faf-passiveheat/r1i1p1f1/Omon/epcalc100/gn/v20210901/epcalc100_Omon_MPI-ESM1-2-LR_faf-passiveheat_r1i1p1f1_gn_187001-188912.nc
+PJD 12 May 2022     - Added "creation_date", "forcing" (CM5: HadGEM2-CC) and "history" globalAtt to getGlobalAtts (good for CMIP3, 5, and 6 timestamp harvest)
 
-                     TODO: Add file timestamp info - harvest for CMIP3, 5 and 6
                      TODO: deal with multiple restart_ entries, use append to add info if it already exists
                      TODO: grid_info also needs to have realms - ala nominal_resolution
                      TODO: update to use joblib, parallel calls, caught with sqlite database for concurrent reads
@@ -462,6 +462,9 @@ def getGlobalAtts(globalAttDic, calendar, lon, lat, lev, levUnits):
         "cmor_version",
         "tracking_id",
         "license",
+        "history",
+        "creation_date",
+        "forcing",
     ]
     realms = {
         "aerosol": "Aerosol",

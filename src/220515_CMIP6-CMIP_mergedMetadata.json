@@ -36,7 +36,7 @@
         "versions":[
             "v20191112",
             "v20211213",
-            52
+            54
         ]
     },
     "ACCESS-OM2":{
@@ -280,8 +280,8 @@
         ],
         "versions":[
             "v20190218",
-            "v20210921",
-            73
+            "v20220201",
+            77
         ]
     },
     "CESM2-FV2":{
@@ -400,7 +400,7 @@
         "versions":[
             "v20200203",
             "v20220314",
-            17
+            20
         ]
     },
     "CMCC-ESM2-SR5":{
@@ -409,9 +409,9 @@
             "Creative Commons Attribution-ShareAlike 4.0 International License"
         ],
         "versions":[
-            "v20191105",
+            "v20190930",
             "v20200121",
-            4
+            5
         ]
     },
     "CNRM-CM6-1":{
@@ -426,7 +426,7 @@
         "versions":[
             "v20180626",
             "v20220405",
-            56
+            61
         ]
     },
     "CNRM-CM6-1-HR":{
@@ -454,8 +454,8 @@
         ],
         "versions":[
             "v20180914",
-            "v20201208",
-            32
+            "v20210121",
+            36
         ]
     },
     "CNRM-ESM2-1-HR":{
@@ -511,16 +511,18 @@
     },
     "E3SM-1-1":{
         "contact":[
-            "Dave Bader (bader2@llnl.gov)"
+            "Dave Bader (bader2@llnl.gov)",
+            "Forrest M. Hoffman <forrest@ornl.gov>"
         ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
-            "Creative Commons Attribution-ShareAlike 4.0 International License"
+            "Creative Commons Attribution-ShareAlike 4.0 International License",
+            "Creative Commons Attribution-[NonCommercial-]ShareAlike 4.0 International License"
         ],
         "versions":[
             "v20191029",
-            "v20201130",
-            9
+            "v20210507",
+            12
         ]
     },
     "E3SM-1-1-ECA":{
@@ -548,7 +550,7 @@
         "versions":[
             "v20190405",
             "v20220202",
-            130
+            134
         ]
     },
     "EC-Earth3-AerChem":{
@@ -772,6 +774,7 @@
             "Lijuan Li(ljli@mail.iap.ac.cn)",
             "Pengfei Lin(linpf@mail.iap.ac.cn)",
             "Weipeng Zheng (zhengwp@mail.iap.ac.cn)",
+            "bhjia@mail.iap.ac.cn",
             "zhengwp@mail.iap.ac.cn"
         ],
         "dkrz":"CC BY-SA 4.0",
@@ -781,7 +784,7 @@
         "versions":[
             "v20190818",
             "v20211113",
-            102
+            105
         ]
     },
     "FIO-ESM-2-0":{
@@ -932,7 +935,7 @@
         "versions":[
             "v20180821",
             "v20220115",
-            52
+            53
         ]
     },
     "GISS-E2-1-G-CC":{
@@ -1273,7 +1276,7 @@
         "versions":[
             "v20180314",
             "v20211229",
-            67
+            72
         ]
     },
     "IPSL-CM6A-LR-INCA":{
@@ -1389,11 +1392,13 @@
         "versions":[
             "v20190823",
             "v20220204",
-            19
+            20
         ]
     },
     "MIROC6":{
-        "contact":[],
+        "contact":[
+            "Yukihiko Onuma(onuma@iis.u-tokyo.ac.jp)"
+        ],
         "dkrz":"CC BY-SA 4.0",
         "license":[
             "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
@@ -1402,7 +1407,7 @@
         "versions":[
             "v20181212",
             "v20220222",
-            47
+            52
         ]
     },
     "MPI-ESM-1-2-HAM":{
@@ -1730,7 +1735,7 @@
         "versions":[
             "v20190404",
             "v20211202",
-            258
+            262
         ]
     },
     "UKESM1-0-MMh":{

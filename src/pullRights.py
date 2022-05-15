@@ -37,7 +37,10 @@ PJD  8 May 2022     - Updated 220507 -> 220507_8MIP6_metaData_restartedInd-23634
 PJD  9 May 2022     - Updated 220508 -> 220509_8MIP6_metaData_restartedInd-23634000.json (0913)
 PJD 10 May 2022     - Updated 220509 -> 220510_CMIP6_metaData_restartedInd-24949000.json (1615)
 PJD 11 May 2022     - Updated 220510 -> 220511_CMIP6_metaData_restartedInd-24949000.json (1130, 1700, 2147)
-PJD 11 May 2022     - Updated 220511 -> 220512_CMIP6_metaData_restartedInd-24949000.json (0718)
+PJD 12 May 2022     - Updated 220511 -> 220512_CMIP6_metaData_restartedInd-24949000.json (0718)
+PJD 13 May 2022     - Updated 220512 -> 220513_CMIP6_metaData_restartedInd-24949000.json (0829)
+PJD 14 May 2022     - Updated 220513 -> 220514_CMIP6_metaData_restartedInd-24949000.json (0837)
+PJD 15 May 2022     - Updated 220514 -> 220514_CMIP6_metaData_restartedInd-24949000.json (1140, finalized)
                     TODO: add code to extract pieces that will be pulled into the CMIP6_CVs
                         email/contact
                         license
@@ -60,7 +63,7 @@ import time
 from pathlib import Path
 
 # %%
-fileName = "220512_CMIP6_metaData_restartedInd-24949000.json"
+fileName = "220514_CMIP6_metaData_restartedInd-24949000.json"
 
 # %% define functions
 
@@ -274,6 +277,21 @@ for count, mod in enumerate(out.keys()):
         counter = counter + 1
 
 # %% Generate direct inputs for CMIP6_CVs
+
+#out[src]["rights"] = {}
+# out[src]["rights"]
+
+'''
+"license":{
+      "rights_identifier":"CC BY 4.0",
+      "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
+      "rights_info":"https://creativecommons.org/licenses/by/4.0/",
+      "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+      "source-specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+      "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
+},
+'''
+
 
 # %% populate netcdf-harvested info
 """

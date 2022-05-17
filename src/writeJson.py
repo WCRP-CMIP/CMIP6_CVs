@@ -1054,7 +1054,7 @@ for count, srcId in enumerate(rightsMeta.keys()):
         source_id[srcId]["rights"] = {}
         source_id[srcId]["rights"] = rightsMeta[srcId]["rights"]
         # toggle cohort
-        source_id[srcId]["cohort"] = ["published"]
+        source_id[srcId]["cohort"] = ["Published"]
     else:
         print("----------")
         print(count, counter, srcId, "not found")

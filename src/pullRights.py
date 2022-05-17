@@ -41,14 +41,11 @@ PJD 12 May 2022     - Updated 220511 -> 220512_CMIP6_metaData_restartedInd-24949
 PJD 13 May 2022     - Updated 220512 -> 220513_CMIP6_metaData_restartedInd-24949000.json (0829)
 PJD 14 May 2022     - Updated 220513 -> 220514_CMIP6_metaData_restartedInd-24949000.json (0837)
 PJD 15 May 2022     - Updated 220514 -> 220514_CMIP6_metaData_restartedInd-24949000.json (1140, finalized)
-                    TODO: add code to extract pieces that will be pulled into the CMIP6_CVs
-                        email/contact
-                        license
-                        versions, first and last (if multiple licenses exist - e.g. NASA-GISS, MOHC)
+PJD 16 May 2022     - Updated to write "rights" output per model
                     TODO: finish extract netcdf-harvested info
                      
 
-@author: durack1
+ATSIGNauthor: durack1
 """
 
 # %% imports
@@ -59,6 +56,7 @@ import json
 import os
 import pdb
 import platform
+import re
 import time
 from pathlib import Path
 
@@ -66,6 +64,21 @@ from pathlib import Path
 fileName = "220514_CMIP6_metaData_restartedInd-24949000.json"
 
 # %% define functions
+
+
+def emailGarble(emailAddress):
+    """
+    emailGarble(emailAddress)
+
+    Reformats email address to prevent spam usage
+    """
+    emailAddress = emailAddress.rstrip()  # Fix MCM-UA-1-0
+    atInd = emailAddress.find("ATSIGN")
+    emailAddressGarbled = " <- ".join(
+        [emailAddress[atInd:], emailAddress[0:atInd]])
+    emailAddressGarbled = emailAddressGarbled.replace("ATSIGN", "@")
+
+    return emailAddressGarbled
 
 
 def findRightsTxt(licStr):
@@ -92,6 +105,61 @@ def findRightsTxt(licStr):
     return licExt
 
 
+def matchLicense(mod, licStr):
+    """
+    matchLicense(mod, licStr)
+
+    matches file assigned license with identifier
+    """
+    # define license options
+    rights = {}
+    rights["CC0 1.0"] = {}
+    rights["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+    rights["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+    rights["CC BY 3.0"] = {}
+    rights["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
+    rights["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
+    rights["CC BY 4.0"] = {}
+    rights["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
+    rights["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
+    rights["CC BY-SA 4.0"] = {}
+    rights["CC BY-SA 4.0"]["id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+    rights["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+    rights["CC BY-NC-SA 4.0"] = {}
+    rights["CC BY-NC-SA 4.0"]["id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+    rights["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+    # loop through options
+    licId = ""
+    # fix common [] issue with licStr
+    # CESM1-1-CAM5-CMIP5, ?
+    licStr = licStr.replace("tion-[]Share", "tion-Share")
+    licStr = licStr.replace("tion-[*]Share", "tion-Share")  # MCM-UA-1-0
+    for count, key in enumerate(rights.keys()):
+        if not licStr.find(rights[key]["id"]):
+            #print(mod, licStr, key)
+            licId = key
+
+    return rights, licId
+
+
+def verToCal(verString):
+    """
+    verToCal(verString)
+
+    Reformat ESGF version to parseable hyphenated format
+    """
+    # validate string - v20220516
+    if re.match("^v[0-9]{8}$", verString):
+        verStringFormatted = "-".join([verString[1:5],
+                                      verString[5:7], verString[7:9]])
+    else:
+        print('version format invalid, exiting..', verString)
+        verStringFormatted = None
+
+    return verStringFormatted
+
+
 # %% set start dir
 homePath = str(Path.home())
 if "macOS" in platform.platform():
@@ -99,19 +167,10 @@ if "macOS" in platform.platform():
 elif "Linux" in platform.platform():
     os.chdir(os.path.join(homePath, "git/CMIP6_CVs/src"))
 
-# %% create output dictionary
-out = {}
-''' goal
-"UKESM1-0-LL":{
-      "dkrz":"CC BY-SA 4.0",
-      "rights":"",
-      "contact":"",
-      "version":"",
-      },
-'''
-
 # %% create default entries in dictionary
 print("get list of registered source_id entries from CMIP6_CVs...")
+# create output dictionary
+out = {}
 time.sleep(1)
 with open("../CMIP6_source_id.json") as jsonFile:
     tmp = json.load(jsonFile)
@@ -212,7 +271,11 @@ for key in out.keys():
         tmp = list(set(tmp))
         tmp.sort()
         print("out ver:", len(tmp))
-        out[key]["versions"] = [tmp[0], tmp[-1], len(tmp)]
+        if tmp[0] == "v1":
+            # fix CAMS-CSM1-0
+            out[key]["versions"] = [tmp[1], tmp[-1], len(tmp)]
+        else:
+            out[key]["versions"] = [tmp[0], tmp[-1], len(tmp)]
     else:
         print("no version info:", key)
     if "license" in out[key].keys():
@@ -235,24 +298,209 @@ for key in out.keys():
         print("no contact info:", key)
 
 # %% populate MOHC UKESM1-0* provided input
-for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
-    out[src]["rights_identifier"] = "CC BY 4.0"
-    out[src][
-        "rights"] = "Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
-    out[src]["rights_info"] = "https://creativecommons.org/licenses/by/4.0/"
-    out[src]["exceptions_contact"] = "@metoffice.gov.uk <-cmip6.ukesm1"
-    out[src]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-    out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
+# for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
+#     out[src]["rights_identifier"] = "CC BY 4.0"
+#     out[src][
+#         "rights"] = "Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
+#     out[src]["rights_info"] = "https://creativecommons.org/licenses/by/4.0/"
+#     out[src]["exceptions_contact"] = "ATSIGNmetoffice.gov.uk <-cmip6.ukesm1"
+#     out[src]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+#     out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
 
 # %% populate NASA-GISS provided input
-for src in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
-    out[src]["rights_identifier"] = "CC0"
-    out[src][
-        "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)"
-    out[src]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
-    out[src]["exceptions_contact"] = "@lists.nasa.gov <-cmip-giss-l"
-    out[src]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-    out[src]["history"] = "XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0"
+# for src in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
+#     out[src]["rights_identifier"] = "CC0"
+#     out[src][
+#         "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)"
+#     out[src]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+#     out[src]["exceptions_contact"] = "ATSIGNlists.nasa.gov <-cmip-giss-l"
+#     out[src]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+#     out[src]["history"] = "XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0"
+
+# %% Check for missing entries
+# counter = 1
+# print('------ Missing models ------')
+# for count, mod in enumerate(out.keys()):
+#     if len(out[mod]) == 1:
+#         if mod == "PCMDI-test-1-0":
+#             print("PCMDI-test-1-0 found skipping")
+#             continue
+#         print(counter, mod)
+#         counter = counter + 1
+
+# %% Generate direct inputs for CMIP6_CVs
+
+for count, mod in enumerate(out.keys()):
+    print(count, mod)
+    # check for entries
+    if "contact" in out[mod].keys():
+        # extract info - versions
+        versions = out[mod]["versions"]
+        firstVer = verToCal(versions[0])
+        lastVer = verToCal(versions[1])
+        countVer = versions[2]
+        # version complete
+        # extract info - contact
+        contact = out[mod]["contact"]
+        if len(contact) == 1 and contact[0].find("(") < 0 and contact[0].find("@") > 0 and contact[0].find("Please send any") < 0:
+            contact = contact[0].replace("@", "ATSIGN")
+            contact = emailGarble(contact)
+        # deal with case by case
+        elif mod in ["ACCESS-OM2", "ACCESS-OM2-025"]:
+            contact = emailGarble("access_csiroATSIGNcsiro.au")
+        elif mod == "ARTS-2-3":
+            contact = emailGarble("oliver.lemkeATSIGNuni-hamburg.de")
+        elif mod in ["AWI-CM-1-1-HR", "AWI-CM-1-1-LR", "AWI-CM-1-1-MR", "AWI-ESM-1-1-LR"]:
+            contact = emailGarble("tido.semmlerATSIGNawi.de")
+        elif mod in ["BCC-CSM2-HR", "BCC-CSM2-MR", "BCC-ESM1"]:
+            contact = emailGarble("twwuATSIGNcma.gov.cn")
+        elif mod == "CAMS-CSM1-0":
+            contact = emailGarble("rongxyATSIGNcma.gov.cn")
+        elif mod == "CAS-ESM2-0":
+            contact = emailGarble("zhangheATSIGNmail.iap.ac.cn")
+        elif mod == "CESM1-1-CAM5-CMIP5":
+            contact = emailGarble("cesm_cmip6ATSIGNucar.edu")
+        elif mod == "CIESM":
+            contact = emailGarble("yanluanATSIGNtsinghua.edu.cn")
+        elif mod in ["CMCC-CM2-HR4", "CMCC-CM2-SR5", "CMCC-CM2-VHR4", "CMCC-ESM2", "CMCC-ESM2-SR5"]:
+            contact = emailGarble("piergiuseppe.fogliATSIGNcmcc.it")
+        elif mod in ["CNRM-CM6-1", "CNRM-CM6-1-HR", "CNRM-ESM2-1", "CNRM-ESM2-1-HR"]:
+            contact = emailGarble("contact.cmip6ATSIGNcerfacs.fr")
+        elif mod in ["E3SM-1-0", "E3SM-1-1", "E3SM-1-1-ECA"]:
+            contact = emailGarble("bader2ATSIGNllnl.gov")
+        elif mod in ["EC-Earth3", "EC-Earth3-AerChem", "EC-Earth3-LR", "EC-Earth3-Veg", "EC-Earth3-Veg-LR", "EC-Earth3P", "EC-Earth3P-HR", "EC-Earth3P-VHR"]:
+            contact = emailGarble("cmip6-dataATSIGNec-earth.org")
+        elif mod in ["FGOALS-f3-H", "FGOALS-f3-L", "FGOALS-g3"]:
+            contact = emailGarble("linpfATSIGNmail.iap.ac.cn")
+        elif mod == "FIO-ESM-2-0":
+            contact = emailGarble("songroyATSIGNfio.org.cn")
+        elif mod in ["GFDL-GRTCODE", "GFDL-RFM-DISORT"]:
+            contact = emailGarble("gfdl.climate.model.infoATSIGNnoaa.gov")
+        elif mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
+            contact = emailGarble("cmip-giss-lATSIGNlists.nasa.gov")
+        elif mod in ["HiRAM-SIT-HR", "HiRAM-SIT-LR"]:
+            contact = emailGarble("cytuATSIGNgate.sinica.edu.tw")
+        elif mod in ["INM-CM4-8", "INM-CM5-0", "INM-CM5-H"]:
+            contact = emailGarble("volodinevATSIGNgmail.com")
+        elif mod in ["4AOP-v1-5", "IPSL-CM5A2-INCA", "IPSL-CM6A-ATM-HR", "IPSL-CM6A-LR", "IPSL-CM6A-LR-INCA"]:
+            contact = emailGarble("ipsl-cmip6ATSIGNlistes.ipsl.fr")
+        elif mod == "KACE-1-0-G":
+            contact = emailGarble("yoonjin.limATSIGNkorea.kr")
+        elif mod == "KIOST-ESM":
+            contact = emailGarble("yhokimATSIGNpknu.ac.kr")
+        elif mod in ["LBLRTM-12-8", "RRTMG-LW-4-91", "RRTMG-SW-4-02", "RTE-RRTMGP-181204"]:
+            contact = emailGarble("rpernakATSIGNaer.com")
+        elif mod == "MCM-UA-1-0":
+            contact = emailGarble("GEOS-CMIPATSIGNemail.arizona.edu")
+        elif mod in ["MIROC-ES2H", "MIROC-ES2H-NB", "MIROC-ES2L", "MIROC6", "NICAM16-7S", "NICAM16-8S", "NICAM16-9S"]:
+            contact = emailGarble("onumaATSIGNiis.u-tokyo.ac.jp")
+        elif mod in ["MPI-ESM-1-2-HAM", "MPI-ESM1-2-HR", "MPI-ESM1-2-LR", "MPI-ESM1-2-XR"]:
+            contact = emailGarble("cmip6-mpi-esmATSIGNdkrz.de")
+        elif mod in ["MRI-AGCM3-2-H", "MRI-AGCM3-2-S", "MRI-ESM2-0"]:
+            contact = emailGarble("yukimotoATSIGNmri-jma.go.jp")
+        elif mod == "NorCPM1":
+            contact = emailGarble("norcpmATSIGNuib.no")
+        elif mod in ["NorESM1-F", "NorESM2-LM", "NorESM2-MM"]:
+            contact = emailGarble("noresm-nccATSIGNmet.no")
+        elif mod == "SAM0-UNICON":
+            contact = emailGarble("sjh11556ATSIGNsnu.ac.kr")
+        elif mod == "TaiESM1":
+            contact = emailGarble("leelupinATSIGNgate.sinica.edu.tw")
+        elif mod == "TaiESM1-TIMCOM":
+            contact = emailGarble("tsengyhATSIGNntu.edu.tw")
+        elif mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
+            contact = emailGarble("cmip6.ukesm1ATSIGNmetoffice.gov.uk")
+    else:
+        print("no contact info:", mod, "continuing..")
+        continue
+        # contact complete
+    # extract info - license
+    if "license" in out[mod].keys():
+        licStr = out[mod]["license"]
+    else:
+        print("no license info:", mod, "continuing..")
+        continue
+    if len(licStr) == 1 and not licStr == "":
+        #print("mod:", mod, "licStr:", licStr[0])
+        rights, licId = matchLicense(mod, licStr[0])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "CanESM5":
+        rights, licId = matchLicense(mod, licStr[1])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "E3SM-1-1":
+        rights, licId = matchLicense(mod, licStr[0])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod in ["GFDL-AM4", "GFDL-CM4"]:
+        rights, licId = matchLicense(mod, licStr[1])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-2-G"]:
+        rights, licId = matchLicense(
+            mod, "Creative Commons Attribution-ShareAlike 4.0 International License")
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "HadGEM3-GC31-LL":
+        rights, licId = matchLicense(mod, licStr[1])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "IPSL-CM6A-LR":
+        rights, licId = matchLicense(mod, licStr[0])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "MIROC6":
+        rights, licId = matchLicense(mod, licStr[1])
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    elif mod == "MPI-ESM1-2-LR":
+        rights, licId = matchLicense(
+            mod, "Creative Commons Attribution-ShareAlike 4.0 International License")
+        rightsId = licId
+        rightsStr = rights[rightsId]["id"]
+        rightsUrl = rights[rightsId]["url"]
+    else:
+        print("no license info:", mod, "continuing..")
+        continue
+    # rights complete
+    # process info
+    out[mod]["rights"] = {}
+    out[mod]["rights"]["rights_identifier"] = rightsId
+    out[mod]["rights"]["rights"] = "".join(
+        [rightsStr, " (", rightsId, "; ", rightsUrl, ")"])
+    out[mod]["rights"]["rights_info"] = rightsUrl
+    out[mod]["rights"]["exceptions_contact"] = contact
+    # default entries
+    out[mod]["rights"]["source_specific_info"] = ""
+    out[mod]["rights"]["history"] = "".join(
+        [firstVer, ": initially published under ", rightsId])
+    # conditional on group input
+    # MOHC UKESM1-0*
+    if mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
+        out[mod]["rights"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+        out[mod]["rights"]["history"] = ''.join(
+            [out[mod]["rights"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
+    # NASA-GISS GISS-E*
+    if mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
+        out[mod]["rights"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+        print(mod, out[mod]["rights"]["history"])
+        out[mod]["rights"]["history"] = ''.join(
+            [out[mod]["rights"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])
+        # update to current
+        out[mod]["rights"]["rights_identifier"] = "CC0 1.0"
+        out[mod]["rights"][
+            "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
+        out[mod]["rights"]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+
 
 # %% write json
 timeNow = datetime.datetime.now()
@@ -265,28 +513,12 @@ with open(outFile, "w") as jsonFile:
         out, jsonFile, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
     )
 
-# %% Check for missing entries
-counter = 1
-print('------ Missing models ------')
-for count, mod in enumerate(out.keys()):
-    if len(out[mod]) == 1:
-        if mod == "PCMDI-test-1-0":
-            print("PCMDI-test-1-0 found skipping")
-            continue
-        print(counter, mod)
-        counter = counter + 1
-
-# %% Generate direct inputs for CMIP6_CVs
-
-#out[src]["rights"] = {}
-# out[src]["rights"]
-
 '''
 "license":{
       "rights_identifier":"CC BY 4.0",
       "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
       "rights_info":"https://creativecommons.org/licenses/by/4.0/",
-      "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
+      "exceptions_contact":"ATSIGNmetoffice.gov.uk <-cmip6.ukesm1",
       "source-specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
       "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
 },

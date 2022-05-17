@@ -559,6 +559,11 @@ PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM
 PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1058
 PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD  9 May 2022    - Revise source_id EC-Earth3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1063
+PJD 16 May 2022    - Updated license to include all rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+                     - TODO: found issues with CMCC-ESM2-SR5 model, not registered and not ESGF published see
+                     https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
+                     https://github.com/WCRP-CMIP/CMIP6_CVs/issues/900#issuecomment-617085459
                      - TODO: will need to incorporate new "rights" entry in versionHistory.json and versionHistoryUpdate function
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
@@ -927,7 +932,8 @@ institution_id = {
 }
 
 # %% CMIP6 License
-license = [
+license = {}
+license["license"] =\
     ''.join(['CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons ',
              'Attribution-[NonCommercial-]ShareAlike 4.0 International License ',
              '(https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse ',
@@ -939,38 +945,22 @@ license = [
              'merchantability and fitness for a particular purpose. All liabilities arising from the ',
              'supply of the information (including any liability arising in negligence) are excluded ',
              'to the fullest extent permitted by law.'])
-]
-
-# %% CMIP6 rights
-rights = {}
-rights["CC0 1.0"] = {}
-rights["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
-rights["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
-rights["CC BY 3.0"] = {}
-rights["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
-rights["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
-rights["CC BY 4.0"] = {}
-rights["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
-rights["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
-rights["CC BY-SA 4.0"] = {}
-rights["CC BY-SA 4.0"]["id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
-rights["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
-rights["CC BY-NC-SA 4.0"] = {}
-rights["CC BY-NC-SA 4.0"]["id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
-rights["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-print('"rights" no incorporated into versionHistory.json or versionHistoryUpdate function, exiting')
-os.exit()
-
-'''
-"license":{
-      "rights_identifier":"CC BY 4.0",
-      "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)",
-      "rights_info":"https://creativecommons.org/licenses/by/4.0/",
-      "exceptions_contact":"@metoffice.gov.uk <-cmip6.ukesm1",
-      "source-specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
-      "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
-},
-'''
+license["rights"] = {}
+license["rights"]["CC0 1.0"] = {}
+license["rights"]["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+license["rights"]["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+license["rights"]["CC BY 3.0"] = {}
+license["rights"]["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
+license["rights"]["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
+license["rights"]["CC BY 4.0"] = {}
+license["rights"]["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
+license["rights"]["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
+license["rights"]["CC BY-SA 4.0"] = {}
+license["rights"]["CC BY-SA 4.0"]["id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+license["rights"]["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+license["rights"]["CC BY-NC-SA 4.0"] = {}
+license["rights"]["CC BY-NC-SA 4.0"]["id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+license["rights"]["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 # %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']
@@ -1049,9 +1039,27 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'EC-Earth3-CC'
-source_id[key]['activity_participation'].append('DCPP')
-source_id[key]['activity_participation'].sort()
+f = "220516_CMIP6-CMIP_mergedMetadata.json"
+counter = 1
+with open(f) as fh:
+    rightsMeta = json.load(fh)
+# Loop through entries and add to source_id
+for count, srcId in enumerate(rightsMeta.keys()):
+    if srcId == "CMCC-ESM2-SR5":
+        # to be checked https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
+        # https://github.com/WCRP-CMIP/CMIP6_CVs/issues/900#issuecomment-617085459
+        continue
+    if "rights" in rightsMeta[srcId].keys():
+        print(count, srcId, "found")
+        # add rights
+        source_id[srcId]["rights"] = {}
+        source_id[srcId]["rights"] = rightsMeta[srcId]["rights"]
+        # toggle cohort
+        source_id[srcId]["cohort"] = ["published"]
+    else:
+        print("----------")
+        print(count, counter, srcId, "not found")
+        counter = counter+1
 
 # Example
 # key = 'GISS-E2-2-H'

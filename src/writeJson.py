@@ -1235,9 +1235,7 @@ for jsonName in ['experiment_id', 'source_id']:
                     else:
                         # deal with nested dict "model_components"
                         for d1Key in keys1:
-                            print("d1Key:", d1Key)
-                            if d1Key == "exceptions_contact":
-                                pdb.set_trace()
+                            #print("d1Key:", d1Key)
                             keys2 = values[1][d1Key].keys()
                             for d2Key in keys2:
                                 string = dictToClean[key][keyInd][d1Key][d2Key]

@@ -582,7 +582,7 @@ except ImportError:
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Revise source_id EC-Earth3-CC\"'
+commitMessage = '\"Update published source_id entries with rights\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'

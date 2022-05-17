@@ -561,6 +561,7 @@ PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP
 PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD  9 May 2022    - Revise source_id EC-Earth3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1063
 PJD 16 May 2022    - Updated license to include all rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existing published model)
 PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: found issues with CMCC-ESM2-SR5 model, not registered and not ESGF published see
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
@@ -948,9 +949,6 @@ license["rights"] = {}
 license["rights"]["CC0 1.0"] = {}
 license["rights"]["CC0 1.0"]["id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
 license["rights"]["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
-license["rights"]["CC BY 3.0"] = {}
-license["rights"]["CC BY 3.0"]["id"] = "Creative Commons Attribution 3.0 Unported"
-license["rights"]["CC BY 3.0"]["url"] = "https://creativecommons.org/licenses/by/3.0/"
 license["rights"]["CC BY 4.0"] = {}
 license["rights"]["CC BY 4.0"]["id"] = "Creative Commons Attribution 4.0 International"
 license["rights"]["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"

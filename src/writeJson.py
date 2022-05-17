@@ -11,6 +11,7 @@ import sys
 import subprocess
 import shlex
 import platform
+import pdb
 import os
 import json
 import gc
@@ -575,7 +576,7 @@ try:
     from urllib2 import urlopen  # py2
 except ImportError:
     from urllib.request import urlopen  # py3
-sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
+# sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #import pyexcel_xlsx as pyx
 #from string import replace
 #from unidecode import unidecode
@@ -599,7 +600,6 @@ masterTargets = [
     'nominal_resolution',
     'realm',
     'required_global_attributes',
-    'rights',
     'source_id',
     'source_type',
     'sub_experiment_id',
@@ -1039,7 +1039,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-f = "220516_CMIP6-CMIP_mergedMetadata.json"
+f = "220517_CMIP6-CMIP_mergedMetadata.json"
 counter = 1
 with open(f) as fh:
     rightsMeta = json.load(fh)
@@ -1060,6 +1060,7 @@ for count, srcId in enumerate(rightsMeta.keys()):
         print("----------")
         print(count, counter, srcId, "not found")
         counter = counter+1
+del(rightsMeta)
 
 # Example
 # key = 'GISS-E2-2-H'
@@ -1226,13 +1227,23 @@ for jsonName in ['experiment_id', 'source_id']:
                     pdepth = dictDepth(values[1])
                     keyInd = values[0]
                     keys1 = values[1].keys()
-                    for d1Key in keys1:
-                        keys2 = values[1][d1Key].keys()
-                        for d2Key in keys2:
-                            string = dictToClean[key][keyInd][d1Key][d2Key]
+                    if pdepth == 1:
+                        # deal with flat dict "rights"
+                        for d1Key in keys1:
+                            string = dictToClean[key][keyInd][d1Key]
                             string = cleanString(string)  # Clean string
-                            dictToClean[key][keyInd][d1Key][d2Key] = string
-                # elif type(values[0]) in [str,unicode]: # Py2
+                            dictToClean[key][keyInd][d1Key] = string
+                    else:
+                        # deal with nested dict "model_components"
+                        for d1Key in keys1:
+                            print("d1Key:", d1Key)
+                            if d1Key == "exceptions_contact":
+                                pdb.set_trace()
+                            keys2 = values[1][d1Key].keys()
+                            for d2Key in keys2:
+                                string = dictToClean[key][keyInd][d1Key][d2Key]
+                                string = cleanString(string)  # Clean string
+                                dictToClean[key][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) == str:  # Py3
                     string = dictToClean[key][values[0]]
                     string = cleanString(string)  # Clean string
@@ -1510,6 +1521,7 @@ for jsonName in masterTargets:
             ['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_', jsonName, '.json'])
     # Create input list and load from web
     tmp = [[jsonName, url]]
+    print("url:", url)
     vars()[target] = readJsonCreateDict(tmp)
     vars()[target] = eval(target).get(jsonName)
     # Fudge to extract duplicate level

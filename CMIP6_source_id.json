@@ -5,7 +5,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "IPSL"
@@ -47,6 +47,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-06-11: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"4AOP-v1-5"
         },
         "ACCESS-CM2":{
@@ -60,7 +68,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CSIRO-ARCCSS"
@@ -102,6 +110,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2019-11-08: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ACCESS-CM2"
         },
         "ACCESS-ESM1-5":{
@@ -117,7 +133,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CSIRO"
@@ -159,6 +175,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2019-11-12: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ACCESS-ESM1-5"
         },
         "ACCESS-OM2":{
@@ -166,7 +190,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CSIRO-COSIMA"
@@ -208,6 +232,14 @@
                 }
             },
             "release_year":"2020",
+            "rights":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2021-06-16: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ACCESS-OM2"
         },
         "ACCESS-OM2-025":{
@@ -215,7 +247,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CSIRO-COSIMA"
@@ -257,6 +289,14 @@
                 }
             },
             "release_year":"2020",
+            "rights":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2021-06-17: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ACCESS-OM2-025"
         },
         "ARTS-2-3":{
@@ -264,7 +304,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "UHH"
@@ -306,6 +346,14 @@
                 }
             },
             "release_year":"2015",
+            "rights":{
+                "exceptions_contact":"@uni-hamburg.de <- oliver.lemke",
+                "history":"2019-06-20: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ARTS-2-3"
         },
         "AWI-CM-1-1-HR":{
@@ -318,7 +366,7 @@
                 "VIACSAB"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AWI"
@@ -360,6 +408,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"AWI-CM-1-1-HR"
         },
         "AWI-CM-1-1-LR":{
@@ -373,7 +429,7 @@
                 "VIACSAB"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AWI"
@@ -415,6 +471,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"AWI-CM-1-1-LR"
         },
         "AWI-CM-1-1-MR":{
@@ -428,7 +492,7 @@
                 "VIACSAB"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AWI"
@@ -470,6 +534,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2018-12-18: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"AWI-CM-1-1-MR"
         },
         "AWI-ESM-1-1-LR":{
@@ -478,7 +550,7 @@
                 "PMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AWI"
@@ -520,6 +592,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2020-02-12: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"AWI-ESM-1-1-LR"
         },
         "AWI-ESM-2-1-LR":{
@@ -578,7 +658,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "BCC"
@@ -620,6 +700,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2020-07-21: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"BCC-CSM2-HR"
         },
         "BCC-CSM2-MR":{
@@ -636,7 +724,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "BCC"
@@ -678,6 +766,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2018-10-09: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"BCC-CSM2-MR"
         },
         "BCC-ESM1":{
@@ -686,7 +782,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "BCC"
@@ -728,6 +824,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2018-11-14: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"BCC-ESM1"
         },
         "BESM-2-9":{
@@ -945,7 +1049,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CAMS"
@@ -987,6 +1091,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@cma.gov.cn <- rongxy",
+                "history":"2019-07-08: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CAMS-CSM1-0"
         },
         "CAS-ESM2-0":{
@@ -1012,7 +1124,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CAS"
@@ -1054,6 +1166,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@mail.iap.ac.cn <- zhanghe",
+                "history":"2020-03-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CAS-ESM2-0"
         },
         "CESM1-1-CAM5-CMIP5":{
@@ -1062,7 +1182,7 @@
                 "DCPP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1104,6 +1224,14 @@
                 }
             },
             "release_year":"2011",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-10-07: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM1-1-CAM5-CMIP5"
         },
         "CESM1-CAM5-SE-HR":{
@@ -1111,7 +1239,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1153,6 +1281,14 @@
                 }
             },
             "release_year":"2012",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-07-24: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM1-CAM5-SE-HR"
         },
         "CESM1-CAM5-SE-LR":{
@@ -1160,7 +1296,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1202,6 +1338,14 @@
                 }
             },
             "release_year":"2012",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-07-08: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM1-CAM5-SE-LR"
         },
         "CESM1-WACCM-SC":{
@@ -1209,7 +1353,7 @@
                 "PAMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "UCI",
@@ -1252,6 +1396,14 @@
                 }
             },
             "release_year":"2011",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-10-12: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM1-WACCM-SC"
         },
         "CESM2":{
@@ -1283,7 +1435,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1325,6 +1477,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-02-18: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM2"
         },
         "CESM2-FV2":{
@@ -1332,7 +1492,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1374,6 +1534,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM2-FV2"
         },
         "CESM2-SE":{
@@ -1435,7 +1603,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1477,6 +1645,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-02-20: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM2-WACCM"
         },
         "CESM2-WACCM-FV2":{
@@ -1484,7 +1660,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCAR"
@@ -1526,6 +1702,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CESM2-WACCM-FV2"
         },
         "CIESM":{
@@ -1540,7 +1724,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "THU"
@@ -1582,6 +1766,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@tsinghua.edu.cn <- yanluan",
+                "history":"2019-12-02: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CIESM"
         },
         "CMCC-CM2-HR4":{
@@ -1591,7 +1783,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CMCC"
@@ -1633,6 +1825,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2017-07-06: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CMCC-CM2-HR4"
         },
         "CMCC-CM2-SR5":{
@@ -1644,7 +1844,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CMCC"
@@ -1686,6 +1886,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2020-02-26: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CMCC-CM2-SR5"
         },
         "CMCC-CM2-VHR4":{
@@ -1694,7 +1902,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CMCC"
@@ -1736,6 +1944,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2017-09-27: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CMCC-CM2-VHR4"
         },
         "CMCC-ESM2":{
@@ -1748,7 +1964,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CMCC"
@@ -1790,6 +2006,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2020-02-03: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CMCC-ESM2"
         },
         "CNRM-CM6-1":{
@@ -1810,7 +2034,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -1852,6 +2076,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
+                "history":"2018-06-26: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CNRM-CM6-1"
         },
         "CNRM-CM6-1-HR":{
@@ -1864,7 +2096,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -1906,6 +2138,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
+                "history":"2019-02-21: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CNRM-CM6-1-HR"
         },
         "CNRM-ESM2-1":{
@@ -1924,7 +2164,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CNRM-CERFACS"
@@ -1966,6 +2206,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@meteo.fr <- contact.cmip",
+                "history":"2018-09-14: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CNRM-ESM2-1"
         },
         "CNRM-ESM2-1-HR":{
@@ -2094,7 +2342,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CCCma"
@@ -2136,6 +2384,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
+                "history":"2019-03-06: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CanESM5"
         },
         "CanESM5-CanOE":{
@@ -2147,7 +2403,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CCCma"
@@ -2189,6 +2445,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
+                "history":"2019-04-29: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"CanESM5-CanOE"
         },
         "E3SM-1-0":{
@@ -2200,7 +2464,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "E3SM-Project",
@@ -2244,6 +2508,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-02-06: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"E3SM-1-0"
         },
         "E3SM-1-1":{
@@ -2255,7 +2527,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "E3SM-Project",
@@ -2298,6 +2570,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-10-29: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"E3SM-1-1"
         },
         "E3SM-1-1-ECA":{
@@ -2307,7 +2587,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "E3SM-Project"
@@ -2349,6 +2629,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-12-16: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"E3SM-1-1-ECA"
         },
         "EC-Earth3":{
@@ -2369,7 +2657,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2411,6 +2699,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-04-05: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3"
         },
         "EC-Earth3-AerChem":{
@@ -2421,7 +2717,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2463,6 +2759,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-06-22: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3-AerChem"
         },
         "EC-Earth3-CC":{
@@ -2476,7 +2780,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2518,6 +2822,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-12-29: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3-CC"
         },
         "EC-Earth3-GrIS":{
@@ -2628,7 +2940,7 @@
                 "PMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2670,6 +2982,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-01-03: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3-LR"
         },
         "EC-Earth3-Veg":{
@@ -2682,7 +3002,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2724,6 +3044,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-04-10: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3-Veg"
         },
         "EC-Earth3-Veg-LR":{
@@ -2733,7 +3061,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2775,6 +3103,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-02-13: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3-Veg-LR"
         },
         "EC-Earth3P":{
@@ -2783,7 +3119,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2825,6 +3161,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2017-09-11: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3P"
         },
         "EC-Earth3P-HR":{
@@ -2832,7 +3176,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2874,6 +3218,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2017-08-11: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3P-HR"
         },
         "EC-Earth3P-VHR":{
@@ -2881,7 +3233,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2923,6 +3275,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@bsc.es <- pierre-antoine.bretonniere",
+                "history":"2020-10-07: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"EC-Earth3P-VHR"
         },
         "ECMWF-IFS-HR":{
@@ -2930,7 +3290,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "ECMWF"
@@ -2972,6 +3332,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ECMWF-IFS-HR"
         },
         "ECMWF-IFS-LR":{
@@ -2979,7 +3347,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "ECMWF"
@@ -3021,6 +3389,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ECMWF-IFS-LR"
         },
         "ECMWF-IFS-MR":{
@@ -3028,7 +3404,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "ECMWF"
@@ -3070,6 +3446,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2018-11-15: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ECMWF-IFS-MR"
         },
         "EMAC-2-53-Vol":{
@@ -3179,7 +3563,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CAS"
@@ -3221,6 +3605,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2019-08-16: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"FGOALS-f3-H"
         },
         "FGOALS-f3-L":{
@@ -3236,7 +3628,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CAS"
@@ -3278,6 +3670,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2018-11-08: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"FGOALS-f3-L"
         },
         "FGOALS-g3":{
@@ -3295,7 +3695,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CAS"
@@ -3337,6 +3737,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2019-08-18: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"FGOALS-g3"
         },
         "FIO-ESM-2-0":{
@@ -3349,7 +3757,7 @@
                 "SIMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "FIO-QLNM"
@@ -3391,6 +3799,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@fio.org.cn <- songroy",
+                "history":"2019-09-10: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"FIO-ESM-2-0"
         },
         "GFDL-AM4":{
@@ -3398,7 +3814,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3440,6 +3856,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-AM4"
         },
         "GFDL-CM4":{
@@ -3455,7 +3879,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3497,6 +3921,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-CM4"
         },
         "GFDL-CM4C192":{
@@ -3504,7 +3936,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3546,6 +3978,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-CM4C192"
         },
         "GFDL-ESM2M":{
@@ -3553,7 +3993,7 @@
                 "FAFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3595,6 +4035,14 @@
                 }
             },
             "release_year":"2012",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-ESM2M"
         },
         "GFDL-ESM4":{
@@ -3611,7 +4059,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3653,6 +4101,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-ESM4"
         },
         "GFDL-GLOBAL-LBL":{
@@ -3709,7 +4165,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3751,6 +4207,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-GRTCODE"
         },
         "GFDL-OM4p5B":{
@@ -3758,7 +4222,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3800,6 +4264,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-OM4p5B"
         },
         "GFDL-RFM-DISORT":{
@@ -3807,7 +4279,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NOAA-GFDL"
@@ -3849,6 +4321,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"GFDL-RFM-DISORT"
         },
         "GISS-E2-1-G":{
@@ -3874,7 +4354,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -3916,6 +4396,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2018-08-21: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E2-1-G"
         },
         "GISS-E2-1-G-CC":{
@@ -3924,7 +4412,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -3966,6 +4454,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-03-25: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E2-1-G-CC"
         },
         "GISS-E2-1-H":{
@@ -3978,7 +4474,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -4020,6 +4516,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2018-08-24: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E2-1-H"
         },
         "GISS-E2-2-G":{
@@ -4044,7 +4548,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -4086,6 +4590,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E2-2-G"
         },
         "GISS-E2-2-H":{
@@ -4095,7 +4607,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -4137,6 +4649,14 @@
                 }
             },
             "release_year":"2021",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E2-2-H"
         },
         "GISS-E3-G":{
@@ -4162,7 +4682,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NASA-GISS"
@@ -4204,6 +4724,14 @@
                 }
             },
             "release_year":"2020",
+            "rights":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-12-30: initially published under CC BY-NC-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "rights_identifier":"CC0 1.0",
+                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+            },
             "source_id":"GISS-E3-G"
         },
         "HadGEM3-GC31-HH":{
@@ -4212,7 +4740,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC",
@@ -4255,6 +4783,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2018-09-27: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-HH"
         },
         "HadGEM3-GC31-HM":{
@@ -4263,7 +4799,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC",
@@ -4306,6 +4842,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-08-31: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-HM"
         },
         "HadGEM3-GC31-LL":{
@@ -4322,7 +4866,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC",
@@ -4365,6 +4909,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-09-21: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-LL"
         },
         "HadGEM3-GC31-LM":{
@@ -4373,7 +4925,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC"
@@ -4415,6 +4967,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-09-06: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-LM"
         },
         "HadGEM3-GC31-MH":{
@@ -4423,7 +4983,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC"
@@ -4465,6 +5025,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-12-27: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-MH"
         },
         "HadGEM3-GC31-MM":{
@@ -4479,7 +5047,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC"
@@ -4521,6 +5089,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-08-18: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HadGEM3-GC31-MM"
         },
         "HiRAM-SIT-HR":{
@@ -4528,7 +5104,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AS-RCEC"
@@ -4570,6 +5146,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
+                "history":"2020-12-23: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HiRAM-SIT-HR"
         },
         "HiRAM-SIT-LR":{
@@ -4577,7 +5161,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AS-RCEC"
@@ -4619,6 +5203,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
+                "history":"2020-12-29: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"HiRAM-SIT-LR"
         },
         "ICON-ESM-LR":{
@@ -4628,7 +5220,7 @@
                 "SIMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MPI-M"
@@ -4670,6 +5262,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2021-02-15: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"ICON-ESM-LR"
         },
         "IITM-ESM":{
@@ -4679,7 +5279,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "CCCR-IITM"
@@ -4721,6 +5321,14 @@
                 }
             },
             "release_year":"2015",
+            "rights":{
+                "exceptions_contact":"@tropmet.res.in <- iitm-esm",
+                "history":"2019-07-19: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"IITM-ESM"
         },
         "INM-CM4-8":{
@@ -4730,7 +5338,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "INM"
@@ -4772,6 +5380,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-05-28: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"INM-CM4-8"
         },
         "INM-CM5-0":{
@@ -4780,7 +5396,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "INM"
@@ -4822,6 +5438,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-06-10: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"INM-CM5-0"
         },
         "INM-CM5-H":{
@@ -4830,7 +5454,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "INM"
@@ -4872,6 +5496,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-08-12: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"INM-CM5-H"
         },
         "IPSL-CM5A2-INCA":{
@@ -4881,7 +5513,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "IPSL"
@@ -4923,6 +5555,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-07-29: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"IPSL-CM5A2-INCA"
         },
         "IPSL-CM6A-ATM-HR":{
@@ -4930,7 +5570,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "IPSL"
@@ -4972,6 +5612,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2019-01-22: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"IPSL-CM6A-ATM-HR"
         },
         "IPSL-CM6A-ATM-ICO-HR":{
@@ -5233,7 +5881,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "IPSL"
@@ -5275,6 +5923,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2018-03-14: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"IPSL-CM6A-LR"
         },
         "IPSL-CM6A-LR-INCA":{
@@ -5283,7 +5939,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "IPSL"
@@ -5325,6 +5981,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-07-17: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"IPSL-CM6A-LR-INCA"
         },
         "IPSL-CM6A-MR025":{
@@ -5431,7 +6095,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NIMS-KMA"
@@ -5473,6 +6137,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@korea.kr <- yoonjin.lim",
+                "history":"2019-08-13: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"KACE-1-0-G"
         },
         "KIOST-ESM":{
@@ -5484,7 +6156,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "KIOST"
@@ -5526,6 +6198,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@pknu.ac.kr <- yhokim",
+                "history":"2019-11-04: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"KIOST-ESM"
         },
         "LBLRTM-12-8":{
@@ -5533,7 +6213,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AER"
@@ -5575,6 +6255,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2019-05-14: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"LBLRTM-12-8"
         },
         "MCM-UA-1-0":{
@@ -5585,7 +6273,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "UA"
@@ -5627,6 +6315,14 @@
                 }
             },
             "release_year":"1991",
+            "rights":{
+                "exceptions_contact":"@email.arizona.edu <- GEOS-CMIP",
+                "history":"2019-07-31: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MCM-UA-1-0"
         },
         "MIROC-ES2H":{
@@ -5640,7 +6336,7 @@
                 "VIACSAB"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -5682,6 +6378,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2021-01-25: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MIROC-ES2H"
         },
         "MIROC-ES2H-NB":{
@@ -5690,7 +6394,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -5732,6 +6436,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2020-04-28: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MIROC-ES2H-NB"
         },
         "MIROC-ES2L":{
@@ -5750,7 +6462,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -5792,6 +6504,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-23: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MIROC-ES2L"
         },
         "MIROC6":{
@@ -5814,7 +6534,7 @@
                 "VIACSAB"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -5856,6 +6576,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2018-12-12: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MIROC6"
         },
         "MPI-ESM-1-2-HAM":{
@@ -5866,7 +6594,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "HAMMOZ-Consortium"
@@ -5908,6 +6636,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@env.ethz.ch <- david.neubauer",
+                "history":"2019-06-27: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MPI-ESM-1-2-HAM"
         },
         "MPI-ESM1-2-HR":{
@@ -5925,7 +6661,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MPI-M",
@@ -5969,6 +6705,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MPI-ESM1-2-HR"
         },
         "MPI-ESM1-2-LR":{
@@ -5994,7 +6738,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MPI-M",
@@ -6039,6 +6783,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2019-07-10: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MPI-ESM1-2-LR"
         },
         "MPI-ESM1-2-XR":{
@@ -6046,7 +6798,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MPI-M"
@@ -6088,6 +6840,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MPI-ESM1-2-XR"
         },
         "MRI-AGCM3-2-H":{
@@ -6096,7 +6856,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MRI"
@@ -6138,6 +6898,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-07-11: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MRI-AGCM3-2-H"
         },
         "MRI-AGCM3-2-S":{
@@ -6147,7 +6915,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MRI"
@@ -6189,6 +6957,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-07-11: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MRI-AGCM3-2-S"
         },
         "MRI-ESM2-0":{
@@ -6213,7 +6989,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MRI"
@@ -6255,6 +7031,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-02-22: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"MRI-ESM2-0"
         },
         "NESM3":{
@@ -6269,7 +7053,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NUIST"
@@ -6311,6 +7095,14 @@
                 }
             },
             "release_year":"2016",
+            "rights":{
+                "exceptions_contact":"@nuist.edu.cn <- esmc",
+                "history":"2019-06-25: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NESM3"
         },
         "NICAM16-7S":{
@@ -6320,7 +7112,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -6362,6 +7154,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-03-18: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NICAM16-7S"
         },
         "NICAM16-8S":{
@@ -6371,7 +7171,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -6413,6 +7213,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NICAM16-8S"
         },
         "NICAM16-9D-L78":{
@@ -6472,7 +7280,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MIROC"
@@ -6514,6 +7322,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NICAM16-9S"
         },
         "NorCPM1":{
@@ -6522,7 +7338,7 @@
                 "DCPP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCC"
@@ -6564,6 +7380,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@uib.no <- norcpm",
+                "history":"2019-09-14: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NorCPM1"
         },
         "NorESM1-F":{
@@ -6572,7 +7396,7 @@
                 "PMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCC"
@@ -6614,6 +7438,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-09-20: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NorESM1-F"
         },
         "NorESM2-HH":{
@@ -6684,7 +7516,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCC"
@@ -6726,6 +7558,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-08-15: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NorESM2-LM"
         },
         "NorESM2-LME":{
@@ -6897,7 +7737,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NCC"
@@ -6939,6 +7779,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-11-08: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"NorESM2-MM"
         },
         "PCMDI-test-1-0":{
@@ -6995,7 +7843,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AER"
@@ -7037,6 +7885,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"RRTMG-LW-4-91"
         },
         "RRTMG-SW-4-02":{
@@ -7044,7 +7900,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AER"
@@ -7086,6 +7942,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"RRTMG-SW-4-02"
         },
         "RTE-RRTMGP-181204":{
@@ -7093,7 +7957,7 @@
                 "RFMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "RTE-RRTMGP-Consortium"
@@ -7135,6 +7999,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2019-10-07: initially published under CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "rights_identifier":"CC BY-NC-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"RTE-RRTMGP-181204"
         },
         "SAM0-UNICON":{
@@ -7143,7 +8015,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "SNU"
@@ -7185,6 +8057,14 @@
                 }
             },
             "release_year":"2017",
+            "rights":{
+                "exceptions_contact":"@snu.ac.kr <- sjh11556",
+                "history":"2019-03-23: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"SAM0-UNICON"
         },
         "TaiESM1":{
@@ -7199,7 +8079,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "AS-RCEC"
@@ -7241,6 +8121,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- leelupin",
+                "history":"2019-12-25: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"TaiESM1"
         },
         "TaiESM1-TIMCOM":{
@@ -7249,7 +8137,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NTU"
@@ -7291,6 +8179,14 @@
                 }
             },
             "release_year":"2020",
+            "rights":{
+                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
+                "history":"2020-09-29: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"TaiESM1-TIMCOM"
         },
         "TaiESM1-TIMCOM2":{
@@ -7299,7 +8195,7 @@
                 "OMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "NTU"
@@ -7341,6 +8237,14 @@
                 }
             },
             "release_year":"2021",
+            "rights":{
+                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
+                "history":"2021-12-13: initially published under CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":""
+            },
             "source_id":"TaiESM1-TIMCOM2"
         },
         "UKESM1-0-LL":{
@@ -7360,7 +8264,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC",
@@ -7405,6 +8309,14 @@
                 }
             },
             "release_year":"2018",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
+                "history":"2019-04-04: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+            },
             "source_id":"UKESM1-0-LL"
         },
         "UKESM1-0-MMh":{
@@ -7518,7 +8430,7 @@
                 "ISMIP6"
             ],
             "cohort":[
-                "Registered"
+                "published"
             ],
             "institution_id":[
                 "MOHC",
@@ -7561,6 +8473,14 @@
                 }
             },
             "release_year":"2019",
+            "rights":{
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
+                "history":"2022-02-11: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "rights_identifier":"CC BY-SA 4.0",
+                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+            },
             "source_id":"UKESM1-ice-LL"
         },
         "UofT-CCSM4":{
@@ -7668,12 +8588,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon May  9 11:03:31 2022 -0700",
-        "CV_collection_version":"6.2.56.12",
+        "CV_collection_modified":"Tue May 17 13:25:58 2022 -0700",
+        "CV_collection_version":"6.2.57.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
-        "source_id_CV_modified":"Wed Apr 13 13:21:31 2022 00100",
+        "previous_commit":"2a9c971281d73c2ee7479e92966dc5c8da263e1d",
+        "source_id_CV_modified":"Mon May  9 11:03:31 2022 -0700",
         "source_id_CV_note":"Revise source_id EC-Earth3-CC",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

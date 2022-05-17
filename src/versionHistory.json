@@ -31,10 +31,10 @@
             "timeStamp":"Mon Nov 16 11:16:39 2020 -0800"
         },
         "license":{
-            "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44",
-            "commitMessage":"Issue225 durack1 add institution_id THU (#232)",
-            "timeStamp":"Mon Feb 27 10:30:00 2017 -0700"
+            "MD5":"2a9c971281d73c2ee7479e92966dc5c8da263e1d",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2a9c971281d73c2ee7479e92966dc5c8da263e1d",
+            "commitMessage":"Revise source_id EC-Earth3-CC",
+            "timeStamp":"Tue May 17 13:25:58 2022 -0700"
         },
         "mip_era":{
             "MD5":"f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b",
@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
+            "MD5":"2a9c971281d73c2ee7479e92966dc5c8da263e1d",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2a9c971281d73c2ee7479e92966dc5c8da263e1d",
             "commitMessage":"Revise source_id EC-Earth3-CC",
-            "timeStamp":"Mon May  9 11:03:31 2022 -0700"
+            "timeStamp":"Tue May 17 13:25:58 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":12,
-            "versionCVContent":56,
+            "versionCVCommit":0,
+            "versionCVContent":57,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

@@ -42,6 +42,7 @@ PJD 13 May 2022     - Updated 220512 -> 220513_CMIP6_metaData_restartedInd-24949
 PJD 14 May 2022     - Updated 220513 -> 220514_CMIP6_metaData_restartedInd-24949000.json (0837)
 PJD 15 May 2022     - Updated 220514 -> 220514_CMIP6_metaData_restartedInd-24949000.json (1140, finalized)
 PJD 16 May 2022     - Updated to write "rights" output per model
+PJD 17 May 2022     - Added omitted model "TaiESM1-TIMCOM2"
                     TODO: finish extract netcdf-harvested info
                      
 
@@ -406,7 +407,7 @@ for count, mod in enumerate(out.keys()):
             contact = emailGarble("sjh11556ATSIGNsnu.ac.kr")
         elif mod == "TaiESM1":
             contact = emailGarble("leelupinATSIGNgate.sinica.edu.tw")
-        elif mod == "TaiESM1-TIMCOM":
+        elif mod in ["TaiESM1-TIMCOM", "TaiESM1-TIMCOM2"]:
             contact = emailGarble("tsengyhATSIGNntu.edu.tw")
         elif mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
             contact = emailGarble("cmip6.ukesm1ATSIGNmetoffice.gov.uk")

@@ -565,7 +565,6 @@ PJD 17 May 2022    - Updated source_id include extracted rights entries https://
                      - TODO: found issues with CMCC-ESM2-SR5 model, not registered and not ESGF published see
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/900#issuecomment-617085459
-                     - TODO: will need to incorporate new "rights" entry in versionHistory.json and versionHistoryUpdate function
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -582,7 +581,7 @@ except ImportError:
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Update published source_id entries with rights\"'
+commitMessage = '\"Update published source_id entries with rights; augment license\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'

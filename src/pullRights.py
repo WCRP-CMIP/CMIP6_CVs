@@ -44,6 +44,7 @@ PJD 15 May 2022     - Updated 220514 -> 220514_CMIP6_metaData_restartedInd-24949
 PJD 16 May 2022     - Updated to write "rights" output per model
 PJD 17 May 2022     - Added omitted model "TaiESM1-TIMCOM2"
 PJD 18 May 2022     - Updated "rights" -> "license", cleaned up identifiers
+PJD 18 May 2022     - Updated "license" -> "license_file" for the file-extracted identifier
                       https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1066#issuecomment-1130243936
                     TODO: finish extract netcdf-harvested info
                      
@@ -248,14 +249,15 @@ with open(fileName) as jsonFile:
         if srcId not in out.keys():
             out[srcId] = {}
             out[srcId]["contact"] = []
-            out[srcId]["license"] = []
+            out[srcId]["license_file"] = []
             out[srcId]["versions"] = []
         elif srcId in out.keys() and "versions" not in out[srcId].keys():
             out[srcId]["contact"] = []
-            out[srcId]["license"] = []
+            out[srcId]["license_file"] = []
             out[srcId]["versions"] = []
         # add info
-        out[srcId]["license"].append(licExt)  # assume license doesn't change
+        # assume license doesn't change
+        out[srcId]["license_file"].append(licExt)
         out[srcId]["versions"].append(ver)
         # and cleanup contact
         if contact != "" and not isinstance(contact, list):
@@ -281,13 +283,13 @@ for key in out.keys():
             out[key]["versions"] = [tmp[0], tmp[-1], len(tmp)]
     else:
         print("no version info:", key)
-    if "license" in out[key].keys():
-        tmp = out[key]["license"]
+    if "license_file" in out[key].keys():
+        tmp = out[key]["license_file"]
         print("in license:", len(tmp))
         tmp = list(set(tmp))
         tmp.sort()
         print("out license:", len(tmp))
-        out[key]["license"] = tmp
+        out[key]["license_file"] = tmp
     else:
         print("no license info:", key)
     if "contact" in out[key].keys():
@@ -365,8 +367,11 @@ for count, mod in enumerate(out.keys()):
             contact = emailGarble("cesm_cmip6ATSIGNucar.edu")
         elif mod == "CIESM":
             contact = emailGarble("yanluanATSIGNtsinghua.edu.cn")
-        elif mod in ["CMCC-CM2-HR4", "CMCC-CM2-SR5", "CMCC-CM2-VHR4", "CMCC-ESM2", "CMCC-ESM2-SR5"]:
+        elif mod in ["CMCC-CM2-HR4", "CMCC-CM2-SR5", "CMCC-CM2-VHR4", "CMCC-ESM2"]:
             contact = emailGarble("piergiuseppe.fogliATSIGNcmcc.it")
+        elif mod == "CMCC-ESM2-SR5":
+            print(mod, "invalid data, skip..")
+            continue
         elif mod in ["CNRM-CM6-1", "CNRM-CM6-1-HR", "CNRM-ESM2-1", "CNRM-ESM2-1-HR"]:
             contact = emailGarble("contact.cmip6ATSIGNcerfacs.fr")
         elif mod in ["E3SM-1-0", "E3SM-1-1", "E3SM-1-1-ECA"]:

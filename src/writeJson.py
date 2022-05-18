@@ -563,7 +563,7 @@ PJD 16 May 2022    - Updated license to include all rights entries https://githu
 PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existing published model)
 PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
-PJD 18 May 2022    - Updated source_id entries rights -> license; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 18 May 2022    - Updated source_id entries rights -> license_info; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -1041,15 +1041,11 @@ with open(f) as fh:
     rightsMeta = json.load(fh)
 # Loop through entries and add to source_id
 for count, srcId in enumerate(rightsMeta.keys()):
-    if srcId == "CMCC-ESM2-SR5":
-        # to be checked https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296
-        # https://github.com/WCRP-CMIP/CMIP6_CVs/issues/900#issuecomment-617085459
-        continue
-    if "license" in rightsMeta[srcId].keys():
+    if "license_info" in rightsMeta[srcId].keys():
         print(count, srcId, "found")
         # add rights
-        source_id[srcId]["license"] = {}
-        source_id[srcId]["license"] = rightsMeta[srcId]["license"]
+        source_id[srcId]["license_info"] = {}
+        source_id[srcId]["license_info"] = rightsMeta[srcId]["license_info"]
         # toggle cohort
         source_id[srcId]["cohort"] = ["Published"]
     else:

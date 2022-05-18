@@ -46,6 +46,7 @@ PJD 17 May 2022     - Added omitted model "TaiESM1-TIMCOM2"
 PJD 18 May 2022     - Updated "rights" -> "license", cleaned up identifiers
 PJD 18 May 2022     - Updated "license" -> "license_file" for the file-extracted identifier
                       https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1066#issuecomment-1130243936
+PJD 18 May 2022     - Updated "license" - "license_info"; Updated UKESM* latest license; code cleanup
                     TODO: finish extract netcdf-harvested info
                      
 
@@ -302,36 +303,16 @@ for key in out.keys():
     else:
         print("no contact info:", key)
 
-# %% populate MOHC UKESM1-0* provided input
-# for src in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
-#     out[src]["rights_identifier"] = "CC BY 4.0"
-#     out[src][
-#         "rights"] = "Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
-#     out[src]["rights_info"] = "https://creativecommons.org/licenses/by/4.0/"
-#     out[src]["exceptions_contact"] = "ATSIGNmetoffice.gov.uk <-cmip6.ukesm1"
-#     out[src]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-#     out[src]["history"] = "2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
-
-# %% populate NASA-GISS provided input
-# for src in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
-#     out[src]["rights_identifier"] = "CC0"
-#     out[src][
-#         "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0; https://creativecommons.org/publicdomain/zero/1.0/)"
-#     out[src]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
-#     out[src]["exceptions_contact"] = "ATSIGNlists.nasa.gov <-cmip-giss-l"
-#     out[src]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-#     out[src]["history"] = "XX2018-09-06XX: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0"
-
 # %% Check for missing entries
-# counter = 1
-# print('------ Missing models ------')
-# for count, mod in enumerate(out.keys()):
-#     if len(out[mod]) == 1:
-#         if mod == "PCMDI-test-1-0":
-#             print("PCMDI-test-1-0 found skipping")
-#             continue
-#         print(counter, mod)
-#         counter = counter + 1
+counter = 1
+print('------ Missing models ------')
+for count, mod in enumerate(out.keys()):
+    if len(out[mod]) == 1:
+        if mod == "PCMDI-test-1-0":
+            print("PCMDI-test-1-0 found skipping")
+            continue
+        print(counter, mod)
+        counter = counter + 1
 
 # %% Generate direct inputs for CMIP6_CVs
 
@@ -481,33 +462,38 @@ for count, mod in enumerate(out.keys()):
         continue
     # rights complete
     # process info
-    out[mod]["license"] = {}
-    out[mod]["license"]["id"] = rightsId
-    out[mod]["license"]["rights"] = "".join(
+    out[mod]["license_info"] = {}
+    out[mod]["license_info"]["id"] = rightsId
+    out[mod]["license_info"]["license"] = "".join(
         [rightsStr, " (", rightsId, "; ", rightsUrl, ")"])
-    out[mod]["license"]["url"] = rightsUrl
-    out[mod]["license"]["exceptions_contact"] = contact
+    out[mod]["license_info"]["url"] = rightsUrl
+    out[mod]["license_info"]["exceptions_contact"] = contact
     # default entries
-    out[mod]["license"]["source_specific_info"] = ""
-    out[mod]["license"]["history"] = "".join(
+    out[mod]["license_info"]["source_specific_info"] = ""
+    out[mod]["license_info"]["history"] = "".join(
         [firstVer, ": initially published under ", rightsId])
     # conditional on group input
     # MOHC UKESM1-0*
     if mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
-        out[mod]["license"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-        out[mod]["license"]["history"] = ''.join(
-            [out[mod]["license"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
+        out[mod]["license_info"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+        out[mod]["license_info"]["history"] = ''.join(
+            [out[mod]["license_info"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
+        # update to current
+        out[mod]["license_info"]["id"] = "CC BY 4.0"
+        out[mod]["license_info"][
+            "license"] = "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)"
+        out[mod]["license_info"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
     # NASA-GISS GISS-E*
     if mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
-        out[mod]["license"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-        print(mod, out[mod]["license"]["history"])
-        out[mod]["license"]["history"] = ''.join(
-            [out[mod]["license"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])
+        out[mod]["license_info"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+        print(mod, out[mod]["license_info"]["history"])
+        out[mod]["license_info"]["history"] = ''.join(
+            [out[mod]["license_info"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])
         # update to current
-        out[mod]["license"]["id"] = "CC0 1.0"
-        out[mod]["license"][
-            "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
-        out[mod]["license"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+        out[mod]["license_info"]["id"] = "CC0 1.0"
+        out[mod]["license_info"][
+            "license"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
+        out[mod]["license_info"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
 
 
 # %% write json
@@ -520,31 +506,6 @@ with open(outFile, "w") as jsonFile:
     json.dump(
         out, jsonFile, ensure_ascii=True, sort_keys=True, indent=4, separators=(",", ":")
     )
-
-'''
-"license":{
-      "rights_identifier":"CC BY 4.0",
-      "rights":"Data is made available under the Creative Commons Attribution 4.0 International License (CC by 4.0; https://creativecommons.org/licenses/by/4.0/)"
-      "rights_info":"https://creativecommons.org/licenses/by/4.0/",
-      "exceptions_contact":"ATSIGNmetoffice.gov.uk <-cmip6.ukesm1",
-      "source-specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
-      "history":"2018-03-01: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0"
-},
-'''
-
-
-# %% populate netcdf-harvested info
-"""
-for src in out.keys():
-    # standard identifier (make sure DKRZ == metadata, if not query Martina on date)
-    out[src]["rights_identifier"] = ""
-    out[src]["rights"] = ""  # standard string
-    out[src]["rights_info"] = ""  # standard url
-    out[src]["exceptions_contact"] = ""  # contact info
-    out[src]["source_specific_info"] = ""  # likely empty to start
-    # first version date: initially published under CC BY-SA 4.0 (CMOR3 default is most common)
-    out[src]["history"] = ""
-"""
 
 # %% compare strings
 """

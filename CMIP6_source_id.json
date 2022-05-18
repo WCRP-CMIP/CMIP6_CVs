@@ -12,6 +12,14 @@
             ],
             "label":"4AOP-v1-5",
             "label_extended":"Line-By-Line Radiative Transfer Model v1.5, Laboratoire Meteorologie Dynamique, GEISA spectroscopic database",
+            "license":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-06-11: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -47,14 +55,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-06-11: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"4AOP-v1-5"
         },
         "ACCESS-CM2":{
@@ -75,6 +75,14 @@
             ],
             "label":"ACCESS-CM2",
             "label_extended":"Australian Community Climate and Earth System Simulator Climate Model Version 2",
+            "license":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2019-11-08: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -110,14 +118,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2019-11-08: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ACCESS-CM2"
         },
         "ACCESS-ESM1-5":{
@@ -140,6 +140,14 @@
             ],
             "label":"ACCESS-ESM1.5",
             "label_extended":"Australian Community Climate and Earth System Simulator Earth System Model Version 1.5",
+            "license":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2019-11-12: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"CLASSIC (v1.0)",
@@ -175,14 +183,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2019-11-12: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ACCESS-ESM1-5"
         },
         "ACCESS-OM2":{
@@ -197,6 +197,14 @@
             ],
             "label":"ACCESS-OM2",
             "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2",
+            "license":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2021-06-16: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -232,14 +240,6 @@
                 }
             },
             "release_year":"2020",
-            "rights":{
-                "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2021-06-16: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ACCESS-OM2"
         },
         "ACCESS-OM2-025":{
@@ -254,6 +254,14 @@
             ],
             "label":"ACCESS-OM2-025",
             "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2 quarter degree",
+            "license":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2021-06-17: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -289,14 +297,6 @@
                 }
             },
             "release_year":"2020",
-            "rights":{
-                "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2021-06-17: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ACCESS-OM2-025"
         },
         "ARTS-2-3":{
@@ -311,6 +311,14 @@
             ],
             "label":"ARTS 2.3",
             "label_extended":"ARTS 2.3 (Current development version of the Atmospheric Radiative Transfer Simulator)",
+            "license":{
+                "exceptions_contact":"@uni-hamburg.de <- oliver.lemke",
+                "history":"2019-06-20: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -346,14 +354,6 @@
                 }
             },
             "release_year":"2015",
-            "rights":{
-                "exceptions_contact":"@uni-hamburg.de <- oliver.lemke",
-                "history":"2019-06-20: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ARTS-2-3"
         },
         "AWI-CM-1-1-HR":{
@@ -373,6 +373,14 @@
             ],
             "label":"AWI-CM 1.1 HR",
             "label_extended":"AWI-CM 1.1 HR",
+            "license":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -408,14 +416,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2017-08-25: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"AWI-CM-1-1-HR"
         },
         "AWI-CM-1-1-LR":{
@@ -436,6 +436,14 @@
             ],
             "label":"AWI-CM 1.1 LR",
             "label_extended":"AWI-CM 1.1 LR",
+            "license":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -471,14 +479,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2017-08-25: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"AWI-CM-1-1-LR"
         },
         "AWI-CM-1-1-MR":{
@@ -499,6 +499,14 @@
             ],
             "label":"AWI-CM 1.1 MR",
             "label_extended":"AWI-CM 1.1 MR",
+            "license":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2018-12-18: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -534,14 +542,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2018-12-18: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"AWI-CM-1-1-MR"
         },
         "AWI-ESM-1-1-LR":{
@@ -557,6 +557,14 @@
             ],
             "label":"AWI-ESM 1.1 LR",
             "label_extended":"AWI-ESM 1.1 LR",
+            "license":{
+                "exceptions_contact":"@awi.de <- tido.semmler",
+                "history":"2020-02-12: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -592,14 +600,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2020-02-12: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"AWI-ESM-1-1-LR"
         },
         "AWI-ESM-2-1-LR":{
@@ -665,6 +665,14 @@
             ],
             "label":"BCC-CSM 2 HR",
             "label_extended":"BCC-CSM 2 HR",
+            "license":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2020-07-21: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -700,14 +708,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cma.gov.cn <- twwu",
-                "history":"2020-07-21: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"BCC-CSM2-HR"
         },
         "BCC-CSM2-MR":{
@@ -731,6 +731,14 @@
             ],
             "label":"BCC-CSM 2 MR",
             "label_extended":"BCC-CSM 2 MR",
+            "license":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2018-10-09: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -766,14 +774,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cma.gov.cn <- twwu",
-                "history":"2018-10-09: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"BCC-CSM2-MR"
         },
         "BCC-ESM1":{
@@ -789,6 +789,14 @@
             ],
             "label":"BCC-ESM 1",
             "label_extended":"BCC-ESM 1",
+            "license":{
+                "exceptions_contact":"@cma.gov.cn <- twwu",
+                "history":"2018-11-14: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -824,14 +832,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cma.gov.cn <- twwu",
-                "history":"2018-11-14: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"BCC-ESM1"
         },
         "BESM-2-9":{
@@ -1056,6 +1056,14 @@
             ],
             "label":"CAMS-CSM 1.0",
             "label_extended":"CAMS-CSM 1.0",
+            "license":{
+                "exceptions_contact":"@cma.gov.cn <- rongxy",
+                "history":"2019-07-08: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -1091,14 +1099,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@cma.gov.cn <- rongxy",
-                "history":"2019-07-08: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CAMS-CSM1-0"
         },
         "CAS-ESM2-0":{
@@ -1131,6 +1131,14 @@
             ],
             "label":"CAS-ESM 2.0",
             "label_extended":"CAS-ESM 2.0 (Chinese Academy of Sciences Earth System Model version 2.0)",
+            "license":{
+                "exceptions_contact":"@mail.iap.ac.cn <- zhanghe",
+                "history":"2020-03-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"IAP AACM",
@@ -1166,14 +1174,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@mail.iap.ac.cn <- zhanghe",
-                "history":"2020-03-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CAS-ESM2-0"
         },
         "CESM1-1-CAM5-CMIP5":{
@@ -1189,6 +1189,14 @@
             ],
             "label":"CESM1-1-CAM5-CMIP5",
             "label_extended":"CESM1-1-CAM5-CMIP5",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-10-07: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3 (same grid as atmos)",
@@ -1224,14 +1232,6 @@
                 }
             },
             "release_year":"2011",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-10-07: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM1-1-CAM5-CMIP5"
         },
         "CESM1-CAM5-SE-HR":{
@@ -1246,6 +1246,14 @@
             ],
             "label":"CESM1-CAM5-SE-HR",
             "label_extended":"CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, hi res",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-07-24: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3 (same grid as atmos)",
@@ -1281,14 +1289,6 @@
                 }
             },
             "release_year":"2012",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-07-24: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM1-CAM5-SE-HR"
         },
         "CESM1-CAM5-SE-LR":{
@@ -1303,6 +1303,14 @@
             ],
             "label":"CESM1-CAM5-SE-LR",
             "label_extended":"CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, lo res",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-07-08: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3 (same grid as atmos)",
@@ -1338,14 +1346,6 @@
                 }
             },
             "release_year":"2012",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-07-08: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM1-CAM5-SE-LR"
         },
         "CESM1-WACCM-SC":{
@@ -1361,6 +1361,14 @@
             ],
             "label":"CESM1-WACCM-SC",
             "label_extended":"Community Earth System Model 1, with the Whole Atmosphere Community Climate Model and Specified Chemistry",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2020-10-12: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MOZART-specified (same grid as atmos)",
@@ -1396,14 +1404,6 @@
                 }
             },
             "release_year":"2011",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-10-12: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM1-WACCM-SC"
         },
         "CESM2":{
@@ -1442,6 +1442,14 @@
             ],
             "label":"CESM2",
             "label_extended":"CESM2",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-02-18: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 (same grid as atmos)",
@@ -1477,14 +1485,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-02-18: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM2"
         },
         "CESM2-FV2":{
@@ -1499,6 +1499,14 @@
             ],
             "label":"CESM2-FV2",
             "label_extended":"CESM2-FV2",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 (same grid as atmos)",
@@ -1534,14 +1542,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM2-FV2"
         },
         "CESM2-SE":{
@@ -1610,6 +1610,14 @@
             ],
             "label":"CESM2-WACCM",
             "label_extended":"CESM2-WACCM",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-02-20: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 (same grid as atmos)",
@@ -1645,14 +1653,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-02-20: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM2-WACCM"
         },
         "CESM2-WACCM-FV2":{
@@ -1667,6 +1667,14 @@
             ],
             "label":"CESM2-WACCM-FV2",
             "label_extended":"CESM2-WACCM-FV2",
+            "license":{
+                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 (same grid as atmos)",
@@ -1702,14 +1710,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CESM2-WACCM-FV2"
         },
         "CIESM":{
@@ -1731,6 +1731,14 @@
             ],
             "label":"CIESM",
             "label_extended":"Community Integrated Earth System Model",
+            "license":{
+                "exceptions_contact":"@tsinghua.edu.cn <- yanluan",
+                "history":"2019-12-02: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4",
@@ -1766,14 +1774,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@tsinghua.edu.cn <- yanluan",
-                "history":"2019-12-02: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CIESM"
         },
         "CMCC-CM2-HR4":{
@@ -1790,6 +1790,14 @@
             ],
             "label":"CMCC-CM2-HR4",
             "label_extended":"CMCC-CM2-HR4",
+            "license":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2017-07-06: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed MACv2-SP",
@@ -1825,14 +1833,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2017-07-06: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CMCC-CM2-HR4"
         },
         "CMCC-CM2-SR5":{
@@ -1851,6 +1851,14 @@
             ],
             "label":"CMCC-CM2-SR5",
             "label_extended":"CMCC-CM2-SR5",
+            "license":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2020-02-26: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3",
@@ -1886,14 +1894,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2020-02-26: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CMCC-CM2-SR5"
         },
         "CMCC-CM2-VHR4":{
@@ -1909,6 +1909,14 @@
             ],
             "label":"CMCC-CM2-VHR4",
             "label_extended":"CMCC-CM2-VHR4",
+            "license":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2017-09-27: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed MACv2-SP",
@@ -1944,14 +1952,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2017-09-27: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CMCC-CM2-VHR4"
         },
         "CMCC-ESM2":{
@@ -1971,6 +1971,14 @@
             ],
             "label":"CMCC-ESM2",
             "label_extended":"CMCC-ESM2",
+            "license":{
+                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
+                "history":"2020-02-03: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3",
@@ -2006,14 +2014,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2020-02-03: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CMCC-ESM2"
         },
         "CNRM-CM6-1":{
@@ -2041,6 +2041,14 @@
             ],
             "label":"CNRM-CM6-1",
             "label_extended":"CNRM-CM6-1",
+            "license":{
+                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
+                "history":"2018-06-26: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed monthly fields computed by TACTIC_v2 scheme",
@@ -2076,14 +2084,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
-                "history":"2018-06-26: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CNRM-CM6-1"
         },
         "CNRM-CM6-1-HR":{
@@ -2103,6 +2103,14 @@
             ],
             "label":"CNRM-CM6-1-HR",
             "label_extended":"CNRM-CM6-1-HR",
+            "license":{
+                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
+                "history":"2019-02-21: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed monthly fields computed by TACTIC_v2 scheme",
@@ -2138,14 +2146,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
-                "history":"2019-02-21: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CNRM-CM6-1-HR"
         },
         "CNRM-ESM2-1":{
@@ -2171,6 +2171,14 @@
             ],
             "label":"CNRM-ESM2-1",
             "label_extended":"CNRM-ESM2-1",
+            "license":{
+                "exceptions_contact":"@meteo.fr <- contact.cmip",
+                "history":"2018-09-14: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"TACTIC_v2",
@@ -2206,14 +2214,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@meteo.fr <- contact.cmip",
-                "history":"2018-09-14: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CNRM-ESM2-1"
         },
         "CNRM-ESM2-1-HR":{
@@ -2349,6 +2349,14 @@
             ],
             "label":"CanESM5",
             "label_extended":"CanESM5",
+            "license":{
+                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
+                "history":"2019-03-06: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -2384,14 +2392,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
-                "history":"2019-03-06: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CanESM5"
         },
         "CanESM5-CanOE":{
@@ -2410,6 +2410,14 @@
             ],
             "label":"CanESM5-CanOE",
             "label_extended":"CanESM5-CanOE",
+            "license":{
+                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
+                "history":"2019-04-29: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -2445,14 +2453,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@canada.ca <- ec.cccma.info-info.ccmac.ec",
-                "history":"2019-04-29: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"CanESM5-CanOE"
         },
         "E3SM-1-0":{
@@ -2473,6 +2473,14 @@
             ],
             "label":"E3SM 1.0",
             "label_extended":"E3SM 1.0 (Energy Exascale Earth System Model)",
+            "license":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-02-06: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)",
@@ -2508,14 +2516,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@llnl.gov <- bader2",
-                "history":"2019-02-06: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"E3SM-1-0"
         },
         "E3SM-1-1":{
@@ -2535,6 +2535,14 @@
             ],
             "label":"E3SM 1.1",
             "label_extended":"E3SM 1.1 (Energy Exascale Earth System Model)",
+            "license":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-10-29: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)",
@@ -2570,14 +2578,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@llnl.gov <- bader2",
-                "history":"2019-10-29: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"E3SM-1-1"
         },
         "E3SM-1-1-ECA":{
@@ -2594,6 +2594,14 @@
             ],
             "label":"E3SM 1.1 ECA",
             "label_extended":"E3SM 1.1 (Energy Exascale Earth System Model) with an experimental land BGC ECA configuration",
+            "license":{
+                "exceptions_contact":"@llnl.gov <- bader2",
+                "history":"2019-12-16: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 with resuspension, marine organics, and secondary organics (same grid as atmos)",
@@ -2629,14 +2637,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@llnl.gov <- bader2",
-                "history":"2019-12-16: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"E3SM-1-1-ECA"
         },
         "EC-Earth3":{
@@ -2664,6 +2664,14 @@
             ],
             "label":"EC-Earth3",
             "label_extended":"EC Earth 3.3",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-04-05: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2699,14 +2707,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-04-05: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3"
         },
         "EC-Earth3-AerChem":{
@@ -2724,6 +2724,14 @@
             ],
             "label":"EC-Earth3-AerChem",
             "label_extended":"EC-Earth3-AerChem",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-06-22: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"TM5 (3 x 2 degrees; 120 x 90 longitude/latitude; 34 levels; top level: 0.1 hPa)",
@@ -2759,14 +2767,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-06-22: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3-AerChem"
         },
         "EC-Earth3-CC":{
@@ -2787,6 +2787,14 @@
             ],
             "label":"EC-Earth3-CC",
             "label_extended":"EC-Earth3-CC",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-12-29: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2822,14 +2830,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-12-29: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3-CC"
         },
         "EC-Earth3-GrIS":{
@@ -2947,6 +2947,14 @@
             ],
             "label":"EC-Earth3-LR",
             "label_extended":"EC-Earth3-LR",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-01-03: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2982,14 +2990,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-01-03: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3-LR"
         },
         "EC-Earth3-Veg":{
@@ -3009,6 +3009,14 @@
             ],
             "label":"EC-Earth3-Veg",
             "label_extended":"EC-Earth3-Veg",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2019-04-10: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3044,14 +3052,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-04-10: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3-Veg"
         },
         "EC-Earth3-Veg-LR":{
@@ -3068,6 +3068,14 @@
             ],
             "label":"EC-Earth3-Veg-LR",
             "label_extended":"EC-Earth3-Veg-LR",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2020-02-13: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3103,14 +3111,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-02-13: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3-Veg-LR"
         },
         "EC-Earth3P":{
@@ -3126,6 +3126,14 @@
             ],
             "label":"EC-Earth3P",
             "label_extended":"EC-Earth 3.2 in PRIMAVERA",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2017-09-11: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3161,14 +3169,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2017-09-11: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3P"
         },
         "EC-Earth3P-HR":{
@@ -3183,6 +3183,14 @@
             ],
             "label":"EC-Earth3P-HR",
             "label_extended":"EC-Earth3P-HR in PRIMAVERA",
+            "license":{
+                "exceptions_contact":"@ec-earth.org <- cmip6-data",
+                "history":"2017-08-11: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3218,14 +3226,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2017-08-11: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3P-HR"
         },
         "EC-Earth3P-VHR":{
@@ -3240,6 +3240,14 @@
             ],
             "label":"EC-Earth3P-VHR",
             "label_extended":"EC-Earth3P-VHR in PRIMAVERA",
+            "license":{
+                "exceptions_contact":"@bsc.es <- pierre-antoine.bretonniere",
+                "history":"2020-10-07: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3275,14 +3283,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@bsc.es <- pierre-antoine.bretonniere",
-                "history":"2020-10-07: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"EC-Earth3P-VHR"
         },
         "ECMWF-IFS-HR":{
@@ -3297,6 +3297,14 @@
             ],
             "label":"ECMWF-IFS-HR",
             "label_extended":"ECMWF-IFS-HR (25 km atmosphere and 25 km ocean)",
+            "license":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3332,14 +3340,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ECMWF-IFS-HR"
         },
         "ECMWF-IFS-LR":{
@@ -3354,6 +3354,14 @@
             ],
             "label":"ECMWF-IFS-LR",
             "label_extended":"ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)",
+            "license":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3389,14 +3397,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ECMWF-IFS-LR"
         },
         "ECMWF-IFS-MR":{
@@ -3411,6 +3411,14 @@
             ],
             "label":"ECMWF-IFS-MR",
             "label_extended":"ECMWF-IFS-MR (50 km atmosphere and 25 km ocean)",
+            "license":{
+                "exceptions_contact":"@ecmwf.int <- chris.roberts",
+                "history":"2018-11-15: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3446,14 +3454,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2018-11-15: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ECMWF-IFS-MR"
         },
         "EMAC-2-53-Vol":{
@@ -3570,6 +3570,14 @@
             ],
             "label":"FGOALS-f3-H",
             "label_extended":"FGOALS-f3-H",
+            "license":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2019-08-16: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3605,14 +3613,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2019-08-16: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"FGOALS-f3-H"
         },
         "FGOALS-f3-L":{
@@ -3635,6 +3635,14 @@
             ],
             "label":"FGOALS-f3-L",
             "label_extended":"FGOALS-f3-L",
+            "license":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2018-11-08: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3670,14 +3678,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2018-11-08: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"FGOALS-f3-L"
         },
         "FGOALS-g3":{
@@ -3702,6 +3702,14 @@
             ],
             "label":"FGOALS-g3",
             "label_extended":"FGOALS-g3",
+            "license":{
+                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
+                "history":"2019-08-18: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3737,14 +3745,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2019-08-18: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"FGOALS-g3"
         },
         "FIO-ESM-2-0":{
@@ -3764,6 +3764,14 @@
             ],
             "label":"FIO-ESM 2.0",
             "label_extended":"FIO-ESM 2.0",
+            "license":{
+                "exceptions_contact":"@fio.org.cn <- songroy",
+                "history":"2019-09-10: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed monthly fields",
@@ -3799,14 +3807,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@fio.org.cn <- songroy",
-                "history":"2019-09-10: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"FIO-ESM-2-0"
         },
         "GFDL-AM4":{
@@ -3821,6 +3821,14 @@
             ],
             "label":"GFDL-AM4",
             "label_extended":"GFDL-AM4",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -3856,14 +3864,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-03-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-AM4"
         },
         "GFDL-CM4":{
@@ -3886,6 +3886,14 @@
             ],
             "label":"GFDL-CM4",
             "label_extended":"GFDL-CM4",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -3921,14 +3929,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-03-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-CM4"
         },
         "GFDL-CM4C192":{
@@ -3943,6 +3943,14 @@
             ],
             "label":"GFDL-CM4C192",
             "label_extended":"GFDL-CM4C192",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -3978,14 +3986,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-CM4C192"
         },
         "GFDL-ESM2M":{
@@ -4000,6 +4000,14 @@
             ],
             "label":"GFDL-ESM2M",
             "label_extended":"GFDL-ESM2M",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed",
@@ -4035,14 +4043,6 @@
                 }
             },
             "release_year":"2012",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-ESM2M"
         },
         "GFDL-ESM4":{
@@ -4066,6 +4066,14 @@
             ],
             "label":"GFDL-ESM4",
             "label_extended":"GFDL-ESM4",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"interactive",
@@ -4101,14 +4109,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-ESM4"
         },
         "GFDL-GLOBAL-LBL":{
@@ -4172,6 +4172,14 @@
             ],
             "label":"GFDL-GRTCODE",
             "label_extended":"GFDL GPU radiative transfer code with two stream solver (March 2019)",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -4207,14 +4215,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-GRTCODE"
         },
         "GFDL-OM4p5B":{
@@ -4229,6 +4229,14 @@
             ],
             "label":"GFDL-OM4p5B",
             "label_extended":"GFDL-OM4p5B",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -4264,14 +4272,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-OM4p5B"
         },
         "GFDL-RFM-DISORT":{
@@ -4286,6 +4286,14 @@
             ],
             "label":"GFDL-RFM-DISORT",
             "label_extended":"GFDL Reference Forward Model Line-by-Line with DISORT solver (March 2019)",
+            "license":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -4321,14 +4329,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"GFDL-RFM-DISORT"
         },
         "GISS-E2-1-G":{
@@ -4361,6 +4361,14 @@
             ],
             "label":"GISS-E2.1G",
             "label_extended":"GISS-E2.1G",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2018-08-21: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4396,14 +4404,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2018-08-21: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E2-1-G"
         },
         "GISS-E2-1-G-CC":{
@@ -4419,6 +4419,14 @@
             ],
             "label":"GISS-E2-1-G-CC",
             "label_extended":"GISS-E2-1-G-CC",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-03-25: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4454,14 +4462,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2019-03-25: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E2-1-G-CC"
         },
         "GISS-E2-1-H":{
@@ -4481,6 +4481,14 @@
             ],
             "label":"GISS-E2.1H",
             "label_extended":"GISS-E2.1H",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2018-08-24: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4516,14 +4524,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2018-08-24: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E2-1-H"
         },
         "GISS-E2-2-G":{
@@ -4555,6 +4555,14 @@
             ],
             "label":"GISS-E2-2-G",
             "label_extended":"GISS-E2-2-G",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4590,14 +4598,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E2-2-G"
         },
         "GISS-E2-2-H":{
@@ -4614,6 +4614,14 @@
             ],
             "label":"GISS-E2.2H",
             "label_extended":"GISS-E2.2H",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4649,14 +4657,6 @@
                 }
             },
             "release_year":"2021",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E2-2-H"
         },
         "GISS-E3-G":{
@@ -4689,6 +4689,14 @@
             ],
             "label":"GISS-E3-G",
             "label_extended":"GISS-E3-G",
+            "license":{
+                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
+                "history":"2019-12-30: initially published under CC BY-NC-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
+                "id":"CC0 1.0",
+                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
+                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense",
+                "url":"https://creativecommons.org/publicdomain/zero/1.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)",
@@ -4724,14 +4732,6 @@
                 }
             },
             "release_year":"2020",
-            "rights":{
-                "exceptions_contact":"@lists.nasa.gov <- cmip-giss-l",
-                "history":"2019-12-30: initially published under CC BY-NC-SA 4.0; 2021-12-01: relaxed to CC0 1.0",
-                "rights":"Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)",
-                "rights_identifier":"CC0 1.0",
-                "rights_info":"https://creativecommons.org/publicdomain/zero/1.0/",
-                "source_specific_info":"https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-            },
             "source_id":"GISS-E3-G"
         },
         "HadGEM3-GC31-HH":{
@@ -4748,6 +4748,14 @@
             ],
             "label":"HadGEM3-GC31-HH",
             "label_extended":"HadGEM3-GC3.1-N512ORCA12",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2018-09-27: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -4783,14 +4791,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2018-09-27: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-HH"
         },
         "HadGEM3-GC31-HM":{
@@ -4807,6 +4807,14 @@
             ],
             "label":"HadGEM3-GC31-HM",
             "label_extended":"HadGEM3-GC3.1-N512ORCA025",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-08-31: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -4842,14 +4850,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2017-08-31: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-HM"
         },
         "HadGEM3-GC31-LL":{
@@ -4874,6 +4874,14 @@
             ],
             "label":"HadGEM3-GC31-LL",
             "label_extended":"HadGEM3-GC3.1-N96ORCA1",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-09-21: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -4909,14 +4917,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2017-09-21: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-LL"
         },
         "HadGEM3-GC31-LM":{
@@ -4932,6 +4932,14 @@
             ],
             "label":"HadGEM3-GC31-LM",
             "label_extended":"HadGEM3-GC3.1-N96ORCA025",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-09-06: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -4967,14 +4975,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2017-09-06: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-LM"
         },
         "HadGEM3-GC31-MH":{
@@ -4990,6 +4990,14 @@
             ],
             "label":"HadGEM3-GC31-MH",
             "label_extended":"HadGEM3-GC3.1-N216ORCA12",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-12-27: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -5025,14 +5033,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2017-12-27: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-MH"
         },
         "HadGEM3-GC31-MM":{
@@ -5054,6 +5054,14 @@
             ],
             "label":"HadGEM3-GC31-MM",
             "label_extended":"HadGEM3-GC3.1-N216ORCA025",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "history":"2017-08-18: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -5089,14 +5097,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
-                "history":"2017-08-18: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HadGEM3-GC31-MM"
         },
         "HiRAM-SIT-HR":{
@@ -5111,6 +5111,14 @@
             ],
             "label":"HiRAM-SIT-HR",
             "label_extended":"HiRAM Coupling 1-D SIT (25 km atmosphere and 25 km ocean)",
+            "license":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
+                "history":"2020-12-23: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5146,14 +5154,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
-                "history":"2020-12-23: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HiRAM-SIT-HR"
         },
         "HiRAM-SIT-LR":{
@@ -5168,6 +5168,14 @@
             ],
             "label":"HiRAM-SIT-LR",
             "label_extended":"HiRAM Coupling 1-D SIT (50 km atmosphere and 25 km ocean)",
+            "license":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
+                "history":"2020-12-29: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5203,14 +5211,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@gate.sinica.edu.tw <- cytu",
-                "history":"2020-12-29: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"HiRAM-SIT-LR"
         },
         "ICON-ESM-LR":{
@@ -5227,6 +5227,14 @@
             ],
             "label":"ICON-ESM-LR",
             "label_extended":"ICON-ESM-LR",
+            "license":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2021-02-15: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -5262,14 +5270,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2021-02-15: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"ICON-ESM-LR"
         },
         "IITM-ESM":{
@@ -5286,6 +5286,14 @@
             ],
             "label":"IITM-ESM",
             "label_extended":"IITM-ESM",
+            "license":{
+                "exceptions_contact":"@tropmet.res.in <- iitm-esm",
+                "history":"2019-07-19: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"prescribed MAC-v2",
@@ -5321,14 +5329,6 @@
                 }
             },
             "release_year":"2015",
-            "rights":{
-                "exceptions_contact":"@tropmet.res.in <- iitm-esm",
-                "history":"2019-07-19: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"IITM-ESM"
         },
         "INM-CM4-8":{
@@ -5345,6 +5345,14 @@
             ],
             "label":"INM-CM4-8",
             "label_extended":"INM-CM4-8",
+            "license":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-05-28: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"INM-AER1",
@@ -5380,14 +5388,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-05-28: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"INM-CM4-8"
         },
         "INM-CM5-0":{
@@ -5403,6 +5403,14 @@
             ],
             "label":"INM-CM5-0",
             "label_extended":"INM-CM5-0",
+            "license":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-06-10: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"INM-AER1",
@@ -5438,14 +5446,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-06-10: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"INM-CM5-0"
         },
         "INM-CM5-H":{
@@ -5461,6 +5461,14 @@
             ],
             "label":"INM-CM5-H",
             "label_extended":"INM-CM5-H",
+            "license":{
+                "exceptions_contact":"@gmail.com <- volodinev",
+                "history":"2019-08-12: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"INM-AER1",
@@ -5496,14 +5504,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-08-12: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"INM-CM5-H"
         },
         "IPSL-CM5A2-INCA":{
@@ -5520,6 +5520,14 @@
             ],
             "label":"IPSL-CM5A2-INCA",
             "label_extended":"IPSL-CM5A2-INCA",
+            "license":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-07-29: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"INCA v6 NMHC-AER-S",
@@ -5555,14 +5563,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-07-29: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"IPSL-CM5A2-INCA"
         },
         "IPSL-CM6A-ATM-HR":{
@@ -5577,6 +5577,14 @@
             ],
             "label":"IPSL-CM6A-ATM-HR",
             "label_extended":"IPSL-CM6A-ATM-HR",
+            "license":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2019-01-22: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5612,14 +5620,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2019-01-22: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"IPSL-CM6A-ATM-HR"
         },
         "IPSL-CM6A-ATM-ICO-HR":{
@@ -5888,6 +5888,14 @@
             ],
             "label":"IPSL-CM6A-LR",
             "label_extended":"IPSL-CM6A-LR",
+            "license":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2018-03-14: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5923,14 +5931,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2018-03-14: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"IPSL-CM6A-LR"
         },
         "IPSL-CM6A-LR-INCA":{
@@ -5946,6 +5946,14 @@
             ],
             "label":"IPSL-CM6A-LR-INCA",
             "label_extended":"IPSL-CM6A-LR-INCA",
+            "license":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"2020-07-17: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"INCA v6 AER",
@@ -5981,14 +5989,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-07-17: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"IPSL-CM6A-LR-INCA"
         },
         "IPSL-CM6A-MR025":{
@@ -6102,6 +6102,14 @@
             ],
             "label":"KACE1.0-G",
             "label_extended":"KACE1.0-GLOMAP",
+            "license":{
+                "exceptions_contact":"@korea.kr <- yoonjin.lim",
+                "history":"2019-08-13: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -6137,14 +6145,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@korea.kr <- yoonjin.lim",
-                "history":"2019-08-13: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"KACE-1-0-G"
         },
         "KIOST-ESM":{
@@ -6163,6 +6163,14 @@
             ],
             "label":"KIOST-ESM",
             "label_extended":"KIOST Earth System Model v2",
+            "license":{
+                "exceptions_contact":"@pknu.ac.kr <- yhokim",
+                "history":"2019-11-04: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -6198,14 +6206,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@pknu.ac.kr <- yhokim",
-                "history":"2019-11-04: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"KIOST-ESM"
         },
         "LBLRTM-12-8":{
@@ -6220,6 +6220,14 @@
             ],
             "label":"LBLRTM 12.8",
             "label_extended":"Line-By-Line Radiative Transfer Model v12.8, aer_v_3.6, MT_CKD_3.2",
+            "license":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2019-05-14: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -6255,14 +6263,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2019-05-14: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"LBLRTM-12-8"
         },
         "MCM-UA-1-0":{
@@ -6280,6 +6280,14 @@
             ],
             "label":"MCM-UA-1-0",
             "label_extended":"Manabe Climate Model v1.0 - University of Arizona",
+            "license":{
+                "exceptions_contact":"@email.arizona.edu <- GEOS-CMIP",
+                "history":"2019-07-31: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Modifies surface albedoes (Haywood et al. 1997, doi: 10.1175/1520-0442(1997)010&lt;1562:GCMCOT&gt;2.0.CO;2)",
@@ -6315,14 +6323,6 @@
                 }
             },
             "release_year":"1991",
-            "rights":{
-                "exceptions_contact":"@email.arizona.edu <- GEOS-CMIP",
-                "history":"2019-07-31: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MCM-UA-1-0"
         },
         "MIROC-ES2H":{
@@ -6343,6 +6343,14 @@
             ],
             "label":"MIROC-ES2H",
             "label_extended":"MIROC-ES2H",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2021-01-25: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
@@ -6378,14 +6386,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2021-01-25: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MIROC-ES2H"
         },
         "MIROC-ES2H-NB":{
@@ -6401,6 +6401,14 @@
             ],
             "label":"MIROC-ES2H-NB",
             "label_extended":"MIROC-ES2H with No BiogenicCycle",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2020-04-28: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
@@ -6436,14 +6444,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2020-04-28: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MIROC-ES2H-NB"
         },
         "MIROC-ES2L":{
@@ -6469,6 +6469,14 @@
             ],
             "label":"MIROC-ES2L",
             "label_extended":"MIROC-ES2L",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-23: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
@@ -6504,14 +6512,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-08-23: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MIROC-ES2L"
         },
         "MIROC6":{
@@ -6541,6 +6541,14 @@
             ],
             "label":"MIROC6",
             "label_extended":"MIROC6",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2018-12-12: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SPRINTARS6.0",
@@ -6576,14 +6584,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2018-12-12: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MIROC6"
         },
         "MPI-ESM-1-2-HAM":{
@@ -6601,6 +6601,14 @@
             ],
             "label":"MPI-ESM1.2-HAM",
             "label_extended":"MPI-ESM1.2-HAM",
+            "license":{
+                "exceptions_contact":"@env.ethz.ch <- david.neubauer",
+                "history":"2019-06-27: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"HAM2.3",
@@ -6636,14 +6644,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@env.ethz.ch <- david.neubauer",
-                "history":"2019-06-27: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MPI-ESM-1-2-HAM"
         },
         "MPI-ESM1-2-HR":{
@@ -6670,6 +6670,14 @@
             ],
             "label":"MPI-ESM1.2-HR",
             "label_extended":"MPI-ESM1.2-HR",
+            "license":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -6705,14 +6713,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2017-10-03: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MPI-ESM1-2-HR"
         },
         "MPI-ESM1-2-LR":{
@@ -6748,6 +6748,14 @@
             ],
             "label":"MPI-ESM1.2-LR",
             "label_extended":"MPI-ESM1.2-LR",
+            "license":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2019-07-10: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -6783,14 +6791,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2019-07-10: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MPI-ESM1-2-LR"
         },
         "MPI-ESM1-2-XR":{
@@ -6805,6 +6805,14 @@
             ],
             "label":"MPI-ESM1.2-XR",
             "label_extended":"MPI-ESM1.2-XR",
+            "license":{
+                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -6840,14 +6848,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2017-10-03: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MPI-ESM1-2-XR"
         },
         "MRI-AGCM3-2-H":{
@@ -6863,6 +6863,14 @@
             ],
             "label":"MRI-AGCM3-2-H",
             "label_extended":"MRI-AGCM3-2-H",
+            "license":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-07-11: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed from MRI-ESM2.0",
@@ -6898,14 +6906,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
-                "history":"2019-07-11: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MRI-AGCM3-2-H"
         },
         "MRI-AGCM3-2-S":{
@@ -6922,6 +6922,14 @@
             ],
             "label":"MRI-AGCM3-2-S",
             "label_extended":"MRI-AGCM3-2-S",
+            "license":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-07-11: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed from MRI-ESM2.0",
@@ -6957,14 +6965,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
-                "history":"2019-07-11: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MRI-AGCM3-2-S"
         },
         "MRI-ESM2-0":{
@@ -6996,6 +6996,14 @@
             ],
             "label":"MRI-ESM2.0",
             "label_extended":"MRI-ESM2.0",
+            "license":{
+                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
+                "history":"2019-02-22: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MASINGAR mk2r4 (TL95; 192 x 96 longitude/latitude; 80 levels; top level 0.01 hPa)",
@@ -7031,14 +7039,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@mri-jma.go.jp <- yukimoto",
-                "history":"2019-02-22: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"MRI-ESM2-0"
         },
         "NESM3":{
@@ -7060,6 +7060,14 @@
             ],
             "label":"NESM v3",
             "label_extended":"NUIST ESM v3",
+            "license":{
+                "exceptions_contact":"@nuist.edu.cn <- esmc",
+                "history":"2019-06-25: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7095,14 +7103,6 @@
                 }
             },
             "release_year":"2016",
-            "rights":{
-                "exceptions_contact":"@nuist.edu.cn <- esmc",
-                "history":"2019-06-25: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NESM3"
         },
         "NICAM16-7S":{
@@ -7119,6 +7119,14 @@
             ],
             "label":"NICAM16-7S",
             "label_extended":"NICAM.16 gl07-L38 with NSW6",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-03-18: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed MACv2-SP",
@@ -7154,14 +7162,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-03-18: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NICAM16-7S"
         },
         "NICAM16-8S":{
@@ -7178,6 +7178,14 @@
             ],
             "label":"NICAM16-8S",
             "label_extended":"NICAM.16 gl08-L38 with NSW6",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed MACv2-SP",
@@ -7213,14 +7221,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-08-30: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NICAM16-8S"
         },
         "NICAM16-9D-L78":{
@@ -7287,6 +7287,14 @@
             ],
             "label":"NICAM16-9S",
             "label_extended":"NICAM.16 gl09-L38 with NSW6",
+            "license":{
+                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed MACv2-SP",
@@ -7322,14 +7330,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-08-30: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NICAM16-9S"
         },
         "NorCPM1":{
@@ -7345,6 +7345,14 @@
             ],
             "label":"NorCPM1",
             "label_extended":"Norwegian Climate Prediction Model version 1",
+            "license":{
+                "exceptions_contact":"@uib.no <- norcpm",
+                "history":"2019-09-14: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero4.1 (same grid as atmos)",
@@ -7380,14 +7388,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@uib.no <- norcpm",
-                "history":"2019-09-14: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NorCPM1"
         },
         "NorESM1-F":{
@@ -7403,6 +7403,14 @@
             ],
             "label":"NorESM1-F",
             "label_extended":"NorESM1-F (a fast version of NorESM that is designed for paleo and multi-ensemble simulations)",
+            "license":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-09-20: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7438,14 +7446,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@met.no <- noresm-ncc",
-                "history":"2019-09-20: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NorESM1-F"
         },
         "NorESM2-HH":{
@@ -7523,6 +7523,14 @@
             ],
             "label":"NorESM2-LM",
             "label_extended":"NorESM2-LM (low atmosphere-medium ocean resolution, GHG concentration driven)",
+            "license":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-08-15: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7558,14 +7566,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@met.no <- noresm-ncc",
-                "history":"2019-08-15: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NorESM2-LM"
         },
         "NorESM2-LME":{
@@ -7744,6 +7744,14 @@
             ],
             "label":"NorESM2-MM",
             "label_extended":"NorESM2-MM (medium atmosphere-medium ocean resolution, GHG concentration driven)",
+            "license":{
+                "exceptions_contact":"@met.no <- noresm-ncc",
+                "history":"2019-11-08: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7779,14 +7787,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@met.no <- noresm-ncc",
-                "history":"2019-11-08: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"NorESM2-MM"
         },
         "PCMDI-test-1-0":{
@@ -7850,6 +7850,14 @@
             ],
             "label":"RRTMG-LW 4.91",
             "label_extended":"RRTM for GCMs v4.91, longwave",
+            "license":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7885,14 +7893,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"RRTMG-LW-4-91"
         },
         "RRTMG-SW-4-02":{
@@ -7907,6 +7907,14 @@
             ],
             "label":"RRTMG-SW 4.02",
             "label_extended":"RRTM for GCMs v4.02, shortwave",
+            "license":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7942,14 +7950,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"RRTMG-SW-4-02"
         },
         "RTE-RRTMGP-181204":{
@@ -7964,6 +7964,14 @@
             ],
             "label":"RTE+RRTMGP (2018-12-04 full-resolution)",
             "label_extended":"Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)",
+            "license":{
+                "exceptions_contact":"@aer.com <- rpernak",
+                "history":"2019-10-07: initially published under CC BY-NC-SA 4.0",
+                "id":"CC BY-NC-SA 4.0",
+                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7999,14 +8007,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2019-10-07: initially published under CC BY-NC-SA 4.0",
-                "rights":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-                "rights_identifier":"CC BY-NC-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"RTE-RRTMGP-181204"
         },
         "SAM0-UNICON":{
@@ -8022,6 +8022,14 @@
             ],
             "label":"SAM0-UNICON",
             "label_extended":"SAM0-UNICON (SNU Atmosphere Model version 0 with Unified Convection Scheme)",
+            "license":{
+                "exceptions_contact":"@snu.ac.kr <- sjh11556",
+                "history":"2019-03-23: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM3",
@@ -8057,14 +8065,6 @@
                 }
             },
             "release_year":"2017",
-            "rights":{
-                "exceptions_contact":"@snu.ac.kr <- sjh11556",
-                "history":"2019-03-23: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"SAM0-UNICON"
         },
         "TaiESM1":{
@@ -8086,6 +8086,14 @@
             ],
             "label":"TaiESM 1.0",
             "label_extended":"Taiwan Earth System Model 1.0",
+            "license":{
+                "exceptions_contact":"@gate.sinica.edu.tw <- leelupin",
+                "history":"2019-12-25: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SNAP (same grid as atmos)",
@@ -8121,14 +8129,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@gate.sinica.edu.tw <- leelupin",
-                "history":"2019-12-25: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"TaiESM1"
         },
         "TaiESM1-TIMCOM":{
@@ -8144,6 +8144,14 @@
             ],
             "label":"TaiESM1-TIMCOM",
             "label_extended":"Taiwan Earth System Model 1.0 using TIMCOM ocean model",
+            "license":{
+                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
+                "history":"2020-09-29: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SNAP (same grid as atmos)",
@@ -8179,14 +8187,6 @@
                 }
             },
             "release_year":"2020",
-            "rights":{
-                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
-                "history":"2020-09-29: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"TaiESM1-TIMCOM"
         },
         "TaiESM1-TIMCOM2":{
@@ -8202,6 +8202,14 @@
             ],
             "label":"TaiESM1-TIMCOM2",
             "label_extended":"Taiwan Earth System Model 1.0 using TIMCOM ocean model 2.0",
+            "license":{
+                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
+                "history":"2021-12-13: initially published under CC BY-SA 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"SNAP (same grid as atmos)",
@@ -8237,14 +8245,6 @@
                 }
             },
             "release_year":"2021",
-            "rights":{
-                "exceptions_contact":"@ntu.edu.tw <- tsengyh",
-                "history":"2021-12-13: initially published under CC BY-SA 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":""
-            },
             "source_id":"TaiESM1-TIMCOM2"
         },
         "UKESM1-0-LL":{
@@ -8274,6 +8274,14 @@
             ],
             "label":"UKESM1.0-LL",
             "label_extended":"UKESM1.0-N96ORCA1",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
+                "history":"2019-04-04: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -8309,14 +8317,6 @@
                 }
             },
             "release_year":"2018",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
-                "history":"2019-04-04: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-            },
             "source_id":"UKESM1-0-LL"
         },
         "UKESM1-0-MMh":{
@@ -8438,6 +8438,14 @@
             ],
             "label":"UKESM1.ice-LL",
             "label_extended":"UKESM1.ice-N96ORCA1",
+            "license":{
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
+                "history":"2022-02-11: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+                "id":"CC BY-SA 4.0",
+                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -8473,14 +8481,6 @@
                 }
             },
             "release_year":"2019",
-            "rights":{
-                "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
-                "history":"2022-02-11: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
-                "rights":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
-                "rights_identifier":"CC BY-SA 4.0",
-                "rights_info":"https://creativecommons.org/licenses/by-sa/4.0/",
-                "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-            },
             "source_id":"UKESM1-ice-LL"
         },
         "UofT-CCSM4":{
@@ -8588,11 +8588,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue May 17 15:07:28 2022 -0700",
+        "CV_collection_modified":"Wed May 18 10:22:06 2022 -0700",
         "CV_collection_version":"6.2.57.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d427d3aa401dc898acb237f403f5e8fcd61a6a79",
+        "previous_commit":"1c13e6d36fdcebccdb7cb7f1f06297f6993a8c42",
         "source_id_CV_modified":"Mon May  9 11:03:31 2022 -0700",
         "source_id_CV_note":"Revise source_id EC-Earth3-CC",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

@@ -423,8 +423,8 @@ for count, mod in enumerate(out.keys()):
         continue
         # contact complete
     # extract info - license
-    if "license" in out[mod].keys():
-        licStr = out[mod]["license"]
+    if "license_file" in out[mod].keys():
+        licStr = out[mod]["license_file"]
     else:
         print("no license info:", mod, "continuing..")
         continue

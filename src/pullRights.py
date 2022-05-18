@@ -43,6 +43,8 @@ PJD 14 May 2022     - Updated 220513 -> 220514_CMIP6_metaData_restartedInd-24949
 PJD 15 May 2022     - Updated 220514 -> 220514_CMIP6_metaData_restartedInd-24949000.json (1140, finalized)
 PJD 16 May 2022     - Updated to write "rights" output per model
 PJD 17 May 2022     - Added omitted model "TaiESM1-TIMCOM2"
+PJD 18 May 2022     - Updated "rights" -> "license", cleaned up identifiers
+                      https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1066#issuecomment-1130243936
                     TODO: finish extract netcdf-harvested info
                      
 
@@ -474,33 +476,33 @@ for count, mod in enumerate(out.keys()):
         continue
     # rights complete
     # process info
-    out[mod]["rights"] = {}
-    out[mod]["rights"]["rights_identifier"] = rightsId
-    out[mod]["rights"]["rights"] = "".join(
+    out[mod]["license"] = {}
+    out[mod]["license"]["id"] = rightsId
+    out[mod]["license"]["rights"] = "".join(
         [rightsStr, " (", rightsId, "; ", rightsUrl, ")"])
-    out[mod]["rights"]["rights_info"] = rightsUrl
-    out[mod]["rights"]["exceptions_contact"] = contact
+    out[mod]["license"]["url"] = rightsUrl
+    out[mod]["license"]["exceptions_contact"] = contact
     # default entries
-    out[mod]["rights"]["source_specific_info"] = ""
-    out[mod]["rights"]["history"] = "".join(
+    out[mod]["license"]["source_specific_info"] = ""
+    out[mod]["license"]["history"] = "".join(
         [firstVer, ": initially published under ", rightsId])
     # conditional on group input
     # MOHC UKESM1-0*
     if mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
-        out[mod]["rights"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
-        out[mod]["rights"]["history"] = ''.join(
-            [out[mod]["rights"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
+        out[mod]["license"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+        out[mod]["license"]["history"] = ''.join(
+            [out[mod]["license"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
     # NASA-GISS GISS-E*
     if mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
-        out[mod]["rights"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
-        print(mod, out[mod]["rights"]["history"])
-        out[mod]["rights"]["history"] = ''.join(
-            [out[mod]["rights"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])
+        out[mod]["license"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+        print(mod, out[mod]["license"]["history"])
+        out[mod]["license"]["history"] = ''.join(
+            [out[mod]["license"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])
         # update to current
-        out[mod]["rights"]["rights_identifier"] = "CC0 1.0"
-        out[mod]["rights"][
+        out[mod]["license"]["id"] = "CC0 1.0"
+        out[mod]["license"][
             "rights"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
-        out[mod]["rights"]["rights_info"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+        out[mod]["license"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
 
 
 # %% write json

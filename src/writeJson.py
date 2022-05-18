@@ -11,7 +11,6 @@ import sys
 import subprocess
 import shlex
 import platform
-import pdb
 import os
 import json
 import gc
@@ -564,7 +563,7 @@ PJD 16 May 2022    - Updated license to include all rights entries https://githu
 PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existing published model)
 PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
-PJD 18 May 2022    - Updated source_id entries rights -> license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 18 May 2022    - Updated source_id entries rights -> license; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -933,29 +932,31 @@ institution_id = {
 # %% CMIP6 License
 license = {}
 license["license"] =\
-    ''.join(['CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons ',
-             '<insert a license_id; see below> License (<insert the license_id''s URL; see below>). ',
-             'Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, ',
+    ''.join(['CMIP6 model data produced by <Your Institution; see CMIP6_institution_id.json> is ',
+             'licensed under a Creative Commons <select and insert a license_id; see below> License ',
+             '(<insert the matching license_url; see below>). Consult ',
+             'https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, ',
              'including citation requirements and proper acknowledgment. Further information about ',
              'this data, including some limitations, can be found via the further_info_url (recorded ',
              'as a global attribute in this file)[ and at <some URL maintained by modeling group>]. ',
              'The data producers and data providers make no warranty, either express or implied, ',
-             'including, but not limited to, warranties of merchantability and fitness for a particular ',
-             'purpose. All liabilities arising from the supply of the information (including any ',
-             'liability arising in negligence) are excluded to the fullest extent permitted by law.'])
-license["license_id"] = {}
-license["license_id"]["CC0 1.0"] = {}
-license["license_id"]["CC0 1.0"]["license"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
-license["license_id"]["CC0 1.0"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
-license["license_id"]["CC BY 4.0"] = {}
-license["license_id"]["CC BY 4.0"]["license"] = "Creative Commons Attribution 4.0 International"
-license["license_id"]["CC BY 4.0"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
-license["license_id"]["CC BY-SA 4.0"] = {}
-license["license_id"]["CC BY-SA 4.0"]["license"] = "Creative Commons Attribution-ShareAlike 4.0 International"
-license["license_id"]["CC BY-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
-license["license_id"]["CC BY-NC-SA 4.0"] = {}
-license["license_id"]["CC BY-NC-SA 4.0"]["license"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
-license["license_id"]["CC BY-NC-SA 4.0"]["url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+             'including, but not limited to, warranties of merchantability and fitness for a ',
+             'particular purpose. All liabilities arising from the supply of the information ',
+             '(including any liability arising in negligence) are excluded to the fullest extent ',
+             'permitted by law.'])
+license["license_options"] = {}
+license["license_options"]["CC0 1.0"] = {}
+license["license_options"]["CC0 1.0"]["license_id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+license["license_options"]["CC0 1.0"]["license_url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+license["license_options"]["CC BY 4.0"] = {}
+license["license_options"]["CC BY 4.0"]["license_id"] = "Creative Commons Attribution 4.0 International"
+license["license_options"]["CC BY 4.0"]["license_url"] = "https://creativecommons.org/licenses/by/4.0/"
+license["license_options"]["CC BY-SA 4.0"] = {}
+license["license_options"]["CC BY-SA 4.0"]["license_id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+license["license_options"]["CC BY-SA 4.0"]["license_url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+license["license_options"]["CC BY-NC-SA 4.0"] = {}
+license["license_options"]["CC BY-NC-SA 4.0"]["license_id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+license["license_options"]["CC BY-NC-SA 4.0"]["license_url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 # %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']

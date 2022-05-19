@@ -47,6 +47,8 @@ PJD 18 May 2022     - Updated "rights" -> "license", cleaned up identifiers
 PJD 18 May 2022     - Updated "license" -> "license_file" for the file-extracted identifier
                       https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1066#issuecomment-1130243936
 PJD 18 May 2022     - Updated "license" - "license_info"; Updated UKESM* latest license; code cleanup
+PJD 19 May 2022     - Updated HadGEM3* entries to follow same license update info as UKESM*
+                      https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050#issuecomment-1036191330
                     TODO: finish extract netcdf-harvested info
                      
 
@@ -473,19 +475,25 @@ for count, mod in enumerate(out.keys()):
     out[mod]["license_info"]["history"] = "".join(
         [firstVer, ": initially published under ", rightsId])
     # conditional on group input
-    # MOHC UKESM1-0*
-    if mod in ["UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
-        out[mod]["license_info"]["source_specific_info"] = "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
+    # MOHC HadGEM3* and UKESM1*
+    if mod in ["HadGEM3-GC31-HH", "HadGEM3-GC31-HM", "HadGEM3-GC31-LL",
+               "HadGEM3-GC31-LM", "HadGEM3-GC31-MH", "HadGEM3-GC31-MM",
+               "UKESM1-0-LL", "UKESM1-0-MMh", "UKESM1-ice-LL"]:
+        out[mod]["license_info"]["source_specific_info"] =\
+            "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/"
         out[mod]["license_info"]["history"] = ''.join(
             [out[mod]["license_info"]["history"], "; 2021-11-15: relaxed to CC BY 4.0"])
         # update to current
         out[mod]["license_info"]["id"] = "CC BY 4.0"
         out[mod]["license_info"][
-            "license"] = "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)"
+            "license"] =\
+            "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)"
         out[mod]["license_info"]["url"] = "https://creativecommons.org/licenses/by/4.0/"
     # NASA-GISS GISS-E*
-    if mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
-        out[mod]["license_info"]["source_specific_info"] = "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
+    if mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G",
+               "GISS-E2-2-H", "GISS-E3-G"]:
+        out[mod]["license_info"]["source_specific_info"] =\
+            "https://data.giss.nasa.gov/modelE/cmip6/#datalicense"
         print(mod, out[mod]["license_info"]["history"])
         out[mod]["license_info"]["history"] = ''.join(
             [out[mod]["license_info"]["history"], "; 2021-12-01: relaxed to CC0 1.0"])

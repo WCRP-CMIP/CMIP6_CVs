@@ -4749,7 +4749,7 @@
             "label":"HadGEM3-GC31-HH",
             "label_extended":"HadGEM3-GC3.1-N512ORCA12",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2018-09-27: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -4808,7 +4808,7 @@
             "label":"HadGEM3-GC31-HM",
             "label_extended":"HadGEM3-GC3.1-N512ORCA025",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2017-08-31: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -4875,7 +4875,7 @@
             "label":"HadGEM3-GC31-LL",
             "label_extended":"HadGEM3-GC3.1-N96ORCA1",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2017-09-21: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -4933,7 +4933,7 @@
             "label":"HadGEM3-GC31-LM",
             "label_extended":"HadGEM3-GC3.1-N96ORCA025",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2017-09-06: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -4991,7 +4991,7 @@
             "label":"HadGEM3-GC31-MH",
             "label_extended":"HadGEM3-GC3.1-N216ORCA12",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2017-12-27: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -5055,7 +5055,7 @@
             "label":"HadGEM3-GC31-MM",
             "label_extended":"HadGEM3-GC3.1-N216ORCA025",
             "license_info":{
-                "exceptions_contact":"@metoffice.gov.uk <- enquiries",
+                "exceptions_contact":"@metoffice.gov.uk <- cmip6.hadgem3",
                 "history":"2017-08-18: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -8588,7 +8588,7 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May 19 13:31:31 2022 -0700",
+        "CV_collection_modified":"Thu May 19 13:37:54 2022 -0700",
         "CV_collection_version":"6.2.57.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",

@@ -331,7 +331,8 @@ for count, mod in enumerate(out.keys()):
         # version complete
         # extract info - contact
         contact = out[mod]["contact"]
-        if len(contact) == 1 and contact[0].find("(") < 0 and contact[0].find("@") > 0 and contact[0].find("Please send any") < 0:
+        if len(contact) == 1 and contact[0].find("(") < 0 and contact[0].find("@")\
+                > 0 and contact[0].find("Please send any") < 0 and contact[0].find('metoffice.gov.uk') < 0:
             contact = contact[0].replace("@", "ATSIGN")
             contact = emailGarble(contact)
         # deal with case by case

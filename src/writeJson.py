@@ -564,6 +564,7 @@ PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existi
 PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
 PJD 18 May 2022    - Updated source_id entries rights -> license_info; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -1035,7 +1036,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-f = "220518_CMIP6-CMIP_mergedMetadata.json"
+f = "220519_CMIP6-CMIP_mergedMetadata.json"
 counter = 1
 with open(f) as fh:
     rightsMeta = json.load(fh)

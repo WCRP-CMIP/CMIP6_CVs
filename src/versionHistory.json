@@ -31,10 +31,10 @@
             "timeStamp":"Mon Nov 16 11:16:39 2020 -0800"
         },
         "license":{
-            "MD5":"43bea25dda5d2a19717423fdc4fe6c9efd05220d",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/43bea25dda5d2a19717423fdc4fe6c9efd05220d",
+            "MD5":"bbd4e7dc4ea16899606b3acdf004783a56a6b4c3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bbd4e7dc4ea16899606b3acdf004783a56a6b4c3",
             "commitMessage":"Update published source_id entries with rights; augment license",
-            "timeStamp":"Wed May 18 11:49:50 2022 -0700"
+            "timeStamp":"Thu May 19 13:24:25 2022 -0700"
         },
         "mip_era":{
             "MD5":"f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b",
@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"43bea25dda5d2a19717423fdc4fe6c9efd05220d",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/43bea25dda5d2a19717423fdc4fe6c9efd05220d",
+            "MD5":"bbd4e7dc4ea16899606b3acdf004783a56a6b4c3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bbd4e7dc4ea16899606b3acdf004783a56a6b4c3",
             "commitMessage":"Update published source_id entries with rights; augment license",
-            "timeStamp":"Wed May 18 11:49:50 2022 -0700"
+            "timeStamp":"Thu May 19 13:24:25 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

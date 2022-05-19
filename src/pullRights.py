@@ -48,6 +48,7 @@ PJD 18 May 2022     - Updated "license" -> "license_file" for the file-extracted
                       https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1066#issuecomment-1130243936
 PJD 18 May 2022     - Updated "license" - "license_info"; Updated UKESM* latest license; code cleanup
 PJD 19 May 2022     - Updated HadGEM3* entries to follow same license update info as UKESM*
+PJD 19 May 2022     - Updated HadGEM3* contacts
                       https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050#issuecomment-1036191330
                     TODO: finish extract netcdf-harvested info
                      
@@ -359,7 +360,8 @@ for count, mod in enumerate(out.keys()):
             contact = emailGarble("contact.cmip6ATSIGNcerfacs.fr")
         elif mod in ["E3SM-1-0", "E3SM-1-1", "E3SM-1-1-ECA"]:
             contact = emailGarble("bader2ATSIGNllnl.gov")
-        elif mod in ["EC-Earth3", "EC-Earth3-AerChem", "EC-Earth3-LR", "EC-Earth3-Veg", "EC-Earth3-Veg-LR", "EC-Earth3P", "EC-Earth3P-HR", "EC-Earth3P-VHR"]:
+        elif mod in ["EC-Earth3", "EC-Earth3-AerChem", "EC-Earth3-LR", "EC-Earth3-Veg",
+                     "EC-Earth3-Veg-LR", "EC-Earth3P", "EC-Earth3P-HR", "EC-Earth3P-VHR"]:
             contact = emailGarble("cmip6-dataATSIGNec-earth.org")
         elif mod in ["FGOALS-f3-H", "FGOALS-f3-L", "FGOALS-g3"]:
             contact = emailGarble("linpfATSIGNmail.iap.ac.cn")
@@ -367,13 +369,18 @@ for count, mod in enumerate(out.keys()):
             contact = emailGarble("songroyATSIGNfio.org.cn")
         elif mod in ["GFDL-GRTCODE", "GFDL-RFM-DISORT"]:
             contact = emailGarble("gfdl.climate.model.infoATSIGNnoaa.gov")
-        elif mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G", "GISS-E2-2-H", "GISS-E3-G"]:
+        elif mod in ["GISS-E2-1-G", "GISS-E2-1-G-CC", "GISS-E2-1-H", "GISS-E2-2-G",
+                     "GISS-E2-2-H", "GISS-E3-G"]:
             contact = emailGarble("cmip-giss-lATSIGNlists.nasa.gov")
+        elif mod in ["HadGEM3-GC31-HH", "HadGEM3-GC31-HM", "HadGEM3-GC31-LL",
+                     "HadGEM3-GC31-LM", "HadGEM3-GC31-MH", "HadGEM3-GC31-MM"]:
+            contact = emailGarble("cmip6.hadgem3ATSIGNmetoffice.gov.uk")
         elif mod in ["HiRAM-SIT-HR", "HiRAM-SIT-LR"]:
             contact = emailGarble("cytuATSIGNgate.sinica.edu.tw")
         elif mod in ["INM-CM4-8", "INM-CM5-0", "INM-CM5-H"]:
             contact = emailGarble("volodinevATSIGNgmail.com")
-        elif mod in ["4AOP-v1-5", "IPSL-CM5A2-INCA", "IPSL-CM6A-ATM-HR", "IPSL-CM6A-LR", "IPSL-CM6A-LR-INCA"]:
+        elif mod in ["4AOP-v1-5", "IPSL-CM5A2-INCA", "IPSL-CM6A-ATM-HR", "IPSL-CM6A-LR",
+                     "IPSL-CM6A-LR-INCA"]:
             contact = emailGarble("ipsl-cmip6ATSIGNlistes.ipsl.fr")
         elif mod == "KACE-1-0-G":
             contact = emailGarble("yoonjin.limATSIGNkorea.kr")
@@ -383,7 +390,8 @@ for count, mod in enumerate(out.keys()):
             contact = emailGarble("rpernakATSIGNaer.com")
         elif mod == "MCM-UA-1-0":
             contact = emailGarble("GEOS-CMIPATSIGNemail.arizona.edu")
-        elif mod in ["MIROC-ES2H", "MIROC-ES2H-NB", "MIROC-ES2L", "MIROC6", "NICAM16-7S", "NICAM16-8S", "NICAM16-9S"]:
+        elif mod in ["MIROC-ES2H", "MIROC-ES2H-NB", "MIROC-ES2L", "MIROC6", "NICAM16-7S",
+                     "NICAM16-8S", "NICAM16-9S"]:
             contact = emailGarble("onumaATSIGNiis.u-tokyo.ac.jp")
         elif mod in ["MPI-ESM-1-2-HAM", "MPI-ESM1-2-HR", "MPI-ESM1-2-LR", "MPI-ESM1-2-XR"]:
             contact = emailGarble("cmip6-mpi-esmATSIGNdkrz.de")
@@ -500,7 +508,8 @@ for count, mod in enumerate(out.keys()):
         # update to current
         out[mod]["license_info"]["id"] = "CC0 1.0"
         out[mod]["license_info"][
-            "license"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
+            "license"] =\
+            "Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/)"
         out[mod]["license_info"]["url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
 
 

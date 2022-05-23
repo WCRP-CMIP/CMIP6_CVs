@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
-            "commitMessage":"Revise source_id EC-Earth3-CC",
-            "timeStamp":"Mon May  9 11:03:31 2022 -0700"
+            "MD5":"2659f71435c09bb28530bcb4dbdb06a782c541d9",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2659f71435c09bb28530bcb4dbdb06a782c541d9",
+            "commitMessage":"Remove source_id UKESM1-0-MMh",
+            "timeStamp":"Mon May 23 13:59:29 2022 00100"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,7 +85,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":12,
+            "versionCVCommit":13,
             "versionCVContent":56,
             "versionCVStructure":2,
             "versionMIPEra":6

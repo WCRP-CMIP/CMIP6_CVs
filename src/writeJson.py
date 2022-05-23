@@ -574,11 +574,11 @@ sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Revise source_id EC-Earth3-CC\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Remove source_id UKESM1-0-MMh\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1015,10 +1015,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'EC-Earth3-CC'
-source_id[key]['activity_participation'].append('DCPP')
-source_id[key]['activity_participation'].sort()
-
+key = 'UKESM1-0-MMh'
+del source_id[key]
 # Example
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}

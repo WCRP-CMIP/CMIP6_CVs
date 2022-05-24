@@ -226,7 +226,7 @@ fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
 fo.write(''.join([header, """
-<title>CMIP6 source_id license details </title>\n</head>\n<body>
+<title>CMIP6 source_id license details</title>\n</head>\n<body>
 <p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
 <table id="table_id" class="display compact" style="width:100%">\n"""]))
 

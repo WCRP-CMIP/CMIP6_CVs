@@ -567,6 +567,7 @@ PJD 18 May 2022    - Updated source_id entries rights -> license_info; update li
 PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+MSM 24 May 2022    - Added prototype license table
 @author: durack1
 """
 
@@ -581,11 +582,11 @@ except ImportError:
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Update published source_id entries with rights; augment license\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Add license table (CMIP6_source_id_license.html)\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+# author = 'Paul J. Durack <durack1@llnl.gov>'
+# author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [

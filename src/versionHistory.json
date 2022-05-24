@@ -33,8 +33,8 @@
         "license":{
             "MD5":"105b97151ec98d9fb82132c1266f335ffce5877a",
             "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/105b97151ec98d9fb82132c1266f335ffce5877a",
-            "commitMessage":"Update published source_id entries with rights; augment license",
-            "timeStamp":"Thu May 19 13:37:54 2022 -0700"
+            "commitMessage":"Add license table (CMIP6_source_id_license.html)",
+            "timeStamp":"Tue May 24 15:33:33 2022 00100"
         },
         "mip_era":{
             "MD5":"f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b",
@@ -63,8 +63,8 @@
         "source_id":{
             "MD5":"105b97151ec98d9fb82132c1266f335ffce5877a",
             "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/105b97151ec98d9fb82132c1266f335ffce5877a",
-            "commitMessage":"Update published source_id entries with rights; augment license",
-            "timeStamp":"Thu May 19 13:37:54 2022 -0700"
+            "commitMessage":"Add license table (CMIP6_source_id_license.html)",
+            "timeStamp":"Tue May 24 15:33:33 2022 00100"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

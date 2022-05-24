@@ -565,6 +565,8 @@ PJD 17 May 2022    - Updated source_id include extracted rights entries https://
 PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
 PJD 18 May 2022    - Updated source_id entries rights -> license_info; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
+MSM 24 May 2022    - Removed UKESM1-0-MMh https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1067
+PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
@@ -581,11 +583,11 @@ except ImportError:
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Update published source_id entries with rights; augment license\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Remove source_id UKESM1-0-MMh\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [

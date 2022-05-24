@@ -7407,59 +7407,6 @@
             "release_year":"2018",
             "source_id":"UKESM1-0-LL"
         },
-        "UKESM1-0-MMh":{
-            "activity_participation":[
-                "AerChemMIP",
-                "C4MIP",
-                "CMIP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "MOHC",
-                "NERC"
-            ],
-            "label":"UKESM1.0-MMh",
-            "label_extended":"UKESM1.0-N216ORCA025hybrid",
-            "model_component":{
-                "aerosol":{
-                    "description":"UKCA-GLOMAP-mode (horizontal resolution degraded relative to that used for atmosphere physics)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmos":{
-                    "description":"MetUM-HadGEM3-GA7.1 (N216; 432 x 324 longitude/latitude; 85 levels; top level 85 km)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"UKCA-StratTrop (horizontal resolution degraded relative to that used for atmosphere physics)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "land":{
-                    "description":"JULES-ES-1.0",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"NEMO-HadGEM3-GO6.0 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude; 75 levels; top grid cell 0-1 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"MEDUSA2 (horizontal resolution degraded relative to that used for ocean physics)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "seaIce":{
-                    "description":"CICE-HadGEM3-GSI8 (eORCA025 tripolar primarily 0.25 deg; 1440 x 1205 longitude/latitude)",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2018",
-            "source_id":"UKESM1-0-MMh"
-        },
         "UKESM1-1-LL":{
             "activity_participation":[
                 "CMIP",
@@ -7668,13 +7615,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon May  9 11:03:31 2022 -0700",
-        "CV_collection_version":"6.2.56.12",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "institution_id":"PCMDI",
-        "previous_commit":"c2c813f65ef217b974996f72ba9c6f2b4eca41f8",
-        "source_id_CV_modified":"Wed Apr 13 13:21:31 2022 00100",
-        "source_id_CV_note":"Revise source_id EC-Earth3-CC",
+        "CV_collection_modified":"Mon May 23 13:59:29 2022 00100",
+        "CV_collection_version":"6.2.56.13",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "institution_id":"MOHC",
+        "previous_commit":"2659f71435c09bb28530bcb4dbdb06a782c541d9",
+        "source_id_CV_modified":"Mon May  9 11:03:31 2022 -0700",
+        "source_id_CV_note":"Remove source_id UKESM1-0-MMh",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

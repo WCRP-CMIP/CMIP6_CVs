@@ -43,6 +43,7 @@ PJD 17 Feb 2022    - Updated sources to latest 1.10.20 -> 1.11.4; 3.5.0 -> 3.6.0
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
 import json
+import os
 import re
 import sys
 
@@ -226,7 +227,7 @@ fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
 fo.write(''.join([header, """
-<title>CMIP6 source_id license details</title>\n</head>\n<body>
+<title>CMIP6 source_id values</title>\n</head>\n<body>
 <p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
 <table id="table_id" class="display compact" style="width:100%">\n"""]))
 
@@ -287,3 +288,63 @@ for exp in dict1.keys():
 fo.write("</table>")
 # print >> fo, """
 fo.write("""\n</body>\n</html>\n""")
+
+# %% Process source_id
+infile = '../CMIP6_source_id.json'
+with open(infile) as fh:
+    dict = json.load(fh)
+
+source_id_table = dict.get('source_id')  # Fudge to extract duplicate level
+version_data = dict.get('version')
+print(version_data)
+fout = os.path.join(destDir, 'CMIP6_source_id_licenses.html')
+print("processing", fout)
+
+with open(fout, 'w') as fh_license:
+    fh_license.write(
+        """{}
+        <title>CMIP6 source_id license details</title>\n</head>\n<body>
+        <p>WCRP-CMIP CMIP6_CVs version: {}</p>
+        <table id="table_id" class="display compact" style="width:100%">\n
+        """.format(header, version))
+    simple_headings = [
+        'source_id', 'institution_id', 'release_year',
+        'cohort', 'label', 'label_extended']
+    license_headings = [
+        'license', 'exceptions_contact', 'history', 'source specific info']
+
+    first_row = [i.replace('_', ' ') for i in simple_headings + license_headings]
+    # write header and footer rows for table
+    for i in ['head', 'foot']:
+        fh_license.write(
+            '<t{}><tr>\n'.format(i) +
+            '\n'.join(['<th>{}</th>\n'.format(heading) for heading in first_row]) +
+            '\n</tr></t{}>\n'.format(i))
+
+    for source_id, source_id_data in sorted(source_id_table.items()):
+        row = []
+        for heading in simple_headings:
+            cell_data = source_id_data[heading]
+            if isinstance(cell_data, list):
+                cell_data = ' '.join(cell_data)
+            row.append(cell_data)
+        # try to get license header, otherwise leave blanks
+        try:
+            license_data = source_id_data['license_info']
+            license = '<a href="{url}">{id}</a>'.format(**license_data)
+            contact = license_data['exceptions_contact']
+            history = license_data['history']
+            specific_info = license_data['source_specific_info']
+            if specific_info.startswith('http'):
+                specific_info = '<a href="{0}">{0}</a>'.format(specific_info)
+            row += [license, contact, history, specific_info]
+
+        except KeyError:
+            row += [''] * len(license_headings)
+        fh_license.write(
+            '<tr>\n' +
+            '\n'.join(['<td>{}</td>\n'.format(i) for i in row]) +
+            '\n</tr>\n'
+        )
+
+    fh_license.write('</table>\n</body>\n</html>\n')

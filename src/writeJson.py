@@ -557,28 +557,38 @@ MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP
 PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
 PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
 PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1058
+PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD  9 May 2022    - Revise source_id EC-Earth3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1063
+PJD 16 May 2022    - Updated license to include all rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existing published model)
+PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
+PJD 18 May 2022    - Updated source_id entries rights -> license_info; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
+MSM 24 May 2022    - Removed UKESM1-0-MMh https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1067
+PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
-# %% Import statements
+# %% additional import statements
 try:
     from urllib2 import urlopen  # py2
 except ImportError:
     from urllib.request import urlopen  # py3
-sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
+# sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
 #import pyexcel_xlsx as pyx
 #from string import replace
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Remove source_id UKESM1-0-MMh\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Update published source_id entries with rights; augment license\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -924,19 +934,33 @@ institution_id = {
 }
 
 # %% CMIP6 License
-license = [
-    ''.join(['CMIP6 model data produced by <Your Centre Name> is licensed under a Creative Commons ',
-             'Attribution-[NonCommercial-]ShareAlike 4.0 International License ',
-             '(https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse ',
-             'for terms of use governing CMIP6 output, including citation requirements and proper ',
-             'acknowledgment. Further information about this data, including some limitations, can be ',
-             'found via the further_info_url (recorded as a global attribute in this file)[ and at ',
-             '<some URL maintained by modeling group>]. The data producers and data providers make ',
-             'no warranty, either express or implied, including, but not limited to, warranties of ',
-             'merchantability and fitness for a particular purpose. All liabilities arising from the ',
-             'supply of the information (including any liability arising in negligence) are excluded ',
-             'to the fullest extent permitted by law.'])
-]
+license = {}
+license["license"] =\
+    ''.join(['CMIP6 model data produced by <Your Institution; see CMIP6_institution_id.json> is ',
+             'licensed under a <Creative Commons; select and insert a license_id; see below> License ',
+             '(<insert the matching license_url; see below>). Consult ',
+             'https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, ',
+             'including citation requirements and proper acknowledgment. Further information about ',
+             'this data, including some limitations, can be found via the further_info_url (recorded ',
+             'as a global attribute in this file)[ and at <some URL maintained by modeling group>]. ',
+             'The data producers and data providers make no warranty, either express or implied, ',
+             'including, but not limited to, warranties of merchantability and fitness for a ',
+             'particular purpose. All liabilities arising from the supply of the information ',
+             '(including any liability arising in negligence) are excluded to the fullest extent ',
+             'permitted by law.'])
+license["license_options"] = {}
+license["license_options"]["CC0 1.0"] = {}
+license["license_options"]["CC0 1.0"]["license_id"] = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
+license["license_options"]["CC0 1.0"]["license_url"] = "https://creativecommons.org/publicdomain/zero/1.0/"
+license["license_options"]["CC BY 4.0"] = {}
+license["license_options"]["CC BY 4.0"]["license_id"] = "Creative Commons Attribution 4.0 International"
+license["license_options"]["CC BY 4.0"]["license_url"] = "https://creativecommons.org/licenses/by/4.0/"
+license["license_options"]["CC BY-SA 4.0"] = {}
+license["license_options"]["CC BY-SA 4.0"]["license_id"] = "Creative Commons Attribution-ShareAlike 4.0 International"
+license["license_options"]["CC BY-SA 4.0"]["license_url"] = "https://creativecommons.org/licenses/by-sa/4.0/"
+license["license_options"]["CC BY-NC-SA 4.0"] = {}
+license["license_options"]["CC BY-NC-SA 4.0"]["license_id"] = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+license["license_options"]["CC BY-NC-SA 4.0"]["license_url"] = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 # %% MIP eras
 mip_era = ['CMIP1', 'CMIP2', 'CMIP3', 'CMIP5', 'CMIP6']
@@ -1015,8 +1039,25 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-0-MMh'
-del source_id[key]
+f = "220524_CMIP6-CMIP_mergedMetadata.json"
+counter = 1
+with open(f) as fh:
+    rightsMeta = json.load(fh)
+# Loop through entries and add to source_id
+for count, srcId in enumerate(rightsMeta.keys()):
+    if "license_info" in rightsMeta[srcId].keys():
+        print(count, srcId, "found")
+        # add rights
+        source_id[srcId]["license_info"] = {}
+        source_id[srcId]["license_info"] = rightsMeta[srcId]["license_info"]
+        # toggle cohort
+        source_id[srcId]["cohort"] = ["Published"]
+    else:
+        print("----------")
+        print(count, counter, srcId, "not found")
+        counter = counter+1
+del(rightsMeta)
+
 # Example
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}
@@ -1182,13 +1223,21 @@ for jsonName in ['experiment_id', 'source_id']:
                     pdepth = dictDepth(values[1])
                     keyInd = values[0]
                     keys1 = values[1].keys()
-                    for d1Key in keys1:
-                        keys2 = values[1][d1Key].keys()
-                        for d2Key in keys2:
-                            string = dictToClean[key][keyInd][d1Key][d2Key]
+                    if pdepth == 1:
+                        # deal with flat dict "rights"
+                        for d1Key in keys1:
+                            string = dictToClean[key][keyInd][d1Key]
                             string = cleanString(string)  # Clean string
-                            dictToClean[key][keyInd][d1Key][d2Key] = string
-                # elif type(values[0]) in [str,unicode]: # Py2
+                            dictToClean[key][keyInd][d1Key] = string
+                    else:
+                        # deal with nested dict "model_components"
+                        for d1Key in keys1:
+                            #print("d1Key:", d1Key)
+                            keys2 = values[1][d1Key].keys()
+                            for d2Key in keys2:
+                                string = dictToClean[key][keyInd][d1Key][d2Key]
+                                string = cleanString(string)  # Clean string
+                                dictToClean[key][keyInd][d1Key][d2Key] = string
                 elif type(values[0]) == str:  # Py3
                     string = dictToClean[key][values[0]]
                     string = cleanString(string)  # Clean string
@@ -1466,6 +1515,7 @@ for jsonName in masterTargets:
             ['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_', jsonName, '.json'])
     # Create input list and load from web
     tmp = [[jsonName, url]]
+    print("url:", url)
     vars()[target] = readJsonCreateDict(tmp)
     vars()[target] = eval(target).get(jsonName)
     # Fudge to extract duplicate level

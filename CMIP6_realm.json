@@ -10,11 +10,11 @@
         "seaIce":"Sea Ice"
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon May 23 13:59:29 2022 00100",
-        "CV_collection_version":"6.2.56.13",
-        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
-        "institution_id":"MOHC",
-        "previous_commit":"2659f71435c09bb28530bcb4dbdb06a782c541d9",
+        "CV_collection_modified":"Tue May 24 11:20:06 2022 -0700",
+        "CV_collection_version":"6.2.57.0",
+        "author":"Paul J. Durack <durack1@llnl.gov>",
+        "institution_id":"PCMDI",
+        "previous_commit":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
         "realm_CV_modified":"Tues Apr 18 12:03:00 2017 -0700",
         "realm_CV_note":"Issue285 durack1 update realm format (#290)",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

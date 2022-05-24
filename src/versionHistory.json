@@ -31,10 +31,10 @@
             "timeStamp":"Mon Nov 16 11:16:39 2020 -0800"
         },
         "license":{
-            "MD5":"7917f3bc2fc4739808f5fa05870ab35411bd4f44",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/7917f3bc2fc4739808f5fa05870ab35411bd4f44",
-            "commitMessage":"Issue225 durack1 add institution_id THU (#232)",
-            "timeStamp":"Mon Feb 27 10:30:00 2017 -0700"
+            "MD5":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
+            "commitMessage":"Update published source_id entries with rights; augment license",
+            "timeStamp":"Tue May 24 11:20:06 2022 -0700"
         },
         "mip_era":{
             "MD5":"f9e6b0a8ea1dbd85a61a5a1420c1972a6d12b",
@@ -61,10 +61,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"2659f71435c09bb28530bcb4dbdb06a782c541d9",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2659f71435c09bb28530bcb4dbdb06a782c541d9",
-            "commitMessage":"Remove source_id UKESM1-0-MMh",
-            "timeStamp":"Mon May 23 13:59:29 2022 00100"
+            "MD5":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
+            "commitMessage":"Update published source_id entries with rights; augment license",
+            "timeStamp":"Tue May 24 11:20:06 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -85,8 +85,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":13,
-            "versionCVContent":56,
+            "versionCVCommit":0,
+            "versionCVContent":57,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

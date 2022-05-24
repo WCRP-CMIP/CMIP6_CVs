@@ -319,7 +319,7 @@ with open(fout, 'w') as fh_license:
     for i in ['head', 'foot']:
         fh_license.write(
             '<t{}><tr>\n'.format(i) +
-            '\n'.join(['<th>{}</th>\n'.format(heading) for heading in first_row]) +
+            '\n'.join(['<th>{}</th>'.format(heading) for heading in first_row]) +
             '\n</tr></t{}>\n'.format(i))
 
     for source_id, source_id_data in sorted(source_id_table.items()):
@@ -344,7 +344,7 @@ with open(fout, 'w') as fh_license:
             row += [''] * len(license_headings)
         fh_license.write(
             '<tr>\n' +
-            '\n'.join(['<td>{}</td>\n'.format(i) for i in row]) +
+            '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
             '\n</tr>\n'
         )
 

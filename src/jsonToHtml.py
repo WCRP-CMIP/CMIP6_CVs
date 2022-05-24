@@ -39,6 +39,7 @@ PJD 17 Feb 2022    - Updated sources to latest 1.10.20 -> 1.11.4; 3.5.0 -> 3.6.0
                    <table id="table_id" class="display"> ->
                    <table id="table_id" class="display compact" style="width:100%">
                    - TODO: Update default page lengths
+MSM 24 May 2022    - Add code for license table
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse

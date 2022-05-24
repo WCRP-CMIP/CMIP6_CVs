@@ -293,10 +293,10 @@ fo.write("""\n</body>\n</html>\n""")
 # %% Process source_id
 infile = '../CMIP6_source_id.json'
 with open(infile) as fh:
-    dict = json.load(fh)
+    source_id_json = json.load(fh)
 
-source_id_table = dict.get('source_id')  # Fudge to extract duplicate level
-version_data = dict.get('version')
+source_id_table = source_id_json.get('source_id')
+version_data = source_id_json.get('version')
 print(version_data)
 fout = os.path.join(destDir, 'CMIP6_source_id_licenses.html')
 print("processing", fout)

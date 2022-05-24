@@ -50,6 +50,7 @@ PJD 18 May 2022     - Updated "license" - "license_info"; Updated UKESM* latest 
 PJD 19 May 2022     - Updated HadGEM3* entries to follow same license update info as UKESM*
 PJD 19 May 2022     - Updated HadGEM3* contacts
                       https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050#issuecomment-1036191330
+PJD 24 May 2022     - Updated to deal with UKESM1-0-MMh removal https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1067
                     TODO: finish extract netcdf-harvested info
                      
 
@@ -201,7 +202,8 @@ with open("220208_MartinaStockhause_source_id_license_20220208.csv", newline="")
         if row[0] == "CMIP6_input4MIPs":
             continue
         # deal with deprecated models
-        if row[1] in ["CMCC-CM2-HR5", "CMCC-ESM2-HR5", "CMCC-ESM2-SR5", "IPSL-CM7A-ATM-HR", "IPSL-CM7A-ATM-LR"]:
+        if row[1] in ["CMCC-CM2-HR5", "CMCC-ESM2-HR5", "CMCC-ESM2-SR5",
+                      "IPSL-CM7A-ATM-HR", "IPSL-CM7A-ATM-LR", "UKESM1-0-MMh"]:
             # IPSL-CM6A-ATM-LR-REPROBUS missing
             continue
         print("source_id:", row[1], "license:", row[6])

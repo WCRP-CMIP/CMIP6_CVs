@@ -583,11 +583,11 @@ except ImportError:
 #from unidecode import unidecode
 
 # %% Set commit message and author info
-commitMessage = '\"Remove source_id UKESM1-0-MMh\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Update published source_id entries with rights; augment license\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -936,7 +936,7 @@ institution_id = {
 license = {}
 license["license"] =\
     ''.join(['CMIP6 model data produced by <Your Institution; see CMIP6_institution_id.json> is ',
-             'licensed under a Creative Commons <select and insert a license_id; see below> License ',
+             'licensed under a <Creative Commons; select and insert a license_id; see below> License ',
              '(<insert the matching license_url; see below>). Consult ',
              'https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, ',
              'including citation requirements and proper acknowledgment. Further information about ',
@@ -1038,7 +1038,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-f = "220519_CMIP6-CMIP_mergedMetadata.json"
+f = "220524_CMIP6-CMIP_mergedMetadata.json"
 counter = 1
 with open(f) as fh:
     rightsMeta = json.load(fh)

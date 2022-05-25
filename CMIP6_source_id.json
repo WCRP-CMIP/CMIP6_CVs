@@ -615,6 +615,13 @@
             ],
             "label":"AWI-ESM 2.1 LR",
             "label_extended":"AWI-ESM 2.1 LR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -848,6 +855,13 @@
             ],
             "label":"BESM 2.9",
             "label_extended":"BESM 2.9",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -905,6 +919,13 @@
             ],
             "label":"BNU-ESM 1.1",
             "label_extended":"BNU-ESM 1.1",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"CAM-chem; semi-interactive",
@@ -954,6 +975,13 @@
             ],
             "label":"CAM-MPAS-HR",
             "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -1003,6 +1031,13 @@
             ],
             "label":"CAM-MPAS-LR",
             "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -1557,6 +1592,13 @@
             ],
             "label":"CESM2-SE",
             "label_extended":"CESM2-SE spectral element (cubed-sphere grid)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"MAM4 (same grid as atmos)",
@@ -2230,6 +2272,13 @@
             ],
             "label":"CNRM-ESM2-1-HR",
             "label_extended":"CNRM-ESM2-1-HR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"TACTIC_v2",
@@ -2280,6 +2329,13 @@
             ],
             "label":"CSIRO Mk3L 1.3",
             "label_extended":"CSIRO Mk3L 1.3",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2846,6 +2902,13 @@
             ],
             "label":"EC-Earth3-GrIS",
             "label_extended":"EC-Earth3-GrIS",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2897,6 +2960,13 @@
             ],
             "label":"EC-Earth3-HR",
             "label_extended":"EC-Earth3-HR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -3469,6 +3539,13 @@
             ],
             "label":"EMAC-2-53-Vol",
             "label_extended":"EMAC-2-53-x-Vol",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"gmxe 2.2.x",
@@ -3519,6 +3596,13 @@
             ],
             "label":"EMAC-2-54-AerChem",
             "label_extended":"EMAC-2-54-x-AerChem",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"gmxe 2.2.x",
@@ -4123,6 +4207,13 @@
             ],
             "label":"GFDL-GLOBAL-LBL",
             "label_extended":"GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5632,6 +5723,13 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-HR",
             "label_extended":"IPSL-CM6A-ATM-ICO-HR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5679,6 +5777,13 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-LR",
             "label_extended":"IPSL-CM6A-ATM-ICO-LR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5726,6 +5831,13 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-MR",
             "label_extended":"IPSL-CM6A-ATM-ICO-MR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5773,6 +5885,13 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-VHR",
             "label_extended":"IPSL-CM6A-ATM-ICO-VHR",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5822,6 +5941,13 @@
             ],
             "label":"IPSL-CM6A-ATM-LR-REPROBUS",
             "label_extended":"IPSL-CM6A-ATM-LR-REPROBUS",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)",
@@ -6003,6 +6129,13 @@
             ],
             "label":"IPSL-CM6A-MR025",
             "label_extended":"IPSL-CM6A-MR025",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -6052,6 +6185,13 @@
             ],
             "label":"IPSL-CM6A-MR1",
             "label_extended":"IPSL-CM6A-MR1",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -7236,6 +7376,13 @@
             ],
             "label":"NICAM16-9D-L78",
             "label_extended":"NICAM.16 gl09-L78 with NDW6",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Prescribed MACv2-SP",
@@ -7461,6 +7608,13 @@
             ],
             "label":"NorESM2-HH",
             "label_extended":"NorESM2-HH (high atmosphere-high ocean resolution, GHG concentration driven)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7584,6 +7738,13 @@
             ],
             "label":"NorESM2-LME",
             "label_extended":"NorESM2-LME (low atmosphere-medium ocean resolution, GHG emission driven)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7634,6 +7795,13 @@
             ],
             "label":"NorESM2-LMEC",
             "label_extended":"NorESM2-LMEC (low atmosphere-medium ocean resolution, GHG emission driven, complex atmospheric chemistry)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7689,6 +7857,13 @@
             ],
             "label":"NorESM2-MH",
             "label_extended":"NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"OsloAero",
@@ -7801,6 +7976,13 @@
             ],
             "label":"PCMDI-test 1.0",
             "label_extended":"PCMDI-test 1.0 (This entry is free text for users to contribute verbose information)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -8335,6 +8517,13 @@
             ],
             "label":"UKESM1.1-LL",
             "label_extended":"UKESM1.1-N96ORCA1",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"UKCA-GLOMAP-mode",
@@ -8443,6 +8632,13 @@
             ],
             "label":"UofT-CCSM4",
             "label_extended":"The NCAR CCSM4 model with the ocean component run in a non-default configuration (the University of Toronto configuration) where tidal mixing and overflow parametrizations are turned off. The vertical profile of ocean diapycnal diffusivity is fixed to the POP1 profile used in CCSM3. See Peltier and Vettoretti, 2014 GRL (https://doi.org/10.1002/2014GL061413), Chandan and Peltier, 2017 Clim. Past. (https://doi.org/10.5194/cp-13-919-2017)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"unnamed",
@@ -8496,6 +8692,13 @@
             ],
             "label":"VRESM 1.0",
             "label_extended":"VRESM 1.0 (Variable-resolution Earth System Model 1.0)",
+            "license_info":{
+                "exceptions_contact":"",
+                "history":"",
+                "id":"",
+                "license":"",
+                "url":""
+            },
             "model_component":{
                 "aerosol":{
                     "description":"Rotstayn-1.0",
@@ -8535,13 +8738,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue May 24 11:20:06 2022 -0700",
-        "CV_collection_version":"6.2.57.0",
-        "author":"Paul J. Durack <durack1@llnl.gov>",
-        "institution_id":"PCMDI",
-        "previous_commit":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
-        "source_id_CV_modified":"Mon May 23 13:59:29 2022 00100",
-        "source_id_CV_note":"Remove source_id UKESM1-0-MMh",
+        "CV_collection_modified":"Wed May 25 13:56:09 2022 00100",
+        "CV_collection_version":"6.2.57.1",
+        "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
+        "institution_id":"MOHC",
+        "previous_commit":"bb36f0dcc0d4b3d9c17b0214e0783e031b9bbfc9",
+        "source_id_CV_modified":"Tue May 24 11:20:06 2022 -0700",
+        "source_id_CV_note":"Update published source_id entries with rights; augment license",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

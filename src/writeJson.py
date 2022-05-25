@@ -570,6 +570,8 @@ PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-C
 PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+MSM 24 May 2022    - Added prototype license table
+MSM 25 May 2022    - Added blank license info for unpublished source_ids
 @author: durack1
 """
 
@@ -585,10 +587,10 @@ except ImportError:
 
 # %% Set commit message and author info
 commitMessage = '\"Update published source_id entries with rights; augment license\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1039,24 +1041,35 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-f = "220524_CMIP6-CMIP_mergedMetadata.json"
-counter = 1
-with open(f) as fh:
-    rightsMeta = json.load(fh)
-# Loop through entries and add to source_id
-for count, srcId in enumerate(rightsMeta.keys()):
-    if "license_info" in rightsMeta[srcId].keys():
-        print(count, srcId, "found")
-        # add rights
-        source_id[srcId]["license_info"] = {}
-        source_id[srcId]["license_info"] = rightsMeta[srcId]["license_info"]
-        # toggle cohort
-        source_id[srcId]["cohort"] = ["Published"]
-    else:
-        print("----------")
-        print(count, counter, srcId, "not found")
-        counter = counter+1
-del(rightsMeta)
+# add blank license_info
+for entry, entry_data in source_id.items():
+    if 'license_info' not in entry_data:
+        entry_data['license_info'] = {
+            'exceptions_contact': '',
+            'history': '',
+            'id': '',
+            'license': '',
+            'url': '',
+        }
+
+# f = "220519_CMIP6-CMIP_mergedMetadata.json"
+# counter = 1
+# with open(f) as fh:
+#     rightsMeta = json.load(fh)
+# # Loop through entries and add to source_id
+# for count, srcId in enumerate(rightsMeta.keys()):
+#     if "license_info" in rightsMeta[srcId].keys():
+#         print(count, srcId, "found")
+#         # add rights
+#         source_id[srcId]["license_info"] = {}
+#         source_id[srcId]["license_info"] = rightsMeta[srcId]["license_info"]
+#         # toggle cohort
+#         source_id[srcId]["cohort"] = ["Published"]
+#     else:
+#         print("----------")
+#         print(count, counter, srcId, "not found")
+#         counter = counter+1
+# del(rightsMeta)
 
 # Example
 # key = 'GISS-E2-2-H'

@@ -331,8 +331,8 @@ with open(fout, 'w') as fh_license:
                 cell_data = ' '.join(cell_data)
             row.append(cell_data)
         # try to get license header, otherwise leave blanks
-        try:
-            license_data = source_id_data['license_info']
+        license_data = source_id_data['license_info']
+        if license_data['id']:
             license = '<a href="{url}">{id}</a>'.format(**license_data)
             contact = license_data['exceptions_contact']
             history = license_data['history']
@@ -340,8 +340,7 @@ with open(fout, 'w') as fh_license:
             if specific_info.startswith('http'):
                 specific_info = '<a href="{0}">{0}</a>'.format(specific_info)
             row += [license, contact, history, specific_info]
-
-        except KeyError:
+        else:
             row += [''] * len(license_headings)
         fh_license.write(
             '<tr>\n' +

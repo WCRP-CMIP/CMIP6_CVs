@@ -17,6 +17,12 @@ import gc
 import datetime
 import calendar
 
+# %% additional import statements
+try:
+    from urllib2 import urlopen  # py2
+except ImportError:
+    from urllib.request import urlopen  # py3
+
 """
 Created on Mon Jul 11 14:12:21 2016
 
@@ -568,27 +574,18 @@ PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
 MSM 24 May 2022    - Removed UKESM1-0-MMh https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1067
 PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
+MSM 26 May 2022    - Added UKESM1-1-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1071
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
-# %% additional import statements
-try:
-    from urllib2 import urlopen  # py2
-except ImportError:
-    from urllib.request import urlopen  # py3
-# sys.path.insert(0, '~/sync/git/durolib/durolib')  # trustym
-#import pyexcel_xlsx as pyx
-#from string import replace
-#from unidecode import unidecode
-
 # %% Set commit message and author info
-commitMessage = '\"Update published source_id entries with rights; augment license\"'
-#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-#author_institution_id = 'MOHC'
-author = 'Paul J. Durack <durack1@llnl.gov>'
-author_institution_id = 'PCMDI'
+commitMessage = '\"Update UKESM1-1-LL publication status and license info\"'
+author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+author_institution_id = 'MOHC'
+#author = 'Paul J. Durack <durack1@llnl.gov>'
+#author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1039,24 +1036,16 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-f = "220524_CMIP6-CMIP_mergedMetadata.json"
-counter = 1
-with open(f) as fh:
-    rightsMeta = json.load(fh)
-# Loop through entries and add to source_id
-for count, srcId in enumerate(rightsMeta.keys()):
-    if "license_info" in rightsMeta[srcId].keys():
-        print(count, srcId, "found")
-        # add rights
-        source_id[srcId]["license_info"] = {}
-        source_id[srcId]["license_info"] = rightsMeta[srcId]["license_info"]
-        # toggle cohort
-        source_id[srcId]["cohort"] = ["Published"]
-    else:
-        print("----------")
-        print(count, counter, srcId, "not found")
-        counter = counter+1
-del(rightsMeta)
+key = 'UKESM1-1-LL'
+source_id[key]['license_info'] = {
+    "exceptions_contact": "@metoffice.gov.uk <- cmip6.ukesm1",
+    "history": "2022-05-04: initially published under CC BY-SA 4.0; 2022-05-04: relaxed to CC BY 4.0",
+    "id": "CC BY 4.0",
+    "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+    "source_specific_info": "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+}
+source_id[key]['cohort'] = ['Published']
 
 # Example
 # key = 'GISS-E2-2-H'

@@ -18,13 +18,13 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May 26 13:10:15 2022 00100",
+        "CV_collection_modified":"Thu May 26 11:27:09 2022 -0700",
         "CV_collection_version":"6.2.57.1",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "frequency_CV_modified":"Mon May 24 13:48:15 2021 00100",
         "frequency_CV_note":"Update description of 3hr and 6hr frequencies",
         "institution_id":"MOHC",
-        "previous_commit":"bb36f0dcc0d4b3d9c17b0214e0783e031b9bbfc9",
+        "previous_commit":"3c94649865cf3770f32a645212cfc8a6b946e434",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

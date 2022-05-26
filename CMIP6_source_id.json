@@ -8337,7 +8337,7 @@
             "label_extended":"UKESM1.1-N96ORCA1",
             "license_info":{
                 "exceptions_contact":"@metoffice.gov.uk <- cmip6.ukesm1",
-                "history":"2022-05-04: initially published under CC BY-SA 4.0; 2021-11-15: relaxed to CC BY 4.0",
+                "history":"2022-05-04: initially published under CC BY-SA 4.0; 2022-05-04: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
@@ -8543,11 +8543,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu May 26 13:10:15 2022 00100",
+        "CV_collection_modified":"Thu May 26 11:27:09 2022 -0700",
         "CV_collection_version":"6.2.57.1",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "institution_id":"MOHC",
-        "previous_commit":"bb36f0dcc0d4b3d9c17b0214e0783e031b9bbfc9",
+        "previous_commit":"3c94649865cf3770f32a645212cfc8a6b946e434",
         "source_id_CV_modified":"Tue May 24 11:20:06 2022 -0700",
         "source_id_CV_note":"Update UKESM1-1-LL publication status and license info",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

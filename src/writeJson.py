@@ -575,17 +575,18 @@ MSM 24 May 2022    - Removed UKESM1-0-MMh https://github.com/WCRP-CMIP/CMIP6_CVs
 PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
 PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
 MSM 26 May 2022    - Added UKESM1-1-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1071
+PJD 31 May 2022    - Revised UKESM1-ice-LL license history to reflect correct publication/relaxation dates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1073
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Update UKESM1-1-LL publication status and license info\"'
-author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
-author_institution_id = 'MOHC'
-#author = 'Paul J. Durack <durack1@llnl.gov>'
-#author_institution_id = 'PCMDI'
+commitMessage = '\"Revised UKESM1-ice-LL license history\"'
+#author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
+#author_institution_id = 'MOHC'
+author = 'Paul J. Durack <durack1@llnl.gov>'
+author_institution_id = 'PCMDI'
 
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
@@ -1036,16 +1037,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-1-LL'
-source_id[key]['license_info'] = {
-    "exceptions_contact": "@metoffice.gov.uk <- cmip6.ukesm1",
-    "history": "2022-05-04: initially published under CC BY-SA 4.0; 2022-05-04: relaxed to CC BY 4.0",
-    "id": "CC BY 4.0",
-    "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-    "source_specific_info": "https://ukesm.ac.uk/licensing-of-met-office-nerc-and-niwa-cmip6-data/",
-    "url": "https://creativecommons.org/licenses/by/4.0/"
-}
-source_id[key]['cohort'] = ['Published']
+key = 'UKESM1-ice-LL'
+source_id[key]['license_info']["history"] = "2022-02-11: initially published under CC BY-SA 4.0; 2022-02-11: relaxed to CC BY 4.0"
 
 # Example
 # key = 'GISS-E2-2-H'

@@ -576,13 +576,14 @@ PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-C
 PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
 MSM 26 May 2022    - Added UKESM1-1-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1071
 PJD 31 May 2022    - Revised UKESM1-ice-LL license history to reflect correct publication/relaxation dates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1073
+PJD  2 Jun 2022    - Revised MCM-UA-1-0 license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1075
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised UKESM1-ice-LL license history\"'
+commitMessage = '\"Revised MCM-UA-1-0 license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1037,8 +1038,16 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = 'UKESM1-ice-LL'
-source_id[key]['license_info']["history"] = "2022-02-11: initially published under CC BY-SA 4.0; 2022-02-11: relaxed to CC BY 4.0"
+key = 'MCM-UA-1-0'
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"]["history"] = '; '.join(
+    [source_id[key]["license_info"]["history"], "2022-06-02: relaxed to CC BY 4.0"])
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example
 # key = 'GISS-E2-2-H'

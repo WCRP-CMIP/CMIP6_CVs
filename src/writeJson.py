@@ -578,13 +578,14 @@ MSM 26 May 2022    - Added UKESM1-1-LL https://github.com/WCRP-CMIP/CMIP6_CVs/is
 PJD 31 May 2022    - Revised UKESM1-ice-LL license history to reflect correct publication/relaxation dates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1073
 PJD  2 Jun 2022    - Revised MCM-UA-1-0 license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1075
 PJD  6 Jun 2022    - Revised numerous EC-Earth3 license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
+PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised numerous EC-Earth3 license histories\"'
+commitMessage = '\"Revised numerous IPSL source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1039,39 +1040,45 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-ecEarth3List = [
-    "EC-Earth3",
-    "EC-Earth3-AerChem",
-    "EC-Earth3-CC",
-    "EC-Earth3-GrIS",
-    "EC-Earth3-HR",
-    "EC-Earth3-LR",
-    "EC-Earth3-Veg",
-    "EC-Earth3-Veg-LR",
-    "EC-Earth3P",
-    "EC-Earth3P-HR",
-    "EC-Earth3P-VHR",
+IPSLList = [
+    "4AOP-v1-5",
+    "IPSL-CM5A2-INCA",
+    "IPSL-CM6A-ATM-HR",
+    "IPSL-CM6A-ATM-ICO-HR",
+    "IPSL-CM6A-ATM-ICO-LR",
+    "IPSL-CM6A-ATM-ICO-MR",
+    "IPSL-CM6A-ATM-ICO-VHR",
+    "IPSL-CM6A-ATM-LR-REPROBUS",
+    "IPSL-CM6A-LR",
+    "IPSL-CM6A-LR-INCA",
+    "IPSL-CM6A-MR025",
+    "IPSL-CM6A-MR1",
 ]
-ecEarth3ListNoData = [
-    "EC-Earth3-GrIS",
-    "EC-Earth3-HR",
+IPSLListNoData = [
+    "IPSL-CM6A-ATM-ICO-HR",
+    "IPSL-CM6A-ATM-ICO-LR",
+    "IPSL-CM6A-ATM-ICO-MR",
+    "IPSL-CM6A-ATM-ICO-VHR",
+    "IPSL-CM6A-ATM-LR-REPROBUS",
+    "IPSL-CM6A-MR025",
+    "IPSL-CM6A-MR1",
 ]
-for count, key in enumerate(ecEarth3List):
+for count, key in enumerate(IPSLList):
     print("processing:", key)
     licenseId = "CC BY 4.0"
-    if key in ecEarth3ListNoData:
+    if key in IPSLListNoData:
         source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
+        source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
         source_id[key]["license_info"]["history"] = ""
     else:
         source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-02: relaxed to CC BY 4.0"])
+            [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]
     licenseUrl = license["license_options"][licenseId]["license_url"]
     source_id[key]["license_info"]["license"] = "".join(
         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    if key in ecEarth3ListNoData:
+    if key in IPSLListNoData:
         source_id[key]["license_info"]["source_specific_info"] = ""
     source_id[key]["license_info"]["url"] = licenseUrl
 

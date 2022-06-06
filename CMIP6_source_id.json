@@ -14,11 +14,11 @@
             "label_extended":"Line-By-Line Radiative Transfer Model v1.5, Laboratoire Meteorologie Dynamique, GEISA spectroscopic database",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-06-11: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2020-06-11: initially published under CC BY-NC-SA 4.0; 2022-06-03: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5538,11 +5538,11 @@
             "label_extended":"IPSL-CM5A2-INCA",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-07-29: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2020-07-29: initially published under CC BY-NC-SA 4.0; 2022-06-03: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5595,11 +5595,11 @@
             "label_extended":"IPSL-CM6A-ATM-HR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2019-01-22: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2019-01-22: initially published under CC BY-NC-SA 4.0; 2022-06-03: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5648,6 +5648,14 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-HR",
             "label_extended":"IPSL-CM6A-ATM-ICO-HR",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5695,6 +5703,14 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-LR",
             "label_extended":"IPSL-CM6A-ATM-ICO-LR",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5742,6 +5758,14 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-MR",
             "label_extended":"IPSL-CM6A-ATM-ICO-MR",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5789,6 +5813,14 @@
             ],
             "label":"IPSL-CM6A-ATM-ICO-VHR",
             "label_extended":"IPSL-CM6A-ATM-ICO-VHR",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -5838,6 +5870,14 @@
             ],
             "label":"IPSL-CM6A-ATM-LR-REPROBUS",
             "label_extended":"IPSL-CM6A-ATM-LR-REPROBUS",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"LMDZ (NPv6 ; 144 x 143 longitude/latitude; 79 levels; top level 80000 m)",
@@ -5906,11 +5946,11 @@
             "label_extended":"IPSL-CM6A-LR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2018-03-14: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2018-03-14: initially published under CC BY-NC-SA 4.0; 2022-06-03: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5964,11 +6004,11 @@
             "label_extended":"IPSL-CM6A-LR-INCA",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"2020-07-17: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2020-07-17: initially published under CC BY-NC-SA 4.0; 2022-06-03: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -6019,6 +6059,14 @@
             ],
             "label":"IPSL-CM6A-MR025",
             "label_extended":"IPSL-CM6A-MR025",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -6068,6 +6116,14 @@
             ],
             "label":"IPSL-CM6A-MR1",
             "label_extended":"IPSL-CM6A-MR1",
+            "license_info":{
+                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -8559,13 +8615,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun  6 14:33:06 2022 -0700",
-        "CV_collection_version":"6.2.57.4",
+        "CV_collection_modified":"Mon Jun  6 14:55:18 2022 -0700",
+        "CV_collection_version":"6.2.57.5",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f7e54781ce47e78178021a6b2696ec797aefbc34",
-        "source_id_CV_modified":"Thu Jun  2 16:18:38 2022 -0700",
-        "source_id_CV_note":"Revised numerous EC-Earth3 license histories",
+        "previous_commit":"1543ba8bb6839fb53da219c64b6193eb7a10ddf5",
+        "source_id_CV_modified":"Mon Jun  6 14:33:06 2022 -0700",
+        "source_id_CV_note":"Revised numerous IPSL source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

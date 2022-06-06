@@ -585,7 +585,7 @@ PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://g
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised numerous EC-Earth3 license histories\"'
+commitMessage = '\"Revised numerous IPSL source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'

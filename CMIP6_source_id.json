@@ -2846,6 +2846,12 @@
             ],
             "label":"EC-Earth3-GrIS",
             "label_extended":"EC-Earth3-GrIS",
+            "license_info":{
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -2897,6 +2903,12 @@
             ],
             "label":"EC-Earth3-HR",
             "label_extended":"EC-Earth3-HR",
+            "license_info":{
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -8543,11 +8555,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun  6 14:24:44 2022 -0700",
+        "CV_collection_modified":"Mon Jun  6 14:28:46 2022 -0700",
         "CV_collection_version":"6.2.57.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"c839df491a951c9e1f684efa6653644498d79c05",
+        "previous_commit":"5d5b431025073faea899c4ef151338c96995c8ba",
         "source_id_CV_modified":"Thu Jun  2 16:18:38 2022 -0700",
         "source_id_CV_note":"Revised numerous EC-Earth3 license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

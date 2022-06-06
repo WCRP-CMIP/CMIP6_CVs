@@ -1043,6 +1043,8 @@ ecEarth3List = [
     "EC-Earth3",
     "EC-Earth3-AerChem",
     "EC-Earth3-CC",
+    "EC-Earth3-GrIS",
+    "EC-Earth3-HR",
     "EC-Earth3-LR",
     "EC-Earth3-Veg",
     "EC-Earth3-Veg-LR",
@@ -1058,6 +1060,7 @@ for count, key in enumerate(ecEarth3List):
     print("processing:", key)
     licenseId = "CC BY 4.0"
     if key in ecEarth3ListNoData:
+        source_id[key]["license_info"] = {}
         source_id[key]["license_info"]["history"] = ""
     else:
         source_id[key]["license_info"]["history"] = '; '.join(

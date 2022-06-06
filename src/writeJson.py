@@ -1061,6 +1061,7 @@ for count, key in enumerate(ecEarth3List):
     licenseId = "CC BY 4.0"
     if key in ecEarth3ListNoData:
         source_id[key]["license_info"] = {}
+        source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
         source_id[key]["license_info"]["history"] = ""
     else:
         source_id[key]["license_info"]["history"] = '; '.join(
@@ -1070,6 +1071,8 @@ for count, key in enumerate(ecEarth3List):
     licenseUrl = license["license_options"][licenseId]["license_url"]
     source_id[key]["license_info"]["license"] = "".join(
         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    if key in ecEarth3ListNoData:
+        source_id[key]["license_info"]["source_specific_info"] = ""
     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example

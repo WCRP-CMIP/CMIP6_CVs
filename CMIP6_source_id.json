@@ -2666,11 +2666,11 @@
             "label_extended":"EC Earth 3.3",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-04-05: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-04-05: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -2726,11 +2726,11 @@
             "label_extended":"EC-Earth3-AerChem",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-06-22: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-06-22: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -2789,11 +2789,11 @@
             "label_extended":"EC-Earth3-CC",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-12-29: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-12-29: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -2949,11 +2949,11 @@
             "label_extended":"EC-Earth3-LR",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-01-03: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-01-03: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3011,11 +3011,11 @@
             "label_extended":"EC-Earth3-Veg",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2019-04-10: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-04-10: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3070,11 +3070,11 @@
             "label_extended":"EC-Earth3-Veg-LR",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2020-02-13: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-02-13: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3128,11 +3128,11 @@
             "label_extended":"EC-Earth 3.2 in PRIMAVERA",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2017-09-11: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2017-09-11: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3185,11 +3185,11 @@
             "label_extended":"EC-Earth3P-HR in PRIMAVERA",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"2017-08-11: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2017-08-11: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3242,11 +3242,11 @@
             "label_extended":"EC-Earth3P-VHR in PRIMAVERA",
             "license_info":{
                 "exceptions_contact":"@bsc.es <- pierre-antoine.bretonniere",
-                "history":"2020-10-07: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-10-07: initially published under CC BY-SA 4.0; 2022-06-02: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8543,13 +8543,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun  2 16:18:38 2022 -0700",
-        "CV_collection_version":"6.2.57.3",
+        "CV_collection_modified":"Mon Jun  6 14:24:44 2022 -0700",
+        "CV_collection_version":"6.2.57.4",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f2d06247d29c492384455acbe49d648e8ba50380",
-        "source_id_CV_modified":"Tue May 31 11:04:32 2022 -0700",
-        "source_id_CV_note":"Revised MCM-UA-1-0 license history",
+        "previous_commit":"c839df491a951c9e1f684efa6653644498d79c05",
+        "source_id_CV_modified":"Thu Jun  2 16:18:38 2022 -0700",
+        "source_id_CV_note":"Revised numerous EC-Earth3 license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

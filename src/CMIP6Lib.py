@@ -5,27 +5,32 @@ Created on Fri Feb 23 13:09:26 2018
 
 PJD 12 Mar 2018     - Added 'specs_doc' attribute to version metadata upstream
 PJD 16 Nov 2020     - Updated for Py3; durolib updates alongside
+PJD  7 Jun 2022     - Added CMIP6_DRS
 
 @author: durack1
 """
-#%% imports
-import re, sys
-sys.path.insert(0,'/sync/git/durolib/durolib')  # trustym
-from durolib import getGitInfo,readJsonCreateDict
+# %% imports
+import re
+import sys
+sys.path.insert(0, '/sync/git/durolib/durolib')  # trustym
+from durolib import getGitInfo, readJsonCreateDict
 
-#%% Get repo metadata
-def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency,
-                     testVal_grid_label,testVal_institution_id,testVal_license,
-                     testVal_mip_era,testVal_nominal_resolution,testVal_realm,
-                     testVal_required_global_attributes,testVal_source_id,
-                     testVal_source_type,testVal_sub_experiment_id,testVal_table_id,
+# %% Get repo metadata
+
+
+def ascertainVersion(testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency,
+                     testVal_grid_label, testVal_institution_id, testVal_license,
+                     testVal_mip_era, testVal_nominal_resolution, testVal_realm,
+                     testVal_required_global_attributes, testVal_source_id,
+                     testVal_source_type, testVal_sub_experiment_id, testVal_table_id,
                      commitMessage):
     # Load current history direct from repo master
-    tmp = [['versionHistory','https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
-      ] ;
+    tmp = [['versionHistory', 'https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json']
+           ]
     versionHistory = readJsonCreateDict(tmp)
     versionHistory = versionHistory.get('versionHistory')
-    versionHistory = versionHistory.get('versionHistory') ; # Fudge to extract duplicate level
+    # Fudge to extract duplicate level
+    versionHistory = versionHistory.get('versionHistory')
     del(tmp)
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
@@ -33,25 +38,28 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionCVCommit = versionHistory['versions'].get('versionCVCommit')
 
     # Deal with commitMessage formatting
-    commitMessage = commitMessage.replace('\"','')
+    commitMessage = commitMessage.replace('\"', '')
 
     # versionMIPEra - CMIP6 id - The first integer is “6”, indicating the CV collection is for use in CMIP6
     versionMIPEra = versionHistory['versions'].get('versionMIPEra')
     # versionCVStructure - Incremented when the structure/format of CV’s changes or a new CV is added
     versionCVStructure = versionHistory['versions'].get('versionCVStructure')
     # versionCVContent - Incremented when a change to existing content is made other than “source_id” or “institution_id”
-    test1 = [testVal_activity_id,testVal_experiment_id,testVal_frequency,
-            testVal_grid_label,testVal_license,testVal_mip_era,
-            testVal_nominal_resolution,testVal_realm,
-            testVal_required_global_attributes,testVal_source_type,
-            testVal_sub_experiment_id,testVal_table_id]
-    test2 = [testVal_institution_id,testVal_source_id]
+    test1 = [testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency,
+             testVal_grid_label, testVal_license, testVal_mip_era,
+             testVal_nominal_resolution, testVal_realm,
+             testVal_required_global_attributes, testVal_source_type,
+             testVal_sub_experiment_id, testVal_table_id]
+    test2 = [testVal_institution_id, testVal_source_id]
     if any(test1):
-        versionCVContent = versionHistory['versions'].get('versionCVContent') + 1
+        versionCVContent = versionHistory['versions'].get(
+            'versionCVContent') + 1
         versionCVCommit = 0
         # Now update versionHistory - can use list entries, as var names aren't locatable
         if testVal_activity_id:
             versionHistory['activity_id']['commitMessage'] = commitMessage
+        if testVal_DRS:
+            versionHistory['DRS']['commitMessage'] = commitMessage
         if testVal_experiment_id:
             versionHistory['experiment_id']['commitMessage'] = commitMessage
         if testVal_frequency:
@@ -88,12 +96,13 @@ def ascertainVersion(testVal_activity_id,testVal_experiment_id,testVal_frequency
     versionHistory['versions']['versionCVStructure'] = versionCVStructure
     versionHistory['versions']['versionCVContent'] = versionCVContent
     versionHistory['versions']['versionCVCommit'] = versionCVCommit
-    versions = '.'.join(str(x) for x in [versionMIPEra,versionCVStructure,versionCVContent,versionCVCommit])
+    versions = '.'.join(str(x) for x in [
+                        versionMIPEra, versionCVStructure, versionCVContent, versionCVCommit])
 
-    return [versionHistory,versions]
+    return [versionHistory, versions]
 
 
-def entryCheck(entry,search=re.compile(r'[^a-zA-Z0-9-]').search):
+def entryCheck(entry, search=re.compile(r'[^a-zA-Z0-9-]').search):
     return not bool(search(entry))
 
 
@@ -104,48 +113,53 @@ def getFileHistory(filePath):
         return None
     else:
         # print results
-        #for count in range(0,len(versionInfo)):
+        # for count in range(0,len(versionInfo)):
         #    print count,versionInfo[count]
 
         version_metadata = {}
-        version_metadata['author'] = versionInfo[4].replace('author: ','')
-        version_metadata['creation_date'] = versionInfo[3].replace('date: ','')
+        version_metadata['author'] = versionInfo[4].replace('author: ', '')
+        version_metadata['creation_date'] = versionInfo[3].replace(
+            'date: ', '')
         version_metadata['institution_id'] = 'PCMDI'
-        version_metadata['latest_tag_point'] = versionInfo[2].replace('latest_tagPoint: ','')
-        version_metadata['note'] = versionInfo[1].replace('note: ','')
-        version_metadata['previous_commit'] = versionInfo[0].replace('commit: ','')
+        version_metadata['latest_tag_point'] = versionInfo[2].replace(
+            'latest_tagPoint: ', '')
+        version_metadata['note'] = versionInfo[1].replace('note: ', '')
+        version_metadata['previous_commit'] = versionInfo[0].replace(
+            'commit: ', '')
 
-        #print version_metadata
+        # print version_metadata
         return version_metadata
 
-def versionHistoryUpdate(key,commitMessage,timeStamp,MD5,versionHistory):
+
+def versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory):
     url = 'https://github.com/WCRP-CMIP/CMIP6_CVs/commit/'
-    commitMessage = commitMessage.replace('\"','') ; # Wash out extraneous\" characters
+    commitMessage = commitMessage.replace(
+        '\"', '')  # Wash out extraneous\" characters
     versionHistory[key]['commitMessage'] = commitMessage
     versionHistory[key]['timeStamp'] = timeStamp
-    versionHistory[key]['URL'] = ''.join([url,MD5])
+    versionHistory[key]['URL'] = ''.join([url, MD5])
     versionHistory[key]['MD5'] = MD5
 
     return versionHistory
 
 
-#%% Clean functions
+# %% Clean functions
 def cleanString(string):
-    if isinstance(string,str): # or isinstance(string,unicode):
-    # Take a string and clean it for standard errors
+    if isinstance(string, str):  # or isinstance(string,unicode):
+        # Take a string and clean it for standard errors
         string = string.strip()  # Remove trailing whitespace
         string = string.strip(',.')  # Remove trailing characters
         string = string.replace(' + ', ' and ')  # Replace +
         string = string.replace(' & ', ' and ')  # Replace +
         string = string.replace('   ', ' ')  # Replace '  ', '   '
         string = string.replace('  ', ' ')  # Replace '  ', '   '
-        string = string.replace('None','none')  # Replace None, none
-        string = string.replace('abrupt4xCO2','abrupt-4xCO2')
-        #string = string.replace('(&C', '(and C') # experiment_id html fix
-        #string = string.replace('(& ','(and ') # experiment_id html fix
-        #string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
-        #string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
-        #string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
+        string = string.replace('None', 'none')  # Replace None, none
+        string = string.replace('abrupt4xCO2', 'abrupt-4xCO2')
+        # string = string.replace('(&C', '(and C') # experiment_id html fix
+        # string = string.replace('(& ','(and ') # experiment_id html fix
+        # string = string.replace('GHG&ODS','GHG and ODS') # experiment_id html fix
+        # string = string.replace('anthro ', 'anthropogenic ')  # Replace anthro
+        # string = string.replace('piinatubo', 'pinatubo')  # Replace piinatubo
     else:
         print('Non-string argument, aborting..')
         print(string)
@@ -162,14 +176,14 @@ def dictDepth(x):
     return 0
 
 
-#You can walk a nested dictionary using recursion
+# You can walk a nested dictionary using recursion
 def walk_dict(dictionary):
     for key in dictionary:
         if isinstance(dictionary[key], dict):
-           walk_dict(dictionary[key])
+            walk_dict(dictionary[key])
         else:
-           #do something with dictionary[k]
-           pass
+            # do something with dictionary[k]
+            pass
 
 
 ''' Notes

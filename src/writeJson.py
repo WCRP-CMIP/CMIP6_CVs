@@ -579,13 +579,14 @@ PJD 31 May 2022    - Revised UKESM1-ice-LL license history to reflect correct pu
 PJD  2 Jun 2022    - Revised MCM-UA-1-0 license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1075
 PJD  6 Jun 2022    - Revised numerous EC-Earth3 license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
 PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
+PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised numerous IPSL source_id license histories\"'
+commitMessage = '\"Add CMIP6 Data Reference Syntax (DRS) templates\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -594,6 +595,7 @@ author_institution_id = 'PCMDI'
 # %% List target controlled vocabularies (CVs)
 masterTargets = [
     'activity_id',
+    'DRS',
     'experiment_id',
     'frequency',
     'grid_label',
@@ -636,6 +638,15 @@ activity_id = {
     'VIACSAB': 'Vulnerability, Impacts, Adaptation and Climate Services Advisory Board',
     'VolMIP': 'Volcanic Forcings Model Intercomparison Project'
 }
+
+# %% DRS - directory and filename templates
+DRS = {}
+# DRS["directory_path_template"] = "<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>"
+# DRS["directory_path_example"] = "CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/"
+# DRS["directory_path_sub_experiment_example"] = "CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/"
+# DRS["filename_template"] = "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
+# DRS["filename_example"] = "tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc"
+# DRS["filename_sub_experiment_example"] = "tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc"
 
 # %% Experiments
 tmp = [['experiment_id',
@@ -1040,49 +1051,51 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-IPSLList = [
-    "4AOP-v1-5",
-    "IPSL-CM5A2-INCA",
-    "IPSL-CM6A-ATM-HR",
-    "IPSL-CM6A-ATM-ICO-HR",
-    "IPSL-CM6A-ATM-ICO-LR",
-    "IPSL-CM6A-ATM-ICO-MR",
-    "IPSL-CM6A-ATM-ICO-VHR",
-    "IPSL-CM6A-ATM-LR-REPROBUS",
-    "IPSL-CM6A-LR",
-    "IPSL-CM6A-LR-INCA",
-    "IPSL-CM6A-MR025",
-    "IPSL-CM6A-MR1",
-]
-IPSLListNoData = [
-    "IPSL-CM6A-ATM-ICO-HR",
-    "IPSL-CM6A-ATM-ICO-LR",
-    "IPSL-CM6A-ATM-ICO-MR",
-    "IPSL-CM6A-ATM-ICO-VHR",
-    "IPSL-CM6A-ATM-LR-REPROBUS",
-    "IPSL-CM6A-MR025",
-    "IPSL-CM6A-MR1",
-]
-for count, key in enumerate(IPSLList):
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    if key in IPSLListNoData:
-        source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
-        source_id[key]["license_info"]["history"] = ""
-    else:
-        source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    if key in IPSLListNoData:
-        source_id[key]["license_info"]["source_specific_info"] = ""
-    source_id[key]["license_info"]["url"] = licenseUrl
 
-# Example
+# Example license update
+# IPSLList = [
+#     "4AOP-v1-5",
+#     "IPSL-CM5A2-INCA",
+#     "IPSL-CM6A-ATM-HR",
+#     "IPSL-CM6A-ATM-ICO-HR",
+#     "IPSL-CM6A-ATM-ICO-LR",
+#     "IPSL-CM6A-ATM-ICO-MR",
+#     "IPSL-CM6A-ATM-ICO-VHR",
+#     "IPSL-CM6A-ATM-LR-REPROBUS",
+#     "IPSL-CM6A-LR",
+#     "IPSL-CM6A-LR-INCA",
+#     "IPSL-CM6A-MR025",
+#     "IPSL-CM6A-MR1",
+# ]
+# IPSLListNoData = [
+#     "IPSL-CM6A-ATM-ICO-HR",
+#     "IPSL-CM6A-ATM-ICO-LR",
+#     "IPSL-CM6A-ATM-ICO-MR",
+#     "IPSL-CM6A-ATM-ICO-VHR",
+#     "IPSL-CM6A-ATM-LR-REPROBUS",
+#     "IPSL-CM6A-MR025",
+#     "IPSL-CM6A-MR1",
+# ]
+# for count, key in enumerate(IPSLList):
+#     print("processing:", key)
+#     licenseId = "CC BY 4.0"
+#     if key in IPSLListNoData:
+#         source_id[key]["license_info"] = {}
+#         source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+#         source_id[key]["license_info"]["history"] = ""
+#     else:
+#         source_id[key]["license_info"]["history"] = '; '.join(
+#             [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
+#     source_id[key]["license_info"]["id"] = licenseId
+#     licenseStr = license["license_options"][licenseId]["license_id"]
+#     licenseUrl = license["license_options"][licenseId]["license_url"]
+#     source_id[key]["license_info"]["license"] = "".join(
+#         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+#     if key in IPSLListNoData:
+#         source_id[key]["license_info"]["source_specific_info"] = ""
+#     source_id[key]["license_info"]["url"] = licenseUrl
+
+# Example source_id registration
 # key = 'GISS-E2-2-H'
 # source_id[key] = {}
 # source_id[key]['activity_participation'] = [
@@ -1537,13 +1550,20 @@ for jsonName in masterTargets:
     else:
         url = ''.join(
             ['https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_', jsonName, '.json'])
-    # Create input list and load from web
+    # composite components
     tmp = [[jsonName, url]]
     print("url:", url)
-    vars()[target] = readJsonCreateDict(tmp)
-    vars()[target] = eval(target).get(jsonName)
-    # Fudge to extract duplicate level
-    vars()[target] = eval(target).get(jsonName)
+    # Create input list and load from web
+    # Add DRS to repo
+    if jsonName == "DRS":
+        testVal_DRS = {}
+        testDRS = {}
+    # continue with existing entries
+    else:
+        vars()[target] = readJsonCreateDict(tmp)
+        vars()[target] = eval(target).get(jsonName)
+        # Fudge to extract duplicate level
+        vars()[target] = eval(target).get(jsonName)
     # Test for updates
     # print(eval(target))
     # print(eval(jsonName))
@@ -1551,12 +1571,7 @@ for jsonName in masterTargets:
     # print('---')
     # print(platform.python_version())
     # print(platform.python_version().split('.')[0])
-    if platform.python_version().split('.')[0] == '2':
-        #print('enter py2')
-        # print(cmp(eval(target),eval(jsonName)))
-        vars()[testVal] = cmp(eval(target), eval(jsonName))  # Py2
-        # print(platform.python_version())
-    elif platform.python_version().split('.')[0] == '3':
+    if platform.python_version().split('.')[0] == '3':
         #print('enter py3')
         vars()[testVal] = not(eval(target) == eval(jsonName))  # Py3
         # print(platform.python_version())
@@ -1565,8 +1580,8 @@ for jsonName in masterTargets:
     del(vars()[target], target, testVal, url, tmp)
 del(jsonName)
 # Use binary test output to generate
-versionId = ascertainVersion(testVal_activity_id, testVal_experiment_id,
-                             testVal_frequency, testVal_grid_label,
+versionId = ascertainVersion(testVal_activity_id, testVal_DRS,
+                             testVal_experiment_id, testVal_frequency, testVal_grid_label,
                              testVal_institution_id, testVal_license,
                              testVal_mip_era, testVal_nominal_resolution,
                              testVal_realm, testVal_required_global_attributes,
@@ -1670,10 +1685,19 @@ for jsonName in masterTargets:
     versionInfo['institution_id'] = author_institution_id
     versionInfo['CV_collection_modified'] = timeStamp
     versionInfo['CV_collection_version'] = versionId
-    versionInfo['_'.join([jsonName, 'CV_modified'])
-                ] = versionHistory[jsonName]['timeStamp']
-    versionInfo['_'.join([jsonName, 'CV_note'])
-                ] = versionHistory[jsonName]['commitMessage']
+
+    # force DRS addition
+    if jsonName == "DRS":
+        versionInfo['_'.join([jsonName, 'CV_modified'])
+                    ] = timeStamp
+        versionInfo['_'.join([jsonName, 'CV_note'])
+                    ] = commitMessage
+    else:
+        versionInfo['_'.join([jsonName, 'CV_modified'])
+                    ] = versionHistory[jsonName]['timeStamp']
+        versionInfo['_'.join([jsonName, 'CV_note'])
+                    ] = versionHistory[jsonName]['commitMessage']
+
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
     versionInfo['specs_doc'] = 'v6.2.7 (10th September 2018; https://goo.gl/v1drZl)'
     del(versionInfo1)
@@ -1713,7 +1737,7 @@ for jsonName in masterTargets:
 
 # Cleanup
 del(jsonName, jsonDict, outFile)
-del(activity_id, experiment_id, frequency, grid_label, institution_id, license,
+del(activity_id, DRS, experiment_id, frequency, grid_label, institution_id, license,
     masterTargets, mip_era, nominal_resolution, realm, required_global_attributes,
     source_id, source_type, sub_experiment_id, table_id)
 gc.collect()
@@ -1725,6 +1749,9 @@ MD5 = versionInfo1.get('previous_commit')
 # Now update versionHistory - can use list entries, as var names aren't locatable
 if testVal_activity_id:
     key = 'activity_id'
+    versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
+if testVal_DRS:
+    key = 'DRS'
     versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 if testVal_experiment_id:
     key = 'experiment_id'
@@ -1766,7 +1793,7 @@ if testVal_source_id:
     key = 'source_id'
     versionHistoryUpdate(key, commitMessage, timeStamp, MD5, versionHistory)
 # Test for changes and report
-test = [testVal_activity_id, testVal_experiment_id, testVal_frequency,
+test = [testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency,
         testVal_grid_label, testVal_license, testVal_mip_era,
         testVal_nominal_resolution, testVal_realm,
         testVal_required_global_attributes, testVal_source_type,
@@ -1804,7 +1831,7 @@ if any(test):
     fH.close()
     print('versionHistory.json updated')
 # Cleanup anyway
-del(testVal_activity_id, testVal_experiment_id, testVal_frequency, testVal_grid_label,
+del(testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency, testVal_grid_label,
     testVal_institution_id, testVal_license, testVal_mip_era, testVal_nominal_resolution,
     testVal_realm, testVal_required_global_attributes, testVal_source_id,
     testVal_source_type, testVal_sub_experiment_id, testVal_table_id)

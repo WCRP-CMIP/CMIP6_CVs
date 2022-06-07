@@ -10,10 +10,10 @@ PJD  7 Jun 2022     - Added CMIP6_DRS
 @author: durack1
 """
 # %% imports
+from durolib import getGitInfo, readJsonCreateDict
 import re
 import sys
 sys.path.insert(0, '/sync/git/durolib/durolib')  # trustym
-from durolib import getGitInfo, readJsonCreateDict
 
 # %% Get repo metadata
 
@@ -59,6 +59,7 @@ def ascertainVersion(testVal_activity_id, testVal_DRS, testVal_experiment_id, te
         if testVal_activity_id:
             versionHistory['activity_id']['commitMessage'] = commitMessage
         if testVal_DRS:
+            versionHistory['DRS'] = {}
             versionHistory['DRS']['commitMessage'] = commitMessage
         if testVal_experiment_id:
             versionHistory['experiment_id']['commitMessage'] = commitMessage

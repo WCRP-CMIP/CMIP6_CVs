@@ -1,13 +1,20 @@
 {
-    "DRS":{},
+    "DRS":{
+        "directory_path_example":"CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/",
+        "directory_path_sub_experiment_example":"CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/",
+        "directory_path_template":"<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>",
+        "filename_example":"tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc",
+        "filename_sub_experiment_example":"tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc",
+        "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
+    },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jun  7 14:22:02 2022 -0700",
-        "CV_collection_version":"6.2.57.5",
-        "DRS_CV_modified":"Tue Jun  7 14:22:02 2022 -0700",
+        "CV_collection_modified":"Tue Jun  7 14:29:45 2022 -0700",
+        "CV_collection_version":"6.2.58.0",
+        "DRS_CV_modified":"Tue Jun  7 14:29:45 2022 -0700",
         "DRS_CV_note":"\"Add CMIP6 Data Reference Syntax (DRS) templates\"",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"e87a32c35a16402fa4e364c22112605a834c0f54",
+        "previous_commit":"dbe63b81a3afa30e117cb1b68c4d65eca34f6694",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

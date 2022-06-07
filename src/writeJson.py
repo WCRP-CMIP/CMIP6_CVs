@@ -641,12 +641,12 @@ activity_id = {
 
 # %% DRS - directory and filename templates
 DRS = {}
-# DRS["directory_path_template"] = "<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>"
-# DRS["directory_path_example"] = "CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/"
-# DRS["directory_path_sub_experiment_example"] = "CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/"
-# DRS["filename_template"] = "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
-# DRS["filename_example"] = "tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc"
-# DRS["filename_sub_experiment_example"] = "tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc"
+DRS["directory_path_template"] = "<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>"
+DRS["directory_path_example"] = "CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/"
+DRS["directory_path_sub_experiment_example"] = "CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/"
+DRS["filename_template"] = "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
+DRS["filename_example"] = "tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc"
+DRS["filename_sub_experiment_example"] = "tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc"
 
 # %% Experiments
 tmp = [['experiment_id',
@@ -1555,15 +1555,15 @@ for jsonName in masterTargets:
     print("url:", url)
     # Create input list and load from web
     # Add DRS to repo
-    if jsonName == "DRS":
-        testVal_DRS = {}
-        testDRS = {}
+    #if jsonName == "DRS":
+    #    testVal_DRS = {}
+    #    testDRS = {}
     # continue with existing entries
-    else:
-        vars()[target] = readJsonCreateDict(tmp)
-        vars()[target] = eval(target).get(jsonName)
-        # Fudge to extract duplicate level
-        vars()[target] = eval(target).get(jsonName)
+    #else:
+    vars()[target] = readJsonCreateDict(tmp)
+    vars()[target] = eval(target).get(jsonName)
+    # Fudge to extract duplicate level
+    vars()[target] = eval(target).get(jsonName)
     # Test for updates
     # print(eval(target))
     # print(eval(jsonName))

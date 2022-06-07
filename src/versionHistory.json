@@ -1,5 +1,11 @@
 {
     "versionHistory":{
+        "DRS":{
+            "MD5":"dbe63b81a3afa30e117cb1b68c4d65eca34f6694",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/dbe63b81a3afa30e117cb1b68c4d65eca34f6694",
+            "commitMessage":"Add CMIP6 Data Reference Syntax (DRS) templates",
+            "timeStamp":"Tue Jun  7 14:29:45 2022 -0700"
+        },
         "activity_id":{
             "MD5":"1978084b171c7822174b979b042a05326a25ad1d",
             "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1978084b171c7822174b979b042a05326a25ad1d",
@@ -85,8 +91,8 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
-            "versionCVContent":57,
+            "versionCVCommit":0,
+            "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

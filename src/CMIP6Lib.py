@@ -59,6 +59,7 @@ def ascertainVersion(testVal_activity_id, testVal_DRS, testVal_experiment_id, te
         if testVal_activity_id:
             versionHistory['activity_id']['commitMessage'] = commitMessage
         if testVal_DRS:
+            # versionHistory['DRS'] = {}  # added DRS 220607
             versionHistory['DRS']['commitMessage'] = commitMessage
         if testVal_experiment_id:
             versionHistory['experiment_id']['commitMessage'] = commitMessage

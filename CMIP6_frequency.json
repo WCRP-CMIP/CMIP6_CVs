@@ -18,13 +18,13 @@
         "yrPt":"sampled yearly, at specified time point within the time period"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jun  7 14:22:02 2022 -0700",
-        "CV_collection_version":"6.2.57.5",
+        "CV_collection_modified":"Tue Jun  7 14:29:45 2022 -0700",
+        "CV_collection_version":"6.2.58.0",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "frequency_CV_modified":"Mon May 24 13:48:15 2021 00100",
         "frequency_CV_note":"Update description of 3hr and 6hr frequencies",
         "institution_id":"PCMDI",
-        "previous_commit":"e87a32c35a16402fa4e364c22112605a834c0f54",
+        "previous_commit":"dbe63b81a3afa30e117cb1b68c4d65eca34f6694",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

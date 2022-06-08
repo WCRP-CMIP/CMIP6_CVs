@@ -3839,11 +3839,11 @@
             "label_extended":"GFDL-AM4",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-03-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3904,11 +3904,11 @@
             "label_extended":"GFDL-CM4",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-03-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-03-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3961,11 +3961,11 @@
             "label_extended":"GFDL-CM4C192",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -4018,11 +4018,11 @@
             "label_extended":"GFDL-ESM2M",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -4084,11 +4084,11 @@
             "label_extended":"GFDL-ESM4",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -4139,6 +4139,14 @@
             ],
             "label":"GFDL-GLOBAL-LBL",
             "label_extended":"GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)",
+            "license_info":{
+                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -4190,11 +4198,11 @@
             "label_extended":"GFDL GPU radiative transfer code with two stream solver (March 2019)",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -4247,11 +4255,11 @@
             "label_extended":"GFDL-OM4p5B",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -4304,11 +4312,11 @@
             "label_extended":"GFDL Reference Forward Model Line-by-Line with DISORT solver (March 2019)",
             "license_info":{
                 "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2018-07-01: initially published under CC BY-NC-SA 4.0; 2022-06-08: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8465,13 +8473,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun  8 12:10:02 2022 -0700",
-        "CV_collection_version":"6.2.58.1",
+        "CV_collection_modified":"Wed Jun  8 12:31:12 2022 -0700",
+        "CV_collection_version":"6.2.58.2",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1ccd44ea2243e7eea29da6e8c8bc66d63aeb7544",
-        "source_id_CV_modified":"Mon Jun  6 14:55:18 2022 -0700",
-        "source_id_CV_note":"Revise 5 NorESM2 source_id license histories; deregister *LME*, and *MH",
+        "previous_commit":"864dde9b9a8e2e60aff22a94100cabb04057b216",
+        "source_id_CV_modified":"Wed Jun  8 12:10:02 2022 -0700",
+        "source_id_CV_note":"Revise 9 GFDL source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

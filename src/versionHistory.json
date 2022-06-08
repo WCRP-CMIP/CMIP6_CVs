@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"1ccd44ea2243e7eea29da6e8c8bc66d63aeb7544",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1ccd44ea2243e7eea29da6e8c8bc66d63aeb7544",
-            "commitMessage":"Revise 5 NorESM2 source_id license histories; deregister *LME*, and *MH",
-            "timeStamp":"Wed Jun  8 12:10:02 2022 -0700"
+            "MD5":"864dde9b9a8e2e60aff22a94100cabb04057b216",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/864dde9b9a8e2e60aff22a94100cabb04057b216",
+            "commitMessage":"Revise 9 GFDL source_id license histories",
+            "timeStamp":"Wed Jun  8 12:31:12 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":1,
+            "versionCVCommit":2,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

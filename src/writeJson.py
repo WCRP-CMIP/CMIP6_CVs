@@ -30,7 +30,7 @@ Paul J. Durack 11th July 2016
 
 This script generates all controlled vocabulary (CV) json files residing this this subdirectory
 """
-"""
+"""2016
 PJD 11 Jul 2016    - Started
 PJD 12 Jul 2016    - Read experiments from https://github.com/PCMDI/cmip6-cmor-tables/blob/CMIP6_CV/Tables/CMIP6_CV.json
 PJD 12 Jul 2016    - Format tweaks and typo corrections
@@ -123,7 +123,7 @@ PJD  7 Dec 2016    - Add institution_id html https://github.com/WCRP-CMIP/CMIP6_
 PJD 14 Dec 2016    - Add frequency_id 1hr https://github.com/WCRP-CMIP/CMIP6_CVs/issues/178
 PJD 14 Dec 2016    - Add source_id GISS-E2-1 variants https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
 """
-"""
+"""2017
 PJD  3 Jan 2017    - Add institution_id NERC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/183
 PJD  3 Jan 2017    - Update source_id EC-Earth-3-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/93
 PJD  3 Jan 2017    - Register source_id EC-Earth-3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/94
@@ -259,7 +259,7 @@ PJD 14 Dec 2017    - Update activity_participation for multiple MOHC source_id e
 PJD 19 Dec 2017    - Update institution_id for HadGEM3-GC31-H* entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/441
 PJD 19 Dec 2017    - Update experiment_id AerChemMIP and AMIP additional_allowed_model_components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/438
 """
-"""
+"""2018
 PJD  8 Jan 2018    - Register institution_id DWD https://github.com/WCRP-CMIP/CMIP6_CVs/issues/446
 PJD 10 Jan 2018    - Revise MPI-M source_id MPIESM-1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/196
 PJD 16 Jan 2018    - Register institution_id UHH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/450
@@ -360,7 +360,7 @@ PJD 29 Nov 2018    - Register source_id TaiESM1 https://github.com/WCRP-CMIP/CMI
 PJD 29 Nov 2018    - Revise experiment_id values, BGC as allowed component https://github.com/WCRP-CMIP/CMIP6_CVs/issues/623
 PJD 23 Dec 2018    - Revise institution_id AS-RCEC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/625
 """
-"""
+"""2019
 PJD 16 Jan 2019    - Revise source_id values for EC-Earth3 configurations https://github.com/WCRP-CMIP/CMIP6_CVs/issues/559
 PJD 16 Jan 2019    - Revise LS3MIP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/632 and 633
 PJD 16 Jan 2019    - Revise DCPP experiment_id values https://github.com/WCRP-CMIP/CMIP6_CVs/issues/631
@@ -471,7 +471,7 @@ PJD 19 Dec 2019    - Add external_variables to required_global_attributes https:
 PJD 19 Dec 2019    - Reverting addition of external_variables to required_global_attributes https://github.com/WCRP-CMIP/CMIP6_CVs/issues/849
 PJD 27 Dec 2019    - Revise source_id CAS-ESM1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/852
 """
-"""
+"""2020
 PJD  2 Jan 2020    - Revise source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
 PJD  2 Jan 2020    - Revise source_id FGOALS-f3-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/855
 PJD 15 Jan 2020    - Revise source_ids GISS-E2-1-H, GISS-E3-G https://github.com/WCRP-CMIP/CMIP6_CVs/issues/858
@@ -539,7 +539,7 @@ PJD  7 Dec 2020    - Revise multiple source_id entries E3SM* https://github.com/
 PJD 15 Dec 2020    - Revise experiment_id historical parent experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/957
 PJD 15 Dec 2020    - Revise source_id MIROC-ES2L https://github.com/WCRP-CMIP/CMIP6_CVs/issues/993
 """
-"""
+"""2021
 MSM 15 Jan 2021    - Revise source_id MPI-ESM1-2-HR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/998
 MSM 19 Jan 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1000
 PJD 20 Jan 2021    - Revise multiple EC-Earth source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1002
@@ -557,6 +557,8 @@ PJD 22 Jul 2021    - Revise source_id E3SM-1-0 add PAMIP https://github.com/WCRP
 PJD 26 Jul 2021    - Revise source_id ICON-ESM-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1034
 PJD 10 Nov 2021    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 PJD  7 Dec 2021    - Register source_id TaiESM1-TIMCOM2 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1040
+"""
+"""2022
 MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
 PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
@@ -581,13 +583,14 @@ PJD  6 Jun 2022    - Revised numerous EC-Earth3 license histories https://github
 PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
 PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister NorESM2-LME, NorESM2-LMEC and NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
+PJD  8 Jun 2022    - Revised 9 GFDL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revise 5 NorESM2 source_id license histories; deregister *LME*, and *MH\"'
+commitMessage = '\"Revise 9 GFDL source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1055,25 +1058,29 @@ del(tmp)
 
 # update licenses
 modList = [
-    "NorCPM1",
-    "NorESM1-F",
-    "NorESM2-LM",
-    "NorESM2-HH",
-    "NorESM2-MM",
+    "GFDL-AM4",
+    "GFDL-CM4",
+    "GFDL-CM4C192",
+    "GFDL-ESM2M",
+    "GFDL-ESM4",
+    "GFDL-GLOBAL-LBL",
+    "GFDL-GRTCODE",
+    "GFDL-OM4p5B",
+    "GFDL-RFM-DISORT",
 ]
 modListNoData = [
-    "NorESM2-HH",
+    "GFDL-GLOBAL-LBL",
 ]
 for count, key in enumerate(modList):
     print("processing:", key)
     licenseId = "CC BY 4.0"
     if key in modListNoData:
         source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@met.no <- noresm-ncc"
+        source_id[key]["license_info"]["exceptions_contact"] = "@noaa.gov <- gfdl.climate.model.info"
         source_id[key]["license_info"]["history"] = ""
     else:
         source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
+            [source_id[key]["license_info"]["history"], "2022-06-08: relaxed to CC BY 4.0"])
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]
     licenseUrl = license["license_options"][licenseId]["license_url"]
@@ -1082,15 +1089,6 @@ for count, key in enumerate(modList):
     if key in modListNoData:
         source_id[key]["license_info"]["source_specific_info"] = ""
     source_id[key]["license_info"]["url"] = licenseUrl
-
-# deregister source_id entries
-modList = [
-    "NorESM2-LME",
-    "NorESM2-LMEC",
-    "NorESM2-MH",
-]
-for key in modList:
-    source_id.pop(key)
 
 # Example license update
 # IPSLList = [

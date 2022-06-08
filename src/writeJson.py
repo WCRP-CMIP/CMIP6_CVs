@@ -1055,25 +1055,29 @@ del(tmp)
 
 # update licenses
 modList = [
-    "NorCPM1",
-    "NorESM1-F",
-    "NorESM2-LM",
-    "NorESM2-HH",
-    "NorESM2-MM",
+    "GFDL-AM4",
+    "GFDL-CM4",
+    "GFDL-CM4C192",
+    "GFDL-ESM2M",
+    "GFDL-ESM4",
+    "GFDL-GLOBAL-LBL",
+    "GFDL-GRTCODE",
+    "GFDL-OM4p5B",
+    "GFDL-RFM-DISORT",
 ]
 modListNoData = [
-    "NorESM2-HH",
+    "GFDL-GLOBAL-LBL",
 ]
 for count, key in enumerate(modList):
     print("processing:", key)
     licenseId = "CC BY 4.0"
     if key in modListNoData:
         source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@met.no <- noresm-ncc"
+        source_id[key]["license_info"]["exceptions_contact"] = "@noaa.gov <- gfdl.climate.model.info"
         source_id[key]["license_info"]["history"] = ""
     else:
         source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
+            [source_id[key]["license_info"]["history"], "2022-06-08: relaxed to CC BY 4.0"])
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]
     licenseUrl = license["license_options"][licenseId]["license_url"]
@@ -1082,15 +1086,6 @@ for count, key in enumerate(modList):
     if key in modListNoData:
         source_id[key]["license_info"]["source_specific_info"] = ""
     source_id[key]["license_info"]["url"] = licenseUrl
-
-# deregister source_id entries
-modList = [
-    "NorESM2-LME",
-    "NorESM2-LMEC",
-    "NorESM2-MH",
-]
-for key in modList:
-    source_id.pop(key)
 
 # Example license update
 # IPSLList = [

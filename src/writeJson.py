@@ -580,13 +580,14 @@ PJD  2 Jun 2022    - Revised MCM-UA-1-0 license history https://github.com/WCRP-
 PJD  6 Jun 2022    - Revised numerous EC-Earth3 license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
 PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
+PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister NorESM2-LME, NorESM2-LMEC and NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Add CMIP6 Data Reference Syntax (DRS) templates\"'
+commitMessage = '\"Revise 5 NorESM2 source_id license histories; deregister *LME*, and *MH\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1051,6 +1052,45 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+
+# update licenses
+modList = [
+    "NorCPM1",
+    "NorESM1-F",
+    "NorESM2-LM",
+    "NorESM2-HH",
+    "NorESM2-MM",
+]
+modListNoData = [
+    "NorESM2-HH",
+]
+for count, key in enumerate(modList):
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    if key in modListNoData:
+        source_id[key]["license_info"] = {}
+        source_id[key]["license_info"]["exceptions_contact"] = "@met.no <- noresm-ncc"
+        source_id[key]["license_info"]["history"] = ""
+    else:
+        source_id[key]["license_info"]["history"] = '; '.join(
+            [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    if key in modListNoData:
+        source_id[key]["license_info"]["source_specific_info"] = ""
+    source_id[key]["license_info"]["url"] = licenseUrl
+
+# deregister source_id entries
+modList = [
+    "NorESM2-LME",
+    "NorESM2-LMEC",
+    "NorESM2-MH",
+]
+for key in modList:
+    source_id.pop(key)
 
 # Example license update
 # IPSLList = [
@@ -1554,12 +1594,12 @@ for jsonName in masterTargets:
     tmp = [[jsonName, url]]
     print("url:", url)
     # Create input list and load from web
-    # Add DRS to repo
-    #if jsonName == "DRS":
+    # force add DRS to repo
+    # if jsonName == "DRS":
     #    testVal_DRS = {}
     #    testDRS = {}
     # continue with existing entries
-    #else:
+    # else:
     vars()[target] = readJsonCreateDict(tmp)
     vars()[target] = eval(target).get(jsonName)
     # Fudge to extract duplicate level
@@ -1568,11 +1608,9 @@ for jsonName in masterTargets:
     # print(eval(target))
     # print(eval(jsonName))
     # print('---')
-    # print('---')
     # print(platform.python_version())
     # print(platform.python_version().split('.')[0])
     if platform.python_version().split('.')[0] == '3':
-        #print('enter py3')
         vars()[testVal] = not(eval(target) == eval(jsonName))  # Py3
         # print(platform.python_version())
     #print(not(eval(target) == eval(jsonName)))
@@ -1687,16 +1725,16 @@ for jsonName in masterTargets:
     versionInfo['CV_collection_version'] = versionId
 
     # force DRS addition
-    if jsonName == "DRS":
-        versionInfo['_'.join([jsonName, 'CV_modified'])
-                    ] = timeStamp
-        versionInfo['_'.join([jsonName, 'CV_note'])
-                    ] = commitMessage
-    else:
-        versionInfo['_'.join([jsonName, 'CV_modified'])
-                    ] = versionHistory[jsonName]['timeStamp']
-        versionInfo['_'.join([jsonName, 'CV_note'])
-                    ] = versionHistory[jsonName]['commitMessage']
+    # if jsonName == "DRS":
+    #     versionInfo['_'.join([jsonName, 'CV_modified'])
+    #                 ] = timeStamp
+    #     versionInfo['_'.join([jsonName, 'CV_note'])
+    #                 ] = commitMessage
+    # else:
+    versionInfo['_'.join([jsonName, 'CV_modified'])
+                ] = versionHistory[jsonName]['timeStamp']
+    versionInfo['_'.join([jsonName, 'CV_note'])
+                ] = versionHistory[jsonName]['commitMessage']
 
     versionInfo['previous_commit'] = versionInfo1.get('previous_commit')
     versionInfo['specs_doc'] = 'v6.2.7 (10th September 2018; https://goo.gl/v1drZl)'

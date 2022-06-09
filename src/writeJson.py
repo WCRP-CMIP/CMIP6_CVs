@@ -1113,7 +1113,7 @@ source_id[key]['source_id'] = key
 # license
 licenseId = "CC BY 4.0"
 source_id[key]["license_info"] = {}
-source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+source_id[key]["license_info"]["exceptions_contact"] = "@met.no <- noresm-ncc"
 source_id[key]["license_info"]["history"] = ""
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]

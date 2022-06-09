@@ -7617,7 +7617,7 @@
             "label":"NorESM2-MH",
             "label_extended":"NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)",
             "license_info":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
+                "exceptions_contact":"@met.no <- noresm-ncc",
                 "history":"",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
@@ -8478,11 +8478,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun  9 11:35:08 2022 -0700",
+        "CV_collection_modified":"Thu Jun  9 11:38:57 2022 -0700",
         "CV_collection_version":"6.2.58.3",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9ec71b4615854991e3b80edb737c7d21d2278664",
+        "previous_commit":"15cfb8119c597c12af300837d8a8f00e4294699b",
         "source_id_CV_modified":"Wed Jun  8 12:31:12 2022 -0700",
         "source_id_CV_note":"Correct erroneous NorESM2-MH deregistration",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

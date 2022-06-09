@@ -584,13 +584,14 @@ PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://g
 PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
 PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister NorESM2-LME, NorESM2-LMEC and NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
 PJD  8 Jun 2022    - Revised 9 GFDL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
+PJD  9 Jun 2022    - Correct erroneous deregistration of NorESM2-MH source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revise 9 GFDL source_id license histories\"'
+commitMessage = '\"Correct erroneous NorESM2-MH deregistration\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1055,40 +1056,72 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-
-# update licenses
-modList = [
-    "GFDL-AM4",
-    "GFDL-CM4",
-    "GFDL-CM4C192",
-    "GFDL-ESM2M",
-    "GFDL-ESM4",
-    "GFDL-GLOBAL-LBL",
-    "GFDL-GRTCODE",
-    "GFDL-OM4p5B",
-    "GFDL-RFM-DISORT",
+# remove NorESM2-HH
+key = "NorESM2-HH"
+source_id.pop(key)
+# reinstate
+key = "NorESM2-MH"
+source_id[key] = {}
+source_id[key]['activity_participation'] = [
+    "AerChemMIP",
+    "CFMIP",
+    "CMIP",
+    "DAMIP",
+    "OMIP",
+    "RFMIP",
+    "ScenarioMIP"
 ]
-modListNoData = [
-    "GFDL-GLOBAL-LBL",
+source_id[key]['cohort'] = [
+    'Registered'
 ]
-for count, key in enumerate(modList):
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    if key in modListNoData:
-        source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@noaa.gov <- gfdl.climate.model.info"
-        source_id[key]["license_info"]["history"] = ""
-    else:
-        source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-08: relaxed to CC BY 4.0"])
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    if key in modListNoData:
-        source_id[key]["license_info"]["source_specific_info"] = ""
-    source_id[key]["license_info"]["url"] = licenseUrl
+source_id[key]['institution_id'] = [
+    'NCC'
+]
+source_id[key]['label'] = key
+source_id[key]['label_extended'] = "NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)"
+source_id[key]['model_component'] = {}
+source_id[key]['model_component']['aerosol'] = {}
+source_id[key]['model_component']['aerosol']['description'] = "OsloAero"
+source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = "100 km"
+source_id[key]['model_component']['atmos'] = {}
+source_id[key]['model_component']['atmos'][
+    'description'] = "CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)"
+source_id[key]['model_component']['atmos']['native_nominal_resolution'] = "100 km"
+source_id[key]['model_component']['atmosChem'] = {}
+source_id[key]['model_component']['atmosChem']['description'] = "OsloChemSimp"
+source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = "100 km"
+source_id[key]['model_component']['land'] = {}
+source_id[key]['model_component']['land']['description'] = "CLM"
+source_id[key]['model_component']['land']['native_nominal_resolution'] = "100 km"
+source_id[key]['model_component']['landIce'] = {}
+source_id[key]['model_component']['landIce']['description'] = "CISM"
+source_id[key]['model_component']['landIce']['native_nominal_resolution'] = "100 km"
+source_id[key]['model_component']['ocean'] = {}
+source_id[key]['model_component']['ocean']['description'] = "".join(["MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top ",
+                                                                     "grid cell minimum 0-2.5 m [native model uses hybrid density ",
+                                                                     "and generic upper-layer coordinate interpolated to z-level ",
+                                                                     "for contributed data])"])
+source_id[key]['model_component']['ocean']['native_nominal_resolution'] = "25 km"
+source_id[key]['model_component']['ocnBgchem'] = {}
+source_id[key]['model_component']['ocnBgchem']['description'] = "HAMOCC"
+source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = "25 km"
+source_id[key]['model_component']['seaIce'] = {}
+source_id[key]['model_component']['seaIce']['description'] = "CICE"
+source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = "25 km"
+source_id[key]['release_year'] = '2017'
+source_id[key]['source_id'] = key
+# license
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"] = {}
+source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+source_id[key]["license_info"]["history"] = ""
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["source_specific_info"] = ""
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update
 # IPSLList = [

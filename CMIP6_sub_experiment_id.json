@@ -76,11 +76,11 @@
         "s2029":"initialized near end of year 2029"
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 10 09:58:57 2022 00100",
-        "CV_collection_version":"6.2.58.4",
+        "CV_collection_modified":"Fri Jun 10 12:11:44 2022 00100",
+        "CV_collection_version":"6.2.58.5",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "institution_id":"MOHC",
-        "previous_commit":"a8c83772bb4d492380424631b0014df78f287b70",
+        "previous_commit":"74e21fb23feb01085df4713363f7d5790cf8a379",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)",
         "sub_experiment_id_CV_modified":"Mon Jun 17 11:01:51 2019 -0700",
         "sub_experiment_id_CV_note":"Revise sub_experiment_id values"

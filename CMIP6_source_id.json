@@ -77,11 +77,11 @@
             "label_extended":"Australian Community Climate and Earth System Simulator Climate Model Version 2",
             "license_info":{
                 "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2019-11-08: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-11-08: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -142,11 +142,11 @@
             "label_extended":"Australian Community Climate and Earth System Simulator Earth System Model Version 1.5",
             "license_info":{
                 "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2019-11-12: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-11-12: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -199,11 +199,11 @@
             "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2",
             "license_info":{
                 "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2021-06-16: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2021-06-16: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -256,11 +256,11 @@
             "label_extended":"Australian Community Climate and Earth System Simulator Ocean Model Version 2 quarter degree",
             "license_info":{
                 "exceptions_contact":"@csiro.au <- access_csiro",
-                "history":"2021-06-17: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2021-06-17: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8478,13 +8478,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 10 09:58:57 2022 00100",
-        "CV_collection_version":"6.2.58.4",
+        "CV_collection_modified":"Fri Jun 10 12:11:44 2022 00100",
+        "CV_collection_version":"6.2.58.5",
         "author":"Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>",
         "institution_id":"MOHC",
-        "previous_commit":"a8c83772bb4d492380424631b0014df78f287b70",
-        "source_id_CV_modified":"Thu Jun  9 11:38:57 2022 -0700",
-        "source_id_CV_note":"Revised licence histories for AS-RCEC and NTU models (TaiESM*, HiRAM*)",
+        "previous_commit":"74e21fb23feb01085df4713363f7d5790cf8a379",
+        "source_id_CV_modified":"Fri Jun 10 09:58:57 2022 00100",
+        "source_id_CV_note":"Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*)",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -586,6 +586,7 @@ PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister N
 PJD  8 Jun 2022    - Revised 9 GFDL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
 PJD  9 Jun 2022    - Correct erroneous deregistration of NorESM2-MH source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
 MSM  10 Jun 2022   - Revised license histories for AS-RCEC and NTU models (TaiESM*, HiRAM*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1088
+MSM  10 Jun 2022   - Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1089
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -593,7 +594,7 @@ MSM  10 Jun 2022   - Revised license histories for AS-RCEC and NTU models (TaiES
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised licence histories for AS-RCEC and NTU models (TaiESM*, HiRAM*)\"'
+commitMessage = '\"Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*)\"'
 author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 author_institution_id = 'MOHC'
 #author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1168,16 +1169,14 @@ del(tmp)
 #         source_id[key]["license_info"]["source_specific_info"] = ""
 #     source_id[key]["license_info"]["url"] = licenseUrl
 
-ASRCEC_list = [
-    "HiRAM-SIT-HR",
-    "HiRAM-SIT-LR", 
-    "TaiESM1", 
+source_ids_to_relax_list = [
+    "ACCESS-CM2", 
+    "ACCESS-ESM1-5", 
+    "ACCESS-OM2", 
+    "ACCESS-OM2-025",
 ]
-NTU_list = [
-    "TaiESM1-TIMCOM",
-    "TaiESM1-TIMCOM2",
-]
-for key in ASRCEC_list + NTU_list:
+
+for key in source_ids_to_relax_list:
     print("processing:", key)
     licenseId = "CC BY 4.0"
     source_id[key]["license_info"]["history"] += "; 2022-06-10: relaxed to CC BY 4.0"

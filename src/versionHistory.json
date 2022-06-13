@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"74e21fb23feb01085df4713363f7d5790cf8a379",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/74e21fb23feb01085df4713363f7d5790cf8a379",
-            "commitMessage":"Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*)",
-            "timeStamp":"Fri Jun 10 12:11:44 2022 00100"
+            "MD5":"2789d65811260d4bc8faf7a5316bf67b9c6c13f9",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2789d65811260d4bc8faf7a5316bf67b9c6c13f9",
+            "commitMessage":"Revised license histories for MIROC* models; Deregister NICAM16-9D-L78",
+            "timeStamp":"Mon Jun 13 14:57:00 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":5,
+            "versionCVCommit":6,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

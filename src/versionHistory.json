@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"2789d65811260d4bc8faf7a5316bf67b9c6c13f9",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2789d65811260d4bc8faf7a5316bf67b9c6c13f9",
-            "commitMessage":"Revised license histories for MIROC* models; Deregister NICAM16-9D-L78",
-            "timeStamp":"Mon Jun 13 14:57:00 2022 -0700"
+            "MD5":"5ad57f29f98ba38ddee4dd05110d10e6c626e946",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5ad57f29f98ba38ddee4dd05110d10e6c626e946",
+            "commitMessage":"Revised license histories for MIROC NICAM* models",
+            "timeStamp":"Wed Jun 15 16:35:11 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":6,
+            "versionCVCommit":7,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

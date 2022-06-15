@@ -7201,11 +7201,11 @@
             "label_extended":"NICAM.16 gl07-L38 with NSW6",
             "license_info":{
                 "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-03-18: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-03-18: initially published under CC BY-SA 4.0; 2022-06-14: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7260,11 +7260,11 @@
             "label_extended":"NICAM.16 gl08-L38 with NSW6",
             "license_info":{
                 "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-08-30: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0; 2022-06-14: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7319,11 +7319,11 @@
             "label_extended":"NICAM.16 gl09-L38 with NSW6",
             "license_info":{
                 "exceptions_contact":"@iis.u-tokyo.ac.jp <- onuma",
-                "history":"2019-08-30: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-08-30: initially published under CC BY-SA 4.0; 2022-06-14: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8428,13 +8428,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun 13 14:57:00 2022 -0700",
-        "CV_collection_version":"6.2.58.6",
+        "CV_collection_modified":"Wed Jun 15 16:35:11 2022 -0700",
+        "CV_collection_version":"6.2.58.7",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"2789d65811260d4bc8faf7a5316bf67b9c6c13f9",
-        "source_id_CV_modified":"Fri Jun 10 12:11:44 2022 00100",
-        "source_id_CV_note":"Revised license histories for MIROC* models; Deregister NICAM16-9D-L78",
+        "previous_commit":"5ad57f29f98ba38ddee4dd05110d10e6c626e946",
+        "source_id_CV_modified":"Mon Jun 13 14:57:00 2022 -0700",
+        "source_id_CV_note":"Revised license histories for MIROC NICAM* models",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

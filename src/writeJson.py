@@ -588,6 +588,7 @@ PJD  9 Jun 2022    - Correct erroneous deregistration of NorESM2-MH source_id ht
 MSM 10 Jun 2022    - Revised license histories for AS-RCEC and NTU models (TaiESM*, HiRAM*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1088
 MSM 10 Jun 2022    - Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1089
 PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NICAM16-9D-L78 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1092
+PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -595,7 +596,7 @@ PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NIC
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised license histories for MIROC* models; Deregister NICAM16-9D-L78\"'
+commitMessage = '\"Revised license histories for MIROC NICAM* models\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1061,25 +1062,21 @@ del(tmp)
 
 # Fix issues
 source_ids_to_relax_list = [
-    "MIROC-ES2H",
-    "MIROC-ES2H-NB",
-    "MIROC-ES2L",
-    "MIROC6",
+    "NICAM16-7S",
+    "NICAM16-8S",
+    "NICAM16-9S",
 ]
 
 for key in source_ids_to_relax_list:
     print("processing:", key)
     licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["history"] += "; 2022-06-10: relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["history"] += "; 2022-06-14: relaxed to CC BY 4.0"
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]
     licenseUrl = license["license_options"][licenseId]["license_url"]
     source_id[key]["license_info"]["license"] = "".join(
         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
     source_id[key]["license_info"]["url"] = licenseUrl
-
-key = "NICAM16-9D-L78"
-source_id.pop(key)
 
 # Example license update
 # IPSLList = [

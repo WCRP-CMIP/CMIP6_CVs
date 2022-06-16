@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
-            "commitMessage":"Deregister source_id BNU-ESM-1-1 and institution_id BNU",
-            "timeStamp":"Thu Jun 16 10:47:09 2022 -0700"
+            "MD5":"98ede0aa8b9151f18ec41388ab5a0c8c01d3a49e",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/98ede0aa8b9151f18ec41388ab5a0c8c01d3a49e",
+            "commitMessage":"Deregister source_id CNRM-ESM2-1-HR",
+            "timeStamp":"Thu Jun 16 11:04:26 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":9,
+            "versionCVCommit":10,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

@@ -591,6 +591,7 @@ PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NIC
 PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1095
 PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1100
+PJD 16 Jun 2022    - Deregistered CNRM-ESM2-1-HR source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1101
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -598,7 +599,7 @@ PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id h
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregister source_id BNU-ESM-1-1 and institution_id BNU\"'
+commitMessage = '\"Deregister source_id CNRM-ESM2-1-HR\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1062,7 +1063,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "BNU-ESM-1-1"
+key = "CNRM-ESM2-1-HR"
 source_id.pop(key)
 
 # Example license update, including email

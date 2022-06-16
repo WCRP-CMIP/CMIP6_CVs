@@ -885,63 +885,6 @@
             "release_year":"2019",
             "source_id":"BESM-2-9"
         },
-        "BNU-ESM-1-1":{
-            "activity_participation":[
-                "C4MIP",
-                "CDRMIP",
-                "CFMIP",
-                "CMIP",
-                "GMMIP",
-                "GeoMIP",
-                "OMIP",
-                "RFMIP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "BNU"
-            ],
-            "label":"BNU-ESM 1.1",
-            "label_extended":"BNU-ESM 1.1",
-            "model_component":{
-                "aerosol":{
-                    "description":"CAM-chem; semi-interactive",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmos":{
-                    "description":"CAM4 (2deg; 144 x 96 longitude/latitude; 26 levels; top level 2.194 mb)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"CoLM version 2014 with carbon-nitrogen interactions",
-                    "native_nominal_resolution":"250 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"MOM4p1 (tripolar, primarily 1deg latitude/longitude, down to 1/3deg within 30deg of the equatorial tropics; 360 x 200 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"Dynamic ecosystem-carbon model version 1",
-                    "native_nominal_resolution":"100 km"
-                },
-                "seaIce":{
-                    "description":"CICE4.1",
-                    "native_nominal_resolution":"100 km"
-                }
-            },
-            "release_year":"2016",
-            "source_id":"BNU-ESM-1-1"
-        },
         "CAM-MPAS-HR":{
             "activity_participation":[
                 "HighResMIP"
@@ -8428,13 +8371,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 15 16:47:10 2022 -0700",
-        "CV_collection_version":"6.2.58.8",
+        "CV_collection_modified":"Thu Jun 16 10:47:09 2022 -0700",
+        "CV_collection_version":"6.2.58.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"bfd3878ce4a72a51dd647583ae21edd24d6be474",
-        "source_id_CV_modified":"Wed Jun 15 16:35:11 2022 -0700",
-        "source_id_CV_note":"Revised license histories for E3SM* models",
+        "previous_commit":"906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
+        "source_id_CV_modified":"Wed Jun 15 16:47:10 2022 -0700",
+        "source_id_CV_note":"Deregister source_id BNU-ESM-1-1 and institution_id BNU",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

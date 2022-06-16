@@ -4,7 +4,6 @@
         "AS-RCEC":"Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan",
         "AWI":"Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany",
         "BCC":"Beijing Climate Center, Beijing 100081, China",
-        "BNU":"Beijing Normal University, Beijing 100875, China",
         "CAMS":"Chinese Academy of Meteorological Sciences, Beijing 100081, China",
         "CAS":"Chinese Academy of Sciences, Beijing 100029, China",
         "CCCR-IITM":"Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India",
@@ -55,13 +54,13 @@
         "UofT":"Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 15 16:47:10 2022 -0700",
-        "CV_collection_version":"6.2.58.8",
+        "CV_collection_modified":"Thu Jun 16 10:47:09 2022 -0700",
+        "CV_collection_version":"6.2.58.9",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Mon Nov 16 11:16:39 2020 -0800",
-        "institution_id_CV_note":"Register institution_id LLNL; Py3 cleanup",
-        "previous_commit":"bfd3878ce4a72a51dd647583ae21edd24d6be474",
+        "institution_id_CV_note":"Deregister source_id BNU-ESM-1-1 and institution_id BNU",
+        "previous_commit":"906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

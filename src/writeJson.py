@@ -591,6 +591,7 @@ PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NIC
 PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1095
 PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1100
+PJD 16 Jun 2022    - Deregistered CESM2-SE source_id and revised 8 CESM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1102
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -598,7 +599,7 @@ PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id h
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregister source_id BNU-ESM-1-1 and institution_id BNU\"'
+commitMessage = '\"Deregister source_id CESM2-SE; Relax 8 CESM* licenses\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1062,27 +1063,32 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "BNU-ESM-1-1"
+# Deregister CESM2-SE
+key = "CESM2-SE"
 source_id.pop(key)
 
-# Example license update, including email
-# source_ids_to_relax_list = [
-#     "E3SM-1-0",
-#     "E3SM-1-1",
-#     "E3SM-1-1-ECA",
-# ]
-#
-# for key in source_ids_to_relax_list:
-#     print("processing:", key)
-#     licenseId = "CC BY 4.0"
-#     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
-#     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
-#     source_id[key]["license_info"]["id"] = licenseId
-#     licenseStr = license["license_options"][licenseId]["license_id"]
-#     licenseUrl = license["license_options"][licenseId]["license_url"]
-#     source_id[key]["license_info"]["license"] = "".join(
-#         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-#     source_id[key]["license_info"]["url"] = licenseUrl
+# Update CESM* licenses
+source_ids_to_relax_list = [
+    "CESM1-1-CAM5-CMIP5",
+    "CESM1-CAM5-SE-HR",
+    "CESM1-CAM5-SE-LR",
+    "CESM1-WACCM-SC",
+    "CESM2",
+    "CESM2-FV2",
+    "CESM2-WACCM",
+    "CESM2-WACCM-FV2",
+]
+
+for key in source_ids_to_relax_list:
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    source_id[key]["license_info"]["history"] += "; 2022-06-16: relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update
 # IPSLList = [
@@ -1125,6 +1131,25 @@ source_id.pop(key)
 #         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
 #     if key in IPSLListNoData:
 #         source_id[key]["license_info"]["source_specific_info"] = ""
+#     source_id[key]["license_info"]["url"] = licenseUrl
+
+# Example license update, including email
+# source_ids_to_relax_list = [
+#     "E3SM-1-0",
+#     "E3SM-1-1",
+#     "E3SM-1-1-ECA",
+# ]
+#
+# for key in source_ids_to_relax_list:
+#     print("processing:", key)
+#     licenseId = "CC BY 4.0"
+#     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+#     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
+#     source_id[key]["license_info"]["id"] = licenseId
+#     licenseStr = license["license_options"][licenseId]["license_id"]
+#     licenseUrl = license["license_options"][licenseId]["license_url"]
+#     source_id[key]["license_info"]["license"] = "".join(
+#         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
 #     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example source_id registration

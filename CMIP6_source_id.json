@@ -1134,11 +1134,11 @@
             "label_extended":"CESM1-1-CAM5-CMIP5",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-10-07: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-10-07: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1191,11 +1191,11 @@
             "label_extended":"CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, hi res",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-07-24: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-07-24: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1248,11 +1248,11 @@
             "label_extended":"CESM 1.3 CAM5 spectral element configuration with CMIP5 forcings, lo res",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-07-08: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-07-08: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1306,11 +1306,11 @@
             "label_extended":"Community Earth System Model 1, with the Whole Atmosphere Community Climate Model and Specified Chemistry",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2020-10-12: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-10-12: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1387,11 +1387,11 @@
             "label_extended":"CESM2",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-02-18: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-02-18: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1444,11 +1444,11 @@
             "label_extended":"CESM2-FV2",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1487,56 +1487,6 @@
             "release_year":"2019",
             "source_id":"CESM2-FV2"
         },
-        "CESM2-SE":{
-            "activity_participation":[
-                "CMIP",
-                "HighResMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "NCAR"
-            ],
-            "label":"CESM2-SE",
-            "label_extended":"CESM2-SE spectral element (cubed-sphere grid)",
-            "model_component":{
-                "aerosol":{
-                    "description":"MAM4 (same grid as atmos)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "atmos":{
-                    "description":"CAM6 (0.25 degree spectral element; 777602 cells; 30 levels; top level 2.25 mb)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "atmosChem":{
-                    "description":"MAM4 (same grid as atmos)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "land":{
-                    "description":"CLM5 (same grid as atmos)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "landIce":{
-                    "description":"CISM2.1",
-                    "native_nominal_resolution":"5 km"
-                },
-                "ocean":{
-                    "description":"POP2 (320 x 384 longitude/latitude; 60 levels; top grid cell 0-10 m)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"MARBL (same grid as ocean)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "seaIce":{
-                    "description":"CICE5.1 (same grid as ocean)",
-                    "native_nominal_resolution":"100 km"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"CESM2-SE"
-        },
         "CESM2-WACCM":{
             "activity_participation":[
                 "AerChemMIP",
@@ -1555,11 +1505,11 @@
             "label_extended":"CESM2-WACCM",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-02-20: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-02-20: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1612,11 +1562,11 @@
             "label_extended":"CESM2-WACCM-FV2",
             "license_info":{
                 "exceptions_contact":"@ucar.edu <- cesm_cmip6",
-                "history":"2019-11-20: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-11-20: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8371,13 +8321,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun 16 10:47:09 2022 -0700",
-        "CV_collection_version":"6.2.58.9",
+        "CV_collection_modified":"Thu Jun 16 11:57:41 2022 -0700",
+        "CV_collection_version":"6.2.58.10",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
-        "source_id_CV_modified":"Wed Jun 15 16:47:10 2022 -0700",
-        "source_id_CV_note":"Deregister source_id BNU-ESM-1-1 and institution_id BNU",
+        "previous_commit":"98ede0aa8b9151f18ec41388ab5a0c8c01d3a49e",
+        "source_id_CV_modified":"Thu Jun 16 10:47:09 2022 -0700",
+        "source_id_CV_note":"Deregister source_id CESM2-SE; Relax 8 CESM* licenses",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

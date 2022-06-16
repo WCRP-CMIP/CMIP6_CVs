@@ -590,6 +590,7 @@ MSM 10 Jun 2022    - Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO
 PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NICAM16-9D-L78 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1092
 PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1095
+PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1100
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -597,7 +598,7 @@ PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised license histories for E3SM* models\"'
+commitMessage = '\"Deregister source_id BNU-ESM-1-1 and institution_id BNU\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -851,7 +852,6 @@ institution_id = {
     'AS-RCEC': 'Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
-    'BNU': 'Beijing Normal University, Beijing 100875, China',
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
     'CAS': 'Chinese Academy of Sciences, Beijing 100029, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
@@ -1062,23 +1062,27 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-source_ids_to_relax_list = [
-    "E3SM-1-0",
-    "E3SM-1-1",
-    "E3SM-1-1-ECA",
-]
+key = "BNU-ESM-1-1"
+source_id.pop(key)
 
-for key in source_ids_to_relax_list:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
-    source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+# Example license update, including email
+# source_ids_to_relax_list = [
+#     "E3SM-1-0",
+#     "E3SM-1-1",
+#     "E3SM-1-1-ECA",
+# ]
+#
+# for key in source_ids_to_relax_list:
+#     print("processing:", key)
+#     licenseId = "CC BY 4.0"
+#     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+#     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
+#     source_id[key]["license_info"]["id"] = licenseId
+#     licenseStr = license["license_options"][licenseId]["license_id"]
+#     licenseUrl = license["license_options"][licenseId]["license_url"]
+#     source_id[key]["license_info"]["license"] = "".join(
+#         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+#     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update
 # IPSLList = [

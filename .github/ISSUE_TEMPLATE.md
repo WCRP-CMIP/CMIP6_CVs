@@ -1,5 +1,3 @@
-** Note: registered content can be updated after 31st January 2021, but these changes may not be reflected by the CMIP6 citation service, see http://bit.ly/CMIP6_Citation_Search **
-
 Here are instructions both for registering your institution and model for CMIP6 and for raising other issues concerning CMIP6 controlled vocabularies. We can update details iteratively, until you begin writing CMIP6 data.
 
 PLEASE DELETE THESE INSTRUCTIONS BEFORE SUBMITTING YOUR REGISTRATION/ISSUE

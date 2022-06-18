@@ -1936,11 +1936,11 @@
             "label_extended":"CNRM-CM6-1",
             "license_info":{
                 "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
-                "history":"2018-06-26: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2018-06-26: initially published under CC BY-NC-SA 4.0; 2022-06-17: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1998,11 +1998,11 @@
             "label_extended":"CNRM-CM6-1-HR",
             "license_info":{
                 "exceptions_contact":"@cerfacs.fr <- contact.cmip6",
-                "history":"2019-02-21: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2019-02-21: initially published under CC BY-NC-SA 4.0; 2022-06-17: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -2066,11 +2066,11 @@
             "label_extended":"CNRM-ESM2-1",
             "license_info":{
                 "exceptions_contact":"@meteo.fr <- contact.cmip",
-                "history":"2018-09-14: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "history":"2018-09-14: initially published under CC BY-NC-SA 4.0; 2022-06-17: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -2108,57 +2108,6 @@
             },
             "release_year":"2017",
             "source_id":"CNRM-ESM2-1"
-        },
-        "CNRM-ESM2-1-HR":{
-            "activity_participation":[
-                "CMIP",
-                "OMIP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "CNRM-CERFACS"
-            ],
-            "label":"CNRM-ESM2-1-HR",
-            "label_extended":"CNRM-ESM2-1-HR",
-            "model_component":{
-                "aerosol":{
-                    "description":"TACTIC_v2",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"Arpege 6.3 (T359; Gaussian Reduced with 181724 grid points in total distributed over 360 latitude circles (with 720 grid points per latitude circle between 32.2degN and 32.2degS reducing to 18 grid points per latitude circle at 89.6degN and 89.6degS); 91 levels; top level 78.4 km)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"REPROBUS-C_v2",
-                    "native_nominal_resolution":"100 km"
-                },
-                "land":{
-                    "description":"Surfex 8.0c",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"Nemo 3.6 (eORCA025, tripolar primarily 1/4deg; 1442 x 1050 longitude/latitude; 75 levels; top grid cell 0-1 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"Pisces 2.s",
-                    "native_nominal_resolution":"25 km"
-                },
-                "seaIce":{
-                    "description":"Gelato 6.1",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"CNRM-ESM2-1-HR"
         },
         "CSIRO-Mk3L-1-3":{
             "activity_participation":[
@@ -8321,13 +8270,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jun 16 11:57:41 2022 -0700",
-        "CV_collection_version":"6.2.58.10",
+        "CV_collection_modified":"Fri Jun 17 17:41:53 2022 -0700",
+        "CV_collection_version":"6.2.58.11",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"98ede0aa8b9151f18ec41388ab5a0c8c01d3a49e",
-        "source_id_CV_modified":"Thu Jun 16 10:47:09 2022 -0700",
-        "source_id_CV_note":"Deregister source_id CESM2-SE; Relax 8 CESM* licenses",
+        "previous_commit":"3d7a4008cc92fd44463a018cce91dca988f04bb0",
+        "source_id_CV_modified":"Thu Jun 16 11:57:41 2022 -0700",
+        "source_id_CV_note":"Deregister CNRM-ESM2-1-HR; relax 3 CNRM* licenses",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

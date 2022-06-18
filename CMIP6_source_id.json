@@ -5095,11 +5095,11 @@
             "label_extended":"ICON-ESM-LR",
             "license_info":{
                 "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2021-02-15: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2021-02-15: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -6594,11 +6594,11 @@
             "label_extended":"MPI-ESM1.2-HR",
             "license_info":{
                 "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2017-10-03: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -6672,11 +6672,11 @@
             "label_extended":"MPI-ESM1.2-LR",
             "license_info":{
                 "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2019-07-10: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-07-10: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -6729,11 +6729,11 @@
             "label_extended":"MPI-ESM1.2-XR",
             "license_info":{
                 "exceptions_contact":"@dkrz.de <- cmip6-mpi-esm",
-                "history":"2017-10-03: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2017-10-03: initially published under CC BY-SA 4.0; 2022-06-16: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8270,13 +8270,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jun 17 17:41:53 2022 -0700",
-        "CV_collection_version":"6.2.58.11",
+        "CV_collection_modified":"Fri Jun 17 22:18:21 2022 -0700",
+        "CV_collection_version":"6.2.58.12",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3d7a4008cc92fd44463a018cce91dca988f04bb0",
-        "source_id_CV_modified":"Thu Jun 16 11:57:41 2022 -0700",
-        "source_id_CV_note":"Deregister CNRM-ESM2-1-HR; relax 3 CNRM* licenses",
+        "previous_commit":"2fe1962089d0e8a621ce7d0eef964370f6d3a8d5",
+        "source_id_CV_modified":"Fri Jun 17 17:41:53 2022 -0700",
+        "source_id_CV_note":"Revised 4 MPI-M* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

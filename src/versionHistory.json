@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"3d7a4008cc92fd44463a018cce91dca988f04bb0",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/3d7a4008cc92fd44463a018cce91dca988f04bb0",
-            "commitMessage":"Deregister CNRM-ESM2-1-HR; relax 3 CNRM* licenses",
-            "timeStamp":"Fri Jun 17 17:41:53 2022 -0700"
+            "MD5":"2fe1962089d0e8a621ce7d0eef964370f6d3a8d5",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2fe1962089d0e8a621ce7d0eef964370f6d3a8d5",
+            "commitMessage":"Revised 4 MPI-M* source_id license histories",
+            "timeStamp":"Fri Jun 17 22:18:21 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":11,
+            "versionCVCommit":12,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

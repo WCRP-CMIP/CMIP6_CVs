@@ -596,6 +596,7 @@ PJD 17 Jun 2022    - Deregistered CNRM-ESM2-1-HR source_id, revised 3 CNRM* sour
 PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1099
 PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
+PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -603,7 +604,7 @@ PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 MIROC* source_id license histories\"'
+commitMessage = '\"Deregistered two EMAC-2* source_id entries\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1069,16 +1070,12 @@ del(tmp)
 # Fix issues
 # Update MPI* licenses
 source_ids_to_update = [
-    "MIROC-ES2H",
-    "MIROC-ES2H-NB",
-    "MIROC-ES2L",
-    "MIROC6",
+    "EMAC-2-53-Vol",
+    "EMAC-2-54-AerChem",
 ]
 
 for key in source_ids_to_update:
-    print("processing:", key)
-    source_id[key]["license_info"]["exceptions_contact"] = "@jamstec.go.jp <- miroc-cmip6"
-
+    source_id.pop(key)
 
 # Example license update
 # IPSLList = [

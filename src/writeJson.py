@@ -594,6 +594,7 @@ PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id h
 PJD 16 Jun 2022    - Deregistered CESM2-SE source_id and revised 8 CESM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1102
 PJD 17 Jun 2022    - Deregistered CNRM-ESM2-1-HR source_id, revised 3 CNRM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1101 1107
 PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1099
+PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -601,7 +602,7 @@ PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 MPI-M* source_id license histories\"'
+commitMessage = '\"Revised 3 MIROC NICAM* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1066,23 +1067,16 @@ del(tmp)
 
 # Fix issues
 # Update MPI* licenses
-source_ids_to_relax_list = [
-    "ICON-ESM-LR",
-    "MPI-ESM1-2-HR",
-    "MPI-ESM1-2-LR",
-    "MPI-ESM1-2-XR",
+source_ids_to_update = [
+    "NICAM16-7S",
+    "NICAM16-8S",
+    "NICAM16-9S",
 ]
 
-for key in source_ids_to_relax_list:
+for key in source_ids_to_update:
     print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["history"] += "; 2022-06-16: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+    source_id[key]["license_info"]["exceptions_contact"] = "@jamstec.go.jp <- miroc-cmip6"
+
 
 # Example license update
 # IPSLList = [

@@ -28,10 +28,8 @@ PJD 16 Nov 2020    - Further updates to CMIP6_CVs content to meet strict html st
 PJD 29 Sep 2021    - Add googleAnalyticsTag.js call
 PJD 17 Feb 2022    - Updated sources to latest 1.10.20 -> 1.11.4; 3.5.0 -> 3.6.0
                    - Update jquery.dataTables-1.11.4.min.js line 163-164 update
-                   ,aLengthMenu:[10,
-                                 25,50,100], ->
-                   ,aLengthMenu:[5,10,25,50,100,150,
-                                 200,250,300,350,400],
+                   ,aLengthMenu:[10,25,50,100], ->
+                   ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350,400],
                    - macOS update files to remove
                    extended attributes "$ xattr -c jquery-3.6.0.slim.min.js", "$ xattr -c jquery.dataTables-1.11*"
                    file permissions "$ chmod 644 jquery.dataTables-1.11*"
@@ -39,6 +37,13 @@ PJD 17 Feb 2022    - Updated sources to latest 1.10.20 -> 1.11.4; 3.5.0 -> 3.6.0
                    <table id="table_id" class="display"> ->
                    <table id="table_id" class="display compact" style="width:100%">
 MSM 24 May 2022    - Add code for license table
+PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
+                   - Update jquery.dataTables-1.12.1.min.js line 167 update
+                   ,aLengthMenu:[10,25,50,100], ->
+                   ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350]
+                   - macOS update files to remove
+                   extended attributes "$ xattr -c jquery.dataTables-1.12*"
+                   file permissions "$ chmod 644 jquery.dataTables-1.12*"                   
                    - TODO: Update default page lengths
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
@@ -57,9 +62,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.11.4.min.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.12.1.min.css" />
 <script type="text/javascript" charset="utf-8" src="../src/jquery-3.6.0.slim.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.11.4.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.12.1.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" charset="utf-8" src="../src/googleAnalyticsTag.js"></script>
 <script type="text/javascript">

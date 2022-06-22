@@ -597,6 +597,7 @@ PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github
 PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
+PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1116
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -604,7 +605,7 @@ PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregistered two EMAC-2* source_id entries\"'
+commitMessage = '\"Revised 5 AWI* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1068,57 +1069,34 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Update MPI* licenses
-source_ids_to_update = [
-    "EMAC-2-53-Vol",
-    "EMAC-2-54-AerChem",
+modList = [
+    "AWI-CM-1-1-HR",
+    "AWI-CM-1-1-LR",
+    "AWI-CM-1-1-MR",
+    "AWI-ESM-1-1-LR",
+    "AWI-ESM-2-1-LR",
 ]
-
-for key in source_ids_to_update:
-    source_id.pop(key)
-
-# Example license update
-# IPSLList = [
-#     "4AOP-v1-5",
-#     "IPSL-CM5A2-INCA",
-#     "IPSL-CM6A-ATM-HR",
-#     "IPSL-CM6A-ATM-ICO-HR",
-#     "IPSL-CM6A-ATM-ICO-LR",
-#     "IPSL-CM6A-ATM-ICO-MR",
-#     "IPSL-CM6A-ATM-ICO-VHR",
-#     "IPSL-CM6A-ATM-LR-REPROBUS",
-#     "IPSL-CM6A-LR",
-#     "IPSL-CM6A-LR-INCA",
-#     "IPSL-CM6A-MR025",
-#     "IPSL-CM6A-MR1",
-# ]
-# IPSLListNoData = [
-#     "IPSL-CM6A-ATM-ICO-HR",
-#     "IPSL-CM6A-ATM-ICO-LR",
-#     "IPSL-CM6A-ATM-ICO-MR",
-#     "IPSL-CM6A-ATM-ICO-VHR",
-#     "IPSL-CM6A-ATM-LR-REPROBUS",
-#     "IPSL-CM6A-MR025",
-#     "IPSL-CM6A-MR1",
-# ]
-# for count, key in enumerate(IPSLList):
-#     print("processing:", key)
-#     licenseId = "CC BY 4.0"
-#     if key in IPSLListNoData:
-#         source_id[key]["license_info"] = {}
-#         source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
-#         source_id[key]["license_info"]["history"] = ""
-#     else:
-#         source_id[key]["license_info"]["history"] = '; '.join(
-#             [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
-#     source_id[key]["license_info"]["id"] = licenseId
-#     licenseStr = license["license_options"][licenseId]["license_id"]
-#     licenseUrl = license["license_options"][licenseId]["license_url"]
-#     source_id[key]["license_info"]["license"] = "".join(
-#         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-#     if key in IPSLListNoData:
-#         source_id[key]["license_info"]["source_specific_info"] = ""
-#     source_id[key]["license_info"]["url"] = licenseUrl
+modListNoData = [
+    "AWI-ESM-2-1-LR",
+]
+for count, key in enumerate(modList):
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    if key in modListNoData:
+        source_id[key]["license_info"] = {}
+        source_id[key]["license_info"]["history"] = ""
+    else:
+        source_id[key]["license_info"]["history"] = '; '.join(
+            [source_id[key]["license_info"]["history"], "2022-06-22: relaxed to CC BY 4.0"])
+    source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    if key in modListNoData:
+        source_id[key]["license_info"]["source_specific_info"] = ""
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

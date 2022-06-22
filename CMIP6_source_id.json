@@ -374,12 +374,12 @@
             "label":"AWI-CM 1.1 HR",
             "label_extended":"AWI-CM 1.1 HR",
             "license_info":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2017-08-25: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0; 2022-06-22: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -437,12 +437,12 @@
             "label":"AWI-CM 1.1 LR",
             "label_extended":"AWI-CM 1.1 LR",
             "license_info":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2017-08-25: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"2017-08-25: initially published under CC BY-SA 4.0; 2022-06-22: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -500,12 +500,12 @@
             "label":"AWI-CM 1.1 MR",
             "label_extended":"AWI-CM 1.1 MR",
             "license_info":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2018-12-18: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"2018-12-18: initially published under CC BY-SA 4.0; 2022-06-22: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -558,12 +558,12 @@
             "label":"AWI-ESM 1.1 LR",
             "label_extended":"AWI-ESM 1.1 LR",
             "license_info":{
-                "exceptions_contact":"@awi.de <- tido.semmler",
-                "history":"2020-02-12: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"2020-02-12: initially published under CC BY-SA 4.0; 2022-06-22: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -615,6 +615,14 @@
             ],
             "label":"AWI-ESM 2.1 LR",
             "label_extended":"AWI-ESM 2.1 LR",
+            "license_info":{
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none",
@@ -8170,13 +8178,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jun 21 10:19:39 2022 -0700",
-        "CV_collection_version":"6.2.58.15",
+        "CV_collection_modified":"Wed Jun 22 14:54:07 2022 -0700",
+        "CV_collection_version":"6.2.58.16",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9d3561be2ab0925a42fb40981d40948659d9be8b",
-        "source_id_CV_modified":"Mon Jun 20 22:02:46 2022 -0700",
-        "source_id_CV_note":"Deregistered two EMAC-2* source_id entries",
+        "previous_commit":"eea94af886a9fc3b0e8d98a35be9fb315418dedd",
+        "source_id_CV_modified":"Tue Jun 21 10:19:39 2022 -0700",
+        "source_id_CV_note":"Revised 5 AWI* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

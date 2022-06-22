@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"9d3561be2ab0925a42fb40981d40948659d9be8b",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9d3561be2ab0925a42fb40981d40948659d9be8b",
-            "commitMessage":"Deregistered two EMAC-2* source_id entries",
-            "timeStamp":"Tue Jun 21 10:19:39 2022 -0700"
+            "MD5":"eea94af886a9fc3b0e8d98a35be9fb315418dedd",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/eea94af886a9fc3b0e8d98a35be9fb315418dedd",
+            "commitMessage":"Revised 5 AWI* source_id license histories",
+            "timeStamp":"Wed Jun 22 14:54:07 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":15,
+            "versionCVCommit":16,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

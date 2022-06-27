@@ -1692,12 +1692,12 @@
             "label":"CMCC-CM2-HR4",
             "label_extended":"CMCC-CM2-HR4",
             "license_info":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2017-07-06: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@cmcc.it <- silvio.gualdi",
+                "history":"2017-07-06: initially published under CC BY-SA 4.0; 2022-06-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1753,12 +1753,12 @@
             "label":"CMCC-CM2-SR5",
             "label_extended":"CMCC-CM2-SR5",
             "license_info":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2020-02-26: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@cmcc.it <- silvio.gualdi",
+                "history":"2020-02-26: initially published under CC BY-SA 4.0; 2022-06-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1811,12 +1811,12 @@
             "label":"CMCC-CM2-VHR4",
             "label_extended":"CMCC-CM2-VHR4",
             "license_info":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2017-09-27: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@cmcc.it <- enrico.scoccimarro",
+                "history":"2017-09-27: initially published under CC BY-SA 4.0; 2022-06-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -1873,12 +1873,12 @@
             "label":"CMCC-ESM2",
             "label_extended":"CMCC-ESM2",
             "license_info":{
-                "exceptions_contact":"@cmcc.it <- piergiuseppe.fogli",
-                "history":"2020-02-03: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "exceptions_contact":"@cmcc.it <- tomas.lovato",
+                "history":"2020-02-03: initially published under CC BY-SA 4.0; 2022-06-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8178,13 +8178,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jun 22 14:54:07 2022 -0700",
-        "CV_collection_version":"6.2.58.16",
+        "CV_collection_modified":"Mon Jun 27 14:04:52 2022 -0700",
+        "CV_collection_version":"6.2.58.17",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"eea94af886a9fc3b0e8d98a35be9fb315418dedd",
-        "source_id_CV_modified":"Tue Jun 21 10:19:39 2022 -0700",
-        "source_id_CV_note":"Revised 5 AWI* source_id license histories",
+        "previous_commit":"df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
+        "source_id_CV_modified":"Wed Jun 22 14:54:07 2022 -0700",
+        "source_id_CV_note":"Revised 4 CMCC* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

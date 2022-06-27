@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"eea94af886a9fc3b0e8d98a35be9fb315418dedd",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/eea94af886a9fc3b0e8d98a35be9fb315418dedd",
-            "commitMessage":"Revised 5 AWI* source_id license histories",
-            "timeStamp":"Wed Jun 22 14:54:07 2022 -0700"
+            "MD5":"df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
+            "commitMessage":"Revised 4 CMCC* source_id license histories",
+            "timeStamp":"Mon Jun 27 14:04:52 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":16,
+            "versionCVCommit":17,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

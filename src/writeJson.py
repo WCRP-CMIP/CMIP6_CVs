@@ -598,6 +598,7 @@ PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://
 PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
 PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
 PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1116
+PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1118
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -605,7 +606,7 @@ PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 5 AWI* source_id license histories\"'
+commitMessage = '\"Revised 4 CMCC* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1070,32 +1071,28 @@ del(tmp)
 
 # Fix issues
 modList = [
-    "AWI-CM-1-1-HR",
-    "AWI-CM-1-1-LR",
-    "AWI-CM-1-1-MR",
-    "AWI-ESM-1-1-LR",
-    "AWI-ESM-2-1-LR",
-]
-modListNoData = [
-    "AWI-ESM-2-1-LR",
+    "CMCC-CM2-HR4",
+    "CMCC-CM2-SR5",
+    "CMCC-CM2-VHR4",
+    "CMCC-ESM2",
 ]
 for count, key in enumerate(modList):
     print("processing:", key)
     licenseId = "CC BY 4.0"
-    if key in modListNoData:
-        source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["history"] = ""
+    source_id[key]["license_info"]["history"] = '; '.join(
+        [source_id[key]["license_info"]["history"], "2022-06-27: relaxed to CC BY 4.0"])
+    if "ESM2" in key:
+        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- tomas.lovato"
+    elif "VHR4" in key:
+        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- enrico.scoccimarro"
     else:
-        source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-22: relaxed to CC BY 4.0"])
-    source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
+        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- silvio.gualdi"
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]
     licenseUrl = license["license_options"][licenseId]["license_url"]
     source_id[key]["license_info"]["license"] = "".join(
         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    if key in modListNoData:
-        source_id[key]["license_info"]["source_specific_info"] = ""
+    source_id[key]["license_info"]["source_specific_info"] = ""
     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email

@@ -8122,69 +8122,16 @@
             },
             "release_year":"2014",
             "source_id":"UofT-CCSM4"
-        },
-        "VRESM-1-0":{
-            "activity_participation":[
-                "CMIP",
-                "DAMIP",
-                "HighResMIP",
-                "PMIP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "CSIR-Wits-CSIRO"
-            ],
-            "label":"VRESM 1.0",
-            "label_extended":"VRESM 1.0 (Variable-resolution Earth System Model 1.0)",
-            "model_component":{
-                "aerosol":{
-                    "description":"Rotstayn-1.0",
-                    "native_nominal_resolution":"50 km"
-                },
-                "atmos":{
-                    "description":"VCAM-1.0 (C192; 192 x 192 x 6 longitude/latitude/cubeface; 35 levels; top level 35km)",
-                    "native_nominal_resolution":"50 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"CABLE v2.2.3",
-                    "native_nominal_resolution":"50 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"VCOM-1.0 (C192; 384 x 384 x 6 longitude/latitude/cubeface; 35 levels; top grid cell 0-10 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"PISCES v3.4socco",
-                    "native_nominal_resolution":"25 km"
-                },
-                "seaIce":{
-                    "description":"CSIR-ICE (visco-plastic)",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2016",
-            "source_id":"VRESM-1-0"
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Jun 27 14:04:52 2022 -0700",
-        "CV_collection_version":"6.2.58.17",
+        "CV_collection_modified":"Tue Jun 28 12:48:25 2022 -0700",
+        "CV_collection_version":"6.2.58.18",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
-        "source_id_CV_modified":"Wed Jun 22 14:54:07 2022 -0700",
-        "source_id_CV_note":"Revised 4 CMCC* source_id license histories",
+        "previous_commit":"2aa966991089f2bf2df2630e4af3d020b1a4fdd1",
+        "source_id_CV_modified":"Mon Jun 27 14:04:52 2022 -0700",
+        "source_id_CV_note":"Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

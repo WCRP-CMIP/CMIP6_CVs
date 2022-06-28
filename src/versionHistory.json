@@ -31,10 +31,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/906f5cd1211275608fc73dd09f8556ad9d2d9b5a",
-            "commitMessage":"Deregister source_id BNU-ESM-1-1 and institution_id BNU",
-            "timeStamp":"Thu Jun 16 10:47:09 2022 -0700"
+            "MD5":"2aa966991089f2bf2df2630e4af3d020b1a4fdd1",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2aa966991089f2bf2df2630e4af3d020b1a4fdd1",
+            "commitMessage":"Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id",
+            "timeStamp":"Tue Jun 28 12:48:25 2022 -0700"
         },
         "license":{
             "MD5":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/df75c4e4515e9dfa460a6aac3e1bbfb3cc9555b7",
-            "commitMessage":"Revised 4 CMCC* source_id license histories",
-            "timeStamp":"Mon Jun 27 14:04:52 2022 -0700"
+            "MD5":"2aa966991089f2bf2df2630e4af3d020b1a4fdd1",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2aa966991089f2bf2df2630e4af3d020b1a4fdd1",
+            "commitMessage":"Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id",
+            "timeStamp":"Tue Jun 28 12:48:25 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":17,
+            "versionCVCommit":18,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

@@ -599,6 +599,7 @@ PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github
 PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
 PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1116
 PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1118
+PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1122
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -606,7 +607,7 @@ PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 CMCC* source_id license histories\"'
+commitMessage = '\"Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -867,10 +868,6 @@ institution_id = {
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': ''.join(['CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche ',
                              'et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)']),
-    'CSIR-Wits-CSIRO': ''.join(['CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), ',
-                                'Wits (University of the Witwatersrand - Global Change Institute, Johannesburg 2050, South Africa), ',
-                                'CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)',
-                                'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
     'CSIRO-ARCCSS': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia),',
                               'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science).',
@@ -1070,30 +1067,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-modList = [
-    "CMCC-CM2-HR4",
-    "CMCC-CM2-SR5",
-    "CMCC-CM2-VHR4",
-    "CMCC-ESM2",
-]
-for count, key in enumerate(modList):
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["history"] = '; '.join(
-        [source_id[key]["license_info"]["history"], "2022-06-27: relaxed to CC BY 4.0"])
-    if "ESM2" in key:
-        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- tomas.lovato"
-    elif "VHR4" in key:
-        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- enrico.scoccimarro"
-    else:
-        source_id[key]["license_info"]["exceptions_contact"] = "@cmcc.it <- silvio.gualdi"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["source_specific_info"] = ""
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "VRESM-1-0"
+source_id.pop(key)
 
 # Example license update, including email
 # source_ids_to_relax_list = [

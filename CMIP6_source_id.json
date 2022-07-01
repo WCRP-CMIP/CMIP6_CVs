@@ -842,57 +842,6 @@
             "release_year":"2017",
             "source_id":"BCC-ESM1"
         },
-        "BESM-2-9":{
-            "activity_participation":[
-                "CMIP",
-                "DCPP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "INPE"
-            ],
-            "label":"BESM 2.9",
-            "label_extended":"BESM 2.9",
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"BAM (v1.0, T062L42; 192 x 96 longitude/latitude; 42 levels; top level 3 hPa)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"SSiB 2.0",
-                    "native_nominal_resolution":"250 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"MOM-5 (MOM5, tripolar, primarily 1 deg, 1/4 deg between 22.5S-22.5N, downgrading from 1/4 deg at 22.5N(S) to 1 deg at 45N(S), 1 deg between 22.5N(S) and 45N(S), upgrading from 1 deg at 45N(S) to 0.5 deg at 90N(S) ; 360 x 192 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "ocnBgchem":{
-                    "description":"TOPAZ 2.0",
-                    "native_nominal_resolution":"100 km"
-                },
-                "seaIce":{
-                    "description":"SIS 1.0",
-                    "native_nominal_resolution":"100 km"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"BESM-2-9"
-        },
         "CAM-MPAS-HR":{
             "activity_participation":[
                 "HighResMIP"
@@ -8075,13 +8024,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jul  1 12:10:55 2022 -0700",
-        "CV_collection_version":"6.2.58.19",
+        "CV_collection_modified":"Fri Jul  1 12:19:28 2022 -0700",
+        "CV_collection_version":"6.2.58.20",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"e64df985e3f1a07bed4d11f00081df393c140f57",
-        "source_id_CV_modified":"Tue Jun 28 12:48:25 2022 -0700",
-        "source_id_CV_note":"Deregistered source_id UofT-CCSM4 and institution_id UofT",
+        "previous_commit":"9f05ff6e0ea391aaea48e5a9f3d1a117d16d0538",
+        "source_id_CV_modified":"Fri Jul  1 12:10:55 2022 -0700",
+        "source_id_CV_note":"Deregistered source_id BESM-2-9 and institution_id INPE",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

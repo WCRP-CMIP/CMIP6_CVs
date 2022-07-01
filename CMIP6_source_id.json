@@ -2066,56 +2066,6 @@
             "release_year":"2017",
             "source_id":"CNRM-ESM2-1"
         },
-        "CSIRO-Mk3L-1-3":{
-            "activity_participation":[
-                "CMIP",
-                "PMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "UTAS"
-            ],
-            "label":"CSIRO Mk3L 1.3",
-            "label_extended":"CSIRO Mk3L 1.3",
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"unnamed (R21; 64 x 56 longitude/latitude; 18 levels; top level 36355 m)",
-                    "native_nominal_resolution":"500 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"unnamed",
-                    "native_nominal_resolution":"500 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"MOM1.x (128 x 112 longitude/latitude; 31 levels; top grid cell 0-10 m; bottom grid cell 4600-5000 m)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"unnamed (same grid as atmosphere)",
-                    "native_nominal_resolution":"500 km"
-                }
-            },
-            "release_year":"2006",
-            "source_id":"CSIRO-Mk3L-1-3"
-        },
         "CanESM5":{
             "activity_participation":[
                 "C4MIP",
@@ -8024,13 +7974,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jul  1 12:19:28 2022 -0700",
-        "CV_collection_version":"6.2.58.20",
+        "CV_collection_modified":"Fri Jul  1 12:28:04 2022 -0700",
+        "CV_collection_version":"6.2.58.21",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9f05ff6e0ea391aaea48e5a9f3d1a117d16d0538",
-        "source_id_CV_modified":"Fri Jul  1 12:10:55 2022 -0700",
-        "source_id_CV_note":"Deregistered source_id BESM-2-9 and institution_id INPE",
+        "previous_commit":"6026179381057edcb5166c78e06f07ac65b87523",
+        "source_id_CV_modified":"Fri Jul  1 12:19:28 2022 -0700",
+        "source_id_CV_note":"Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

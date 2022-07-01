@@ -601,6 +601,7 @@ PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.c
 PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1118
 PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1122
 PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1086
+PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1120
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -608,7 +609,7 @@ PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT h
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregistered source_id UofT-CCSM4 and institution_id UofT\"'
+commitMessage = '\"Deregistered source_id BESM-2-9 and institution_id INPE\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -906,7 +907,6 @@ institution_id = {
                                   'Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric ',
                                   'Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland']),
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
-    'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'KIOST': 'Korea Institute of Ocean Science and Technology, Busan 49111, Republic of Korea',
     'LLNL': ' '.join(['Lawrence Livermore National Laboratory, Livermore,',
@@ -1067,7 +1067,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "UofT-CCSM4"
+key = "BESM-2-9"
 source_id.pop(key)
 
 # Example license update, including email

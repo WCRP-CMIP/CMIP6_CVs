@@ -602,6 +602,7 @@ PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.
 PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1122
 PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1086
 PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1120
+PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1121
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -609,7 +610,7 @@ PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE htt
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregistered source_id BESM-2-9 and institution_id INPE\"'
+commitMessage = '\"Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -958,7 +959,6 @@ institution_id = {
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
     'UCI': 'Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA',
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
-    'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
 }
 
 # %% CMIP6 License
@@ -1067,7 +1067,7 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "BESM-2-9"
+key = "CSIRO-Mk3L-1-3"
 source_id.pop(key)
 
 # Example license update, including email

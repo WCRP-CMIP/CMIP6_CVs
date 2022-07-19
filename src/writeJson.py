@@ -610,7 +610,7 @@ PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UT
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS\"'
+commitMessage = '\"Registered source_id E3SM-2-0\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1067,8 +1067,80 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "CSIRO-Mk3L-1-3"
-source_id.pop(key)
+key = "E3SM-2-0"
+source_id[key] = {}
+source_id[key]["activity_participation"] = [
+    "CMIP",
+    "RFMIP",
+    "ScenarioMIP",
+]
+source_id[key]["cohort"] = [
+    "Registered",
+]
+source_id[key]["institution_id"] = [
+    "E3SM-Project",
+]
+source_id[key]["label"] = "E3SM 2.0"
+source_id[key]["label_extended"] = "E3SM 2.0 (Energy Exascale Earth System Model)"
+source_id[key]["model_component"] = {}
+source_id[key]["model_component"]["aerosol"] = {}
+source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 with new features in resuspension,",
+                                                                       "marine organics, secondary organics,",
+                                                                        "and dust (same grid as atmos physics)"])
+source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["atmos"] = {}
+source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid; ",
+                                                                      "5400 elements, 30x30 per cube face. Dynamics:",
+                                                                      "degree 3 (p=3) polynomials within each spectral",
+                                                                      "element, 112 km average resolution. Physics: 2x2",
+                                                                      "finite volume cells within each spectral element,",
+                                                                      "1.5 degree (168 km) average grid spacing)"])
+source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["atmosChem"] = {}
+source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
+                                                                          "passive ozone with the lower boundary sink)",
+                                                                          "for aerosols. Stratosphere linearized",
+                                                                          "interactive ozone (LINOZ v2) (same grid as",
+                                                                          "atmos physics)"])
+source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["land"] = {}
+source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, same grid as atmos physics,",
+                                                                     "satellite phenology mode), MOSART (v1.0,",
+                                                                     "0.5 degree latitude/longitude grid)"])
+source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["landIce"] = {}
+source_id[key]["model_component"]["landIce"]["description"] = 'none'
+source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'none'
+source_id[key]["model_component"]["ocean"] = {}
+source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured",
+                                                                      "SVTs mesh with 236853 cells and 719506 edges,",
+                                                                      "variable resolution 60 km to 30 km; 60 levels;",
+                                                                      "top grid cell 0-10 m)"])
+source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
+source_id[key]["model_component"]["ocnBgchem"] = {}
+source_id[key]["model_component"]["ocnBgchem"]["description"] = 'none'
+source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'none'
+source_id[key]["model_component"]["seaIce"] = {}
+source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, EC30to60E2r2 unstructured",
+                                                                       "SVTs mesh with 236853 cells and 719506 edges,",
+                                                                       "variable resolution 60 km to 30 km; 5 ice",
+                                                                       "categories, 7 ice layers, 5 snow layers)"])
+source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
+source_id[key]["release_year"] = "2022"
+source_id[key]["source_id"] = key
+# License info
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"] = {}
+source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+# "2022-xx-xx: initially published under CC BY 4.0"
+source_id[key]["license_info"]["history"] = ""
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
+
 
 # Example license update, including email
 # source_ids_to_relax_list = [
@@ -1090,48 +1162,78 @@ source_id.pop(key)
 #     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example source_id registration
-# key = 'GISS-E2-2-H'
+# key = "E3SM-2-0"
 # source_id[key] = {}
-# source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'SIMIP',
-# 'ScenarioMIP'
+# source_id[key]["activity_participation"] = [
+# "CMIP",
+# "RFMIP",
+# "ScenarioMIP",
 # ]
-# source_id[key]['cohort'] = [
-# 'Registered'
+# source_id[key]["cohort"] = [
+# "Registered",
 # ]
-# source_id[key]['institution_id'] = [
-# 'NASA-GISS'
+# source_id[key]["institution_id"] = [
+# "E3SM-Project",
 # ]
-# source_id[key]['label'] = 'GISS-E2.2H'
-# source_id[key]['label_extended'] = 'GISS-E2.2H'
-# source_id[key]['model_component'] = {}
-# source_id[key]['model_component']['aerosol'] = {}
-# source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
-# source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['atmos'] = {}
-# source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.2 (High Top, 2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)'
-# source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['atmosChem'] = {}
-# source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-# source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['land'] = {}
-# source_id[key]['model_component']['land']['description'] = 'GISS LSM'
-# source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['landIce'] = {}
-# source_id[key]['model_component']['landIce']['description'] = 'none'
-# source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['ocean'] = {}
-# source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
-# source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['ocnBgchem'] = {}
-# source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-# source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['seaIce'] = {}
-# source_id[key]['model_component']['seaIce']['description'] = 'GISS SI (same grid as atmos)'
-# source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
-# source_id[key]['release_year'] = '2021'
-# source_id[key]['source_id'] = key
+# source_id[key]["label"] = "E3SM 2.0"
+# source_id[key]["label_extended"] = "E3SM 2.0 (Energy Exascale Earth System Model)"
+# source_id[key]["model_component"] = {}
+# source_id[key]["model_component"]["aerosol"] = {}
+# source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 with new features in resuspension,",
+#                                                                        "marine organics, secondary organics,",
+#                                                                        "and dust (same grid as atmos physics)"])
+# source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["atmos"] = {}
+# source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid; ",
+#                                                                       "5400 elements, 30x30 per cube face. Dynamics:",
+#                                                                       "degree 3 (p=3) polynomials within each spectral",
+#                                                                       "element, 112 km average resolution. Physics: 2x2",
+#                                                                       "finite volume cells within each spectral element,",
+#                                                                       "1.5 degree (168 km) average grid spacing)"])
+# source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["atmosChem"] = {}
+# source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
+#                                                                           "passive ozone with the lower boundary sink)",
+#                                                                           "for aerosols. Stratosphere linearized",
+#                                                                           "interactive ozone (LINOZ v2) (same grid as",
+#                                                                           "atmos physics)"])
+# source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["land"] = {}
+# source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, same grid as atmos physics,",
+#                                                                           "satellite phenology mode), MOSART (v1.0,",
+#                                                                           "0.5 degree latitude/longitude grid)"])
+# source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["landIce"] = {}
+# source_id[key]["model_component"]["landIce"]["description"] = 'none'
+# source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'none'
+# source_id[key]["model_component"]["ocean"] = {}
+# source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured",
+#                                                                        "SVTs mesh with 236853 cells and 719506 edges,",
+#                                                                        "variable resolution 60 km to 30 km; 60 levels;",
+#                                                                        "top grid cell 0-10 m)"])
+# source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
+# source_id[key]["model_component"]["ocnBgchem"] = {}
+# source_id[key]["model_component"]["ocnBgchem"]["description"] = 'none'
+# source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'none'
+# source_id[key]["model_component"]["seaIce"] = {}
+# source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, EC30to60E2r2 unstructured",
+#                                                                        "SVTs mesh with 236853 cells and 719506 edges,",
+#                                                                        "variable resolution 60 km to 30 km; 5 ice",
+#                                                                        "categories, 7 ice layers, 5 snow layers)"])
+# source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
+# source_id[key]["release_year"] = "2022"
+# source_id[key]["source_id"] = key
+# # License info
+# licenseId = "CC BY 4.0"
+# source_id[key]["license_info"] = {}
+# source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+# source_id[key]["license_info"]["history"] = "" #"2022-xx-xx: initially published under CC BY 4.0"
+# source_id[key]["license_info"]["id"] = licenseId
+# licenseStr = license["license_options"][licenseId]["license_id"]
+# licenseUrl = license["license_options"][licenseId]["license_url"]
+# source_id[key]["license_info"]["license"] = "".join(
+# [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+# source_id[key]["license_info"]["url"] = licenseUrl
 
 # Rename
 #source_id[key2] = source_id.pop(key1)

@@ -2411,19 +2411,19 @@
             },
             "model_component":{
                 "aerosol":{
-                    "description":"MAM4 with new features in resuspension, marine organics, secondary organics, and dust (same grid as atmos physics)",
+                    "description":"MAM4 with new resuspension, marine organics, secondary organics, and dust (atmos grid)",
                     "native_nominal_resolution":"100 km"
                 },
                 "atmos":{
-                    "description":"EAM (v2.0, cubed sphere spectral-element grid; 5400 elements, 30x30 per cube face. Dynamics: degree 3 (p=3) polynomials within each spectral element, 112 km average resolution. Physics: 2x2 finite volume cells within each spectral element, 1.5 degree (168 km) average grid spacing)",
+                    "description":"EAM (v2.0, cubed sphere spectral-element grid; 5400 elements, 30x30 per cube face. Dynamics: degree 3 (p=3) polynomials within each spectral element, 112 km average resolution. Physics: 2x2 finite volume cells within each spectral element, 1.5 degree (168 km) average grid spacing; 72 vertical layers with top at 60 km)",
                     "native_nominal_resolution":"100 km"
                 },
                 "atmosChem":{
-                    "description":"Troposphere specified oxidants (except passive ozone with the lower boundary sink) for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (same grid as atmos physics)",
+                    "description":"Troposphere specified oxidants (except passive ozone with the lower boundary sink) for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (atmos grid)",
                     "native_nominal_resolution":"100 km"
                 },
                 "land":{
-                    "description":"ELM (v1.0, same grid as atmos physics, satellite phenology mode), MOSART (v1.0, 0.5 degree latitude/longitude grid)",
+                    "description":"ELM (v1.0, satellite phenology mode, atmos grid), MOSART (v1.0, 0.5 degree latitude/longitude)",
                     "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
@@ -2431,7 +2431,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured SVTs mesh with 236853 cells and 719506 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell 0-10 m)",
+                    "description":"MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured SVTs mesh with 236853 cells and 719506 edges, variable resolution 60 to 30 km; 60 levels; top grid cell 0-10 m)",
                     "native_nominal_resolution":"50 km"
                 },
                 "ocnBgchem":{
@@ -2439,7 +2439,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"MPAS-Seaice (E3SMv2.0, EC30to60E2r2 unstructured SVTs mesh with 236853 cells and 719506 edges, variable resolution 60 km to 30 km; 5 ice categories, 7 ice layers, 5 snow layers)",
+                    "description":"MPAS-Seaice (E3SMv2.0, ocean grid, variable resolution 60 to 30 km; 5 ice categories, 7 ice, 5 snow layers)",
                     "native_nominal_resolution":"50 km"
                 }
             },
@@ -8032,13 +8032,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jul 19 10:32:16 2022 -0700",
-        "CV_collection_version":"6.2.58.22",
+        "CV_collection_modified":"Wed Jul 27 15:21:21 2022 -0700",
+        "CV_collection_version":"6.2.58.23",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a7d53e856cfe729db213aa8bb915382a4434f8b6",
-        "source_id_CV_modified":"Fri Jul  1 12:28:04 2022 -0700",
-        "source_id_CV_note":"Registered source_id E3SM-2-0",
+        "previous_commit":"e60b4241a1261066f9d7952f9a7e20e4425ab80a",
+        "source_id_CV_modified":"Tue Jul 19 10:32:16 2022 -0700",
+        "source_id_CV_note":"Revised source_id E3SM-2-0",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"a7d53e856cfe729db213aa8bb915382a4434f8b6",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a7d53e856cfe729db213aa8bb915382a4434f8b6",
-            "commitMessage":"Registered source_id E3SM-2-0",
-            "timeStamp":"Tue Jul 19 10:32:16 2022 -0700"
+            "MD5":"e60b4241a1261066f9d7952f9a7e20e4425ab80a",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e60b4241a1261066f9d7952f9a7e20e4425ab80a",
+            "commitMessage":"Revised source_id E3SM-2-0",
+            "timeStamp":"Wed Jul 27 15:21:21 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":22,
+            "versionCVCommit":23,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

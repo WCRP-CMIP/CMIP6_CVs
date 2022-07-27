@@ -603,6 +603,9 @@ PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO instit
 PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1086
 PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1120
 PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1121
+PJD 19 Jul 2022    - Registered source_id E3SM-2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+PJD 27 Jul 2022    - Added derived "source" test for CMOR3 1024 char limit https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of CMOR3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -610,7 +613,7 @@ PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UT
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Registered source_id E3SM-2-0\"'
+commitMessage = '\"Revised source_id E3SM-2-0\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1084,9 +1087,9 @@ source_id[key]["label"] = "E3SM 2.0"
 source_id[key]["label_extended"] = "E3SM 2.0 (Energy Exascale Earth System Model)"
 source_id[key]["model_component"] = {}
 source_id[key]["model_component"]["aerosol"] = {}
-source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 with new features in resuspension,",
+source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 with new resuspension,",
                                                                        "marine organics, secondary organics,",
-                                                                        "and dust (same grid as atmos physics)"])
+                                                                        "and dust (atmos grid)"])
 source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmos"] = {}
 source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid; ",
@@ -1094,19 +1097,18 @@ source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0
                                                                       "degree 3 (p=3) polynomials within each spectral",
                                                                       "element, 112 km average resolution. Physics: 2x2",
                                                                       "finite volume cells within each spectral element,",
-                                                                      "1.5 degree (168 km) average grid spacing)"])
+                                                                      "1.5 degree (168 km) average grid spacing; 72",
+                                                                      "vertical layers with top at 60 km)"])
 source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmosChem"] = {}
 source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
                                                                           "passive ozone with the lower boundary sink)",
                                                                           "for aerosols. Stratosphere linearized",
-                                                                          "interactive ozone (LINOZ v2) (same grid as",
-                                                                          "atmos physics)"])
+                                                                          "interactive ozone (LINOZ v2) (atmos grid)"])
 source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["land"] = {}
-source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, same grid as atmos physics,",
-                                                                     "satellite phenology mode), MOSART (v1.0,",
-                                                                     "0.5 degree latitude/longitude grid)"])
+source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, satellite phenology mode, atmos grid),",
+                                                                     "MOSART (v1.0, 0.5 degree latitude/longitude)"])
 source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["landIce"] = {}
 source_id[key]["model_component"]["landIce"]["description"] = 'none'
@@ -1114,17 +1116,16 @@ source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'non
 source_id[key]["model_component"]["ocean"] = {}
 source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured",
                                                                       "SVTs mesh with 236853 cells and 719506 edges,",
-                                                                      "variable resolution 60 km to 30 km; 60 levels;",
+                                                                      "variable resolution 60 to 30 km; 60 levels;",
                                                                       "top grid cell 0-10 m)"])
 source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
 source_id[key]["model_component"]["ocnBgchem"] = {}
 source_id[key]["model_component"]["ocnBgchem"]["description"] = 'none'
 source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'none'
 source_id[key]["model_component"]["seaIce"] = {}
-source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, EC30to60E2r2 unstructured",
-                                                                       "SVTs mesh with 236853 cells and 719506 edges,",
-                                                                       "variable resolution 60 km to 30 km; 5 ice",
-                                                                       "categories, 7 ice layers, 5 snow layers)"])
+source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid,",
+                                                                       "variable resolution 60 to 30 km; 5 ice",
+                                                                       "categories, 7 ice, 5 snow layers)"])
 source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
 source_id[key]["release_year"] = "2022"
 source_id[key]["source_id"] = key
@@ -1254,6 +1255,35 @@ if errors:
     raise RuntimeError('. '.join(errors))
 
 del(long_source_ids, errors)
+
+'''
+Apply a check on the length of the source (generated in cmip6-cmor-tables/Tables/cmip6_CV.json)
+Raise a runtime error if this string is >1024 characters
+https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+https://github.com/PCMDI/cmip6-cmor-tables/issues/377
+'''
+MAX_SOURCE_LENGTH = 1024
+MAX_SOURCE_MSG_TEMPLATE = 'source "{}" is {} characters long, above the {} limit'
+# Create concatenated string
+test_source_ids = [i for i in source_id]
+errors = []
+for key in test_source_ids:
+    source = ''
+    for realm_test in source_id[key]['model_component'].keys():
+        if (source_id[key]['model_component'][realm_test]['description'].find('None') == -1):
+            source += realm_test + ': '
+            source += source_id[key]['model_component'][realm_test]['description'] + \
+                chr(10)
+    source = source.rstrip()
+    #print(key, len(source), MAX_SOURCE_LENGTH)
+    if len(source) > MAX_SOURCE_LENGTH:
+        errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
+            key, len(source), MAX_SOURCE_LENGTH)])
+# Raise exception if any found
+if errors:
+    raise RuntimeError(errors)
+# cleanup
+del(source, key, test_source_ids, errors, realm_test)
 
 '''
 CMIP5 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76

@@ -609,6 +609,7 @@ PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of 
 PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
 PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
 PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -616,7 +617,7 @@ PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit -
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised CMOR3 derived source 1023 char limit test\"'
+commitMessage = '\"Revised 3 ECMWF* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1073,9 +1074,23 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "E3SM-2-0"
-source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid;",
-                                                                       "5 ice categories; 7 ice, 5 snow layers)"])
+source_ids_to_relax_list = [
+    "ECMWF-IFS-HR",
+    "ECMWF-IFS-LR",
+    "ECMWF-IFS-MR",
+]
+
+for key in source_ids_to_relax_list:
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    source_id[key]["license_info"]["exceptions_contact"] = "@ecmwf.int <- christopher.roberts"
+    source_id[key]["license_info"]["history"] += "; 2022-07-26: relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

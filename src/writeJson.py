@@ -606,6 +606,7 @@ PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UT
 PJD 19 Jul 2022    - Registered source_id E3SM-2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
 PJD 27 Jul 2022    - Added derived "source" test for CMOR3 1024 char limit https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
 PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of CMOR3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -613,7 +614,7 @@ PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of 
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised source_id E3SM-2-0\"'
+commitMessage = '\"Revised CMOR3 derived source 1024 char limit test\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1073,7 +1074,9 @@ del(tmp)
 key = "E3SM-2-0"
 source_id[key] = {}
 source_id[key]["activity_participation"] = [
+    "CFMIP",
     "CMIP",
+    "DAMIP",
     "RFMIP",
     "ScenarioMIP",
 ]
@@ -1092,13 +1095,13 @@ source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 wi
                                                                         "and dust (atmos grid)"])
 source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmos"] = {}
-source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid; ",
+source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid;",
                                                                       "5400 elements, 30x30 per cube face. Dynamics:",
                                                                       "degree 3 (p=3) polynomials within each spectral",
                                                                       "element, 112 km average resolution. Physics: 2x2",
                                                                       "finite volume cells within each spectral element,",
                                                                       "1.5 degree (168 km) average grid spacing; 72",
-                                                                      "vertical layers with top at 60 km)"])
+                                                                      "vertical layers; top level 60 km)"])
 source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmosChem"] = {}
 source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
@@ -1115,7 +1118,7 @@ source_id[key]["model_component"]["landIce"]["description"] = 'none'
 source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'none'
 source_id[key]["model_component"]["ocean"] = {}
 source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured",
-                                                                      "SVTs mesh with 236853 cells and 719506 edges,",
+                                                                      "SVTs mesh with 236853 cells, 719506 edges,",
                                                                       "variable resolution 60 to 30 km; 60 levels;",
                                                                       "top grid cell 0-10 m)"])
 source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
@@ -1125,7 +1128,7 @@ source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'n
 source_id[key]["model_component"]["seaIce"] = {}
 source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid,",
                                                                        "variable resolution 60 to 30 km; 5 ice",
-                                                                       "categories, 7 ice, 5 snow layers)"])
+                                                                       "categories; 7 ice, 5 snow layers)"])
 source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
 source_id[key]["release_year"] = "2022"
 source_id[key]["source_id"] = key
@@ -1185,7 +1188,7 @@ source_id[key]["license_info"]["url"] = licenseUrl
 #                                                                        "and dust (same grid as atmos physics)"])
 # source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
 # source_id[key]["model_component"]["atmos"] = {}
-# source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid; ",
+# source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid;",
 #                                                                       "5400 elements, 30x30 per cube face. Dynamics:",
 #                                                                       "degree 3 (p=3) polynomials within each spectral",
 #                                                                       "element, 112 km average resolution. Physics: 2x2",
@@ -1268,17 +1271,21 @@ MAX_SOURCE_MSG_TEMPLATE = 'source "{}" is {} characters long, above the {} limit
 test_source_ids = [i for i in source_id]
 errors = []
 for key in test_source_ids:
-    source = ''
-    for realm_test in source_id[key]['model_component'].keys():
-        if (source_id[key]['model_component'][realm_test]['description'].find('None') == -1):
+    source = source_id[key]["label"] + \
+        " (" + source_id[key]["release_year"] + "): " + chr(10)
+    for realm_test in source_id[key]["model_component"].keys():
+        if (source_id[key]["model_component"][realm_test]["description"].find("None") == -1):
             source += realm_test + ': '
-            source += source_id[key]['model_component'][realm_test]['description'] + \
+            source += source_id[key]["model_component"][realm_test]["description"] + \
                 chr(10)
     source = source.rstrip()
     #print(key, len(source), MAX_SOURCE_LENGTH)
     if len(source) > MAX_SOURCE_LENGTH:
         errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
             key, len(source), MAX_SOURCE_LENGTH)])
+    # if key == "E3SM-2-0":
+    #    print(len(source))
+    #    print(source)
 # Raise exception if any found
 if errors:
     raise RuntimeError(errors)

@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"e60b4241a1261066f9d7952f9a7e20e4425ab80a",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e60b4241a1261066f9d7952f9a7e20e4425ab80a",
-            "commitMessage":"Revised source_id E3SM-2-0",
-            "timeStamp":"Wed Jul 27 15:21:21 2022 -0700"
+            "MD5":"51d9b63711044317145fc17a94ff1347bfee66cc",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/51d9b63711044317145fc17a94ff1347bfee66cc",
+            "commitMessage":"Revised CMOR3 derived source 1024 char limit test",
+            "timeStamp":"Wed Jul 27 18:19:15 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":23,
+            "versionCVCommit":24,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

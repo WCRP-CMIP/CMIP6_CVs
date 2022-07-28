@@ -1229,9 +1229,9 @@ for key in test_source_ids:
     if len(source) > MAX_SOURCE_LENGTH:
         errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
             key, len(source), MAX_SOURCE_LENGTH)])
-    if key == "E3SM-2-0":
-        print("len(source):", len(source))
-        print(source)
+    #if key == "E3SM-2-0":
+    #    print("len(source):", len(source))
+    #    print(source)
 # Raise exception if any found
 if errors:
     raise RuntimeError(errors)

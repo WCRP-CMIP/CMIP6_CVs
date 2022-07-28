@@ -2441,7 +2441,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"MPAS-Seaice (E3SMv2.0, ocean grid, variable resolution 60 to 30 km; 5 ice categories; 7 ice, 5 snow layers)",
+                    "description":"MPAS-Seaice (E3SMv2.0, ocean grid; 5 ice categories; 7 ice, 5 snow layers)",
                     "native_nominal_resolution":"50 km"
                 }
             },
@@ -7977,13 +7977,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 27 18:38:47 2022 -0700",
-        "CV_collection_version":"6.2.58.25",
+        "CV_collection_modified":"Wed Jul 27 22:52:48 2022 -0700",
+        "CV_collection_version":"6.2.58.26",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"68f85c4c6480847f0befbe1de88e23c374b506d1",
-        "source_id_CV_modified":"Wed Jul 27 18:19:15 2022 -0700",
-        "source_id_CV_note":"Deregister source_id GFDL-GLOBAL-LBL",
+        "previous_commit":"7ed82e9e718d43adf65dc7f003bf9ad21b396e1d",
+        "source_id_CV_modified":"Wed Jul 27 18:38:47 2022 -0700",
+        "source_id_CV_note":"Revised CMOR3 derived source 1023 char limit test",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

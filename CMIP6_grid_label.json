@@ -47,13 +47,13 @@
         "grz":"regridded zonal mean data reported on the data provider's preferred latitude target grid"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 27 18:38:47 2022 -0700",
-        "CV_collection_version":"6.2.58.25",
+        "CV_collection_modified":"Wed Jul 27 22:52:48 2022 -0700",
+        "CV_collection_version":"6.2.58.26",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "grid_label_CV_modified":"Fri Sep 8 18:12:00 2017 -0700",
         "grid_label_CV_note":"Issue395 durack1 augment grid_label with description (#401)",
         "institution_id":"PCMDI",
-        "previous_commit":"68f85c4c6480847f0befbe1de88e23c374b506d1",
+        "previous_commit":"7ed82e9e718d43adf65dc7f003bf9ad21b396e1d",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -608,6 +608,7 @@ PJD 27 Jul 2022    - Added derived "source" test for CMOR3 1024 char limit https
 PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of CMOR3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
 PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
 PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
+PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -615,7 +616,7 @@ PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/W
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregister source_id GFDL-GLOBAL-LBL\"'
+commitMessage = '\"Revised CMOR3 derived source 1023 char limit test\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1072,8 +1073,9 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "GFDL-GLOBAL-LBL"
-source_id.pop(key)
+key = "E3SM-2-0"
+source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid;",
+                                                                       "5 ice categories; 7 ice, 5 snow layers)"])
 
 # Example license update, including email
 # source_ids_to_relax_list = [
@@ -1194,7 +1196,7 @@ Raise a runtime error if this string is >1024 characters
 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
 https://github.com/PCMDI/cmip6-cmor-tables/issues/377
 '''
-MAX_SOURCE_LENGTH = 1024
+MAX_SOURCE_LENGTH = 1023
 MAX_SOURCE_MSG_TEMPLATE = 'source "{}" is {} characters long, above the {} limit'
 # Create concatenated string
 test_source_ids = [i for i in source_id]
@@ -1212,9 +1214,9 @@ for key in test_source_ids:
     if len(source) > MAX_SOURCE_LENGTH:
         errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
             key, len(source), MAX_SOURCE_LENGTH)])
-    # if key == "E3SM-2-0":
-    #    print(len(source))
-    #    print(source)
+    if key == "E3SM-2-0":
+        print("len(source):", len(source))
+        print(source)
 # Raise exception if any found
 if errors:
     raise RuntimeError(errors)

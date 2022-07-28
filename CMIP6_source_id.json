@@ -3836,63 +3836,6 @@
             "release_year":"2018",
             "source_id":"GFDL-ESM4"
         },
-        "GFDL-GLOBAL-LBL":{
-            "activity_participation":[
-                "RFMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "NOAA-GFDL"
-            ],
-            "label":"GFDL-GLOBAL-LBL",
-            "label_extended":"GFDL Reference Forward Model Line-by-Line with DA/DISORT solver (March 2019)",
-            "license_info":{
-                "exceptions_contact":"@noaa.gov <- gfdl.climate.model.info",
-                "history":"",
-                "id":"CC BY 4.0",
-                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-                "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by/4.0/"
-            },
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"GFDL-GLOBAL-LBL"
-        },
         "GFDL-GRTCODE":{
             "activity_participation":[
                 "RFMIP"
@@ -8034,13 +7977,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 27 18:19:15 2022 -0700",
-        "CV_collection_version":"6.2.58.24",
+        "CV_collection_modified":"Wed Jul 27 18:38:47 2022 -0700",
+        "CV_collection_version":"6.2.58.25",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"51d9b63711044317145fc17a94ff1347bfee66cc",
-        "source_id_CV_modified":"Wed Jul 27 15:21:21 2022 -0700",
-        "source_id_CV_note":"Revised CMOR3 derived source 1024 char limit test",
+        "previous_commit":"68f85c4c6480847f0befbe1de88e23c374b506d1",
+        "source_id_CV_modified":"Wed Jul 27 18:19:15 2022 -0700",
+        "source_id_CV_note":"Deregister source_id GFDL-GLOBAL-LBL",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

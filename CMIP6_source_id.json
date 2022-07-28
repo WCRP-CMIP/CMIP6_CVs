@@ -3123,12 +3123,12 @@
             "label":"ECMWF-IFS-HR",
             "label_extended":"ECMWF-IFS-HR (25 km atmosphere and 25 km ocean)",
             "license_info":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@ecmwf.int <- christopher.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0; 2022-07-26: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3180,12 +3180,12 @@
             "label":"ECMWF-IFS-LR",
             "label_extended":"ECMWF-IFS-LR (50 km atmosphere and 100 km ocean)",
             "license_info":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@ecmwf.int <- christopher.roberts",
+                "history":"2017-09-15: initially published under CC BY-NC-SA 4.0; 2022-07-26: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3237,12 +3237,12 @@
             "label":"ECMWF-IFS-MR",
             "label_extended":"ECMWF-IFS-MR (50 km atmosphere and 25 km ocean)",
             "license_info":{
-                "exceptions_contact":"@ecmwf.int <- chris.roberts",
-                "history":"2018-11-15: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@ecmwf.int <- christopher.roberts",
+                "history":"2018-11-15: initially published under CC BY-NC-SA 4.0; 2022-07-26: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7977,13 +7977,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 27 22:52:48 2022 -0700",
-        "CV_collection_version":"6.2.58.26",
+        "CV_collection_modified":"Thu Jul 28 11:29:09 2022 -0700",
+        "CV_collection_version":"6.2.58.27",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"7ed82e9e718d43adf65dc7f003bf9ad21b396e1d",
-        "source_id_CV_modified":"Wed Jul 27 18:38:47 2022 -0700",
-        "source_id_CV_note":"Revised CMOR3 derived source 1023 char limit test",
+        "previous_commit":"d77fb264c7c50b791cbeea07f0d964aa102d90cb",
+        "source_id_CV_modified":"Wed Jul 27 22:52:48 2022 -0700",
+        "source_id_CV_note":"Revised 3 ECMWF* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

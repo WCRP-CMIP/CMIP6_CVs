@@ -610,6 +610,7 @@ PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - a
 PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
 PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
 PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
+PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -617,7 +618,7 @@ PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 3 ECMWF* source_id license histories\"'
+commitMessage = '\"Revised CIESM source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1074,23 +1075,17 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-source_ids_to_relax_list = [
-    "ECMWF-IFS-HR",
-    "ECMWF-IFS-LR",
-    "ECMWF-IFS-MR",
-]
-
-for key in source_ids_to_relax_list:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["exceptions_contact"] = "@ecmwf.int <- christopher.roberts"
-    source_id[key]["license_info"]["history"] += "; 2022-07-26: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "CIESM"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"]["exceptions_contact"] = "@tsinghua.edu.cn <- yanluan"
+source_id[key]["license_info"]["history"] += "; 2022-07-27: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [
@@ -1229,7 +1224,7 @@ for key in test_source_ids:
     if len(source) > MAX_SOURCE_LENGTH:
         errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
             key, len(source), MAX_SOURCE_LENGTH)])
-    #if key == "E3SM-2-0":
+    # if key == "E3SM-2-0":
     #    print("len(source):", len(source))
     #    print(source)
 # Raise exception if any found

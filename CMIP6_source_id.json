@@ -1583,11 +1583,11 @@
             "label_extended":"Community Integrated Earth System Model",
             "license_info":{
                 "exceptions_contact":"@tsinghua.edu.cn <- yanluan",
-                "history":"2019-12-02: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-12-02: initially published under CC BY-SA 4.0; 2022-07-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7977,13 +7977,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jul 28 11:29:09 2022 -0700",
-        "CV_collection_version":"6.2.58.27",
+        "CV_collection_modified":"Fri Jul 29 11:30:59 2022 -0700",
+        "CV_collection_version":"6.2.58.28",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d77fb264c7c50b791cbeea07f0d964aa102d90cb",
-        "source_id_CV_modified":"Wed Jul 27 22:52:48 2022 -0700",
-        "source_id_CV_note":"Revised 3 ECMWF* source_id license histories",
+        "previous_commit":"4b4c6271938b5e00b5050564ad2ef5d42032c114",
+        "source_id_CV_modified":"Thu Jul 28 11:29:09 2022 -0700",
+        "source_id_CV_note":"Revised CIESM source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

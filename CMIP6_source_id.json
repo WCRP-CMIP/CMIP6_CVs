@@ -1583,7 +1583,7 @@
             "label_extended":"Community Integrated Earth System Model",
             "license_info":{
                 "exceptions_contact":"@tsinghua.edu.cn <- yanluan",
-                "history":"2019-12-02: initially published under CC BY-SA 4.0; 2022-07-27: relaxed to CC BY 4.0",
+                "history":"2019-12-02: initially published under CC BY-SA 4.0; 2022-07-27: relaxed to CC BY 4.0; 2022-07-27: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -7977,12 +7977,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Jul 29 11:30:59 2022 -0700",
-        "CV_collection_version":"6.2.58.28",
+        "CV_collection_modified":"Mon Aug  1 13:43:37 2022 -0700",
+        "CV_collection_version":"6.2.58.29",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"4b4c6271938b5e00b5050564ad2ef5d42032c114",
-        "source_id_CV_modified":"Thu Jul 28 11:29:09 2022 -0700",
+        "previous_commit":"1387223498e374e09f120e2f0b15290e1f7e6e0f",
+        "source_id_CV_modified":"Fri Jul 29 11:30:59 2022 -0700",
         "source_id_CV_note":"Revised CIESM source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

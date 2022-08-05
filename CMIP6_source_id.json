@@ -6335,11 +6335,11 @@
             "label_extended":"MPI-ESM1.2-HAM",
             "license_info":{
                 "exceptions_contact":"@env.ethz.ch <- david.neubauer",
-                "history":"2019-06-27: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-06-27: initially published under CC BY-SA 4.0; 2022-07-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7977,13 +7977,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Aug  1 13:45:17 2022 -0700",
-        "CV_collection_version":"6.2.58.29",
+        "CV_collection_modified":"Fri Aug  5 10:02:36 2022 -0700",
+        "CV_collection_version":"6.2.58.30",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1387223498e374e09f120e2f0b15290e1f7e6e0f",
-        "source_id_CV_modified":"Fri Jul 29 11:30:59 2022 -0700",
-        "source_id_CV_note":"Revised ARTS-2-3 source_id license history",
+        "previous_commit":"a46683a582b3bf23b0d4e51c22db3a1a992103ae",
+        "source_id_CV_modified":"Mon Aug  1 13:45:17 2022 -0700",
+        "source_id_CV_note":"Revised MPI-ESM-1-2-HAM source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

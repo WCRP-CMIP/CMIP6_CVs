@@ -612,6 +612,7 @@ PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit -
 PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
 PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
 PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1140
+PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -619,7 +620,7 @@ PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised ARTS-2-3 source_id license history\"'
+commitMessage = '\"Revised MPI-ESM-1-2-HAM source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1076,11 +1077,11 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "ARTS-2-3"
+key = "MPI-ESM-1-2-HAM"
 print("processing:", key)
 licenseId = "CC BY 4.0"
-source_id[key]["license_info"]["exceptions_contact"] = "@uni-hamburg.de <- oliver.lemke"
-source_id[key]["license_info"]["history"] += "; 2022-07-31: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["exceptions_contact"] = "@env.ethz.ch <- david.neubauer"
+source_id[key]["license_info"]["history"] += "; 2022-07-27: relaxed to CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

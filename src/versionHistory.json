@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"a46683a582b3bf23b0d4e51c22db3a1a992103ae",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a46683a582b3bf23b0d4e51c22db3a1a992103ae",
-            "commitMessage":"Revised MPI-ESM-1-2-HAM source_id license history",
-            "timeStamp":"Fri Aug  5 10:02:36 2022 -0700"
+            "MD5":"bbc5e59de3301ea67de651a514cca47ca42976f3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/bbc5e59de3301ea67de651a514cca47ca42976f3",
+            "commitMessage":"Revised 3 MRI-* source_id license histories",
+            "timeStamp":"Mon Aug  8 12:31:56 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":30,
+            "versionCVCommit":31,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

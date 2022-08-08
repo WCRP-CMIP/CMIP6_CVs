@@ -613,6 +613,7 @@ PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github
 PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
 PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1140
 PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
+PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1131
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -620,7 +621,7 @@ PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://g
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised MPI-ESM-1-2-HAM source_id license history\"'
+commitMessage = '\"Revised 3 MRI-* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1077,17 +1078,27 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "MPI-ESM-1-2-HAM"
-print("processing:", key)
-licenseId = "CC BY 4.0"
-source_id[key]["license_info"]["exceptions_contact"] = "@env.ethz.ch <- david.neubauer"
-source_id[key]["license_info"]["history"] += "; 2022-07-27: relaxed to CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-source_id[key]["license_info"]["url"] = licenseUrl
+# Example license update, including email
+source_ids_to_relax_list = [
+    "MRI-AGCM3-2-H",
+    "MRI-AGCM3-2-S",
+    "MRI-ESM2-0",
+]
+
+for key in source_ids_to_relax_list:
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    if key == "MRI-ESM2-0":
+        source_id[key]["license_info"]["exceptions_contact"] = "@mri-jma.go.jp <- mdeushi"
+    else:
+        source_id[key]["license_info"]["exceptions_contact"] = "@mri-jma.go.jp <- rmizuta"
+    source_id[key]["license_info"]["history"] += "; 2022-08-07: relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

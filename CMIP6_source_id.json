@@ -2218,7 +2218,8 @@
             "institution_id":[
                 "E3SM-Project",
                 "LLNL",
-                "UCI"
+                "UCI",
+                "UCSB"
             ],
             "label":"E3SM 1.0",
             "label_extended":"E3SM 1.0 (Energy Exascale Earth System Model)",
@@ -7977,13 +7978,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Aug  8 12:31:56 2022 -0700",
-        "CV_collection_version":"6.2.58.31",
+        "CV_collection_modified":"Mon Aug 15 21:41:00 2022 -0700",
+        "CV_collection_version":"6.2.58.32",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"bbc5e59de3301ea67de651a514cca47ca42976f3",
-        "source_id_CV_modified":"Fri Aug  5 10:02:36 2022 -0700",
-        "source_id_CV_note":"Revised 3 MRI-* source_id license histories",
+        "previous_commit":"2daa7b975eae85c00ba92f92c2c2134657c935c3",
+        "source_id_CV_modified":"Mon Aug  8 12:31:56 2022 -0700",
+        "source_id_CV_note":"Register institution_id UCSB for E3SM-1-0",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

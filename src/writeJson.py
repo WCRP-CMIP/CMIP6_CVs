@@ -614,6 +614,7 @@ PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/
 PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1140
 PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
 PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1131
+PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1144
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -621,7 +622,7 @@ PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 3 MRI-* source_id license histories\"'
+commitMessage = '\"Register institution_id UCSB for E3SM-1-0\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -969,6 +970,8 @@ institution_id = {
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
     'UCI': 'Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA',
+    'UCSB': ''.join(['Bren School of Environmental Science and Management, University of California, Santa Barbara. Mailing address: ',
+                     'c/o Samantha Stevenson, 2400 Bren Hall, University of California Santa Barbara, Santa Barbara, CA 93106, USA']),
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
 }
 
@@ -1079,26 +1082,8 @@ del(tmp)
 
 # Fix issues
 # Example license update, including email
-source_ids_to_relax_list = [
-    "MRI-AGCM3-2-H",
-    "MRI-AGCM3-2-S",
-    "MRI-ESM2-0",
-]
-
-for key in source_ids_to_relax_list:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    if key == "MRI-ESM2-0":
-        source_id[key]["license_info"]["exceptions_contact"] = "@mri-jma.go.jp <- mdeushi"
-    else:
-        source_id[key]["license_info"]["exceptions_contact"] = "@mri-jma.go.jp <- rmizuta"
-    source_id[key]["license_info"]["history"] += "; 2022-08-07: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "E3SM-1-0"
+source_id[key]["institution_id"].append("UCSB")
 
 # Example license update, including email
 # source_ids_to_relax_list = [

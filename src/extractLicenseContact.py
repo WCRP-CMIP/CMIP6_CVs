@@ -374,19 +374,31 @@ def getDrs(path):
     """
     getDrs(path)
 
-    Extracts DRS components following CMIP6 specs
+    Extracts DRS components following CMIP6/5 specs
     """
     pathBits = path.split("/")
-    cmipInd = pathBits.index("CMIP6")
-    # CMIP6 DRS
-    # /p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1/Omon/msftmz/gn/v20191115/msftmz
-    actId = pathBits[cmipInd + 1]
-    expId = pathBits[cmipInd + 4]
-    instId = pathBits[cmipInd + 2]
-    ripfId = pathBits[cmipInd + 5]
-    srcId = pathBits[cmipInd + 3]
-    gridId = pathBits[cmipInd + 8]
-    verId = pathBits[cmipInd + 9]
+    if "CMIP6" in pathBits:
+        cmipInd = pathBits.index("CMIP6")
+        # CMIP6 DRS
+        # /p/css03/esgf_publish/CMIP6/CMIP/CSIRO/ACCESS-ESM1-5/historical/r1i1p1f1/Omon/msftmz/gn/v20191115/msftmz
+        actId = pathBits[cmipInd + 1]
+        expId = pathBits[cmipInd + 4]
+        instId = pathBits[cmipInd + 2]
+        ripfId = pathBits[cmipInd + 5]
+        srcId = pathBits[cmipInd + 3]
+        gridId = pathBits[cmipInd + 8]
+        verId = pathBits[cmipInd + 9]
+    if "cmip5" in pathBits:
+        cmipInd = pathBits.index("cmip5")
+        # CMIP5 DRS
+        # /p/css03/esgf_publish/cmip5/output1/CSIRO-BOM/ACCESS1-3/historical/mon/ocean/Omon/r3i1p1/v3/thetao/thetao_Omon_ACCESS1-3_historical_r3i1p1_185001-185412.nc
+        actId = "CMIP5"  # pathBits[cmipInd + 1]
+        expId = pathBits[cmipInd + 4]
+        instId = pathBits[cmipInd + 2]
+        ripfId = pathBits[cmipInd + 8]
+        srcId = pathBits[cmipInd + 3]
+        gridId = "gn"  # pathBits[cmipInd + 8]
+        verId = pathBits[cmipInd + 9]
 
     # validate activity_id is correct
     activity_id = {

@@ -584,13 +584,45 @@ PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://g
 PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
 PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister NorESM2-LME, NorESM2-LMEC and NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
 PJD  8 Jun 2022    - Revised 9 GFDL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
+PJD  9 Jun 2022    - Correct erroneous deregistration of NorESM2-MH source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
+MSM 10 Jun 2022    - Revised license histories for AS-RCEC and NTU models (TaiESM*, HiRAM*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1088
+MSM 10 Jun 2022    - Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1089
+PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NICAM16-9D-L78 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1092
+PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
+PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1095
+PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1100
+PJD 16 Jun 2022    - Deregistered CESM2-SE source_id and revised 8 CESM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1102
+PJD 17 Jun 2022    - Deregistered CNRM-ESM2-1-HR source_id, revised 3 CNRM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1101 1107
+PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1099
+PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
+PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
+PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
+PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1116
+PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1118
+PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1122
+PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1086
+PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1120
+PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1121
+PJD 19 Jul 2022    - Registered source_id E3SM-2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+PJD 27 Jul 2022    - Added derived "source" test for CMOR3 1024 char limit https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of CMOR3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
+PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
+PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
+PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1140
+PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
+PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1131
+PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1144
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
+
 @author: durack1
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revise 9 GFDL source_id license histories\"'
+commitMessage = '\"Register institution_id UCSB for E3SM-1-0\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -844,7 +876,6 @@ institution_id = {
     'AS-RCEC': 'Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan',
     'AWI': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany',
     'BCC': 'Beijing Climate Center, Beijing 100081, China',
-    'BNU': 'Beijing Normal University, Beijing 100875, China',
     'CAMS': 'Chinese Academy of Meteorological Sciences, Beijing 100081, China',
     'CAS': 'Chinese Academy of Sciences, Beijing 100029, China',
     'CCCR-IITM': 'Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India',
@@ -852,10 +883,6 @@ institution_id = {
     'CMCC': 'Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy',
     'CNRM-CERFACS': ''.join(['CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche ',
                              'et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)']),
-    'CSIR-Wits-CSIRO': ''.join(['CSIR (Council for Scientific and Industrial Research - Natural Resources and the Environment, Pretoria, 0001, South Africa), ',
-                                'Wits (University of the Witwatersrand - Global Change Institute, Johannesburg 2050, South Africa), ',
-                                'CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia)',
-                                'Mailing address: Wits, Global Change Institute, Johannesburg 2050, South Africa']),
     'CSIRO': 'Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia',
     'CSIRO-ARCCSS': ' '.join(['CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia),',
                               'ARCCSS (Australian Research Council Centre of Excellence for Climate System Science).',
@@ -893,7 +920,6 @@ institution_id = {
                                   'Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric ',
                                   'Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland']),
     'INM': 'Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia',
-    'INPE': 'National Institute for Space Research, Cachoeira Paulista, SP 12630-000, Brazil',
     'IPSL': 'Institut Pierre Simon Laplace, Paris 75252, France',
     'KIOST': 'Korea Institute of Ocean Science and Technology, Busan 49111, Republic of Korea',
     'LLNL': ' '.join(['Lawrence Livermore National Laboratory, Livermore,',
@@ -944,9 +970,9 @@ institution_id = {
     'THU': 'Department of Earth System Science, Tsinghua University, Beijing 100084, China',
     'UA': 'Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA',
     'UCI': 'Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA',
+    'UCSB': ''.join(['Bren School of Environmental Science and Management, University of California, Santa Barbara. Mailing address: ',
+                     'c/o Samantha Stevenson, 2400 Bren Hall, University of California Santa Barbara, Santa Barbara, CA 93106, USA']),
     'UHH': 'Universitat Hamburg, Hamburg 20148, Germany',
-    'UTAS': 'Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Tasmania 7001, Australia',
-    'UofT': 'Department of Physics, University of Toronto, 60 St George Street, Toronto, ON M5S1A7, Canada'
 }
 
 # %% CMIP6 License
@@ -1055,127 +1081,102 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
+# Example license update, including email
+key = "E3SM-1-0"
+source_id[key]["institution_id"].append("UCSB")
 
-# update licenses
-modList = [
-    "GFDL-AM4",
-    "GFDL-CM4",
-    "GFDL-CM4C192",
-    "GFDL-ESM2M",
-    "GFDL-ESM4",
-    "GFDL-GLOBAL-LBL",
-    "GFDL-GRTCODE",
-    "GFDL-OM4p5B",
-    "GFDL-RFM-DISORT",
-]
-modListNoData = [
-    "GFDL-GLOBAL-LBL",
-]
-for count, key in enumerate(modList):
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    if key in modListNoData:
-        source_id[key]["license_info"] = {}
-        source_id[key]["license_info"]["exceptions_contact"] = "@noaa.gov <- gfdl.climate.model.info"
-        source_id[key]["license_info"]["history"] = ""
-    else:
-        source_id[key]["license_info"]["history"] = '; '.join(
-            [source_id[key]["license_info"]["history"], "2022-06-08: relaxed to CC BY 4.0"])
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    if key in modListNoData:
-        source_id[key]["license_info"]["source_specific_info"] = ""
-    source_id[key]["license_info"]["url"] = licenseUrl
-
-# Example license update
-# IPSLList = [
-#     "4AOP-v1-5",
-#     "IPSL-CM5A2-INCA",
-#     "IPSL-CM6A-ATM-HR",
-#     "IPSL-CM6A-ATM-ICO-HR",
-#     "IPSL-CM6A-ATM-ICO-LR",
-#     "IPSL-CM6A-ATM-ICO-MR",
-#     "IPSL-CM6A-ATM-ICO-VHR",
-#     "IPSL-CM6A-ATM-LR-REPROBUS",
-#     "IPSL-CM6A-LR",
-#     "IPSL-CM6A-LR-INCA",
-#     "IPSL-CM6A-MR025",
-#     "IPSL-CM6A-MR1",
+# Example license update, including email
+# source_ids_to_relax_list = [
+#     "E3SM-1-0",
+#     "E3SM-1-1",
+#     "E3SM-1-1-ECA",
 # ]
-# IPSLListNoData = [
-#     "IPSL-CM6A-ATM-ICO-HR",
-#     "IPSL-CM6A-ATM-ICO-LR",
-#     "IPSL-CM6A-ATM-ICO-MR",
-#     "IPSL-CM6A-ATM-ICO-VHR",
-#     "IPSL-CM6A-ATM-LR-REPROBUS",
-#     "IPSL-CM6A-MR025",
-#     "IPSL-CM6A-MR1",
-# ]
-# for count, key in enumerate(IPSLList):
+#
+# for key in source_ids_to_relax_list:
 #     print("processing:", key)
 #     licenseId = "CC BY 4.0"
-#     if key in IPSLListNoData:
-#         source_id[key]["license_info"] = {}
-#         source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
-#         source_id[key]["license_info"]["history"] = ""
-#     else:
-#         source_id[key]["license_info"]["history"] = '; '.join(
-#             [source_id[key]["license_info"]["history"], "2022-06-03: relaxed to CC BY 4.0"])
+#     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+#     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
 #     source_id[key]["license_info"]["id"] = licenseId
 #     licenseStr = license["license_options"][licenseId]["license_id"]
 #     licenseUrl = license["license_options"][licenseId]["license_url"]
 #     source_id[key]["license_info"]["license"] = "".join(
 #         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-#     if key in IPSLListNoData:
-#         source_id[key]["license_info"]["source_specific_info"] = ""
 #     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example source_id registration
-# key = 'GISS-E2-2-H'
+# key = "E3SM-2-0"
 # source_id[key] = {}
-# source_id[key]['activity_participation'] = [
-# 'CMIP',
-# 'SIMIP',
-# 'ScenarioMIP'
+# source_id[key]["activity_participation"] = [
+#     "CFMIP",
+#     "CMIP",
+#     "DAMIP",
+#     "RFMIP",
+#     "ScenarioMIP",
 # ]
-# source_id[key]['cohort'] = [
-# 'Registered'
+# source_id[key]["cohort"] = [
+#     "Registered",
 # ]
-# source_id[key]['institution_id'] = [
-# 'NASA-GISS'
+# source_id[key]["institution_id"] = [
+#     "E3SM-Project",
 # ]
-# source_id[key]['label'] = 'GISS-E2.2H'
-# source_id[key]['label_extended'] = 'GISS-E2.2H'
-# source_id[key]['model_component'] = {}
-# source_id[key]['model_component']['aerosol'] = {}
-# source_id[key]['model_component']['aerosol']['description'] = 'Varies with physics-version (p==1 none, p==3 OMA, p==4 TOMAS, p==5 MATRIX)'
-# source_id[key]['model_component']['aerosol']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['atmos'] = {}
-# source_id[key]['model_component']['atmos']['description'] = 'GISS-E2.2 (High Top, 2.5x2 degree; 144 x 90 longitude/latitude; 102 levels; top level 0.002 hPa)'
-# source_id[key]['model_component']['atmos']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['atmosChem'] = {}
-# source_id[key]['model_component']['atmosChem']['description'] = 'Varies with physics-version (p==1 Non-interactive, p>1 GPUCCINI)'
-# source_id[key]['model_component']['atmosChem']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['land'] = {}
-# source_id[key]['model_component']['land']['description'] = 'GISS LSM'
-# source_id[key]['model_component']['land']['native_nominal_resolution'] = '250 km'
-# source_id[key]['model_component']['landIce'] = {}
-# source_id[key]['model_component']['landIce']['description'] = 'none'
-# source_id[key]['model_component']['landIce']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['ocean'] = {}
-# source_id[key]['model_component']['ocean']['description'] = 'HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 32 levels; top grid cell 0-10 m)'
-# source_id[key]['model_component']['ocean']['native_nominal_resolution'] = '100 km'
-# source_id[key]['model_component']['ocnBgchem'] = {}
-# source_id[key]['model_component']['ocnBgchem']['description'] = 'none'
-# source_id[key]['model_component']['ocnBgchem']['native_nominal_resolution'] = 'none'
-# source_id[key]['model_component']['seaIce'] = {}
-# source_id[key]['model_component']['seaIce']['description'] = 'GISS SI (same grid as atmos)'
-# source_id[key]['model_component']['seaIce']['native_nominal_resolution'] = '250 km'
-# source_id[key]['release_year'] = '2021'
-# source_id[key]['source_id'] = key
+# source_id[key]["label"] = "E3SM 2.0"
+# source_id[key]["label_extended"] = "E3SM 2.0 (Energy Exascale Earth System Model)"
+# source_id[key]["model_component"] = {}
+# source_id[key]["model_component"]["aerosol"] = {}
+# source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 with new resuspension,",
+#                                                                        "marine organics, secondary organics,",
+#                                                                         "and dust (atmos grid)"])
+# source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["atmos"] = {}
+# source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, cubed sphere spectral-element grid;",
+#                                                                       "5400 elements, 30x30 per cube face. Dynamics:",
+#                                                                       "degree 3 (p=3) polynomials within each spectral",
+#                                                                       "element, 112 km average resolution. Physics: 2x2",
+#                                                                       "finite volume cells within each spectral element,",
+#                                                                       "1.5 degree (168 km) average grid spacing; 72",
+#                                                                       "vertical layers; top level 60 km)"])
+# source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["atmosChem"] = {}
+# source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
+#                                                                           "passive ozone with the lower boundary sink)",
+#                                                                           "for aerosols. Stratosphere linearized",
+#                                                                           "interactive ozone (LINOZ v2) (atmos grid)"])
+# source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["land"] = {}
+# source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, satellite phenology mode, atmos grid),",
+#                                                                      "MOSART (v1.0, 0.5 degree latitude/longitude)"])
+# source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
+# source_id[key]["model_component"]["landIce"] = {}
+# source_id[key]["model_component"]["landIce"]["description"] = 'none'
+# source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'none'
+# source_id[key]["model_component"]["ocean"] = {}
+# source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, EC30to60E2r2 unstructured",
+#                                                                       "SVTs mesh with 236853 cells, 719506 edges,",
+#                                                                       "variable resolution 60 to 30 km; 60 levels;",
+#                                                                       "top grid cell 0-10 m)"])
+# source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
+# source_id[key]["model_component"]["ocnBgchem"] = {}
+# source_id[key]["model_component"]["ocnBgchem"]["description"] = 'none'
+# source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'none'
+# source_id[key]["model_component"]["seaIce"] = {}
+# source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid,",
+#                                                                        "variable resolution 60 to 30 km; 5 ice",
+#                                                                        "categories; 7 ice, 5 snow layers)"])
+# source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
+# source_id[key]["release_year"] = "2022"
+# source_id[key]["source_id"] = key
+# # License info
+# licenseId = "CC BY 4.0"
+# source_id[key]["license_info"] = {}
+# source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+# source_id[key]["license_info"]["history"] = "" #"2022-xx-xx: initially published under CC BY 4.0"
+# source_id[key]["license_info"]["id"] = licenseId
+# licenseStr = license["license_options"][licenseId]["license_id"]
+# licenseUrl = license["license_options"][licenseId]["license_url"]
+# source_id[key]["license_info"]["license"] = "".join(
+# [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+# source_id[key]["license_info"]["url"] = licenseUrl
 
 # Rename
 #source_id[key2] = source_id.pop(key1)
@@ -1196,6 +1197,39 @@ if errors:
     raise RuntimeError('. '.join(errors))
 
 del(long_source_ids, errors)
+
+'''
+Apply a check on the length of the source (generated in cmip6-cmor-tables/Tables/cmip6_CV.json)
+Raise a runtime error if this string is >1024 characters
+https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
+https://github.com/PCMDI/cmip6-cmor-tables/issues/377
+'''
+MAX_SOURCE_LENGTH = 1023
+MAX_SOURCE_MSG_TEMPLATE = 'source "{}" is {} characters long, above the {} limit'
+# Create concatenated string
+test_source_ids = [i for i in source_id]
+errors = []
+for key in test_source_ids:
+    source = source_id[key]["label"] + \
+        " (" + source_id[key]["release_year"] + "): " + chr(10)
+    for realm_test in source_id[key]["model_component"].keys():
+        if (source_id[key]["model_component"][realm_test]["description"].find("None") == -1):
+            source += realm_test + ': '
+            source += source_id[key]["model_component"][realm_test]["description"] + \
+                chr(10)
+    source = source.rstrip()
+    #print(key, len(source), MAX_SOURCE_LENGTH)
+    if len(source) > MAX_SOURCE_LENGTH:
+        errors.append([MAX_SOURCE_MSG_TEMPLATE.format(
+            key, len(source), MAX_SOURCE_LENGTH)])
+    # if key == "E3SM-2-0":
+    #    print("len(source):", len(source))
+    #    print(source)
+# Raise exception if any found
+if errors:
+    raise RuntimeError(errors)
+# cleanup
+del(source, key, test_source_ids, errors, realm_test)
 
 '''
 CMIP5 Descriptors were documented in http://pcmdi.github.io/projects/cmip5/CMIP5_output_metadata_requirements.pdf?id=76
@@ -1921,7 +1955,9 @@ if versionId != versionOld:
     del(target_url, txt, readmeH, fH)
 
 # Commit all changes
+
 args = shlex.split(''.join(['git commit -am ', commitMessage]))
+print(args)
 p = subprocess.Popen(args, stdout=subprocess.PIPE,
                      stderr=subprocess.PIPE, cwd='./')
 

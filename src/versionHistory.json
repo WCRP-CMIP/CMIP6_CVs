@@ -31,10 +31,10 @@
             "timeStamp":"Fri Sep 8 18:12:00 2017 -0700"
         },
         "institution_id":{
-            "MD5":"f2dd264c1998e9b636d4b83214811c9582165f47",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f2dd264c1998e9b636d4b83214811c9582165f47",
-            "commitMessage":"Register institution_id LLNL; Py3 cleanup",
-            "timeStamp":"Mon Nov 16 11:16:39 2020 -0800"
+            "MD5":"2daa7b975eae85c00ba92f92c2c2134657c935c3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2daa7b975eae85c00ba92f92c2c2134657c935c3",
+            "commitMessage":"Register institution_id UCSB for E3SM-1-0",
+            "timeStamp":"Mon Aug 15 21:41:00 2022 -0700"
         },
         "license":{
             "MD5":"9d190e9404ae29cac4aed8e0d2fa62b85d6a1157",
@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"864dde9b9a8e2e60aff22a94100cabb04057b216",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/864dde9b9a8e2e60aff22a94100cabb04057b216",
-            "commitMessage":"Revise 9 GFDL source_id license histories",
-            "timeStamp":"Wed Jun  8 12:31:12 2022 -0700"
+            "MD5":"2daa7b975eae85c00ba92f92c2c2134657c935c3",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2daa7b975eae85c00ba92f92c2c2134657c935c3",
+            "commitMessage":"Register institution_id UCSB for E3SM-1-0",
+            "timeStamp":"Mon Aug 15 21:41:00 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":2,
+            "versionCVCommit":32,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

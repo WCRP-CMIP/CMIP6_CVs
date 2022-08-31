@@ -615,6 +615,7 @@ PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.c
 PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
 PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1131
 PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1144
+PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -622,7 +623,7 @@ PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.co
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Register institution_id UCSB for E3SM-1-0\"'
+commitMessage = '\"Revised EC-Earth3-HR source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1081,9 +1082,17 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-# Example license update, including email
-key = "E3SM-1-0"
-source_id[key]["institution_id"].append("UCSB")
+key = "EC-Earth3-HR"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
+source_id[key]["license_info"]["history"] = "2022-06-27: initially published under CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

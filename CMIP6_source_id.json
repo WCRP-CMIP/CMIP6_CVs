@@ -2708,7 +2708,7 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -5303,7 +5303,9 @@
             "activity_participation":[
                 "HighResMIP"
             ],
-            "cohort":"Registered",
+            "cohort":[
+                "Published"
+            ],
             "institution_id":[
                 "IPSL"
             ],
@@ -5311,7 +5313,7 @@
             "label_extended":"IPSL-CM6A-ATM-ICO-HR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
+                "history":"2022-07-21: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -5358,7 +5360,9 @@
             "activity_participation":[
                 "HighResMIP"
             ],
-            "cohort":"Registered",
+            "cohort":[
+                "Published"
+            ],
             "institution_id":[
                 "IPSL"
             ],
@@ -5366,7 +5370,7 @@
             "label_extended":"IPSL-CM6A-ATM-ICO-LR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
+                "history":"2022-07-21: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -5413,7 +5417,9 @@
             "activity_participation":[
                 "HighResMIP"
             ],
-            "cohort":"Registered",
+            "cohort":[
+                "Published"
+            ],
             "institution_id":[
                 "IPSL"
             ],
@@ -5421,7 +5427,7 @@
             "label_extended":"IPSL-CM6A-ATM-ICO-MR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
+                "history":"2022-07-20: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -5468,7 +5474,9 @@
             "activity_participation":[
                 "HighResMIP"
             ],
-            "cohort":"Registered",
+            "cohort":[
+                "Published"
+            ],
             "institution_id":[
                 "IPSL"
             ],
@@ -5476,7 +5484,7 @@
             "label_extended":"IPSL-CM6A-ATM-ICO-VHR",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
+                "history":"2022-07-21: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -7978,13 +7986,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Aug 31 12:51:15 2022 -0700",
-        "CV_collection_version":"6.2.58.33",
+        "CV_collection_modified":"Thu Sep  1 13:47:30 2022 -0700",
+        "CV_collection_version":"6.2.58.34",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9ba0d43446ce360da28b49d76ef87a82d3215810",
-        "source_id_CV_modified":"Mon Aug 15 21:41:00 2022 -0700",
-        "source_id_CV_note":"Revised EC-Earth3-HR source_id license history",
+        "previous_commit":"9ddb8352c2f51fc999549425ea7b4648da5ccd31",
+        "source_id_CV_modified":"Wed Aug 31 12:51:15 2022 -0700",
+        "source_id_CV_note":"Revised 4 IPSL* source_id license histories; tweak EC-Earth3-HR cohort",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

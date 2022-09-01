@@ -1119,7 +1119,7 @@ source_id[key]["cohort"] = ["Published"]
 # for key in source_ids_to_relax_list:
 #     print("processing:", key)
 #     licenseId = "CC BY 4.0"
-#     source_id[key]["cohort"] = "Published"
+#     source_id[key]["cohort"] = ["Published"]
 #     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
 #     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
 #     source_id[key]["license_info"]["id"] = licenseId

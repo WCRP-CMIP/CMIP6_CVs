@@ -624,7 +624,7 @@ PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 IPSL* source_id license histories\"'
+commitMessage = '\"Revised 4 IPSL* source_id license histories; tweak EC-Earth3-HR cohort\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1094,6 +1094,7 @@ for count, key in enumerate(srcIds_to_relax.keys()):
     dateStamp = srcIds_to_relax[key]
     print("processing:", key, dateStamp)
     licenseId = "CC BY 4.0"
+    source_id[key]["cohort"] = "Published"
     source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
     source_id[key]["license_info"]["history"] = "".join(
         [dateStamp, ": initially published under CC BY 4.0"])
@@ -1103,6 +1104,10 @@ for count, key in enumerate(srcIds_to_relax.keys()):
     source_id[key]["license_info"]["license"] = "".join(
         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
     source_id[key]["license_info"]["url"] = licenseUrl
+
+# Update EC-Earth3-HR cohort #1076
+key = "EC-Earth3-HR"
+source_id[key]["cohort"] = "Published"
 
 # Example license update, including email
 # source_ids_to_relax_list = [
@@ -1114,6 +1119,7 @@ for count, key in enumerate(srcIds_to_relax.keys()):
 # for key in source_ids_to_relax_list:
 #     print("processing:", key)
 #     licenseId = "CC BY 4.0"
+#     source_id[key]["cohort"] = "Published"
 #     source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
 #     source_id[key]["license_info"]["history"] += "; 2022-06-15: relaxed to CC BY 4.0"
 #     source_id[key]["license_info"]["id"] = licenseId

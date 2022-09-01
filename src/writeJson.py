@@ -1094,7 +1094,7 @@ for count, key in enumerate(srcIds_to_relax.keys()):
     dateStamp = srcIds_to_relax[key]
     print("processing:", key, dateStamp)
     licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = "Published"
+    source_id[key]["cohort"] = ["Published"]
     source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
     source_id[key]["license_info"]["history"] = "".join(
         [dateStamp, ": initially published under CC BY 4.0"])
@@ -1107,7 +1107,7 @@ for count, key in enumerate(srcIds_to_relax.keys()):
 
 # Update EC-Earth3-HR cohort #1076
 key = "EC-Earth3-HR"
-source_id[key]["cohort"] = "Published"
+source_id[key]["cohort"] = ["Published"]
 
 # Example license update, including email
 # source_ids_to_relax_list = [

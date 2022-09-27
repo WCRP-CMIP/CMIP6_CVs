@@ -617,6 +617,7 @@ PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.c
 PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1144
 PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
 PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
+PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1149
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -624,7 +625,7 @@ PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 IPSL* source_id license histories; tweak EC-Earth3-HR cohort\"'
+commitMessage = '\"Revised IITM-ESM source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1083,31 +1084,17 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-srcIds_to_relax = {
-    "IPSL-CM6A-ATM-ICO-HR": "2022-07-21",
-    "IPSL-CM6A-ATM-ICO-LR": "2022-07-21",
-    "IPSL-CM6A-ATM-ICO-MR": "2022-07-20",
-    "IPSL-CM6A-ATM-ICO-VHR": "2022-07-21",
-}
-
-for count, key in enumerate(srcIds_to_relax.keys()):
-    dateStamp = srcIds_to_relax[key]
-    print("processing:", key, dateStamp)
-    licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = ["Published"]
-    source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
-    source_id[key]["license_info"]["history"] = "".join(
-        [dateStamp, ": initially published under CC BY 4.0"])
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
-
-# Update EC-Earth3-HR cohort #1076
-key = "EC-Earth3-HR"
+key = "IITM-ESM"
+licenseId = "CC BY 4.0"
 source_id[key]["cohort"] = ["Published"]
+source_id[key]["license_info"]["exceptions_contact"] = "@tropmet.res.in <- iitm-esm"
+source_id[key]["license_info"]["history"] += "; 2022-09-27: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

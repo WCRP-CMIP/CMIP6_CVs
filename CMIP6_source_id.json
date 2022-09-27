@@ -4965,11 +4965,11 @@
             "label_extended":"IITM-ESM",
             "license_info":{
                 "exceptions_contact":"@tropmet.res.in <- iitm-esm",
-                "history":"2019-07-19: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-07-19: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7986,13 +7986,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Sep  1 13:47:30 2022 -0700",
-        "CV_collection_version":"6.2.58.34",
+        "CV_collection_modified":"Tue Sep 27 15:36:56 2022 -0700",
+        "CV_collection_version":"6.2.58.35",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"9ddb8352c2f51fc999549425ea7b4648da5ccd31",
-        "source_id_CV_modified":"Wed Aug 31 12:51:15 2022 -0700",
-        "source_id_CV_note":"Revised 4 IPSL* source_id license histories; tweak EC-Earth3-HR cohort",
+        "previous_commit":"9c0223b0262b1f233265d7c70b112ec8979088dc",
+        "source_id_CV_modified":"Thu Sep  1 13:47:30 2022 -0700",
+        "source_id_CV_note":"Revised IITM-ESM source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

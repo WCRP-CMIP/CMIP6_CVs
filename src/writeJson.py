@@ -619,6 +619,7 @@ PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://gith
 PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1149
 PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
+PJD 27 Sep 2022    - Revised 2 CCCma source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -626,7 +627,7 @@ PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 3 INM* source_id license histories\"'
+commitMessage = '\"evised 2 CCCma source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1086,16 +1087,13 @@ del(tmp)
 
 # Fix issues
 source_ids_to_relax_list = [
-    "INM-CM4-8",
-    "INM-CM5-0",
-    "INM-CM5-H",
+    "CanESM5",
+    "CanESM5-CanOE",
 ]
 
 for key in source_ids_to_relax_list:
     print("processing:", key)
     licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = ["Published"]
-    source_id[key]["license_info"]["exceptions_contact"] = "@gmail.com <- volodinev"
     source_id[key]["license_info"]["history"] += "; 2022-09-27: relaxed to CC BY 4.0"
     source_id[key]["license_info"]["id"] = licenseId
     licenseStr = license["license_options"][licenseId]["license_id"]

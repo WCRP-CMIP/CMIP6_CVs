@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"9ddb8352c2f51fc999549425ea7b4648da5ccd31",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9ddb8352c2f51fc999549425ea7b4648da5ccd31",
-            "commitMessage":"Revised 4 IPSL* source_id license histories; tweak EC-Earth3-HR cohort",
-            "timeStamp":"Thu Sep  1 13:47:30 2022 -0700"
+            "MD5":"9c0223b0262b1f233265d7c70b112ec8979088dc",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/9c0223b0262b1f233265d7c70b112ec8979088dc",
+            "commitMessage":"Revised IITM-ESM source_id license history",
+            "timeStamp":"Tue Sep 27 15:36:56 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":34,
+            "versionCVCommit":35,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

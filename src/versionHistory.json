@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"22e19d3ef01b69b1ee41a9f9be417b59162326c1",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/22e19d3ef01b69b1ee41a9f9be417b59162326c1",
+            "MD5":"50c436df00c4f96996c24c548467bc943eb24896",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/50c436df00c4f96996c24c548467bc943eb24896",
             "commitMessage":"evised 2 CCCma source_id license histories",
-            "timeStamp":"Tue Sep 27 16:08:34 2022 -0700"
+            "timeStamp":"Tue Sep 27 16:42:26 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":37,
+            "versionCVCommit":38,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

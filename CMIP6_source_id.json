@@ -4965,7 +4965,7 @@
             "label_extended":"IITM-ESM",
             "license_info":{
                 "exceptions_contact":"@tropmet.res.in <- iitm-esm",
-                "history":"2019-07-19: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "history":"2019-07-19: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -5024,11 +5024,11 @@
             "label_extended":"INM-CM4-8",
             "license_info":{
                 "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-05-28: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-05-28: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5082,11 +5082,11 @@
             "label_extended":"INM-CM5-0",
             "license_info":{
                 "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-06-10: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-06-10: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -5140,11 +5140,11 @@
             "label_extended":"INM-CM5-H",
             "license_info":{
                 "exceptions_contact":"@gmail.com <- volodinev",
-                "history":"2019-08-12: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-08-12: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7986,13 +7986,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Sep 27 15:54:07 2022 -0700",
+        "CV_collection_modified":"Tue Sep 27 15:56:18 2022 -0700",
         "CV_collection_version":"6.2.58.36",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "previous_commit":"78d200d03d26714aec01f6f08b6288e8ec918cd4",
         "source_id_CV_modified":"Tue Sep 27 15:36:56 2022 -0700",
-        "source_id_CV_note":"Revised IITM-ESM source_id license history",
+        "source_id_CV_note":"Revised 3 INM* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

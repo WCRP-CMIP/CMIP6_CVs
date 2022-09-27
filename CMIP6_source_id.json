@@ -3492,11 +3492,11 @@
             "label_extended":"FIO-ESM 2.0",
             "license_info":{
                 "exceptions_contact":"@fio.org.cn <- songroy",
-                "history":"2019-09-10: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-09-10: initially published under CC BY-SA 4.0; 2022-09-27: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7986,13 +7986,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Sep 27 16:08:34 2022 -0700",
-        "CV_collection_version":"6.2.58.37",
+        "CV_collection_modified":"Tue Sep 27 16:42:35 2022 -0700",
+        "CV_collection_version":"6.2.58.38",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"22e19d3ef01b69b1ee41a9f9be417b59162326c1",
-        "source_id_CV_modified":"Tue Sep 27 15:56:18 2022 -0700",
-        "source_id_CV_note":"evised 2 CCCma source_id license histories",
+        "previous_commit":"50c436df00c4f96996c24c548467bc943eb24896",
+        "source_id_CV_modified":"Tue Sep 27 16:08:34 2022 -0700",
+        "source_id_CV_note":"Revised FIO-ESM-2-0 source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

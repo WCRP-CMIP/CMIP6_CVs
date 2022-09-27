@@ -618,6 +618,7 @@ PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.co
 PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
 PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1149
+PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -625,7 +626,7 @@ PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised IITM-ESM source_id license history\"'
+commitMessage = '\"Revised 3 INM* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -1084,17 +1085,24 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "IITM-ESM"
-licenseId = "CC BY 4.0"
-source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@tropmet.res.in <- iitm-esm"
-source_id[key]["license_info"]["history"] += "; 2022-09-27: relaxed to CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-source_id[key]["license_info"]["url"] = licenseUrl
+source_ids_to_relax_list = [
+    "INM-CM4-8",
+    "INM-CM5-0",
+    "INM-CM5-H",
+]
+
+for key in source_ids_to_relax_list:
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    source_id[key]["cohort"] = ["Published"]
+    source_id[key]["license_info"]["exceptions_contact"] = "@gmail.com <- volodinev"
+    source_id[key]["license_info"]["history"] += "; 2022-09-27: relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

@@ -99,6 +99,7 @@ PJD 27 Sep 2022    - Revised FIO-ESM-2-0 source_id license history https://githu
 PJD 27 Sep 2022    - Removed 2016-2021 change history and replaced with commit URL containing these details
 PJD 27 Sep 2022    - Revised CCCma license exceptions contact https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1156
 PJD 27 Sep 2022    - Revised 3 BCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1159
+PJD 27 Sep 2022    - Revised KACE-1-0-G source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1160
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -106,7 +107,7 @@ PJD 27 Sep 2022    - Revised 3 BCC* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 3 BCC* source_id license histories\"'
+commitMessage = '\"Revised KACE-1-0-G source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -565,23 +566,18 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-source_ids_list = [
-    "BCC-CSM2-HR",
-    "BCC-CSM2-MR",
-    "BCC-ESM1",
-]
-for key in source_ids_list:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = ["Published"]
-    source_id[key]["license_info"]["exceptions_contact"] = "@cma.gov.cn <- twwu"
-    source_id[key]["license_info"]["history"] += "; 2022-09-28 relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "KACE-1-0-G"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["cohort"] = ["Published"]
+source_id[key]["license_info"]["exceptions_contact"] = "@korea.kr <- sunghm122"
+source_id[key]["license_info"]["history"] += "; 2022-09-28 relaxed to CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

@@ -93,11 +93,12 @@ PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.co
 PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
 PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1149
-PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD 27 Sep 2022    - Revised 2 CCCma source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
+PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1150
+PJD 27 Sep 2022    - Revised 2 CCCma source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1151
 PJD 27 Sep 2022    - Revised FIO-ESM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1155
 PJD 27 Sep 2022    - Removed 2016-2021 change history and replaced with commit URL containing these details
-PJD 27 Sep 2022    - Revised CCCma license exceptions contact https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1056
+PJD 27 Sep 2022    - Revised CCCma license exceptions contact https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1156
+PJD 27 Sep 2022    - Revised 3 BCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1159
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -105,7 +106,7 @@ PJD 27 Sep 2022    - Revised CCCma license exceptions contact https://github.com
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised CCCma license exceptions contact\"'
+commitMessage = '\"Revised 3 BCC* source_id license histories\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -565,11 +566,22 @@ del(tmp)
 
 # Fix issues
 source_ids_list = [
-    "CanESM5",
-    "CanESM5-CanOE",
+    "BCC-CSM2-HR",
+    "BCC-CSM2-MR",
+    "BCC-ESM1",
 ]
 for key in source_ids_list:
-    source_id[key]["license_info"]["exceptions_contact"] = "@ec.gc.ca <- f.cccma.info-info.ccmac.f"
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    source_id[key]["cohort"] = ["Published"]
+    source_id[key]["license_info"]["exceptions_contact"] = "@cma.gov.cn <- twwu"
+    source_id[key]["license_info"]["history"] += "; 2022-09-28 relaxed to CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

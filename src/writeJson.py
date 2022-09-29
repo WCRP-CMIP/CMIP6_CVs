@@ -102,6 +102,7 @@ PJD 27 Sep 2022    - Revised 3 BCC* source_id license histories https://github.c
 PJD 27 Sep 2022    - Revised KACE-1-0-G source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1160
 PJD 27 Sep 2022    - Revised KIOST-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1160
 PJD 29 Sep 2022    - Revised CAMS-CSM1-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1165
+PJD 29 Sep 2022    - Register source_id CanESM5-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -109,7 +110,7 @@ PJD 29 Sep 2022    - Revised CAMS-CSM1-0 source_id license history https://githu
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised CAMS-CSM1-0 source_id license history\"'
+commitMessage = '\"Register source_id CanESM5-1\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -568,16 +569,86 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "CAMS-CSM1-0"
-print("processing:", key)
+key = "CanESM5-1"
+source_id[key] = {}
+source_id[key]["activity_participation"] = [
+    "C4MIP",
+    "CDRMIP",
+    "CFMIP",
+    "CMIP",
+    "CORDEX",
+    "DAMIP",
+    "DCPP",
+    "DynVarMIP",
+    "FAFMIP",
+    "GMMIP",
+    "GeoMIP",
+    "ISMIP6",
+    "LS3MIP",
+    "LUMIP",
+    "OMIP",
+    "PAMIP",
+    "RFMIP",
+    "SIMIP",
+    "ScenarioMIP",
+    "VIACSAB",
+    "VolMIP"
+]
+source_id[key]["cohort"] = [
+    "Registered",
+]
+source_id[key]["institution_id"] = [
+    "CCCma",
+]
+source_id[key]["label"] = "CanESM5.1"
+source_id[key]["label_extended"] = "CanESM5.1"
+source_id[key]["model_component"] = {}
+source_id[key]["model_component"]["aerosol"] = {}
+source_id[key]["model_component"]["aerosol"]["description"] = "interactive"
+source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "500 km"
+source_id[key]["model_component"]["atmos"] = {}
+source_id[key]["model_component"]["atmos"]["description"] = " ".join(["CanAM5.1 (T63L49 native atmosphere,",
+                                                                      "T63 Linear Gaussian Grid; 128 x 64",
+                                                                      "longitude/latitude; 49 levels; top level 1 hPa)"])
+source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "500 km"
+source_id[key]["model_component"]["atmosChem"] = {}
+source_id[key]["model_component"]["atmosChem"]["description"] = "specified oxidants for aerosols"
+source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "500 km"
+source_id[key]["model_component"]["land"] = {}
+source_id[key]["model_component"]["land"]["description"] = "CLASS3.6/CTEM1.2"
+source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "500 km"
+source_id[key]["model_component"]["landIce"] = {}
+source_id[key]["model_component"]["landIce"]["description"] = "specified ice sheets"
+source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = "500 km"
+source_id[key]["model_component"]["ocean"] = {}
+source_id[key]["model_component"]["ocean"]["description"] = " ".join(["NEMO3.4.1 (ORCA1 tripolar grid, 1 deg with",
+                                                                      "refinement to 1/3 deg within 20 degrees of",
+                                                                      "the equator; 361 x 290 longitude/latitude;",
+                                                                      "45 vertical levels; top grid cell 0-6.19 m)"])
+source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["ocnBgchem"] = {}
+source_id[key]["model_component"]["ocnBgchem"]["description"] = " ".join(["Canadian Model of Ocean Carbon (CMOC);",
+                                                                          "NPZD ecosystem with OMIP prescribed",
+                                                                          "carbonate chemistry"])
+source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "100 km"
+source_id[key]["model_component"]["seaIce"] = {}
+source_id[key]["model_component"]["seaIce"]["description"] = "LIM2"
+source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "100 km"
+source_id[key]["release_year"] = "2022"
+source_id[key]["source_id"] = key
+# License info
 licenseId = "CC BY 4.0"
-source_id[key]["license_info"]["history"] += "; 2022-09-29 relaxed to CC BY 4.0"
+source_id[key]["license_info"] = {}
+source_id[key]["license_info"]["exceptions_contact"] = "@ec.gc.ca <- f.cccma.info-info.ccmac.f"
+# "2022-xx-xx: initially published under CC BY 4.0"
+source_id[key]["license_info"]["history"] = ""
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]
 source_id[key]["license_info"]["license"] = "".join(
     [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
 source_id[key]["license_info"]["url"] = licenseUrl
+
 
 # Example license update, including email
 # source_ids_to_relax_list = [

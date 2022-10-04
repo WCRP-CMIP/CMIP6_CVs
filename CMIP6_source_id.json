@@ -1033,11 +1033,11 @@
             "label_extended":"CAS-ESM 2.0 (Chinese Academy of Sciences Earth System Model version 2.0)",
             "license_info":{
                 "exceptions_contact":"@mail.iap.ac.cn <- zhanghe",
-                "history":"2020-03-01: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2020-03-01: initially published under CC BY-SA 4.0; 2022-10-04: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3374,11 +3374,11 @@
             "label_extended":"FGOALS-f3-H",
             "license_info":{
                 "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2019-08-16: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-08-16: initially published under CC BY-SA 4.0; 2022-10-04: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3439,11 +3439,11 @@
             "label_extended":"FGOALS-f3-L",
             "license_info":{
                 "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2018-11-08: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2018-11-08: initially published under CC BY-SA 4.0; 2022-10-04: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -3506,11 +3506,11 @@
             "label_extended":"FGOALS-g3",
             "license_info":{
                 "exceptions_contact":"@mail.iap.ac.cn <- linpf",
-                "history":"2019-08-18: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-08-18: initially published under CC BY-SA 4.0; 2022-10-04: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8062,13 +8062,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Sep 29 16:36:20 2022 -0700",
-        "CV_collection_version":"6.2.58.44",
+        "CV_collection_modified":"Tue Oct  4 16:30:34 2022 -0700",
+        "CV_collection_version":"6.2.58.45",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"1a2291f6b77cbe34308d1502a44bcfa7b8483142",
-        "source_id_CV_modified":"Thu Sep 29 10:53:55 2022 -0700",
-        "source_id_CV_note":"Register source_id CanESM5-1",
+        "previous_commit":"f3ca8e9e89e0a3ab5b525839c9d58dc3ce871588",
+        "source_id_CV_modified":"Thu Sep 29 16:36:20 2022 -0700",
+        "source_id_CV_note":"Revised 4 CAS* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

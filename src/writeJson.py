@@ -104,6 +104,7 @@ PJD 27 Sep 2022    - Revised KIOST-ESM source_id license history https://github.
 PJD 29 Sep 2022    - Revised CAMS-CSM1-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1165
 PJD 29 Sep 2022    - Register source_id CanESM5-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
 PJD  4 Oct 2022    - Revised 4 CAS* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1168
+PJD  5 Oct 2022    - Revised NESM3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1170
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -111,7 +112,7 @@ PJD  4 Oct 2022    - Revised 4 CAS* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 CAS* source_id license histories\"'
+commitMessage = '\"Revised NESM3 source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -570,23 +571,16 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-source_ids_to_relax_list = [
-    "CAS-ESM2-0",
-    "FGOALS-f3-H",
-    "FGOALS-f3-L",
-    "FGOALS-g3",
-]
-
-for key in source_ids_to_relax_list:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["license_info"]["history"] += "; 2022-10-04: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "NESM3"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"]["history"] += "; 2022-10-05: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

@@ -6879,11 +6879,11 @@
             "label_extended":"NUIST ESM v3",
             "license_info":{
                 "exceptions_contact":"@nuist.edu.cn <- esmc",
-                "history":"2019-06-25: initially published under CC BY-SA 4.0",
-                "id":"CC BY-SA 4.0",
-                "license":"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/)",
+                "history":"2019-06-25: initially published under CC BY-SA 4.0; 2022-10-05: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8062,13 +8062,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Oct  4 16:30:34 2022 -0700",
-        "CV_collection_version":"6.2.58.45",
+        "CV_collection_modified":"Wed Oct  5 12:54:52 2022 -0700",
+        "CV_collection_version":"6.2.58.46",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f3ca8e9e89e0a3ab5b525839c9d58dc3ce871588",
-        "source_id_CV_modified":"Thu Sep 29 16:36:20 2022 -0700",
-        "source_id_CV_note":"Revised 4 CAS* source_id license histories",
+        "previous_commit":"5c96bb31f90d425aec1eb998da354e51ec44a24d",
+        "source_id_CV_modified":"Tue Oct  4 16:30:34 2022 -0700",
+        "source_id_CV_note":"Revised NESM3 source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -6038,12 +6038,12 @@
             "label":"LBLRTM 12.8",
             "label_extended":"Line-By-Line Radiative Transfer Model v12.8, aer_v_3.6, MT_CKD_3.2",
             "license_info":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2019-05-14: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@aer.com <- aer_lblrtm",
+                "history":"2019-05-14: initially published under CC BY-NC-SA 4.0; 2022-10-07: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7473,12 +7473,12 @@
             "label":"RRTMG-LW 4.91",
             "label_extended":"RRTM for GCMs v4.91, longwave",
             "license_info":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@aer.com <- aer_rrtmg",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0; 2022-10-07: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7530,12 +7530,12 @@
             "label":"RRTMG-SW 4.02",
             "label_extended":"RRTM for GCMs v4.02, shortwave",
             "license_info":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@aer.com <- aer_rrtmg",
+                "history":"2020-01-10: initially published under CC BY-NC-SA 4.0; 2022-10-07: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -7587,12 +7587,12 @@
             "label":"RTE+RRTMGP (2018-12-04 full-resolution)",
             "label_extended":"Radiative Transfer for Energetics using RRTM for GCM applications - Parallel (2018-12-04 full-resolution)",
             "license_info":{
-                "exceptions_contact":"@aer.com <- rpernak",
-                "history":"2019-10-07: initially published under CC BY-NC-SA 4.0",
-                "id":"CC BY-NC-SA 4.0",
-                "license":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+                "exceptions_contact":"@aer.com <- aer_rrtmgp",
+                "history":"2019-10-07: initially published under CC BY-NC-SA 4.0; 2022-10-07: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
                 "aerosol":{
@@ -8062,13 +8062,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct  5 12:54:52 2022 -0700",
-        "CV_collection_version":"6.2.58.46",
+        "CV_collection_modified":"Mon Oct 10 14:00:56 2022 -0700",
+        "CV_collection_version":"6.2.58.47",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"5c96bb31f90d425aec1eb998da354e51ec44a24d",
-        "source_id_CV_modified":"Tue Oct  4 16:30:34 2022 -0700",
-        "source_id_CV_note":"Revised NESM3 source_id license history",
+        "previous_commit":"e5fd7deadf1bb3df689df485c711efed8446efdd",
+        "source_id_CV_modified":"Wed Oct  5 12:54:52 2022 -0700",
+        "source_id_CV_note":"Revised 4 AER* source_id license histories",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

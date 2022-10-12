@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"e5fd7deadf1bb3df689df485c711efed8446efdd",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/e5fd7deadf1bb3df689df485c711efed8446efdd",
-            "commitMessage":"Revised 4 AER* source_id license histories",
-            "timeStamp":"Mon Oct 10 14:00:56 2022 -0700"
+            "MD5":"13b36d83cb9ec4b807e0e7db98d628d33b07d784",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/13b36d83cb9ec4b807e0e7db98d628d33b07d784",
+            "commitMessage":"Revised SAM0-UNICON source_id license history",
+            "timeStamp":"Wed Oct 12 12:16:47 2022 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":47,
+            "versionCVCommit":48,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

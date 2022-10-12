@@ -106,6 +106,7 @@ PJD 29 Sep 2022    - Register source_id CanESM5-1 https://github.com/WCRP-CMIP/C
 PJD  4 Oct 2022    - Revised 4 CAS* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1168
 PJD  5 Oct 2022    - Revised NESM3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1170
 PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1172
+PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1174
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -113,7 +114,7 @@ PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised 4 AER* source_id license histories\"'
+commitMessage = '\"Revised SAM0-UNICON source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -572,25 +573,18 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-ids_to_relax = {
-    "LBLRTM-12-8": "@aer.com <- aer_lblrtm",
-    "RRTMG-LW-4-91": "@aer.com <- aer_rrtmg",
-    "RRTMG-SW-4-02": "@aer.com <- aer_rrtmg",
-    "RTE-RRTMGP-181204": "@aer.com <- aer_rrtmgp",
-}
-
-for key in ids_to_relax:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = ["Published"]
-    source_id[key]["license_info"]["exceptions_contact"] = ids_to_relax[key]
-    source_id[key]["license_info"]["history"] += "; 2022-10-07: relaxed to CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "SAM0-UNICON"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["cohort"] = ["Published"]
+source_id[key]["license_info"]["exceptions_contact"] = "@snu.ac.kr <- sungsup"
+source_id[key]["license_info"]["history"] += "; 2022-10-12: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

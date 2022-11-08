@@ -107,6 +107,7 @@ PJD  4 Oct 2022    - Revised 4 CAS* source_id license histories https://github.c
 PJD  5 Oct 2022    - Revised NESM3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1170
 PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1172
 PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1174
+PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -114,7 +115,7 @@ PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://githu
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised SAM0-UNICON source_id license history\"'
+commitMessage = '\"Revised E3SM-2-0 source_id license history\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -573,12 +574,12 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "SAM0-UNICON"
+key = "E3SM-2-0"
 print("processing:", key)
 licenseId = "CC BY 4.0"
 source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@snu.ac.kr <- sungsup"
-source_id[key]["license_info"]["history"] += "; 2022-10-12: relaxed to CC BY 4.0"
+source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
+source_id[key]["license_info"]["history"] = "2022-08-23: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

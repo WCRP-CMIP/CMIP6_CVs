@@ -51,13 +51,13 @@
         "UHH":"Universitat Hamburg, Hamburg 20148, Germany"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Oct 12 12:16:47 2022 -0700",
-        "CV_collection_version":"6.2.58.48",
+        "CV_collection_modified":"Tue Nov  8 11:56:41 2022 -0700",
+        "CV_collection_version":"6.2.58.49",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "institution_id_CV_modified":"Mon Aug 15 21:41:00 2022 -0700",
         "institution_id_CV_note":"Register institution_id UCSB for E3SM-1-0",
-        "previous_commit":"13b36d83cb9ec4b807e0e7db98d628d33b07d784",
+        "previous_commit":"ae07f5e0d910de6afde1cee7d9cedd9771dfc5f1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

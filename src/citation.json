@@ -1,0 +1,798 @@
+{
+  "4AOP-v1-5": {
+    "CMIP6.CMIP.IPSL.4AOP-v1-5": "https://doi.org/10.22033/ESGF/CMIP6.12341",
+    "CMIP6.RFMIP.IPSL.4AOP-v1-5": "https://doi.org/10.22033/ESGF/CMIP6.12340"
+  },
+  "ACCESS-CM2": {
+    "CMIP6.CMIP.CSIRO-ARCCSS.ACCESS-CM2": "https://doi.org/10.22033/ESGF/CMIP6.2281",
+    "CMIP6.FAFMIP.CSIRO-ARCCSS.ACCESS-CM2": "https://doi.org/10.22033/ESGF/CMIP6.2282",
+    "CMIP6.RFMIP.CSIRO-ARCCSS.ACCESS-CM2": "https://doi.org/10.22033/ESGF/CMIP6.2284",
+    "CMIP6.ScenarioMIP.CSIRO-ARCCSS.ACCESS-CM2": "https://doi.org/10.22033/ESGF/CMIP6.2285"
+  },
+  "ACCESS-ESM1-5": {
+    "CMIP6.C4MIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.2286",
+    "CMIP6.CDRMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.2287",
+    "CMIP6.CMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.2288",
+    "CMIP6.DAMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.14362",
+    "CMIP6.PMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.13701",
+    "CMIP6.RFMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.2290",
+    "CMIP6.ScenarioMIP.CSIRO.ACCESS-ESM1-5": "https://doi.org/10.22033/ESGF/CMIP6.2291"
+  },
+  "ACCESS-OM2": {
+    "CMIP6.OMIP.CSIRO-COSIMA.ACCESS-OM2": "https://doi.org/10.22033/ESGF/CMIP6.14661"
+  },
+  "ACCESS-OM2-025": {
+    "CMIP6.OMIP.CSIRO-COSIMA.ACCESS-OM2-025": "https://doi.org/10.22033/ESGF/CMIP6.14663"
+  },
+  "ARTS-2-3": {
+    "CMIP6.RFMIP.UHH.ARTS-2-3": "https://doi.org/10.22033/ESGF/CMIP6.2001"
+  },
+  "AWI-CM-1-1-HR": {
+    "CMIP6.HighResMIP.AWI.AWI-CM-1-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.1202"
+  },
+  "AWI-CM-1-1-LR": {
+    "CMIP6.HighResMIP.AWI.AWI-CM-1-1-LR": "https://doi.org/10.22033/ESGF/CMIP6.1209"
+  },
+  "AWI-CM-1-1-MR": {
+    "CMIP6.CMIP.AWI.AWI-CM-1-1-MR": "https://doi.org/10.22033/ESGF/CMIP6.359",
+    "CMIP6.PAMIP.AWI.AWI-CM-1-1-MR": "https://doi.org/10.22033/ESGF/CMIP6.12021",
+    "CMIP6.ScenarioMIP.AWI.AWI-CM-1-1-MR": "https://doi.org/10.22033/ESGF/CMIP6.376"
+  },
+  "AWI-ESM-1-1-LR": {
+    "CMIP6.CMIP.AWI.AWI-ESM-1-1-LR": "https://doi.org/10.22033/ESGF/CMIP6.9301",
+    "CMIP6.PMIP.AWI.AWI-ESM-1-1-LR": "https://doi.org/10.22033/ESGF/CMIP6.9302"
+  },
+  "BCC-CSM2-HR": {
+    "CMIP6.CMIP.BCC.BCC-CSM2-HR": "https://doi.org/10.22033/ESGF/CMIP6.1721",
+    "CMIP6.HighResMIP.BCC.BCC-CSM2-HR": "https://doi.org/10.22033/ESGF/CMIP6.1722"
+  },
+  "BCC-CSM2-MR": {
+    "CMIP6.C4MIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1723",
+    "CMIP6.CFMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1724",
+    "CMIP6.CMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1725",
+    "CMIP6.DAMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1726",
+    "CMIP6.DCPP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1727",
+    "CMIP6.GMMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1728",
+    "CMIP6.LS3MIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1729",
+    "CMIP6.LUMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1730",
+    "CMIP6.RFMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1731",
+    "CMIP6.ScenarioMIP.BCC.BCC-CSM2-MR": "https://doi.org/10.22033/ESGF/CMIP6.1732"
+  },
+  "BCC-ESM1": {
+    "CMIP6.AerChemMIP.BCC.BCC-ESM1": "https://doi.org/10.22033/ESGF/CMIP6.1733",
+    "CMIP6.CMIP.BCC.BCC-ESM1": "https://doi.org/10.22033/ESGF/CMIP6.1734"
+  },
+  "CAMS-CSM1-0": {
+    "CMIP6.CMIP.CAMS.CAMS-CSM1-0": "https://doi.org/10.22033/ESGF/CMIP6.1399",
+    "CMIP6.GMMIP.CAMS.CAMS-CSM1-0": "https://doi.org/10.22033/ESGF/CMIP6.11002",
+    "CMIP6.HighResMIP.CAMS.CAMS-CSM1-0": "https://doi.org/10.22033/ESGF/CMIP6.11003",
+    "CMIP6.ScenarioMIP.CAMS.CAMS-CSM1-0": "https://doi.org/10.22033/ESGF/CMIP6.11004"
+  },
+  "CAS-ESM2-0": {
+    "CMIP6.AerChemMIP.CAS.CAS-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1941",
+    "CMIP6.CMIP.CAS.CAS-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1944",
+    "CMIP6.FAFMIP.CAS.CAS-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1948",
+    "CMIP6.LUMIP.CAS.CAS-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1953",
+    "CMIP6.OMIP.CAS.CAS-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1954"
+  },
+  "CESM1-1-CAM5-CMIP5": {
+    "CMIP6.DCPP.NCAR.CESM1-1-CAM5-CMIP5": "https://doi.org/10.22033/ESGF/CMIP6.11542"
+  },
+  "CESM1-CAM5-SE-HR": {
+    "CMIP6.HighResMIP.NCAR.CESM1-CAM5-SE-HR": "https://doi.org/10.22033/ESGF/CMIP6.14220"
+  },
+  "CESM1-CAM5-SE-LR": {
+    "CMIP6.HighResMIP.NCAR.CESM1-CAM5-SE-LR": "https://doi.org/10.22033/ESGF/CMIP6.14262"
+  },
+  "CESM1-WACCM-SC": {
+    "CMIP6.CMIP.NCAR.CESM1-WACCM-SC": "https://doi.org/10.22033/ESGF/CMIP6.12282",
+    "CMIP6.PAMIP.NCAR.CESM1-WACCM-SC": "https://doi.org/10.22033/ESGF/CMIP6.12281"
+  },
+  "CESM2": {
+    "CMIP6.AerChemMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2181",
+    "CMIP6.C4MIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2182",
+    "CMIP6.CDRMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2183",
+    "CMIP6.CFMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2184",
+    "CMIP6.CMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2185",
+    "CMIP6.DAMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2187",
+    "CMIP6.FAFMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.14052",
+    "CMIP6.GMMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2190",
+    "CMIP6.ISMIP6.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2193",
+    "CMIP6.LS3MIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2194",
+    "CMIP6.LUMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2195",
+    "CMIP6.OMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2196",
+    "CMIP6.PAMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2197",
+    "CMIP6.PMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2198",
+    "CMIP6.RFMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2199",
+    "CMIP6.ScenarioMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2201",
+    "CMIP6.VolMIP.NCAR.CESM2": "https://doi.org/10.22033/ESGF/CMIP6.2203"
+  },
+  "CESM2-FV2": {
+    "CMIP6.CMIP.NCAR.CESM2-FV2": "https://doi.org/10.22033/ESGF/CMIP6.11281"
+  },
+  "CESM2-WACCM": {
+    "CMIP6.AerChemMIP.NCAR.CESM2-WACCM": "https://doi.org/10.22033/ESGF/CMIP6.10023",
+    "CMIP6.CMIP.NCAR.CESM2-WACCM": "https://doi.org/10.22033/ESGF/CMIP6.10024",
+    "CMIP6.GeoMIP.NCAR.CESM2-WACCM": "https://doi.org/10.22033/ESGF/CMIP6.10025",
+    "CMIP6.RFMIP.NCAR.CESM2-WACCM": "https://doi.org/10.22033/ESGF/CMIP6.14053",
+    "CMIP6.ScenarioMIP.NCAR.CESM2-WACCM": "https://doi.org/10.22033/ESGF/CMIP6.10026"
+  },
+  "CESM2-WACCM-FV2": {
+    "CMIP6.CMIP.NCAR.CESM2-WACCM-FV2": "https://doi.org/10.22033/ESGF/CMIP6.11282"
+  },
+  "CIESM": {
+    "CMIP6.CFMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1351",
+    "CMIP6.CMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1352",
+    "CMIP6.CORDEX.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1353",
+    "CMIP6.GMMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1354",
+    "CMIP6.OMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1355",
+    "CMIP6.SIMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1356",
+    "CMIP6.ScenarioMIP.THU.CIESM": "https://doi.org/10.22033/ESGF/CMIP6.1357"
+  },
+  "CMCC-CM2-HR4": {
+    "CMIP6.CMIP.CMCC.CMCC-CM2-HR4": "https://doi.org/10.22033/ESGF/CMIP6.1358",
+    "CMIP6.HighResMIP.CMCC.CMCC-CM2-HR4": "https://doi.org/10.22033/ESGF/CMIP6.1359",
+    "CMIP6.OMIP.CMCC.CMCC-CM2-HR4": "https://doi.org/10.22033/ESGF/CMIP6.13161"
+  },
+  "CMCC-CM2-SR5": {
+    "CMIP6.CMIP.CMCC.CMCC-CM2-SR5": "https://doi.org/10.22033/ESGF/CMIP6.1362",
+    "CMIP6.DCPP.CMCC.CMCC-CM2-SR5": "https://doi.org/10.22033/ESGF/CMIP6.1363",
+    "CMIP6.OMIP.CMCC.CMCC-CM2-SR5": "https://doi.org/10.22033/ESGF/CMIP6.13162",
+    "CMIP6.ScenarioMIP.CMCC.CMCC-CM2-SR5": "https://doi.org/10.22033/ESGF/CMIP6.1365"
+  },
+  "CMCC-CM2-VHR4": {
+    "CMIP6.HighResMIP.CMCC.CMCC-CM2-VHR4": "https://doi.org/10.22033/ESGF/CMIP6.1367"
+  },
+  "CMCC-ESM2": {
+    "CMIP6.C4MIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13163",
+    "CMIP6.CMIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13164",
+    "CMIP6.LS3MIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13165",
+    "CMIP6.LUMIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13166",
+    "CMIP6.OMIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13167",
+    "CMIP6.ScenarioMIP.CMCC.CMCC-ESM2": "https://doi.org/10.22033/ESGF/CMIP6.13168"
+  },
+  "CNRM-CM6-1": {
+    "CMIP6.CFMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1374",
+    "CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1375",
+    "CMIP6.DAMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1376",
+    "CMIP6.DCPP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1377",
+    "CMIP6.GMMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1379",
+    "CMIP6.HighResMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1925",
+    "CMIP6.LS3MIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1381",
+    "CMIP6.OMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.10336",
+    "CMIP6.PAMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.9561",
+    "CMIP6.PMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1382",
+    "CMIP6.RFMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1383",
+    "CMIP6.ScenarioMIP.CNRM-CERFACS.CNRM-CM6-1": "https://doi.org/10.22033/ESGF/CMIP6.1384"
+  },
+  "CNRM-CM6-1-HR": {
+    "CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.1385",
+    "CMIP6.DCPP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.1386",
+    "CMIP6.GMMIP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.13921",
+    "CMIP6.HighResMIP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.1387",
+    "CMIP6.OMIP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.10337",
+    "CMIP6.ScenarioMIP.CNRM-CERFACS.CNRM-CM6-1-HR": "https://doi.org/10.22033/ESGF/CMIP6.1388"
+  },
+  "CNRM-ESM2-1": {
+    "CMIP6.AerChemMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1389",
+    "CMIP6.C4MIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1390",
+    "CMIP6.CDRMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.9562",
+    "CMIP6.CMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1391",
+    "CMIP6.GMMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.13922",
+    "CMIP6.GeoMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1392",
+    "CMIP6.LS3MIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.9564",
+    "CMIP6.LUMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1393",
+    "CMIP6.OMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1394",
+    "CMIP6.RFMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.9565",
+    "CMIP6.ScenarioMIP.CNRM-CERFACS.CNRM-ESM2-1": "https://doi.org/10.22033/ESGF/CMIP6.1395"
+  },
+  "CanESM5": {
+    "CMIP6.C4MIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1301",
+    "CMIP6.CDRMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.10201",
+    "CMIP6.CFMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1302",
+    "CMIP6.CMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1303",
+    "CMIP6.DAMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1305",
+    "CMIP6.DCPP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1306",
+    "CMIP6.DynVarMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1307",
+    "CMIP6.FAFMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1308",
+    "CMIP6.GMMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1309",
+    "CMIP6.GeoMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1310",
+    "CMIP6.ISMIP6.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1311",
+    "CMIP6.LS3MIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1312",
+    "CMIP6.LUMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1313",
+    "CMIP6.OMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1314",
+    "CMIP6.PAMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.13942",
+    "CMIP6.RFMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1315",
+    "CMIP6.SIMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1316",
+    "CMIP6.ScenarioMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1317",
+    "CMIP6.VIACSAB.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.1318",
+    "CMIP6.VolMIP.CCCma.CanESM5": "https://doi.org/10.22033/ESGF/CMIP6.10202"
+  },
+  "CanESM5-CanOE": {
+    "CMIP6.C4MIP.CCCma.CanESM5-CanOE": "https://doi.org/10.22033/ESGF/CMIP6.10203",
+    "CMIP6.CDRMIP.CCCma.CanESM5-CanOE": "https://doi.org/10.22033/ESGF/CMIP6.10204",
+    "CMIP6.CMIP.CCCma.CanESM5-CanOE": "https://doi.org/10.22033/ESGF/CMIP6.10205",
+    "CMIP6.OMIP.CCCma.CanESM5-CanOE": "https://doi.org/10.22033/ESGF/CMIP6.10206",
+    "CMIP6.ScenarioMIP.CCCma.CanESM5-CanOE": "https://doi.org/10.22033/ESGF/CMIP6.10207"
+  },
+  "E3SM-1-0": {
+    "CMIP6.CFMIP.E3SM-Project.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.15068",
+    "CMIP6.CFMIP.LLNL.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.15093",
+    "CMIP6.CMIP.E3SM-Project.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.2294",
+    "CMIP6.CMIP.LLNL.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.15094",
+    "CMIP6.CMIP.UCSB.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.17062",
+    "CMIP6.ScenarioMIP.E3SM-Project.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.15102",
+    "CMIP6.ScenarioMIP.UCSB.E3SM-1-0": "https://doi.org/10.22033/ESGF/CMIP6.17065"
+  },
+  "E3SM-1-1": {
+    "CMIP6.C4MIP.E3SM-Project.E3SM-1-1": "https://doi.org/10.22033/ESGF/CMIP6.11441",
+    "CMIP6.CMIP.E3SM-Project.E3SM-1-1": "https://doi.org/10.22033/ESGF/CMIP6.11442",
+    "CMIP6.LS3MIP.E3SM-Project.E3SM-1-1": "https://doi.org/10.22033/ESGF/CMIP6.11673",
+    "CMIP6.ScenarioMIP.E3SM-Project.E3SM-1-1": "https://doi.org/10.22033/ESGF/CMIP6.15103"
+  },
+  "E3SM-1-1-ECA": {
+    "CMIP6.C4MIP.E3SM-Project.E3SM-1-1-ECA": "https://doi.org/10.22033/ESGF/CMIP6.11443",
+    "CMIP6.CMIP.E3SM-Project.E3SM-1-1-ECA": "https://doi.org/10.22033/ESGF/CMIP6.11444",
+    "CMIP6.ScenarioMIP.E3SM-Project.E3SM-1-1-ECA": "https://doi.org/10.22033/ESGF/CMIP6.15104"
+  },
+  "EC-Earth3": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.181",
+    "CMIP6.CORDEX.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.1261",
+    "CMIP6.DAMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.14701",
+    "CMIP6.DCPP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.227",
+    "CMIP6.DynVarMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.1262",
+    "CMIP6.LS3MIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.218",
+    "CMIP6.OMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.14702",
+    "CMIP6.PAMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.9881",
+    "CMIP6.RFMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.242",
+    "CMIP6.SIMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.1263",
+    "CMIP6.ScenarioMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.251",
+    "CMIP6.VIACSAB.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.1264",
+    "CMIP6.VolMIP.EC-Earth-Consortium.EC-Earth3": "https://doi.org/10.22033/ESGF/CMIP6.224"
+  },
+  "EC-Earth3-AerChem": {
+    "CMIP6.AerChemMIP.EC-Earth-Consortium.EC-Earth3-AerChem": "https://doi.org/10.22033/ESGF/CMIP6.699",
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-AerChem": "https://doi.org/10.22033/ESGF/CMIP6.639",
+    "CMIP6.RFMIP.EC-Earth-Consortium.EC-Earth3-AerChem": "https://doi.org/10.22033/ESGF/CMIP6.15326",
+    "CMIP6.ScenarioMIP.EC-Earth-Consortium.EC-Earth3-AerChem": "https://doi.org/10.22033/ESGF/CMIP6.724"
+  },
+  "EC-Earth3-CC": {
+    "CMIP6.C4MIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.650",
+    "CMIP6.CDRMIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.9882",
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.640",
+    "CMIP6.LUMIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.690",
+    "CMIP6.OMIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.9883",
+    "CMIP6.ScenarioMIP.EC-Earth-Consortium.EC-Earth3-CC": "https://doi.org/10.22033/ESGF/CMIP6.15327"
+  },
+  "EC-Earth3-GrIS": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-GrIS": "https://doi.org/10.22033/ESGF/CMIP6.641",
+    "CMIP6.ISMIP6.EC-Earth-Consortium.EC-Earth3-GrIS": "https://doi.org/10.22033/ESGF/CMIP6.646",
+    "CMIP6.PMIP.EC-Earth-Consortium.EC-Earth3-GrIS": "https://doi.org/10.22033/ESGF/CMIP6.716"
+  },
+  "EC-Earth3-HR": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-HR": "https://doi.org/10.22033/ESGF/CMIP6.201",
+    "CMIP6.DCPP.EC-Earth-Consortium.EC-Earth3-HR": "https://doi.org/10.22033/ESGF/CMIP6.228",
+    "CMIP6.HighResMIP.EC-Earth-Consortium.EC-Earth3-HR": "https://doi.org/10.22033/ESGF/CMIP6.222"
+  },
+  "EC-Earth3-LR": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-LR": "https://doi.org/10.22033/ESGF/CMIP6.202",
+    "CMIP6.PMIP.EC-Earth-Consortium.EC-Earth3-LR": "https://doi.org/10.22033/ESGF/CMIP6.247"
+  },
+  "EC-Earth3-Veg": {
+    "CMIP6.CDRMIP.EC-Earth-Consortium.EC-Earth3-Veg": "https://doi.org/10.22033/ESGF/CMIP6.9884",
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-Veg": "https://doi.org/10.22033/ESGF/CMIP6.642",
+    "CMIP6.LS3MIP.EC-Earth-Consortium.EC-Earth3-Veg": "https://doi.org/10.22033/ESGF/CMIP6.672",
+    "CMIP6.LUMIP.EC-Earth-Consortium.EC-Earth3-Veg": "https://doi.org/10.22033/ESGF/CMIP6.692",
+    "CMIP6.ScenarioMIP.EC-Earth-Consortium.EC-Earth3-Veg": "https://doi.org/10.22033/ESGF/CMIP6.727"
+  },
+  "EC-Earth3-Veg-LR": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3-Veg-LR": "https://doi.org/10.22033/ESGF/CMIP6.643",
+    "CMIP6.PMIP.EC-Earth-Consortium.EC-Earth3-Veg-LR": "https://doi.org/10.22033/ESGF/CMIP6.718",
+    "CMIP6.ScenarioMIP.EC-Earth-Consortium.EC-Earth3-Veg-LR": "https://doi.org/10.22033/ESGF/CMIP6.728"
+  },
+  "EC-Earth3P": {
+    "CMIP6.HighResMIP.EC-Earth-Consortium.EC-Earth3P": "https://doi.org/10.22033/ESGF/CMIP6.2322"
+  },
+  "EC-Earth3P-HR": {
+    "CMIP6.HighResMIP.EC-Earth-Consortium.EC-Earth3P-HR": "https://doi.org/10.22033/ESGF/CMIP6.2323"
+  },
+  "EC-Earth3P-VHR": {
+    "CMIP6.CMIP.EC-Earth-Consortium.EC-Earth3P-VHR": "https://doi.org/10.22033/ESGF/CMIP6.2326",
+    "CMIP6.HighResMIP.EC-Earth-Consortium.EC-Earth3P-VHR": "https://doi.org/10.22033/ESGF/CMIP6.2325"
+  },
+  "ECMWF-IFS-HR": {
+    "CMIP6.HighResMIP.ECMWF.ECMWF-IFS-HR": "https://doi.org/10.22033/ESGF/CMIP6.2461"
+  },
+  "ECMWF-IFS-LR": {
+    "CMIP6.HighResMIP.ECMWF.ECMWF-IFS-LR": "https://doi.org/10.22033/ESGF/CMIP6.2463"
+  },
+  "ECMWF-IFS-MR": {
+    "CMIP6.HighResMIP.ECMWF.ECMWF-IFS-MR": "https://doi.org/10.22033/ESGF/CMIP6.2465"
+  },
+  "FGOALS-f3-H": {
+    "CMIP6.HighResMIP.CAS.FGOALS-f3-H": "https://doi.org/10.22033/ESGF/CMIP6.2041",
+    "CMIP6.OMIP.CAS.FGOALS-f3-H": "https://doi.org/10.22033/ESGF/CMIP6.13261"
+  },
+  "FGOALS-f3-L": {
+    "CMIP6.CMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.1782",
+    "CMIP6.GMMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.2043",
+    "CMIP6.HighResMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.12001",
+    "CMIP6.OMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.2044",
+    "CMIP6.PAMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.11497",
+    "CMIP6.PMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.12002",
+    "CMIP6.ScenarioMIP.CAS.FGOALS-f3-L": "https://doi.org/10.22033/ESGF/CMIP6.2046"
+  },
+  "FGOALS-g3": {
+    "CMIP6.CMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.1783",
+    "CMIP6.DAMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2048",
+    "CMIP6.FAFMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2050",
+    "CMIP6.GMMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2051",
+    "CMIP6.LS3MIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2052",
+    "CMIP6.PMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2054",
+    "CMIP6.ScenarioMIP.CAS.FGOALS-g3": "https://doi.org/10.22033/ESGF/CMIP6.2056"
+  },
+  "FIO-ESM-2-0": {
+    "CMIP6.CMIP.FIO-QLNM.FIO-ESM-2-0": "https://doi.org/10.22033/ESGF/CMIP6.9047",
+    "CMIP6.DCPP.FIO-QLNM.FIO-ESM-2-0": "https://doi.org/10.22033/ESGF/CMIP6.9048",
+    "CMIP6.GMMIP.FIO-QLNM.FIO-ESM-2-0": "https://doi.org/10.22033/ESGF/CMIP6.9049",
+    "CMIP6.OMIP.FIO-QLNM.FIO-ESM-2-0": "https://doi.org/10.22033/ESGF/CMIP6.9050",
+    "CMIP6.ScenarioMIP.FIO-QLNM.FIO-ESM-2-0": "https://doi.org/10.22033/ESGF/CMIP6.9051"
+  },
+  "GFDL-AM4": {
+    "CMIP6.CMIP.NOAA-GFDL.GFDL-AM4": "https://doi.org/10.22033/ESGF/CMIP6.1401"
+  },
+  "GFDL-CM4": {
+    "CMIP6.CFMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.1641",
+    "CMIP6.CMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.1402",
+    "CMIP6.DAMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.11383",
+    "CMIP6.FAFMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.15721",
+    "CMIP6.GMMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.1642",
+    "CMIP6.OMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.1403",
+    "CMIP6.RFMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.1643",
+    "CMIP6.ScenarioMIP.NOAA-GFDL.GFDL-CM4": "https://doi.org/10.22033/ESGF/CMIP6.9242"
+  },
+  "GFDL-CM4C192": {
+    "CMIP6.HighResMIP.NOAA-GFDL.GFDL-CM4C192": "https://doi.org/10.22033/ESGF/CMIP6.2262"
+  },
+  "GFDL-ESM2M": {
+    "CMIP6.FAFMIP.NOAA-GFDL.GFDL-ESM2M": "https://doi.org/10.22033/ESGF/CMIP6.1645"
+  },
+  "GFDL-ESM4": {
+    "CMIP6.AerChemMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1404",
+    "CMIP6.C4MIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1405",
+    "CMIP6.CDRMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1981",
+    "CMIP6.CMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1407",
+    "CMIP6.DAMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1408",
+    "CMIP6.FAFMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.15722",
+    "CMIP6.LUMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1411",
+    "CMIP6.RFMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.11961",
+    "CMIP6.ScenarioMIP.NOAA-GFDL.GFDL-ESM4": "https://doi.org/10.22033/ESGF/CMIP6.1414"
+  },
+  "GFDL-GRTCODE": {
+    "CMIP6.RFMIP.NOAA-GFDL.GFDL-GRTCODE": "https://doi.org/10.22033/ESGF/CMIP6.10404"
+  },
+  "GFDL-OM4p5B": {
+    "CMIP6.OMIP.NOAA-GFDL.GFDL-OM4p5B": "https://doi.org/10.22033/ESGF/CMIP6.2264"
+  },
+  "GFDL-RFM-DISORT": {
+    "CMIP6.RFMIP.NOAA-GFDL.GFDL-RFM-DISORT": "https://doi.org/10.22033/ESGF/CMIP6.10406"
+  },
+  "GISS-E2-1-G": {
+    "CMIP6.AerChemMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2059",
+    "CMIP6.C4MIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2060",
+    "CMIP6.CFMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2061",
+    "CMIP6.CMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.1400",
+    "CMIP6.DAMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2062",
+    "CMIP6.DynVarMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2063",
+    "CMIP6.FAFMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2064",
+    "CMIP6.GMMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2065",
+    "CMIP6.ISMIP6.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2066",
+    "CMIP6.LS3MIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2067",
+    "CMIP6.LUMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2068",
+    "CMIP6.OMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2069",
+    "CMIP6.PAMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2070",
+    "CMIP6.PMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2071",
+    "CMIP6.RFMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2072",
+    "CMIP6.SIMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2073",
+    "CMIP6.ScenarioMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2074",
+    "CMIP6.VIACSAB.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2075",
+    "CMIP6.VolMIP.NASA-GISS.GISS-E2-1-G": "https://doi.org/10.22033/ESGF/CMIP6.2076"
+  },
+  "GISS-E2-1-G-CC": {
+    "CMIP6.C4MIP.NASA-GISS.GISS-E2-1-G-CC": "https://doi.org/10.22033/ESGF/CMIP6.11656",
+    "CMIP6.CMIP.NASA-GISS.GISS-E2-1-G-CC": "https://doi.org/10.22033/ESGF/CMIP6.11657"
+  },
+  "GISS-E2-1-H": {
+    "CMIP6.CFMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.13941",
+    "CMIP6.CMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.1421",
+    "CMIP6.OMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.2077",
+    "CMIP6.PAMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.2078",
+    "CMIP6.SIMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.2079",
+    "CMIP6.ScenarioMIP.NASA-GISS.GISS-E2-1-H": "https://doi.org/10.22033/ESGF/CMIP6.2080"
+  },
+  "GISS-E2-2-G": {
+    "CMIP6.AerChemMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11658",
+    "CMIP6.CFMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11659",
+    "CMIP6.CMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.2081",
+    "CMIP6.DAMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11660",
+    "CMIP6.DynVarMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11661",
+    "CMIP6.FAFMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11662",
+    "CMIP6.GMMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11663",
+    "CMIP6.ISMIP6.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11664",
+    "CMIP6.LS3MIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11665",
+    "CMIP6.LUMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11666",
+    "CMIP6.OMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11667",
+    "CMIP6.PAMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11668",
+    "CMIP6.PMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11669",
+    "CMIP6.RFMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.2082",
+    "CMIP6.SIMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11670",
+    "CMIP6.ScenarioMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11671",
+    "CMIP6.VIACSAB.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.11672",
+    "CMIP6.VolMIP.NASA-GISS.GISS-E2-2-G": "https://doi.org/10.22033/ESGF/CMIP6.2083"
+  },
+  "GISS-E2-2-H": {
+    "CMIP6.CMIP.NASA-GISS.GISS-E2-2-H": "https://doi.org/10.22033/ESGF/CMIP6.15861",
+    "CMIP6.SIMIP.NASA-GISS.GISS-E2-2-H": "https://doi.org/10.22033/ESGF/CMIP6.15862",
+    "CMIP6.ScenarioMIP.NASA-GISS.GISS-E2-2-H": "https://doi.org/10.22033/ESGF/CMIP6.15863"
+  },
+  "GISS-E3-G": {
+    "CMIP6.AerChemMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2084",
+    "CMIP6.C4MIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2085",
+    "CMIP6.CFMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2086",
+    "CMIP6.CMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2087",
+    "CMIP6.DAMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2088",
+    "CMIP6.DynVarMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2089",
+    "CMIP6.FAFMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2090",
+    "CMIP6.GMMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2091",
+    "CMIP6.ISMIP6.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2092",
+    "CMIP6.LS3MIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2093",
+    "CMIP6.LUMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2094",
+    "CMIP6.OMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2095",
+    "CMIP6.PAMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2096",
+    "CMIP6.RFMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2098",
+    "CMIP6.SIMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2099",
+    "CMIP6.ScenarioMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2100",
+    "CMIP6.VIACSAB.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2101",
+    "CMIP6.VolMIP.NASA-GISS.GISS-E3-G": "https://doi.org/10.22033/ESGF/CMIP6.2102"
+  },
+  "HadGEM3-GC31-HH": {
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-HH": "https://doi.org/10.22033/ESGF/CMIP6.445",
+    "CMIP6.HighResMIP.NERC.HadGEM3-GC31-HH": "https://doi.org/10.22033/ESGF/CMIP6.1822"
+  },
+  "HadGEM3-GC31-HM": {
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-HM": "https://doi.org/10.22033/ESGF/CMIP6.446",
+    "CMIP6.HighResMIP.NERC.HadGEM3-GC31-HM": "https://doi.org/10.22033/ESGF/CMIP6.1824"
+  },
+  "HadGEM3-GC31-LL": {
+    "CMIP6.CFMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.435",
+    "CMIP6.CMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.419",
+    "CMIP6.DAMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.471",
+    "CMIP6.FAFMIP.NERC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.12065",
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.1901",
+    "CMIP6.LS3MIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.14460",
+    "CMIP6.LUMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.14461",
+    "CMIP6.PMIP.NERC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.12067",
+    "CMIP6.RFMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.475",
+    "CMIP6.ScenarioMIP.MOHC.HadGEM3-GC31-LL": "https://doi.org/10.22033/ESGF/CMIP6.10845"
+  },
+  "HadGEM3-GC31-LM": {
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-LM": "https://doi.org/10.22033/ESGF/CMIP6.1321"
+  },
+  "HadGEM3-GC31-MH": {
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-MH": "https://doi.org/10.22033/ESGF/CMIP6.1762"
+  },
+  "HadGEM3-GC31-MM": {
+    "CMIP6.CMIP.MOHC.HadGEM3-GC31-MM": "https://doi.org/10.22033/ESGF/CMIP6.420",
+    "CMIP6.DCPP.MOHC.HadGEM3-GC31-MM": "https://doi.org/10.22033/ESGF/CMIP6.456",
+    "CMIP6.HighResMIP.MOHC.HadGEM3-GC31-MM": "https://doi.org/10.22033/ESGF/CMIP6.1902",
+    "CMIP6.PAMIP.MOHC.HadGEM3-GC31-MM": "https://doi.org/10.22033/ESGF/CMIP6.14627",
+    "CMIP6.ScenarioMIP.MOHC.HadGEM3-GC31-MM": "https://doi.org/10.22033/ESGF/CMIP6.10846"
+  },
+  "HiRAM-SIT-HR": {
+    "CMIP6.HighResMIP.AS-RCEC.HiRAM-SIT-HR": "https://doi.org/10.22033/ESGF/CMIP6.13301"
+  },
+  "HiRAM-SIT-LR": {
+    "CMIP6.HighResMIP.AS-RCEC.HiRAM-SIT-LR": "https://doi.org/10.22033/ESGF/CMIP6.13303"
+  },
+  "ICON-ESM-LR": {
+    "CMIP6.CMIP.MPI-M.ICON-ESM-LR": "https://doi.org/10.22033/ESGF/CMIP6.743",
+    "CMIP6.OMIP.MPI-M.ICON-ESM-LR": "https://doi.org/10.22033/ESGF/CMIP6.791"
+  },
+  "IITM-ESM": {
+    "CMIP6.CMIP.CCCR-IITM.IITM-ESM": "https://doi.org/10.22033/ESGF/CMIP6.44",
+    "CMIP6.GMMIP.CCCR-IITM.IITM-ESM": "https://doi.org/10.22033/ESGF/CMIP6.825",
+    "CMIP6.ScenarioMIP.CCCR-IITM.IITM-ESM": "https://doi.org/10.22033/ESGF/CMIP6.14741"
+  },
+  "INM-CM4-8": {
+    "CMIP6.CMIP.INM.INM-CM4-8": "https://doi.org/10.22033/ESGF/CMIP6.1422",
+    "CMIP6.PMIP.INM.INM-CM4-8": "https://doi.org/10.22033/ESGF/CMIP6.2295",
+    "CMIP6.ScenarioMIP.INM.INM-CM4-8": "https://doi.org/10.22033/ESGF/CMIP6.12321"
+  },
+  "INM-CM5-0": {
+    "CMIP6.CMIP.INM.INM-CM5-0": "https://doi.org/10.22033/ESGF/CMIP6.1423",
+    "CMIP6.ScenarioMIP.INM.INM-CM5-0": "https://doi.org/10.22033/ESGF/CMIP6.12322"
+  },
+  "INM-CM5-H": {
+    "CMIP6.CMIP.INM.INM-CM5-H": "https://doi.org/10.22033/ESGF/CMIP6.1424",
+    "CMIP6.HighResMIP.INM.INM-CM5-H": "https://doi.org/10.22033/ESGF/CMIP6.14041"
+  },
+  "IPSL-CM5A2-INCA": {
+    "CMIP6.AerChemMIP.IPSL.IPSL-CM5A2-INCA": "https://doi.org/10.22033/ESGF/CMIP6.13641",
+    "CMIP6.CMIP.IPSL.IPSL-CM5A2-INCA": "https://doi.org/10.22033/ESGF/CMIP6.13642",
+    "CMIP6.LUMIP.IPSL.IPSL-CM5A2-INCA": "https://doi.org/10.22033/ESGF/CMIP6.15666",
+    "CMIP6.ScenarioMIP.IPSL.IPSL-CM5A2-INCA": "https://doi.org/10.22033/ESGF/CMIP6.15667"
+  },
+  "IPSL-CM6A-ATM-HR": {
+    "CMIP6.HighResMIP.IPSL.IPSL-CM6A-ATM-HR": "https://doi.org/10.22033/ESGF/CMIP6.2361"
+  },
+  "IPSL-CM6A-LR": {
+    "CMIP6.C4MIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1521",
+    "CMIP6.CDRMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.15668",
+    "CMIP6.CFMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1522",
+    "CMIP6.CMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1534",
+    "CMIP6.DAMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.13801",
+    "CMIP6.DCPP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1523",
+    "CMIP6.FAFMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1524",
+    "CMIP6.GMMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1525",
+    "CMIP6.GeoMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1526",
+    "CMIP6.HighResMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.13803",
+    "CMIP6.LS3MIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1527",
+    "CMIP6.LUMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1528",
+    "CMIP6.OMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1529",
+    "CMIP6.PAMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.13802",
+    "CMIP6.PMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1530",
+    "CMIP6.RFMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1531",
+    "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1532",
+    "CMIP6.VolMIP.IPSL.IPSL-CM6A-LR": "https://doi.org/10.22033/ESGF/CMIP6.1533"
+  },
+  "IPSL-CM6A-LR-INCA": {
+    "CMIP6.AerChemMIP.IPSL.IPSL-CM6A-LR-INCA": "https://doi.org/10.22033/ESGF/CMIP6.13581",
+    "CMIP6.CMIP.IPSL.IPSL-CM6A-LR-INCA": "https://doi.org/10.22033/ESGF/CMIP6.13582",
+    "CMIP6.RFMIP.IPSL.IPSL-CM6A-LR-INCA": "https://doi.org/10.22033/ESGF/CMIP6.14583"
+  },
+  "KACE-1-0-G": {
+    "CMIP6.CMIP.NIMS-KMA.KACE-1-0-G": "https://doi.org/10.22033/ESGF/CMIP6.2241",
+    "CMIP6.ScenarioMIP.NIMS-KMA.KACE-1-0-G": "https://doi.org/10.22033/ESGF/CMIP6.2242"
+  },
+  "KIOST-ESM": {
+    "CMIP6.CMIP.KIOST.KIOST-ESM": "https://doi.org/10.22033/ESGF/CMIP6.1922",
+    "CMIP6.ScenarioMIP.KIOST.KIOST-ESM": "https://doi.org/10.22033/ESGF/CMIP6.11241"
+  },
+  "LBLRTM-12-8": {
+    "CMIP6.CMIP.AER.LBLRTM-12-8": "https://doi.org/10.22033/ESGF/CMIP6.2004",
+    "CMIP6.RFMIP.AER.LBLRTM-12-8": "https://doi.org/10.22033/ESGF/CMIP6.2003"
+  },
+  "MCM-UA-1-0": {
+    "CMIP6.CMIP.UA.MCM-UA-1-0": "https://doi.org/10.22033/ESGF/CMIP6.2421",
+    "CMIP6.FAFMIP.UA.MCM-UA-1-0": "https://doi.org/10.22033/ESGF/CMIP6.13814",
+    "CMIP6.PMIP.UA.MCM-UA-1-0": "https://doi.org/10.22033/ESGF/CMIP6.13815",
+    "CMIP6.ScenarioMIP.UA.MCM-UA-1-0": "https://doi.org/10.22033/ESGF/CMIP6.13816"
+  },
+  "MIROC-ES2H": {
+    "CMIP6.AerChemMIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.925",
+    "CMIP6.C4MIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.15637",
+    "CMIP6.CMIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.901",
+    "CMIP6.DynVarMIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.1466",
+    "CMIP6.GeoMIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.907",
+    "CMIP6.ScenarioMIP.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.15638",
+    "CMIP6.VIACSAB.MIROC.MIROC-ES2H": "https://doi.org/10.22033/ESGF/CMIP6.1468"
+  },
+  "MIROC-ES2H-NB": {
+    "CMIP6.AerChemMIP.MIROC.MIROC-ES2H-NB": "https://doi.org/10.22033/ESGF/CMIP6.13305",
+    "CMIP6.CMIP.MIROC.MIROC-ES2H-NB": "https://doi.org/10.22033/ESGF/CMIP6.13306"
+  },
+  "MIROC-ES2L": {
+    "CMIP6.C4MIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.906",
+    "CMIP6.CDRMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.2161",
+    "CMIP6.CMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.902",
+    "CMIP6.DAMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.15241",
+    "CMIP6.DynVarMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.1470",
+    "CMIP6.GeoMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.908",
+    "CMIP6.LUMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.922",
+    "CMIP6.OMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.934",
+    "CMIP6.PMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.932",
+    "CMIP6.ScenarioMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.936",
+    "CMIP6.VIACSAB.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.1472",
+    "CMIP6.VolMIP.MIROC.MIROC-ES2L": "https://doi.org/10.22033/ESGF/CMIP6.918"
+  },
+  "MIROC6": {
+    "CMIP6.AerChemMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.9121",
+    "CMIP6.CFMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.885",
+    "CMIP6.CMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.881",
+    "CMIP6.DAMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.894",
+    "CMIP6.DCPP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.890",
+    "CMIP6.DynVarMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.1462",
+    "CMIP6.FAFMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.892",
+    "CMIP6.GMMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.886",
+    "CMIP6.HighResMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.888",
+    "CMIP6.LS3MIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.887",
+    "CMIP6.OMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.897",
+    "CMIP6.PAMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.2162",
+    "CMIP6.RFMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.895",
+    "CMIP6.SIMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.1463",
+    "CMIP6.ScenarioMIP.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.898",
+    "CMIP6.VIACSAB.MIROC.MIROC6": "https://doi.org/10.22033/ESGF/CMIP6.1464"
+  },
+  "MPI-ESM-1-2-HAM": {
+    "CMIP6.AerChemMIP.HAMMOZ-Consortium.MPI-ESM-1-2-HAM": "https://doi.org/10.22033/ESGF/CMIP6.1621",
+    "CMIP6.CMIP.HAMMOZ-Consortium.MPI-ESM-1-2-HAM": "https://doi.org/10.22033/ESGF/CMIP6.1622",
+    "CMIP6.RFMIP.HAMMOZ-Consortium.MPI-ESM-1-2-HAM": "https://doi.org/10.22033/ESGF/CMIP6.14724"
+  },
+  "MPI-ESM1-2-HR": {
+    "CMIP6.CMIP.DKRZ.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.2442",
+    "CMIP6.CMIP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.741",
+    "CMIP6.DCPP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.768",
+    "CMIP6.FAFMIP.DKRZ.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.2446",
+    "CMIP6.FAFMIP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.774",
+    "CMIP6.GeoMIP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.15294",
+    "CMIP6.HighResMIP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.762",
+    "CMIP6.ScenarioMIP.DKRZ.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.2450",
+    "CMIP6.ScenarioMIP.DWD.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.1869",
+    "CMIP6.ScenarioMIP.MPI-M.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.792",
+    "CMIP6.VolMIP.DKRZ.MPI-ESM1-2-HR": "https://doi.org/10.22033/ESGF/CMIP6.2451"
+  },
+  "MPI-ESM1-2-LR": {
+    "CMIP6.C4MIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.748",
+    "CMIP6.CMIP.DKRZ.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.15315",
+    "CMIP6.CMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.742",
+    "CMIP6.DAMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.15016",
+    "CMIP6.FAFMIP.DKRZ.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.15319",
+    "CMIP6.FAFMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.775",
+    "CMIP6.GeoMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.751",
+    "CMIP6.LS3MIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.760",
+    "CMIP6.LUMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.772",
+    "CMIP6.PMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.787",
+    "CMIP6.RFMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.784",
+    "CMIP6.ScenarioMIP.DKRZ.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.15349",
+    "CMIP6.ScenarioMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.793",
+    "CMIP6.VolMIP.MPI-M.MPI-ESM1-2-LR": "https://doi.org/10.22033/ESGF/CMIP6.766"
+  },
+  "MPI-ESM1-2-XR": {
+    "CMIP6.HighResMIP.MPI-M.MPI-ESM1-2-XR": "https://doi.org/10.22033/ESGF/CMIP6.10290"
+  },
+  "MRI-AGCM3-2-H": {
+    "CMIP6.CMIP.MRI.MRI-AGCM3-2-H": "https://doi.org/10.22033/ESGF/CMIP6.10943",
+    "CMIP6.DynVarMIP.MRI.MRI-AGCM3-2-H": "https://doi.org/10.22033/ESGF/CMIP6.10941",
+    "CMIP6.HighResMIP.MRI.MRI-AGCM3-2-H": "https://doi.org/10.22033/ESGF/CMIP6.10942"
+  },
+  "MRI-AGCM3-2-S": {
+    "CMIP6.CMIP.MRI.MRI-AGCM3-2-S": "https://doi.org/10.22033/ESGF/CMIP6.1623",
+    "CMIP6.DynVarMIP.MRI.MRI-AGCM3-2-S": "https://doi.org/10.22033/ESGF/CMIP6.1624",
+    "CMIP6.HighResMIP.MRI.MRI-AGCM3-2-S": "https://doi.org/10.22033/ESGF/CMIP6.1625"
+  },
+  "MRI-ESM2-0": {
+    "CMIP6.AerChemMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.633",
+    "CMIP6.C4MIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.623",
+    "CMIP6.CFMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.625",
+    "CMIP6.CMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.621",
+    "CMIP6.CORDEX.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1281",
+    "CMIP6.DAMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.634",
+    "CMIP6.DCPP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.630",
+    "CMIP6.DynVarMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1282",
+    "CMIP6.FAFMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.632",
+    "CMIP6.GMMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.626",
+    "CMIP6.GeoMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.624",
+    "CMIP6.LS3MIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.627",
+    "CMIP6.OMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.637",
+    "CMIP6.PMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.636",
+    "CMIP6.RFMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.635",
+    "CMIP6.SIMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.1283",
+    "CMIP6.ScenarioMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.638",
+    "CMIP6.VolMIP.MRI.MRI-ESM2-0": "https://doi.org/10.22033/ESGF/CMIP6.629"
+  },
+  "NESM3": {
+    "CMIP6.CMIP.NUIST.NESM3": "https://doi.org/10.22033/ESGF/CMIP6.2021",
+    "CMIP6.PMIP.NUIST.NESM3": "https://doi.org/10.22033/ESGF/CMIP6.2026",
+    "CMIP6.ScenarioMIP.NUIST.NESM3": "https://doi.org/10.22033/ESGF/CMIP6.2027"
+  },
+  "NICAM16-7S": {
+    "CMIP6.CMIP.MIROC.NICAM16-7S": "https://doi.org/10.22033/ESGF/CMIP6.1005",
+    "CMIP6.DynVarMIP.MIROC.NICAM16-7S": "https://doi.org/10.22033/ESGF/CMIP6.1474",
+    "CMIP6.HighResMIP.MIROC.NICAM16-7S": "https://doi.org/10.22033/ESGF/CMIP6.1033"
+  },
+  "NICAM16-8S": {
+    "CMIP6.CMIP.MIROC.NICAM16-8S": "https://doi.org/10.22033/ESGF/CMIP6.1006",
+    "CMIP6.DynVarMIP.MIROC.NICAM16-8S": "https://doi.org/10.22033/ESGF/CMIP6.1478",
+    "CMIP6.HighResMIP.MIROC.NICAM16-8S": "https://doi.org/10.22033/ESGF/CMIP6.1034"
+  },
+  "NICAM16-9S": {
+    "CMIP6.CMIP.MIROC.NICAM16-9S": "https://doi.org/10.22033/ESGF/CMIP6.1008",
+    "CMIP6.DynVarMIP.MIROC.NICAM16-9S": "https://doi.org/10.22033/ESGF/CMIP6.1486",
+    "CMIP6.HighResMIP.MIROC.NICAM16-9S": "https://doi.org/10.22033/ESGF/CMIP6.1036"
+  },
+  "NorCPM1": {
+    "CMIP6.CMIP.NCC.NorCPM1": "https://doi.org/10.22033/ESGF/CMIP6.10843",
+    "CMIP6.DCPP.NCC.NorCPM1": "https://doi.org/10.22033/ESGF/CMIP6.10844"
+  },
+  "NorESM1-F": {
+    "CMIP6.CMIP.NCC.NorESM1-F": "https://doi.org/10.22033/ESGF/CMIP6.11543",
+    "CMIP6.PMIP.NCC.NorESM1-F": "https://doi.org/10.22033/ESGF/CMIP6.11544"
+  },
+  "NorESM2-LM": {
+    "CMIP6.AerChemMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.574",
+    "CMIP6.C4MIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.13721",
+    "CMIP6.CDRMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.13722",
+    "CMIP6.CMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.502",
+    "CMIP6.DAMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.580",
+    "CMIP6.LUMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.562",
+    "CMIP6.OMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.598",
+    "CMIP6.PAMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.13723",
+    "CMIP6.PMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.592",
+    "CMIP6.RFMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.586",
+    "CMIP6.ScenarioMIP.NCC.NorESM2-LM": "https://doi.org/10.22033/ESGF/CMIP6.604"
+  },
+  "NorESM2-MM": {
+    "CMIP6.AerChemMIP.NCC.NorESM2-MM": "https://doi.org/10.22033/ESGF/CMIP6.578",
+    "CMIP6.CMIP.NCC.NorESM2-MM": "https://doi.org/10.22033/ESGF/CMIP6.506",
+    "CMIP6.RFMIP.NCC.NorESM2-MM": "https://doi.org/10.22033/ESGF/CMIP6.590",
+    "CMIP6.ScenarioMIP.NCC.NorESM2-MM": "https://doi.org/10.22033/ESGF/CMIP6.608"
+  },
+  "PCMDI-test-1-0": {
+    "CMIP6.AerChemMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.853",
+    "CMIP6.C4MIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.843",
+    "CMIP6.CORDEX.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.1166",
+    "CMIP6.DCPP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.850",
+    "CMIP6.DynVarMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.1167",
+    "CMIP6.HighResMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.848",
+    "CMIP6.LUMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.851",
+    "CMIP6.OMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.857",
+    "CMIP6.PMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.856",
+    "CMIP6.SIMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.1168",
+    "CMIP6.ScenarioMIP.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.858",
+    "CMIP6.VIACSAB.PCMDI.PCMDI-test-1-0": "https://doi.org/10.5072/ESGF/CMIP6.1169"
+  },
+  "RRTMG-LW-4-91": {
+    "CMIP6.CMIP.AER.RRTMG-LW-4-91": "https://doi.org/10.22033/ESGF/CMIP6.9962",
+    "CMIP6.RFMIP.AER.RRTMG-LW-4-91": "https://doi.org/10.22033/ESGF/CMIP6.9961"
+  },
+  "RRTMG-SW-4-02": {
+    "CMIP6.CMIP.AER.RRTMG-SW-4-02": "https://doi.org/10.22033/ESGF/CMIP6.9964",
+    "CMIP6.RFMIP.AER.RRTMG-SW-4-02": "https://doi.org/10.22033/ESGF/CMIP6.9963"
+  },
+  "RTE-RRTMGP-181204": {
+    "CMIP6.CMIP.RTE-RRTMGP-Consortium.RTE-RRTMGP-181204": "https://doi.org/10.22033/ESGF/CMIP6.10125",
+    "CMIP6.RFMIP.RTE-RRTMGP-Consortium.RTE-RRTMGP-181204": "https://doi.org/10.22033/ESGF/CMIP6.10124"
+  },
+  "SAM0-UNICON": {
+    "CMIP6.CMIP.SNU.SAM0-UNICON": "https://doi.org/10.22033/ESGF/CMIP6.1489"
+  },
+  "TaiESM1": {
+    "CMIP6.AerChemMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.9682",
+    "CMIP6.CFMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.9683",
+    "CMIP6.CMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.9684",
+    "CMIP6.GMMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.9685",
+    "CMIP6.PAMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.15214",
+    "CMIP6.ScenarioMIP.AS-RCEC.TaiESM1": "https://doi.org/10.22033/ESGF/CMIP6.9688"
+  },
+  "TaiESM1-TIMCOM": {
+    "CMIP6.OMIP.NTU.TaiESM1-TIMCOM": "https://doi.org/10.22033/ESGF/CMIP6.14323"
+  },
+  "TaiESM1-TIMCOM2": {
+    "CMIP6.OMIP.NTU.TaiESM1-TIMCOM2": "https://doi.org/10.22033/ESGF/CMIP6.16323"
+  },
+  "UKESM1-0-LL": {
+    "CMIP6.AerChemMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1561",
+    "CMIP6.AerChemMIP.NERC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.405",
+    "CMIP6.AerChemMIP.NIMS-KMA.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.2243",
+    "CMIP6.AerChemMIP.NIWA.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1741",
+    "CMIP6.C4MIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1562",
+    "CMIP6.CDRMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.12181",
+    "CMIP6.CMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1569",
+    "CMIP6.CMIP.NIMS-KMA.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.2245",
+    "CMIP6.DAMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.14830",
+    "CMIP6.GeoMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1563",
+    "CMIP6.LS3MIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.14462",
+    "CMIP6.LUMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1564",
+    "CMIP6.OMIP.NERC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.413",
+    "CMIP6.RFMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.11061",
+    "CMIP6.ScenarioMIP.MOHC.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.1567",
+    "CMIP6.ScenarioMIP.NIMS-KMA.UKESM1-0-LL": "https://doi.org/10.22033/ESGF/CMIP6.2250"
+  },
+  "UKESM1-1-LL": {
+    "CMIP6.CMIP.MOHC.UKESM1-1-LL": "https://doi.org/10.22033/ESGF/CMIP6.16781",
+    "CMIP6.ScenarioMIP.MOHC.UKESM1-1-LL": "https://doi.org/10.22033/ESGF/CMIP6.16782"
+  },
+  "UKESM1-ice-LL": {
+    "CMIP6.ISMIP6.NERC.UKESM1-ice-LL": "https://doi.org/10.22033/ESGF/CMIP6.13423"
+  }
+}

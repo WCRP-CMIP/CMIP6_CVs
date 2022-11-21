@@ -64,7 +64,7 @@ def retrieve_citation_data(source_ids, regen=False):
     Returns a dictionary of the form {DRS_ID: DOI_URL}
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6Citations?complete=true&sourceId={}'
-    DOI_PATTERN = r'doi:(https://doi.org/\d+\.\d+/ESGF/[A-Z\.0-9]+)'
+    DOI_PATTERN = r'doi:(https://doi.org/\d+\.\d+/[A-Z\.0-9]+/[A-Z\.0-9]+)'
 
     citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation.json')
     # Open cached data in case of api failure

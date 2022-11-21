@@ -61,7 +61,14 @@ def retrieve_citation_data(source_ids, regen=False):
     Retrieve citation information from either the citation service or
     a cached JSON file.
 
-    Returns a dictionary of the form {DRS_ID: DOI_URL}
+    Parameters
+    ----------
+    source_id
+        List of source ids to check for
+    regen
+        If false return data from cached file, if false query citation service
+
+    Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6Citations?complete=true&sourceId={}'
     DOI_PATTERN = r'doi:(https://doi.org/\d+\.\d+/[A-Z\.0-9]+/[A-Z\.0-9]+)'

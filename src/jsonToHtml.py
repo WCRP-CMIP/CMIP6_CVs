@@ -577,13 +577,10 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
         for institution_id, institution_id_entry in sorted(source_id_entry.items()):
             for activity_id, activity_entry in sorted(institution_id_entry.items()):
                 for experiment_id, entry in sorted(activity_entry.items()):
-                    try:
-                        row = [source_id, institution_id, activity_id, experiment_id] 
-                        row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
-                        row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
-                    except:
-                        import pdb; pdb.set_trace()
-            
+                    row = [source_id, institution_id, activity_id, experiment_id] 
+                    row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
+                    row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
+                    
                     fh_citation.write(
                         '<tr>\n' +
                         '\n'.join(['<td>{}</td>'.format(i) for i in row]) +

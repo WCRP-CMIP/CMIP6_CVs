@@ -75,7 +75,7 @@ def retrieve_citation_data_models(source_ids, regen=False):
     Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=model'
-    REQUIRED_FIELDS = ['DATA_REFERENCE', 'DOI']
+    REQUIRED_FIELDS = ['DOI', 'LICENSE']
     citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation.json.gz')
     # Open cached data in case of api failure
     if os.path.exists(citation_data_cache_file):
@@ -99,7 +99,9 @@ def retrieve_citation_data_models(source_ids, regen=False):
                 # pick out DOI from data reference and DRS id and build a dictionary
                 
                 for entry in citation_data_raw:
-                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']] = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}'.format(**entry)
+                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']] = data_to_store
                     
             else:
                 try:
@@ -130,7 +132,7 @@ def retrieve_citation_data_expts(source_ids, regen=False):
     Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=exp'
-    REQUIRED_FIELDS = ['DATA_REFERENCE', 'DOI']
+    REQUIRED_FIELDS = ['DOI', 'LICENSE']
     citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation_expts.json.gz')
     # Open cached data in case of api failure
     if os.path.exists(citation_data_cache_file):
@@ -154,7 +156,10 @@ def retrieve_citation_data_expts(source_ids, regen=False):
                 # pick out DOI from data reference and DRS id and build a dictionary
                 
                 for entry in citation_data_raw:
-                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']][entry['EXPERIMENT_ID']] = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE} {EXPERIMENT_ID}. {PUBLISHER}. doi:{DOI}'.format(**entry)
+                   
+                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']][entry['EXPERIMENT_ID']] = data_to_store
                     
             else:
                 try:
@@ -503,7 +508,8 @@ with open(fout, 'w') as fh_license:
 html_file = 'CMIP6_source_id_citation.html'
 heading = 'CMIP6 Source ID Citation details'
 first_row = [
-    'Source ID', 'Institution ID', 'Activity ID', 'Data_Reference', 'DOI']
+    'Source ID', 'Institution ID', 'Activity ID', 'Data Reference', 'License', 'DOI']
+column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
 # Load citation_data
 citation_data = retrieve_citation_data_models(list(source_id_table.keys()), regen=args.regen_citation)
 
@@ -522,13 +528,14 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
     for i in ['head', 'foot']:
         fh_citation.write(
             '<t{}><tr>\n'.format(i) +
-            '\n'.join(['<th style="max-width: 40%;">{}</th>'.format(heading) for heading in first_row]) +
+            '\n'.join(['<th {} >{}</th>'.format(column_styles.get(heading), heading) for heading in first_row]) +
             '\n</tr></t{}>\n'.format(i))
 
     for source_id, source_id_entry in sorted(citation_data.items()):
         for institution_id, institution_id_entry in sorted(source_id_entry.items()):
             for activity_id, entry in sorted(institution_id_entry.items()):
-                row = [source_id, institution_id, activity_id] + [entry['DATA_REFERENCE']]
+                row = [source_id, institution_id, activity_id]
+                row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
                 row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
         
                 fh_citation.write(
@@ -543,7 +550,8 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
 html_file = 'CMIP6_source_id_experiment_citation.html'
 heading = 'CMIP6 Source ID Citation details by experiment'
 first_row = [
-    'Source ID', 'Institution ID', 'Activity ID', 'Experiment', 'Data_Reference', 'DOI']
+    'Source ID', 'Institution ID', 'Activity ID', 'Experiment', 'Data Reference', 'License', 'DOI']
+column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
 # Load citation_data
 citation_data = retrieve_citation_data_expts(list(source_id_table.keys()), regen=args.regen_citation)
 
@@ -562,15 +570,19 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
     for i in ['head', 'foot']:
         fh_citation.write(
             '<t{}><tr>\n'.format(i) +
-            '\n'.join(['<th style="max-width: 40%;">{}</th>'.format(heading) for heading in first_row]) +
+            '\n'.join(['<th {}>{}</th>'.format(column_styles.get(heading), heading) for heading in first_row]) +
             '\n</tr></t{}>\n'.format(i))
 
     for source_id, source_id_entry in sorted(citation_data.items()):
         for institution_id, institution_id_entry in sorted(source_id_entry.items()):
             for activity_id, activity_entry in sorted(institution_id_entry.items()):
                 for experiment_id, entry in sorted(activity_entry.items()):
-                    row = [source_id, institution_id, activity_id, experiment_id] + [entry['DATA_REFERENCE']]
-                    row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
+                    try:
+                        row = [source_id, institution_id, activity_id, experiment_id] 
+                        row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
+                        row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
+                    except:
+                        import pdb; pdb.set_trace()
             
                     fh_citation.write(
                         '<tr>\n' +

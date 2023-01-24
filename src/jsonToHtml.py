@@ -43,15 +43,137 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350]
                    - macOS update files to remove
                    extended attributes "$ xattr -c jquery.dataTables-1.12*"
-                   file permissions "$ chmod 644 jquery.dataTables-1.12*"                   
+                   file permissions "$ chmod 644 jquery.dataTables-1.12*"
                    - TODO: Update default page lengths
+MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
+from collections import defaultdict
+import gzip
 import json
 import os
 import re
+import requests
 import sys
+
+
+def retrieve_citation_data_models(source_ids, regen=False):
+    """
+    Retrieve citation information from either the citation service or
+    a cached JSON file.
+
+    Parameters
+    ----------
+    source_id
+        List of source ids to check for
+    granularity
+        either 'model' or 'experiment'
+    regen
+        If false return data from cached file, if false query citation service
+
+    Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
+    """
+    CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=model'
+    REQUIRED_FIELDS = ['DOI', 'LICENSE']
+    citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation.json.gz')
+    # Open cached data in case of api failure
+    if os.path.exists(citation_data_cache_file):
+        with gzip.open(citation_data_cache_file) as fh:
+            cached_citation_data = json.load(fh)
+    else:
+        cached_citation_data = {}
+
+    citation_data = defaultdict(lambda: defaultdict(dict))
+    if regen:
+        for source_id in source_ids:
+            print('Retrieving data for {}'.format(source_id))
+            request_object = requests.get(CITATION_DATA_SOURCE.format(source_id))
+
+            # If request successful
+            if request_object.status_code == 200:
+
+                citation_data_raw = request_object.json()
+                if 'error' in  citation_data_raw:
+                    raise RuntimeError('Received following from citation service: {}'.format(json.dumps(citation_data_raw)))
+                # pick out DOI from data reference and DRS id and build a dictionary
+                
+                for entry in citation_data_raw:
+                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}'.format(**entry)
+                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']] = data_to_store
+                    
+            else:
+                try:
+                    citation_data[source_id] = cached_citation_data[source_id]
+                except KeyError:
+                    pass
+        # write data to citation_data_cache_file
+        with gzip.open(citation_data_cache_file, 'w') as fh:
+            # cludge to avoid issues with encoding
+            fh.write(json.dumps(citation_data, indent=2, sort_keys=True).encode('utf-8'))
+    else:
+        citation_data = cached_citation_data
+
+    return citation_data
+
+def retrieve_citation_data_expts(source_ids, regen=False):
+    """
+    Retrieve citation information from either the citation service or
+    a cached JSON file.
+
+    Parameters
+    ----------
+    source_id
+        List of source ids to check for
+    regen
+        If false return data from cached file, if false query citation service
+
+    Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
+    """
+    CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=exp'
+    REQUIRED_FIELDS = ['DOI', 'LICENSE']
+    citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation_expts.json.gz')
+    # Open cached data in case of api failure
+    if os.path.exists(citation_data_cache_file):
+        with gzip.open(citation_data_cache_file) as fh:
+            cached_citation_data = json.load(fh)
+    else:
+        cached_citation_data = {}
+
+    citation_data = defaultdict(lambda: defaultdict(lambda: defaultdict(dict)))
+    if regen:
+        for source_id in source_ids:
+            print('Retrieving data for {}'.format(source_id))
+            request_object = requests.get(CITATION_DATA_SOURCE.format(source_id))
+
+            # If request successful
+            if request_object.status_code == 200:
+
+                citation_data_raw = request_object.json()
+                if 'error' in  citation_data_raw:
+                    raise RuntimeError('Received following from citation service: {}'.format(json.dumps(citation_data_raw)))
+                # pick out DOI from data reference and DRS id and build a dictionary
+                
+                for entry in citation_data_raw:
+                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE} {EXPERIMENT_ID}. {PUBLISHER}. doi:{DOI}'.format(**entry)
+                   
+                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']][entry['EXPERIMENT_ID']] = data_to_store
+                    
+            else:
+                try:
+                    citation_data[source_id] = cached_citation_data[source_id]
+                except KeyError:
+                    pass
+        # write data to citation_data_cache_file
+        with gzip.open(citation_data_cache_file, 'wb') as fh:
+            fh.write(json.dumps(citation_data, indent=2, sort_keys=True).encode('utf-8'))
+    else:
+        citation_data = cached_citation_data
+
+    return citation_data
+
 
 # %% Create generic header
 header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -75,6 +197,17 @@ $(document).ready( function () {
 //]]>
 </script>"""
 
+links_to_all = """
+<h4>
+<a href='CMIP6_experiment_id.html'>Experiment IDs</a> |
+<a href='CMIP6_institution_id.html'>Institution IDs</a> |
+<a href='CMIP6_source_id.html'>Source IDs</a> |
+<a href='CMIP6_source_id_licenses.html'>Source IDs (incl licenses)</a> |
+<a href='CMIP6_source_id_citation.html'>Citations by (Source ID, Institution Id, Activity ID)</a> |
+<a href='CMIP6_source_id_experiment_citation.html'>Citations by (Source ID, Institution Id, Activity ID, Experiment ID)</a> |
+</h4>
+"""
+
 # 190425 Updates below fail
 # <script type="text/javascript">
 # //<![CDATA[
@@ -92,12 +225,14 @@ verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
 parser = argparse.ArgumentParser()
 parser.add_argument('ver', metavar='str', type=str,
                     help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')
+parser.add_argument('-r', '--regen_citation', action='store_true',
+                    help='Regenerate citation information')
 args = parser.parse_args()
 if re.search(verTest, args.ver):
     version = args.ver  # 1 = make files
-    print('** HTML Write mode - ",version," will be written **')
+    print('** HTML Write mode - ',version,' will be written **')
 else:
-    print('** Version: ",version," invalid, exiting')
+    print('** Version: ',version,' invalid, exiting')
     sys.exit()
 
 # %% Set global arguments
@@ -106,10 +241,10 @@ destDir = '../docs/'
 # %% Process experiment_id
 infile = '../CMIP6_experiment_id.json'
 f = open(infile)
-dict = json.load(f)
-dict1 = dict.get('experiment_id')  # Fudge to extract duplicate level
-dict2 = dict.get('version')
-print(dict2)
+exp_dict = json.load(f)
+exp_dict1 = exp_dict.get('experiment_id')  # Fudge to extract duplicate level
+exp_dict2 = exp_dict.get('version')
+print(exp_dict2)
 # print(dict.keys())
 fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
 print('processing', fout)
@@ -121,9 +256,12 @@ fo = open(fout, 'w')
 # <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
 # <script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
-fo.write(''.join([header, """\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
-<table id="table_id" class="display compact" style="width:100%">\n"""]))
+fo.write(''.join([
+    header, 
+    "\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>"
+    "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
+    links_to_all,
+    '<table id="table_id" class="display compact" style="width:100%">\n']))
 
 dictOrder = [
     'experiment_id', 'activity_id', 'description', 'start_year', 'end_year', 'parent_experiment_id',
@@ -137,8 +275,8 @@ dictOrderK = [
 ]
 
 first_row = False
-for exp in dict1.keys():
-    exp_dict = dict1[exp]
+for exp in exp_dict1.keys():
+    exp_dict = exp_dict1[exp]
     if not first_row:
         #ids = exp_dict.keys()
         ids = dictOrderK  # Overwrite ordering
@@ -172,10 +310,10 @@ fo.write("""\n</body>\n</html>\n""")
 # %% Process institution_id
 infile = '../CMIP6_institution_id.json'
 f = open(infile)
-dict = json.load(f)
-dict1 = dict.get('institution_id')  # Fudge to extract duplicate level
-dict2 = dict.get('version')
-print(dict2)
+exp_dict = json.load(f)
+exp_dict1 = exp_dict.get('institution_id')  # Fudge to extract duplicate level
+exp_dict2 = exp_dict.get('version')
+print(exp_dict2)
 # print(dict.keys())
 fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
 print('processing', fout)
@@ -183,18 +321,20 @@ print('processing', fout)
 fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
-fo.write(''.join([header, """
-<title>CMIP6 institution_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
-<table id="table_id" class="display compact" style="width:100%">\n"""]))
+fo.write(''.join([
+    header, 
+    "<title>CMIP6 institution_id values</title>\n</head>\n<body>",
+    "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
+    links_to_all,
+    '<table id="table_id" class="display compact" style="width:100%">\n']))
 
 dictOrder = [
     'institution_id'
 ]
 
 first_row = False
-for exp in dict1.keys():
-    exp_dict = dict1[exp]
+for exp in exp_dict1.keys():
+    exp_dict = exp_dict1[exp]
     if not first_row:
         ids = dictOrder  # Overwrite ordering
         for hf in ["thead", "tfoot"]:
@@ -221,10 +361,10 @@ fo.write("""\n</body>\n</html>\n""")
 # %% Process source_id
 infile = '../CMIP6_source_id.json'
 f = open(infile)
-dict = json.load(f)
-dict1 = dict.get('source_id')  # Fudge to extract duplicate level
-dict2 = dict.get('version')
-print(dict2)
+exp_dict = json.load(f)
+exp_dict1 = exp_dict.get('source_id')  # Fudge to extract duplicate level
+exp_dict2 = exp_dict.get('version')
+print(exp_dict2)
 # print(dict.keys())
 fout = ''.join([destDir, infile[:-4].replace('../', ''), 'html'])
 print("processing", fout)
@@ -232,10 +372,12 @@ print("processing", fout)
 fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
-fo.write(''.join([header, """
-<title>CMIP6 source_id values</title>\n</head>\n<body>
-<p>WCRP-CMIP CMIP6_CVs version: """, version, """</p>
-<table id="table_id" class="display compact" style="width:100%">\n"""]))
+fo.write(''.join([
+    header, 
+    "<title>CMIP6 source_id values</title>\n</head>\n<body>",
+    "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
+    links_to_all,
+    '<table id="table_id" class="display compact" style="width:100%">\n']))
 
 dictOrder = [
     'label_extended', 'atmospheric_chemistry', 'atmosphere', 'ocean_biogeochemistry',
@@ -257,8 +399,8 @@ dictRealmKeys = [
 dictNomResKeys = ['natNomRes_atmos', 'natNomRes_ocean', 'natNomRes_landIce']
 
 first_row = False
-for exp in dict1.keys():
-    exp_dict = dict1[exp]
+for exp in exp_dict1.keys():
+    exp_dict = exp_dict1[exp]
     # Create table columns
     if not first_row:
         ids = dictOrderK  # Overwrite ordering
@@ -310,15 +452,15 @@ with open(fout, 'w') as fh_license:
     fh_license.write(
         """{}
         <title>CMIP6 source_id license details</title>\n</head>\n<body>
-        <p>WCRP-CMIP CMIP6_CVs version: {}</p>
+        <p><h1>WCRP-CMIP CMIP6_CVs version: {}</h1></p>
+        {}
         <table id="table_id" class="display compact" style="width:100%">\n
-        """.format(header, version))
+        """.format(header, version, links_to_all))
     simple_headings = [
         'source_id', 'institution_id', 'release_year',
         'cohort', 'label', 'label_extended']
     license_headings = [
         'license', 'exceptions_contact', 'history', 'source specific info']
-
     first_row = [i.replace('_', ' ')
                  for i in simple_headings + license_headings]
     # write header and footer rows for table
@@ -333,7 +475,7 @@ with open(fout, 'w') as fh_license:
         for heading in simple_headings:
             cell_data = source_id_data[heading]
             if isinstance(cell_data, list):
-                cell_data = ' '.join(cell_data)
+                cell_data = '<br>'.join(cell_data)
             row.append(cell_data)
         # try to get license header, otherwise leave blanks
         try:
@@ -348,6 +490,11 @@ with open(fout, 'w') as fh_license:
 
         except KeyError:
             row += [''] * len(license_headings)
+
+        citation_entry = []
+        mips = source_id_data['activity_participation']
+        institutions = source_id_data['institution_id']
+
         fh_license.write(
             '<tr>\n' +
             '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
@@ -355,3 +502,90 @@ with open(fout, 'w') as fh_license:
         )
 
     fh_license.write('</table>\n</body>\n</html>\n')
+
+
+
+html_file = 'CMIP6_source_id_citation.html'
+heading = 'CMIP6 Source ID Citation details'
+first_row = [
+    'Source ID', 'Institution ID', 'Activity ID', 'Data Reference', 'License', 'DOI']
+column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
+# Load citation_data
+citation_data = retrieve_citation_data_models(list(source_id_table.keys()), regen=args.regen_citation)
+
+fout = os.path.join(destDir, html_file)
+print("processing", fout)
+
+with open(fout, 'w', encoding='utf-8') as fh_citation:
+    fh_citation.write(
+        """{}
+        <title>{} details</title>\n</head>\n<body>
+        <p><h1>WCRP-CMIP CMIP6_CVs version: {}</h1></p>
+        {}
+        <table id="table_id" class="display compact" style="width:100%">\n
+        """.format(header, heading, version, links_to_all))
+    # write header and footer rows for table
+    for i in ['head', 'foot']:
+        fh_citation.write(
+            '<t{}><tr>\n'.format(i) +
+            '\n'.join(['<th {} >{}</th>'.format(column_styles.get(heading), heading) for heading in first_row]) +
+            '\n</tr></t{}>\n'.format(i))
+
+    for source_id, source_id_entry in sorted(citation_data.items()):
+        for institution_id, institution_id_entry in sorted(source_id_entry.items()):
+            for activity_id, entry in sorted(institution_id_entry.items()):
+                row = [source_id, institution_id, activity_id]
+                row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
+                row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
+        
+                fh_citation.write(
+                    '<tr>\n' +
+                    '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
+                    '\n</tr>\n'
+                )
+
+    fh_citation.write('</table>\n</body>\n</html>\n')
+
+
+html_file = 'CMIP6_source_id_experiment_citation.html'
+heading = 'CMIP6 Source ID Citation details by experiment'
+first_row = [
+    'Source ID', 'Institution ID', 'Activity ID', 'Experiment', 'Data Reference', 'License', 'DOI']
+column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
+# Load citation_data
+citation_data = retrieve_citation_data_expts(list(source_id_table.keys()), regen=args.regen_citation)
+
+fout = os.path.join(destDir, html_file)
+print("processing", fout)
+
+with open(fout, 'w', encoding='utf-8') as fh_citation:
+    fh_citation.write(
+        """{}
+        <title>{} details</title>\n</head>\n<body>
+        <p><h1>WCRP-CMIP CMIP6_CVs version: {}</h1></p>
+        {}
+        <table id="table_id" class="display compact" style="width:100%">\n
+        """.format(header, heading, version, links_to_all))
+    # write header and footer rows for table
+    for i in ['head', 'foot']:
+        fh_citation.write(
+            '<t{}><tr>\n'.format(i) +
+            '\n'.join(['<th {}>{}</th>'.format(column_styles.get(heading), heading) for heading in first_row]) +
+            '\n</tr></t{}>\n'.format(i))
+
+    for source_id, source_id_entry in sorted(citation_data.items()):
+        for institution_id, institution_id_entry in sorted(source_id_entry.items()):
+            for activity_id, activity_entry in sorted(institution_id_entry.items()):
+                for experiment_id, entry in sorted(activity_entry.items()):
+                    row = [source_id, institution_id, activity_id, experiment_id] 
+                    row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
+                    row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
+                    
+                    fh_citation.write(
+                        '<tr>\n' +
+                        '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
+                        '\n</tr>\n'
+                    )
+
+    fh_citation.write('</table>\n</body>\n</html>\n')
+

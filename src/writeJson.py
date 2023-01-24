@@ -1411,7 +1411,8 @@ del(testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency, 
 
 # %% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
 # json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
-args = shlex.split(''.join(['python ./jsonToHtml.py ', versionId]))
+# -r option included to regenerate citation pages
+args = shlex.split(''.join(['python ./jsonToHtml.py ', versionId, '-r']))
 # print(args)
 p = subprocess.Popen(args, stdout=subprocess.PIPE,
                      stderr=subprocess.PIPE, cwd='./')

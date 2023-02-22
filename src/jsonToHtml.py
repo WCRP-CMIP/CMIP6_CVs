@@ -495,13 +495,13 @@ with open(fout, 'w') as fh_license:
         # try to get license header, otherwise leave blanks
         try:
             license_data = source_id_data['license_info']
-            license = '<a href="{url}">{id}</a>'.format(**license_data)
+            license1 = '<a href="{url}">{id}</a>'.format(**license_data)
             contact = license_data['exceptions_contact']
             history = license_data['history']
             specific_info = license_data['source_specific_info']
             if specific_info.startswith('http'):
                 specific_info = '<a href="{0}">{0}</a>'.format(specific_info)
-            row += [license, contact, history, specific_info]
+            row += [license1, contact, history, specific_info]
 
         except KeyError:
             row += [''] * len(license_headings)
@@ -518,7 +518,7 @@ with open(fout, 'w') as fh_license:
 
     fh_license.write('</table>\n</body>\n</html>\n')
 
-
+# %% Process source_id citation
 html_file = 'CMIP6_source_id_citation.html'
 heading = 'CMIP6 Source ID Citation details'
 first_row = [
@@ -562,7 +562,7 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
 
     fh_citation.write('</table>\n</body>\n</html>\n')
 
-
+# %% Process source_id per experiment citation
 html_file = 'CMIP6_source_id_experiment_citation.html'
 heading = 'CMIP6 Source ID Citation details by experiment'
 first_row = [

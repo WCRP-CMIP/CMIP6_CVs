@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"5bb89e6089dce6df4570c1fff84583cdb43880eb",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/5bb89e6089dce6df4570c1fff84583cdb43880eb",
+            "MD5":"78ff933572976d588295c1383b4bc7f6f35f132f",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/78ff933572976d588295c1383b4bc7f6f35f132f",
             "commitMessage":"Revised CanESM5-1 source_id license history",
-            "timeStamp":"Tue Feb 21 16:01:31 2023 -0800"
+            "timeStamp":"Tue Feb 21 21:03:55 2023 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

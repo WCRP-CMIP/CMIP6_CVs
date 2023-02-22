@@ -46,6 +46,7 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    file permissions "$ chmod 644 jquery.dataTables-1.12*"
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
+PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
@@ -76,7 +77,8 @@ def retrieve_citation_data_models(source_ids, regen=False):
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=model'
     REQUIRED_FIELDS = ['DOI', 'LICENSE']
-    citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation.json.gz')
+    citation_data_cache_file = os.path.join(
+        os.path.dirname(__file__), 'citation.json.gz')
     # Open cached data in case of api failure
     if os.path.exists(citation_data_cache_file):
         with gzip.open(citation_data_cache_file) as fh:
@@ -88,21 +90,25 @@ def retrieve_citation_data_models(source_ids, regen=False):
     if regen:
         for source_id in source_ids:
             print('Retrieving data for {}'.format(source_id))
-            request_object = requests.get(CITATION_DATA_SOURCE.format(source_id))
+            request_object = requests.get(
+                CITATION_DATA_SOURCE.format(source_id))
 
             # If request successful
             if request_object.status_code == 200:
 
                 citation_data_raw = request_object.json()
-                if 'error' in  citation_data_raw:
-                    raise RuntimeError('Received following from citation service: {}'.format(json.dumps(citation_data_raw)))
+                if 'error' in citation_data_raw:
+                    raise RuntimeError('Received following from citation service: {}'.format(
+                        json.dumps(citation_data_raw)))
                 # pick out DOI from data reference and DRS id and build a dictionary
-                
+
                 for entry in citation_data_raw:
-                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
-                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}'.format(**entry)
-                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']] = data_to_store
-                    
+                    data_to_store = {i: entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}'.format(
+                        **entry)
+                    citation_data[source_id][entry['INSTITUTION_ID']
+                                             ][entry['ACTIVITY_ID']] = data_to_store
+
             else:
                 try:
                     citation_data[source_id] = cached_citation_data[source_id]
@@ -111,11 +117,13 @@ def retrieve_citation_data_models(source_ids, regen=False):
         # write data to citation_data_cache_file
         with gzip.open(citation_data_cache_file, 'w') as fh:
             # cludge to avoid issues with encoding
-            fh.write(json.dumps(citation_data, indent=2, sort_keys=True).encode('utf-8'))
+            fh.write(json.dumps(citation_data, indent=2,
+                     sort_keys=True).encode('utf-8'))
     else:
         citation_data = cached_citation_data
 
     return citation_data
+
 
 def retrieve_citation_data_expts(source_ids, regen=False):
     """
@@ -133,7 +141,8 @@ def retrieve_citation_data_expts(source_ids, regen=False):
     """
     CITATION_DATA_SOURCE = 'https://www.wdc-climate.de/ui/cerarest/cmip6search?mipEra=CMIP6&sourceId={}&granularity=exp'
     REQUIRED_FIELDS = ['DOI', 'LICENSE']
-    citation_data_cache_file = os.path.join(os.path.dirname(__file__), 'citation_expts.json.gz')
+    citation_data_cache_file = os.path.join(
+        os.path.dirname(__file__), 'citation_expts.json.gz')
     # Open cached data in case of api failure
     if os.path.exists(citation_data_cache_file):
         with gzip.open(citation_data_cache_file) as fh:
@@ -145,22 +154,26 @@ def retrieve_citation_data_expts(source_ids, regen=False):
     if regen:
         for source_id in source_ids:
             print('Retrieving data for {}'.format(source_id))
-            request_object = requests.get(CITATION_DATA_SOURCE.format(source_id))
+            request_object = requests.get(
+                CITATION_DATA_SOURCE.format(source_id))
 
             # If request successful
             if request_object.status_code == 200:
 
                 citation_data_raw = request_object.json()
-                if 'error' in  citation_data_raw:
-                    raise RuntimeError('Received following from citation service: {}'.format(json.dumps(citation_data_raw)))
+                if 'error' in citation_data_raw:
+                    raise RuntimeError('Received following from citation service: {}'.format(
+                        json.dumps(citation_data_raw)))
                 # pick out DOI from data reference and DRS id and build a dictionary
-                
+
                 for entry in citation_data_raw:
-                    data_to_store = {i:entry[i] for i in REQUIRED_FIELDS}
-                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE} {EXPERIMENT_ID}. {PUBLISHER}. doi:{DOI}'.format(**entry)
-                   
-                    citation_data[source_id][entry['INSTITUTION_ID']][entry['ACTIVITY_ID']][entry['EXPERIMENT_ID']] = data_to_store
-                    
+                    data_to_store = {i: entry[i] for i in REQUIRED_FIELDS}
+                    data_to_store['SHORT_DATA_REFERENCE'] = '{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE} {EXPERIMENT_ID}. {PUBLISHER}. doi:{DOI}'.format(
+                        **entry)
+
+                    citation_data[source_id][entry['INSTITUTION_ID']
+                                             ][entry['ACTIVITY_ID']][entry['EXPERIMENT_ID']] = data_to_store
+
             else:
                 try:
                     citation_data[source_id] = cached_citation_data[source_id]
@@ -168,7 +181,8 @@ def retrieve_citation_data_expts(source_ids, regen=False):
                     pass
         # write data to citation_data_cache_file
         with gzip.open(citation_data_cache_file, 'wb') as fh:
-            fh.write(json.dumps(citation_data, indent=2, sort_keys=True).encode('utf-8'))
+            fh.write(json.dumps(citation_data, indent=2,
+                     sort_keys=True).encode('utf-8'))
     else:
         citation_data = cached_citation_data
 
@@ -221,18 +235,19 @@ links_to_all = """
 
 # %% Argparse extract
 # Matching version format 6.2.11.2
-verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
+#verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
+verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]')
 parser = argparse.ArgumentParser()
 parser.add_argument('ver', metavar='str', type=str,
                     help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')
 parser.add_argument('-r', '--regen_citation', action='store_true',
                     help='Regenerate citation information')
-args = parser.parse_args()
-if re.search(verTest, args.ver):
-    version = args.ver  # 1 = make files
-    print('** HTML Write mode - ',version,' will be written **')
+argDict = parser.parse_args()
+if re.search(verTest, argDict.ver):
+    version = argDict.ver  # 1 = make files
+    print('** HTML Write mode - ', version, ' will be written **')
 else:
-    print('** Version: ',version,' invalid, exiting')
+    print('** Version: ', version, ' invalid, exiting')
     sys.exit()
 
 # %% Set global arguments
@@ -257,7 +272,7 @@ fo = open(fout, 'w')
 # <script type="text/javascript" charset="utf8" src="http://rawgit.com/WCRP-CMIP/CMIP6_CVs/master/src/jquery.dataTables.js"></script>
 
 fo.write(''.join([
-    header, 
+    header,
     "\n<title>CMIP6 experiment_id values</title>\n</head>\n<body>"
     "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
     links_to_all,
@@ -322,7 +337,7 @@ fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
 fo.write(''.join([
-    header, 
+    header,
     "<title>CMIP6 institution_id values</title>\n</head>\n<body>",
     "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
     links_to_all,
@@ -373,7 +388,7 @@ fo = open(fout, 'w')
 
 # print >> fo, ''.join([header, """
 fo.write(''.join([
-    header, 
+    header,
     "<title>CMIP6 source_id values</title>\n</head>\n<body>",
     "<p><h1>WCRP-CMIP CMIP6_CVs version: ", version, "</h1></p>",
     links_to_all,
@@ -504,14 +519,15 @@ with open(fout, 'w') as fh_license:
     fh_license.write('</table>\n</body>\n</html>\n')
 
 
-
 html_file = 'CMIP6_source_id_citation.html'
 heading = 'CMIP6 Source ID Citation details'
 first_row = [
     'Source ID', 'Institution ID', 'Activity ID', 'Data Reference', 'License', 'DOI']
-column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
+column_styles = {'Data Reference': 'style="max-width: 40%;"',
+                 'Source ID': 'style="min-width: 100px;"'}
 # Load citation_data
-citation_data = retrieve_citation_data_models(list(source_id_table.keys()), regen=args.regen_citation)
+citation_data = retrieve_citation_data_models(
+    list(source_id_table.keys()), regen=argDict.regen_citation)
 
 fout = os.path.join(destDir, html_file)
 print("processing", fout)
@@ -537,7 +553,7 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
                 row = [source_id, institution_id, activity_id]
                 row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
                 row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
-        
+
                 fh_citation.write(
                     '<tr>\n' +
                     '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
@@ -551,9 +567,11 @@ html_file = 'CMIP6_source_id_experiment_citation.html'
 heading = 'CMIP6 Source ID Citation details by experiment'
 first_row = [
     'Source ID', 'Institution ID', 'Activity ID', 'Experiment', 'Data Reference', 'License', 'DOI']
-column_styles = {'Data Reference':'style="max-width: 40%;"', 'Source ID':'style="min-width: 100px;"'}
+column_styles = {'Data Reference': 'style="max-width: 40%;"',
+                 'Source ID': 'style="min-width: 100px;"'}
 # Load citation_data
-citation_data = retrieve_citation_data_expts(list(source_id_table.keys()), regen=args.regen_citation)
+citation_data = retrieve_citation_data_expts(
+    list(source_id_table.keys()), regen=argDict.regen_citation)
 
 fout = os.path.join(destDir, html_file)
 print("processing", fout)
@@ -577,10 +595,11 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
         for institution_id, institution_id_entry in sorted(source_id_entry.items()):
             for activity_id, activity_entry in sorted(institution_id_entry.items()):
                 for experiment_id, entry in sorted(activity_entry.items()):
-                    row = [source_id, institution_id, activity_id, experiment_id] 
+                    row = [source_id, institution_id,
+                           activity_id, experiment_id]
                     row += [entry['SHORT_DATA_REFERENCE'], entry['LICENSE']]
                     row += ['<a href="{0}">{0}</a>'.format(entry['DOI'])]
-                    
+
                     fh_citation.write(
                         '<tr>\n' +
                         '\n'.join(['<td>{}</td>'.format(i) for i in row]) +
@@ -588,4 +607,3 @@ with open(fout, 'w', encoding='utf-8') as fh_citation:
                     )
 
     fh_citation.write('</table>\n</body>\n</html>\n')
-

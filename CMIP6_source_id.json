@@ -2168,7 +2168,7 @@
                 "VolMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "CCCma"
@@ -2177,7 +2177,7 @@
             "label_extended":"CanESM5.1",
             "license_info":{
                 "exceptions_contact":"@ec.gc.ca <- f.cccma.info-info.ccmac.f",
-                "history":"",
+                "history":"2022-12-02: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "url":"https://creativecommons.org/licenses/by/4.0/"
@@ -8062,13 +8062,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Nov  8 11:56:41 2022 -0700",
-        "CV_collection_version":"6.2.58.49",
+        "CV_collection_modified":"Tue Feb 21 21:11:09 2023 -0800",
+        "CV_collection_version":"6.2.58.50",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"ae07f5e0d910de6afde1cee7d9cedd9771dfc5f1",
-        "source_id_CV_modified":"Wed Oct 12 12:16:47 2022 -0700",
-        "source_id_CV_note":"Revised E3SM-2-0 source_id license history",
+        "previous_commit":"78ff933572976d588295c1383b4bc7f6f35f132f",
+        "source_id_CV_modified":"Tue Nov  8 11:56:41 2022 -0700",
+        "source_id_CV_note":"Revised CanESM5-1 source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

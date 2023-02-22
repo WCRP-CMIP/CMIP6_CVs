@@ -110,6 +110,7 @@ PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://githu
 PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
 PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Corrected CanESM5-1 license_info entry to include source_specific_info
+PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -590,6 +591,10 @@ source_id[key]["license_info"]["license"] = "".join(
 source_id[key]["license_info"]["source_specific_info"] = ""
 source_id[key]["license_info"]["url"] = licenseUrl
 
+# Fix E3SM-2-0
+key = "E3SM-2-0"
+source_id[key]["license_info"]["source_specific_info"] = ""
+
 # Example license update, including email
 # source_ids_to_relax_list = [
 #     "E3SM-1-0",
@@ -608,6 +613,7 @@ source_id[key]["license_info"]["url"] = licenseUrl
 #     licenseUrl = license["license_options"][licenseId]["license_url"]
 #     source_id[key]["license_info"]["license"] = "".join(
 #         [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+#     source_id[key]["license_info"]["source_specific_info"] = ""
 #     source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example source_id registration

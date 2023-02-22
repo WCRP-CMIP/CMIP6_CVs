@@ -457,10 +457,6 @@ infile = '../CMIP6_source_id.json'
 with open(infile) as fh:
     source_id_json = json.load(fh)
 
-#
-#import pdb
-#
-
 source_id_table = source_id_json.get('source_id')
 version_data = source_id_json.get('version')
 print(version_data)
@@ -490,13 +486,6 @@ with open(fout, 'w') as fh_license:
             '\n</tr></t{}>\n'.format(i))
 
     for source_id, source_id_data in sorted(source_id_table.items()):
-
-        #
-        #        if source_id == "CanESM5-1":
-        #            print("CanESM5-1")
-        #            pdb.set_trace()
-        #
-
         row = []
         for heading in simple_headings:
             cell_data = source_id_data[heading]

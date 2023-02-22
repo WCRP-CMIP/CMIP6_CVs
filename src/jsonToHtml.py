@@ -47,6 +47,19 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
 PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
+
+PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
+                   - Update jquery.dataTables-1.13.2.min.js line 71576 update
+                   ,aLengthMenu:[10,25,50,100], ->
+                   ,aLengthMenu:[5,10,25,50,100,150,200,250,300,350,400],
+                   - macOS update files to remove
+                   extended attributes "$ xattr -c jquery-3.6.3.slim.min.js", "$ xattr -c jquery.dataTables-1.13*", "$ xattr -c 230222_DataTables-1p13p3.zip"
+                   file permissions "$ chmod 644 jquery.dataTables-1.13*"
+                   - Update dataTables styling
+                   <table id="table_id" class="display"> ->
+                   <table id="table_id" class="display compact" style="width:100%">
+
+
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
@@ -198,9 +211,9 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.12.1.min.css" />
-<script type="text/javascript" charset="utf-8" src="../src/jquery-3.6.0.slim.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.12.1.min.js"></script>
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.13.2.min.css" />
+<script type="text/javascript" charset="utf-8" src="../src/jquery-3.6.3.slim.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.13.2.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script type="text/javascript" charset="utf-8" src="../src/googleAnalyticsTag.js"></script>
 <script type="text/javascript">

@@ -2180,6 +2180,7 @@
                 "history":"2022-12-02: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
                 "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
@@ -8062,12 +8063,12 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 21 21:11:09 2023 -0800",
-        "CV_collection_version":"6.2.58.50",
+        "CV_collection_modified":"Tue Feb 21 21:49:43 2023 -0800",
+        "CV_collection_version":"6.2.58.51",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"78ff933572976d588295c1383b4bc7f6f35f132f",
-        "source_id_CV_modified":"Tue Nov  8 11:56:41 2022 -0700",
+        "previous_commit":"1868f66a193978c7d559d3ac8f8e1a8ad20feb1c",
+        "source_id_CV_modified":"Tue Feb 21 21:11:09 2023 -0800",
         "source_id_CV_note":"Revised CanESM5-1 source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }

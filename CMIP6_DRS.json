@@ -8,7 +8,7 @@
         "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb 22 10:34:28 2023 -0800",
+        "CV_collection_modified":"Wed Feb 22 10:41:49 2023 -0800",
         "CV_collection_version":"6.2.58.51",
         "DRS_CV_modified":"Tue Jun  7 14:29:45 2022 -0700",
         "DRS_CV_note":"Add CMIP6 Data Reference Syntax (DRS) templates",

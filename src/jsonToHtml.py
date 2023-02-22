@@ -47,7 +47,6 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
 PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
-
 PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    - Update jquery.dataTables-1.13.2.min.js line 71576 update
                    ,aLengthMenu:[10,25,50,100], ->
@@ -58,8 +57,6 @@ PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    - Update dataTables styling
                    <table id="table_id" class="display"> ->
                    <table id="table_id" class="display compact" style="width:100%">
-
-
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse

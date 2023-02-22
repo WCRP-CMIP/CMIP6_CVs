@@ -111,6 +111,7 @@ PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.c
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
 PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Corrected CanESM5-1 license_info entry to include source_specific_info
 PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
+PJD 22 Feb 2023    - Updated html sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -118,7 +119,7 @@ PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Revised CanESM5-1 source_id license history\"'
+commitMessage = '\"Updated html sources to latest 1.12.1->1.13.2; 3.6.0->3.6.3\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'

@@ -8,13 +8,13 @@
         "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Feb 21 21:57:27 2023 -0800",
+        "CV_collection_modified":"Wed Feb 22 10:41:49 2023 -0800",
         "CV_collection_version":"6.2.58.51",
         "DRS_CV_modified":"Tue Jun  7 14:29:45 2022 -0700",
         "DRS_CV_note":"Add CMIP6 Data Reference Syntax (DRS) templates",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"85240723e886662f9374779d01d48c019358fb78",
+        "previous_commit":"94ce82a3b76014469aa3e54bf30e5cdaee0a9386",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -235,7 +235,8 @@ links_to_all = """
 
 # %% Argparse extract
 # Matching version format 6.2.11.2
-verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
+#verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]+')
+verTest = re.compile(r'[6][.][2][.][0-9]+[.][0-9]')
 parser = argparse.ArgumentParser()
 parser.add_argument('ver', metavar='str', type=str,
                     help='For e.g. \'6.2.11.2\' as a command line argument will ensure version information is written to the html output')

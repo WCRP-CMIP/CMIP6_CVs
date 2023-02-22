@@ -109,6 +109,7 @@ PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.c
 PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1174
 PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
+PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -1413,7 +1414,7 @@ del(testVal_activity_id, testVal_DRS, testVal_experiment_id, testVal_frequency, 
 # %% Generate revised html - process experiment_id, institution_id and source_id (alpha order)
 # json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
 # -r option included to regenerate citation pages
-args = shlex.split(''.join(['python ./jsonToHtml.py ', versionId, '-r']))
+args = shlex.split(''.join(['python ./jsonToHtml.py ', versionId, ' -r']))
 # print(args)
 p = subprocess.Popen(args, stdout=subprocess.PIPE,
                      stderr=subprocess.PIPE, cwd='./')
@@ -1421,7 +1422,6 @@ stdOut, stdErr = p.communicate()
 print('Returncode:', p.returncode)  # If not 0 there was an issue
 print('stdOut:', stdOut)
 print('stdErr:', stdErr)
-# if 'Traceback' in stdErr: # Py2
 if b'Traceback' in stdErr:  # Py3
     print('json_to_html failure:')
     print('Exiting..')

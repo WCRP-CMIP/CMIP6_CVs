@@ -46,7 +46,7 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    file permissions "$ chmod 644 jquery.dataTables-1.12*"
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
-PJD 21 Feb 2023    - Updated args var to argDict, conflict issue
+PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
 '''
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse

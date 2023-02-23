@@ -33,7 +33,7 @@ This script generates all controlled vocabulary (CV) json files residing this th
 """2016-2021
 https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0048ecd216d31fc52afd0177788eeb0707a2289e/src/writeJson.py#L33-L560
 """
-"""2022
+"""2022-2023
 MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
 PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
@@ -112,6 +112,7 @@ PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.
 PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Corrected CanESM5-1 license_info entry to include source_specific_info
 PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
 PJD 22 Feb 2023    - Updated html sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
+PJD 23 Feb 2023    - Deregistered source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -119,7 +120,7 @@ PJD 22 Feb 2023    - Updated html sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Updated html sources to latest 1.12.1->1.13.2; 3.6.0->3.6.3\"'
+commitMessage = '\"Deregistered source_id NorESM2-MH\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -578,23 +579,24 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "CanESM5-1"
-print("processing:", key)
-licenseId = "CC BY 4.0"
-source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@ec.gc.ca <- f.cccma.info-info.ccmac.f"
-source_id[key]["license_info"]["history"] = "2022-12-02: initially published under CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-source_id[key]["license_info"]["source_specific_info"] = ""
-source_id[key]["license_info"]["url"] = licenseUrl
+# Remove NorESM2-MH
+key = "NorESM2-MH"
+source_id.pop(key)
 
-# Fix E3SM-2-0
-key = "E3SM-2-0"
-source_id[key]["license_info"]["source_specific_info"] = ""
+# Example fresh publication, no previous data
+# key = "CanESM5-1"
+# print("processing:", key)
+# licenseId = "CC BY 4.0"
+# source_id[key]["cohort"] = ["Published"]
+# source_id[key]["license_info"]["exceptions_contact"] = "@ec.gc.ca <- f.cccma.info-info.ccmac.f"
+# source_id[key]["license_info"]["history"] = "2022-12-02: initially published under CC BY 4.0"
+# source_id[key]["license_info"]["id"] = licenseId
+# licenseStr = license["license_options"][licenseId]["license_id"]
+# licenseUrl = license["license_options"][licenseId]["license_url"]
+# source_id[key]["license_info"]["license"] = "".join(
+#     [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
+# source_id[key]["license_info"]["source_specific_info"] = ""
+# source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example license update, including email
 # source_ids_to_relax_list = [

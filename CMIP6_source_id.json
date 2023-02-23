@@ -7287,69 +7287,6 @@
             "release_year":"2017",
             "source_id":"NorESM2-LM"
         },
-        "NorESM2-MH":{
-            "activity_participation":[
-                "AerChemMIP",
-                "CFMIP",
-                "CMIP",
-                "DAMIP",
-                "OMIP",
-                "RFMIP",
-                "ScenarioMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "NCC"
-            ],
-            "label":"NorESM2-MH",
-            "label_extended":"NorESM2-MH (medium atmosphere-high ocean resolution, GHG concentration driven)",
-            "license_info":{
-                "exceptions_contact":"@met.no <- noresm-ncc",
-                "history":"",
-                "id":"CC BY 4.0",
-                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-                "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by/4.0/"
-            },
-            "model_component":{
-                "aerosol":{
-                    "description":"OsloAero",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmos":{
-                    "description":"CAM-OSLO (1 degree resolution; 288 x 192; 32 levels; top level 3 mb)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"OsloChemSimp",
-                    "native_nominal_resolution":"100 km"
-                },
-                "land":{
-                    "description":"CLM",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"CISM",
-                    "native_nominal_resolution":"100 km"
-                },
-                "ocean":{
-                    "description":"MICOM (0.25 degree resolution; 1440 x 1152; 70 levels; top grid cell minimum 0-2.5 m [native model uses hybrid density and generic upper-layer coordinate interpolated to z-level for contributed data])",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"HAMOCC",
-                    "native_nominal_resolution":"25 km"
-                },
-                "seaIce":{
-                    "description":"CICE",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2017",
-            "source_id":"NorESM2-MH"
-        },
         "NorESM2-MM":{
             "activity_participation":[
                 "AerChemMIP",
@@ -8064,13 +8001,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Feb 22 10:41:49 2023 -0800",
-        "CV_collection_version":"6.2.58.51",
+        "CV_collection_modified":"Thu Feb 23 10:37:06 2023 -0800",
+        "CV_collection_version":"6.2.58.52",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"94ce82a3b76014469aa3e54bf30e5cdaee0a9386",
+        "previous_commit":"d66efa2f0c9dfc8049450fe3eeda79b0c760dd1e",
         "source_id_CV_modified":"Tue Feb 21 21:57:27 2023 -0800",
-        "source_id_CV_note":"Revised CanESM5-1 source_id license history",
+        "source_id_CV_note":"Deregistered source_id NorESM2-MH",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

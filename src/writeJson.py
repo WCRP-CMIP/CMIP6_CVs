@@ -113,6 +113,7 @@ PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Cor
 PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
 PJD 22 Feb 2023    - Updated html sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
 PJD 23 Feb 2023    - Deregistered source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
+PJD 13 Mar 2023    - Update contact for source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1188
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -120,7 +121,7 @@ PJD 23 Feb 2023    - Deregistered source_id NorESM2-MH https://github.com/WCRP-C
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Deregistered source_id NorESM2-MH\"'
+commitMessage = '\"Update contact for source_id MPI-ESM-1-2-HAM\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -580,8 +581,8 @@ del(tmp)
 
 # Fix issues
 # Remove NorESM2-MH
-key = "NorESM2-MH"
-source_id.pop(key)
+key = "MPI-ESM-1-2-HAM"
+source_id[key]["license_info"]["exceptions_contact"] = "@sympa.ethz.ch <- aerchemmip_echam-ham"
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

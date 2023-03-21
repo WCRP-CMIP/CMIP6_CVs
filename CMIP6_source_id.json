@@ -2527,6 +2527,62 @@
             "release_year":"2022",
             "source_id":"E3SM-2-0"
         },
+        "E3SM-2-0-NARRM":{
+            "activity_participation":[
+                "CMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "E3SM-Project"
+            ],
+            "label":"E3SM 2.0 NARRM",
+            "label_extended":"E3SM 2.0 NARRM (Energy Exascale Earth System Model version 2.0 North American Regionally Refined Model)",
+            "license_info":{
+                "exceptions_contact":"@llnl.gov <- e3sm-data-support",
+                "history":"",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
+            "model_component":{
+                "aerosol":{
+                    "description":"MAM4 w/ new resuspension, marine organics, secondary organics, and dust (atmos grid)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmos":{
+                    "description":"EAM (v2.0, Dynamics: cubed sphere spectral-element grid, 130,088 columns; Physics: 2x2 finite volume cells within each spectral element, 57,816 columns. N. American (NA): 25 to 100 km; outside ~100 km. 72 vertical layers w/ top at 60 km)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "atmosChem":{
+                    "description":"Troposphere specified oxidants (except passive ozone with the lower boundary sink) for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (atmos grid)",
+                    "native_nominal_resolution":"100 km"
+                },
+                "land":{
+                    "description":"ELM (v1.0, satellite phenology mode, atmos grid), MOSART (v1.0, 0.125 degree latitude/longitude)",
+                    "native_nominal_resolution":"10 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"MPAS-Ocean (E3SMv2.0, WC14to60E2r5 unstructured SCVTs mesh with 407420 cells, 1240672 edges, NA: ~14 km; outside: 30 to 60 km; 60 levels; top grid cell 0-10 m)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "seaIce":{
+                    "description":"MPAS-Seaice (E3SMv2.0, ocean grid, variable resolution 30 to 60 km; 5 ice categories; 7 ice, 5 snow layers)",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2022",
+            "source_id":"E3SM-2-0-NARRM"
+        },
         "EC-Earth3":{
             "activity_participation":[
                 "CMIP",
@@ -8001,13 +8057,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Mar 13 09:26:44 2023 -0700",
-        "CV_collection_version":"6.2.58.53",
+        "CV_collection_modified":"Tue Mar 21 10:41:04 2023 -0700",
+        "CV_collection_version":"6.2.58.54",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"8097b6d595fea1bdbc95fbcbf0c4dcc779e692c7",
-        "source_id_CV_modified":"Thu Feb 23 10:37:06 2023 -0800",
-        "source_id_CV_note":"Update contact for source_id MPI-ESM-1-2-HAM",
+        "previous_commit":"3cb5e465e9db02571fa2f6934978933440add7ee",
+        "source_id_CV_modified":"Mon Mar 13 09:26:44 2023 -0700",
+        "source_id_CV_note":"Registered source_id E3SM-2-0-NARRM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

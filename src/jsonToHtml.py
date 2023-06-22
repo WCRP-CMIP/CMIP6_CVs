@@ -1,12 +1,14 @@
 #!/bin/env python
 
-'''
+"""
 To run conversion:
 (uvcdat)duro@ocean:[src]:[master]:[1168]> json_to_html.py ../CMIP6_experiment_id.json experiment_id CMIP6_experiment_id.html
 {u'note': u'Correct getGitInfo call', u'author': u'Paul J. Durack <durack1@llnl.gov>', u'creation_date': u'Wed Aug 31 16:36:15 2016 -0700', u'institution_id': u'PCMDI', u'commit': u'43c311fab67ef26acadbe81f22868691c1357f12', u'latest_tag_point': u'None'}
 Notes:
 http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-github-instead-of-just-viewing-their-source
 
+"""
+"""2017-2022
 PJD 18 Apr 2017    - Reconfigure source_id format to reflect all model components https://github.com/WCRP-CMIP/CMIP6_CVs/issues/264
 PJD 31 Jul 2018    - Update to include version info in html head
 PJD  7 Aug 2018    - Update version format
@@ -46,6 +48,8 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    file permissions "$ chmod 644 jquery.dataTables-1.12*"
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
+"""
+"""2023
 PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
 PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    - Update jquery.dataTables-1.13.2.min.js line 71576 update
@@ -57,7 +61,8 @@ PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    - Update dataTables styling
                    <table id="table_id" class="display"> ->
                    <table id="table_id" class="display compact" style="width:100%">
-'''
+PJD 21 Jun 2023    - Updated to point to PCMDI/assets jquery (3.7.0) and dataTables (1.13.4) libraries
+"""
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
 from collections import defaultdict
@@ -208,18 +213,18 @@ header = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 <meta name="description" content="Controlled vocabulary for CMIP6" />
 <meta name="keywords" content="HTML, CSS, JavaScript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="../src/jquery.dataTables-1.13.2.min.css" />
-<script type="text/javascript" charset="utf-8" src="../src/jquery-3.6.3.slim.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../src/jquery.dataTables-1.13.2.min.js"></script>
+<link rel="stylesheet" type="text/css" charset="utf-8" href="https://pcmdi.github.io/assets/jquery/jquery.dataTables.min.css" />
+<script type="text/javascript" charset="utf-8" src="https://pcmdi.github.io/assets/jquery/jquery.slim.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://pcmdi.github.io/assets/jquery/jquery.dataTables.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script type="text/javascript" charset="utf-8" src="../src/googleAnalyticsTag.js"></script>
+<script type="text/javascript" src="https://pcmdi.github.io/assets/google/googleAnalyticsTag.js" ></script>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready( function () {
     $('#table_id').DataTable();
     } );
 //]]>
-</script>"""
+</script>\n"""
 
 links_to_all = """
 <h4>

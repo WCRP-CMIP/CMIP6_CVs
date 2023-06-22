@@ -34,7 +34,7 @@ This script generates all controlled vocabulary (CV) json files residing this th
 """2016-2021
 https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0048ecd216d31fc52afd0177788eeb0707a2289e/src/writeJson.py#L33-L560
 """
-"""2022-2023
+"""2022
 MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
 PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
 MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
@@ -109,6 +109,8 @@ PJD  5 Oct 2022    - Revised NESM3 source_id license history https://github.com/
 PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1172
 PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1174
 PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+"""
+"""2023
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
 PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Corrected CanESM5-1 license_info entry to include source_specific_info
 PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
@@ -116,6 +118,7 @@ PJD 22 Feb 2023    - Updated html sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3
 PJD 23 Feb 2023    - Deregistered source_id NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
 PJD 13 Mar 2023    - Update contact for source_id MPI-ESM-1-2-HAM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1188
 PJD 21 Mar 2023    - Registered source_id E3SM-2-0-NARRM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1190
+PJD 21 Jun 2023    - Deregistered source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -123,7 +126,7 @@ PJD 21 Mar 2023    - Registered source_id E3SM-2-0-NARRM https://github.com/WCRP
 """
 
 # %% Set commit message and author info
-commitMessage = '\"Registered source_id E3SM-2-0-NARRM\"'
+commitMessage = '\"Deregistered source_id IPSL-CM6A-MR025\"'
 #author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 #author_institution_id = 'MOHC'
 author = 'Paul J. Durack <durack1@llnl.gov>'
@@ -582,73 +585,8 @@ source_id = source_id.get('source_id')  # Fudge to extract duplicate level
 del(tmp)
 
 # Fix issues
-key = "E3SM-2-0-NARRM"
-source_id[key] = {}
-source_id[key]["activity_participation"] = [
-    "CMIP",
-]
-source_id[key]["cohort"] = [
-    "Registered",
-]
-source_id[key]["institution_id"] = [
-    "E3SM-Project",
-]
-source_id[key]["label"] = "E3SM 2.0 NARRM"
-source_id[key]["label_extended"] = "E3SM 2.0 NARRM (Energy Exascale Earth System Model version 2.0 North American Regionally Refined Model)"
-source_id[key]["model_component"] = {}
-source_id[key]["model_component"]["aerosol"] = {}
-source_id[key]["model_component"]["aerosol"]["description"] = " ".join(["MAM4 w/ new resuspension, marine organics,",
-                                                                        "secondary organics, and dust (atmos grid)"])
-source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["atmos"] = {}
-source_id[key]["model_component"]["atmos"]["description"] = " ".join(["EAM (v2.0, Dynamics: cubed sphere spectral-element",
-                                                                      "grid, 130,088 columns; Physics: 2x2 finite volume",
-                                                                      "cells within each spectral element, 57,816 columns.",
-                                                                      "N. American (NA): 25 to 100 km; outside ~100 km.",
-                                                                      "72 vertical layers w/ top at 60 km)"])
-source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["atmosChem"] = {}
-source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(["Troposphere specified oxidants (except",
-                                                                          "passive ozone with the lower boundary sink)",
-                                                                          "for aerosols. Stratosphere linearized",
-                                                                          "interactive ozone (LINOZ v2) (atmos grid)"])
-source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["land"] = {}
-source_id[key]["model_component"]["land"]["description"] = " ".join(["ELM (v1.0, satellite phenology mode, atmos grid),",
-                                                                     "MOSART (v1.0, 0.125 degree latitude/longitude)"])
-source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "10 km"
-source_id[key]["model_component"]["landIce"] = {}
-source_id[key]["model_component"]["landIce"]["description"] = 'none'
-source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = 'none'
-source_id[key]["model_component"]["ocean"] = {}
-source_id[key]["model_component"]["ocean"]["description"] = " ".join(["MPAS-Ocean (E3SMv2.0, WC14to60E2r5 unstructured",
-                                                                      "SCVTs mesh with 407420 cells, 1240672 edges,",
-                                                                      "NA: ~14 km; outside: 30 to 60 km; 60 levels;",
-                                                                      "top grid cell 0-10 m)"])
-source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
-source_id[key]["model_component"]["ocnBgchem"] = {}
-source_id[key]["model_component"]["ocnBgchem"]["description"] = 'none'
-source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = 'none'
-source_id[key]["model_component"]["seaIce"] = {}
-source_id[key]["model_component"]["seaIce"]["description"] = " ".join(["MPAS-Seaice (E3SMv2.0, ocean grid,",
-                                                                       "variable resolution 30 to 60 km; 5 ice",
-                                                                       "categories; 7 ice, 5 snow layers)"])
-source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
-source_id[key]["release_year"] = "2022"
-source_id[key]["source_id"] = key
-# License info
-licenseId = "CC BY 4.0"
-source_id[key]["license_info"] = {}
-source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
-# "2022-xx-xx: initially published under CC BY 4.0"
-source_id[key]["license_info"]["history"] = ""
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"])
-source_id[key]["license_info"]["url"] = licenseUrl
-
+key = "IPSL-CM6A-MR025"
+source_id.pop(key)
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

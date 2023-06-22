@@ -5850,63 +5850,6 @@
             "release_year":"2019",
             "source_id":"IPSL-CM6A-LR-INCA"
         },
-        "IPSL-CM6A-MR025":{
-            "activity_participation":[
-                "CMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "IPSL"
-            ],
-            "label":"IPSL-CM6A-MR025",
-            "label_extended":"IPSL-CM6A-MR025",
-            "license_info":{
-                "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
-                "id":"CC BY 4.0",
-                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-                "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by/4.0/"
-            },
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"LMDZ (NPv6; 256 x 256 longitude/latitude; 79 levels; top level 80000 m)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"ORCHIDEE (v2.2, Water/Carbon/Energy mode; same grid as atmos)",
-                    "native_nominal_resolution":"100 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"NEMO-OPA (eORCA025, tripolar primarily 0.25deg; 1442 x 1207 longitude/latitude; 75 levels; top grid cell 0-2 m)",
-                    "native_nominal_resolution":"25 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"NEMO-LIM3 (same grid as ocean)",
-                    "native_nominal_resolution":"25 km"
-                }
-            },
-            "release_year":"2021",
-            "source_id":"IPSL-CM6A-MR025"
-        },
         "IPSL-CM6A-MR1":{
             "activity_participation":[
                 "CMIP"
@@ -8057,13 +8000,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Mar 21 10:41:04 2023 -0700",
-        "CV_collection_version":"6.2.58.54",
+        "CV_collection_modified":"Wed Jun 21 23:02:52 2023 -0700",
+        "CV_collection_version":"6.2.58.55",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"3cb5e465e9db02571fa2f6934978933440add7ee",
-        "source_id_CV_modified":"Mon Mar 13 09:26:44 2023 -0700",
-        "source_id_CV_note":"Registered source_id E3SM-2-0-NARRM",
+        "previous_commit":"529e6714b7dd23254d73135cecb9dc1cca2fcced",
+        "source_id_CV_modified":"Tue Mar 21 10:41:04 2023 -0700",
+        "source_id_CV_note":"Deregistered source_id IPSL-CM6A-MR025",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

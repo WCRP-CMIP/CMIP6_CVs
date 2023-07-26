@@ -697,7 +697,7 @@ source_id[key]["cohort"] = ["Published"]
 source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
 source_id[key]["license_info"][
     "history"
-] += "; 2023-04-26: initially published under CC BY 4.0"
+] += "2023-04-26: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

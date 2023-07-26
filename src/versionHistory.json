@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"0b803515253aa69905ee65e100ab11148533ec21",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/0b803515253aa69905ee65e100ab11148533ec21",
+            "MD5":"dc50b3750eeb7ecf5b942ce7c439137fc2b9e5d5",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/dc50b3750eeb7ecf5b942ce7c439137fc2b9e5d5",
             "commitMessage":"Revise E3SM-2-0-NARRM source_id license history",
-            "timeStamp":"Wed Jul 26 09:45:19 2023 -0700"
+            "timeStamp":"Wed Jul 26 09:52:24 2023 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",

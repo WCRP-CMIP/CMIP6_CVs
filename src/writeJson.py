@@ -127,6 +127,7 @@ PJD 13 Mar 2023    - Update contact for source_id MPI-ESM-1-2-HAM https://github
 PJD 21 Mar 2023    - Registered source_id E3SM-2-0-NARRM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1190
 PJD 21 Jun 2023    - Deregistered source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD 26 Jul 2023    - Revised E3SM-2-0-NARRM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1190
+PJD 25 Aug 2023    - Revised CAS-ESM2-0 source_id to add CDRMIP activity https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1201
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -134,7 +135,7 @@ PJD 26 Jul 2023    - Revised E3SM-2-0-NARRM source_id license history https://gi
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revise E3SM-2-0-NARRM source_id license history"'
+commitMessage = '"Revised CAS-ESM2-0 source_id to add CDRMIP activity"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -691,21 +692,9 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "E3SM-2-0-NARRM"
-licenseId = "CC BY 4.0"
-source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
-source_id[key]["license_info"][
-    "history"
-] += "2023-04-26: initially published under CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
-)
-source_id[key]["license_info"]["source_specific_info"] = ""
-source_id[key]["license_info"]["url"] = licenseUrl
+key = "CAS-ESM2-0"
+source_id[key]["activity_participation"].append("CDRMIP")
+source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

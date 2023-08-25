@@ -1005,6 +1005,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CDRMIP",
                 "CFMIP",
                 "CMIP",
                 "CORDEX",
@@ -8001,13 +8002,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jul 26 09:52:24 2023 -0700",
-        "CV_collection_version":"6.2.58.56",
+        "CV_collection_modified":"Fri Aug 25 08:58:32 2023 -0700",
+        "CV_collection_version":"6.2.58.57",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"dc50b3750eeb7ecf5b942ce7c439137fc2b9e5d5",
-        "source_id_CV_modified":"Wed Jun 21 23:02:52 2023 -0700",
-        "source_id_CV_note":"Revise E3SM-2-0-NARRM source_id license history",
+        "previous_commit":"8f001cef5a57bac3813d9126583f2b4f39d97287",
+        "source_id_CV_modified":"Wed Jul 26 09:52:24 2023 -0700",
+        "source_id_CV_note":"Revised CAS-ESM2-0 source_id to add CDRMIP activity",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

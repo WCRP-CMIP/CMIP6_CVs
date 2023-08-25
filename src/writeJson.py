@@ -694,6 +694,7 @@ del tmp
 # Fix issues
 key = "CAS-ESM2-0"
 source_id[key]["activity_participation"].append("CDRMIP")
+source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

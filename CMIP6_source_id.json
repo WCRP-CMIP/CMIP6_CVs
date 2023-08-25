@@ -1005,6 +1005,7 @@
             "activity_participation":[
                 "AerChemMIP",
                 "C4MIP",
+                "CDRMIP",
                 "CFMIP",
                 "CMIP",
                 "CORDEX",
@@ -1021,8 +1022,7 @@
                 "SIMIP",
                 "ScenarioMIP",
                 "VIACSAB",
-                "VolMIP",
-                "CDRMIP"
+                "VolMIP"
             ],
             "cohort":[
                 "Published"
@@ -8002,11 +8002,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 25 08:49:22 2023 -0700",
+        "CV_collection_modified":"Fri Aug 25 08:58:32 2023 -0700",
         "CV_collection_version":"6.2.58.57",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"2bb44a3f93fa9c2ec02ecf6fe96f0525f35a084e",
+        "previous_commit":"8f001cef5a57bac3813d9126583f2b4f39d97287",
         "source_id_CV_modified":"Wed Jul 26 09:52:24 2023 -0700",
         "source_id_CV_note":"Revised CAS-ESM2-0 source_id to add CDRMIP activity",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

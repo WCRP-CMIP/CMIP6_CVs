@@ -1390,7 +1390,9 @@
         },
         "CESM2-FV2":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "PMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Published"
@@ -1508,7 +1510,8 @@
         },
         "CESM2-WACCM-FV2":{
             "activity_participation":[
-                "CMIP"
+                "CMIP",
+                "PMIP"
             ],
             "cohort":[
                 "Published"
@@ -8004,13 +8007,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Nov 16 15:59:52 2023 -0800",
-        "CV_collection_version":"6.2.58.58",
+        "CV_collection_modified":"Thu Nov 16 17:23:53 2023 -0800",
+        "CV_collection_version":"6.2.58.59",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3",
-        "source_id_CV_modified":"Fri Aug 25 08:58:32 2023 -0700",
-        "source_id_CV_note":"Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation",
+        "previous_commit":"f1a5eaa5b7278de2ef0fb23c2d15da54187464fd",
+        "source_id_CV_modified":"Thu Nov 16 15:59:52 2023 -0800",
+        "source_id_CV_note":"Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

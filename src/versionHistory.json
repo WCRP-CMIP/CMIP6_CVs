@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3",
-            "commitMessage":"Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation",
-            "timeStamp":"Thu Nov 16 15:59:52 2023 -0800"
+            "MD5":"f1a5eaa5b7278de2ef0fb23c2d15da54187464fd",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f1a5eaa5b7278de2ef0fb23c2d15da54187464fd",
+            "commitMessage":"Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation",
+            "timeStamp":"Thu Nov 16 17:23:53 2023 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":58,
+            "versionCVCommit":59,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

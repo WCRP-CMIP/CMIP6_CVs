@@ -42,80 +42,7 @@ This script generates all controlled vocabulary (CV) json files residing this th
 https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0048ecd216d31fc52afd0177788eeb0707a2289e/src/writeJson.py#L33-L560
 """
 """2022
-MSM 25 Jan 2022    - Register multiple source_ids IPSL-CM6A-ATM-ICO series https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1043-1046
-PJD 31 Jan 2022    - Revise source_id MPI-ESM1-2-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1038
-MSM 17 Feb 2022    - Added source_id character<=25 check https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1054
-PJD 17 Feb 2022    - Updated json_to_html.py -> jsonToHtml.py; updated jquery and dataTables libraries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1053
-PJD 18 Feb 2022    - Update IPSL source_ids, remove IPSL-CM7*, add IPSL-CM6A-ATM-LR-REPROBUS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
-PJD 18 Feb 2022    - Revise source_id E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1058
-PJD 18 Feb 2022    - Added rights/license entries as placeholder https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD  9 May 2022    - Revise source_id EC-Earth3-CC https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1063
-PJD 16 May 2022    - Updated license to include all rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD 17 May 2022    - Updated license to remove CC BY 3.0 (not used by any existing published model)
-PJD 17 May 2022    - Updated source_id include extracted rights entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD 18 May 2022    - Removed CMCC-ESM2-SR5 from upstream license info https://github.com/WCRP-CMIP/CMIP6_CVs/issues/296 & 900
-PJD 18 May 2022    - Updated source_id entries rights -> license_info; update license option identifiers https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD 19 May 2022    - Update HadGEM3* license info; updated upstreams
-MSM 24 May 2022    - Removed UKESM1-0-MMh https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1067
-PJD 24 May 2022    - Update with master; tweak license https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1050
-PJD 24 May 2022    - Update source_id license info following https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1069/files
-MSM 26 May 2022    - Added UKESM1-1-LL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1071
-PJD 31 May 2022    - Revised UKESM1-ice-LL license history to reflect correct publication/relaxation dates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1073
-PJD  2 Jun 2022    - Revised MCM-UA-1-0 license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1075
-PJD  6 Jun 2022    - Revised numerous EC-Earth3 license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
-PJD  6 Jun 2022    - Revised numerous IPSL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
-PJD  7 Jun 2022    - Add CMIP6 Data Reference Syntax (DRS) templates https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1042
-PJD  8 Jun 2022    - Revised 5 NorESM2 source_id license histories; deregister NorESM2-LME, NorESM2-LMEC and NorESM2-MH https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
-PJD  8 Jun 2022    - Revised 9 GFDL source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
-PJD  9 Jun 2022    - Correct erroneous deregistration of NorESM2-MH source_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1079
-MSM 10 Jun 2022    - Revised license histories for AS-RCEC and NTU models (TaiESM*, HiRAM*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1088
-MSM 10 Jun 2022    - Revised license histories for CSIRO, CSIRO-ARCCSS and CSIRO-COSIMA models (ACCESS-*) https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1089
-PJD 13 Jun 2022    - Revised license histories for MIROC* models; Deregister NICAM16-9D-L78 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1092
-PJD 15 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
-PJD 15 Jun 2022    - Revised 3 E3SM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1095
-PJD 16 Jun 2022    - Deregistered BNU-ESM-1-1 source_id and BNU institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1100
-PJD 16 Jun 2022    - Deregistered CESM2-SE source_id and revised 8 CESM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1102
-PJD 17 Jun 2022    - Deregistered CNRM-ESM2-1-HR source_id, revised 3 CNRM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1101 1107
-PJD 17 Jun 2022    - Revised 4 MPI-M* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1099
-PJD 20 Jun 2022    - Revised 3 MIROC NICAM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
-PJD 20 Jun 2022    - Revised 4 MIROC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1094
-PJD 21 Jun 2022    - Deregistered two EMAC-2* source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1111
-PJD 22 Jun 2022    - Revised 5 AWI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1116
-PJD 27 Jun 2022    - Revised 4 CMCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1118
-PJD 28 Jun 2022    - Deregistered VRESM-1-0 source_id and CSIR-Wits-CSIRO institution_id https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1122
-PJD  1 Jul 2022    - Deregistered source_id UofT-CCSM4 and institution_id UofT https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1086
-PJD  1 Jul 2022    - Deregistered source_id BESM-2-9 and institution_id INPE https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1120
-PJD  1 Jul 2022    - Deregistered source_id CSIRO-Mk3L-1-3 and institution_id UTAS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1121
-PJD 19 Jul 2022    - Registered source_id E3SM-2-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
-PJD 27 Jul 2022    - Added derived "source" test for CMOR3 1024 char limit https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
-PJD 27 Jul 2022    - Revised source_id E3SM-2-0 to deal with 1024 char limit of CMOR3 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
-PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 1024 char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
-PJD 27 Jul 2022    - Deregistered source_id GFDL-GLOBAL-LBL https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1083
-PJD 27 Jul 2022    - Tweaked derived "source" test for CMOR3 *1023* char limit - added key and release year https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1129
-PJD 28 Jul 2022    - Revised 3 ECMWF* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
-PJD 29 Jul 2022    - Revised CIESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1130
-PJD  1 Aug 2022    - Revised ARTS-2-3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1140
-PJD  5 Aug 2022    - Revised MPI-ESM-1-2-HAM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1137
-PJD  8 Aug 2022    - Revised 3 MRI* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1131
-PJD 15 Aug 2022    - Register institution_id UCSB for E3SM-1-0 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1144
-PJD 31 Aug 2022    - Revised EC-Earth3-HR source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1076
-PJD  1 Sep 2022    - Revised 4 IPSL* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
-PJD 27 Sep 2022    - Revised IITM-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1149
-PJD 27 Sep 2022    - Revised 3 INM* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1150
-PJD 27 Sep 2022    - Revised 2 CCCma source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1151
-PJD 27 Sep 2022    - Revised FIO-ESM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1155
-PJD 27 Sep 2022    - Removed 2016-2021 change history and replaced with commit URL containing these details
-PJD 27 Sep 2022    - Revised CCCma license exceptions contact https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1156
-PJD 27 Sep 2022    - Revised 3 BCC* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1159
-PJD 27 Sep 2022    - Revised KACE-1-0-G source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1160
-PJD 27 Sep 2022    - Revised KIOST-ESM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1160
-PJD 29 Sep 2022    - Revised CAMS-CSM1-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1165
-PJD 29 Sep 2022    - Register source_id CanESM5-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
-PJD  4 Oct 2022    - Revised 4 CAS* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1168
-PJD  5 Oct 2022    - Revised NESM3 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1170
-PJD 10 Oct 2022    - Revised 4 AER* source_id license histories https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1172
-PJD 12 Oct 2022    - Revised SAM0-UNICON source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1174
-PJD  8 Nov 2022    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127
+https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3/src/writeJson.py#L44-L119
 """
 """2023
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
@@ -128,6 +55,7 @@ PJD 21 Mar 2023    - Registered source_id E3SM-2-0-NARRM https://github.com/WCRP
 PJD 21 Jun 2023    - Deregistered source_id IPSL-CM6A-MR025 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD 26 Jul 2023    - Revised E3SM-2-0-NARRM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1190
 PJD 25 Aug 2023    - Revised CAS-ESM2-0 source_id to add CDRMIP activity https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1201
+PJD 16 Nov 2023    - Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1207
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -135,7 +63,7 @@ PJD 25 Aug 2023    - Revised CAS-ESM2-0 source_id to add CDRMIP activity https:/
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised CAS-ESM2-0 source_id to add CDRMIP activity"'
+commitMessage = '"Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -692,8 +620,11 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "CAS-ESM2-0"
-source_id[key]["activity_participation"].append("CDRMIP")
+key = "GISS-E2-1-G-CC"
+source_id[key]["activity_participation"].append("ScenarioMIP")
+source_id[key]["activity_participation"].sort()
+key = "GISS-E2-2-H"
+source_id[key]["activity_participation"].append("CFMIP")
 source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data

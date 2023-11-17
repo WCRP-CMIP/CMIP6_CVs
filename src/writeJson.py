@@ -56,6 +56,7 @@ PJD 21 Jun 2023    - Deregistered source_id IPSL-CM6A-MR025 https://github.com/W
 PJD 26 Jul 2023    - Revised E3SM-2-0-NARRM source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1190
 PJD 25 Aug 2023    - Revised CAS-ESM2-0 source_id to add CDRMIP activity https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1201
 PJD 16 Nov 2023    - Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1207
+PJD 16 Nov 2023    - Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1208
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -63,7 +64,7 @@ PJD 16 Nov 2023    - Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participati
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation"'
+commitMessage = '"Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -620,11 +621,12 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "GISS-E2-1-G-CC"
+key = "CESM2-FV2"
+source_id[key]["activity_participation"].append("PMIP")
 source_id[key]["activity_participation"].append("ScenarioMIP")
 source_id[key]["activity_participation"].sort()
-key = "GISS-E2-2-H"
-source_id[key]["activity_participation"].append("CFMIP")
+key = "CESM2-WACCM-FV2"
+source_id[key]["activity_participation"].append("PMIP")
 source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data

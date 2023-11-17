@@ -4222,7 +4222,8 @@
         "GISS-E2-1-G-CC":{
             "activity_participation":[
                 "C4MIP",
-                "CMIP"
+                "CMIP",
+                "ScenarioMIP"
             ],
             "cohort":[
                 "Published"
@@ -4415,6 +4416,7 @@
         },
         "GISS-E2-2-H":{
             "activity_participation":[
+                "CFMIP",
                 "CMIP",
                 "SIMIP",
                 "ScenarioMIP"
@@ -8002,13 +8004,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 25 08:58:32 2023 -0700",
-        "CV_collection_version":"6.2.58.57",
+        "CV_collection_modified":"Thu Nov 16 15:59:52 2023 -0800",
+        "CV_collection_version":"6.2.58.58",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"8f001cef5a57bac3813d9126583f2b4f39d97287",
-        "source_id_CV_modified":"Wed Jul 26 09:52:24 2023 -0700",
-        "source_id_CV_note":"Revised CAS-ESM2-0 source_id to add CDRMIP activity",
+        "previous_commit":"0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3",
+        "source_id_CV_modified":"Fri Aug 25 08:58:32 2023 -0700",
+        "source_id_CV_note":"Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

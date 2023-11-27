@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"4d267366cbde19911242d1e61422fd1a0782db72",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/4d267366cbde19911242d1e61422fd1a0782db72",
-            "commitMessage":"Revised CNRM-ESM2-1 activity participation",
-            "timeStamp":"Tue Nov 21 05:54:54 2023 -0800"
+            "MD5":"a4bd0d38e958aef3da5bdbe6212f2ca7afdf9a56",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/a4bd0d38e958aef3da5bdbe6212f2ca7afdf9a56",
+            "commitMessage":"Revised TaiESM1 activity participation",
+            "timeStamp":"Mon Nov 27 14:15:15 2023 -0800"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":60,
+            "versionCVCommit":61,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

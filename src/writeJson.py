@@ -58,6 +58,7 @@ PJD 25 Aug 2023    - Revised CAS-ESM2-0 source_id to add CDRMIP activity https:/
 PJD 16 Nov 2023    - Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1207
 PJD 16 Nov 2023    - Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1208
 PJD 21 Nov 2023    - Revised CNRM-ESM2-1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1211
+PJD 27 Nov 2023    - Revised TaiESM1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1213
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -65,7 +66,7 @@ PJD 21 Nov 2023    - Revised CNRM-ESM2-1 activity participation https://github.c
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised CNRM-ESM2-1 activity participation"'
+commitMessage = '"Revised TaiESM1 activity participation"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -622,8 +623,8 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "CNRM-ESM2-1"
-source_id[key]["activity_participation"].append("DCPP")
+key = "TaiESM1"
+source_id[key]["activity_participation"].append("RFMIP")
 source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data

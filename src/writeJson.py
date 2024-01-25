@@ -44,7 +44,7 @@ https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0048ecd216d31fc52afd0177788eeb0707a2
 """2022
 https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0fdb15e67d01b941b71b63ddacfaf47a2ad8a9d3/src/writeJson.py#L44-L119
 """
-"""2023
+"""2023-2024
 PJD 21 Feb 2023    - Revised CanESM5-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1148
 PJD 21 Feb 2023    - Updated subprocess call with space for -r optional arg; Corrected CanESM5-1 license_info entry to include source_specific_info
 PJD 21 Feb 2023    - Revised E3SM-2-0 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1127 corrected missing source_specific_info
@@ -59,6 +59,7 @@ PJD 16 Nov 2023    - Revised GISS-E2-1-G-CC and GISS-E2-2-H activity participati
 PJD 16 Nov 2023    - Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1208
 PJD 21 Nov 2023    - Revised CNRM-ESM2-1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1211
 PJD 27 Nov 2023    - Revised TaiESM1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1213
+PJD 25 Jan 2024    - Registered source_id AWI-ESM-1-REcoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1215
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -66,7 +67,7 @@ PJD 27 Nov 2023    - Revised TaiESM1 activity participation https://github.com/W
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised TaiESM1 activity participation"'
+commitMessage = '"Registered source_id AWI-ESM-1-REcoM"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -623,9 +624,81 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "TaiESM1"
-source_id[key]["activity_participation"].append("RFMIP")
-source_id[key]["activity_participation"].sort()
+key = "AWI-ESM-1-REcoM"
+source_id[key] = {}
+source_id[key]["activity_participation"] = [
+    "C4MIP",
+    "CMIP",
+    "ScenarioMIP",
+]
+source_id[key]["cohort"] = [
+    "Registered",
+]
+source_id[key]["institution_id"] = [
+    "AWI",
+]
+source_id[key]["label"] = "AWI-ESM 1 REcoM"
+source_id[key]["label_extended"] = "AWI-ESM 1 REcoM"
+source_id[key]["model_component"] = {}
+source_id[key]["model_component"]["aerosol"] = {}
+source_id[key]["model_component"]["aerosol"]["description"] = "none"
+source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "none"
+source_id[key]["model_component"]["atmos"] = {}
+source_id[key]["model_component"]["atmos"]["description"] = " ".join(
+    [
+        "ECHAM6.3.04p1 (T63L47 native atmosphere",
+        "T63 gaussian grid; 192 x 96",
+        "longitude/latitude; 47 levels; top level",
+        "80 km)",
+    ]
+)
+source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "250 km"
+source_id[key]["model_component"]["atmosChem"] = {}
+source_id[key]["model_component"]["atmosChem"]["description"] = "none"
+source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "none"
+source_id[key]["model_component"]["land"] = {}
+source_id[key]["model_component"]["land"][
+    "description"
+] = "JSBACH 3.20 with dynamic vegetation"
+source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "250 km"
+source_id[key]["model_component"]["landIce"] = {}
+source_id[key]["model_component"]["landIce"]["description"] = "none"
+source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = "none"
+source_id[key]["model_component"]["ocean"] = {}
+source_id[key]["model_component"]["ocean"]["description"] = " ".join(
+    [
+        "FESOM 1.4 (unstructured grid in the",
+        "horizontal with 126859 wet nodes; 46",
+        "levels; top grid cell 0-5 m)",
+    ]
+)
+source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
+source_id[key]["model_component"]["ocnBgchem"] = {}
+source_id[key]["model_component"]["ocnBgchem"][
+    "description"
+] = "REcoM2 (same grid as ocean component)"
+source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "50 km"
+source_id[key]["model_component"]["seaIce"] = {}
+source_id[key]["model_component"]["seaIce"]["description"] = " ".join(
+    ["FESOM 1.4 (same grid as ocean component)"]
+)
+source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
+source_id[key]["release_year"] = "2024"
+source_id[key]["source_id"] = key
+# License info
+licenseId = "CC BY 4.0"
+source_id[key]["license_info"] = {}
+source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
+source_id[key]["license_info"][
+    "history"
+] = "2024-01-25: initially published under CC BY 4.0"  # "2022-xx-xx: initially published under CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
+)
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

@@ -698,6 +698,7 @@ licenseUrl = license["license_options"][licenseId]["license_url"]
 source_id[key]["license_info"]["license"] = "".join(
     [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
 )
+source_id[key]["license_info"]["source_specific_info"] = ""
 source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example fresh publication, no previous data

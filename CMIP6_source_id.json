@@ -621,6 +621,7 @@
                 "history":"2024-01-25: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
                 "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
@@ -8067,7 +8068,7 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Jan 25 11:51:06 2024 -0800",
+        "CV_collection_modified":"Thu Jan 25 12:02:59 2024 -0800",
         "CV_collection_version":"6.2.58.62",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",

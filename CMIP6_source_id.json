@@ -602,6 +602,65 @@
             "release_year":"2018",
             "source_id":"AWI-ESM-1-1-LR"
         },
+        "AWI-ESM-1-REcoM":{
+            "activity_participation":[
+                "C4MIP",
+                "CMIP",
+                "ScenarioMIP"
+            ],
+            "cohort":[
+                "Registered"
+            ],
+            "institution_id":[
+                "AWI"
+            ],
+            "label":"AWI-ESM 1 REcoM",
+            "label_extended":"AWI-ESM 1 REcoM",
+            "license_info":{
+                "exceptions_contact":"@awi.de <- mip-contact",
+                "history":"2024-01-25: initially published under CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
+            "model_component":{
+                "aerosol":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "atmos":{
+                    "description":"ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
+                    "native_nominal_resolution":"250 km"
+                },
+                "atmosChem":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "land":{
+                    "description":"JSBACH 3.20 with dynamic vegetation",
+                    "native_nominal_resolution":"250 km"
+                },
+                "landIce":{
+                    "description":"none",
+                    "native_nominal_resolution":"none"
+                },
+                "ocean":{
+                    "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "ocnBgchem":{
+                    "description":"REcoM2 (same grid as ocean component)",
+                    "native_nominal_resolution":"50 km"
+                },
+                "seaIce":{
+                    "description":"FESOM 1.4 (same grid as ocean component)",
+                    "native_nominal_resolution":"50 km"
+                }
+            },
+            "release_year":"2024",
+            "source_id":"AWI-ESM-1-REcoM"
+        },
         "AWI-ESM-2-1-LR":{
             "activity_participation":[
                 "CMIP",
@@ -8009,13 +8068,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Mon Nov 27 14:15:15 2023 -0800",
-        "CV_collection_version":"6.2.58.61",
+        "CV_collection_modified":"Thu Jan 25 12:02:59 2024 -0800",
+        "CV_collection_version":"6.2.58.62",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a4bd0d38e958aef3da5bdbe6212f2ca7afdf9a56",
-        "source_id_CV_modified":"Tue Nov 21 05:54:54 2023 -0800",
-        "source_id_CV_note":"Revised TaiESM1 activity participation",
+        "previous_commit":"14cec5fc2dd6e5ce805c7ce17cbd7d7231d3dc57",
+        "source_id_CV_modified":"Mon Nov 27 14:15:15 2023 -0800",
+        "source_id_CV_note":"Registered source_id AWI-ESM-1-REcoM",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

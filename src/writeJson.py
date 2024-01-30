@@ -60,6 +60,7 @@ PJD 16 Nov 2023    - Revised CESM2-FV2 and CESM2-WACCM-FV2 activity participatio
 PJD 21 Nov 2023    - Revised CNRM-ESM2-1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1211
 PJD 27 Nov 2023    - Revised TaiESM1 activity participation https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1213
 PJD 25 Jan 2024    - Registered source_id AWI-ESM-1-REcoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1215
+PJD 25 Jan 2024    - Registered source_id E3SM-2-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1218
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -67,7 +68,7 @@ PJD 25 Jan 2024    - Registered source_id AWI-ESM-1-REcoM https://github.com/WCR
 """
 
 # %% Set commit message and author info
-commitMessage = '"Registered source_id AWI-ESM-1-REcoM"'
+commitMessage = '"Registered source_id E3SM-2-1"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -624,74 +625,77 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "AWI-ESM-1-REcoM"
+key = "E3SM-2-1"
 source_id[key] = {}
 source_id[key]["activity_participation"] = [
-    "C4MIP",
     "CMIP",
-    "ScenarioMIP",
 ]
 source_id[key]["cohort"] = [
     "Registered",
 ]
 source_id[key]["institution_id"] = [
-    "AWI",
+    "E3SM-Project",
 ]
-source_id[key]["label"] = "AWI-ESM 1 REcoM"
-source_id[key]["label_extended"] = "AWI-ESM 1 REcoM"
+source_id[key]["label"] = "E3SM 2.1"
+source_id[key]["label_extended"] = "E3SM 2.1 (Energy Exascale Earth System Model)"
 source_id[key]["model_component"] = {}
 source_id[key]["model_component"]["aerosol"] = {}
-source_id[key]["model_component"]["aerosol"]["description"] = "none"
-source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "none"
+source_id[key]["model_component"]["aerosol"][
+    "description"
+] = "MAM4 w/ new resuspension, marine organics, secondary organics, and dust (atmos physics grid)"
+source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmos"] = {}
 source_id[key]["model_component"]["atmos"]["description"] = " ".join(
     [
-        "ECHAM6.3.04p1 (T63L47 native atmosphere",
-        "T63 gaussian grid; 192 x 96",
-        "longitude/latitude; 47 levels; top level",
-        "80 km)",
+        "EAM (E3SMv2.1, cubed sphere spectral-element; 5400 els., 30x30 per cube face.",
+        "Dynamics: degree 3 (p=3) polynomials within each spectral els., 112 km ave.",
+        "resolution. Physics: 2x2 finite volume cells within each spectral els., 1.5 degree",
+        "(168 km) average grid spacing; 72 vertical layers w/ top at 60 km).",
     ]
 )
-source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "250 km"
+source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["atmosChem"] = {}
-source_id[key]["model_component"]["atmosChem"]["description"] = "none"
-source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "none"
+source_id[key]["model_component"]["atmosChem"]["description"] = " ".join(
+    [
+        "Troposphere specified oxidants (except passive ozone with the lower boundary sink)",
+        "for aerosols. Stratosphere linearized interactive ozone (LINOZ v2) (atmos physics grid)",
+    ]
+)
+source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["land"] = {}
 source_id[key]["model_component"]["land"][
     "description"
-] = "JSBACH 3.20 with dynamic vegetation"
-source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "250 km"
+] = "ELM (E3SMv2.1, atmos physics grid, satellite phenology mode), MOSART (E3SMv2.1, 0.5 deg lat/lon grid)"
+source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
 source_id[key]["model_component"]["landIce"] = {}
 source_id[key]["model_component"]["landIce"]["description"] = "none"
 source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = "none"
 source_id[key]["model_component"]["ocean"] = {}
 source_id[key]["model_component"]["ocean"]["description"] = " ".join(
     [
-        "FESOM 1.4 (unstructured grid in the",
-        "horizontal with 126859 wet nodes; 46",
-        "levels; top grid cell 0-5 m)",
+        "MPAS-Ocean (E3SMv2.1, EC30to60E2r2 unstructured SVTs mesh with 236853 cells",
+        "and 719506 edges, variable resolution 60 km to 30 km; 60 levels; top grid cell",
+        "0-10 m)",
     ]
 )
 source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "50 km"
 source_id[key]["model_component"]["ocnBgchem"] = {}
-source_id[key]["model_component"]["ocnBgchem"][
-    "description"
-] = "REcoM2 (same grid as ocean component)"
-source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "50 km"
+source_id[key]["model_component"]["ocnBgchem"]["description"] = "none"
+source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "none"
 source_id[key]["model_component"]["seaIce"] = {}
-source_id[key]["model_component"]["seaIce"]["description"] = " ".join(
-    ["FESOM 1.4 (same grid as ocean component)"]
-)
+source_id[key]["model_component"]["seaIce"][
+    "description"
+] = "MPAS-Seaice (E3SMv2.1, MPAS-Ocean grid; 5 ice categories, 7 ice layers, 5 snow layers)"
 source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "50 km"
 source_id[key]["release_year"] = "2024"
 source_id[key]["source_id"] = key
 # License info
 licenseId = "CC BY 4.0"
 source_id[key]["license_info"] = {}
-source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
+source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
 source_id[key]["license_info"][
     "history"
-] = "2024-01-25: initially published under CC BY 4.0"  # "2022-xx-xx: initially published under CC BY 4.0"
+] = "2024-01-30: initially published under CC BY 4.0"  # "2022-xx-xx: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

@@ -2937,7 +2937,7 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4.1.2 (same grid as atmos component)",
+                    "description":"HTESSEL (land surface scheme built in IFS) and LPJ-GUESS v4.1.2 (same grid as atmos)",
                     "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
@@ -8187,11 +8187,11 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 28 14:32:28 2024 -0700",
+        "CV_collection_modified":"Thu Mar 28 14:38:25 2024 -0700",
         "CV_collection_version":"6.2.58.65",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"569aeea78e7f7ce0692cb67acf664c36d3ad32bf",
+        "previous_commit":"dc457131d86fbda6625f21ab5b373cd03a9f066f",
         "source_id_CV_modified":"Thu Mar 28 13:39:10 2024 -0700",
         "source_id_CV_note":"Registered source_id EC-Earth3-ESM-1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

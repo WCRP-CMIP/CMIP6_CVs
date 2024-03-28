@@ -63,6 +63,7 @@ PJD 25 Jan 2024    - Registered source_id AWI-ESM-1-REcoM https://github.com/WCR
 PJD 25 Jan 2024    - Registered source_id E3SM-2-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1218
 PJD 28 Mar 2024    - Revised source_id EC-Earth3-GrIS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1223
 PJD 28 Mar 2024    - Registered source_id EC-Earth3-ESM-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1222
+PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -70,7 +71,7 @@ PJD 28 Mar 2024    - Registered source_id EC-Earth3-ESM-1 https://github.com/WCR
 """
 
 # %% Set commit message and author info
-commitMessage = '"Registered source_id EC-Earth3-ESM-1"'
+commitMessage = '"Revised source_id GISS-E2-1-H"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -627,91 +628,12 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "EC-Earth3-ESM-1"
-source_id[key] = {}
-source_id[key]["activity_participation"] = [
-    "C4MIP",
-    "CDRMIP",
-    "CMIP",
-    "DCPP",
-    "LUMIP",
-    "OMIP",
-    "ScenarioMIP",
-]
-source_id[key]["cohort"] = [
-    "Registered",
-]
-source_id[key]["institution_id"] = [
-    "EC-Earth-Consortium",
-]
-source_id[key]["label"] = key
-source_id[key]["label_extended"] = key
-source_id[key]["model_component"] = {}
-source_id[key]["model_component"]["aerosol"] = {}
-source_id[key]["model_component"]["aerosol"]["description"] = "none"
-source_id[key]["model_component"]["aerosol"]["native_nominal_resolution"] = "none"
-source_id[key]["model_component"]["atmos"] = {}
-source_id[key]["model_component"]["atmos"]["description"] = " ".join(
-    [
-        "IFS cy36r4 (TL255, linearly reduced Gaussian grid",
-        "equivalent to 512 x 256 longitude/latitude;",
-        "91 levels; top level 0.01 hPa) and co2box v1.0",
-        "(CO2 box model; global grid)",
-    ]
-)
-source_id[key]["model_component"]["atmos"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["atmosChem"] = {}
-source_id[key]["model_component"]["atmosChem"]["description"] = "none"
-source_id[key]["model_component"]["atmosChem"]["native_nominal_resolution"] = "none"
-source_id[key]["model_component"]["land"] = {}
-source_id[key]["model_component"]["land"]["description"] = " ".join(
-    [
-        "HTESSEL (land surface scheme built in IFS) and",
-        "LPJ-GUESS v4.1.2 (same grid as atmos)",
-    ]
-)
-source_id[key]["model_component"]["land"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["landIce"] = {}
-source_id[key]["model_component"]["landIce"][
+key = "GISS-E2-1-H"
+source_id[key]["model_component"]["ocean"][
     "description"
-] = "PISM v1.2 (5 km x 5 km for Greenland, 31 levels)"
-source_id[key]["model_component"]["landIce"]["native_nominal_resolution"] = "5 km"
-source_id[key]["model_component"]["ocean"] = {}
-source_id[key]["model_component"]["ocean"]["description"] = " ".join(
-    [
-        "NEMO3.6 (ORCA1 tripolar primarily 1 degree",
-        "with meridional refinement down to 1/3 degree",
-        "in the tropics; 362 x 292 longitude/latitude;",
-        "75 levels; top grid cell 0-1 m) and MWE v1.0",
-        "(Melt Water Emulator; same grid as ocean for",
-        "Antarctic surroundings)",
-    ]
-)
+] = "HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 33 levels; top grid cell 0-10 m)"
 source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["ocnBgchem"] = {}
-source_id[key]["model_component"]["ocnBgchem"][
-    "description"
-] = "PISCES v2 (same grid as ocean)"
-source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["seaIce"] = {}
-source_id[key]["model_component"]["seaIce"]["description"] = "LIM3 (same grid as ocean)"
-source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "100 km"
-source_id[key]["release_year"] = "2024"
-source_id[key]["source_id"] = key
-# License info
-licenseId = "CC BY 4.0"
-source_id[key]["license_info"] = {}
-source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
-source_id[key]["license_info"][
-    "history"
-] = ""  # "2022-xx-xx: initially published under CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
-)
-source_id[key]["license_info"]["url"] = licenseUrl
+
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

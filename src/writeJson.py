@@ -64,6 +64,7 @@ PJD 25 Jan 2024    - Registered source_id E3SM-2-1 https://github.com/WCRP-CMIP/
 PJD 28 Mar 2024    - Revised source_id EC-Earth3-GrIS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1223
 PJD 28 Mar 2024    - Registered source_id EC-Earth3-ESM-1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1222
 PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
+PJD 28 Mar 2024    - Revised source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -71,7 +72,7 @@ PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised source_id GISS-E2-1-H"'
+commitMessage = '"Revised source_id GISS-E2-2-H"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -628,7 +629,7 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-key = "GISS-E2-1-H"
+key = "GISS-E2-2-H"
 source_id[key]["model_component"]["ocean"][
     "description"
 ] = "HYCOM Ocean (~1 degree tripolar grid; 360 x 180 longitude/latitude; 33 levels; top grid cell 0-10 m)"

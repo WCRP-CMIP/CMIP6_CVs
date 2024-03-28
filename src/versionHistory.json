@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"f70febdb3a61b24b2c6c685a698c5dda6e5ee594",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/f70febdb3a61b24b2c6c685a698c5dda6e5ee594",
-            "commitMessage":"Registered source_id E3SM-2-1",
-            "timeStamp":"Tue Jan 30 11:31:11 2024 -0800"
+            "MD5":"1290909cf6affd493c7312c724dca3afdaa36a2c",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1290909cf6affd493c7312c724dca3afdaa36a2c",
+            "commitMessage":"Revised source_id EC-Earth3-GrIS",
+            "timeStamp":"Thu Mar 28 13:39:10 2024 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":63,
+            "versionCVCommit":64,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

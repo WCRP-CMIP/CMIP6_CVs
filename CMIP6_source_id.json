@@ -2938,7 +2938,7 @@
                     "native_nominal_resolution":"100 km"
                 },
                 "landIce":{
-                    "description":"PISM 0.7 (5 km x 5 km, 442 levels)",
+                    "description":"PISM v1.2 (5 km x 5 km for Greenland, 31 levels)",
                     "native_nominal_resolution":"5 km"
                 },
                 "ocean":{
@@ -2954,7 +2954,7 @@
                     "native_nominal_resolution":"100 km"
                 }
             },
-            "release_year":"2019",
+            "release_year":"2023",
             "source_id":"EC-Earth3-GrIS"
         },
         "EC-Earth3-HR":{
@@ -8125,13 +8125,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Jan 30 11:31:11 2024 -0800",
-        "CV_collection_version":"6.2.58.63",
+        "CV_collection_modified":"Thu Mar 28 13:39:10 2024 -0700",
+        "CV_collection_version":"6.2.58.64",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"f70febdb3a61b24b2c6c685a698c5dda6e5ee594",
-        "source_id_CV_modified":"Thu Jan 25 12:02:59 2024 -0800",
-        "source_id_CV_note":"Registered source_id E3SM-2-1",
+        "previous_commit":"1290909cf6affd493c7312c724dca3afdaa36a2c",
+        "source_id_CV_modified":"Tue Jan 30 11:31:11 2024 -0800",
+        "source_id_CV_note":"Revised source_id EC-Earth3-GrIS",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

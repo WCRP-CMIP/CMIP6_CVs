@@ -32,11 +32,11 @@
         "variant_label"
     ],
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 28 15:37:58 2024 -0700",
-        "CV_collection_version":"6.2.58.67",
+        "CV_collection_modified":"Wed May  1 16:23:31 2024 -0700",
+        "CV_collection_version":"6.2.58.68",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"908bb4e3885ae09cd4155a3a0914635de1d42a26",
+        "previous_commit":"2c9cf667546f31a495cb2e3b8d9d5892bc7abaa2",
         "required_global_attributes_CV_modified":"Thu Dec 19 15:32:17 2019 -0800",
         "required_global_attributes_CV_note":"Reverting addition of external_variables to required_global_attributes",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"

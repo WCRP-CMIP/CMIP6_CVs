@@ -6041,7 +6041,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "IPSL"
@@ -6050,7 +6050,7 @@
             "label_extended":"IPSL-CM6A-MR1",
             "license_info":{
                 "exceptions_contact":"@listes.ipsl.fr <- ipsl-cmip6",
-                "history":"",
+                "history":"2024-03-26: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -8187,13 +8187,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Thu Mar 28 15:37:58 2024 -0700",
-        "CV_collection_version":"6.2.58.67",
+        "CV_collection_modified":"Wed May  1 16:23:31 2024 -0700",
+        "CV_collection_version":"6.2.58.68",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"908bb4e3885ae09cd4155a3a0914635de1d42a26",
-        "source_id_CV_modified":"Thu Mar 28 15:14:13 2024 -0700",
-        "source_id_CV_note":"Revised source_id GISS-E2-2-H",
+        "previous_commit":"2c9cf667546f31a495cb2e3b8d9d5892bc7abaa2",
+        "source_id_CV_modified":"Thu Mar 28 15:37:58 2024 -0700",
+        "source_id_CV_note":"Revised source_id IPSL-CM6A-MR1",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

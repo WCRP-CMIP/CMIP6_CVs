@@ -1,0 +1,28 @@
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file"
+authors:
+- family-names: "Durack"
+  given-names: "Paul J."
+  orcid: "https://orcid.org/0000-0003-2835-1438"
+- family-names: "Taylor"
+  given-names: "Karl E."
+  orcid: "https://orcid.org/0000-0002-6491-2135"
+- family-names: "Mizielinski"
+  given-names: "Matthew"
+  orcid: "https://orcid.org/0000-0002-3457-4702"
+- family-names: "Doutriaux"
+  given-names: "Charles"
+  orcid: "https://orcid.org/0009-0002-6932-3169"
+- family-names: "Nadeau"
+  given-names: "Denis"
+  orcid: "https://orcid.org/0000-0002-9622-3289"
+- family-names: "Juckes"
+  given-names: "Martin"
+  orcid: "https://orcid.org/0000-0003-1770-2132"
+title: "CMIP6 Controlled Vocabularies (CVs)"
+version: 6.2.58.68
+doi: 10.5281/zenodo.12197150 
+date-released: 2024-06-20
+url: "https://github.com/WCRP-CMIP/CMIP6_CVs"

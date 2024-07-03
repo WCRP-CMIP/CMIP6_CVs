@@ -66,6 +66,7 @@ PJD 28 Mar 2024    - Registered source_id EC-Earth3-ESM-1 https://github.com/WCR
 PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/177
 PJD 28 Mar 2024    - Revised source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
 PJD  1 May 2024    - Revised source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
+PJD  3 Jul 2024    - Added CITATION.cff version management
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -1633,14 +1634,13 @@ versionOld = ".".join(
 del versionHistory
 
 if versionId != versionOld:
-    # %% Now update Readme.md
+    # %% update Readme.md
     target_url = (
         "https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/README.md"
     )
-    # txt = urllib.urlopen(target_url).read() # Py2
-    txt = urlopen(target_url).read().decode("utf-8")  # Py3
+    txt = urlopen(target_url).read().decode("utf-8")
     txt = txt.replace(versionOld, versionId)
-    # Now delete existing file and write back to repo
+    # delete existing file and write back to repo
     readmeH = "../README.md"
     os.remove(readmeH)
     fH = open(readmeH, "w")
@@ -1648,6 +1648,25 @@ if versionId != versionOld:
     fH.close()
     print("README.md updated")
     del (target_url, txt, readmeH, fH)
+
+    # %% update CITATION.cff
+    target_url = (
+        "https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CITATION.cff"
+    )
+    txt = urlopen(target_url).read().decode("utf-8")
+    # replace versionId
+    txt = txt.replace(versionOld, versionId)
+    # replace date-released
+    timeNow = datetime.datetime.now().strftime("%Y-%m-%d")
+    txt = re.sub("[0-9]{4}-[0-9]{2}-[0-9]{2}", timeNow, txt)
+    # delete existing file and write back to repo
+    citationH = "../CITATION.cff"
+    os.remove(citationH)
+    fH = open(citationH, "w")
+    fH.write(txt)
+    fH.close()
+    print("CITATION.cff updated")
+    del (target_url, txt, citationH, fH)
 
 # Commit all changes
 

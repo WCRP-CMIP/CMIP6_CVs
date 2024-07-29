@@ -605,6 +605,7 @@
         "AWI-ESM-1-REcoM":{
             "activity_participation":[
                 "C4MIP",
+                "CDRMIP",
                 "CMIP",
                 "ScenarioMIP"
             ],

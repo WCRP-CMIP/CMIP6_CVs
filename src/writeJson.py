@@ -634,7 +634,7 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-
+# License
 key = "AWI-ESM-1-REcoM"
 print("processing:", key)
 licenseId = "CC BY 4.0"
@@ -651,7 +651,13 @@ source_id[key]["license_info"]["license"] = "".join(
 )
 source_id[key]["license_info"]["source_specific_info"] = ""
 source_id[key]["license_info"]["url"] = licenseUrl
-
+# activity_participation
+source_id[key]["activity_participation"] = [
+    "C4MIP",
+    "CDRMIP",
+    "CMIP",
+    "ScenarioMIP",
+]
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

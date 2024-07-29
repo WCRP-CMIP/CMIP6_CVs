@@ -22,7 +22,7 @@ authors:
   given-names: "Martin"
   orcid: "https://orcid.org/0000-0003-1770-2132"
 title: "CMIP6 Controlled Vocabularies (CVs)"
-version: 6.2.58.68
+version: 6.2.58.69
 doi: 10.5281/zenodo.12197150 
-date-released: 2024-06-20
+date-released: 2024-07-29
 url: "https://github.com/WCRP-CMIP/CMIP6_CVs"

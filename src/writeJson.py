@@ -13,17 +13,19 @@ from CMIP6Lib import (
     versionHistoryUpdate,
 )
 from durolib import readJsonCreateDict
-import time
-import sys
-import subprocess
-import shlex
-import platform
+import calendar
+import datetime
+import gc
+import json
 import os
 import pdb
-import json
-import gc
-import datetime
-import calendar
+import platform
+import re
+import shlex
+import sys
+import subprocess
+import time
+
 
 # %% additional import statements
 try:
@@ -67,6 +69,7 @@ PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/
 PJD 28 Mar 2024    - Revised source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
 PJD  1 May 2024    - Revised source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD  3 Jul 2024    - Added CITATION.cff version management
+PJD 29 Jul 2024    - Revised source_id AWI-ESM-1-REcoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -74,7 +77,7 @@ PJD  3 Jul 2024    - Added CITATION.cff version management
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised source_id IPSL-CM6A-MR1"'
+commitMessage = '"Revised source_id AWI-ESM-1-REcoM"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -632,14 +635,14 @@ del tmp
 
 # Fix issues
 
-key = "IPSL-CM6A-MR1"
+key = "AWI-ESM-1-REcoM"
 print("processing:", key)
 licenseId = "CC BY 4.0"
 source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
 source_id[key]["license_info"][
     "history"
-] = "2024-03-26: initially published under CC BY 4.0"
+] = "2024-07-04: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

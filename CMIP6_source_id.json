@@ -467,7 +467,7 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -475,7 +475,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 1.4",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2018",
@@ -588,7 +588,7 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -596,7 +596,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 1.4",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2018",
@@ -648,15 +648,15 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"REcoM2 (same grid as ocean component)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"FESOM 1.4 (same grid as ocean component)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2024",
@@ -706,7 +706,7 @@
                 },
                 "ocean":{
                     "description":"FESOM 2 (unstructured grid in the horizontal with 126858 wet nodes; 48 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -714,7 +714,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 2",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2019",

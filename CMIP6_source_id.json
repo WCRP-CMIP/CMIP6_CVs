@@ -467,7 +467,7 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -475,7 +475,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 1.4",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2018",
@@ -588,7 +588,7 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"none",
@@ -596,7 +596,7 @@
                 },
                 "seaIce":{
                     "description":"FESOM 1.4",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2018",
@@ -648,15 +648,15 @@
                 },
                 "ocean":{
                     "description":"FESOM 1.4 (unstructured grid in the horizontal with 126859 wet nodes; 46 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "ocnBgchem":{
                     "description":"REcoM2 (same grid as ocean component)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 },
                 "seaIce":{
                     "description":"FESOM 1.4 (same grid as ocean component)",
-                    "native_nominal_resolution":"50 km"
+                    "native_nominal_resolution":"100 km"
                 }
             },
             "release_year":"2024",
@@ -8130,13 +8130,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug  2 12:57:50 2024 -0700",
-        "CV_collection_version":"6.2.58.69",
+        "CV_collection_modified":"Fri Aug  2 13:17:27 2024 -0700",
+        "CV_collection_version":"6.2.58.70",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"d1f30d0a9359ffdc1bff31be00d0c5f01fa840dd",
-        "source_id_CV_modified":"Wed May  1 16:23:31 2024 -0700",
-        "source_id_CV_note":"Deregistered source_id AWI-ESM-2-1-LR",
+        "previous_commit":"025c791e0339878e1b13e5c3ffd41bff46eaa1b9",
+        "source_id_CV_modified":"Fri Aug  2 12:57:50 2024 -0700",
+        "source_id_CV_note":"Revise multiple AWI source_id entries",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

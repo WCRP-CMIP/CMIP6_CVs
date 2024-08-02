@@ -605,11 +605,12 @@
         "AWI-ESM-1-REcoM":{
             "activity_participation":[
                 "C4MIP",
+                "CDRMIP",
                 "CMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "AWI"
@@ -618,7 +619,7 @@
             "label_extended":"AWI-ESM 1 REcoM",
             "license_info":{
                 "exceptions_contact":"@awi.de <- mip-contact",
-                "history":"2024-01-25: initially published under CC BY 4.0",
+                "history":"2024-07-04: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -660,64 +661,6 @@
             },
             "release_year":"2024",
             "source_id":"AWI-ESM-1-REcoM"
-        },
-        "AWI-ESM-2-1-LR":{
-            "activity_participation":[
-                "CMIP",
-                "PMIP"
-            ],
-            "cohort":[
-                "Registered"
-            ],
-            "institution_id":[
-                "AWI"
-            ],
-            "label":"AWI-ESM 2.1 LR",
-            "label_extended":"AWI-ESM 2.1 LR",
-            "license_info":{
-                "exceptions_contact":"@awi.de <- mip-contact",
-                "history":"",
-                "id":"CC BY 4.0",
-                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-                "source_specific_info":"",
-                "url":"https://creativecommons.org/licenses/by/4.0/"
-            },
-            "model_component":{
-                "aerosol":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "atmos":{
-                    "description":"ECHAM6.3.04p1 (T63L47 native atmosphere T63 gaussian grid; 192 x 96 longitude/latitude; 47 levels; top level 80 km)",
-                    "native_nominal_resolution":"250 km"
-                },
-                "atmosChem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "land":{
-                    "description":"JSBACH 3.20 with dynamic vegetation",
-                    "native_nominal_resolution":"250 km"
-                },
-                "landIce":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "ocean":{
-                    "description":"FESOM 2 (unstructured grid in the horizontal with 126858 wet nodes; 48 levels; top grid cell 0-5 m)",
-                    "native_nominal_resolution":"50 km"
-                },
-                "ocnBgchem":{
-                    "description":"none",
-                    "native_nominal_resolution":"none"
-                },
-                "seaIce":{
-                    "description":"FESOM 2",
-                    "native_nominal_resolution":"50 km"
-                }
-            },
-            "release_year":"2019",
-            "source_id":"AWI-ESM-2-1-LR"
         },
         "BCC-CSM2-HR":{
             "activity_participation":[
@@ -8187,13 +8130,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed May  1 16:23:31 2024 -0700",
-        "CV_collection_version":"6.2.58.68",
+        "CV_collection_modified":"Fri Aug  2 12:57:50 2024 -0700",
+        "CV_collection_version":"6.2.58.69",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"2c9cf667546f31a495cb2e3b8d9d5892bc7abaa2",
-        "source_id_CV_modified":"Thu Mar 28 15:37:58 2024 -0700",
-        "source_id_CV_note":"Revised source_id IPSL-CM6A-MR1",
+        "previous_commit":"d1f30d0a9359ffdc1bff31be00d0c5f01fa840dd",
+        "source_id_CV_modified":"Wed May  1 16:23:31 2024 -0700",
+        "source_id_CV_note":"Deregistered source_id AWI-ESM-2-1-LR",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

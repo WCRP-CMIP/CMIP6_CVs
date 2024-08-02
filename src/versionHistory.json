@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"2c9cf667546f31a495cb2e3b8d9d5892bc7abaa2",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/2c9cf667546f31a495cb2e3b8d9d5892bc7abaa2",
-            "commitMessage":"Revised source_id IPSL-CM6A-MR1",
-            "timeStamp":"Wed May  1 16:23:31 2024 -0700"
+            "MD5":"d1f30d0a9359ffdc1bff31be00d0c5f01fa840dd",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/d1f30d0a9359ffdc1bff31be00d0c5f01fa840dd",
+            "commitMessage":"Deregistered source_id AWI-ESM-2-1-LR",
+            "timeStamp":"Fri Aug  2 12:57:50 2024 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":68,
+            "versionCVCommit":69,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

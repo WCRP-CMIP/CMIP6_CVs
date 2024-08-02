@@ -13,17 +13,19 @@ from CMIP6Lib import (
     versionHistoryUpdate,
 )
 from durolib import readJsonCreateDict
-import time
-import sys
-import subprocess
-import shlex
-import platform
+import calendar
+import datetime
+import gc
+import json
 import os
 import pdb
-import json
-import gc
-import datetime
-import calendar
+import platform
+import re
+import shlex
+import sys
+import subprocess
+import time
+
 
 # %% additional import statements
 try:
@@ -36,7 +38,8 @@ Created on Mon Jul 11 14:12:21 2016
 
 Paul J. Durack 11th July 2016
 
-This script generates all controlled vocabulary (CV) json files residing this this subdirectory
+This script generates all controlled vocabulary (CV) json files
+residing in this subdirectory
 """
 """2016-2021
 https://github.com/WCRP-CMIP/CMIP6_CVs/blob/0048ecd216d31fc52afd0177788eeb0707a2289e/src/writeJson.py#L33-L560
@@ -67,6 +70,8 @@ PJD 28 Mar 2024    - Revised source_id GISS-E2-1-H https://github.com/WCRP-CMIP/
 PJD 28 Mar 2024    - Revised source_id GISS-E2-2-H https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1018
 PJD  1 May 2024    - Revised source_id IPSL-CM6A-MR1 https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1078
 PJD  3 Jul 2024    - Added CITATION.cff version management
+PJD 29 Jul 2024    - Revised source_id AWI-ESM-1-REcoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220
+PJD  2 Aug 2024    - Deregistered source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220#issuecomment-2265990964
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -74,7 +79,7 @@ PJD  3 Jul 2024    - Added CITATION.cff version management
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised source_id IPSL-CM6A-MR1"'
+commitMessage = '"Deregistered source_id AWI-ESM-2-1-LR"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -631,15 +636,15 @@ source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
-
-key = "IPSL-CM6A-MR1"
+# License
+key = "AWI-ESM-1-REcoM"
 print("processing:", key)
 licenseId = "CC BY 4.0"
 source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+source_id[key]["license_info"]["exceptions_contact"] = "@awi.de <- mip-contact"
 source_id[key]["license_info"][
     "history"
-] = "2024-03-26: initially published under CC BY 4.0"
+] = "2024-07-04: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]
@@ -648,6 +653,17 @@ source_id[key]["license_info"]["license"] = "".join(
 )
 source_id[key]["license_info"]["source_specific_info"] = ""
 source_id[key]["license_info"]["url"] = licenseUrl
+# activity_participation
+source_id[key]["activity_participation"] = [
+    "C4MIP",
+    "CDRMIP",
+    "CMIP",
+    "ScenarioMIP",
+]
+
+# deregister AWI-ESM-2-1-LR
+key = "AWI-ESM-2-1-LR"
+source_id.pop(key)
 
 
 # Example fresh publication, no previous data

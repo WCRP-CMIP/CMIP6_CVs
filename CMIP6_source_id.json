@@ -8132,13 +8132,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 16 07:23:21 2024 -0700",
+        "CV_collection_modified":"Fri Aug 16 07:28:41 2024 -0700",
         "CV_collection_version":"6.2.58.71",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"8c4ccfa9974bb2d256106d9ea3ff740a4b8da6fa",
+        "previous_commit":"c658a291633a3c3564d2b35222a7c23f1311940e",
         "source_id_CV_modified":"Fri Aug  2 13:17:27 2024 -0700",
-        "source_id_CV_note":"Revise multiple AWI source_id entries",
+        "source_id_CV_note":"Revise CMCC-CM2-SR5 source_id entry",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -81,7 +81,7 @@ PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revise multiple AWI source_id entries"'
+commitMessage = '"Revise CMCC-CM2-SR5 source_id entry"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"

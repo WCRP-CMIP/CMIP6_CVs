@@ -21,13 +21,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 16 07:23:21 2024 -0700",
+        "CV_collection_modified":"Fri Aug 16 07:28:41 2024 -0700",
         "CV_collection_version":"6.2.58.71",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
         "license_CV_modified":"Tue May 24 11:20:06 2022 -0700",
         "license_CV_note":"Update published source_id entries with rights; augment license",
-        "previous_commit":"8c4ccfa9974bb2d256106d9ea3ff740a4b8da6fa",
+        "previous_commit":"c658a291633a3c3564d2b35222a7c23f1311940e",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

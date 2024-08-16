@@ -73,6 +73,7 @@ PJD  3 Jul 2024    - Added CITATION.cff version management
 PJD 29 Jul 2024    - Revised source_id AWI-ESM-1-REcoM https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220
 PJD  2 Aug 2024    - Deregistered source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220#issuecomment-2265990964
 PJD  2 Aug 2024    - Revise multiple AWI source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1236
+PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1239
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -80,7 +81,7 @@ PJD  2 Aug 2024    - Revise multiple AWI source_id entries https://github.com/WC
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revise multiple AWI source_id entries"'
+commitMessage = '"Revise CMCC-CM2-SR5 source_id entry"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -639,16 +640,10 @@ del tmp
 # Fix issues
 # License
 
-key = "AWI-CM-1-1-LR"
-source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "100 km"
-key = "AWI-ESM-1-1-LR"
-source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "100 km"
-key = "AWI-ESM-1-REcoM"
-source_id[key]["model_component"]["ocean"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["ocnBgchem"]["native_nominal_resolution"] = "100 km"
-source_id[key]["model_component"]["seaIce"]["native_nominal_resolution"] = "100 km"
+key = "CMCC-CM2-SR5"
+source_id[key]["activity_participation"].append("AerChemMIP")
+source_id[key]["activity_participation"].append("DAMIP")
+source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

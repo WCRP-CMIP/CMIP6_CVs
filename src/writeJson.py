@@ -74,6 +74,7 @@ PJD 29 Jul 2024    - Revised source_id AWI-ESM-1-REcoM https://github.com/WCRP-C
 PJD  2 Aug 2024    - Deregistered source_id AWI-ESM-2-1-LR https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1220#issuecomment-2265990964
 PJD  2 Aug 2024    - Revise multiple AWI source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1236
 PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1239
+PJD 16 Aug 2024    - Revise GISS-E2-1-H source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1240
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -81,7 +82,7 @@ PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revise CMCC-CM2-SR5 source_id entry"'
+commitMessage = '"Revise GISS-E2-1-H source_id entry"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -640,9 +641,8 @@ del tmp
 # Fix issues
 # License
 
-key = "CMCC-CM2-SR5"
+key = "GISS-E2-1-H"
 source_id[key]["activity_participation"].append("AerChemMIP")
-source_id[key]["activity_participation"].append("DAMIP")
 source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data

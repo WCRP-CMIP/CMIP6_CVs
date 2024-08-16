@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"025c791e0339878e1b13e5c3ffd41bff46eaa1b9",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/025c791e0339878e1b13e5c3ffd41bff46eaa1b9",
+            "MD5":"8c4ccfa9974bb2d256106d9ea3ff740a4b8da6fa",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/8c4ccfa9974bb2d256106d9ea3ff740a4b8da6fa",
             "commitMessage":"Revise multiple AWI source_id entries",
-            "timeStamp":"Fri Aug  2 13:17:27 2024 -0700"
+            "timeStamp":"Fri Aug 16 07:23:21 2024 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":70,
+            "versionCVCommit":71,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

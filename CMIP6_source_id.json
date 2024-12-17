@@ -3088,6 +3088,7 @@
                 "CORDEX",
                 "LS3MIP",
                 "LUMIP",
+                "PMIP",
                 "ScenarioMIP"
             ],
             "cohort":[
@@ -8134,13 +8135,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Aug 16 09:09:30 2024 -0700",
-        "CV_collection_version":"6.2.58.73",
+        "CV_collection_modified":"Tue Dec 17 14:37:34 2024 -0800",
+        "CV_collection_version":"6.2.58.74",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a37575e8ebe368e511a4c26f9a36472159bb5140",
-        "source_id_CV_modified":"Fri Aug 16 09:00:02 2024 -0700",
-        "source_id_CV_note":"IPSL-CM6A-LR source_id entry",
+        "previous_commit":"85044bb37a411f509ab9e27eafaa6b0b89736a39",
+        "source_id_CV_modified":"Fri Aug 16 09:09:30 2024 -0700",
+        "source_id_CV_note":"Revise EC-Earth3-Veg source_id entry",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

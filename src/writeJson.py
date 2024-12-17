@@ -76,6 +76,7 @@ PJD  2 Aug 2024    - Revise multiple AWI source_id entries https://github.com/WC
 PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1239
 PJD 16 Aug 2024    - Revise GISS-E2-1-H source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1240
 PJD 16 Aug 2024    - Revise IPSL-CM6A-LR source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1241
+PJD 17 Dec 2024    - Revise EC-Earth3-Veg source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1246
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -83,7 +84,7 @@ PJD 16 Aug 2024    - Revise IPSL-CM6A-LR source_id entry https://github.com/WCRP
 """
 
 # %% Set commit message and author info
-commitMessage = '"IPSL-CM6A-LR source_id entry"'
+commitMessage = '"Revise EC-Earth3-Veg source_id entry"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -642,8 +643,8 @@ del tmp
 # Fix issues
 # License
 
-key = "IPSL-CM6A-LR"
-source_id[key]["activity_participation"].append("AerChemMIP")
+key = "EC-Earth3-Veg"
+source_id[key]["activity_participation"].append("PMIP")
 source_id[key]["activity_participation"].sort()
 
 # Example fresh publication, no previous data

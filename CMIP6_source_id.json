@@ -2854,7 +2854,7 @@
                 "ScenarioMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "EC-Earth-Consortium"
@@ -2863,9 +2863,10 @@
             "label_extended":"EC-Earth3-ESM-1",
             "license_info":{
                 "exceptions_contact":"@ec-earth.org <- cmip6-data",
-                "history":"",
+                "history":"; 2024-09-25: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
                 "url":"https://creativecommons.org/licenses/by/4.0/"
             },
             "model_component":{
@@ -8135,13 +8136,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Tue Dec 17 14:37:34 2024 -0800",
-        "CV_collection_version":"6.2.58.74",
+        "CV_collection_modified":"Wed Jan 15 08:58:00 2025 -0800",
+        "CV_collection_version":"6.2.58.75",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"85044bb37a411f509ab9e27eafaa6b0b89736a39",
-        "source_id_CV_modified":"Fri Aug 16 09:09:30 2024 -0700",
-        "source_id_CV_note":"Revise EC-Earth3-Veg source_id entry",
+        "previous_commit":"1656844e8af98ab0b317e296ea471a43cea508b2",
+        "source_id_CV_modified":"Tue Dec 17 14:37:34 2024 -0800",
+        "source_id_CV_note":"Revised EC-Earth-ESM-1 source_id license history",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

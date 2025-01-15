@@ -77,6 +77,7 @@ PJD 16 Aug 2024    - Revise CMCC-CM2-SR5 source_id entry https://github.com/WCRP
 PJD 16 Aug 2024    - Revise GISS-E2-1-H source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1240
 PJD 16 Aug 2024    - Revise IPSL-CM6A-LR source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1241
 PJD 17 Dec 2024    - Revise EC-Earth3-Veg source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1246
+PJD 15 Jan 2025    - Revised EC-Earth3-ESM-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1222
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -84,7 +85,7 @@ PJD 17 Dec 2024    - Revise EC-Earth3-Veg source_id entry https://github.com/WCR
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revise EC-Earth3-Veg source_id entry"'
+commitMessage = '"Revised EC-Earth-ESM-1 source_id license history"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -643,9 +644,22 @@ del tmp
 # Fix issues
 # License
 
-key = "EC-Earth3-Veg"
-source_id[key]["activity_participation"].append("PMIP")
-source_id[key]["activity_participation"].sort()
+key = "EC-Earth3-ESM-1"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["cohort"] = ["Published"]
+source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
+source_id[key]["license_info"][
+    "history"
+] += "; 2024-09-25: initially published under CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
+)
+source_id[key]["license_info"]["source_specific_info"] = ""
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

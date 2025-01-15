@@ -85,7 +85,7 @@ PJD 15 Jan 2025    - Revised EC-Earth3-ESM-1 source_id license history https://g
 """
 
 # %% Set commit message and author info
-commitMessage = '"Revised EC-Earth-ESM-1 source_id license history"'
+commitMessage = '"Revised EC-Earth3-ESM-1 source_id license history"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -651,7 +651,7 @@ source_id[key]["cohort"] = ["Published"]
 source_id[key]["license_info"]["exceptions_contact"] = "@ec-earth.org <- cmip6-data"
 source_id[key]["license_info"][
     "history"
-] += "; 2024-09-25: initially published under CC BY 4.0"
+] = "2024-09-25: initially published under CC BY 4.0"
 source_id[key]["license_info"]["id"] = licenseId
 licenseStr = license["license_options"][licenseId]["license_id"]
 licenseUrl = license["license_options"][licenseId]["license_url"]

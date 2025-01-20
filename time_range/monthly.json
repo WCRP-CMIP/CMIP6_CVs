@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "monthly",
+    "type": "time_range"
+}

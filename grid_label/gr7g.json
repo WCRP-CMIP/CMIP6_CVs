@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "gr7g",
+    "type": "grid"
+}

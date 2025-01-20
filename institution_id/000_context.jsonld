@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/organisation/",
+        "organisation": "https://espri-mod.github.io/mip-cmor-tables/organisation",
+        "myprop":"http://TEST",
+        
+        "established":{"@id":"https://schema.org/foundingDate"}
+    }
+}

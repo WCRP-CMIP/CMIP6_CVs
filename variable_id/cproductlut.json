@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cproductlut",
+    "type": "variable"
+}

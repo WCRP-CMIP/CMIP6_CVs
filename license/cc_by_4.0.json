@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cc_by_4.0",
+    "type": "license"
+}

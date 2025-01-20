@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "amip-m4k",
+    "type": "experiment"
+}

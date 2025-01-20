@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ec-earth3-lr",
+    "type": "source"
+}

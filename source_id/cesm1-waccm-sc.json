@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cesm1-waccm-sc",
+    "type": "source"
+}

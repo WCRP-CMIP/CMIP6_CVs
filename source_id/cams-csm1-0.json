@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cams-csm1-0",
+    "type": "source"
+}

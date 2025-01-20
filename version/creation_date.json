@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "creationdate",
+    "type": "directory_date"
+}

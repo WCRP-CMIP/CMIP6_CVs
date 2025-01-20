@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "futuresst-4xco2-solar",
+    "type": "experiment"
+}

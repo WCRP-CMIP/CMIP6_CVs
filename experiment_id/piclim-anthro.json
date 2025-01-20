@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-anthro",
+    "type": "experiment"
+}

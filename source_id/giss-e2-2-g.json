@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "giss-e2-2-g",
+    "type": "source"
+}

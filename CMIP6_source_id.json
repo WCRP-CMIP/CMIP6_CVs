@@ -2598,7 +2598,7 @@
                 "CMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "E3SM-Project"
@@ -2607,7 +2607,7 @@
             "label_extended":"E3SM 2.1 (Energy Exascale Earth System Model)",
             "license_info":{
                 "exceptions_contact":"@llnl.gov <- e3sm-data-support",
-                "history":"2024-01-30: initially published under CC BY 4.0",
+                "history":"2024-02-05: initially published under CC BY 4.0",
                 "id":"CC BY 4.0",
                 "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
                 "source_specific_info":"",
@@ -8077,13 +8077,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Wed Jan 15 10:38:19 2025 -0800",
-        "CV_collection_version":"6.2.58.76",
+        "CV_collection_modified":"Fri Feb 28 14:15:44 2025 -0800",
+        "CV_collection_version":"6.2.58.77",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"a812c5c82d04252b8bd948320a1bde6d0de790d5",
-        "source_id_CV_modified":"Wed Jan 15 10:25:51 2025 -0800",
-        "source_id_CV_note":"Deregistered source_id EC-Earth3-GrIS",
+        "previous_commit":"6e872533fd1ac9980d000aba0ba16334bc9a88dd",
+        "source_id_CV_modified":"Wed Jan 15 10:38:19 2025 -0800",
+        "source_id_CV_note":"Revised E3SM-2-1 source_id entry",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

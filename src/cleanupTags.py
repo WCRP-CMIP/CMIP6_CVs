@@ -183,10 +183,10 @@ for tag in tagList.keys():
         ]
     )
     print(cmd)
-    # subprocess.call(cmd, shell=True)
+    subprocess.call(cmd, shell=True)
     # Shell=True required for string
 # And push all new tags to remote
-# subprocess.call(["git", "push", "--tags"])
+subprocess.call(["git", "push", "--tags"])
 
 # %% Logs
 """ 180222 1536

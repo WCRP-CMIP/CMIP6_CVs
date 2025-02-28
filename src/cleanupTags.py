@@ -10,6 +10,8 @@ PJD 31 Jan 2018     - Started
 PJD 15 Mar 2018     - Updated missing tags 6.2.3.3-6.2.3.5
 PJD 22 Aug 2018     - Updated missing tag 6.2.37.2
 PJD 15 Jan 2020     - Updated missing tag 6.2.45.4
+PJD 28 Feb 2025     - Updated adding tag 6.2.58.76-esgvoc
+PJD 28 Feb 2025     - Update for py3
 
 https://stackoverflow.com/questions/21738647/change-date-of-git-tag-or-github-release-based-on-it
 
@@ -44,11 +46,13 @@ see https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active
 
 @author: durack1
 """
-import os,subprocess
-os.chdir('/sync/git/CMIP6_CVs')
+import os
+import subprocess
 
-#%% Create cleanup list
-'''
+os.chdir("/Users/durack1/sync/git/CMIP6_CVs")
+
+# %% Create cleanup list
+"""
 # [durack1ml:sync/git/CMIP6_CVs] durack1% git show-ref --tags
 tagClean = []
 tagClean.append('3.2.0')
@@ -65,21 +69,21 @@ tagClean.append('3.2.8')
 tagClean.append('CMOR-3.2.7')
 tagClean.append('CMOR-3.2.8')
 #tagClean.append('CMOR-3.3.0')
-'''
+"""
 
-#%% Iterate over list to delete existing tags
-'''
+# %% Iterate over list to delete existing tags
+"""
 for count,tag in enumerate(tagClean):
     print 'tag:    ',tag
     # Git delete existing tag
     subprocess.call(['git','tag','-d',tag])
     # And push to remote
     subprocess.call(['git','push','origin',''.join([':refs/tags/',tag])])
-'''
+"""
 
-#%% Create target dictionary
+# %% Create target dictionary
 tagList = {}
-'''
+"""
 tagList['6.2.0.1'] = {}
 tagList['6.2.0.1']['Comment'] = '3.2.0/CMOR-3.2.0'
 tagList['6.2.0.1']['MD5'] = '5c4bbac517cb2053c6d43957d552cd435809055a'
@@ -126,18 +130,26 @@ tagList['6.2.3.4']['MD5'] = '6d8065c5d35785e58160e8f1b7789a7998ca0f6f'
 tagList['6.2.3.5'] = {}
 tagList['6.2.3.5']['Comment'] = 'Revise source_id GFDL-ESM4 to include CDRMIP (#485)'
 tagList['6.2.3.5']['MD5'] = 'e99a005ce580cfd6f3e66d1fcd43abab36ffd9e5'
-'''
 # 190822 1547
 tagList['6.2.37.2'] = {}
 tagList['6.2.37.2']['Comment'] = 'Register source_id IPSL-CM7A-ATM-HR (#769)'
 tagList['6.2.37.2']['MD5'] = 'd0261dc94cdfba37af81e07b8ebc801aa47a7ae7'
-
 # 200115 1617
 tagList['6.2.45.4'] = {}
 tagList['6.2.45.4']['Comment'] = ' Revise source_ids GISS-E2-1-H, GISS-E3-G (#862) '
 tagList['6.2.45.4']['MD5'] = '0597fd970ae4c5186e2376d39f05cb64841e7a1d'
+"""
 
-#%% Iterate over dictionary to create new tags and delete existing
+# 250228 1528
+tagtxt = "6.2.58.76-esgvoc"
+tagList[tagtxt] = {}
+tagList[tagtxt]["Comment"] = "Initial CMIP6_CVs for esgvoc"
+tagList[tagtxt]["MD5"] = "6e872533fd1ac9980d000aba0ba16334bc9a88dd"
+tagList[tagtxt]["timestamp"] = "Wed Jan 15 10:46:25 2025 -0800"
+# https://github.com/WCRP-CMIP/CMIP6_CVs/commit/6e872533fd1ac9980d000aba0ba16334bc9a88dd
+# git log --tags --simplify-by-decoration --pretty="format:%ad"|head -2 # second last
+
+# %% Iterate over dictionary to create new tags and delete existing
 # Should look like
 # git tag -l | while read -r tag; do `git checkout $tag && git tag -d $tag &&\
 # git push origin :refs/tags/$tag &&\
@@ -145,26 +157,39 @@ tagList['6.2.45.4']['MD5'] = '0597fd970ae4c5186e2376d39f05cb64841e7a1d'
 # -m"$tag"`; done; git push --tags
 
 for tag in tagList.keys():
-    print 'tag:    ',tag
-    print 'comment:',tagList[tag]['Comment']
-    print 'MD5:    ',tagList[tag]['MD5']
+    print("tag:    ", tag)
+    print("comment:", tagList[tag]["Comment"])
+    print("MD5:    ", tagList[tag]["MD5"])
     # Git checkout tag hash
-    subprocess.call(['git','checkout',tagList[tag]['MD5']])
+    # subprocess.call(["git", "checkout", tagList[tag]["MD5"]])
     # Get timestamp of hash
-    cmd = 'git show --format=%aD|head -1'
-    ps = subprocess.Popen(cmd,stdout=subprocess.PIPE,shell=True)
-    timestamp = ps.communicate()[0].rstrip()
-    print timestamp
+    # cmd = "git show --format=%aD|head -1"
+    # ps = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+    # timestamp = ps.communicate()[0].rstrip()
+    timestamp = tagList[tagtxt]["timestamp"]
+    print(timestamp)
     # Generate composite command and execute
-    cmd = ''.join(['GIT_COMMITTER_DATE="',timestamp,'" git ','tag ','-a ',tag,
-                   ' -m"',tagList[tag]['Comment'],'"'])
-    print cmd
-    subprocess.call(cmd,shell=True) ; # Shell=True required for string
+    cmd = "".join(
+        [
+            'GIT_COMMITTER_DATE="',
+            timestamp,
+            '" git ',
+            "tag ",
+            "-a ",
+            tag,
+            ' -m"',
+            tagList[tag]["Comment"],
+            '"',
+        ]
+    )
+    print(cmd)
+    # subprocess.call(cmd, shell=True)
+    # Shell=True required for string
 # And push all new tags to remote
-subprocess.call(['git','push','--tags'])
+# subprocess.call(["git", "push", "--tags"])
 
-#%% Logs
-''' 180222 1536
+# %% Logs
+""" 180222 1536
 [durack1ml:git/CMIP6_CVs/src] durack1% python cleanupTags.py
 tag:     3.2.0
 Deleted tag '3.2.0' (was 5c4bbac)
@@ -295,4 +320,4 @@ To github.com:WCRP-CMIP/CMIP6_CVs
  * [new tag]         6.2.3.5 -> 6.2.3.5
  * [new tag]         CMOR-3.2.7 -> CMOR-3.2.7
  * [new tag]         CMOR-3.2.8 -> CMOR-3.2.8
-'''
+"""

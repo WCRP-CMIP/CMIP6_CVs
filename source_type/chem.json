@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "chem",
+    "type": "source_type"
+}

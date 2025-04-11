@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "aogcm",
+    "type": "source_type"
+}

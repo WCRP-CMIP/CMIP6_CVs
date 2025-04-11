@@ -3,7 +3,6 @@
 
 from __future__ import print_function
 
-# import pdb
 from CMIP6Lib import (
     ascertainVersion,
     cleanString,
@@ -12,7 +11,9 @@ from CMIP6Lib import (
     getFileHistory,
     versionHistoryUpdate,
 )
-from durolib import readJsonCreateDict
+
+from urllib.request import urlopen
+
 import calendar
 import datetime
 import gc
@@ -21,18 +22,13 @@ import os
 import pdb
 import platform
 import re
+import requests
 import shlex
 import sys
 import subprocess
 import time
 
-
-# %% additional import statements
-try:
-    from urllib2 import urlopen  # py2
-except ImportError:
-    from urllib.request import urlopen  # py3
-
+# %% comments
 """
 Created on Mon Jul 11 14:12:21 2016
 
@@ -80,14 +76,17 @@ PJD 17 Dec 2024    - Revise EC-Earth3-Veg source_id entry https://github.com/WCR
 PJD 15 Jan 2025    - Revised EC-Earth3-ESM-1 source_id license history https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1222
 PJD 15 Jan 2025    - Deregistered source_id EC-Earth3-GrIS https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1223
 PJD 28 Feb 2025    - Revised E3SM-2-1 source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1218
+PJD 11 Apr 2025    - Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1105
+PJD 11 Apr 2025    - Removed durolib:readJsonCreateDict dependence; Removed urllib py2 ref
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
 @author: durack1
 """
 
+
 # %% Set commit message and author info
-commitMessage = '"Revised E3SM-2-1 source_id entry"'
+commitMessage = '"Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -168,10 +167,10 @@ tmp = [
         "https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_experiment_id.json",
     ]
 ]
-experiment_id = readJsonCreateDict(tmp)
-experiment_id = experiment_id.get("experiment_id")
-# Fudge to extract duplicate level
-experiment_id = experiment_id.get("experiment_id")
+
+response = requests.get(tmp[0][1])
+vars()[tmp[0][0]] = json.loads(response.text)
+experiment_id = experiment_id.get("experiment_id")  # Fudge to extract duplicate level
 del tmp
 
 # Fix issues
@@ -638,8 +637,9 @@ tmp = [
         "https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/CMIP6_source_id.json",
     ]
 ]
-source_id = readJsonCreateDict(tmp)
-source_id = source_id.get("source_id")
+
+response = requests.get(tmp[0][1])
+vars()[tmp[0][0]] = json.loads(response.text)
 source_id = source_id.get("source_id")  # Fudge to extract duplicate level
 del tmp
 
@@ -647,22 +647,23 @@ del tmp
 # License
 
 # Example fresh publication, no previous data
-key = "E3SM-2-1"
-print("processing:", key)
-licenseId = "CC BY 4.0"
-source_id[key]["cohort"] = ["Published"]
-source_id[key]["license_info"]["exceptions_contact"] = "@llnl.gov <- e3sm-data-support"
-source_id[key]["license_info"][
-    "history"
-] = "2024-02-05: initially published under CC BY 4.0"
-source_id[key]["license_info"]["id"] = licenseId
-licenseStr = license["license_options"][licenseId]["license_id"]
-licenseUrl = license["license_options"][licenseId]["license_url"]
-source_id[key]["license_info"]["license"] = "".join(
-    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
-)
-source_id[key]["license_info"]["source_specific_info"] = ""
-source_id[key]["license_info"]["url"] = licenseUrl
+for key in ["CAM-MPAS-HR", "CAM-MPAS-LR"]:
+    print("processing:", key)
+    licenseId = "CC BY 4.0"
+    source_id[key]["cohort"] = ["Published"]
+    source_id[key]["license_info"] = {}
+    source_id[key]["license_info"]["exceptions_contact"] = "@pnnl.gov <- bryce.harrop"
+    source_id[key]["license_info"][
+        "history"
+    ] = "2025-03-25: initially published under CC BY 4.0"
+    source_id[key]["license_info"]["id"] = licenseId
+    licenseStr = license["license_options"][licenseId]["license_id"]
+    licenseUrl = license["license_options"][licenseId]["license_url"]
+    source_id[key]["license_info"]["license"] = "".join(
+        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
+    )
+    source_id[key]["license_info"]["source_specific_info"] = ""
+    source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"
@@ -1284,10 +1285,10 @@ for jsonName in masterTargets:
     #    testDRS = {}
     # continue with existing entries
     # else:
-    vars()[target] = readJsonCreateDict(tmp)
-    vars()[target] = eval(target).get(jsonName)
-    # Fudge to extract duplicate level
-    vars()[target] = eval(target).get(jsonName)
+    response = requests.get(url)
+    vars()[target] = json.loads(response.text)
+    vars()[target] = eval(target).get(jsonName)  # Fudge to extract duplicate level
+
     # Test for updates
     # print(eval(target))
     # print(eval(jsonName))
@@ -1630,11 +1631,13 @@ tmp = [
         "https://raw.githubusercontent.com/WCRP-CMIP/CMIP6_CVs/master/src/versionHistory.json",
     ]
 ]
-versionHistory = readJsonCreateDict(tmp)
-versionHistory = versionHistory.get("versionHistory")
-# Fudge to extract duplicate level
-versionHistory = versionHistory.get("versionHistory")
+response = requests.get(tmp[0][1])
+versionHistory = json.loads(response.text)
+versionHistory = versionHistory.get(
+    "versionHistory"
+)  # Fudge to extract duplicate level
 del tmp
+
 # Test for version change and push tag
 versions = versionHistory["versions"]
 versionOld = ".".join(

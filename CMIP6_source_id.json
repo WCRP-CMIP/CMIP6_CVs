@@ -849,13 +849,21 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "PNNL-WACCEM"
             ],
             "label":"CAM-MPAS-HR",
             "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
+            "license_info":{
+                "exceptions_contact":"@pnnl.gov <- bryce.harrop",
+                "history":"2025-03-25: initially published under CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -898,13 +906,21 @@
                 "HighResMIP"
             ],
             "cohort":[
-                "Registered"
+                "Published"
             ],
             "institution_id":[
                 "PNNL-WACCEM"
             ],
             "label":"CAM-MPAS-LR",
             "label_extended":"CAM MPAS (Community Atmosphere Model - Model for Prediction Across Scales)",
+            "license_info":{
+                "exceptions_contact":"@pnnl.gov <- bryce.harrop",
+                "history":"2025-03-25: initially published under CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "model_component":{
                 "aerosol":{
                     "description":"none, prescribed MACv2-SP",
@@ -8077,13 +8093,13 @@
         }
     },
     "version_metadata":{
-        "CV_collection_modified":"Fri Feb 28 14:15:44 2025 -0800",
-        "CV_collection_version":"6.2.58.77",
+        "CV_collection_modified":"Fri Apr 11 10:41:49 2025 -0700",
+        "CV_collection_version":"6.2.58.78",
         "author":"Paul J. Durack <durack1@llnl.gov>",
         "institution_id":"PCMDI",
-        "previous_commit":"6e872533fd1ac9980d000aba0ba16334bc9a88dd",
-        "source_id_CV_modified":"Wed Jan 15 10:38:19 2025 -0800",
-        "source_id_CV_note":"Revised E3SM-2-1 source_id entry",
+        "previous_commit":"b24a277540237638751a2e89cd57cbd1d42a57f6",
+        "source_id_CV_modified":"Fri Feb 28 14:15:44 2025 -0800",
+        "source_id_CV_note":"Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries",
         "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
     }
 }

@@ -49,7 +49,7 @@ PJD 22 Jun 2022    - Updated dataTable libraries to latest 1.11.4 -> 1.12.1;
                    - TODO: Update default page lengths
 MSM 06 Dec 2022    - Add citation data (retrieved from citation service if -r option provided) and add links to each page at the top
 """
-"""2023
+"""2023-
 PJD 21 Feb 2023    - Updated args var to argDict, conflict issue with calling function
 PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    - Update jquery.dataTables-1.13.2.min.js line 71576 update
@@ -63,6 +63,7 @@ PJD 22 Feb 2023    - Updated sources to latest 1.12.1 -> 1.13.2; 3.6.0 -> 3.6.3
                    <table id="table_id" class="display compact" style="width:100%">
 PJD 21 Jun 2023    - Updated to point to PCMDI/assets jquery (3.7.0) and dataTables (1.13.4) libraries
 PJD 26 Jun 2023    - updated github.com/pcmdi/assets to separate jquery/dataTables source - see https://github.com/PCMDI/assets/pull/5
+PJD 15 Apr 2025    - updated retrieve_citation_data_expts to remove duplicate experiment_id entry, both TITLE and EXPERIMENT_id not required (TITLE includes mip_era, act_id and exp_id)
 """
 # This script takes the json file and turns it into a nice jquery/data-tabled html doc
 import argparse
@@ -70,6 +71,7 @@ from collections import defaultdict
 import gzip
 import json
 import os
+import pdb
 import re
 import requests
 import sys
@@ -122,10 +124,10 @@ def retrieve_citation_data_models(source_ids, regen=False):
 
                 for entry in citation_data_raw:
                     data_to_store = {i: entry[i] for i in REQUIRED_FIELDS}
-                    data_to_store[
-                        "SHORT_DATA_REFERENCE"
-                    ] = "{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}".format(
-                        **entry
+                    data_to_store["SHORT_DATA_REFERENCE"] = (
+                        "{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}".format(
+                            **entry
+                        )
                     )
                     citation_data[source_id][entry["INSTITUTION_ID"]][
                         entry["ACTIVITY_ID"]
@@ -158,7 +160,7 @@ def retrieve_citation_data_expts(source_ids, regen=False):
     source_id
         List of source ids to check for
     regen
-        If false return data from cached file, if false query citation service
+        If false return data from cached file, if true query citation service
 
     Returns a dictionary of the form {source_id: {DRS_ID: DOI_URL}}
     """
@@ -193,12 +195,11 @@ def retrieve_citation_data_expts(source_ids, regen=False):
 
                 for entry in citation_data_raw:
                     data_to_store = {i: entry[i] for i in REQUIRED_FIELDS}
-                    data_to_store[
-                        "SHORT_DATA_REFERENCE"
-                    ] = "{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE} {EXPERIMENT_ID}. {PUBLISHER}. doi:{DOI}".format(
-                        **entry
+                    data_to_store["SHORT_DATA_REFERENCE"] = (
+                        "{SHORT_AUTHORS} ({PUBLICATION_YEAR}). {TITLE}. {PUBLISHER}. doi:{DOI}".format(
+                            **entry
+                        )
                     )
-
                     citation_data[source_id][entry["INSTITUTION_ID"]][
                         entry["ACTIVITY_ID"]
                     ][entry["EXPERIMENT_ID"]] = data_to_store

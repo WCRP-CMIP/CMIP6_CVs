@@ -78,6 +78,7 @@ PJD 15 Jan 2025    - Deregistered source_id EC-Earth3-GrIS https://github.com/WC
 PJD 28 Feb 2025    - Revised E3SM-2-1 source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1218
 PJD 11 Apr 2025    - Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1105
 PJD 11 Apr 2025    - Removed durolib:readJsonCreateDict dependence; Removed urllib py2 ref
+PJD 18 Apr 2025    - Revised IPSL-CM6A-ATM-LR-REPROBUS source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -86,7 +87,7 @@ PJD 11 Apr 2025    - Removed durolib:readJsonCreateDict dependence; Removed urll
 
 
 # %% Set commit message and author info
-commitMessage = '"Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries"'
+commitMessage = '"Revised IPSL-CM6A-ATM-LR-REPROBUS source_id entry"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -647,23 +648,23 @@ del tmp
 # License
 
 # Example fresh publication, no previous data
-for key in ["CAM-MPAS-HR", "CAM-MPAS-LR"]:
-    print("processing:", key)
-    licenseId = "CC BY 4.0"
-    source_id[key]["cohort"] = ["Published"]
-    source_id[key]["license_info"] = {}
-    source_id[key]["license_info"]["exceptions_contact"] = "@pnnl.gov <- bryce.harrop"
-    source_id[key]["license_info"][
-        "history"
-    ] = "2025-03-25: initially published under CC BY 4.0"
-    source_id[key]["license_info"]["id"] = licenseId
-    licenseStr = license["license_options"][licenseId]["license_id"]
-    licenseUrl = license["license_options"][licenseId]["license_url"]
-    source_id[key]["license_info"]["license"] = "".join(
-        [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
-    )
-    source_id[key]["license_info"]["source_specific_info"] = ""
-    source_id[key]["license_info"]["url"] = licenseUrl
+key = "IPSL-CM6A-ATM-LR-REPROBUS"
+print("processing:", key)
+licenseId = "CC BY 4.0"
+source_id[key]["cohort"] = ["Published"]
+source_id[key]["license_info"] = {}
+source_id[key]["license_info"]["exceptions_contact"] = "@listes.ipsl.fr <- ipsl-cmip6"
+source_id[key]["license_info"][
+    "history"
+] = "2024-06-18: initially published under CC BY 4.0"
+source_id[key]["license_info"]["id"] = licenseId
+licenseStr = license["license_options"][licenseId]["license_id"]
+licenseUrl = license["license_options"][licenseId]["license_url"]
+source_id[key]["license_info"]["license"] = "".join(
+    [licenseStr, " (", licenseId, "; ", licenseUrl, ")"]
+)
+source_id[key]["license_info"]["source_specific_info"] = ""
+source_id[key]["license_info"]["url"] = licenseUrl
 
 # Example fresh publication, no previous data
 # key = "CanESM5-1"

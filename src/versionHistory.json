@@ -67,10 +67,10 @@
             "timeStamp":"Thu Dec 19 15:32:17 2019 -0800"
         },
         "source_id":{
-            "MD5":"b24a277540237638751a2e89cd57cbd1d42a57f6",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/b24a277540237638751a2e89cd57cbd1d42a57f6",
-            "commitMessage":"Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries",
-            "timeStamp":"Fri Apr 11 10:41:49 2025 -0700"
+            "MD5":"1e8961cb140d3246c70cdc24d2cc8404570de5dc",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/1e8961cb140d3246c70cdc24d2cc8404570de5dc",
+            "commitMessage":"Revised IPSL-CM6A-ATM-LR-REPROBUS source_id entry",
+            "timeStamp":"Fri Apr 18 16:28:35 2025 -0700"
         },
         "source_type":{
             "MD5":"fa3f07e9c215b35e0a54737acba2c2a9f6b8901f",
@@ -91,7 +91,7 @@
             "timeStamp":"Fri Jan 13 09:27:00 2017 -0700"
         },
         "versions":{
-            "versionCVCommit":78,
+            "versionCVCommit":79,
             "versionCVContent":58,
             "versionCVStructure":2,
             "versionMIPEra":6

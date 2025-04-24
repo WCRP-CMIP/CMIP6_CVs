@@ -149,6 +149,11 @@
                     "collection_id": "grid_label",
                     "is_required": true,
                     "kind": "collection"
+                },
+                {
+                    "collection_id": "version",
+                    "is_required": false,
+                    "kind": "collection"
                 }
             ]
         }

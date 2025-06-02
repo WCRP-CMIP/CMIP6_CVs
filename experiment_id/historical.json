@@ -1,5 +1,7 @@
 {
     "@context": "000_context.jsonld",
     "id": "historical",
-    "type": "experiment"
+    "type": "experiment",
+    "description" : "CMIP6 historical experiment : CMIP6 extends further, up to the start of the ScenarioMIP (future) experiments, which begin in 2015.",
+    "AI_description": "Simulations covering 1850–2014, where models are forced with the best-estimate, observation-based historical forcings, including updated greenhouse gas concentrations, aerosol emissions, land use change (LUH2), solar variability, and volcanic aerosols. CMIP6 historical includes improvements over CMIP5 such as refined aerosol–cloud interactions, improved treatment of short-lived climate forcers, and in some cases, emission-driven configurations to assess carbon cycle feedbacks. The experiment provides a consistent baseline for connecting historical simulations with ScenarioMIP future pathways."
 }

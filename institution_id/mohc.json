@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mohc",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK"
 }

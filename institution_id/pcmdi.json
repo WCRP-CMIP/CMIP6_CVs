@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "pcmdi",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Program for Climate Model Diagnosis and Intercomparison, Lawrence Livermore National Laboratory, Livermore, CA 94550, USA"
 }

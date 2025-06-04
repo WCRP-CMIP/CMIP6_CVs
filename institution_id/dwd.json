@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dwd",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Deutscher Wetterdienst, Offenbach am Main 63067, Germany"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ecmwf",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "European Centre for Medium-Range Weather Forecasts, Reading RG2 9AX, UK"
 }

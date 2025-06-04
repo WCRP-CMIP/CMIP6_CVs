@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "uhh",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Universitat Hamburg, Hamburg 20148, Germany"
 }

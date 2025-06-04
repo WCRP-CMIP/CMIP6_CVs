@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ntu",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "National Taiwan University, Taipei 10650, Taiwan"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "inm",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Institute for Numerical Mathematics, Russian Academy of Science, Moscow 119991, Russia"
 }

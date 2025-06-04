@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "csiro",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia"
 }

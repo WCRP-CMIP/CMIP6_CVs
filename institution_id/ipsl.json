@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ipsl",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Institut Pierre Simon Laplace, Paris 75252, France"
 }

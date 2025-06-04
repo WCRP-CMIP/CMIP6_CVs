@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ucsb",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Bren School of Environmental Science and Management, University of California, Santa Barbara. Mailing address: c/o Samantha Stevenson, 2400 Bren Hall, University of California Santa Barbara, Santa Barbara, CA 93106, USA"
 }

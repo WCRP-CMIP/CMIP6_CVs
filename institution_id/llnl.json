@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "llnl",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Lawrence Livermore National Laboratory, Livermore, CA 94550, USA. Mailing address: LLNL Climate Program, c/o Stephen A. Klein, Principal Investigator, L-103, 7000 East Avenue, Livermore, CA 94550, USA"
 }

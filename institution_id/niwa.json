@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "niwa",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "National Institute of Water and Atmospheric Research, Hataitai, Wellington 6021, New Zealand"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cas",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Chinese Academy of Sciences, Beijing 100029, China"
 }

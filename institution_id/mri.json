@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mri",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Meteorological Research Institute, Tsukuba, Ibaraki 305-0052, Japan"
 }

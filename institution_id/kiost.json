@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "kiost",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Korea Institute of Ocean Science and Technology, Busan 49111, Republic of Korea"
 }

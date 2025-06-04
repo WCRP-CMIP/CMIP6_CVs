@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nims-kma",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "National Institute of Meteorological Sciences/Korea Meteorological Administration, Climate Research Division, Seoho-bukro 33, Seogwipo-si, Jejudo 63568, Republic of Korea"
 }

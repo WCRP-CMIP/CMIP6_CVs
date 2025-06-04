@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fio-qlnm",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "FIO (First Institute of Oceanography, Ministry of Natural Resources, Qingdao 266061, China), QNLM (Qingdao National Laboratory for Marine Science and Technology, Qingdao 266237, China)"
 }

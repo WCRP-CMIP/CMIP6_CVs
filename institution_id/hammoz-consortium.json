@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hammoz-consortium",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "ETH Zurich, Switzerland; Max Planck Institut fur Meteorologie, Germany; Forschungszentrum Julich, Germany; University of Oxford, UK; Finnish Meteorological Institute, Finland; Leibniz Institute for Tropospheric Research, Germany; Center for Climate Systems Modeling (C2SM) at ETH Zurich, Switzerland"
 }

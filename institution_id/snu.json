@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "snu",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Seoul National University, Seoul 08826, Republic of Korea"
 }

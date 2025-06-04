@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "noaa-gfdl",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "National Oceanic and Atmospheric Administration, Geophysical Fluid Dynamics Laboratory, Princeton, NJ 08540, USA"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cccma",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria, BC V8P 5C2, Canada"
 }

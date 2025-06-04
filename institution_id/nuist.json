@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nuist",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Nanjing University of Information Science and Technology, Nanjing, 210044, China"
 }

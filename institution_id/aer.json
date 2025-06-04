@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "aer",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Research and Climate Group, Atmospheric and Environmental Research, 131 Hartwell Avenue, Lexington, MA 02421, USA"
 }

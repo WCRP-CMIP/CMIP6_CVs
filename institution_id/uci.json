@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "uci",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Department of Earth System Science, University of California Irvine, Irvine, CA 92697, USA"
 }

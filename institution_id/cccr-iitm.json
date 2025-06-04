@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cccr-iitm",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Centre for Climate Change Research, Indian Institute of Tropical Meteorology Pune, Maharashtra 411 008, India"
 }

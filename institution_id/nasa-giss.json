@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nasa-giss",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Goddard Institute for Space Studies, New York, NY 10025, USA"
 }

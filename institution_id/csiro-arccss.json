@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "csiro-arccss",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "CSIRO (Commonwealth Scientific and Industrial Research Organisation, Aspendale, Victoria 3195, Australia), ARCCSS (Australian Research Council Centre of Excellence for Climate System Science). Mailing address: CSIRO, c/o Simon J. Marsland, 107-121 Station Street, Aspendale, Victoria 3195, Australia"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "csiro-cosima",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "CSIRO (Commonwealth Scientific and Industrial Research Organisation, Australia), COSIMA (Consortium for Ocean-Sea Ice Modelling in Australia). Mailing address: CSIRO, c/o Simon J. Marsland, 107-121 Station Street, Aspendale, Victoria 3195, Australia"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "miroc",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and R-CCS (RIKEN Center for Computational Science, Hyogo 650-0047, Japan)"
 }

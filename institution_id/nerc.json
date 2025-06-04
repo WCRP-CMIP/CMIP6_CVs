@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nerc",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Natural Environment Research Council, STFC-RAL, Harwell, Oxford, OX11 0QX, UK"
 }

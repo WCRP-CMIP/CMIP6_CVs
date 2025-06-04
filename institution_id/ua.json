@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ua",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Department of Geosciences, University of Arizona, Tucson, AZ 85721, USA"
 }

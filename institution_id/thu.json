@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "thu",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Department of Earth System Science, Tsinghua University, Beijing 100084, China"
 }

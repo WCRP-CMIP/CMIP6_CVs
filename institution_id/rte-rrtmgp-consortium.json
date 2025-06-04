@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rte-rrtmgp-consortium",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "AER (Atmospheric and Environmental Research, Lexington, MA 02421, USA); UColorado (University of Colorado, Boulder, CO 80309, USA). Mailing address: AER c/o Eli Mlawer, 131 Hartwell Avenue, Lexington, MA 02421, USA"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cnrm-cerfacs",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)"
 }

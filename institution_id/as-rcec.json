@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "as-rcec",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Research Center for Environmental Changes, Academia Sinica, Nankang, Taipei 11529, Taiwan"
 }

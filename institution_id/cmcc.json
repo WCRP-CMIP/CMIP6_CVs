@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cmcc",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Fondazione Centro Euro-Mediterraneo sui Cambiamenti Climatici, Lecce 73100, Italy"
 }

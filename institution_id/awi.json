@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "awi",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Am Handelshafen 12, 27570 Bremerhaven, Germany"
 }

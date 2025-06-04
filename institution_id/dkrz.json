@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dkrz",
-    "type": "organisation"
+    "type": "organisation",
+    "description": "Deutsches Klimarechenzentrum, Hamburg 20146, Germany"
 }

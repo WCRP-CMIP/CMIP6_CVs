@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "es_doc",
+    "type": "further_info_url"
+}

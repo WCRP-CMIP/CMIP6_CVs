@@ -1,8 +1,0 @@
-{
-    "@context": {
-        "id": "@id",
-        "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/data_spec_version/",
-        "data_spec_version": "https://espri-mod.github.io/mip-cmor-tables/data_spec_version"
-    }
-}

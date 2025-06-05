@@ -131,7 +131,7 @@
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "member_id",
+                    "collection_id": "variant_label",
                     "is_required": true,
                     "kind": "collection"
                 },

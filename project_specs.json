@@ -157,5 +157,198 @@
                 }
             ]
         }
-    ]
+    ],
+    "global_attributes_specs": {
+        "required_global_attributes": [
+            {
+                "field": "Conventions",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "activity_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "activity_id",
+                "value_type": "string"
+            },
+            {
+                "field": "creation_date",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "datetime"
+            },
+            {
+                "field": "data_specs_version",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "experiment",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "experiment_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "experiment_id",
+                "value_type": "string"
+            },
+            {
+                "field": "forcing_index",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "integer"
+            },
+            {
+                "field": "frequency",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "further_info_url",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "grid",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "grid_label",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "grid_label",
+                "value_type": "string"
+            },
+            {
+                "field": "initialization_index",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "integer"
+            },
+            {
+                "field": "institution",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "institution_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "institution_id",
+                "value_type": "string"
+            },
+            {
+                "field": "license",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "mip_era",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "mip_era",
+                "value_type": "string"
+            },
+            {
+                "field": "nominal_resolution",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "physics_index",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "integer"
+            },
+            {
+                "field": "product",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "realization_index",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "integer"
+            },
+            {
+                "field": "realm",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "source",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "source_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "source_id",
+                "value_type": "string"
+            },
+            {
+                "field": "source_type",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "sub_experiment",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "sub_experiment_id",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "table_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "table_id",
+                "value_type": "string"
+            },
+            {
+                "field": "tracking_id",
+                "is_required": true,
+                "source_type": "field",
+                "value_type": "string"
+            },
+            {
+                "field": "variable_id",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "variable_id",
+                "value_type": "string"
+            },
+            {
+                "field": "variant_label",
+                "is_required": true,
+                "source_type": "collection",
+                "collection_id": "variant_label",
+                "value_type": "string"
+            }
+        ]
+    }
 }

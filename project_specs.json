@@ -158,196 +158,274 @@
             ]
         }
     ],
-    "global_attributes_specs":  [
-            {
-                "field": "Conventions",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+    "global_attributes_specs": [
+        {
+            "attribute_name": "Conventions",
+            "is_value_required": true,
+            "source": {
+                "value": "CF-1.7 CMIP-6.2",
+                "kind": "constant"
             },
-            {
-                "field": "activity_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "activity_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "activity_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "creation_date",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "datetime"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "creation_date",
+            "is_value_required": true,
+            "source": {
+                "kind": "direct"
             },
-            {
-                "field": "data_specs_version",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "datetime"
+        },
+        {
+            "attribute_name": "data_specs_version",
+            "is_value_required": true,
+            "source": {
+                "value": "01.00.21",
+                "kind": "constant"
             },
-            {
-                "field": "experiment",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "experiment",
+            "is_value_required": true,
+            "source": {
+                "computation_rule": "ui_label of experiment_id",
+                "kind": "computed"
             },
-            {
-                "field": "experiment_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "experiment_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "experiment_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "forcing_index",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "integer"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "forcing_index",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "forcing_index",
+                "kind": "collection"
             },
-            {
-                "field": "frequency",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "integer"
+        },
+        {
+            "attribute_name": "frequency",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "frequency",
+                "kind": "collection"
             },
-            {
-                "field": "further_info_url",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "further_info_url",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "further_info_url",
+                "kind": "collection"
             },
-            {
-                "field": "grid",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "grid",
+            "is_value_required": true,
+            "source": {
+                "computation_rule": "ui_label of grid_label",
+                "kind": "computed"
             },
-            {
-                "field": "grid_label",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "grid_label",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "grid_label",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "initialization_index",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "integer"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "initialization_index",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "initialization_index",
+                "kind": "collection"
             },
-            {
-                "field": "institution",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "integer"
+        },
+        {
+            "attribute_name": "institution",
+            "is_value_required": true,
+            "source": {
+                "computation_rule": "ui_label of institution_id",
+                "kind": "computed"
             },
-            {
-                "field": "institution_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "institution_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "institution_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "license",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "license",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "license",
+                "kind": "collection"
             },
-            {
-                "field": "mip_era",
-                "is_required": true,
-                "source_type": "collection",
-                "collection_id": "mip_era",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "mip_era",
+            "is_value_required": true,
+            "source": {
+                "value": "CMIP6",
+                "kind": "constant"
             },
-            {
-                "field": "nominal_resolution",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "nominal_resolution",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "nominal_resolution",
+                "kind": "collection"
             },
-            {
-                "field": "physics_index",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "integer"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "physics_index",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "physics_index",
+                "kind": "collection"
             },
-            {
-                "field": "product",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "integer"
+        },
+        {
+            "attribute_name": "product",
+            "is_value_required": true,
+            "source": {
+                "value": "model_output",
+                "kind": "constant"
             },
-            {
-                "field": "realization_index",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "integer"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "realization_index",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "realization_index",
+                "kind": "collection"
             },
-            {
-                "field": "realm",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "integer"
+        },
+        {
+            "attribute_name": "realm",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "realm",
+                "kind": "collection"
             },
-            {
-                "field": "source",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "source",
+            "is_value_required": true,
+            "source": {
+                "computation_rule": "ui_label of source_id",
+                "kind": "computed"
             },
-            {
-                "field": "source_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "source_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "source_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "source_type",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "source_type",
+            "is_value_required": true,
+            "source": {
+                "collection_id": "source_type",
+                "kind": "collection"
             },
-            {
-                "field": "sub_experiment",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "sub_experiment",
+            "is_value_required": false,
+            "source": {
+                "computation_rule": "ui_label of sub_experiment_id",
+                "kind": "computed"
             },
-            {
-                "field": "sub_experiment_id",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "sub_experiment_id",
+            "is_value_required": false,
+            "source": {
+                "collection_id": "sub_experiment_id",
+                "kind": "collection"
             },
-            {
-                "field": "table_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "table_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "table_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "tracking_id",
-                "is_required": true,
-                "source_type": "field",
-                "value_type": "string"
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "tracking_id",
+            "is_value_required": true,
+            "source": {
+                "kind": "direct"
             },
-            {
-                "field": "variable_id",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "variable_id",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "variable_id",
-                "value_type": "string"
+                "kind": "collection"
             },
-            {
-                "field": "variant_label",
-                "is_required": true,
-                "source_type": "collection",
+            "value_type": "string"
+        },
+        {
+            "attribute_name": "variant_label",
+            "is_value_required": true,
+            "source": {
                 "collection_id": "variant_label",
-                "value_type": "string"
-            }
-    ]
-    
+                "kind": "collection"
+            },
+            "value_type": "string"
+        }
+    ]                    
 }

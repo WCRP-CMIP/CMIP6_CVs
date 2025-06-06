@@ -158,8 +158,8 @@
             ]
         }
     ],
-    "global_attributes_specs": [
-        {
+    "global_attributes_specs": {
+        "Conventions": {
             "attribute_name": "Conventions",
             "is_value_required": true,
             "source": {
@@ -168,7 +168,7 @@
             },
             "value_type": "string"
         },
-        {
+        "activity_id": {
             "attribute_name": "activity_id",
             "is_value_required": true,
             "source": {
@@ -177,7 +177,7 @@
             },
             "value_type": "string"
         },
-        {
+        "creation_date": {
             "attribute_name": "creation_date",
             "is_value_required": true,
             "source": {
@@ -185,7 +185,7 @@
             },
             "value_type": "datetime"
         },
-        {
+        "data_specs_version": {
             "attribute_name": "data_specs_version",
             "is_value_required": true,
             "source": {
@@ -194,7 +194,7 @@
             },
             "value_type": "string"
         },
-        {
+        "experiment": {
             "attribute_name": "experiment",
             "is_value_required": true,
             "source": {
@@ -203,7 +203,7 @@
             },
             "value_type": "string"
         },
-        {
+        "experiment_id": {
             "attribute_name": "experiment_id",
             "is_value_required": true,
             "source": {
@@ -212,7 +212,7 @@
             },
             "value_type": "string"
         },
-        {
+        "forcing_index": {
             "attribute_name": "forcing_index",
             "is_value_required": true,
             "source": {
@@ -221,7 +221,7 @@
             },
             "value_type": "integer"
         },
-        {
+        "frequency": {
             "attribute_name": "frequency",
             "is_value_required": true,
             "source": {
@@ -230,7 +230,7 @@
             },
             "value_type": "string"
         },
-        {
+        "further_info_url": {
             "attribute_name": "further_info_url",
             "is_value_required": true,
             "source": {
@@ -239,7 +239,7 @@
             },
             "value_type": "string"
         },
-        {
+        "grid": {
             "attribute_name": "grid",
             "is_value_required": true,
             "source": {
@@ -248,7 +248,7 @@
             },
             "value_type": "string"
         },
-        {
+        "grid_label": {
             "attribute_name": "grid_label",
             "is_value_required": true,
             "source": {
@@ -257,7 +257,7 @@
             },
             "value_type": "string"
         },
-        {
+        "initialization_index": {
             "attribute_name": "initialization_index",
             "is_value_required": true,
             "source": {
@@ -266,7 +266,7 @@
             },
             "value_type": "integer"
         },
-        {
+        "institution": {
             "attribute_name": "institution",
             "is_value_required": true,
             "source": {
@@ -275,7 +275,7 @@
             },
             "value_type": "string"
         },
-        {
+        "institution_id": {
             "attribute_name": "institution_id",
             "is_value_required": true,
             "source": {
@@ -284,7 +284,7 @@
             },
             "value_type": "string"
         },
-        {
+        "license": {
             "attribute_name": "license",
             "is_value_required": true,
             "source": {
@@ -293,7 +293,7 @@
             },
             "value_type": "string"
         },
-        {
+        "mip_era": {
             "attribute_name": "mip_era",
             "is_value_required": true,
             "source": {
@@ -302,7 +302,7 @@
             },
             "value_type": "string"
         },
-        {
+        "nominal_resolution": {
             "attribute_name": "nominal_resolution",
             "is_value_required": true,
             "source": {
@@ -311,7 +311,7 @@
             },
             "value_type": "string"
         },
-        {
+        "physics_index": {
             "attribute_name": "physics_index",
             "is_value_required": true,
             "source": {
@@ -320,7 +320,7 @@
             },
             "value_type": "integer"
         },
-        {
+        "product": {
             "attribute_name": "product",
             "is_value_required": true,
             "source": {
@@ -329,7 +329,7 @@
             },
             "value_type": "string"
         },
-        {
+        "realization_index": {
             "attribute_name": "realization_index",
             "is_value_required": true,
             "source": {
@@ -338,7 +338,7 @@
             },
             "value_type": "integer"
         },
-        {
+        "realm": {
             "attribute_name": "realm",
             "is_value_required": true,
             "source": {
@@ -347,7 +347,7 @@
             },
             "value_type": "string"
         },
-        {
+        "source": {
             "attribute_name": "source",
             "is_value_required": true,
             "source": {
@@ -356,7 +356,7 @@
             },
             "value_type": "string"
         },
-        {
+        "source_id": {
             "attribute_name": "source_id",
             "is_value_required": true,
             "source": {
@@ -365,7 +365,7 @@
             },
             "value_type": "string"
         },
-        {
+        "source_type": {
             "attribute_name": "source_type",
             "is_value_required": true,
             "source": {
@@ -374,7 +374,7 @@
             },
             "value_type": "string"
         },
-        {
+        "sub_experiment": {
             "attribute_name": "sub_experiment",
             "is_value_required": false,
             "source": {
@@ -383,7 +383,7 @@
             },
             "value_type": "string"
         },
-        {
+        "sub_experiment_id": {
             "attribute_name": "sub_experiment_id",
             "is_value_required": false,
             "source": {
@@ -392,7 +392,7 @@
             },
             "value_type": "string"
         },
-        {
+        "table_id": {
             "attribute_name": "table_id",
             "is_value_required": true,
             "source": {
@@ -401,7 +401,7 @@
             },
             "value_type": "string"
         },
-        {
+        "tracking_id": {
             "attribute_name": "tracking_id",
             "is_value_required": true,
             "source": {
@@ -409,7 +409,7 @@
             },
             "value_type": "string"
         },
-        {
+        "variable_id": {
             "attribute_name": "variable_id",
             "is_value_required": true,
             "source": {
@@ -418,7 +418,7 @@
             },
             "value_type": "string"
         },
-        {
+        "variant_label": {
             "attribute_name": "variant_label",
             "is_value_required": true,
             "source": {
@@ -427,5 +427,5 @@
             },
             "value_type": "string"
         }
-    ]                    
+    }                    
 }

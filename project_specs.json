@@ -158,8 +158,7 @@
             ]
         }
     ],
-    "global_attributes_specs": {
-        "required_global_attributes": [
+    "global_attributes_specs":  [
             {
                 "field": "Conventions",
                 "is_required": true,
@@ -349,6 +348,6 @@
                 "collection_id": "variant_label",
                 "value_type": "string"
             }
-        ]
-    }
+    ]
+    
 }

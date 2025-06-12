@@ -164,129 +164,129 @@
         "specs": {
             "Conventions": {
                 "source_collection": "Conventions",
-                "value_type": "string",
+                "value_type": "string"
             },
             "activity_id": {
                 "source_collection": "activity_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "creation_date": {
                 "source_collection": "creation_date",
-                "value_type": "string",
+                "value_type": "string"
             },
             "data_specs_version": {
                 "source_collection": "data_specs_version",
-                "value_type": "string",
+                "value_type": "string"
             },
             "experiment": {
                 "source_collection": "experiment_id",
                 "specific_key": "description",
-                "value_type": "string",
+                "value_type": "string"
             },
             "experiment_id": {
                 "source_collection": "experiment_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "forcing_index": {
                 "source_collection": "forcing_index",
-                "value_type": "integer",
+                "value_type": "integer"
             },
             "frequency": {
                 "source_collection": "frequency",
-                "value_type": "string",
+                "value_type": "string"
             },
             "further_info_url": {
                 "source_collection": "further_info_url",
-                "value_type": "string",
+                "value_type": "string"
             },
             "grid": {
                 "source_collection": "grid_label",
                 "specific_key": "description",
-                "value_type": "string",
+                "value_type": "string"
             },
             "grid_label": {
                 "source_collection": "grid_label",
-                "value_type": "string",
+                "value_type": "string"
             },
             "initialization_index": {
                 "source_collection": "initialization_index",
-                "value_type": "integer",
+                "value_type": "integer"
             },
             "institution": {
                 "source_collection": "institution_id",
                 "specific_key": "description",
-                "value_type": "string",
+                "value_type": "string"
             },
             "institution_id": {
                 "source_collection": "institution_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "license": {
                 "source_collection": "license",
-                "value_type": "string",
+                "value_type": "string"
             },
             "mip_era": {
                 "source_collection": "mip_era",
-                "value_type": "string",
+                "value_type": "string"
             },
             "nominal_resolution": {
                 "source_collection": "nominal_resolution",
-                "value_type": "string",
+                "value_type": "string"
             },
             "physics_index": {
                 "source_collection": "physics_index",
-                "value_type": "integer",
+                "value_type": "integer"
             },
             "product": {
                 "source_collection": "product",
                 "default_value": "model_output",
-                "value_type": "string",
+                "value_type": "string"
             },
             "realization_index": {
                 "source_collection": "realization_index",
-                "value_type": "integer",
+                "value_type": "integer"
             },
             "realm": {
                 "source_collection": "realm",
-                "value_type": "string",
+                "value_type": "string"
             },
             "source": {
                 "source_collection": "source_id",
                 "specific_key": "description",
-                "value_type": "string",
+                "value_type": "string"
             },
             "source_id": {
                 "source_collection": "source_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "source_type": {
                 "source_collection": "source_type",
-                "value_type": "string",
+                "value_type": "string"
             },
             "sub_experiment": {
                 "source_collection": "sub_experiment_id",
                 "specific_key": "description",
-                "value_type": "string",
+                "value_type": "string"
             },
             "sub_experiment_id": {
                 "source_collection": "sub_experiment_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "table_id": {
                 "source_collection": "table_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "tracking_id": {
                 "source_collection": "tracking_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "variable_id": {
                 "source_collection": "variable_id",
-                "value_type": "string",
+                "value_type": "string"
             },
             "variant_label": {
                 "source_collection": "variant_label",
-                "value_type": "string",
+                "value_type": "string"
             }
         }
     }

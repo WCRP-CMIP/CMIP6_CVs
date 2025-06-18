@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "one_digit",
-    "type": "physics_index"
+    "type": "physic_index"
 }

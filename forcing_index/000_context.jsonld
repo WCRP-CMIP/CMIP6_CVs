@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/forcing_index/",
+        "forcing_index": "https://espri-mod.github.io/mip-cmor-tables/forcing_index"
+    }
+}

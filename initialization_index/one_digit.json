@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "one_digit",
+    "type": "initialization_index"
+}

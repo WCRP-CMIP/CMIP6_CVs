@@ -252,7 +252,7 @@
             },
             "source": {
                 "source_collection": "source_id",
-                "specific_key": "extended_label",
+                "specific_key": "label_extended",
                 "value_type": "string"
             },
             "source_id": {

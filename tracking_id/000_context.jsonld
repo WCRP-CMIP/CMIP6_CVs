@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/tracking_id/",
-        "variant_label": "https://espri-mod.github.io/mip-cmor-tables/tracking_id"
+        "tracking_id": "https://espri-mod.github.io/mip-cmor-tables/tracking_id"
     }
 }

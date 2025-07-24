@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "wsgmax10m",
+    "type": "variable"
+}

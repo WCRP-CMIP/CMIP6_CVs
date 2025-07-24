@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "soga",
+    "type": "variable"
+}

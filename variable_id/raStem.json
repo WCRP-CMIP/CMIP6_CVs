@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "raStem",
+    "type": "variable"
+}

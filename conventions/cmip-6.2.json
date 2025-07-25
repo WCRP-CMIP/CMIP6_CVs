@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "cf-1.7_cmip-6.2",
+    "id": "cmip-6.2",
     "type": "conventions"
 }

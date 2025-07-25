@@ -163,7 +163,7 @@
     "global_attributes_specs": {
         "specs": {
             "Conventions": {
-                "source_collection": "Conventions",
+                "source_collection": "conventions",
                 "value_type": "string"
             },
             "activity_id": {

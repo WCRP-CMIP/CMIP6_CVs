@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/license/",
-        "activity": "https://espri-mod.github.io/mip-cmor-tables/license"
+        "license": "https://espri-mod.github.io/mip-cmor-tables/license"
     }
 }

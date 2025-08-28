@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/resolution/",
-        "activity": "https://espri-mod.github.io/mip-cmor-tables/resolution"
+        "resolution": "https://espri-mod.github.io/mip-cmor-tables/resolution"
     }
 }

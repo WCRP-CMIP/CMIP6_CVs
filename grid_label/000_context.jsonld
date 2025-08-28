@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/grid/",
-        "grid_label": "https://espri-mod.github.io/mip-cmor-tables/grid"
+        "grid": "https://espri-mod.github.io/mip-cmor-tables/grid"
     }
 }

@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "multiple_digit",
-    "type": "realization_index"
+    "type": "realisation_index"
 }

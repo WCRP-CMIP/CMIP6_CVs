@@ -152,7 +152,7 @@ DRS["directory_path_sub_experiment_example"] = (
     "CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/"
 )
 DRS["filename_template"] = (
-    "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
+    "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>"
 )
 DRS["filename_example"] = (
     "tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc"

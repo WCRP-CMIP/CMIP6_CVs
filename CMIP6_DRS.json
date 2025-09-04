@@ -2,10 +2,10 @@
     "DRS":{
         "directory_path_example":"CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/",
         "directory_path_sub_experiment_example":"CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/",
-        "directory_path_template":"<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>",
+        "directory_path_template":"<mip_era><activity_id><institution_id><source_id><experiment_id><member_id><table_id><variable_id><grid_label><version>",
         "filename_example":"tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc",
         "filename_sub_experiment_example":"tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc",
-        "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>"
+        "filename_template":"<variable_id><table_id><source_id><experiment_id><member_id><grid_label>"
     },
     "version_metadata":{
         "CV_collection_modified":"Tue Sep  2 15:42:23 2025 -0700",

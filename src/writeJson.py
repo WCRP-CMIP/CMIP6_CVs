@@ -80,6 +80,7 @@ PJD 11 Apr 2025    - Revised CAM-MPAS-HR and CAM-MPAS-LR source_id entries https
 PJD 11 Apr 2025    - Removed durolib:readJsonCreateDict dependence; Removed urllib py2 ref
 PJD 18 Apr 2025    - Revised IPSL-CM6A-ATM-LR-REPROBUS source_id entry https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1051
 PJD  2 Sep 2025    - Updating the CMIP6_DRS.json file to match new CMOR 3.12 tighter template usage https://github.com/WCRP-CMIP/CMIP6_CVs/issues/1265
+PJD  4 Sep 2025    - Updating the CMIP6_DRS.json file to match new CMOR 3.12; remove delimiters https://github.com/WCRP-CMIP/CMIP6_CVs/pull/1268
                      - TODO: Review all start/end_year pairs for experiments https://github.com/WCRP-CMIP/CMIP6_CVs/issues/845
                      - TODO: Generate table_id from dataRequest https://github.com/WCRP-CMIP/CMIP6_CVs/issues/166
 
@@ -88,7 +89,7 @@ PJD  2 Sep 2025    - Updating the CMIP6_DRS.json file to match new CMOR 3.12 tig
 
 
 # %% Set commit message and author info
-commitMessage = '"Revised CMIP6_DRS filename template for CMOR 3.12"'
+commitMessage = '"Revised CMIP6_DRS directory and filename templates for CMOR 3.12"'
 # author = 'Matthew Mizielinski <matthew.mizielinski@metoffice.gov.uk>'
 # author_institution_id = 'MOHC'
 author = "Paul J. Durack <durack1@llnl.gov>"
@@ -144,7 +145,7 @@ activity_id = {
 # %% DRS - directory and filename templates
 DRS = {}
 DRS["directory_path_template"] = (
-    "<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>"
+    "<mip_era><activity_id><institution_id><source_id><experiment_id><member_id><table_id><variable_id><grid_label><version>"
 )
 DRS["directory_path_example"] = (
     "CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/"
@@ -153,7 +154,7 @@ DRS["directory_path_sub_experiment_example"] = (
     "CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/"
 )
 DRS["filename_template"] = (
-    "<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>"
+    "<variable_id><table_id><source_id><experiment_id><member_id><grid_label>"
 )
 DRS["filename_example"] = (
     "tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc"

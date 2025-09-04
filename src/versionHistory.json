@@ -1,10 +1,10 @@
 {
     "versionHistory":{
         "DRS":{
-            "MD5":"006b6e88397d74f4aee97e4f43a8db833f605c10",
-            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/006b6e88397d74f4aee97e4f43a8db833f605c10",
-            "commitMessage":"Revised CMIP6_DRS filename template for CMOR 3.12",
-            "timeStamp":"Tue Sep  2 15:42:23 2025 -0700"
+            "MD5":"6d8517ab7efac022ccb6bf847bf412683d524ee7",
+            "URL":"https://github.com/WCRP-CMIP/CMIP6_CVs/commit/6d8517ab7efac022ccb6bf847bf412683d524ee7",
+            "commitMessage":"Revised CMIP6_DRS directory and filename templates for CMOR 3.12",
+            "timeStamp":"Thu Sep  4 16:01:22 2025 -0700"
         },
         "activity_id":{
             "MD5":"1978084b171c7822174b979b042a05326a25ad1d",
@@ -92,7 +92,7 @@
         },
         "versions":{
             "versionCVCommit":0,
-            "versionCVContent":59,
+            "versionCVContent":60,
             "versionCVStructure":2,
             "versionMIPEra":6
         }

@@ -1,0 +1,98 @@
+# DIRECTORY DRS SPECIFICATIONS
+- type: directory
+  separator: /
+  parts:
+  - collection_id: mip_era
+    is_required: true
+    kind: collection
+  - collection_id: activity_id
+    is_required: true
+    kind: collection
+  - collection_id: institution_id
+    is_required: true
+    kind: collection
+  - collection_id: source_id
+    is_required: true
+    kind: collection
+  - collection_id: experiment_id
+    is_required: true
+    kind: collection
+  - collection_id: member_id
+    is_required: true
+    kind: collection
+  - collection_id: table_id
+    is_required: true
+    kind: collection
+  - collection_id: variable_id
+    is_required: true
+    kind: collection
+  - collection_id: grid_label
+    is_required: true
+    kind: collection
+  - collection_id: version
+    is_required: true
+    kind: collection
+
+# FILE NAME DRS SPECIFICATIONS
+- type: file_name
+  separator: _
+  properties:
+    extension: nc
+    extension_separator: .
+  parts:
+  - collection_id: variable_id
+    is_required: true
+    kind: collection
+  - collection_id: table_id
+    is_required: true
+    kind: collection
+  - collection_id: source_id
+    is_required: true
+    kind: collection
+  - collection_id: experiment_id
+    is_required: true
+    kind: collection
+  - collection_id: member_id
+    is_required: true
+    kind: collection
+  - collection_id: grid_label
+    is_required: true
+    kind: collection
+  - collection_id: time_range
+    is_required: false
+    kind: collection
+
+# DATASET ID DRS SPECIFICATIONS
+- type: dataset_id
+  separator: .
+  parts:
+  - collection_id: mip_era
+    is_required: true
+    kind: collection
+  - collection_id: activity_id
+    is_required: true
+    kind: collection
+  - collection_id: institution_id
+    is_required: true
+    kind: collection
+  - collection_id: source_id
+    is_required: true
+    kind: collection
+  - collection_id: experiment_id
+    is_required: true
+    kind: collection
+  - collection_id: member_id
+    is_required: true
+    kind: collection
+  - collection_id: table_id
+    is_required: true
+    kind: collection
+  - collection_id: variable_id
+    is_required: true
+    kind: collection
+  - collection_id: grid_label
+    is_required: true
+    kind: collection
+  - collection_id: version
+    is_required: false
+    kind: collection

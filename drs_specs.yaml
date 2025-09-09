@@ -1,5 +1,6 @@
 # DIRECTORY DRS SPECIFICATIONS
 - type: directory
+  regex: "^CMIP6/([A-Za-z0-9-]+/){8}v[0-9]{8}$"
   separator: /
   parts:
   - collection_id: mip_era
@@ -35,6 +36,7 @@
 
 # FILE NAME DRS SPECIFICATIONS
 - type: file_name
+  regex: "^([A-Za-z0-9-]+_){5}[A-Za-z0-9-]+(?:_[0-9]{6}-[0-9]{6})?\.nc$"
   separator: _
   properties:
     extension: nc
@@ -64,6 +66,7 @@
 
 # DATASET ID DRS SPECIFICATIONS
 - type: dataset_id
+  regex: "^CMIP6(\\.[A-Za-z0-9-]+){9}$"
   separator: .
   parts:
   - collection_id: mip_era
@@ -92,7 +95,4 @@
     kind: collection
   - collection_id: grid_label
     is_required: true
-    kind: collection
-  - collection_id: version
-    is_required: false
     kind: collection

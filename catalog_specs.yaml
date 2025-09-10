@@ -8,10 +8,6 @@ catalog_properties:
       version: v2.1.0
 
 dataset_properties:
-  - source_collection: version
-    source_collection_term: creationdatenb
-    catalog_field_value_type: string
-    is_required: true
   - source_collection: activity_id
     catalog_field_value_type: string_array
     is_required: true
@@ -107,7 +103,7 @@ dataset_properties:
   - source_collection: table_id
     catalog_field_value_type: string
     is_required: true
-  - source_collection: variable
+  - source_collection: variable_id
     source_collection_key: standard_name
     catalog_field_name: variable_cf_standard_name
     catalog_field_value_type: string
@@ -116,12 +112,12 @@ dataset_properties:
     catalog_field_name: variable
     catalog_field_value_type: string
     is_required: true
-  - source_collection: variable
+  - source_collection: variable_id
     source_collection_key: long_name
     catalog_field_name: variable_long_name
     catalog_field_value_type: string
     is_required: true
-  - source_collection: variable
+  - source_collection: variable_id
     source_collection_key: units
     catalog_field_name: variable_units
     catalog_field_value_type: string
@@ -129,10 +125,12 @@ dataset_properties:
   - source_collection: variant_label
     catalog_field_value_type: string
     is_required: true
+  - source_collection: version
+    source_collection_term: creationdatenb
+    catalog_field_value_type: string
+    is_required: true
 
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
     is_required: true
-
-

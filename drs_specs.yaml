@@ -1,5 +1,6 @@
 # DIRECTORY DRS SPECIFICATIONS
-- type: directory
+directory:
+  type: directory
   regex: '^CMIP6/([A-Za-z0-9-]+/){8}v[0-9]{8}$'
   separator: /
   parts:
@@ -35,7 +36,8 @@
     kind: collection
 
 # FILE NAME DRS SPECIFICATIONS
-- type: file_name
+file_name:
+  type: file_name
   regex: '^([A-Za-z0-9-]+_){5}[A-Za-z0-9-]+(?:_[0-9]{6}-[0-9]{6})?\.nc$'
   separator: _
   properties:
@@ -65,7 +67,8 @@
     kind: collection
 
 # DATASET ID DRS SPECIFICATIONS
-- type: dataset_id
+dataset_id:
+  type: dataset_id
   regex: '^CMIP6(\\.[A-Za-z0-9-]+){9}$'
   separator: .
   parts:

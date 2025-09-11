@@ -15,7 +15,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
   - source_collection: conventions
-    catalog_field_value_type: string
+    catalog_field_value_type: string_array
     is_required: true
   - source_collection: data_specs_version
     catalog_field_value_type: string
@@ -109,7 +109,6 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
   - source_collection: variable_id
-    catalog_field_name: variable
     catalog_field_value_type: string
     is_required: true
   - source_collection: variable_id

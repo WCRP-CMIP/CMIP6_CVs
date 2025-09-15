@@ -32,6 +32,7 @@ directory:
       is_required: true
       kind: collection
     - collection_id: version
+      source_collection_term: creation_datenb
       is_required: true
       kind: collection
 

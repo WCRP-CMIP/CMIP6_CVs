@@ -4,25 +4,25 @@ directory:
   regex: '^CMIP6/([A-Za-z0-9-]+/){8}v[0-9]{8}$'
   separator: /
   parts:
-    - collection_id: mip_era
+    - source_collection: mip_era
       is_required: true
-    - collection_id: activity_id
+    - source_collection: activity_id
       is_required: true
-    - collection_id: institution_id
+    - source_collection: institution_id
       is_required: true
-    - collection_id: source_id
+    - source_collection: source_id
       is_required: true
-    - collection_id: experiment_id
+    - source_collection: experiment_id
       is_required: true
-    - collection_id: member_id
+    - source_collection: member_id
       is_required: true
-    - collection_id: table_id
+    - source_collection: table_id
       is_required: true
-    - collection_id: variable_id
+    - source_collection: variable_id
       is_required: true
-    - collection_id: grid_label
+    - source_collection: grid_label
       is_required: true
-    - collection_id: version
+    - source_collection: version
       source_collection_term: creationdate
       is_required: true
 
@@ -35,19 +35,19 @@ file_name:
     extension: nc
     extension_separator: .
   parts:
-    - collection_id: variable_id
+    - source_collection: variable_id
       is_required: true
-    - collection_id: table_id
+    - source_collection: table_id
       is_required: true
-    - collection_id: source_id
+    - source_collection: source_id
       is_required: true
-    - collection_id: experiment_id
+    - source_collection: experiment_id
       is_required: true
-    - collection_id: member_id
+    - source_collection: member_id
       is_required: true
-    - collection_id: grid_label
+    - source_collection: grid_label
       is_required: true
-    - collection_id: time_range
+    - source_collection: time_range
       is_required: false
 
 # DATASET ID DRS SPECIFICATIONS
@@ -56,21 +56,21 @@ dataset_id:
   regex: '^CMIP6(\\.[A-Za-z0-9-]+){9}$'
   separator: .
   parts:
-    - collection_id: mip_era
+    - source_collection: mip_era
       is_required: true
-    - collection_id: activity_id
+    - source_collection: activity_id
       is_required: true
-    - collection_id: institution_id
+    - source_collection: institution_id
       is_required: true
-    - collection_id: source_id
+    - source_collection: source_id
       is_required: true
-    - collection_id: experiment_id
+    - source_collection: experiment_id
       is_required: true
-    - collection_id: member_id
+    - source_collection: member_id
       is_required: true
-    - collection_id: table_id
+    - source_collection: table_id
       is_required: true
-    - collection_id: variable_id
+    - source_collection: variable_id
       is_required: true
-    - collection_id: grid_label
+    - source_collection: grid_label
       is_required: true

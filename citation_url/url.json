@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cmip6_url",
+    "type": "citation_url"
+}

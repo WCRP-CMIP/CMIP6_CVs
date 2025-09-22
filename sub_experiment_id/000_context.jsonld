@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/sub_experiment/",
-        "activity": "https://espri-mod.github.io/mip-cmor-tables/sub_experiment"
+        "sub_experiment": "https://espri-mod.github.io/mip-cmor-tables/sub_experiment"
     }
 }

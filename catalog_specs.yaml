@@ -1,0 +1,135 @@
+version: v3.0.0
+
+catalog_properties:
+  name: stac
+  url_template: "https://stac-extensions.github.io/{extension_name}/{extension_version}/schema.json"
+  extensions:
+    - name: file
+      version: v2.1.0
+
+dataset_properties:
+  - source_collection: activity_id
+    catalog_field_value_type: string_array
+    is_required: true
+  - source_collection: citation_url
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: conventions
+    catalog_field_value_type: string_array
+    is_required: true
+  - source_collection: data_specs_version
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: experiment_id
+    source_collection_key: description
+    catalog_field_name: experiment
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: experiment_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: forcing_index
+    catalog_field_value_type: integer
+    is_required: true
+  - source_collection: frequency
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: further_info_url
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: grid_label
+    source_collection_key: description
+    catalog_field_name: grid
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: grid_label
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: initialization_index
+    catalog_field_value_type: integer
+    is_required: true
+  - source_collection: institution_id
+    source_collection_key: description
+    catalog_field_name: institution
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: institution_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: license
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: member_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: nominal_resolution
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: physics_index
+    catalog_field_value_type: integer
+    is_required: true
+  - source_collection: tracking_id
+    catalog_field_name: pid
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: product
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: realization_index
+    catalog_field_value_type: integer
+    is_required: true
+  - source_collection: realm
+    catalog_field_value_type: string_array
+    is_required: true
+  - source_collection: source_id
+    source_collection_key: label_extended
+    catalog_field_name: source
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: source_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: source_type
+    catalog_field_value_type: string_array
+    is_required: true
+  - source_collection: sub_experiment_id
+    source_collection_key: description
+    catalog_field_name: sub_experiment
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: sub_experiment_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: table_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: variable_id
+    source_collection_key: standard_name
+    catalog_field_name: variable_cf_standard_name
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: variable_id
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: variable_id
+    source_collection_key: long_name
+    catalog_field_name: variable_long_name
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: variable_id
+    source_collection_key: units
+    catalog_field_name: variable_units
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: variant_label
+    catalog_field_value_type: string
+    is_required: true
+  - source_collection: version
+    source_collection_term: creationdatenb
+    catalog_field_value_type: string
+    is_required: true
+
+file_properties:
+  - source_collection: tracking_id
+    catalog_field_value_type: string
+    is_required: true

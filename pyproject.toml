@@ -6,7 +6,7 @@ authors = [
     { name = "TROUSSELLIER Laurent", email = "laurent.troussellier@ipsl.fr" }
 ]
 dependencies = [
-    "esgvoc>=0.1.2",
+    "esgvoc>=1.0.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"
@@ -18,7 +18,7 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "esgvoc>=0.1.2",
+    "esgvoc>=1.0.0",
     "pytest>=8.3.4",
 ]
 
@@ -30,3 +30,6 @@ packages = ["src"]
 
 [tool.rye.scripts]
 hello = {cmd = ["python","hello.py"]}
+#
+# [tool.uv.sources]
+# esgvoc = { git = "https://github.com/ESGF/esgf-vocab.git", branch = "integration" }

@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/frequency/",
-        "activity": "https://espri-mod.github.io/mip-cmor-tables/frequency"
+        "frequency": "https://espri-mod.github.io/mip-cmor-tables/frequency"
     }
 }

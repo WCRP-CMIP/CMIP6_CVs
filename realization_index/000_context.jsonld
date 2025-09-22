@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/realisation_index/",
-        "realization_index": "https://espri-mod.github.io/mip-cmor-tables/realisation_index"
+        "realisation_index": "https://espri-mod.github.io/mip-cmor-tables/realisation_index"
     }
 }

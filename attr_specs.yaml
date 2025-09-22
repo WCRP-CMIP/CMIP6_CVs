@@ -1,13 +1,13 @@
-- source_collection: conventions
-  field_name: Conventions
-  is_required: true
-  value_type: string
 - source_collection: activity_id
   is_required: true
-  value_type: string
+  value_type: string_array
 - source_collection: creation_date
   is_required: true
   value_type: string
+- source_collection: conventions
+  field_name: Conventions
+  is_required: true
+  value_type: string_array
 - source_collection: data_specs_version
   is_required: true
   value_type: string
@@ -68,7 +68,7 @@
   value_type: integer
 - source_collection: realm
   is_required: true
-  value_type: string
+  value_type: string_array
 - source_collection: source_id
   specific_key: label_extended
   field_name: source
@@ -79,7 +79,7 @@
   value_type: string
 - source_collection: source_type
   is_required: true
-  value_type: string
+  value_type: string_array
 - source_collection: sub_experiment_id
   specific_key: description
   field_name: sub_experiment

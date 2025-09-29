@@ -53,7 +53,7 @@ file_name:
 # DATASET ID DRS SPECIFICATIONS
 dataset_id:
   type: dataset_id
-  regex: '^CMIP6(\\.[A-Za-z0-9-]+){9}$'
+  regex: '^CMIP6(\.[A-Za-z0-9-]+){9}$'
   separator: .
   parts:
     - source_collection: mip_era

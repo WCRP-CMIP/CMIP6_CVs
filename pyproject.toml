@@ -6,7 +6,7 @@ authors = [
     { name = "TROUSSELLIER Laurent", email = "laurent.troussellier@ipsl.fr" }
 ]
 dependencies = [
-    "esgvoc>=1.0.0",
+    "esgvoc>=1.1.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"
@@ -18,7 +18,7 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "esgvoc>=1.0.0",
+    "esgvoc>=1.1.3",
     "pytest>=8.3.4",
 ]
 

@@ -6,6 +6,8 @@ catalog_properties:
   extensions:
     - name: file
       version: v2.1.0
+    - name: alternate-assets
+      version: v2.1.0
 
 dataset_properties:
   - source_collection: activity_id
@@ -16,49 +18,47 @@ dataset_properties:
     is_required: true
   - source_collection: conventions
     catalog_field_value_type: string_array
-    is_required: true
+    is_required: false
   - source_collection: data_specs_version
     catalog_field_value_type: string
     is_required: true
-  - source_collection: experiment_id
-    source_collection_key: description
+  - source_collection: null
     catalog_field_name: experiment
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: experiment_id
     catalog_field_value_type: string
     is_required: true
   - source_collection: forcing_index
-    catalog_field_value_type: integer
-    is_required: true
+    catalog_field_value_type: string
+    is_required: false
   - source_collection: frequency
     catalog_field_value_type: string
     is_required: true
   - source_collection: further_info_url
     catalog_field_value_type: string
     is_required: true
-  - source_collection: grid_label
-    source_collection_key: description
+  - source_collection: null
     catalog_field_name: grid
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: grid_label
     catalog_field_value_type: string
     is_required: true
   - source_collection: initialization_index
-    catalog_field_value_type: integer
-    is_required: true
+    catalog_field_value_type: string
+    is_required: false
   - source_collection: institution_id
     source_collection_key: description
     catalog_field_name: institution
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: institution_id
     catalog_field_value_type: string
     is_required: true
   - source_collection: license
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: member_id
     catalog_field_value_type: string
     is_required: true
@@ -66,8 +66,8 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
   - source_collection: physics_index
-    catalog_field_value_type: integer
-    is_required: true
+    catalog_field_value_type: string
+    is_required: false
   - source_collection: tracking_id
     catalog_field_name: pid
     catalog_field_value_type: string
@@ -76,16 +76,15 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
   - source_collection: realization_index
-    catalog_field_value_type: integer
-    is_required: true
+    catalog_field_value_type: string
+    is_required: false
   - source_collection: realm
     catalog_field_value_type: string_array
     is_required: true
-  - source_collection: source_id
-    source_collection_key: label_extended
+  - source_collection: null
     catalog_field_name: source
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: source_id
     catalog_field_value_type: string
     is_required: true
@@ -96,7 +95,7 @@ dataset_properties:
     source_collection_key: description
     catalog_field_name: sub_experiment
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
   - source_collection: sub_experiment_id
     catalog_field_value_type: string
     is_required: true
@@ -132,4 +131,4 @@ dataset_properties:
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
-    is_required: true
+    is_required: false

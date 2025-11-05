@@ -6,7 +6,7 @@ catalog_properties:
   extensions:
     - name: file
       version: v2.1.0
-    - name: alternate-assets
+    - name: alternate_assets
       version: v2.1.0
 
 dataset_properties:

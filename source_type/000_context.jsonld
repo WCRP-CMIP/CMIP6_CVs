@@ -2,6 +2,6 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/source_type/"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/source_type/"
     }
 }

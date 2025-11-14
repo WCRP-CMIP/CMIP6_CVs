@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/data_specs_version/",
-        "data_specs_version": "https://espri-mod.github.io/mip-cmor-tables/data_specs_version"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/data_specs_version/",
+        "data_specs_version": "https://esgvoc.ipsl.fr/resource/universe/data_specs_version"
     }
 }

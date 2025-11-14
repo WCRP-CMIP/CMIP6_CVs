@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/product/",
-        "mip_era": "https://espri-mod.github.io/mip-cmor-tables/product/"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/product/",
+        "mip_era": "https://esgvoc.ipsl.fr/resource/universe/product/"
     }
 }

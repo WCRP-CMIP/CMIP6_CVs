@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/variable/",
-        "variable": "https://espri-mod.github.io/mip-cmor-tables/variable"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/variable/",
+        "variable": "https://esgvoc.ipsl.fr/resource/universe/variable"
     }
 }

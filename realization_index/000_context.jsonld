@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/realisation_index/",
-        "realisation_index": "https://esgvoc.ipsl.fr/resource/universe/realisation_index"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/realization_index/",
+        "realization_index": "https://esgvoc.ipsl.fr/resource/universe/realization_index"
     }
 }

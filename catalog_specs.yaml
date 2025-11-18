@@ -111,7 +111,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
   - source_collection: variable_id
-    source_collection_key: long_name
+    source_collection_key: description
     catalog_field_name: variable_long_name
     catalog_field_value_type: string
     is_required: true

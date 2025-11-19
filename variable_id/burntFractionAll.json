@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "burntFractionAll",
+    "id": "burntfractionall",
     "type": "variable"
 }

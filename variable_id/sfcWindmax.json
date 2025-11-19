@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "sfcWindmax",
+    "id": "sfcwindmax",
     "type": "variable"
 }

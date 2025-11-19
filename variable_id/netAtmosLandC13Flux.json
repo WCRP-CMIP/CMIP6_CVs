@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "netAtmosLandC13Flux",
+    "id": "netatmoslandc13flux",
     "type": "variable"
 }

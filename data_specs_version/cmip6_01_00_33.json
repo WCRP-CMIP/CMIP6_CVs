@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cmip6_01_00_33",
+    "type": "data_specs_version"
+}

@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/frequency/",
-        "frequency": "https://espri-mod.github.io/mip-cmor-tables/frequency"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/frequency/",
+        "frequency": "https://esgvoc.ipsl.fr/resource/universe/frequency"
     }
 }

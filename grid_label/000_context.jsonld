@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/grid/",
-        "grid": "https://espri-mod.github.io/mip-cmor-tables/grid"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid/",
+        "grid": "https://esgvoc.ipsl.fr/resource/universe/grid"
     }
 }

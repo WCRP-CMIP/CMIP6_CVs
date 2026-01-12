@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/citation_url/",
-        "citation_url": "https://espri-mod.github.io/mip-cmor-tables/citation_url"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/citation_url/",
+        "citation_url": "https://esgvoc.ipsl.fr/resource/universe/citation_url"
     }
 }

@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "vegHeight",
+    "id": "vegheight",
     "type": "variable"
 }

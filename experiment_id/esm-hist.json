@@ -1,5 +1,13 @@
 {
     "@context": "000_context.jsonld",
     "id": "esm-hist",
-    "type": "experiment"
+    "type": "experiment",
+    "experiment_id": "esm-hist",
+    "experiment": "ESM historical simulation",
+    "activity_id": ["cmip"],
+    "start_year": 1850,
+    "end_year": 2014,
+    "parent_activity_id": ["cmip"],
+    "parent_experiment_id": ["esm-picontrol"],
+    "sub_experiment_id": ["none"]
 }

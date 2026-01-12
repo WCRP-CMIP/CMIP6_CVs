@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/variant_label/",
-        "variant_label": "https://espri-mod.github.io/mip-cmor-tables/variant_label"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/variant_label/",
+        "variant_label": "https://esgvoc.ipsl.fr/resource/universe/variant_label"
     }
 }

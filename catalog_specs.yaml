@@ -1,4 +1,4 @@
-version: v3.0.1
+version: v3.0.2
 
 catalog_properties:
   name: stac
@@ -7,7 +7,9 @@ catalog_properties:
     - name: file
       version: v2.1.0
     - name: alternate-assets
-      version: v2.1.0
+      version: v1.2.0
+  regex_id: '^CMIP6(\.[A-Za-z0-9-]+){8}\.v[0-9]{8}$'
+  regex_base_id: '^CMIP6(\.[A-Za-z0-9-]+){8}$'
 
 dataset_properties:
   - source_collection: activity_id

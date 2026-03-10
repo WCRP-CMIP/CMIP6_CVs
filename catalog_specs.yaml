@@ -8,8 +8,8 @@ catalog_properties:
       version: v2.1.0
     - name: alternate-assets
       version: v1.2.0
-regex_id: '^CMIP6(\.[A-Za-z0-9-]+){8}\.v[0-9]{8}$'
-regex_base_id: '^CMIP6(\.[A-Za-z0-9-]+){8}$'
+  regex_id: '^CMIP6(\.[A-Za-z0-9-]+){8}\.v[0-9]{8}$'
+  regex_base_id: '^CMIP6(\.[A-Za-z0-9-]+){8}$'
 
 dataset_properties:
   - source_collection: activity_id
@@ -161,3 +161,4 @@ file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
     is_required: false
+

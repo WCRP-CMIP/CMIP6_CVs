@@ -157,8 +157,34 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
+link_properties:
+  # Pattern-based href validation
+  - rel: cite-as
+    href:
+      pattern: "^https?://cera-www\\.dkrz\\.de/WDCC/meta/CMIP6/.*$"
+    is_required: false
+
+  # URI format + const title (required link)
+  - rel: describedby
+    href:
+      format: uri
+    title:
+      const: "Documentation"
+    is_required: true
+
+  # Media type enum constraint
+  - rel: license
+    href:
+      format: uri
+    link_type:
+      enum: ["text/html", "application/pdf"]
+    is_required: true
+
+  # Minimal: just rel (href defaults to format: uri)
+  - rel: self
+    is_required: true
+
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
     is_required: false
-

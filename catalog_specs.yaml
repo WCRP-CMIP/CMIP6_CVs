@@ -165,7 +165,7 @@ link_properties:
     link_pattern: "^https?://furtherinfo.es-doc.org/CMIP6.*$"
     link_type: "text/html"
     title: "ES-DOC"
-    is_required: true
+    is_required: false
 
   - rel: related
     link_pattern: "^https?://errata.esgf.io/.*$"

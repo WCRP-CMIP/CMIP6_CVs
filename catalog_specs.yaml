@@ -1,4 +1,4 @@
-version: v3.0.2
+version: v3.0.3
 
 catalog_properties:
   name: stac
@@ -14,10 +14,6 @@ catalog_properties:
 dataset_properties:
   - source_collection: activity_id
     catalog_field_value_type: string_array
-    is_required: true
-
-  - source_collection: citation_url
-    catalog_field_value_type: string
     is_required: true
 
   - source_collection: conventions
@@ -42,10 +38,6 @@ dataset_properties:
     is_required: false
 
   - source_collection: frequency
-    catalog_field_value_type: string
-    is_required: true
-
-  - source_collection: further_info_url
     catalog_field_value_type: string
     is_required: true
 
@@ -157,12 +149,26 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: version
-    source_collection_term: creationdatenb
-    catalog_field_value_type: string
-    is_required: true
-
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
+    is_required: false
+
+link_properties:
+  - rel: cite-as
+    link_pattern: "^https?://cera-www\\.dkrz\\.de/WDCC/meta/CMIP6/.*$"
+    link_type: "application/json"
+    title: "Citation URL"
+    is_required: true
+
+  - rel: describedby
+    link_pattern: "^https?://furtherinfo.es-doc.org/CMIP6.*$"
+    link_type: "text/html"
+    title: "ES-DOC"
+    is_required: true
+
+  - rel: related
+    link_pattern: "^https?://errata.esgf.io/.*$"
+    link_type: "text/html"
+    title: "Errata issue"
     is_required: false

@@ -1,5 +1,5 @@
 {
-    "@context": "000_context.jsonld",
-    "id": "cc0_1.0",
-    "type": "license"
+  "@context": "000_context.jsonld",
+  "id": "cc0-1-0",
+  "type": "license"
 }

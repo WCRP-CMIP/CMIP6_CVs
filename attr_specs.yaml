@@ -7,7 +7,7 @@
 - source_collection: null
   attr_field_name: branch_method
   attr_field_value_type: string
-  attr_field_na_value = "no parent"
+  attr_field_na_value: "no parent"
   is_required: false
   
 - source_collection: null

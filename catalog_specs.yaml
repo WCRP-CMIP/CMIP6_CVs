@@ -43,6 +43,11 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
+  - source_collection: null
+    catalog_field_name: grid
+    catalog_field_value_type: string
+    is_required: false
+
   - source_collection: grid_label
     catalog_field_value_type: string
     is_required: true

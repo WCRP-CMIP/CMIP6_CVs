@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/calendar/",
+    "calendar": "https://esgvoc.ipsl.fr/resource/universe/calendar"
+  }
+}

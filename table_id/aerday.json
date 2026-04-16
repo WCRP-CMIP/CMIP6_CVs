@@ -1,5 +1,13 @@
 {
     "@context": "000_context.jsonld",
+<<<<<<< HEAD
     "id": "aerday",
+=======
+<<<<<<< HEAD:table_id/aermon.json
+    "id": "aermon",
+=======
+    "id": "aerday",
+>>>>>>> 64d9d631bbd3a5f9d3534dec43380e1099c22c7f:table_id/aerday.json
+>>>>>>> 64d9d631bbd3a5f9d3534dec43380e1099c22c7f
     "type": "table"
 }

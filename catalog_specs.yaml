@@ -1,4 +1,6 @@
-version: v3.0.3
+# STAC CATALOG SPECIFICATIONS
+
+version: v3.0.4
 
 catalog_properties:
   name: stac
@@ -16,7 +18,7 @@ dataset_properties:
     catalog_field_value_type: string_array
     is_required: true
 
-  - source_collection: conventions
+  - source_collection: Conventions
     catalog_field_value_type: string_array
     is_required: false
 
@@ -67,6 +69,10 @@ dataset_properties:
   - source_collection: license
     catalog_field_value_type: string
     is_required: false
+
+  - source_collection: mip_era
+    catalog_field_value_type: string
+    is_required: true
 
   - source_collection: member_id
     catalog_field_value_type: string

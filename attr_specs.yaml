@@ -91,19 +91,19 @@
 - source_collection: activity
   attr_field_name: parent_activity_id
   attr_field_value_type: string
-  attr_field_na_value = "no parent"
+  attr_field_na_value: "no parent"
   is_required: false
 
 - source_collection: experiment
   attr_field_name: parent_experiment_id
   attr_field_value_type: string
-  attr_field_na_value = "no parent"
+  attr_field_na_value: "no parent"
   is_required: false
 
 - source_collection: mip_era
   attr_field_name: parent_mip_era
   attr_field_value_type: string
-  attr_field_na_value = "no parent"
+  attr_field_na_value: "no parent"
   is_required: false
 
 - source_collection: source

@@ -88,13 +88,13 @@
   attr_field_value_type: string
   is_required: true
 
-- source_collection: activity
+- source_collection: activity_id
   attr_field_name: parent_activity_id
   attr_field_value_type: string
   attr_field_na_value: "no parent"
   is_required: false
 
-- source_collection: experiment
+- source_collection: experiment_id
   attr_field_name: parent_experiment_id
   attr_field_value_type: string
   attr_field_na_value: "no parent"
@@ -106,7 +106,7 @@
   attr_field_na_value: "no parent"
   is_required: false
 
-- source_collection: source
+- source_collection: source_id
   attr_field_name: parent_source_id
   attr_field_value_type: string
   attr_field_na_value: "no parent"
@@ -193,4 +193,3 @@
   attr_field_name: external_variables
   attr_field_value_type: string_array
   is_required: false
-

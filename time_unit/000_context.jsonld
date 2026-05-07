@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/regex/",
+        "regex": "https://esgvoc.ipsl.fr/resource/universe/regex/"
+    }
+}
+

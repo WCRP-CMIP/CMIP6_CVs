@@ -56,25 +56,16 @@ jobs:
           for r in idx['releases']:
               v = r.get('version', '')
               if v != 'dev-latest' and not r.get('is_prerelease'):
-                  sha = r.get('source_sha', '')
-                  if sha:
-                      print(sha)
-                  else:
-                      # Fallback: find nearest commit by publication date
-                      print(r.get('published_at', ''))
+                  print(r.get('source_sha', ''))
                   break
           else:
               print('')
           ")
 
           if [ -z "${SOURCE_SHA}" ]; then
-            # No prior release in registry — first release, diff from root commit
+            # No source_sha in registry — first release, diff from root commit
             echo "::warning::No source_sha in registry, falling back to root commit (first release)"
             SOURCE_SHA=$(git rev-list --max-parents=0 HEAD | tail -1)
-          elif [[ "${SOURCE_SHA}" == *"T"* ]]; then
-            # It's a date (fallback), find nearest commit before that date
-            echo "::warning::No source_sha in registry, using publication date ${SOURCE_SHA} to find base commit"
-            SOURCE_SHA=$(git log --before="${SOURCE_SHA}" -1 --format=%H)
           fi
 
           echo "sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"

@@ -68,8 +68,9 @@ jobs:
           ")
 
           if [ -z "${SOURCE_SHA}" ]; then
-            echo "::warning::No source_sha in registry, falling back to manifest history"
-            SOURCE_SHA=$(git log -1 --format=%H -- esgvoc_manifest.yaml)
+            # No prior release in registry — first release, diff from root commit
+            echo "::warning::No source_sha in registry, falling back to root commit (first release)"
+            SOURCE_SHA=$(git rev-list --max-parents=0 HEAD | tail -1)
           elif [[ "${SOURCE_SHA}" == *"T"* ]]; then
             # It's a date (fallback), find nearest commit before that date
             echo "::warning::No source_sha in registry, using publication date ${SOURCE_SHA} to find base commit"

@@ -2,9 +2,72 @@ schema_version: '1'
 project:
   id: cmip6
   name: CMIP6 Controlled Vocabulary
-cv_version: 0.0.0
+cv_version: 2.0.0
 universe_version: 1.0.11
 esgvoc:
   min_version: 4.0.0
 release_notes: |
-  Initial manifest.
+  - attr_specs.yaml: new
+  - catalog_specs.yaml: new
+  - drs_specs.yaml: new
+  - project_specs.yaml: new
+  - Conventions: new collection model
+  - activity_id: new collection model
+  - calendar: new collection model
+  - citation_url: new collection model
+  - creation_date: new collection model
+  - data_specs_version: new collection model
+  - experiment_id: new collection model
+  - forcing_index: new collection model
+  - frequency: new collection model
+  - further_info_url: new collection model
+  - grid_label: new collection model
+  - initialization_index: new collection model
+  - institution_id: new collection model
+  - license: new collection model
+  - member_id: new collection model
+  - mip_era: new collection model
+  - nominal_resolution: new collection model
+  - physics_index: new collection model
+  - product: new collection model
+  - realization_index: new collection model
+  - realm: new collection model
+  - source_id: new collection model
+  - source_type: new collection model
+  - sub_experiment_id: new collection model
+  - table_id: new collection model
+  - time_range: new collection model
+  - tracking_id: new collection model
+  - variable_id: new collection model
+  - variant_label: new collection model
+  - version: new collection model
+  - Conventions: 4 added
+  - activity_id: 24 added
+  - calendar: 11 added
+  - citation_url: 1 added
+  - creation_date: 1 added
+  - data_specs_version: 16 added
+  - experiment_id: 322 added
+  - forcing_index: 1 added
+  - frequency: 16 added
+  - further_info_url: 1 added
+  - grid_label: 45 added
+  - initialization_index: 1 added
+  - institution_id: 49 added
+  - license: 1 added
+  - member_id: 1 added
+  - mip_era: 5 added
+  - nominal_resolution: 15 added
+  - physics_index: 1 added
+  - product: 1 added
+  - realization_index: 1 added
+  - realm: 8 added
+  - source_id: 134 added
+  - source_type: 10 added
+  - sub_experiment_id: 74 added
+  - table_id: 43 added
+  - time_range: 5 added
+  - tracking_id: 1 added
+  - variable_id: 1320 added
+  - variant_label: 1 added
+  - version: 2 added

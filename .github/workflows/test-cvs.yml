@@ -22,11 +22,39 @@ jobs:
       - name: Install UV
         uses: astral-sh/setup-uv@v5
         with:
-          enable-cache: true
+          python-version: '3.11'
 
-      - name: test
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Create test environment and install esgvoc
         run: |
-          BRANCH="${{ github.head_ref || github.ref_name }}"
-          uvx esgvoc test run cmip6 \
-            --branch "$BRANCH" \
-            --universe-branch "$BRANCH"
+          uv venv
+          source .venv/bin/activate
+          uv pip install esgvoc
+
+      - name: Run esgvoc CV tests
+        env:
+          # The repo URL (GitHub Actions is already in the repo)
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          # The branch/commit being tested
+          TEST_BRANCH: ${{ github.head_ref || github.ref_name }}
+          # Universe branch (use esgvoc stable branch)
+          UNIVERSE_BRANCH: esgvoc
+          # Project name
+          PROJECT_NAME: cmip6
+        run: |
+          source .venv/bin/activate
+          echo "Testing CMIP6 CVs..."
+          echo "Repository: $REPO_URL"
+          echo "Branch: $TEST_BRANCH"
+          echo "Universe Branch: $UNIVERSE_BRANCH"
+
+          # Run complete test suite
+          esgvoc test run cmip6 \
+            --repo "$REPO_URL" \
+            --branch "$TEST_BRANCH" \
+            --universe-branch "$UNIVERSE_BRANCH"

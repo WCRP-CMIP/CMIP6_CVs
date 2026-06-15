@@ -1,0 +1,81 @@
+name: Test release (PR)
+
+on:
+  pull_request:
+    branches: [esgvoc]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test-and-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/setup-esgvoc
+
+      - name: Test cmip6 build
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: esgvoc test run cmip6 --branch "$BRANCH" --universe-branch main
+
+      - name: Detect changes
+        id: changes
+        uses: ./.github/actions/detect-changes
+        with:
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          github_token: ${{ github.token }}
+
+      - name: Post release preview
+        if: steps.changes.outputs.bump_type != 'none'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          CHANGELOG: ${{ steps.changes.outputs.changelog }}
+          BUMP_TYPE: ${{ steps.changes.outputs.bump_type }}
+          CURRENT_VERSION: ${{ steps.changes.outputs.current_version }}
+          NEXT_VERSION: ${{ steps.changes.outputs.next_version }}
+          WARNING: ${{ steps.changes.outputs.warning }}
+        run: |
+          # Clean up previous bot comments
+          gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]") | select(.body | contains("Release preview")) | .id' \
+            | xargs -I {} gh api -X DELETE "repos/${REPO}/issues/comments/{}" 2>/dev/null || true
+
+          WARN_BLOCK=""
+          if [ -n "${WARNING}" ]; then
+            WARN_BLOCK="> **Warning:** ${WARNING}"
+          fi
+
+          BODY=$(cat <<EOF
+          ## Release preview
+
+          ### Changelog
+          ${CHANGELOG}
+
+          ---
+
+          **Suggested bump:** \`${BUMP_TYPE}\` (${CURRENT_VERSION} → ${NEXT_VERSION})
+          ${WARN_BLOCK}
+
+          *The bump type is a suggestion based on the diff. Override when publishing if needed.*
+          EOF
+          )
+
+          gh pr comment "${PR_NUMBER}" --body "${BODY}"
+
+      - name: No CV changes
+        if: steps.changes.outputs.bump_type == 'none'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          gh pr comment "${PR_NUMBER}" --body "## Release preview
+
+          No CV files changed — no release needed."

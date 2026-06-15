@@ -1,0 +1,10 @@
+schema_version: '1'
+project:
+  id: cmip6
+  name: CMIP6 Controlled Vocabulary
+cv_version: 0.0.0
+universe_version: 1.0.11
+esgvoc:
+  min_version: 4.0.0
+release_notes: |
+  Initial manifest.

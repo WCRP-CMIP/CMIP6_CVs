@@ -1,0 +1,158 @@
+name: Detect CV changes
+description: Detect bump type, fetch registry version, compute next version, generate changelog
+
+inputs:
+  base_sha:
+    description: Base SHA to diff against
+    required: true
+  github_token:
+    description: GitHub token for registry API calls
+    required: true
+  fetch_universe:
+    description: Whether to fetch universe version from registry
+    required: false
+    default: "false"
+
+outputs:
+  bump_type:
+    description: "none, patch, minor, or major"
+    value: ${{ steps.bump.outputs.bump_type }}
+  warning:
+    description: Warning message (e.g. for spec changes)
+    value: ${{ steps.bump.outputs.warning }}
+  current_version:
+    description: Current version from registry
+    value: ${{ steps.registry.outputs.current_version }}
+  next_version:
+    description: Computed next version
+    value: ${{ steps.next.outputs.next_version }}
+  universe_version:
+    description: Universe version from registry (only if fetch_universe=true)
+    value: ${{ steps.registry.outputs.universe_version }}
+  changelog:
+    description: Markdown changelog
+    value: ${{ steps.changelog.outputs.changelog }}
+
+runs:
+  using: composite
+  steps:
+    # ---------------------------------------------------------------
+    # 1. Detect bump type from diff
+    # ---------------------------------------------------------------
+    - name: Detect bump type
+      id: bump
+      shell: bash
+      env:
+        BASE_SHA: ${{ inputs.base_sha }}
+      run: |
+        set -e
+
+        echo "Comparing ${BASE_SHA}..HEAD"
+
+        CHANGED=$(git diff --name-only --diff-filter=ACDMR "${BASE_SHA}..HEAD" -- \
+          ':(exclude)_src' ':(exclude)_tests' ':(exclude)_archive' ':(exclude)scripts' \
+          ':(exclude)*.md' ':(exclude)*.toml' ':(exclude)*.lock' ':(exclude)*.py' \
+          ':(exclude).github' ':(exclude)LICENSE*' ':(exclude).gitignore' \
+          ':(exclude).pre-commit-config.yaml' ':(exclude)esgvoc_manifest.yaml' || true)
+
+        if [ -z "${CHANGED}" ]; then
+          echo "No CV files changed"
+          echo "bump_type=none" >> "$GITHUB_OUTPUT"
+          echo "warning=" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+
+        echo "Changed files:"
+        echo "${CHANGED}"
+
+        BUMP="patch"
+        WARN=""
+
+        # New collections -> major
+        NEW_CONTEXTS=$(git diff --name-only --diff-filter=A "${BASE_SHA}..HEAD" -- '*/000_context.jsonld' || true)
+        if [ -n "${NEW_CONTEXTS}" ]; then
+          BUMP="major"
+        fi
+
+        # Spec changes -> minor minimum
+        if [ "${BUMP}" != "major" ]; then
+          SPEC_CHANGES=$(git diff --name-only --diff-filter=ACDMR "${BASE_SHA}..HEAD" -- '*_specs.yaml' || true)
+          if [ -n "${SPEC_CHANGES}" ]; then
+            BUMP="minor"
+            WARN="Spec files changed — at minimum a minor bump, could warrant major if it breaks downstream tooling."
+          fi
+        fi
+
+        # Modified collection models -> minor
+        if [ "${BUMP}" = "patch" ]; then
+          MOD_CONTEXTS=$(git diff --name-only --diff-filter=M "${BASE_SHA}..HEAD" -- '*/000_context.jsonld' || true)
+          if [ -n "${MOD_CONTEXTS}" ]; then
+            BUMP="minor"
+          fi
+        fi
+
+        echo "bump_type=${BUMP}" >> "$GITHUB_OUTPUT"
+        echo "warning=${WARN}" >> "$GITHUB_OUTPUT"
+        echo "Detected bump type: ${BUMP}"
+
+    # ---------------------------------------------------------------
+    # 2. Fetch current version from registry
+    # ---------------------------------------------------------------
+    - name: Fetch registry version
+      if: steps.bump.outputs.bump_type != 'none'
+      id: registry
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github_token }}
+        FETCH_UNIVERSE: ${{ inputs.fetch_universe }}
+      run: |
+        set -e
+
+        CURRENT=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/cmip6.json \
+          --jq '.content' | base64 -d | python3 .github/scripts/ci_version.py fetch-current)
+
+        echo "current_version=${CURRENT}" >> "$GITHUB_OUTPUT"
+        echo "Current registry version: ${CURRENT}"
+
+        if [ "${FETCH_UNIVERSE}" = "true" ]; then
+          UNIVERSE=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/universe.json \
+            --jq '.content' | base64 -d | python3 .github/scripts/ci_version.py fetch-universe)
+          echo "universe_version=${UNIVERSE}" >> "$GITHUB_OUTPUT"
+          echo "Universe version: ${UNIVERSE}"
+        fi
+
+    # ---------------------------------------------------------------
+    # 3. Compute next version
+    # ---------------------------------------------------------------
+    - name: Compute next version
+      if: steps.bump.outputs.bump_type != 'none'
+      id: next
+      shell: bash
+      env:
+        CURRENT: ${{ steps.registry.outputs.current_version }}
+        BUMP: ${{ steps.bump.outputs.bump_type }}
+      run: |
+        NEXT=$(python3 .github/scripts/ci_version.py compute-next --current "${CURRENT}" --bump "${BUMP}")
+        echo "next_version=${NEXT}" >> "$GITHUB_OUTPUT"
+        echo "Next version: ${NEXT}"
+
+    # ---------------------------------------------------------------
+    # 4. Generate changelog
+    # ---------------------------------------------------------------
+    - name: Generate changelog
+      if: steps.bump.outputs.bump_type != 'none'
+      id: changelog
+      shell: bash
+      env:
+        BASE_SHA: ${{ inputs.base_sha }}
+      run: |
+        CHANGELOG=$(python3 .github/scripts/ci_changelog.py "${BASE_SHA}")
+
+        {
+          echo "changelog<<CHANGELOG_EOF"
+          echo "${CHANGELOG}"
+          echo "CHANGELOG_EOF"
+        } >> "$GITHUB_OUTPUT"
+
+        echo "Changelog:"
+        echo "${CHANGELOG}"

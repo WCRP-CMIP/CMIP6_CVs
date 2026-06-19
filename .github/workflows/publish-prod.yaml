@@ -1,0 +1,169 @@
+name: Prepare release (merge to esgvoc)
+
+on:
+  push:
+    branches: [esgvoc]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prepare-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Skip if this is a manifest-only commit (from a previous run)
+      - name: Check if manifest-only commit
+        id: skip_check
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1..HEAD)
+          if [ "$CHANGED" = "esgvoc_manifest.yaml" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Manifest-only commit detected — skipping release."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: ./.github/actions/setup-esgvoc
+        if: steps.skip_check.outputs.skip != 'true'
+        with:
+          extra-packages: pyyaml
+
+      - name: Test cmip6 build
+        if: steps.skip_check.outputs.skip != 'true'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: esgvoc test run cmip6 --branch "$BRANCH" --universe-branch main
+
+      - name: Get last published source SHA
+        if: steps.skip_check.outputs.skip != 'true'
+        id: base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          # Fetch source_sha of the latest stable release from the registry
+          SOURCE_SHA=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/cmip6.json \
+            --jq '.content' | base64 -d | python3 -c "
+          import json, sys
+          idx = json.load(sys.stdin)
+          for r in idx['releases']:
+              v = r.get('version', '')
+              if v != 'dev-latest' and not r.get('is_prerelease'):
+                  print(r.get('source_sha', ''))
+                  break
+          else:
+              print('')
+          ")
+
+          if [ -z "${SOURCE_SHA}" ]; then
+            # No source_sha in registry — first release, diff from root commit
+            echo "::warning::No source_sha in registry, falling back to root commit (first release)"
+            SOURCE_SHA=$(git rev-list --max-parents=0 HEAD | tail -1)
+          fi
+
+          echo "sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"
+          echo "Base SHA: ${SOURCE_SHA}"
+
+      - name: Detect changes
+        if: steps.skip_check.outputs.skip != 'true'
+        id: changes
+        uses: ./.github/actions/detect-changes
+        with:
+          base_sha: ${{ steps.base.outputs.sha }}
+          github_token: ${{ github.token }}
+          fetch_universe: "true"
+
+      - name: Update manifest
+        if: steps.skip_check.outputs.skip != 'true' && steps.changes.outputs.bump_type != 'none'
+        env:
+          NEXT_VERSION: ${{ steps.changes.outputs.next_version }}
+          UNIVERSE_VERSION: ${{ steps.changes.outputs.universe_version }}
+          CHANGELOG: ${{ steps.changes.outputs.changelog }}
+        run: |
+          echo "${CHANGELOG}" | python3 .github/scripts/ci_update_manifest.py \
+            --version "${NEXT_VERSION}" \
+            --universe-version "${UNIVERSE_VERSION}" \
+            --changelog-file -
+
+          echo "Updated manifest:"
+          cat esgvoc_manifest.yaml
+
+      - name: Create manifest PR
+        id: manifest_pr
+        if: steps.skip_check.outputs.skip != 'true' && steps.changes.outputs.bump_type != 'none'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEXT_VERSION: ${{ steps.changes.outputs.next_version }}
+          CURRENT_VERSION: ${{ steps.changes.outputs.current_version }}
+          BUMP_TYPE: ${{ steps.changes.outputs.bump_type }}
+          CHANGELOG: ${{ steps.changes.outputs.changelog }}
+        run: |
+          BRANCH="chore/manifest-${NEXT_VERSION}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "${BRANCH}"
+          git add esgvoc_manifest.yaml
+          git diff --cached --quiet && echo "No manifest changes" && exit 0
+
+          git commit -m "chore: update manifest to ${NEXT_VERSION}"
+          git push origin "${BRANCH}"
+
+          BODY=$(cat <<EOF
+          ## Manifest update
+
+          **Version:** ${CURRENT_VERSION} → ${NEXT_VERSION} (${BUMP_TYPE})
+
+          ### Changelog
+          ${CHANGELOG}
+
+          ---
+
+          Once merged, publish the release:
+
+          \`\`\`bash
+          gh workflow run publish.yml \\
+            -R WCRP-CMIP/esgvoc_registry \\
+            -f project_id=cmip6 \\
+            -f bump_type=${BUMP_TYPE} \\
+            -f project_repo=WCRP-CMIP/CMIP6_CVs
+          \`\`\`
+          EOF
+          )
+
+          PR_URL=$(gh pr create \
+            --title "chore: update manifest to ${NEXT_VERSION}" \
+            --body "${BODY}" \
+            --base esgvoc \
+            --head "${BRANCH}")
+
+          echo "pr_url=${PR_URL}" >> "$GITHUB_OUTPUT"
+          echo "Manifest PR created: ${PR_URL}"
+
+      # Post manifest PR link on the PR that triggered this workflow
+      - name: Notify source PR
+        if: steps.manifest_pr.outputs.pr_url
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+          PR_URL: ${{ steps.manifest_pr.outputs.pr_url }}
+        run: |
+          # Find the PR that was just merged (by merge commit SHA)
+          SOURCE_PR=$(gh api "repos/${REPO}/commits/${COMMIT_SHA}/pulls" --jq '.[0].number // empty')
+
+          if [ -n "${SOURCE_PR}" ]; then
+            gh pr comment "${SOURCE_PR}" --body "Manifest PR created: ${PR_URL}"
+          fi
+
+      - name: No CV changes
+        if: steps.skip_check.outputs.skip != 'true' && steps.changes.outputs.bump_type == 'none'
+        run: echo "No CV files changed — no release needed."

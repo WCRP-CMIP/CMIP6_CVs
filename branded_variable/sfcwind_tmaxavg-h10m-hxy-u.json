@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfcwind_tmaxavg-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.sfcWindmax"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nppother_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.nppOther"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

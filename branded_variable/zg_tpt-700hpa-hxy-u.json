@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zg_tpt-700hpa-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlevPt.zg700"
+  ],
+  "table_id": [
+    "6hrplevpt"
+  ],
+  "frequency": [
+    "6hrpt"
+  ]
+}

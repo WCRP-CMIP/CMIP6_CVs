@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wap_tavg-p19-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.wap"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

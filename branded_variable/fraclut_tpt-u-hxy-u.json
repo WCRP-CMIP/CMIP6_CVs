@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fraclut_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.fracLut",
+    "Emon.fracLut"
+  ],
+  "table_id": [
+    "eyr",
+    "emon"
+  ],
+  "frequency": [
+    "yrpt",
+    "mon"
+  ]
+}

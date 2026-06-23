@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tran_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.tran"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hr"
+  ]
+}

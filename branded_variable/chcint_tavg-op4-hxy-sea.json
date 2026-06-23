@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "chcint_tavg-op4-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.chcint"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

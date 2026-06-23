@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tsl_tavg-sl-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.tsl",
+    "Lmon.tsl"
+  ],
+  "table_id": [
+    "eday",
+    "lmon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

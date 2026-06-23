@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "pflw_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.pflw",
+    "LImon.pflw"
+  ],
+  "table_id": [
+    "eday",
+    "limon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sdvo_tpt-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hrPt.sdvo"
+  ],
+  "table_id": [
+    "3hrpt"
+  ],
+  "frequency": [
+    "6hr"
+  ]
+}

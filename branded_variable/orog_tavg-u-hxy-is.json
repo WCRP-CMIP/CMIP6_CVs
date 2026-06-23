@@ -1,0 +1,23 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "orog_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "ImonGre.orog",
+    "ImonAnt.orog",
+    "IyrGre.orog",
+    "IyrAnt.orog",
+    "LImon.orogIs"
+  ],
+  "table_id": [
+    "imongre",
+    "imonant",
+    "iyrgre",
+    "iyrant",
+    "limon"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

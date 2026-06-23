@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "eminh3_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.eminh3"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

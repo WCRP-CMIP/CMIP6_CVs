@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsdo_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oday.rsdo"
+  ],
+  "table_id": [
+    "oday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dissi14c_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.dissi14c"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

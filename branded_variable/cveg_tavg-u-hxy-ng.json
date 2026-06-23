@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cveg_tavg-u-hxy-ng",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.cVegGrass"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

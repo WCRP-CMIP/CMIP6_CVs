@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftlf_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.sftlf"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

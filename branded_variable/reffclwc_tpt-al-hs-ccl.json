@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "reffclwc_tpt-al-hs-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Esubhr.reffclwc"
+  ],
+  "table_id": [
+    "esubhr"
+  ],
+  "frequency": [
+    "subhrpt"
+  ]
+}

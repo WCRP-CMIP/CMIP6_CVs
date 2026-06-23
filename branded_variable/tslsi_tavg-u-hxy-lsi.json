@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tslsi_tavg-u-hxy-lsi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.tslsi"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

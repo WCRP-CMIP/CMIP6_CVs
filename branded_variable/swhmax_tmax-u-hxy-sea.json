@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "swhmax_tmax-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.swhmax"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

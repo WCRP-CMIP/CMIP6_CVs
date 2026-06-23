@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nh4_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.nh4os"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

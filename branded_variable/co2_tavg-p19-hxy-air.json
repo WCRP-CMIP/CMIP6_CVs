@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "co2_tavg-p19-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.co2"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

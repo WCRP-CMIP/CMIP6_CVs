@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thkcellvo_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.thkcellvo"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

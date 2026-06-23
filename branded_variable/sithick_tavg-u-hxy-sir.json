@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sithick_tavg-u-hxy-sir",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sirdgthick",
+    "SIday.sirdgthick"
+  ],
+  "table_id": [
+    "simon",
+    "siday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

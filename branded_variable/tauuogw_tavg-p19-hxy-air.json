@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tauuogw_tavg-p19-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.tauuogw"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

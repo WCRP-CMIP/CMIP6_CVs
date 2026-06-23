@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "parasolrefl_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.parasolRefl",
+    "Emon.parasolRefl"
+  ],
+  "table_id": [
+    "eday",
+    "emon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

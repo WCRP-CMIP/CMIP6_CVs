@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tas_tmin-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.tasmin"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

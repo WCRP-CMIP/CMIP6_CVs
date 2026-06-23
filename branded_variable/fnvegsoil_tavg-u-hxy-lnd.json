@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fnvegsoil_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.fNVegSoil"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

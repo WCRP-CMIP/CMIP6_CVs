@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mmraerh2o_tavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.mmraerh2o"
+  ],
+  "table_id": [
+    "aerday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

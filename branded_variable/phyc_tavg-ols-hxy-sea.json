@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "phyc_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.phycos",
+    "Oday.phycos",
+    "Omon.phycosSouth30"
+  ],
+  "table_id": [
+    "omon",
+    "oday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

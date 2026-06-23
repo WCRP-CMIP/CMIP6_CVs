@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dtauc_tpt-al-hxy-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CF3hr.dtauc"
+  ],
+  "table_id": [
+    "cf3hr"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

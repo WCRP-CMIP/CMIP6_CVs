@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ra_tavg-u-hxy-shb",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.raShrub"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

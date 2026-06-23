@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "bldep_tmax-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.maxpblz"
+  ],
+  "table_id": [
+    "aerday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

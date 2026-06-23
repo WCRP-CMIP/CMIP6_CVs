@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "huss_tavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.hussSouth30",
+    "6hrPlev.huss",
+    "Amon.huss",
+    "day.huss"
+  ],
+  "table_id": [
+    "amon",
+    "6hrplev",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "6hr",
+    "day"
+  ]
+}

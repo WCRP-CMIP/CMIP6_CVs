@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clivi_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E3hr.clivi",
+    "CFday.clivi",
+    "Amon.cliviSouth30",
+    "Amon.clivi"
+  ],
+  "table_id": [
+    "e3hr",
+    "cfday",
+    "amon"
+  ],
+  "frequency": [
+    "3hr",
+    "day",
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "bldep_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hrPt.bldep"
+  ],
+  "table_id": [
+    "3hrpt"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

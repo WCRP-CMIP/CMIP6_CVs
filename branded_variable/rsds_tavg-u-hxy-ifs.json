@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsds_tavg-u-hxy-ifs",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.rsdsoni"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

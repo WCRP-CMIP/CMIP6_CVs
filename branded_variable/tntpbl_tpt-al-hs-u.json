@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tntpbl_tpt-al-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Esubhr.tntpbl"
+  ],
+  "table_id": [
+    "esubhr"
+  ],
+  "frequency": [
+    "subhrpt"
+  ]
+}

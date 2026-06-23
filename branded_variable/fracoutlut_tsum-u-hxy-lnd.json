@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fracoutlut_tsum-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.fracOutLut"
+  ],
+  "table_id": [
+    "eyr"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

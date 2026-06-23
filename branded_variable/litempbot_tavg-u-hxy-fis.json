@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "litempbot_tavg-u-hxy-fis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.litempbotfl",
+    "ImonAnt.litempbotfl",
+    "ImonGre.litempbotfl",
+    "IyrAnt.litempbotfl"
+  ],
+  "table_id": [
+    "iyrgre",
+    "imonant",
+    "imongre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr",
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "conccn_tpt-u-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E3hrPt.conccn"
+  ],
+  "table_id": [
+    "e3hrpt"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

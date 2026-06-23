@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nlittercwd_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.nLitterCwd"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

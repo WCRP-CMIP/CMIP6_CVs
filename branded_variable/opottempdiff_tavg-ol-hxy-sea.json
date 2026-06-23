@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "opottempdiff_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oyr.opottempdiff"
+  ],
+  "table_id": [
+    "oyr"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tauvo_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.tauvo",
+    "3hr.tauvo",
+    "Odec.tauvo"
+  ],
+  "table_id": [
+    "omon",
+    "3hr",
+    "odec"
+  ],
+  "frequency": [
+    "mon",
+    "3hr",
+    "dec"
+  ]
+}

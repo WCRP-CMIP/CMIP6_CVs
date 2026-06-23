@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "csoillut_tpt-u-hxy-multi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.cSoilLut"
+  ],
+  "table_id": [
+    "eyr"
+  ],
+  "frequency": [
+    "yrpt"
+  ]
+}

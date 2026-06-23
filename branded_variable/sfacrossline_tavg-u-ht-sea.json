@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfacrossline_tavg-u-ht-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.sfacrossline"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

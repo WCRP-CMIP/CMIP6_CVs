@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrro_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.mrroIs"
+  ],
+  "table_id": [
+    "limon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

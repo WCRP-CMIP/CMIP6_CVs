@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "opottemptend_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oyr.opottemptend",
+    "Odec.opottemptend"
+  ],
+  "table_id": [
+    "oyr",
+    "odec"
+  ],
+  "frequency": [
+    "yr",
+    "dec"
+  ]
+}

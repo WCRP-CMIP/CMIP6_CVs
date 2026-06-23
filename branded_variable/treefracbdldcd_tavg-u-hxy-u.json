@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "treefracbdldcd_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.treeFracBdlDcd"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

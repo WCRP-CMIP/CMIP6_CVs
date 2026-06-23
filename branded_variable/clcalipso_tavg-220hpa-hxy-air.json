@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clcalipso_tavg-220hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFmon.clhcalipso",
+    "CFmon.clhcalipsoSouth30",
+    "CFday.clhcalipso"
+  ],
+  "table_id": [
+    "cfmon",
+    "cfday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

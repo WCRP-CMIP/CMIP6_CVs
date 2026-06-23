@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rlds_tpt-u-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFsubhr.rlds"
+  ],
+  "table_id": [
+    "cfsubhr"
+  ],
+  "frequency": [
+    "subhrpt"
+  ]
+}

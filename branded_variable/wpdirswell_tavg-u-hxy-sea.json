@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wpdirswell_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.wpdirswell"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

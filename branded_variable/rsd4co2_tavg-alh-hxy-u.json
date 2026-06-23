@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsd4co2_tavg-alh-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFmon.rsd4co2"
+  ],
+  "table_id": [
+    "cfmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

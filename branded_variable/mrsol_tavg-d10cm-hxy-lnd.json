@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrsol_tavg-d10cm-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.mrsos",
+    "day.mrsos"
+  ],
+  "table_id": [
+    "lmon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

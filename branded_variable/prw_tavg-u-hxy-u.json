@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "prw_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.prw",
+    "Amon.prwSouth30",
+    "Eday.prw",
+    "E3hr.prw"
+  ],
+  "table_id": [
+    "amon",
+    "eday",
+    "e3hr"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "3hr"
+  ]
+}

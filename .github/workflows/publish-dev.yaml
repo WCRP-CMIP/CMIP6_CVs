@@ -1,0 +1,33 @@
+name: Test dev-latest snapshot
+
+on:
+  push:
+    branches: [esgvoc_dev]
+  pull_request:
+    branches: [esgvoc_dev]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-esgvoc
+
+      - name: Test cmip6 build
+        env:
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: esgvoc test run cmip6 --branch "$BRANCH" --universe-branch esgvoc_dev
+
+      - name: Print publish command
+        run: |
+          echo "============================================"
+          echo "  Test passed! To publish, run manually:"
+          echo ""
+          echo "  gh workflow run publish.yml \\"
+          echo "    -R WCRP-CMIP/esgvoc_registry \\"
+          echo "    -f project_id=cmip6 \\"
+          echo "    -f bump_type=dev-latest \\"
+          echo "    -f project_repo=WCRP-CMIP/CMIP6_CVs"
+          echo "============================================"

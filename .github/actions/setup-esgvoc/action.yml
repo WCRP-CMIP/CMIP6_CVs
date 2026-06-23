@@ -1,0 +1,21 @@
+name: Setup esgvoc
+description: Install Python 3.12 and esgvoc CLI
+
+inputs:
+  extra-packages:
+    description: Additional pip packages to install (space-separated)
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5.4.0
+      with:
+        python-version: "3.12"
+
+    - uses: astral-sh/setup-uv@v6
+
+    - name: Install esgvoc
+      shell: bash
+      run: uv pip install --system "esgvoc>=4.0.0" ${{ inputs.extra-packages }}

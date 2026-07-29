@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "subexp_variant",
+    "separator": "-",
+    "parts": [
+        {
+            "type": "sub_experiment_id",
+            "is_required": false
+        },
+        {
+            "type": "variant_label",
+            "id": "ripf",
+            "is_required": true
+        }
+    ],
+    "description": "",
     "type": "member_id"
 }

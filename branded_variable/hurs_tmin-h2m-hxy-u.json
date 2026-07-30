@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hurs_tmin-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.hursmin"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "simprefrozen_tavg-u-hxy-simp",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SIday.simprefrozen",
+    "SImon.simprefrozen"
+  ],
+  "table_id": [
+    "siday",
+    "simon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

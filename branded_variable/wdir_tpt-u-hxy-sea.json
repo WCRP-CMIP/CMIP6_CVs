@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wdir_tpt-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hrPt.wdir"
+  ],
+  "table_id": [
+    "3hrpt"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

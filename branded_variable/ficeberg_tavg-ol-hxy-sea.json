@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ficeberg_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.ficeberg",
+    "Omon.ficeberg"
+  ],
+  "table_id": [
+    "3hr",
+    "omon"
+  ],
+  "frequency": [
+    "3hr",
+    "mon"
+  ]
+}

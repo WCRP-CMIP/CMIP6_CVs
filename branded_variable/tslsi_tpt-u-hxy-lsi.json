@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tslsi_tpt-u-hxy-lsi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.tslsi"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

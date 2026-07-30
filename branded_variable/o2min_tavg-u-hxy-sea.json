@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o2min_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oday.o2min"
+  ],
+  "table_id": [
+    "oday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mlotst_tmax-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.mlotstmax"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

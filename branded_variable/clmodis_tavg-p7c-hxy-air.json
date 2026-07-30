@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clmodis_tavg-p7c-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFmon.clmodis",
+    "CFmon.clmodisSouth30"
+  ],
+  "table_id": [
+    "cfmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

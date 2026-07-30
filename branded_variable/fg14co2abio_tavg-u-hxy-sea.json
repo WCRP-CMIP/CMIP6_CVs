@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fg14co2abio_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.fg14co2abio"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

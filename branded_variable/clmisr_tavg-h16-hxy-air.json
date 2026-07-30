@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clmisr_tavg-h16-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.clmisr"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

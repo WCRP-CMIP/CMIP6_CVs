@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "grassfrac_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.grassFrac",
+    "Lmon.grassFrac"
+  ],
+  "table_id": [
+    "eyr",
+    "lmon"
+  ],
+  "frequency": [
+    "yr",
+    "mon"
+  ]
+}

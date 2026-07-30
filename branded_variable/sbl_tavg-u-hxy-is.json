@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sbl_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.sblIs",
+    "ImonAnt.sbl",
+    "ImonGre.sbl"
+  ],
+  "table_id": [
+    "limon",
+    "imonant",
+    "imongre"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

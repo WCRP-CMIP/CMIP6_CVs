@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "pfull_tclm-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.pfullSouth30",
+    "Amon.pfull"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "monc"
+  ]
+}

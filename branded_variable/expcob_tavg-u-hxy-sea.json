@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "expcob_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.expcob",
+    "Oday.expcob"
+  ],
+  "table_id": [
+    "omon",
+    "oday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wsg_tmax-h100m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.wsgmax100m",
+    "E1hr.wsgmax100m"
+  ],
+  "table_id": [
+    "emon",
+    "e1hr"
+  ],
+  "frequency": [
+    "mon",
+    "1hr"
+  ]
+}

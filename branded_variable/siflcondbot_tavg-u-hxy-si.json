@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "siflcondbot_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SIday.siflcondbot",
+    "SImon.siflcondbot"
+  ],
+  "table_id": [
+    "siday",
+    "simon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

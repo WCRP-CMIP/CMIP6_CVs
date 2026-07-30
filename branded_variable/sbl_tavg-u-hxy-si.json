@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sbl_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sisndmasssubl"
+  ],
+  "table_id": [
+    "simon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "uas_tpt-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hrPt.uas",
+    "6hrPlevPt.uas",
+    "E1hr.uas"
+  ],
+  "table_id": [
+    "3hrpt",
+    "6hrplevpt",
+    "e1hr"
+  ],
+  "frequency": [
+    "3hrpt",
+    "6hrpt",
+    "1hr"
+  ]
+}

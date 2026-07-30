@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fnveglitter_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.fNVegLitter"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

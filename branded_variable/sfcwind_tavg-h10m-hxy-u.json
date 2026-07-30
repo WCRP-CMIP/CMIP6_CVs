@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfcwind_tavg-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E1hr.sfcWindSouth30",
+    "Amon.sfcWindSouth30",
+    "6hrPlev.sfcWind",
+    "Amon.sfcWind",
+    "E1hr.sfcWind",
+    "E3hr.sfcWind",
+    "day.sfcWind"
+  ],
+  "table_id": [
+    "e1hr",
+    "amon",
+    "6hrplev",
+    "e3hr",
+    "day"
+  ],
+  "frequency": [
+    "1hr",
+    "mon",
+    "6hr",
+    "3hr",
+    "day"
+  ]
+}

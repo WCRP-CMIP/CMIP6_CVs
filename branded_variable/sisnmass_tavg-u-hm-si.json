@@ -1,0 +1,19 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sisnmass_tavg-u-hm-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sisnmassn",
+    "SIday.sisnmasss",
+    "SIday.sisnmassn",
+    "SImon.sisnmasss"
+  ],
+  "table_id": [
+    "simon",
+    "siday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

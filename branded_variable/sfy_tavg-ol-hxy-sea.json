@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfy_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.sfy"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ch4ref_ti-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERfx.ch4ref"
+  ],
+  "table_id": [
+    "aerfx"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

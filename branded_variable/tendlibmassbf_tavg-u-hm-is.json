@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tendlibmassbf_tavg-u-hm-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.tendlibmassbf",
+    "IyrAnt.tendlibmassbf"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

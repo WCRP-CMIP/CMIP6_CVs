@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tauunoegw_tavg-p39-hy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "EdayZ.tauunoegw"
+  ],
+  "table_id": [
+    "edayz"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

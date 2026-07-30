@@ -1,0 +1,19 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftgif_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.sftgif",
+    "IyrAnt.sftgif",
+    "LImon.sftgif"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant",
+    "limon"
+  ],
+  "frequency": [
+    "yr",
+    "mon"
+  ]
+}

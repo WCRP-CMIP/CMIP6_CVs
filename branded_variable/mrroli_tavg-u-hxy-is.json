@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrroli_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "ImonGre.mrroLi",
+    "ImonAnt.mrroLi"
+  ],
+  "table_id": [
+    "imongre",
+    "imonant"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

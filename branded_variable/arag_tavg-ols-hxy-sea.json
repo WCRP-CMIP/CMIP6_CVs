@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "arag_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.aragos"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

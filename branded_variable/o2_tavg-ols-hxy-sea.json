@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o2_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oday.o2os",
+    "Omon.o2os"
+  ],
+  "table_id": [
+    "oday",
+    "omon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

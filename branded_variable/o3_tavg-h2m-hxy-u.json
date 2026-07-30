@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o3_tavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERhr.sfo3"
+  ],
+  "table_id": [
+    "aerhr"
+  ],
+  "frequency": [
+    "1hr"
+  ]
+}

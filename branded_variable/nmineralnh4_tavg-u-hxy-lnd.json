@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nmineralnh4_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.nMineralNH4"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

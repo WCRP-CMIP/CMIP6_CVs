@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "chldiat_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.chldiat"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

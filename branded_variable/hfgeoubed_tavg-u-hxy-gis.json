@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfgeoubed_tavg-u-hxy-gis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.hfgeoubed",
+    "IyrAnt.hfgeoubed"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

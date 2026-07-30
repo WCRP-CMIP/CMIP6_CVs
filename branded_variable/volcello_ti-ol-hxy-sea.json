@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "volcello_ti-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Ofx.volcello"
+  ],
+  "table_id": [
+    "ofx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

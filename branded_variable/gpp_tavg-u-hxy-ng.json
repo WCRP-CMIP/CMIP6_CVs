@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "gpp_tavg-u-hxy-ng",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.gppGrass"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

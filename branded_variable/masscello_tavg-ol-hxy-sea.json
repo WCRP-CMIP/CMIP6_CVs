@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "masscello_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Odec.masscello",
+    "Omon.masscello"
+  ],
+  "table_id": [
+    "odec",
+    "omon"
+  ],
+  "frequency": [
+    "dec",
+    "mon"
+  ]
+}

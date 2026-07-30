@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "volo_tavg-u-hm-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Odec.volo",
+    "Omon.volo"
+  ],
+  "table_id": [
+    "odec",
+    "omon"
+  ],
+  "frequency": [
+    "dec",
+    "mon"
+  ]
+}

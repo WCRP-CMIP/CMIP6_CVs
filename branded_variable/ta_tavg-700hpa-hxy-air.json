@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta_tavg-700hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFday.ta700"
+  ],
+  "table_id": [
+    "cfday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

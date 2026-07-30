@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zg_tavg-p39-hy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmonZ.zg",
+    "EdayZ.zg"
+  ],
+  "table_id": [
+    "aermonz",
+    "edayz"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

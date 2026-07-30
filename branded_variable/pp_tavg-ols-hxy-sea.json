@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "pp_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.pposSouth30",
+    "Omon.ppos"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

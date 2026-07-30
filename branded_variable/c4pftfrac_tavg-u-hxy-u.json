@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "c4pftfrac_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.c4PftFrac"
+  ],
+  "table_id": [
+    "lmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

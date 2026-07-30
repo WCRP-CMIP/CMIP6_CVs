@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "reffclic_tavg-al-hxy-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.reffclic",
+    "Emon.reffclicSouth30"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

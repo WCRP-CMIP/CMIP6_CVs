@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "basin_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Ofx.basin"
+  ],
+  "table_id": [
+    "ofx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

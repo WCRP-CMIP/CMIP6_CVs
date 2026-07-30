@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "phydiaz_tavg-ols-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oday.phydiazos",
+    "Omon.phydiazos"
+  ],
+  "table_id": [
+    "oday",
+    "omon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

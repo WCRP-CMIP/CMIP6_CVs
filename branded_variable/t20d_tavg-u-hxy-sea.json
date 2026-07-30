@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "t20d_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.t20d",
+    "Emon.t20d"
+  ],
+  "table_id": [
+    "eday",
+    "emon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fngas_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.fNgas"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

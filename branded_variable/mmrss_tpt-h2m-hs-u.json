@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mmrss_tpt-h2m-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E3hrPt.mmrss"
+  ],
+  "table_id": [
+    "e3hrpt"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

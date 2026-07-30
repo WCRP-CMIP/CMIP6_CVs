@@ -1,0 +1,23 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "acabf_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "ImonAnt.acabf",
+    "ImonGre.acabf",
+    "IyrGre.acabf",
+    "IyrAnt.acabf",
+    "LImon.acabfIs"
+  ],
+  "table_id": [
+    "imonant",
+    "imongre",
+    "iyrgre",
+    "iyrant",
+    "limon"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

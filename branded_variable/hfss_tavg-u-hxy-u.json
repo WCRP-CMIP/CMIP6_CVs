@@ -1,0 +1,24 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfss_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.hfss",
+    "E1hr.hfss",
+    "3hr.hfss",
+    "Amon.hfss",
+    "Amon.hfssSouth30"
+  ],
+  "table_id": [
+    "day",
+    "e1hr",
+    "3hr",
+    "amon"
+  ],
+  "frequency": [
+    "day",
+    "1hrpt",
+    "3hr",
+    "mon"
+  ]
+}

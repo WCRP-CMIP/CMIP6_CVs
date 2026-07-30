@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "lai_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.lai",
+    "Eday.lai"
+  ],
+  "table_id": [
+    "lmon",
+    "eday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

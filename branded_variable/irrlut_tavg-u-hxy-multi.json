@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "irrlut_tavg-u-hxy-multi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.irrLut"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fco2all_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.fco2all"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

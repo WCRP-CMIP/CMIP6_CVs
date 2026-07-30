@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ffireall_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.fFireAll"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

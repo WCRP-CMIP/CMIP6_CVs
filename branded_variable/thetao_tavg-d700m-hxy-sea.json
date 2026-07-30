@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thetao_tavg-d700m-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.thetaot700"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

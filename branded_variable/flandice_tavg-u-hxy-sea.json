@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "flandice_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.flandice",
+    "Emon.flandice"
+  ],
+  "table_id": [
+    "3hr",
+    "emon"
+  ],
+  "frequency": [
+    "3hr",
+    "mon"
+  ]
+}

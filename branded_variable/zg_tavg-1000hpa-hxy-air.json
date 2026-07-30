@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zg_tavg-1000hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlev.zg1000",
+    "AERday.zg1000"
+  ],
+  "table_id": [
+    "6hrplev",
+    "aerday"
+  ],
+  "frequency": [
+    "6hr",
+    "day"
+  ]
+}

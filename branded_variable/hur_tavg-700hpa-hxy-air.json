@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hur_tavg-700hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFday.hur700"
+  ],
+  "table_id": [
+    "cfday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

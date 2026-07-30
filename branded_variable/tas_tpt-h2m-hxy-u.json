@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tas_tpt-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.tas"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "gppc13_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.gppc13"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

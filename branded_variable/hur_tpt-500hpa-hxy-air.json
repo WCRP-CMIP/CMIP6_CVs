@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hur_tpt-500hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlevPt.hur500"
+  ],
+  "table_id": [
+    "6hrplevpt"
+  ],
+  "frequency": [
+    "6hrpt"
+  ]
+}

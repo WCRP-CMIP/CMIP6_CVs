@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tas_tavg-h2m-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.tasIs"
+  ],
+  "table_id": [
+    "limon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

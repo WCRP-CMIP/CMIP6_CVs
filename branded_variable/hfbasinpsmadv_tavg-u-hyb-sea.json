@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfbasinpsmadv_tavg-u-hyb-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.hfbasinpsmadv"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zostoga_tavg-u-hm-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oday.zostoga",
+    "Omon.zostoga"
+  ],
+  "table_id": [
+    "oday",
+    "omon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

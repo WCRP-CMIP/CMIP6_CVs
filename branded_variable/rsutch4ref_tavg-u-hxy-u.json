@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsutch4ref_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.rsutch4ref"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

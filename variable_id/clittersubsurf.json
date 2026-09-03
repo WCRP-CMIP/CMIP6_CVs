@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "clittersubsurf",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "subsurface_litter_carbon_content"
+    ]
 }

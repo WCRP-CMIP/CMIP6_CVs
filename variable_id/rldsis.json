@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rldsis",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_downwelling_longwave_flux"
+    ]
 }

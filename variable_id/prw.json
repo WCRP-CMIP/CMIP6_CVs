@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "prw",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_water_vapor_content"
+    ]
 }

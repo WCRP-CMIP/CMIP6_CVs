@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsuscs",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_upwelling_shortwave_flux_assuming_clear_sky"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "limfediaz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "iron_growth_limitation_of_diazotrophs"
+    ]
 }

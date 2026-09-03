@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "prveg",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "precipitation_flux_onto_canopy_where_land"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "npp",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "net_primary_productivity_of_carbon"
+    ]
 }

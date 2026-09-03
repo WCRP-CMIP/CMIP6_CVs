@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "ra",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "plant_respiration_carbon_flux"
+    ]
 }

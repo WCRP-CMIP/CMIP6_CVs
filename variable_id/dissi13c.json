@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "dissi13c",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mole_concentration_of_dissolved_inorganic_carbon13_in_sea_water"
+    ]
 }

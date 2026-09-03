@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcsaf",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "toa_outgoing_shortwave_flux_assuming_clean_clear_sky"
+    ]
 }

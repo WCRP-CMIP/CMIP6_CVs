@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftmrhompa",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": []
 }

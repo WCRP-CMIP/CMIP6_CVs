@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrno3",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mass_fraction_of_nitrate_dry_aerosol_in_air"
+    ]
 }

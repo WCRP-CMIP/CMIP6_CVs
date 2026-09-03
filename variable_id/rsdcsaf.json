@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdcsaf",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "downwelling_shortwave_flux_in_air_assuming_clean_clear_sky"
+    ]
 }

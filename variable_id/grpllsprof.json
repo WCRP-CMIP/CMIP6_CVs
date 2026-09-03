@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "grpllsprof",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "large_scale_graupel_flux"
+    ]
 }

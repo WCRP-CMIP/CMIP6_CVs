@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadnh4",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_mass_content_of_ammonium_dry_aerosol"
+    ]
 }

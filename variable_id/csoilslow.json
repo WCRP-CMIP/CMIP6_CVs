@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoilslow",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "slow_soil_pool_carbon_content"
+    ]
 }

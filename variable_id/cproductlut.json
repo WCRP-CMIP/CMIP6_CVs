@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "cproductlut",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "carbon_content_of_forestry_and_agricultural_products",
+        "carbon_content_of_products_of_anthropogenic_land_use_change"
+    ]
 }

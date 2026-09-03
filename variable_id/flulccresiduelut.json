@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "flulccresiduelut",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "carbon_mass_flux_into_soil_and_litter_due_to_anthropogenic_land_use_or_land_cover_change"
+    ]
 }

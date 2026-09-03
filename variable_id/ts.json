@@ -1,5 +1,10 @@
 {
     "@context": "000_context.jsonld",
     "id": "ts",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_temperature_where_land",
+        "surface_temperature_where_open_sea",
+        "surface_temperature_where_snow"
+    ]
 }

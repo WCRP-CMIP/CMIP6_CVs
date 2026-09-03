@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "cleaf",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "leaf_carbon_content"
+    ]
 }

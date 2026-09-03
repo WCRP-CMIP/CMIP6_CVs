@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "lwsnl",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "liquid_water_content_of_snow_layer"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "limndiaz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "nitrogen_growth_limitation_of_diazotrophs"
+    ]
 }

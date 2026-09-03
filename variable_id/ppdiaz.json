@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "ppdiaz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_mole_concentration_of_particulate_organic_matter_expressed_as_carbon_in_sea_water_due_to_net_primary_production_by_diazotrophs"
+    ]
 }

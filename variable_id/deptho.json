@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "deptho",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "sea_floor_depth"
+    ]
 }

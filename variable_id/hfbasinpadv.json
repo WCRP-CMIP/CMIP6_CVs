@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfbasinpadv",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "northward_ocean_heat_transport_due_to_bolus_advection"
+    ]
 }

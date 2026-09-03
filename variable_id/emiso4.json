@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "emiso4",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_due_to_emission"
+    ]
 }

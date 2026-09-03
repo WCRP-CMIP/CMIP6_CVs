@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "noy",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mole_fraction_of_total_reactive_nitrogen_in_air"
+    ]
 }

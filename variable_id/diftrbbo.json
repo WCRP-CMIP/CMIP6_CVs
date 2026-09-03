@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "diftrbbo",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "ocean_tracer_bolus_biharmonic_diffusivity"
+    ]
 }

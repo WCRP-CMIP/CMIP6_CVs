@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnkebto",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_ocean_eddy_kinetic_energy_content_due_to_bolus_transport"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "loaddust",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_mass_content_of_dust_dry_aerosol"
+    ]
 }

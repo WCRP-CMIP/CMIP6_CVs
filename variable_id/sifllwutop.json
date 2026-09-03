@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sifllwutop",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_upwelling_longwave_flux"
+    ]
 }

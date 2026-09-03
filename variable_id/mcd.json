@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mcd",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": []
 }

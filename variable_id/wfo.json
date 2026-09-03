@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "wfo",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "water_flux_into_ocean"
+    ]
 }

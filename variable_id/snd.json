@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "snd",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_snow_thickness_where_sea_ice"
+    ]
 }

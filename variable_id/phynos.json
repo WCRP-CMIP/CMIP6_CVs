@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "phynos",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mole_concentration_of_phytoplankton_in_sea_water_expressed_as_nitrogen"
+    ]
 }

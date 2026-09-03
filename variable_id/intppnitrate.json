@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "intppnitrate",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "net_primary_mole_productivity_of_carbon_due_to_nitrate_utilization"
+    ]
 }

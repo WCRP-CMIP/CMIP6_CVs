@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "twap",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "product_of_air_temperature_and_omega",
+        "product_of_omega_and_air_temperature"
+    ]
 }

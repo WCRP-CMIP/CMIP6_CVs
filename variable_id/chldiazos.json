@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "chldiazos",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mass_concentration_of_diazotrophs_expressed_as_chlorophyll_in_sea_water"
+    ]
 }

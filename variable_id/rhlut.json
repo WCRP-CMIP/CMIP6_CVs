@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhlut",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "heterotrophic_respiration_carbon_flux"
+    ]
 }

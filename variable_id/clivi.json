@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "clivi",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_cloud_ice_content"
+    ]
 }

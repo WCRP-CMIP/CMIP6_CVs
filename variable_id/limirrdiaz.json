@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "limirrdiaz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "growth_limitation_of_diazotrophs_due_to_solar_irradiance"
+    ]
 }

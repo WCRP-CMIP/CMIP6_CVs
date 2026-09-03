@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisnhc",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "snow_thermal_energy_content"
+    ]
 }

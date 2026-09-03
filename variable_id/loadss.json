@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadss",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_mass_content_of_seasalt_dry_aerosol",
+        "atmosphere_mass_content_of_seasalt_dry_aerosol_particles"
+    ]
 }

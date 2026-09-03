@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "bry",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mole_fraction_of_total_inorganic_bromine_in_air"
+    ]
 }

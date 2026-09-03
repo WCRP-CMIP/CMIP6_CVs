@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "conccn",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "number_concentration_of_ambient_aerosol_in_air"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "vwap",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "product_of_northward_wind_and_omega"
+    ]
 }

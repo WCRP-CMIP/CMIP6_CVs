@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "epfz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "upward_eliassen_palm_flux"
+    ]
 }

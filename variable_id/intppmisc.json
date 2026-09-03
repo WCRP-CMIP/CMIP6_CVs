@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "intppmisc",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "net_primary_mole_productivity_of_carbon_by_miscellaneous_phytoplankton"
+    ]
 }

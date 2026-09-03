@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550ss",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_optical_thickness_due_to_seasalt_ambient_aerosol",
+        "atmosphere_optical_thickness_due_to_seasalt_ambient_aerosol_particles"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmraerh2o",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mass_fraction_of_water_in_ambient_aerosol_in_air"
+    ]
 }

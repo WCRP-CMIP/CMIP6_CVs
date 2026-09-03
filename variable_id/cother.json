@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "cother",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "miscellaneous_living_matter_carbon_content"
+    ]
 }

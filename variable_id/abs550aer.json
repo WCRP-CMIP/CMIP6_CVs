@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550aer",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_absorption_optical_thickness_due_to_ambient_aerosol"
+    ]
 }

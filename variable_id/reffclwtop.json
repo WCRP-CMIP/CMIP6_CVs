@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclwtop",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "effective_radius_of_cloud_liquid_water_particle_at_liquid_water_cloud_top"
+    ]
 }

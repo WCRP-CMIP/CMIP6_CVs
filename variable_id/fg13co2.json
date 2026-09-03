@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "fg13co2",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_downward_mass_flux_of_carbon13_dioxide_abiotic_analogue_expressed_as_carbon13"
+    ]
 }

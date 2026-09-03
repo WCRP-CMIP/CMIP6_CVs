@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "lossco",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_atmosphere_of_mole_concentration_of_carbon_monoxide_due_to_chemical_destruction"
+    ]
 }

@@ -17,8 +17,14 @@ jobs:
 
       - name: Test cmip6 build
         env:
-          BRANCH: ${{ github.head_ref || github.ref_name }}
-        run: esgvoc test run cmip6 --branch "$BRANCH" --universe-branch esgvoc_dev
+          BRANCH: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref_name }}
+          REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        run: |
+          REPO_FLAG=""
+          if [ -n "$REPO" ]; then
+            REPO_FLAG="--repo $REPO"
+          fi
+          esgvoc test run cmip6 $REPO_FLAG --branch "$BRANCH" --universe-branch esgvoc_dev
 
       - name: Print publish command
         run: |

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "osaltpsmadvect_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oyr.osaltpsmadvect",
+    "Emon.osaltpsmadvect"
+  ],
+  "table_id": [
+    "oyr",
+    "emon"
+  ],
+  "frequency": [
+    "yr",
+    "mon"
+  ]
+}

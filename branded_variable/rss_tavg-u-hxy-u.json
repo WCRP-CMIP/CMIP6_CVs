@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rss_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.rss",
+    "Emon.rss"
+  ],
+  "table_id": [
+    "day",
+    "emon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

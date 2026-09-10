@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "evspsblsoi_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.evspsblsoi",
+    "3hr.evspsblsoi"
+  ],
+  "table_id": [
+    "eday",
+    "3hr"
+  ],
+  "frequency": [
+    "day",
+    "3hr"
+  ]
+}

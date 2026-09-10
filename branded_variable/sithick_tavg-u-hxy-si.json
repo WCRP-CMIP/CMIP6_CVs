@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sithick_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sithickSouth30",
+    "SImon.sithick",
+    "SIday.sithick"
+  ],
+  "table_id": [
+    "simon",
+    "siday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

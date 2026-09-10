@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zfull_ti-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.zfull"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

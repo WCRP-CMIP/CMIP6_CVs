@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rootd_ti-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.rootd"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

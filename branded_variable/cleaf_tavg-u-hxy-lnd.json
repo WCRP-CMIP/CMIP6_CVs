@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cleaf_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.cLeaf"
+  ],
+  "table_id": [
+    "lmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

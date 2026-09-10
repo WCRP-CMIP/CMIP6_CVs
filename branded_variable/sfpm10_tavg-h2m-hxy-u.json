@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfpm10_tavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERhr.sfpm10",
+    "AERday.sfpm10"
+  ],
+  "table_id": [
+    "aerhr",
+    "aerday"
+  ],
+  "frequency": [
+    "1hr",
+    "day"
+  ]
+}

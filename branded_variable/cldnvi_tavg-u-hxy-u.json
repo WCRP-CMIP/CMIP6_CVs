@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cldnvi_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.cldnvi",
+    "Emon.cldnvi"
+  ],
+  "table_id": [
+    "eday",
+    "emon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

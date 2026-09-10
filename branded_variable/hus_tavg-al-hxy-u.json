@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hus_tavg-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFmon.husSouth30",
+    "CFmon.hus",
+    "CFday.hus"
+  ],
+  "table_id": [
+    "cfmon",
+    "cfday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

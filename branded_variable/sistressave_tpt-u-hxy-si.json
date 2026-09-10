@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sistressave_tpt-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sistressave"
+  ],
+  "table_id": [
+    "simon"
+  ],
+  "frequency": [
+    "monpt"
+  ]
+}

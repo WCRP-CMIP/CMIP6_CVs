@@ -1,0 +1,24 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clt_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.clt",
+    "3hr.clt",
+    "Amon.clt",
+    "E1hr.clt",
+    "Amon.cltSouth30"
+  ],
+  "table_id": [
+    "day",
+    "3hr",
+    "amon",
+    "e1hr"
+  ],
+  "frequency": [
+    "day",
+    "3hr",
+    "mon",
+    "1hr"
+  ]
+}

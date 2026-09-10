@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cproductlut_tpt-u-hxy-multi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.cProductLut"
+  ],
+  "table_id": [
+    "eyr"
+  ],
+  "frequency": [
+    "yrpt"
+  ]
+}

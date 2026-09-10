@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clwvi_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFday.clwvi",
+    "E3hr.clwvi",
+    "Amon.clwvi",
+    "Amon.clwviSouth30"
+  ],
+  "table_id": [
+    "cfday",
+    "e3hr",
+    "amon"
+  ],
+  "frequency": [
+    "day",
+    "3hr",
+    "mon"
+  ]
+}

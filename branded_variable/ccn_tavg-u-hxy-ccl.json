@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ccn_tavg-u-hxy-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.ccn",
+    "AERmon.ccnSouth30"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

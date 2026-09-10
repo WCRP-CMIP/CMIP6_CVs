@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cstem_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.cStem"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "toz_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.toz",
+    "AERmon.toz"
+  ],
+  "table_id": [
+    "aerday",
+    "aermon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

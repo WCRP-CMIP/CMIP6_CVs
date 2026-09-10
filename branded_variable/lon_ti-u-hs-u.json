@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "lon_ti-u-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.lon"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

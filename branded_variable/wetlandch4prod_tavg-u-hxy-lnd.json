@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wetlandch4prod_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.wetlandCH4prod"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

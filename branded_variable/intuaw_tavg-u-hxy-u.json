@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "intuaw_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.intuaw",
+    "Emon.intuaw"
+  ],
+  "table_id": [
+    "eday",
+    "emon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

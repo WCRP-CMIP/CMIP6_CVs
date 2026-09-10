@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "chegpso4_tavg-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.chegpso4"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

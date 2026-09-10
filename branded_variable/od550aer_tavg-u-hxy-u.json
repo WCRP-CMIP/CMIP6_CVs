@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "od550aer_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.od550aer",
+    "AERmon.od550aer",
+    "AERmon.od550aerSouth30"
+  ],
+  "table_id": [
+    "aerday",
+    "aermon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

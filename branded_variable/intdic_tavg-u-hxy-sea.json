@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "intdic_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.intdic"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

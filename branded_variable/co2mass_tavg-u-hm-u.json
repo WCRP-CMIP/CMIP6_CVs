@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "co2mass_tavg-u-hm-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.co2mass"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

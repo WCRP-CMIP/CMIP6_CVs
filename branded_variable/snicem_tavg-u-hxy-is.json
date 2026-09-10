@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "snicem_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.snicemIs",
+    "ImonGre.snicem",
+    "ImonAnt.snicem"
+  ],
+  "table_id": [
+    "limon",
+    "imongre",
+    "imonant"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

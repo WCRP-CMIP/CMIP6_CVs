@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mlotst_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.mlotstSouth30",
+    "Omon.mlotst",
+    "Eday.mlotst"
+  ],
+  "table_id": [
+    "omon",
+    "eday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "prc_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.prc",
+    "Amon.prc",
+    "Amon.prcSouth30"
+  ],
+  "table_id": [
+    "day",
+    "amon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

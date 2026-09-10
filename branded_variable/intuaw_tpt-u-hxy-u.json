@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "intuaw_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlevPt.intuaw"
+  ],
+  "table_id": [
+    "6hrplevpt"
+  ],
+  "frequency": [
+    "6hrpt"
+  ]
+}

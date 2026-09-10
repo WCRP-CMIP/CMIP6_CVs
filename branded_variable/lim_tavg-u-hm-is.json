@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "lim_tavg-u-hm-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.lim",
+    "IyrAnt.lim"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

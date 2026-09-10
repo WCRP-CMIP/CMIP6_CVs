@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftgrf_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Efx.sftgrf"
+  ],
+  "table_id": [
+    "efx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

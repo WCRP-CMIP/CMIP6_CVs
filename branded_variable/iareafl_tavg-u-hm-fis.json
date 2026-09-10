@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "iareafl_tavg-u-hm-fis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.iareafl",
+    "IyrAnt.iareafl"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

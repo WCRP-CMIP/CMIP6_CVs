@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "litempbot_tavg-u-hxy-gis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.litempbotgr",
+    "IyrAnt.litempbotgr",
+    "ImonAnt.litempbotgr",
+    "ImonGre.litempbotgr"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant",
+    "imonant",
+    "imongre"
+  ],
+  "frequency": [
+    "yr",
+    "mon"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "reffcclwtop_tavg-u-hxy-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.reffcclwtop",
+    "Eday.reffcclwtop"
+  ],
+  "table_id": [
+    "emon",
+    "eday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

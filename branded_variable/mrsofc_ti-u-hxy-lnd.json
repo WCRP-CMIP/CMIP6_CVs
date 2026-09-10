@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrsofc_ti-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.mrsofc"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

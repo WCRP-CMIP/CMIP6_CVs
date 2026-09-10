@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "licalvf_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "ImonAnt.licalvf",
+    "IyrAnt.licalvf",
+    "IyrGre.licalvf",
+    "ImonGre.licalvf"
+  ],
+  "table_id": [
+    "imonant",
+    "iyrant",
+    "iyrgre",
+    "imongre"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

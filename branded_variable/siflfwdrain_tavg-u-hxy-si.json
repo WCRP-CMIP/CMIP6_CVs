@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "siflfwdrain_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.siflfwdrain"
+  ],
+  "table_id": [
+    "simon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

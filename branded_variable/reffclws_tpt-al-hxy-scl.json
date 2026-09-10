@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "reffclws_tpt-al-hxy-scl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CF3hr.reffclws"
+  ],
+  "table_id": [
+    "cf3hr"
+  ],
+  "frequency": [
+    "3hrpt"
+  ]
+}

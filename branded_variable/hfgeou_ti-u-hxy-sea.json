@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfgeou_ti-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Ofx.hfgeou"
+  ],
+  "table_id": [
+    "ofx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

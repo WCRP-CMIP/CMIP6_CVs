@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tntnogw_tavg-p39-hy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "EmonZ.tntnogw"
+  ],
+  "table_id": [
+    "emonz"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

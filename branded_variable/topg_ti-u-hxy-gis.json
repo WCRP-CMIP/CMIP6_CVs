@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "topg_ti-u-hxy-gis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IfxGre.topg",
+    "IfxAnt.topg"
+  ],
+  "table_id": [
+    "ifxgre",
+    "ifxant"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sirdgconc_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SIday.sirdgconc",
+    "SImon.sirdgconc"
+  ],
+  "table_id": [
+    "siday",
+    "simon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

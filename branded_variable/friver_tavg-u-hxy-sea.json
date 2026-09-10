@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "friver_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.friver",
+    "Omon.friver"
+  ],
+  "table_id": [
+    "3hr",
+    "omon"
+  ],
+  "frequency": [
+    "3hr",
+    "mon"
+  ]
+}

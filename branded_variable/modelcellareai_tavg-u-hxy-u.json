@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "modelcellareai_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrAnt.modelCellAreai",
+    "IyrGre.modelCellAreai"
+  ],
+  "table_id": [
+    "iyrant",
+    "iyrgre"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

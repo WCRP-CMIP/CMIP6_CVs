@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "slthick_ti-sl-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Efx.slthick"
+  ],
+  "table_id": [
+    "efx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

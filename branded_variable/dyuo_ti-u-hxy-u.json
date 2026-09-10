@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dyuo_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Ofx.dyuo"
+  ],
+  "table_id": [
+    "ofx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

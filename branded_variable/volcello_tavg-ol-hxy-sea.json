@@ -1,0 +1,20 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "volcello_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.volcello",
+    "Odec.volcello",
+    "Oyr.volcello"
+  ],
+  "table_id": [
+    "omon",
+    "odec",
+    "oyr"
+  ],
+  "frequency": [
+    "mon",
+    "dec",
+    "yr"
+  ]
+}

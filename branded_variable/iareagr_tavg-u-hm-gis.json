@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "iareagr_tavg-u-hm-gis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.iareagr",
+    "IyrAnt.iareagr"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

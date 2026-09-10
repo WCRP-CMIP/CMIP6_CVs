@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thkcello_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Odec.thkcello",
+    "Omon.thkcello"
+  ],
+  "table_id": [
+    "odec",
+    "omon"
+  ],
+  "frequency": [
+    "dec",
+    "mon"
+  ]
+}

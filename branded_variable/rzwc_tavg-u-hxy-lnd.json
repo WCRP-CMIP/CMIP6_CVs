@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rzwc_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.rzwc"
+  ],
+  "table_id": [
+    "eday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

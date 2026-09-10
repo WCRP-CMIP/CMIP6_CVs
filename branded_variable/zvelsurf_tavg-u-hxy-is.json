@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zvelsurf_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.zvelsurf",
+    "IyrAnt.zvelsurf"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

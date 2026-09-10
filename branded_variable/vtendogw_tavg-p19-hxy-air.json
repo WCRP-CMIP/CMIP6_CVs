@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vtendogw_tavg-p19-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.vtendogw",
+    "Eday.vtendogw"
+  ],
+  "table_id": [
+    "emon",
+    "eday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsntds_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.rsntds"
+  ],
+  "table_id": [
+    "3hr"
+  ],
+  "frequency": [
+    "3hr"
+  ]
+}

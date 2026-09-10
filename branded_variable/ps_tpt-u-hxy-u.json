@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ps_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "3hr.ps",
+    "E1hr.psSouth30",
+    "6hrLev.ps",
+    "E1hr.ps"
+  ],
+  "table_id": [
+    "3hr",
+    "e1hr",
+    "6hrlev"
+  ],
+  "frequency": [
+    "3hrpt",
+    "1hr",
+    "6hrpt"
+  ]
+}

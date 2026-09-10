@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hcfc22_tavg-u-hm-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.hcfc22global"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

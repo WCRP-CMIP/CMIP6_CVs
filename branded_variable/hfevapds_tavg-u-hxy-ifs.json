@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfevapds_tavg-u-hxy-ifs",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.hfevapds"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

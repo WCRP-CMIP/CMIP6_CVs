@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfrunoffds_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.hfrunoffds",
+    "3hr.hfrunoffds"
+  ],
+  "table_id": [
+    "omon",
+    "3hr"
+  ],
+  "frequency": [
+    "mon",
+    "3hr"
+  ]
+}

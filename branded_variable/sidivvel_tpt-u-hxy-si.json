@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sidivvel_tpt-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sidivvel"
+  ],
+  "table_id": [
+    "simon"
+  ],
+  "frequency": [
+    "monpt"
+  ]
+}

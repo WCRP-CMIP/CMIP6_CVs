@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "loadbc_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eday.loadbc"
+  ],
+  "table_id": [
+    "eday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

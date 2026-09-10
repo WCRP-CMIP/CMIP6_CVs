@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vas_tavg-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.vasSouth30",
+    "day.vas",
+    "6hrPlev.vas",
+    "Amon.vas"
+  ],
+  "table_id": [
+    "amon",
+    "day",
+    "6hrplev"
+  ],
+  "frequency": [
+    "mon",
+    "day",
+    "6hr"
+  ]
+}

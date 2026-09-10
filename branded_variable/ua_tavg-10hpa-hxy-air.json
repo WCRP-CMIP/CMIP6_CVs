@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ua_tavg-10hpa-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.ua10"
+  ],
+  "table_id": [
+    "aerday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

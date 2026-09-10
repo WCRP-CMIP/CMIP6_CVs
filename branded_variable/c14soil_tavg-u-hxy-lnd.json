@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "c14soil_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.c14Soil"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

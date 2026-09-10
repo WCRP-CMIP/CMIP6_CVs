@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "areacellr_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.areacellr"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "psl_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlevPt.psl",
+    "E1hr.psl"
+  ],
+  "table_id": [
+    "6hrplevpt",
+    "e1hr"
+  ],
+  "frequency": [
+    "6hrpt",
+    "1hrpt"
+  ]
+}

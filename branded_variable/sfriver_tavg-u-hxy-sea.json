@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfriver_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.sfriver"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

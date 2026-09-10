@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "snw_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.snw",
+    "LImon.snw"
+  ],
+  "table_id": [
+    "day",
+    "limon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dispkexyfo_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Oyr.dispkexyfo"
+  ],
+  "table_id": [
+    "oyr"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

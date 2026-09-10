@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta_tavg-p19-hxy-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.taSouth30",
+    "Amon.ta",
+    "day.ta"
+  ],
+  "table_id": [
+    "amon",
+    "day"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "absscint_tavg-op4-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.absscint"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

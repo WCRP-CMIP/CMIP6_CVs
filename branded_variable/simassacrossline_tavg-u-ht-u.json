@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "simassacrossline_tavg-u-ht-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.simassacrossline"
+  ],
+  "table_id": [
+    "simon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

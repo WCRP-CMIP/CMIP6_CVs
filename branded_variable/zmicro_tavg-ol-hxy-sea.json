@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zmicro_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.zmicro",
+    "Oday.zmicro"
+  ],
+  "table_id": [
+    "omon",
+    "oday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

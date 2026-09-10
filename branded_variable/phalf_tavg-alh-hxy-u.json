@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "phalf_tavg-alh-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.phalf",
+    "CFday.phalf"
+  ],
+  "table_id": [
+    "aermon",
+    "cfday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

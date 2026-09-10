@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nppleaf_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.nppLeaf"
+  ],
+  "table_id": [
+    "lmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "prw_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CF3hr.prw",
+    "6hrPlevPt.prw"
+  ],
+  "table_id": [
+    "cf3hr",
+    "6hrplevpt"
+  ],
+  "frequency": [
+    "3hrpt",
+    "6hrpt"
+  ]
+}

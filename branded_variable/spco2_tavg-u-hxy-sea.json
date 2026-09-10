@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "spco2_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.spco2",
+    "Omon.spco2South30"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

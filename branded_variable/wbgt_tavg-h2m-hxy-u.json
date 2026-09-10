@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wbgt_tavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "day.wbgt2m"
+  ],
+  "table_id": [
+    "day"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

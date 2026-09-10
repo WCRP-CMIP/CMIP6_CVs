@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fveglittersenescence_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.fVegLitterSenescence"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

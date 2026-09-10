@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "yvelmean_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.yvelmean",
+    "IyrAnt.yvelmean"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsdsdiff_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E1hr.rsdsdiff",
+    "Eday.rsdsdiff"
+  ],
+  "table_id": [
+    "e1hr",
+    "eday"
+  ],
+  "frequency": [
+    "1hr",
+    "day"
+  ]
+}

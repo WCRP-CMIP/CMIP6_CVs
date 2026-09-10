@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "expc_tavg-d100m-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.epc100"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

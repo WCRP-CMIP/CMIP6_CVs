@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "co23d_tavg-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.co23D"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

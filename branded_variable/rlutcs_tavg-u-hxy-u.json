@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rlutcs_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFday.rlutcs",
+    "Amon.rlutcsSouth30",
+    "Amon.rlutcs",
+    "E3hr.rlutcs"
+  ],
+  "table_id": [
+    "cfday",
+    "amon",
+    "e3hr"
+  ],
+  "frequency": [
+    "day",
+    "mon",
+    "3hr"
+  ]
+}

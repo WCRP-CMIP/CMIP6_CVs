@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o3ref_tclm-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERfx.o3refClim"
+  ],
+  "table_id": [
+    "aerfx"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

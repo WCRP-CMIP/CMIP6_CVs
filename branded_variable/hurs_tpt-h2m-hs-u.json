@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hurs_tpt-h2m-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFsubhr.hurs"
+  ],
+  "table_id": [
+    "cfsubhr"
+  ],
+  "frequency": [
+    "subhrpt"
+  ]
+}

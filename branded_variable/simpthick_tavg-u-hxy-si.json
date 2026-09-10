@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "simpthick_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SIday.simpthick"
+  ],
+  "table_id": [
+    "siday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

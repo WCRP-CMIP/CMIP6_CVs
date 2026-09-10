@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tas_tminavg-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.tasminSouth30",
+    "Amon.tasmin"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rsus_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E1hr.rsus",
+    "3hr.rsus",
+    "Amon.rsus",
+    "day.rsus",
+    "Amon.rsusSouth30"
+  ],
+  "table_id": [
+    "e1hr",
+    "3hr",
+    "amon",
+    "day"
+  ],
+  "frequency": [
+    "1hrpt",
+    "3hr",
+    "mon",
+    "day"
+  ]
+}

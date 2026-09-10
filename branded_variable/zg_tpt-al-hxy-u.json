@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zg_tpt-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrLev.zg"
+  ],
+  "table_id": [
+    "6hrlev"
+  ],
+  "frequency": [
+    "6hrpt"
+  ]
+}

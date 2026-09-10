@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wetnh3_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.wetnh3",
+    "AERday.wetnh3"
+  ],
+  "table_id": [
+    "aermon",
+    "aerday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

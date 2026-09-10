@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cropfracc4_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.cropFracC4"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

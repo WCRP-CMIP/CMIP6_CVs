@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "strbasemag_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrGre.strbasemag",
+    "IyrAnt.strbasemag"
+  ],
+  "table_id": [
+    "iyrgre",
+    "iyrant"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

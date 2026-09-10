@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "lithk_ti-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IfxAnt.lithk",
+    "IfxGre.lithk"
+  ],
+  "table_id": [
+    "ifxant",
+    "ifxgre"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "emidms_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.emidms",
+    "AERmon.emidmsSouth30"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

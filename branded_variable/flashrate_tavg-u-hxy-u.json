@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "flashrate_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.flashrate",
+    "Eday.flashrate"
+  ],
+  "table_id": [
+    "emon",
+    "eday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

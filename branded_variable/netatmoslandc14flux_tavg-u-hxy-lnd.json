@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "netatmoslandc14flux_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.netAtmosLandC14Flux"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

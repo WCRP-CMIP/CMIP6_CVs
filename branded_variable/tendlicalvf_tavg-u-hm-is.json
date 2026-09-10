@@ -1,0 +1,16 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tendlicalvf_tavg-u-hm-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "IyrAnt.tendlicalvf",
+    "IyrGre.tendlicalvf"
+  ],
+  "table_id": [
+    "iyrant",
+    "iyrgre"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

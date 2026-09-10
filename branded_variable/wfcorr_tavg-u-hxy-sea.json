@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wfcorr_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.wfcorr"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

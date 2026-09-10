@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clivi_tpt-u-hs-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFsubhr.clivi"
+  ],
+  "table_id": [
+    "cfsubhr"
+  ],
+  "frequency": [
+    "subhrpt"
+  ]
+}

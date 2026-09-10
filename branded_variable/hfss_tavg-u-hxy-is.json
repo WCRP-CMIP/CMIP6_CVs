@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfss_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.hfssIs",
+    "ImonGre.hfss",
+    "ImonAnt.hfss"
+  ],
+  "table_id": [
+    "limon",
+    "imongre",
+    "imonant"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

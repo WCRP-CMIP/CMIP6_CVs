@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cls_tavg-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFmon.clsSouth30",
+    "CFmon.cls"
+  ],
+  "table_id": [
+    "cfmon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

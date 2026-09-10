@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "taslut_tavg-h2m-hxy-multi",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.tasLut"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

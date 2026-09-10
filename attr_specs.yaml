@@ -112,6 +112,12 @@
   attr_field_na_value: "no parent"
   is_required: false
 
+- source_collection: time_unit
+  attr_field_name: parent_time_units
+  attr_field_value_type: string
+  attr_field_na_value: "no parent"
+  is_required: false
+
 - source_collection: variant_label
   attr_field_name: parent_variant_label
   attr_field_value_type: string

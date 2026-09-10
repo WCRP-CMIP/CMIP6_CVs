@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "aod550volso4_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.aod550volso4"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

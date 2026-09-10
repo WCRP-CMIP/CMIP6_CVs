@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thetao_tavg-u-hm-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.thetaoga"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

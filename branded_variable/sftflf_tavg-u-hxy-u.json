@@ -1,0 +1,19 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sftflf_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "LImon.sftflf",
+    "IyrAnt.sftflf",
+    "IyrGre.sftflf"
+  ],
+  "table_id": [
+    "limon",
+    "iyrant",
+    "iyrgre"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

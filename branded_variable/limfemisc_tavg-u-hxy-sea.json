@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "limfemisc_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.limfemisc"
+  ],
+  "table_id": [
+    "omon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

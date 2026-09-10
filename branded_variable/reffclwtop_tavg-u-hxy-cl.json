@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "reffclwtop_tavg-u-hxy-cl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.reffclwtop",
+    "AERmon.reffclwtopSouth30"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

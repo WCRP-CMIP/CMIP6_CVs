@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "shrubfrac_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.shrubFrac",
+    "Eyr.shrubFrac"
+  ],
+  "table_id": [
+    "lmon",
+    "eyr"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

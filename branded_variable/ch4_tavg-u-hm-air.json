@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ch4_tavg-u-hm-air",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Amon.ch4global"
+  ],
+  "table_id": [
+    "amon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

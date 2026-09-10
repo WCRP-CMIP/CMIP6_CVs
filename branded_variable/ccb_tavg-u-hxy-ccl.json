@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ccb_tavg-u-hxy-ccl",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "CFday.ccb",
+    "Amon.ccb"
+  ],
+  "table_id": [
+    "cfday",
+    "amon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

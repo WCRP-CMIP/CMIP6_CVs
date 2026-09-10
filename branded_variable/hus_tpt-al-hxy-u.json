@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hus_tpt-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "E3hrPt.hus",
+    "6hrLev.hus"
+  ],
+  "table_id": [
+    "e3hrpt",
+    "6hrlev"
+  ],
+  "frequency": [
+    "3hrpt",
+    "6hrpt"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "orog_ti-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "fx.orogSouth30",
+    "fx.orog"
+  ],
+  "table_id": [
+    "fx"
+  ],
+  "frequency": [
+    "fx"
+  ]
+}

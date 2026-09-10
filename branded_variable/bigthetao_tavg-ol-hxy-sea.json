@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "bigthetao_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Omon.bigthetao",
+    "Odec.bigthetao"
+  ],
+  "table_id": [
+    "omon",
+    "odec"
+  ],
+  "frequency": [
+    "mon",
+    "dec"
+  ]
+}

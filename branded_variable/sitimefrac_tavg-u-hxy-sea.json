@@ -1,0 +1,18 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sitimefrac_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "SImon.sitimefrac",
+    "SImon.sitimefracSouth30",
+    "SIday.sitimefrac"
+  ],
+  "table_id": [
+    "simon",
+    "siday"
+  ],
+  "frequency": [
+    "mon",
+    "day"
+  ]
+}

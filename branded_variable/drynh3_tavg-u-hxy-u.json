@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "drynh3_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.drynh3",
+    "AERmon.drynh3"
+  ],
+  "table_id": [
+    "aerday",
+    "aermon"
+  ],
+  "frequency": [
+    "day",
+    "mon"
+  ]
+}

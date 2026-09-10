@@ -1,0 +1,17 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "residualfrac_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Lmon.residualFrac",
+    "Eyr.residualFrac"
+  ],
+  "table_id": [
+    "lmon",
+    "eyr"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

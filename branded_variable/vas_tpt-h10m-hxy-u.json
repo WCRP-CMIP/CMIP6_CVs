@@ -1,0 +1,20 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vas_tpt-h10m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "6hrPlevPt.vas",
+    "E1hr.vas",
+    "3hrPt.vas"
+  ],
+  "table_id": [
+    "6hrplevpt",
+    "e1hr",
+    "3hrpt"
+  ],
+  "frequency": [
+    "6hrpt",
+    "1hr",
+    "3hrpt"
+  ]
+}

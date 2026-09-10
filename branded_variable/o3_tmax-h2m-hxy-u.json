@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o3_tmax-h2m-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERday.sfo3max"
+  ],
+  "table_id": [
+    "aerday"
+  ],
+  "frequency": [
+    "day"
+  ]
+}

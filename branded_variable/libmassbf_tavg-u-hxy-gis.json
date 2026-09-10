@@ -1,0 +1,21 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "libmassbf_tavg-u-hxy-gis",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "ImonAnt.libmassbfgr",
+    "IyrAnt.libmassbfgr",
+    "IyrGre.libmassbfgr",
+    "ImonGre.libmassbfgr"
+  ],
+  "table_id": [
+    "imonant",
+    "iyrant",
+    "iyrgre",
+    "imongre"
+  ],
+  "frequency": [
+    "mon",
+    "yr"
+  ]
+}

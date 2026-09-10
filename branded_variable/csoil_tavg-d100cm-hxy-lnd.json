@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "csoil_tavg-d100cm-hxy-lnd",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Emon.cSoilAbove1m"
+  ],
+  "table_id": [
+    "emon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

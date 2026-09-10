@@ -1,0 +1,15 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mmrnh4_tavg-al-hxy-u",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "AERmon.mmrnh4",
+    "AERmon.mmrnh4South30"
+  ],
+  "table_id": [
+    "aermon"
+  ],
+  "frequency": [
+    "mon"
+  ]
+}

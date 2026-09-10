@@ -1,0 +1,14 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zfullo_tavg-ol-hxy-sea",
+  "type": "known_branded_variable",
+  "compound_name": [
+    "Eyr.zfullo"
+  ],
+  "table_id": [
+    "eyr"
+  ],
+  "frequency": [
+    "yr"
+  ]
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "phabio",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": []
 }

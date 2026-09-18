@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "zos",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "sea_surface_elevation",
+        "sea_surface_elevation_anomaly"
+    ]
 }

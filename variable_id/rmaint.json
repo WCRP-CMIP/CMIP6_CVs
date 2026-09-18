@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rmaint",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_upward_carbon_mass_flux_due_to_plant_respiration_for_biomass_maintenance"
+    ]
 }

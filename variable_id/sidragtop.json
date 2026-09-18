@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidragtop",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_surface_drag_coefficient_of_momentum"
+    ]
 }

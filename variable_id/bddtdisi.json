@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "bddtdisi",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_mole_concentration_of_dissolved_inorganic_silicate_in_sea_water_due_to_biological_processes"
+    ]
 }

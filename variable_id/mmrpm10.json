@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrpm10",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mass_fraction_of_pm10_aerosol_in_air",
+        "mass_fraction_of_pm10_ambient_aerosol_in_air"
+    ]
 }

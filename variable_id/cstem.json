@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "cstem",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "wood_carbon_content"
+    ]
 }

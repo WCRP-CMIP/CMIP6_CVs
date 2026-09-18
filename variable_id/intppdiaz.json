@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "intppdiaz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "net_primary_mole_productivity_of_biomass_expressed_as_carbon_by_diazotrophs",
+        "net_primary_mole_productivity_of_carbon_by_diazotrophs"
+    ]
 }

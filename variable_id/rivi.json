@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "rivi",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "river_water_volume_transport_into_cell"
+    ]
 }

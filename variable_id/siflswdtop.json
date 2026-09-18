@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflswdtop",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_downwelling_shortwave_flux"
+    ]
 }

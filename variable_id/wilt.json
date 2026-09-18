@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "wilt",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "volume_fraction_of_water_in_soil_at_wilting_point"
+    ]
 }

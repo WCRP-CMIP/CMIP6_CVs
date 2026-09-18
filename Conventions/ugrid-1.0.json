@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ugrid-1.0",
+  "type": "conventions"
+}

@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "wap",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "omega",
+        "vertical_air_velocity_expressed_as_tendency_of_pressure"
+    ]
 }

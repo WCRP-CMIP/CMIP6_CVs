@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550oa",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol"
+    ]
 }

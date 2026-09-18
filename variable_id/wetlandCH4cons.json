@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetlandch4cons",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": []
 }

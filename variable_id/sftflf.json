@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sftflf",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "floating_ice_sheet_area_fraction"
+    ]
 }

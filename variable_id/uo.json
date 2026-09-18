@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "uo",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "x_sea_water_velocity"
+    ]
 }

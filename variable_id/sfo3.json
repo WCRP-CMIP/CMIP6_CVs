@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfo3",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mole_fraction_of_o3_in_air"
+    ]
 }

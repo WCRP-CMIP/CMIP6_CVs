@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "rainmxrat27",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "mass_fraction_of_rain_and_drizzle_in_air",
+        "mass_fraction_of_rain_in_air"
+    ]
 }

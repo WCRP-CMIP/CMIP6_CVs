@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrso",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "soil_moisture_content"
+    ]
 }

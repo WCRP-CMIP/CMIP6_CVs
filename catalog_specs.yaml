@@ -11,7 +11,7 @@ catalog_properties:
     - name: alternate-assets
       version: v1.2.0
   regex_id: '^CMIP6(\.[A-Za-z0-9-]+){8}\.v[0-9]{8}$'
-  regex_base_id: '^CMIP6(\.[A-Za-z0-9-]+){8}$'
+  regex_title: '^CMIP6(\.[A-Za-z0-9-]+){8}$'
 
 dataset_properties:
   - source_collection: activity_id
@@ -127,6 +127,12 @@ dataset_properties:
 
   - source_collection: variable_id
     source_collection_key: standard_name
+    catalog_field_name: variable_cf_standard_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: variable_id
+    source_collection_key: alias_standard_name
     catalog_field_name: variable_cf_standard_name
     catalog_field_value_type: string
     is_required: true

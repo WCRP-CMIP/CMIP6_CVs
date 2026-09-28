@@ -18,4 +18,17 @@ runs:
 
     - name: Install esgvoc
       shell: bash
-      run: uv pip install --system "esgvoc>=4.0.0" ${{ inputs.extra-packages }}
+      run: |
+        # Test with an esgvoc able to use the DB built from this CV: esgvoc.min_version of the manifest.
+        MIN_VERSION=$(python3 - <<'PYEOF'
+        import re
+        try:
+            text = open("esgvoc_manifest.yaml").read()
+        except FileNotFoundError:
+            text = ""
+        match = re.search(r"^esgvoc:[ \t]*\n(?:[ \t]+.*\n)*?[ \t]+min_version:[ \t]*[\"']?([0-9][^\"'\s]*)", text, re.M)
+        print(match.group(1) if match else "4.0.0")
+        PYEOF
+        )
+        echo "Installing esgvoc>=${MIN_VERSION} (esgvoc.min_version of esgvoc_manifest.yaml)"
+        uv pip install --system "esgvoc>=${MIN_VERSION}" ${{ inputs.extra-packages }}

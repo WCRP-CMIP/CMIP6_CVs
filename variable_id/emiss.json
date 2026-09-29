@@ -1,5 +1,9 @@
 {
     "@context": "000_context.jsonld",
     "id": "emiss",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_atmosphere_mass_content_of_seasalt_dry_aerosol_due_to_emission",
+        "tendency_of_atmosphere_mass_content_of_seasalt_dry_aerosol_particles_due_to_emission"
+    ]
 }

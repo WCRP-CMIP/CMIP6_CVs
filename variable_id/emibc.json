@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "emibc",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_atmosphere_mass_content_of_black_carbon_dry_aerosol_due_to_emission"
+    ]
 }

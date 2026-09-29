@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "volo",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "ocean_volume"
+    ]
 }

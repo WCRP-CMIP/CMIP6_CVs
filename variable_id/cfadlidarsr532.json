@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "cfadlidarsr532",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "histogram_of_backscattering_ratio_over_height_above_reference_ellipsoid"
+    ]
 }

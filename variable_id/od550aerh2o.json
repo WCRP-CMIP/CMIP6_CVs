@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550aerh2o",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_optical_thickness_due_to_water_in_ambient_aerosol"
+    ]
 }

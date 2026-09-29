@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "toz",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "equivalent_thickness_at_stp_of_atmosphere_o3_content"
+    ]
 }

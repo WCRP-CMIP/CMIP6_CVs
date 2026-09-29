@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "evspsbl",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "water_evaporation_flux"
+    ]
 }

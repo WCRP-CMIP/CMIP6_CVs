@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "vtem",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "northward_transformed_eulerian_mean_velocity"
+    ]
 }

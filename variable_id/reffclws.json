@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclws",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "effective_radius_of_stratiform_cloud_liquid_water_particle"
+    ]
 }

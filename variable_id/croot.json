@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "croot",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "root_carbon_content"
+    ]
 }

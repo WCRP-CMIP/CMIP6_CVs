@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "clittercwd",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "wood_debris_carbon_content"
+    ]
 }

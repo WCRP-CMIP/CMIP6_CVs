@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfsslut",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_upward_sensible_heat_flux_where_sea"
+    ]
 }

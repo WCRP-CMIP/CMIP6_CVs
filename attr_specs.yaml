@@ -42,7 +42,7 @@
   is_required: true
 
 - source_collection: forcing_index
-  attr_field_value_type: string
+  attr_field_value_type: integer
   is_required: true
 
 - source_collection: frequency

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sblis",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "surface_snow_and_ice_sublimation_flux"
+    ]
 }

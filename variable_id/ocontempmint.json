@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "ocontempmint",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "integral_wrt_depth_of_product_of_sea_water_density_and_conservative_temperature"
+    ]
 }

@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "lwp",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "atmosphere_cloud_liquid_water_content"
+    ]
 }

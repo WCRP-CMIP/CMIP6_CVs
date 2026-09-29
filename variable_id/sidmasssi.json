@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmasssi",
-    "type": "variable"
+    "type": "variable",
+    "alias_standard_name": [
+        "tendency_of_sea_ice_amount_due_to_snow_conversion"
+    ]
 }

@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "creationdatenb",
-    "type": "directory_date"
-}

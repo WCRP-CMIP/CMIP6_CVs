@@ -2,11 +2,9 @@ schema_version: '1'
 project:
   id: cmip6
   name: CMIP6 Controlled Vocabulary
-cv_version: 2.1.1
-universe_version: 3.3.0
+cv_version: 2.1.2
+universe_version: 3.4.2
 esgvoc:
-  min_version: 6.2.0
+  min_version: 7.1.0
 release_notes: |
-  - citation_url: 1 removed
-  - variable_id: 36 removed
-  - version: 2 removed
+  - Rebuild for universe 3.4.2 (no local CV changes).
